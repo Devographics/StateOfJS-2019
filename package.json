@@ -1,0 +1,72 @@
+{
+  "name": "state-of-css-2019",
+  "description": "State of CSS 2019 survey report",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/StateOfJS/state-of-css-2019"
+  },
+  "contributors": [
+    {
+      "name": "Sacha Greif"
+    },
+    {
+      "name": "Raphaël Benitte"
+    }
+  ],
+  "engineStrict": true,
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "@nivo/bar": "0.56.2",
+    "@nivo/circle-packing": "0.56.2",
+    "@nivo/core": "0.56.2",
+    "@nivo/pie": "0.56.2",
+    "@nivo/sankey": "0.56.2",
+    "@nivo/scatterplot": "^0.56.2",
+    "@nivo/treemap": "0.56.2",
+    "@nivo/waffle": "0.56.2",
+    "bowser": "2.1.0",
+    "classnames": "^2.2.6",
+    "d3-format": "^1.3.2",
+    "d3-geo": "^1.11.3",
+    "d3-scale": "^2.2.2",
+    "gatsby": "^2.4.2",
+    "gatsby-plugin-google-analytics": "^2.0.19",
+    "gatsby-plugin-netlify": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-source-filesystem": "^2.0.33",
+    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-yaml": "^2.1.12",
+    "html-loader": "^0.5.5",
+    "js-yaml": "^3.12.1",
+    "lodash": "^4.17.11",
+    "markdown-it": "^8.4.2",
+    "markdown-loader": "^4.0.0",
+    "node-fetch": "^2.5.0",
+    "node-sass": "^4.12.0",
+    "object-assign": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react": "16.8.6",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-ga": "^2.5.7",
+    "react-helmet": "^5.2.0",
+    "react-markdown": "^4.0.6",
+    "remove-markdown": "^0.3.0",
+    "topojson-client": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "prettier": "^1.17.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public",
+    "dev": "gatsby develop --port 3119",
+    "dev:clean": "rm -rf .cache && yarn run dev",
+    "fmt": "prettier --write \"src/**/*.{js,jsx}\" \"config/**/*.{yaml,yml}\""
+  }
+}
