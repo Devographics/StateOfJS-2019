@@ -10,6 +10,16 @@ const commonStyles = {
         marginBottom: 6,
         background: 'rgba(255,255,255,.3)'
     },
+    negativeDivergingBar: {
+        position: 'absolute',
+        height: '100%',
+        right: '50%'
+    },
+    positiveDivergingBar: {
+        position: 'absolute',
+        height: '100%',
+        left: '50%'
+    },
     barLabel: {
         position: 'absolute',
         height: '100%',
@@ -23,28 +33,37 @@ const commonStyles = {
     }
 }
 
-const DoubleBar = memo(({ negativeValue, negativeColor, positiveValue, positiveColor, label }) => {
-    return (
-        <div
-            style={{
-                ...commonStyles.bar,
-                background: negativeColor
-            }}
-        >
-            <div
-                style={{
-                    position: 'absolute',
-                    height: '100%',
-                    background: positiveColor,
-                    width: `${positiveValue}%`
-                }}
-            />
-            <div style={commonStyles.barLabel}>
-                {label}:&nbsp;{positiveValue}%
+const DivergingBar = memo(
+    ({ negativeValue, negativeColor, positiveValue, positiveColor, label }) => {
+        return (
+            <div style={commonStyles.bar}>
+                <div
+                    style={{
+                        ...commonStyles.negativeDivergingBar,
+                        background: negativeColor,
+                        width: `${negativeValue / 2}%`
+                    }}
+                />
+                <div
+                    style={{
+                        ...commonStyles.positiveDivergingBar,
+                        background: positiveColor,
+                        width: `${positiveValue / 2}%`
+                    }}
+                />
+                <div
+                    style={{
+                        ...commonStyles.barLabel,
+                        left: '50%',
+                        width: '50%'
+                    }}
+                >
+                    {label}
+                </div>
             </div>
-        </div>
-    )
-})
+        )
+    }
+)
 
 const SingleBar = memo(({ value, label, color }) => {
     return (
@@ -85,10 +104,10 @@ const DivergingLegend = memo(({ negativeLabel, negativeColor, positiveLabel, pos
                 alignItems: 'center'
             }}
         >
-            <LegendChip color={positiveColor} />
-            <div>{positiveLabel}</div>
-            <div style={{ textAlign: 'right' }}>{negativeLabel}</div>
             <LegendChip color={negativeColor} />
+            <div>{negativeLabel}</div>
+            <div style={{ textAlign: 'right' }}>{positiveLabel}</div>
+            <LegendChip color={positiveColor} />
         </div>
     )
 })
@@ -152,18 +171,19 @@ const ToolsOpinionMultiBarDiverging = ({ data }) => {
 
     return (
         <>
-            <h4>multiple bars chart?</h4>
+            <h4>multiple bars chart (diverging)?</h4>
             <div
                 style={{
                     display: 'grid',
-                    gridTemplateColumns: '1fr 1fr 1fr',
-                    gridColumnGap: '40px'
+                    gridTemplateColumns: '2fr 2fr 1fr',
+                    gridColumnGap: '40px',
+                    marginBottom: 40
                 }}
             >
                 <div>
                     <h4>satisfaction amongst users</h4>
                     {computedData.satisfaction.map(tool => (
-                        <DoubleBar
+                        <DivergingBar
                             key={tool.id}
                             negativeValue={tool.unsatisfiedUsers}
                             negativeColor={colors.blueLighter}
@@ -182,7 +202,7 @@ const ToolsOpinionMultiBarDiverging = ({ data }) => {
                 <div>
                     <h4>interest amongst non-users</h4>
                     {computedData.interest.map(tool => (
-                        <DoubleBar
+                        <DivergingBar
                             key={tool.id}
                             negativeValue={tool.uninterestedUsers}
                             negativeColor={colors.tealLight}
