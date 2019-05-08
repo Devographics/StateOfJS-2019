@@ -57,7 +57,9 @@ translations:
       t: |
         itcss is a sane, scalable, managed
         CSS architecture from CSS Wizardry
-
+    - key: block.title.other-methodologies
+      t: Other Methodologies
+  
     ###########################################################################
     # Other tools
     ###########################################################################
@@ -85,12 +87,10 @@ translations:
       t: Blogs & Magazines
     - key: block.description.blogs-magazines
       t: Which CSS-related blogs/magazines/etc. do developers read?
-
     - key: block.title.sites-courses
       t: Sites & Courses
     - key: block.description.sites-courses
       t: Which CSS-related sites/courses/etc. do developers consult?
-
     - key: block.title.podcasts
       t: Podcasts
     - key: block.description.podcasts

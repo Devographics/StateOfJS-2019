@@ -255,9 +255,11 @@
       - id: text-editors
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: browsers
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
 
 - id: environments
   path: /environments
@@ -266,9 +268,11 @@
       - id: browsers
         type: horizontal-bar
         dataKey: environments
+        showDescription: true
       - id: form-factors
         type: horizontal-bar
         dataKey: environments
+        showDescription: true
       - id: print-styles
         type: vertical-bar
         dataKey: environments
@@ -283,12 +287,15 @@
       - id: blogs-magazines
         type: horizontal-bar
         dataKey: resources
+        showDescription: true
       - id: sites-courses
         type: horizontal-bar
         dataKey: resources
+        showDescription: true
       - id: podcasts
         type: horizontal-bar
         dataKey: resources
+        showDescription: true
 
 - id: opinions
   path: /opinions

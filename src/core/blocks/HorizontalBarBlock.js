@@ -4,7 +4,7 @@ import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import HorizontalBarChart from '../charts/HorizontalBarChart'
 
-const HorizontalBarBlock = ({ block, data, dataKey }) => {
+const HorizontalBarBlock = ({ block, data }) => {
     if (!data || !data.data) {
         return (
             <div>HorizontalBarBlock: Missing data for block {block.id}, page data is undefined</div>
@@ -31,7 +31,7 @@ const HorizontalBarBlock = ({ block, data, dataKey }) => {
     }
 
     return (
-        <Block id={block.id} showDescription={true}>
+        <Block id={block.id} showDescription={!!block.showDescription}>
             <ChartContainer>
                 <HorizontalBarChart
                     buckets={blockData[block.dataKey].buckets}
@@ -45,7 +45,8 @@ const HorizontalBarBlock = ({ block, data, dataKey }) => {
 HorizontalBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        dataKey: PropTypes.string.isRequired
+        dataKey: PropTypes.string.isRequired,
+        showDescription: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({
         data: PropTypes.shape({
