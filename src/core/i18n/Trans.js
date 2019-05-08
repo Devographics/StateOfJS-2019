@@ -1,9 +1,8 @@
-import { useContext } from 'react'
 import PropTypes from 'prop-types'
-import { I18nContext } from './i18nContext'
+import { useI18n } from './i18nContext'
 
 const Trans = ({ children }) => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     return children(translate)
 }

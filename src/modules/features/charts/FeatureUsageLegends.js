@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Legends from 'core/charts/Legends'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { usage } from '../../../constants'
 
 const FeatureUsageLegends = props => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     const legends = usage.map(item => ({
         id: item.id,

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { libraryDescriptionToTranslationKey } from 'core/i18n/translation-key-getters'
 import { translateOrFallback } from 'core/i18n/translator'
 
@@ -50,7 +50,7 @@ const Tooltip = ({ library, variant }) => {
     const githubUrl = `https://github.com/${library.github}`
     const bestofjsUrl = `https://bestofjs.org/projects/${library.slug}`
 
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n(I18nContext)
 
     return (
         <div

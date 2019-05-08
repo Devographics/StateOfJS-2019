@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import TextBlock from 'core/blocks/TextBlock'
 import ChartContainer from 'core/charts/ChartContainer'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { getToolDescription } from '../tools_helpers'
 import ToolOpinionsChart from '../charts/ToolOpinionsChart'
 import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
@@ -16,7 +16,7 @@ const ToolOpinionBlock = ({ block, data }) => {
         return <div key={block.id}>No data available for tool: {block.id}</div>
     }
 
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     return (
         <Block id={block.id} showDescription={false}>
@@ -27,7 +27,6 @@ const ToolOpinionBlock = ({ block, data }) => {
                         <ToolOpinionsChart buckets={blockData.opinion.buckets} />
                     </ChartContainer>
                 </div>
-
                 <div className="Tool__Description FTBlock__Description">
                     <TextBlock text={getToolDescription(block, resources, translate)} />
                 </div>

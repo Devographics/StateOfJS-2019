@@ -1,15 +1,15 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import ShareTwitter from './ShareTwitter'
 import ShareEmail from './ShareEmail'
 import ShareFacebook from './ShareFacebook'
 import ShareLinkedIn from './ShareLinkedIn'
-import { PageContext } from '../helpers/pageContext'
-import { I18nContext } from '../i18n/i18nContext'
+import { usePageContext } from '../helpers/pageContext'
+import { useI18n } from '../i18n/i18nContext'
 import { GridLinesSVG } from '../components/Illustration'
 
 const ShareSite = () => {
-    const context = useContext(PageContext)
-    const { translate } = useContext(I18nContext)
+    const context = usePageContext()
+    const { translate } = useI18n()
 
     const link = context.host
     const transOptions = {

@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Hamburger from '../components/Hamburger'
-import { PageContext } from '../helpers/pageContext'
+import { usePageContext } from '../helpers/pageContext'
 import PageLabel from '../pages/PageLabel'
 import PageLink from '../pages/PageLink'
 import LanguageSwitcher from '../i18n/LanguageSwitcher'
 
 const Pagination = ({ position, toggleSidebar }) => {
-    const context = useContext(PageContext)
+    const context = usePageContext()
 
     let previous = <span />
     if (context.previous !== undefined) {

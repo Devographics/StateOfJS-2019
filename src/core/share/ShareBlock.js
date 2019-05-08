@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactGA from 'react-ga'
-import { I18nContext } from '../i18n/i18nContext'
+import { useI18n } from '../i18n/i18nContext'
 import { getBlockMeta } from 'core/helpers/blockHelpers'
-import { PageContext } from '../helpers/pageContext'
+import { usePageContext } from '../helpers/pageContext'
 import ShareTwitter from './ShareTwitter'
 import ShareLinkedIn from './ShareLinkedIn'
 import ShareFacebook from './ShareFacebook'
@@ -12,8 +12,8 @@ import ShareEmail from './ShareEmail'
 
 const ShareBlock = ({ section, id, className, toggleClass }) => {
     const [showOptions, setShowOptions] = useState(false)
-    const context = useContext(PageContext)
-    const { translate } = useContext(I18nContext)
+    const context = usePageContext()
+    const { translate } = useI18n()
 
     const toggleOptions = e => {
         e.preventDefault()

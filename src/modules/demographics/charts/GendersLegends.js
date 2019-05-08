@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import theme from 'nivoTheme'
 import Legends from 'core/charts/Legends'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { genderNameToTranslationKey } from 'core/i18n/translation-key-getters'
 
 const GenderLegends = () => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     const legends = Object.keys(theme.genderColors).map(gender => ({
         id: gender,

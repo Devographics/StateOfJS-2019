@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import { colorRange } from '../../constants'
@@ -6,7 +6,7 @@ import libraries from 'data/bestofjs.json'
 import theme from 'nivoTheme'
 import Tooltip from '../components/Tooltip'
 import { barChartProps } from '../../constants'
-import { I18nContext } from '../i18n/i18nContext'
+import { useI18n } from '../i18n/i18nContext'
 import { getToolName } from '../helpers/tools'
 
 const tooltipWidth = 240
@@ -69,7 +69,7 @@ const BarTooltip = translate => ({ indexValue, value }) => (
 )
 
 const BarChart = ({ data, chartId }) => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     return (
         <div

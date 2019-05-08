@@ -1,16 +1,16 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { ResponsiveWaffleCanvas } from '@nivo/waffle'
 import theme from 'nivoTheme'
 import ChartRatioContainer from 'core/charts/ChartRatioContainer'
 import GenderLegends from './GendersLegends'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { genderNameToTranslationKey } from 'core/i18n/translation-key-getters'
 
 const rows = 32
 const columns = 128
 
 const GenderBreakdownWaffleChart = ({ data }) => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     let total = 0
     const colors = []

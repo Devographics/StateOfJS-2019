@@ -1,13 +1,13 @@
-import React, { useMemo, useContext } from 'react'
+import React, { useMemo } from 'react'
 import { ResponsiveSankey } from '@nivo/sankey'
 import theme from 'nivoTheme'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { colors, yearsOfExperience } from '../../../constants'
 
 const reversedKeys = [...yearsOfExperience].reverse()
 
 const FeatureUsageByExperienceSankeyChart = ({ buckets }) => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
     const nodes = useMemo(
         () => [
             { id: translate('features.usage.used_it') },

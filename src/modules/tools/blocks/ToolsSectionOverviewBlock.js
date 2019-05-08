@@ -1,11 +1,11 @@
-import React, { memo, useContext, useMemo } from 'react'
+import React, { memo, useMemo } from 'react'
 import Block from 'core/components/Block'
-import { PageContext } from 'core/helpers/pageContext'
+import { usePageContext } from 'core/helpers/pageContext'
 import ToolsOpinionMultiBarDivergingChart from '../charts/ToolsOpinionMultiBarDivergingChart'
 import ToolsOpinionMultiBarChart from '../charts/ToolsOpinionMultiBarChart'
 
 const ToolsSectionOverviewBlock = ({ data }) => {
-    const context = useContext(PageContext)
+    const context = usePageContext()
     const toolsData = useMemo(
         () =>
             context.blocks

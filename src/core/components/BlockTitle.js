@@ -1,15 +1,15 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import ShareBlock from '../share/ShareBlock'
-import { I18nContext } from '../i18n/i18nContext'
-import { PageContext } from '../helpers/pageContext'
+import { useI18n } from '../i18n/i18nContext'
+import { usePageContext } from '../helpers/pageContext'
 import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
 
 const BlockTitle = ({ id, showDescription, isShareable, values }) => {
     const [showOptions, setShowOptions] = useState(false)
-    const context = useContext(PageContext)
-    const { translate } = useContext(I18nContext)
+    const context = usePageContext()
+    const { translate } = useI18n()
 
     const title = getBlockTitle(id, context, translate, { values })
     let description = ''

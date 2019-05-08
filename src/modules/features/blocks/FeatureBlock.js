@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
-import { PageContext } from 'core/helpers/pageContext'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { usePageContext } from 'core/helpers/pageContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import FeatureUsageBarChart from '../charts/FeatureUsageBarChart'
 import { mergeFeaturesResources } from '../featuresHelpers'
 import FeatureUsageLegends from '../charts/FeatureUsageLegends'
@@ -10,7 +10,7 @@ import ChartContainer from 'core/charts/ChartContainer'
 import FeatureUsageByExperienceSankeyChart from '../charts/FeatureUsageByExperienceSankeyChart'
 
 const FeatureResources = ({ caniuseInfo }) => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     return (
         <div className="Feature__Resources FTBlock__Resources">
@@ -49,8 +49,8 @@ const FeatureBlock = ({ block, data }) => {
     const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
     const feature = features.find(a => a.id === block.id)
 
-    const context = useContext(PageContext)
-    const { translate } = useContext(I18nContext)
+    const context = usePageContext()
+    const { translate } = useI18n()
 
     let mdnInfo
     if (feature.resources.mdn !== null && feature.resources.mdn.length > 0) {

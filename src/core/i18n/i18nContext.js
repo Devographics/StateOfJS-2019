@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { getTranslator } from './translator'
-import { PageContext } from '../helpers/pageContext'
+import { usePageContext } from '../helpers/pageContext'
 
 export const I18nContext = createContext()
 
@@ -22,7 +22,7 @@ const translationsQuery = graphql`
 `
 
 export const I18nContextProvider = ({ children }) => {
-    const context = useContext(PageContext)
+    const context = usePageContext()
 
     return (
         <StaticQuery query={translationsQuery}>
@@ -40,3 +40,5 @@ export const I18nContextProvider = ({ children }) => {
         </StaticQuery>
     )
 }
+
+export const useI18n = () => useContext(I18nContext)

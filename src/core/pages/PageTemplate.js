@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import TextBlock from 'core/blocks/TextBlock'
 import PageHeader from 'core/pages/PageHeader'
-import { PageContext } from 'core/helpers/pageContext'
+import { usePageContext } from 'core/helpers/pageContext'
 import BlockSwitcher from 'core/components/BlockSwitcher'
 
 const PageTemplate = ({ data = {} }) => {
-    const context = useContext(PageContext)
+    const context = usePageContext()
 
     console.log({ context, data })
 

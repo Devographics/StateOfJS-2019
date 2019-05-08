@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import sitemap from '../../../config/sitemap.yml'
-import { PageContext } from '../helpers/pageContext'
+import { usePageContext } from '../helpers/pageContext'
 import PageLink from '../pages/PageLink'
 import PageLabel from '../pages/PageLabel'
 import LanguageSwitcher from '../i18n/LanguageSwitcher'
@@ -41,7 +41,7 @@ const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
 }
 
 const Nav = ({ closeSidebar }) => {
-    const context = useContext(PageContext)
+    const context = usePageContext()
 
     return (
         <div className="Nav">

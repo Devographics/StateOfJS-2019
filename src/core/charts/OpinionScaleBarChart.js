@@ -1,8 +1,8 @@
-import React, { memo, useMemo, useContext } from 'react'
+import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
-import { I18nContext } from 'core/i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
 
 const Tooltip = memo(({ translate, indexValue, value }) => (
@@ -19,6 +19,7 @@ const scaleLabel = translate => value => {
     return translate(`opinion_scale.step.${value}`)
 }
 
+/* eslint-disable jsx-a11y/accessible-emoji */
 const Emojis = ({ bars }) => (
     <>
         <text
@@ -55,7 +56,7 @@ const Emojis = ({ bars }) => (
 )
 
 const OpinionScaleBarChart = ({ buckets }) => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
     const data = useMemo(
         () =>
             [0, 1, 2, 3, 4].map(step => {

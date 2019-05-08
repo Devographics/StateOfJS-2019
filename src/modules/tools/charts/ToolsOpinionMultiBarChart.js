@@ -7,8 +7,7 @@ const commonStyles = {
     bar: {
         position: 'relative',
         height: 24,
-        marginBottom: 6,
-        background: 'rgba(255,255,255,.3)'
+        marginBottom: 6
     },
     barLabel: {
         position: 'absolute',
@@ -23,7 +22,7 @@ const commonStyles = {
     }
 }
 
-const DoubleBar = memo(({ negativeValue, negativeColor, positiveValue, positiveColor, label }) => {
+const DoubleBar = memo(({ negativeColor, positiveValue, positiveColor, label }) => {
     return (
         <div
             style={{
@@ -57,7 +56,9 @@ const SingleBar = memo(({ value, label, color }) => {
                     width: `${value}%`
                 }}
             />
-            <div style={commonStyles.barLabel}>{label}</div>
+            <div style={commonStyles.barLabel}>
+                {label}:&nbsp;{value}%
+            </div>
         </div>
     )
 })

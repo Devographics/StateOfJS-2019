@@ -1,9 +1,9 @@
-import React, { createContext } from 'react'
+import React, { createContext, useContext } from 'react'
 
-export const PageContext = createContext({})
+const pageContext = createContext({})
 
 export const PageContextProvider = props => {
-    return <PageContext.Provider value={props.value}>{props.children}</PageContext.Provider>
+    return <pageContext.Provider value={props.value}>{props.children}</pageContext.Provider>
 }
 
-export const PageContextConsumer = PageContext.Consumer
+export const usePageContext = () => useContext(pageContext)

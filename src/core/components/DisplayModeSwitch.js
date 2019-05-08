@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { I18nContext } from '../i18n/i18nContext'
+import { useI18n } from '../i18n/i18nContext'
 
 const DisplayModeSwitch = ({ mode, onChange }) => {
-    const { translate } = useContext(I18nContext)
+    const { translate } = useI18n()
 
     return (
         <div className="ButtonGroup">

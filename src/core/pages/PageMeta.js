@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
-import { PageContext } from '../helpers/pageContext'
-import { I18nContext } from '../i18n/i18nContext'
+import { usePageContext } from '../helpers/pageContext'
+import { useI18n } from '../i18n/i18nContext'
 import { getPageSocialMeta } from '../helpers/pageHelpers'
 
 const PageMeta = ({ overrides = {} }) => {
-    const context = useContext(PageContext)
-    const { translate } = useContext(I18nContext)
+    const context = usePageContext()
+    const { translate } = useI18n()
 
     const meta = getPageSocialMeta(context, translate, overrides)
 

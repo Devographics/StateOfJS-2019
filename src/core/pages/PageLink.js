@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { PageContext } from '../helpers/pageContext'
+import { usePageContext } from '../helpers/pageContext'
 
 const PageLink = ({ page, ...rest }) => {
-    const context = useContext(PageContext)
+    const context = usePageContext()
 
     return <Link {...rest} to={`${context.localePath}${page.path}`} />
 }

@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import locales from '../../../config/locales.yml'
-import { PageContext } from '../helpers/pageContext'
+import { usePageContext } from '../helpers/pageContext'
 
 const LangSelector = () => {
-    const context = useContext(PageContext)
+    const context = usePageContext()
     const links = locales.map(locale => {
         return {
             ...locale,
