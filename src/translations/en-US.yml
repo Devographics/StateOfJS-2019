@@ -26,12 +26,38 @@ translations:
     ###########################################################################
     - key: block.title.bem
       t: BEM
+    - key: block.bem.description
+      t: |
+        You will not be surprised to hear that BEM is an abbreviation
+        of the key elements of the methodology — Block, Element and Modifier.
     - key: block.title.atomic-css
       t: Atomic CSS
+    - key: block.atomic-css.description
+      t: |
+        Atomic CSS is a CSS architecture. It is not opinionated;
+        it simply defines a set of classes representing single-purpose styling units.
     - key: block.title.oocss
       t: OOCSS
+    - key: block.oocss.description
+      t: |
+        OOCSS, or object-oriented CSS, is a methodology to help programmers
+        write CSS that is succinct and easy to maintain.
     - key: block.title.smacss
       t: SMACSS
+    - key: block.smacss.description
+      t: |
+        SMACSS (pronounced “smacks”) is more style guide than rigid framework.
+        There is no library within here for you to download or install.
+        There is no git repository for you to clone. SMACSS is a way to examine
+        your design process and as a way to fit those rigid frameworks into
+        a flexible thought process.
+    - key: block.title.it-css
+      t: itcss
+    - key: block.it-css.description
+      t: |
+        itcss is a sane, scalable, managed
+        CSS architecture from CSS Wizardry
+
     ###########################################################################
     # Other tools
     ###########################################################################
