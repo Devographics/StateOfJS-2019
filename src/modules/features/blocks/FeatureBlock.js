@@ -81,9 +81,7 @@ const FeatureBlock = ({ block, data }) => {
                 {caniuseInfo && <FeatureResources caniuseInfo={caniuseInfo} />}
             </div>
             {feature.usageByExperience && (
-                <FeatureUsageByExperienceSankeyChart
-                    buckets={feature.usageByExperience.buckets}
-                />
+                <FeatureUsageByExperienceSankeyChart buckets={feature.usageByExperience.buckets} />
             )}
         </Block>
     )
@@ -114,15 +112,13 @@ FeatureBlock.propTypes = {
                         buckets: PropTypes.arrayOf(
                             PropTypes.shape({
                                 id: PropTypes.string.isRequired,
-                                count: PropTypes.number.isRequired,
-                                percentage: PropTypes.number.isRequired,
                                 filtered: PropTypes.shape({
                                     count: PropTypes.number.isRequired,
-                                    percentage: PropTypes.number.isRequired,    
-                                }).isRequired,
+                                    percentage: PropTypes.number.isRequired
+                                }).isRequired
                             })
-                        ).isRequired    
-                    }),
+                        ).isRequired
+                    })
                 })
             )
         }).isRequired

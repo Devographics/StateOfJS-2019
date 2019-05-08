@@ -4,24 +4,19 @@ import theme from 'nivoTheme'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 
 const FeaturesScatterplotChart = ({ features }) => {
-    const max = useMemo(() => Math.max(...features.map(feature => feature.total)), features)
-    const data = useMemo(
-        () => {
-            return features.map(feature => {
-                const usageBucket = feature.buckets.find(b => b.id === 'used_it')
-                const knowNotUsedBucket = feature.buckets.find(
-                    b => b.id === 'know_not_used'
-                )
+    const max = useMemo(() => Math.max(...features.map(feature => feature.usage.total)), features)
+    const data = useMemo(() => {
+        return features.map(feature => {
+            const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+            const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
 
-                return {
-                    featureId: feature.id,
-                    x: usageBucket.count,
-                    y: usageBucket.count + knowNotUsedBucket.count
-                }
-            })
-        },
-        [features]
-    )
+            return {
+                featureId: feature.id,
+                x: usageBucket.count,
+                y: usageBucket.count + knowNotUsedBucket.count
+            }
+        })
+    }, [features])
 
     return (
         <>
@@ -73,14 +68,16 @@ FeaturesScatterplotChart.propTypes = {
     features: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
-            total: PropTypes.number.isRequired,
-            buckets: PropTypes.arrayOf(
-                PropTypes.shape({
-                    id: PropTypes.string.isRequired,
-                    count: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
-                })
-            ).isRequired
+            usage: PropTypes.shape({
+                total: PropTypes.number.isRequired,
+                buckets: PropTypes.arrayOf(
+                    PropTypes.shape({
+                        id: PropTypes.string.isRequired,
+                        count: PropTypes.number.isRequired,
+                        percentage: PropTypes.number.isRequired
+                    })
+                ).isRequired
+            }).isRequired
         })
     )
 }

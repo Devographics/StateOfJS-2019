@@ -13,10 +13,19 @@ export const query = graphql`
         data: opinionsYaml(section_id: { eq: "opinions" }) {
             aggregations {
                 id
-                buckets {
-                    id
-                    count
-                    percentage
+                opinion {
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
+                }
+                features {
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
         }

@@ -73,11 +73,13 @@ export const query = graphql`
         data: toolsYaml(section_id: { eq: $id }) {
             aggregations {
                 id
-                total
-                buckets {
-                    id
-                    count
-                    percentage
+                opinion {
+                    total
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
             fields {

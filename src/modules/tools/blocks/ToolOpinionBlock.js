@@ -12,7 +12,7 @@ const ToolOpinionBlock = ({ block, data }) => {
     const blockData = data.data.aggregations.find(a => a.id === block.id)
     const resources = data.data.fields.resources.find(r => r.id === block.id)
 
-    if (!blockData) {
+    if (!blockData || !blockData.opinion) {
         return <div key={block.id}>No data available for tool: {block.id}</div>
     }
 
@@ -24,7 +24,7 @@ const ToolOpinionBlock = ({ block, data }) => {
                 <div className="Tool__Chart FTBlock__Chart">
                     <ToolOpinionsLegend />
                     <ChartContainer height={40}>
-                        <ToolOpinionsChart buckets={blockData.buckets} />
+                        <ToolOpinionsChart buckets={blockData.opinion.buckets} />
                     </ChartContainer>
                 </div>
 
@@ -47,14 +47,16 @@ ToolOpinionBlock.propTypes = {
             aggregations: PropTypes.arrayOf(
                 PropTypes.shape({
                     id: PropTypes.string.isRequired,
-                    total: PropTypes.number.isRequired,
-                    buckets: PropTypes.arrayOf(
-                        PropTypes.shape({
-                            id: PropTypes.string.isRequired,
-                            count: PropTypes.number.isRequired,
-                            percentage: PropTypes.number.isRequired
-                        })
-                    ).isRequired
+                    opinion: PropTypes.shape({
+                        total: PropTypes.number.isRequired,
+                        buckets: PropTypes.arrayOf(
+                            PropTypes.shape({
+                                id: PropTypes.string.isRequired,
+                                count: PropTypes.number.isRequired,
+                                percentage: PropTypes.number.isRequired
+                            })
+                        ).isRequired
+                    }).isRequired
                 })
             )
         }).isRequired

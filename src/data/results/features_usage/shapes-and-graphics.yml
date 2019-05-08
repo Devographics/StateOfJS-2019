@@ -6,320 +6,326 @@
 section_id: shapes-and-graphics
 aggregations:
   - id: css-shapes
-    total: 11260
-    others_count: 0
-    buckets:
-      - id: know_not_used
-        count: 5336
-        percentage: 47.39
-      - id: never_heard_not_sure
-        count: 3493
-        percentage: 31.02
-      - id: used_it
-        count: 2431
-        percentage: 21.59
-  - id: css-shapes-usage-by-xp
-    total: 11205
-    others_count: 0
-    buckets:
-      - id: 5-10
-        count: 3610
-        filtered:
-          count: 833
-          percentage: 23.07
-        percentage: 32.22
-      - id: 10-20
-        count: 3064
-        filtered:
-          count: 636
-          percentage: 20.76
-        percentage: 27.34
-      - id: 2-5
-        count: 2922
-        filtered:
-          count: 616
-          percentage: 21.08
-        percentage: 26.08
-      - id: 1-2
-        count: 957
-        filtered:
-          count: 184
-          percentage: 19.23
-        percentage: 8.54
-      - id: more-than-20
-        count: 425
-        filtered:
-          count: 94
-          percentage: 22.12
-        percentage: 3.79
-      - id: less-than-1
-        count: 227
-        filtered:
-          count: 42
-          percentage: 18.5
-        percentage: 2.03
+    usage:
+      total: 11260
+      others_count: 0
+      buckets:
+        - id: know_not_used
+          count: 5336
+          percentage: 47.39
+        - id: never_heard_not_sure
+          count: 3493
+          percentage: 31.02
+        - id: used_it
+          count: 2431
+          percentage: 21.59
+    usageByExperience:
+      total: 11205
+      others_count: 0
+      buckets:
+        - id: 5-10
+          count: 3610
+          filtered:
+            count: 833
+            percentage: 23.07
+          percentage: 32.22
+        - id: 10-20
+          count: 3064
+          filtered:
+            count: 636
+            percentage: 20.76
+          percentage: 27.34
+        - id: 2-5
+          count: 2922
+          filtered:
+            count: 616
+            percentage: 21.08
+          percentage: 26.08
+        - id: 1-2
+          count: 957
+          filtered:
+            count: 184
+            percentage: 19.23
+          percentage: 8.54
+        - id: more-than-20
+          count: 425
+          filtered:
+            count: 94
+            percentage: 22.12
+          percentage: 3.79
+        - id: less-than-1
+          count: 227
+          filtered:
+            count: 42
+            percentage: 18.5
+          percentage: 2.03
   - id: object-fit
-    total: 11264
-    others_count: 0
-    buckets:
-      - id: used_it
-        count: 4798
-        percentage: 42.59
-      - id: never_heard_not_sure
-        count: 4145
-        percentage: 36.8
-      - id: know_not_used
-        count: 2321
-        percentage: 20.61
-  - id: object-fit-usage-by-xp
-    total: 11205
-    others_count: 0
-    buckets:
-      - id: 5-10
-        count: 3610
-        filtered:
-          count: 1551
-          percentage: 42.96
-        percentage: 32.22
-      - id: 10-20
-        count: 3064
-        filtered:
-          count: 1391
-          percentage: 45.4
-        percentage: 27.34
-      - id: 2-5
-        count: 2922
-        filtered:
-          count: 1235
-          percentage: 42.27
-        percentage: 26.08
-      - id: 1-2
-        count: 957
-        filtered:
-          count: 339
-          percentage: 35.42
-        percentage: 8.54
-      - id: more-than-20
-        count: 425
-        filtered:
-          count: 190
-          percentage: 44.71
-        percentage: 3.79
-      - id: less-than-1
-        count: 227
-        filtered:
-          count: 58
-          percentage: 25.55
-        percentage: 2.03
+    usage:
+      total: 11264
+      others_count: 0
+      buckets:
+        - id: used_it
+          count: 4798
+          percentage: 42.59
+        - id: never_heard_not_sure
+          count: 4145
+          percentage: 36.8
+        - id: know_not_used
+          count: 2321
+          percentage: 20.61
+    usageByExperience:
+      total: 11205
+      others_count: 0
+      buckets:
+        - id: 5-10
+          count: 3610
+          filtered:
+            count: 1551
+            percentage: 42.96
+          percentage: 32.22
+        - id: 10-20
+          count: 3064
+          filtered:
+            count: 1391
+            percentage: 45.4
+          percentage: 27.34
+        - id: 2-5
+          count: 2922
+          filtered:
+            count: 1235
+            percentage: 42.27
+          percentage: 26.08
+        - id: 1-2
+          count: 957
+          filtered:
+            count: 339
+            percentage: 35.42
+          percentage: 8.54
+        - id: more-than-20
+          count: 425
+          filtered:
+            count: 190
+            percentage: 44.71
+          percentage: 3.79
+        - id: less-than-1
+          count: 227
+          filtered:
+            count: 58
+            percentage: 25.55
+          percentage: 2.03
   - id: clip-path
-    total: 11262
-    others_count: 0
-    buckets:
-      - id: know_not_used
-        count: 4422
-        percentage: 39.27
-      - id: used_it
-        count: 4381
-        percentage: 38.9
-      - id: never_heard_not_sure
-        count: 2459
-        percentage: 21.83
-  - id: clip-path-usage-by-xp
-    total: 11205
-    others_count: 0
-    buckets:
-      - id: 5-10
-        count: 3610
-        filtered:
-          count: 1466
-          percentage: 40.61
-        percentage: 32.22
-      - id: 10-20
-        count: 3064
-        filtered:
-          count: 1324
-          percentage: 43.21
-        percentage: 27.34
-      - id: 2-5
-        count: 2922
-        filtered:
-          count: 1040
-          percentage: 35.59
-        percentage: 26.08
-      - id: 1-2
-        count: 957
-        filtered:
-          count: 289
-          percentage: 30.2
-        percentage: 8.54
-      - id: more-than-20
-        count: 425
-        filtered:
-          count: 179
-          percentage: 42.12
-        percentage: 3.79
-      - id: less-than-1
-        count: 227
-        filtered:
-          count: 53
-          percentage: 23.35
-        percentage: 2.03
+    usage:
+      total: 11262
+      others_count: 0
+      buckets:
+        - id: know_not_used
+          count: 4422
+          percentage: 39.27
+        - id: used_it
+          count: 4381
+          percentage: 38.9
+        - id: never_heard_not_sure
+          count: 2459
+          percentage: 21.83
+    usageByExperience:
+      total: 11205
+      others_count: 0
+      buckets:
+        - id: 5-10
+          count: 3610
+          filtered:
+            count: 1466
+            percentage: 40.61
+          percentage: 32.22
+        - id: 10-20
+          count: 3064
+          filtered:
+            count: 1324
+            percentage: 43.21
+          percentage: 27.34
+        - id: 2-5
+          count: 2922
+          filtered:
+            count: 1040
+            percentage: 35.59
+          percentage: 26.08
+        - id: 1-2
+          count: 957
+          filtered:
+            count: 289
+            percentage: 30.2
+          percentage: 8.54
+        - id: more-than-20
+          count: 425
+          filtered:
+            count: 179
+            percentage: 42.12
+          percentage: 3.79
+        - id: less-than-1
+          count: 227
+          filtered:
+            count: 53
+            percentage: 23.35
+          percentage: 2.03
   - id: css-masks
-    total: 11254
-    others_count: 0
-    buckets:
-      - id: know_not_used
-        count: 5097
-        percentage: 45.29
-      - id: never_heard_not_sure
-        count: 3171
-        percentage: 28.18
-      - id: used_it
-        count: 2986
-        percentage: 26.53
-  - id: css-masks-usage-by-xp
-    total: 11205
-    others_count: 0
-    buckets:
-      - id: 5-10
-        count: 3610
-        filtered:
-          count: 1049
-          percentage: 29.06
-        percentage: 32.22
-      - id: 10-20
-        count: 3064
-        filtered:
-          count: 915
-          percentage: 29.86
-        percentage: 27.34
-      - id: 2-5
-        count: 2922
-        filtered:
-          count: 688
-          percentage: 23.55
-        percentage: 26.08
-      - id: 1-2
-        count: 957
-        filtered:
-          count: 154
-          percentage: 16.09
-        percentage: 8.54
-      - id: more-than-20
-        count: 425
-        filtered:
-          count: 133
-          percentage: 31.29
-        percentage: 3.79
-      - id: less-than-1
-        count: 227
-        filtered:
-          count: 21
-          percentage: 9.25
-        percentage: 2.03
+    usage:
+      total: 11254
+      others_count: 0
+      buckets:
+        - id: know_not_used
+          count: 5097
+          percentage: 45.29
+        - id: never_heard_not_sure
+          count: 3171
+          percentage: 28.18
+        - id: used_it
+          count: 2986
+          percentage: 26.53
+    usageByExperience:
+      total: 11205
+      others_count: 0
+      buckets:
+        - id: 5-10
+          count: 3610
+          filtered:
+            count: 1049
+            percentage: 29.06
+          percentage: 32.22
+        - id: 10-20
+          count: 3064
+          filtered:
+            count: 915
+            percentage: 29.86
+          percentage: 27.34
+        - id: 2-5
+          count: 2922
+          filtered:
+            count: 688
+            percentage: 23.55
+          percentage: 26.08
+        - id: 1-2
+          count: 957
+          filtered:
+            count: 154
+            percentage: 16.09
+          percentage: 8.54
+        - id: more-than-20
+          count: 425
+          filtered:
+            count: 133
+            percentage: 31.29
+          percentage: 3.79
+        - id: less-than-1
+          count: 227
+          filtered:
+            count: 21
+            percentage: 9.25
+          percentage: 2.03
   - id: blend-modes
-    total: 11249
-    others_count: 0
-    buckets:
-      - id: know_not_used
-        count: 4002
-        percentage: 35.58
-      - id: used_it
-        count: 3820
-        percentage: 33.96
-      - id: never_heard_not_sure
-        count: 3427
-        percentage: 30.46
-  - id: blend-modes-usage-by-xp
-    total: 11205
-    others_count: 0
-    buckets:
-      - id: 5-10
-        count: 3610
-        filtered:
-          count: 1326
-          percentage: 36.73
-        percentage: 32.22
-      - id: 10-20
-        count: 3064
-        filtered:
-          count: 1272
-          percentage: 41.51
-        percentage: 27.34
-      - id: 2-5
-        count: 2922
-        filtered:
-          count: 823
-          percentage: 28.17
-        percentage: 26.08
-      - id: 1-2
-        count: 957
-        filtered:
-          count: 172
-          percentage: 17.97
-        percentage: 8.54
-      - id: more-than-20
-        count: 425
-        filtered:
-          count: 175
-          percentage: 41.18
-        percentage: 3.79
-      - id: less-than-1
-        count: 227
-        filtered:
-          count: 31
-          percentage: 13.66
-        percentage: 2.03
+    usage:
+      total: 11249
+      others_count: 0
+      buckets:
+        - id: know_not_used
+          count: 4002
+          percentage: 35.58
+        - id: used_it
+          count: 3820
+          percentage: 33.96
+        - id: never_heard_not_sure
+          count: 3427
+          percentage: 30.46
+    usageByExperience:
+      total: 11205
+      others_count: 0
+      buckets:
+        - id: 5-10
+          count: 3610
+          filtered:
+            count: 1326
+            percentage: 36.73
+          percentage: 32.22
+        - id: 10-20
+          count: 3064
+          filtered:
+            count: 1272
+            percentage: 41.51
+          percentage: 27.34
+        - id: 2-5
+          count: 2922
+          filtered:
+            count: 823
+            percentage: 28.17
+          percentage: 26.08
+        - id: 1-2
+          count: 957
+          filtered:
+            count: 172
+            percentage: 17.97
+          percentage: 8.54
+        - id: more-than-20
+          count: 425
+          filtered:
+            count: 175
+            percentage: 41.18
+          percentage: 3.79
+        - id: less-than-1
+          count: 227
+          filtered:
+            count: 31
+            percentage: 13.66
+          percentage: 2.03
   - id: css-filter-effects
-    total: 11271
-    others_count: 0
-    buckets:
-      - id: used_it
-        count: 6649
-        percentage: 58.99
-      - id: know_not_used
-        count: 3147
-        percentage: 27.92
-      - id: never_heard_not_sure
-        count: 1475
-        percentage: 13.09
-  - id: css-filter-effects-usage-by-xp
-    total: 11205
-    others_count: 0
-    buckets:
-      - id: 5-10
-        count: 3610
-        filtered:
-          count: 2205
-          percentage: 61.08
-        percentage: 32.22
-      - id: 10-20
-        count: 3064
-        filtered:
-          count: 2018
-          percentage: 65.86
-        percentage: 27.34
-      - id: 2-5
-        count: 2922
-        filtered:
-          count: 1623
-          percentage: 55.54
-        percentage: 26.08
-      - id: 1-2
-        count: 957
-        filtered:
-          count: 433
-          percentage: 45.25
-        percentage: 8.54
-      - id: more-than-20
-        count: 425
-        filtered:
-          count: 263
-          percentage: 61.88
-        percentage: 3.79
-      - id: less-than-1
-        count: 227
-        filtered:
-          count: 61
-          percentage: 26.87
-        percentage: 2.03
+    usage:
+      total: 11271
+      others_count: 0
+      buckets:
+        - id: used_it
+          count: 6649
+          percentage: 58.99
+        - id: know_not_used
+          count: 3147
+          percentage: 27.92
+        - id: never_heard_not_sure
+          count: 1475
+          percentage: 13.09
+    usageByExperience:
+      total: 11205
+      others_count: 0
+      buckets:
+        - id: 5-10
+          count: 3610
+          filtered:
+            count: 2205
+            percentage: 61.08
+          percentage: 32.22
+        - id: 10-20
+          count: 3064
+          filtered:
+            count: 2018
+            percentage: 65.86
+          percentage: 27.34
+        - id: 2-5
+          count: 2922
+          filtered:
+            count: 1623
+            percentage: 55.54
+          percentage: 26.08
+        - id: 1-2
+          count: 957
+          filtered:
+            count: 433
+            percentage: 45.25
+          percentage: 8.54
+        - id: more-than-20
+          count: 425
+          filtered:
+            count: 263
+            percentage: 61.88
+          percentage: 3.79
+        - id: less-than-1
+          count: 227
+          filtered:
+            count: 61
+            percentage: 26.87
+          percentage: 2.03

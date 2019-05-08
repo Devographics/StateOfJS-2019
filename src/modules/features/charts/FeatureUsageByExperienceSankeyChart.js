@@ -19,11 +19,12 @@ const FeatureUsageByExperienceSankeyChart = ({ buckets }) => {
         [buckets, translate]
     )
     const links = useMemo(
-        () => reversedKeys.map(key => ({
-            source: translate('features.usage.used_it'),
-            target: translate(`years_of_experience.${key}.short`),
-            value: buckets.find(b => b.id === key).filtered.percentage,
-        })),
+        () =>
+            reversedKeys.map(key => ({
+                source: translate('features.usage.used_it'),
+                target: translate(`years_of_experience.${key}.short`),
+                value: buckets.find(b => b.id === key).filtered.percentage
+            })),
         [buckets]
     )
 
@@ -43,7 +44,7 @@ const FeatureUsageByExperienceSankeyChart = ({ buckets }) => {
                     theme={theme}
                     animate={false}
                     colors={[colors.blue]}
-                    linkContract={.5}
+                    linkContract={0.5}
                     nodeBorderWidth={0}
                     nodeInnerPadding={1}
                     nodeSpacing={8}

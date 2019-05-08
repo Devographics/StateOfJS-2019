@@ -27,10 +27,12 @@ export const query = graphql`
         features: featuresUsageYaml(section_id: { eq: "layout" }) {
             aggregations {
                 id
-                total
-                buckets {
-                    id
-                    count
+                usage {
+                    total
+                    buckets {
+                        id
+                        count
+                    }
                 }
             }
             fields {

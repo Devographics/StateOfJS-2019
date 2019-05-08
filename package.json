@@ -65,8 +65,8 @@
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build && gh-pages -d public",
-    "dev": "gatsby develop --port 3119",
+    "dev": "gatsby develop",
     "dev:clean": "rm -rf .cache && yarn run dev",
-    "fmt": "prettier --write \"src/**/*.{js,jsx}\" \"config/**/*.{yaml,yml}\""
+    "fmt": "prettier --write \"src/**/*.{js,jsx}\" \"node_src/**/*.{js}\" \"config/**/*.{yaml,yml}\""
   }
 }

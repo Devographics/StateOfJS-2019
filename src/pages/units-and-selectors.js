@@ -13,10 +13,12 @@ export const query = graphql`
         data: unitsAndSelectorsYaml(section_id: { eq: "units-and-selectors" }) {
             aggregations {
                 id
-                buckets {
-                    id
-                    count
-                    percentage
+                usage {
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
         }

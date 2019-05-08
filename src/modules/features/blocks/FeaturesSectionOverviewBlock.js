@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import FeaturesCirclePackingChart from '../charts/FeaturesCirclePackingChart'
@@ -8,19 +8,12 @@ import { mergeFeaturesResources } from '../featuresHelpers'
 
 const FeaturesSectionOverviewBlock = ({ block, data }) => {
     const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
-    const featuresUsageData = useMemo(
-        () => features.map(feature => ({
-            ...feature.usage,
-            resources: feature.resources
-        })),
-        [features]
-    )
 
     return (
         <Block id={block.id} showDescription={false}>
-            <FeaturesCirclePackingChart features={featuresUsageData} />
-            <FeaturesScatterplotChart features={featuresUsageData} />
-            <FeaturesTreeMapChart features={featuresUsageData} />
+            <FeaturesCirclePackingChart features={features} />
+            <FeaturesScatterplotChart features={features} />
+            <FeaturesTreeMapChart features={features} />
         </Block>
     )
 }

@@ -13,10 +13,12 @@ export const query = graphql`
         data: learningResourcesYaml(section_id: { eq: "resources" }) {
             aggregations {
                 id
-                buckets {
-                    id
-                    count
-                    percentage
+                resources {
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
         }

@@ -13,10 +13,12 @@ export const query = graphql`
         data: environmentsYaml(section_id: { eq: "environments" }) {
             aggregations {
                 id
-                buckets {
-                    id
-                    count
-                    percentage
+                environments {
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
         }

@@ -11,19 +11,23 @@ const OpinionScaleBlock = ({ block, data }) => {
         )
     }
 
+    const dataKey = block.dataKey || 'opinion'
     const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
         block,
         data.data
     ])
 
-    if (!blockData) {
+    if (!blockData || !blockData[dataKey]) {
         return <div>OpinionScaleBlock: Missing data for block {block.id}</div>
     }
 
     return (
         <Block id={block.id} showDescription={!!block.showDescription}>
             <ChartContainer>
-                <OpinionScaleBarChart buckets={blockData.buckets} i18nNamespace={block.id} />
+                <OpinionScaleBarChart
+                    buckets={blockData[dataKey].buckets}
+                    i18nNamespace={block.id}
+                />
             </ChartContainer>
         </Block>
     )
@@ -32,6 +36,7 @@ const OpinionScaleBlock = ({ block, data }) => {
 OpinionScaleBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
+        dataKey: PropTypes.string,
         showDescription: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({

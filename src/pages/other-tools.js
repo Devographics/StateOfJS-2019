@@ -13,10 +13,12 @@ export const query = graphql`
         data: otherToolsYaml(section_id: { eq: "other-tools" }) {
             aggregations {
                 id
-                buckets {
-                    id
-                    count
-                    percentage
+                usage {
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
         }

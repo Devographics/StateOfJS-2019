@@ -6,211 +6,222 @@
 section_id: css-frameworks
 aggregations:
   - id: bootstrap
-    total: 11230
-    others_count: 0
-    buckets:
-      - id: would_use
-        count: 5090
-        percentage: 45.32
-      - id: would_not_use
-        count: 4663
-        percentage: 41.52
-      - id: not_interested
-        count: 1217
-        percentage: 10.84
-      - id: interested
-        count: 250
-        percentage: 2.23
-      - id: never_heard
-        count: 10
-        percentage: 0.09
+    opinion:
+      total: 11230
+      others_count: 0
+      buckets:
+        - id: would_use
+          count: 5090
+          percentage: 45.32
+        - id: would_not_use
+          count: 4663
+          percentage: 41.52
+        - id: not_interested
+          count: 1217
+          percentage: 10.84
+        - id: interested
+          count: 250
+          percentage: 2.23
+        - id: never_heard
+          count: 10
+          percentage: 0.09
   - id: materialize-css
-    total: 11233
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 3126
-        percentage: 27.84
-      - id: not_interested
-        count: 2985
-        percentage: 26.57
-      - id: would_use
-        count: 1930
-        percentage: 17.18
-      - id: interested
-        count: 1748
-        percentage: 15.56
-      - id: would_not_use
-        count: 1444
-        percentage: 12.85
+    opinion:
+      total: 11233
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 3126
+          percentage: 27.84
+        - id: not_interested
+          count: 2985
+          percentage: 26.57
+        - id: would_use
+          count: 1930
+          percentage: 17.18
+        - id: interested
+          count: 1748
+          percentage: 15.56
+        - id: would_not_use
+          count: 1444
+          percentage: 12.85
   - id: ant-design
-    total: 11225
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 7466
-        percentage: 66.5
-      - id: not_interested
-        count: 1773
-        percentage: 15.8
-      - id: interested
-        count: 1119
-        percentage: 9.97
-      - id: would_use
-        count: 497
-        percentage: 4.43
-      - id: would_not_use
-        count: 370
-        percentage: 3.3
+    opinion:
+      total: 11225
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 7466
+          percentage: 66.5
+        - id: not_interested
+          count: 1773
+          percentage: 15.8
+        - id: interested
+          count: 1119
+          percentage: 9.97
+        - id: would_use
+          count: 497
+          percentage: 4.43
+        - id: would_not_use
+          count: 370
+          percentage: 3.3
   - id: semantic-ui
-    total: 11209
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 4167
-        percentage: 37.18
-      - id: not_interested
-        count: 2910
-        percentage: 25.96
-      - id: interested
-        count: 2416
-        percentage: 21.55
-      - id: would_use
-        count: 1044
-        percentage: 9.31
-      - id: would_not_use
-        count: 672
-        percentage: 6
+    opinion:
+      total: 11209
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 4167
+          percentage: 37.18
+        - id: not_interested
+          count: 2910
+          percentage: 25.96
+        - id: interested
+          count: 2416
+          percentage: 21.55
+        - id: would_use
+          count: 1044
+          percentage: 9.31
+        - id: would_not_use
+          count: 672
+          percentage: 6
   - id: bulma
-    total: 11223
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 5665
-        percentage: 50.47
-      - id: not_interested
-        count: 2372
-        percentage: 21.14
-      - id: interested
-        count: 1646
-        percentage: 14.67
-      - id: would_use
-        count: 1136
-        percentage: 10.12
-      - id: would_not_use
-        count: 404
-        percentage: 3.6
+    opinion:
+      total: 11223
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 5665
+          percentage: 50.47
+        - id: not_interested
+          count: 2372
+          percentage: 21.14
+        - id: interested
+          count: 1646
+          percentage: 14.67
+        - id: would_use
+          count: 1136
+          percentage: 10.12
+        - id: would_not_use
+          count: 404
+          percentage: 3.6
   - id: foundation
-    total: 11215
-    others_count: 0
-    buckets:
-      - id: not_interested
-        count: 3827
-        percentage: 34.12
-      - id: never_heard
-        count: 2349
-        percentage: 20.95
-      - id: would_not_use
-        count: 1949
-        percentage: 17.38
-      - id: would_use
-        count: 1596
-        percentage: 14.23
-      - id: interested
-        count: 1494
-        percentage: 13.32
+    opinion:
+      total: 11215
+      others_count: 0
+      buckets:
+        - id: not_interested
+          count: 3827
+          percentage: 34.12
+        - id: never_heard
+          count: 2349
+          percentage: 20.95
+        - id: would_not_use
+          count: 1949
+          percentage: 17.38
+        - id: would_use
+          count: 1596
+          percentage: 14.23
+        - id: interested
+          count: 1494
+          percentage: 13.32
   - id: uikit
-    total: 11188
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 6691
-        percentage: 59.8
-      - id: not_interested
-        count: 2513
-        percentage: 22.46
-      - id: interested
-        count: 1304
-        percentage: 11.66
-      - id: would_use
-        count: 370
-        percentage: 3.31
-      - id: would_not_use
-        count: 310
-        percentage: 2.77
+    opinion:
+      total: 11188
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 6691
+          percentage: 59.8
+        - id: not_interested
+          count: 2513
+          percentage: 22.46
+        - id: interested
+          count: 1304
+          percentage: 11.66
+        - id: would_use
+          count: 370
+          percentage: 3.31
+        - id: would_not_use
+          count: 310
+          percentage: 2.77
   - id: tachyons
-    total: 11193
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 7481
-        percentage: 66.83
-      - id: not_interested
-        count: 1851
-        percentage: 16.54
-      - id: interested
-        count: 1156
-        percentage: 10.33
-      - id: would_use
-        count: 467
-        percentage: 4.17
-      - id: would_not_use
-        count: 238
-        percentage: 2.13
+    opinion:
+      total: 11193
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 7481
+          percentage: 66.83
+        - id: not_interested
+          count: 1851
+          percentage: 16.54
+        - id: interested
+          count: 1156
+          percentage: 10.33
+        - id: would_use
+          count: 467
+          percentage: 4.17
+        - id: would_not_use
+          count: 238
+          percentage: 2.13
   - id: primer
-    total: 11159
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 9114
-        percentage: 81.67
-      - id: not_interested
-        count: 1361
-        percentage: 12.2
-      - id: interested
-        count: 517
-        percentage: 4.63
-      - id: would_not_use
-        count: 97
-        percentage: 0.87
-      - id: would_use
-        count: 70
-        percentage: 0.63
+    opinion:
+      total: 11159
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 9114
+          percentage: 81.67
+        - id: not_interested
+          count: 1361
+          percentage: 12.2
+        - id: interested
+          count: 517
+          percentage: 4.63
+        - id: would_not_use
+          count: 97
+          percentage: 0.87
+        - id: would_use
+          count: 70
+          percentage: 0.63
   - id: tailwind
-    total: 11202
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 7357
-        percentage: 65.69
-      - id: interested
-        count: 1582
-        percentage: 14.12
-      - id: not_interested
-        count: 1580
-        percentage: 14.1
-      - id: would_use
-        count: 555
-        percentage: 4.95
-      - id: would_not_use
-        count: 128
-        percentage: 1.14
+    opinion:
+      total: 11202
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 7357
+          percentage: 65.69
+        - id: interested
+          count: 1582
+          percentage: 14.12
+        - id: not_interested
+          count: 1580
+          percentage: 14.1
+        - id: would_use
+          count: 555
+          percentage: 4.95
+        - id: would_not_use
+          count: 128
+          percentage: 1.14
   - id: purecss
-    total: 11220
-    others_count: 0
-    buckets:
-      - id: never_heard
-        count: 6813
-        percentage: 60.72
-      - id: not_interested
-        count: 1953
-        percentage: 17.41
-      - id: interested
-        count: 1536
-        percentage: 13.69
-      - id: would_use
-        count: 616
-        percentage: 5.49
-      - id: would_not_use
-        count: 302
-        percentage: 2.69
+    opinion:
+      total: 11220
+      others_count: 0
+      buckets:
+        - id: never_heard
+          count: 6813
+          percentage: 60.72
+        - id: not_interested
+          count: 1953
+          percentage: 17.41
+        - id: interested
+          count: 1536
+          percentage: 13.69
+        - id: would_use
+          count: 616
+          percentage: 5.49
+        - id: would_not_use
+          count: 302
+          percentage: 2.69

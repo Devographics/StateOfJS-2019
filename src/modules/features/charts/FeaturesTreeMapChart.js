@@ -37,7 +37,7 @@ const FeaturesTreeMapChart = ({ features }) => {
     const data = features.map(feature => {
         return {
             id: feature.id,
-            value: feature.buckets.find(bucket => bucket.id === 'used_it').count
+            value: feature.usage.buckets.find(bucket => bucket.id === 'used_it').count
         }
     })
 
@@ -66,14 +66,16 @@ FeaturesTreeMapChart.propTypes = {
     features: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
-            total: PropTypes.number.isRequired,
-            buckets: PropTypes.arrayOf(
-                PropTypes.shape({
-                    id: PropTypes.string.isRequired,
-                    count: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
-                })
-            ).isRequired
+            usage: PropTypes.shape({
+                total: PropTypes.number.isRequired,
+                buckets: PropTypes.arrayOf(
+                    PropTypes.shape({
+                        id: PropTypes.string.isRequired,
+                        count: PropTypes.number.isRequired,
+                        percentage: PropTypes.number.isRequired
+                    })
+                ).isRequired
+            }).isRequired
         })
     )
 }

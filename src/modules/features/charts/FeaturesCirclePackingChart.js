@@ -28,8 +28,6 @@ const NodePie = memo(({ radius, data }) => {
         ]
     })
 
-    console.log({ arcs, arcGenerator })
-
     return arcs.map(arc => (
         <path
             key={arc.data.id}
@@ -62,13 +60,8 @@ const Node = ({ node, handlers }) => {
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            <NodePie radius={node.r} data={node.data}/>
-            <circle
-                r={node.r}
-                fill="none"
-                stroke={colors.blue}
-                strokeWidth={2}
-            />
+            <NodePie radius={node.r} data={node.data} />
+            <circle r={node.r} fill="none" stroke={colors.blue} strokeWidth={2} />
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
@@ -78,7 +71,7 @@ const Node = ({ node, handlers }) => {
                 style={{
                     pointerEvents: 'none',
                     fontSize: fontSizeByRadius(node.r),
-                    fontWeight: 600,
+                    fontWeight: 600
                 }}
             >
                 {node.label}
@@ -100,29 +93,24 @@ const Node = ({ node, handlers }) => {
 }
 
 const FeaturesCirclePackingChart = ({ features }) => {
-    const root = useMemo(
-        () => {
-            const children = features.map(feature => {
-                const usageBucket = feature.buckets.find(b => b.id === 'used_it')
-                const knowNotUsedBucket = feature.buckets.find(
-                    b => b.id === 'know_not_used'
-                )
-
-                return {
-                    id: feature.id,
-                    count: usageBucket.count + knowNotUsedBucket.count,
-                    usedCount: usageBucket.count,
-                    unusedCount: knowNotUsedBucket.count
-                }
-            })
+    const root = useMemo(() => {
+        const children = features.map(feature => {
+            const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+            const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
 
             return {
-                id: 'root',
-                children
+                id: feature.id,
+                count: usageBucket.count + knowNotUsedBucket.count,
+                usedCount: usageBucket.count,
+                unusedCount: knowNotUsedBucket.count
             }
-        },
-        [features]
-    )
+        })
+
+        return {
+            id: 'root',
+            children
+        }
+    }, [features])
 
     return (
         <>
@@ -153,14 +141,16 @@ FeaturesCirclePackingChart.propTypes = {
     features: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
-            total: PropTypes.number.isRequired,
-            buckets: PropTypes.arrayOf(
-                PropTypes.shape({
-                    id: PropTypes.string.isRequired,
-                    count: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
-                })
-            ).isRequired
+            usage: PropTypes.shape({
+                total: PropTypes.number.isRequired,
+                buckets: PropTypes.arrayOf(
+                    PropTypes.shape({
+                        id: PropTypes.string.isRequired,
+                        count: PropTypes.number.isRequired,
+                        percentage: PropTypes.number.isRequired
+                    })
+                ).isRequired
+            }).isRequired
         })
     )
 }

@@ -93,20 +93,17 @@ const GaugeBarChart = ({ buckets, mapping, mode, applyEmptyPatternTo, i18nNamesp
         ],
         [buckets]
     )
-    const colors = useMemo(
-        () => {
-            const colorById = mapping.reduce(
-                (acc, m) => ({
-                    ...acc,
-                    [m.id]: m.color
-                }),
-                {}
-            )
+    const colors = useMemo(() => {
+        const colorById = mapping.reduce(
+            (acc, m) => ({
+                ...acc,
+                [m.id]: m.color
+            }),
+            {}
+        )
 
-            return bar => colorById[bar.id]
-        },
-        [mapping]
-    )
+        return bar => colorById[bar.id]
+    }, [mapping])
     const labelsLayer = useMemo(() => getLabels(mode), [mode])
     const patternRules = useMemo(
         () => [

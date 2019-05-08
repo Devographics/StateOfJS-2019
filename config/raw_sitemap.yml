@@ -38,7 +38,7 @@
   path: /features
   type: page
   defaultBlockType: feature
-  blocks: 
+  blocks:
       - id: features-overview
         type: features-overview
   children:
@@ -138,22 +138,37 @@
 - id: units-and-selectors
   path: /units-and-selectors
   type: page
-  defaultBlockType: horizontal-bar
   blocks:
-      - units
-      - pseudo-elements
-      - combinators
-      - tree-document-structure
-      - attributes
-      - links-urls
-      - interaction
-      - form-controls
+      - id: units
+        type: horizontal-bar
+        dataKey: usage
+      - id: pseudo-elements
+        type: horizontal-bar
+        dataKey: usage
+      - id: combinators
+        type: horizontal-bar
+        dataKey: usage
+      - id: tree-document-structure
+        type: horizontal-bar
+        dataKey: usage
+      - id: attributes
+        type: horizontal-bar
+        dataKey: usage
+      - id: links-urls
+        type: horizontal-bar
+        dataKey: usage
+      - id: interaction
+        type: horizontal-bar
+        dataKey: usage
+      - id: form-controls
+        type: horizontal-bar
+        dataKey: usage
 
 - id: tools-and-methodology
   path: /tools-and-methodology
   type: page
   defaultBlockType: tool
-  blocks: 
+  blocks:
       - id: tools-overview
         type: tools-overview
   children:
@@ -235,8 +250,10 @@
   blocks:
       - id: text-editors
         type: horizontal-bar
+        dataKey: usage
       - id: browsers
         type: horizontal-bar
+        dataKey: usage
 
 - id: environments
   path: /environments
@@ -244,12 +261,16 @@
   blocks:
       - id: browsers
         type: horizontal-bar
+        dataKey: environments
       - id: form-factors
         type: horizontal-bar
+        dataKey: environments
       - id: print-styles
         type: vertical-bar
+        dataKey: environments
       - id: email-styles
         type: vertical-bar
+        dataKey: environments
 
 - id: resources
   path: /resources
@@ -257,10 +278,13 @@
   blocks:
       - id: blogs-magazines
         type: horizontal-bar
+        dataKey: resources
       - id: sites-courses
         type: horizontal-bar
+        dataKey: resources
       - id: podcasts
         type: horizontal-bar
+        dataKey: resources
 
 - id: opinions
   path: /opinions
@@ -282,20 +306,21 @@
         type: opinion-scale
       - id: missing-features
         type: horizontal-bar
+        dataKey: features
 
 - id: awards
   path: /awards
   type: page
-  blocks: 
-    - id: awards
-      type: text
+  blocks:
+      - id: awards
+        type: text
 
 - id: conclusion
   path: /conclusion
   type: page
-  blocks: 
-    - id: conclusion
-      type: text
+  blocks:
+      - id: conclusion
+        type: text
 
 - id: support
   path: /support

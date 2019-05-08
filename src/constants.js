@@ -53,14 +53,7 @@ export const keys = {
     'years-of-experience': ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']
 }
 
-export const yearsOfExperience = [
-    'less-than-1',
-    '1-2',
-    '2-5',
-    '5-10',
-    '10-20',
-    'more-than-20'
-]
+export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']
 
 export const usage = [
     {
