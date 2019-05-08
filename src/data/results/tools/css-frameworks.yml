@@ -227,69 +227,66 @@ aggregations:
           percentage: 2.69
   - id: other-css-frameworks
     others:
-      total: 1325
-      others_count: 645
+      total: 673
+      others_count: 388
       buckets:
-        - id: |+
-
-          count: 356
-          percentage: 75.56
-        - id: ' '
-          count: 47
-          percentage: 3.55
-        - id: None
-          count: 45
-          percentage: 3.4
-        - id: none
-          count: 42
-          percentage: 3.17
         - id: Skeleton
-          count: 23
-          percentage: 1.74
-        - id: '-'
-          count: 22
-          percentage: 1.66
-        - id: N/A
-          count: 17
-          percentage: 1.28
-        - id: 'No'
-          count: 15
-          percentage: 1.13
-        - id: n/a
-          count: 14
-          percentage: 1.06
-        - id: Bourbon
-          count: 11
-          percentage: 0.83
-        - id: Vuetify
-          count: 11
-          percentage: 0.83
-        - id: |+
-
-
-          count: 10
-          percentage: 0.75
-        - id: '?'
-          count: 10
-          percentage: 0.75
+          count: 46
+          percentage: 64.47
         - id: Material UI
-          count: 10
-          percentage: 0.75
-        - id: 'no'
-          count: 9
-          percentage: 0.68
-        - id: Blueprint
-          count: 8
-          percentage: 0.6
-        - id: elm-ui
-          count: 8
-          percentage: 0.6
-        - id: styled-components
-          count: 8
-          percentage: 0.6
-        - id: InuitCSS
-          count: 7
-          percentage: 0.53
+          count: 34
+          percentage: 5.05
+        - id: Inuit
+          count: 26
+          percentage: 3.86
         - id: Spectre
+          count: 26
+          percentage: 3.86
+        - id: Bourbon
+          count: 25
+          percentage: 3.71
+        - id: styled-components
+          count: 23
+          percentage: 3.42
+        - id: Vuetify
+          count: 17
+          percentage: 2.53
+        - id: Basscss
+          count: 16
+          percentage: 2.38
+        - id: elm-ui
+          count: 13
+          percentage: 1.93
+        - id: Blueprint
+          count: 10
+          percentage: 1.49
+        - id: Material
+          count: 10
+          percentage: 1.49
+        - id: Bootstrap
+          count: 9
+          percentage: 1.34
+        - id: Angular Material
+          count: 8
+          percentage: 1.19
+        - id: Ionic
           count: 7
-          percentage: 0.53
+          percentage: 1.04
+        - id: Knacss
+          count: 4
+          percentage: 0.59
+        - id: Milligram
+          count: 3
+          percentage: 0.45
+        - id: Blaze UI
+          count: 2
+          percentage: 0.3
+        - id: Foundation
+          count: 2
+          percentage: 0.3
+        - id: Grommet
+          count: 2
+          percentage: 0.3
+        - id: IotaCSS
+          count: 2
+          percentage: 0.3

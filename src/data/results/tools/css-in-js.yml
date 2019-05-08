@@ -167,67 +167,66 @@ aggregations:
           percentage: 3.56
   - id: other-css-in-js
     others:
-      total: 965
-      others_count: 308
+      total: 331
+      others_count: 209
       buckets:
-        - id: |+
-
-          count: 358
-          percentage: 69
-        - id: None
-          count: 46
-          percentage: 4.77
-        - id: ' '
-          count: 43
-          percentage: 4.46
-        - id: none
-          count: 36
-          percentage: 3.73
         - id: Linaria
-          count: 23
-          percentage: 2.38
-        - id: '-'
-          count: 21
-          percentage: 2.18
-        - id: N/A
-          count: 19
-          percentage: 1.97
-        - id: 'No'
-          count: 19
-          percentage: 1.97
-        - id: 'no'
-          count: 14
-          percentage: 1.45
-        - id: n/a
-          count: 13
-          percentage: 1.35
-        - id: '?'
-          count: 10
-          percentage: 1.04
+          count: 42
+          percentage: 75.84
         - id: Fela
-          count: 10
-          percentage: 1.04
-        - id: .
-          count: 8
-          percentage: 0.83
-        - id: NA
-          count: 8
-          percentage: 0.83
-        - id: linaria
-          count: 8
-          percentage: 0.83
-        - id: CSS Blocks
-          count: 7
-          percentage: 0.73
-        - id: '  '
-          count: 4
-          percentage: 0.41
+          count: 16
+          percentage: 4.83
         - id: styled-components
+          count: 11
+          percentage: 3.32
+        - id: CSS Blocks
+          count: 8
+          percentage: 2.42
+        - id: Astroturf
+          count: 5
+          percentage: 1.51
+        - id: Stylable
           count: 4
-          percentage: 0.41
-        - id: /
-          count: 3
-          percentage: 0.31
+          percentage: 1.21
+        - id: Styletron
+          count: 4
+          percentage: 1.21
         - id: Angular
           count: 3
-          percentage: 0.31
+          percentage: 0.91
+        - id: Vue
+          count: 3
+          percentage: 0.91
+        - id: Vue single file components
+          count: 3
+          percentage: 0.91
+        - id: X
+          count: 3
+          percentage: 0.91
+        - id: elm-css
+          count: 3
+          percentage: 0.91
+        - id: elm-ui
+          count: 3
+          percentage: 0.91
+        - id: I don't know
+          count: 2
+          percentage: 0.6
+        - id: Scoped CSS
+          count: 2
+          percentage: 0.6
+        - id: Typestyle
+          count: 2
+          percentage: 0.6
+        - id: a
+          count: 2
+          percentage: 0.6
+        - id: don't know
+          count: 2
+          percentage: 0.6
+        - id: dont know
+          count: 2
+          percentage: 0.6
+        - id: react-native-web
+          count: 2
+          percentage: 0.6

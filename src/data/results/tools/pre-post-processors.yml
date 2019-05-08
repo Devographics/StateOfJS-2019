@@ -87,67 +87,156 @@ aggregations:
           percentage: 7.85
   - id: other-pre-post-processors
     others:
-      total: 1384
-      others_count: 512
+      total: 674
+      others_count: 176
       buckets:
-        - id: |+
-
-          count: 380
-          percentage: 64.46
-        - id: SCSS
-          count: 77
-          percentage: 5.56
-        - id: none
-          count: 56
-          percentage: 4.05
-        - id: None
-          count: 48
-          percentage: 3.47
-        - id: ' '
-          count: 45
-          percentage: 3.25
-        - id: scss
-          count: 40
-          percentage: 2.89
-        - id: Autoprefixer
-          count: 25
-          percentage: 1.81
-        - id: Scss
-          count: 23
-          percentage: 1.66
-        - id: '-'
-          count: 21
-          percentage: 1.52
-        - id: Sass
-          count: 21
-          percentage: 1.52
-        - id: styled-components
-          count: 19
-          percentage: 1.37
-        - id: N/A
-          count: 18
-          percentage: 1.3
-        - id: autoprefixer
-          count: 15
-          percentage: 1.08
-        - id: n/a
-          count: 14
-          percentage: 1.01
-        - id: CSS Modules
-          count: 13
-          percentage: 0.94
-        - id: 'No'
-          count: 13
-          percentage: 0.94
-        - id: 'no'
-          count: 13
-          percentage: 0.94
         - id: SASS
-          count: 11
-          percentage: 0.79
-        - id: '?'
-          count: 10
-          percentage: 0.72
-        - id: sass
-          count: 10
-          percentage: 0.72
+          count: 196
+          percentage: 55.08
+        - id: styled-components
+          count: 69
+          percentage: 10.24
+        - id: Autoprefixer
+          count: 64
+          percentage: 9.5
+        - id: CSS in JS
+          count: 30
+          percentage: 4.45
+        - id: CSS Modules
+          count: 22
+          percentage: 3.26
+        - id: Compass
+          count: 19
+          percentage: 2.82
+        - id: elm-ui
+          count: 7
+          percentage: 1.04
+        - id: Emotion
+          count: 5
+          percentage: 0.74
+        - id: JSS
+          count: 4
+          percentage: 0.59
+        - id: PostCSS
+          count: 4
+          percentage: 0.59
+        - id: pug
+          count: 4
+          percentage: 0.59
+        - id: Gulp
+          count: 3
+          percentage: 0.45
+        - id: Less
+          count: 3
+          percentage: 0.45
+        - id: Pleeease
+          count: 3
+          percentage: 0.45
+        - id: Pug
+          count: 3
+          percentage: 0.45
+        - id: Stylable
+          count: 3
+          percentage: 0.45
+        - id: elm-css
+          count: 3
+          percentage: 0.45
+        - id: postcss
+          count: 3
+          percentage: 0.45
+        - id: Codekit
+          count: 2
+          percentage: 0.3
+        - id: Don't know any
+          count: 2
+          percentage: 0.3
+        - id: I don't know
+          count: 2
+          percentage: 0.3
+        - id: Not sure
+          count: 2
+          percentage: 0.3
+        - id: PurgeCSS
+          count: 2
+          percentage: 0.3
+        - id: SASS/SCSS
+          count: 2
+          percentage: 0.3
+        - id: Styled-jsx
+          count: 2
+          percentage: 0.3
+        - id: Stylis
+          count: 2
+          percentage: 0.3
+        - id: SugarSS
+          count: 2
+          percentage: 0.3
+        - id: What?
+          count: 2
+          percentage: 0.3
+        - id: X
+          count: 2
+          percentage: 0.3
+        - id: css-modules
+          count: 2
+          percentage: 0.3
+        - id: don't know
+          count: 2
+          percentage: 0.3
+        - id: gulp
+          count: 2
+          percentage: 0.3
+        - id: idk
+          count: 2
+          percentage: 0.3
+        - id: jss
+          count: 2
+          percentage: 0.3
+        - id: less
+          count: 2
+          percentage: 0.3
+        - id: o
+          count: 2
+          percentage: 0.3
+        - id: post-css
+          count: 2
+          percentage: 0.3
+        - id: tailwind css
+          count: 2
+          percentage: 0.3
+        - id: what?
+          count: 2
+          percentage: 0.3
+        - id: '-prefix-free'
+          count: 1
+          percentage: 0.15
+        - id: ..
+          count: 1
+          percentage: 0.15
+        - id: /shrug
+          count: 1
+          percentage: 0.15
+        - id: '1'
+          count: 1
+          percentage: 0.15
+        - id: '123'
+          count: 1
+          percentage: 0.15
+        - id: And
+          count: 1
+          percentage: 0.15
+        - id: BEMCSS
+          count: 1
+          percentage: 0.15
+        - id: Bourbon
+          count: 1
+          percentage: 0.15
+        - id: Bourbon Neat
+          count: 1
+          percentage: 0.15
+        - id: CSS
+          count: 1
+          percentage: 0.15
+        - id: CSS Blocks
+          count: 1
+          percentage: 0.15
