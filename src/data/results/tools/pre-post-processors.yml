@@ -85,8 +85,8 @@ aggregations:
         - id: would_use
           count: 882
           percentage: 7.85
-  - id: other
-    opinion:
+  - id: other-pre-post-processors
+    others:
       total: 1384
       others_count: 512
       buckets:

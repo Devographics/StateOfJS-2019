@@ -105,3 +105,71 @@ aggregations:
         - id: would_not_use
           count: 146
           percentage: 1.3
+  - id: other-methodologies
+    others:
+      total: 1048
+      others_count: 363
+      buckets:
+        - id: |+
+
+          count: 359
+          percentage: 68.9
+        - id: ' '
+          count: 46
+          percentage: 4.39
+        - id: None
+          count: 41
+          percentage: 3.91
+        - id: none
+          count: 41
+          percentage: 3.91
+        - id: '-'
+          count: 23
+          percentage: 2.19
+        - id: RSCSS
+          count: 22
+          percentage: 2.1
+        - id: N/A
+          count: 18
+          percentage: 1.72
+        - id: 'No'
+          count: 16
+          percentage: 1.53
+        - id: n/a
+          count: 14
+          percentage: 1.34
+        - id: CSS Modules
+          count: 13
+          percentage: 1.24
+        - id: 'no'
+          count: 13
+          percentage: 1.24
+        - id: rscss
+          count: 12
+          percentage: 1.15
+        - id: |+
+
+
+          count: 11
+          percentage: 1.05
+        - id: '?'
+          count: 10
+          percentage: 0.95
+        - id: SUIT CSS
+          count: 9
+          percentage: 0.86
+        - id: .
+          count: 8
+          percentage: 0.76
+        - id: ABEM
+          count: 8
+          percentage: 0.76
+        - id: Functional CSS
+          count: 8
+          percentage: 0.76
+        - id: SUITCSS
+          count: 7
+          percentage: 0.67
+        - id: NA
+          count: 6
+          percentage: 0.57

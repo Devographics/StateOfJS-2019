@@ -225,3 +225,71 @@ aggregations:
         - id: would_not_use
           count: 302
           percentage: 2.69
+  - id: other-css-frameworks
+    others:
+      total: 1325
+      others_count: 645
+      buckets:
+        - id: |+
+
+          count: 356
+          percentage: 75.56
+        - id: ' '
+          count: 47
+          percentage: 3.55
+        - id: None
+          count: 45
+          percentage: 3.4
+        - id: none
+          count: 42
+          percentage: 3.17
+        - id: Skeleton
+          count: 23
+          percentage: 1.74
+        - id: '-'
+          count: 22
+          percentage: 1.66
+        - id: N/A
+          count: 17
+          percentage: 1.28
+        - id: 'No'
+          count: 15
+          percentage: 1.13
+        - id: n/a
+          count: 14
+          percentage: 1.06
+        - id: Bourbon
+          count: 11
+          percentage: 0.83
+        - id: Vuetify
+          count: 11
+          percentage: 0.83
+        - id: |+
+
+
+          count: 10
+          percentage: 0.75
+        - id: '?'
+          count: 10
+          percentage: 0.75
+        - id: Material UI
+          count: 10
+          percentage: 0.75
+        - id: 'no'
+          count: 9
+          percentage: 0.68
+        - id: Blueprint
+          count: 8
+          percentage: 0.6
+        - id: elm-ui
+          count: 8
+          percentage: 0.6
+        - id: styled-components
+          count: 8
+          percentage: 0.6
+        - id: InuitCSS
+          count: 7
+          percentage: 0.53
+        - id: Spectre
+          count: 7
+          percentage: 0.53

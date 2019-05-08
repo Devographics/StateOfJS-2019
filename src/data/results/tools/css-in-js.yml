@@ -165,3 +165,69 @@ aggregations:
         - id: would_not_use
           count: 398
           percentage: 3.56
+  - id: other-css-in-js
+    others:
+      total: 965
+      others_count: 308
+      buckets:
+        - id: |+
+
+          count: 358
+          percentage: 69
+        - id: None
+          count: 46
+          percentage: 4.77
+        - id: ' '
+          count: 43
+          percentage: 4.46
+        - id: none
+          count: 36
+          percentage: 3.73
+        - id: Linaria
+          count: 23
+          percentage: 2.38
+        - id: '-'
+          count: 21
+          percentage: 2.18
+        - id: N/A
+          count: 19
+          percentage: 1.97
+        - id: 'No'
+          count: 19
+          percentage: 1.97
+        - id: 'no'
+          count: 14
+          percentage: 1.45
+        - id: n/a
+          count: 13
+          percentage: 1.35
+        - id: '?'
+          count: 10
+          percentage: 1.04
+        - id: Fela
+          count: 10
+          percentage: 1.04
+        - id: .
+          count: 8
+          percentage: 0.83
+        - id: NA
+          count: 8
+          percentage: 0.83
+        - id: linaria
+          count: 8
+          percentage: 0.83
+        - id: CSS Blocks
+          count: 7
+          percentage: 0.73
+        - id: '  '
+          count: 4
+          percentage: 0.41
+        - id: styled-components
+          count: 4
+          percentage: 0.41
+        - id: /
+          count: 3
+          percentage: 0.31
+        - id: Angular
+          count: 3
+          percentage: 0.31

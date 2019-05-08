@@ -55,7 +55,7 @@ ToolOpinionBlock.propTypes = {
                                 percentage: PropTypes.number.isRequired
                             })
                         ).isRequired
-                    }).isRequired
+                    })
                 })
             )
         }).isRequired

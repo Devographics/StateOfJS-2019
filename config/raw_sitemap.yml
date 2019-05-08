@@ -184,6 +184,7 @@
             - stylus
             - id: other-pre-post-processors
               type: horizontal-bar
+              dataKey: others
             - id: conclusion
               type: text
 
@@ -206,6 +207,7 @@
             - purecss
             - id: other-css-frameworks
               type: horizontal-bar
+              dataKey: others
             - id: conclusion
               type: text
 
@@ -222,6 +224,7 @@
             - it-css
             - id: other-methodologies
               type: horizontal-bar
+              dataKey: others
             - id: conclusion
               type: text
 
@@ -241,6 +244,7 @@
             - css-modules
             - id: other-css-in-js
               type: horizontal-bar
+              dataKey: others
             - id: conclusion
               type: text
 
