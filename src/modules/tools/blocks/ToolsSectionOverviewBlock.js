@@ -1,13 +1,23 @@
-import React from 'react'
-import ToolOverviewChart from '../charts/ToolOverviewChart'
+import React, { memo, useContext, useMemo } from 'react'
 import Block from 'core/components/Block'
+import { PageContext } from 'core/helpers/pageContext'
+import ToolsOpinionMultiBarChart from '../charts/ToolsOpinionMultiBarChart'
 
-const ToolOverviewBlock = () => {
+const ToolsSectionOverviewBlock = ({ data }) => {
+    const context = useContext(PageContext)
+    const toolsData = useMemo(
+        () =>
+            context.blocks
+                .filter(block => block.type === 'tool')
+                .map(block => data.data.aggregations.find(agg => agg.id === block.id)),
+        [context.blocks]
+    )
+
     return (
         <Block id="overview" showDescription={false}>
-            <ToolOverviewChart />
+            <ToolsOpinionMultiBarChart data={toolsData} />
         </Block>
     )
 }
 
-export default ToolOverviewBlock
+export default memo(ToolsSectionOverviewBlock)

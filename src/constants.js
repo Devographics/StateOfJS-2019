@@ -73,27 +73,22 @@ export const usage = [
 export const opinions = [
     {
         id: 'would_use',
-        raw: `👍 Used it > Would use again`,
         color: colors.blue
     },
     {
         id: 'would_not_use',
-        raw: `👎 Used it > Would avoid`,
         color: colors.blueLight
     },
     {
         id: 'interested',
-        raw: `✅ Heard of it > Would like to learn`,
         color: colors.teal
     },
     {
         id: 'not_interested',
-        raw: `🚫 Heard of it > Not interested`,
         color: colors.tealLight
     },
     {
         id: 'never_heard',
-        raw: '🤷 Never heard of it/Not sure what it is',
         color: colors.greyMedium
     }
 ]
