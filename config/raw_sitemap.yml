@@ -142,27 +142,35 @@
       - id: units
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: pseudo-elements
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: combinators
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: tree-document-structure
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: attributes
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: links-urls
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: interaction
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
       - id: form-controls
         type: horizontal-bar
         dataKey: usage
+        showDescription: true
 
 - id: tools-and-methodology
   path: /tools-and-methodology

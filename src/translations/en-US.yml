@@ -20,6 +20,22 @@ translations:
     ###########################################################################
     # Units & Selectors
     ###########################################################################
+    - key: block.description.units
+      t: Which CSS units do developers use?
+    - key: block.description.pseudo-elements
+      t: Which pseudo CSS selectors do developers use?
+    - key: block.description.combinators
+      t: Which combinations of CSS selectors do developers use?
+    - key: block.description.tree-document-structure
+      t: Which structure related CSS selectors do developers use?
+    - key: block.description.attributes
+      t: Which attributes CSS selectors do developers use?
+    - key: block.description.links-urls
+      t: Which links & URLs related CSS selectors do developers use?
+    - key: block.description.interaction
+      t: Which interaction CSS selectors do developers use?
+    - key: block.description.form-controls
+      t: Which form related CSS selectors do developers use?
 
     ###########################################################################
     # Tools & Methodology
