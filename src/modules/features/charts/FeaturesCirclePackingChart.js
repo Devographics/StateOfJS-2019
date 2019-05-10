@@ -11,6 +11,18 @@ const fontSizeByRadius = radius => {
     return 12
 }
 
+const patterns = [
+    {
+        id: 'dots',
+        type: 'patternDots',
+        background: colors.teal,
+        color: '#6dafb3',
+        size: 3,
+        padding: 1,
+        stagger: true
+    }
+]
+
 const Node = ({ node, handlers }) => {
     if (node.depth === 0) {
         return (
@@ -19,10 +31,10 @@ const Node = ({ node, handlers }) => {
                 cy={node.y}
                 r={node.r}
                 fill="none"
-                stroke={colors.blueLight}
-                strokeWidth={2}
+                stroke="#9AC6C9"
+                strokeWidth={1}
                 strokeLinecap="round"
-                strokeDasharray="1 6"
+                strokeDasharray="2 3"
             />
         )
     }
@@ -36,12 +48,12 @@ const Node = ({ node, handlers }) => {
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            <circle r={node.r} fill={colors.teal} />
-            <circle r={usageRadius} fill={colors.blue} />
+            <circle r={node.r} fill="url(#dots)" stroke="#6dafb3" strokeWidth={3} />
+            <circle r={usageRadius} fill={colors.blue} stroke={colors.blueDark} strokeWidth={3} />
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
-                stroke="#232840"
+                stroke={colors.teal}
                 strokeWidth={4}
                 strokeLinejoin="round"
                 style={{
@@ -55,7 +67,7 @@ const Node = ({ node, handlers }) => {
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
-                fill={colors.blueLighter}
+                fill={colors.blueDark}
                 style={{
                     pointerEvents: 'none',
                     fontSize: fontSizeByRadius(node.r),
@@ -101,6 +113,7 @@ const FeaturesCirclePackingChart = ({ features }) => {
                 leavesOnly={false}
                 padding={5}
                 colors={['white', 'blue']}
+                defs={patterns}
                 root={root}
                 value="awareness"
                 nodeComponent={Node}
