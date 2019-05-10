@@ -45,13 +45,13 @@ export default {
                 stroke: colors.teal
             },
             text: {
-                fill: colors.blue,
+                fill: colors.teal,
                 fontSize: 12
             }
         },
         legend: {
             text: {
-                fill: colors.blue,
+                fill: colors.teal,
                 fontSize: 14,
                 fontWeight: 600
             }

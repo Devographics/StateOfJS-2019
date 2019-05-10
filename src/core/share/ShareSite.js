@@ -5,7 +5,7 @@ import ShareFacebook from './ShareFacebook'
 import ShareLinkedIn from './ShareLinkedIn'
 import { usePageContext } from '../helpers/pageContext'
 import { useI18n } from '../i18n/i18nContext'
-import { GridLinesSVG } from '../components/Illustration'
+// import { GridLinesSVG } from '../components/Illustration'
 
 const ShareSite = () => {
     const context = usePageContext()
@@ -22,7 +22,7 @@ const ShareSite = () => {
 
     return (
         <div className="ShareSite">
-            <GridLinesSVG ratio="logo" />
+            {/* <GridLinesSVG ratio="logo" /> */}
             <div className="ShareSite__Content">
                 <ShareTwitter text={twitterText} />
                 <ShareFacebook link={link} />

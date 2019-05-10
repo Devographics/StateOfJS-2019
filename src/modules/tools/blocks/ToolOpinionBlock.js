@@ -9,8 +9,9 @@ import ToolOpinionsChart from '../charts/ToolOpinionsChart'
 import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
 
 const ToolOpinionBlock = ({ block, data }) => {
+
     const blockData = data.data.aggregations.find(a => a.id === block.id)
-    const resources = data.data.fields.resources.find(r => r.id === block.id)
+    const resources = data.data.fields ? data.data.fields.resources.find(r => r.id === block.id) : { resources: {}}
 
     if (!blockData || !blockData.opinion) {
         return <div key={block.id}>No data available for tool: {block.id}</div>

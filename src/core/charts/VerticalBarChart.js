@@ -58,7 +58,6 @@ export default class VerticalBarChart extends Component {
                     >
                         <ResponsiveBar
                             theme={theme}
-                            colors={[colors.blue]}
                             margin={margin}
                             padding={0.4}
                             maxValue={30}
@@ -66,7 +65,6 @@ export default class VerticalBarChart extends Component {
                             indexBy="range"
                             data={chartData}
                             labelFormat={d => `${d}%`}
-                            // labelTextColor="#111"
                             enableGridX={false}
                             enableGridY={true}
                             gridYValues={[0, 5, 10, 15, 20, 25, 30]}

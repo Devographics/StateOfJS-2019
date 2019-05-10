@@ -59,10 +59,10 @@ a {
     &:active,
     &:focus {
         @include small {
-            color: $blue;
+            color: $link-color;
         }
         @include medium-large {
-            color: $blue;
+            color: $link-color;
         }
     }
     &:hover {
