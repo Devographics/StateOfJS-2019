@@ -28,6 +28,70 @@ aggregations:
         - id: Emacs
           count: 201
           percentage: 1.85
+    others:
+      total: 1228
+      others_count: 399
+      buckets:
+        - id: Notepad++
+          count: 152
+          percentage: 44.89
+        - id: Brackets
+          count: 127
+          percentage: 10.34
+        - id: PHPStorm
+          count: 75
+          percentage: 6.11
+        - id: Coda
+          count: 71
+          percentage: 5.78
+        - id: PhpStorm
+          count: 58
+          percentage: 4.72
+        - id: Visual Studio
+          count: 58
+          percentage: 4.72
+        - id: IntelliJ
+          count: 49
+          percentage: 3.99
+        - id: Dreamweaver
+          count: 28
+          percentage: 2.28
+        - id: Phpstorm
+          count: 26
+          percentage: 2.12
+        - id: Nano
+          count: 25
+          percentage: 2.04
+        - id: notepad++
+          count: 24
+          percentage: 1.95
+        - id: brackets
+          count: 23
+          percentage: 1.87
+        - id: nano
+          count: 21
+          percentage: 1.71
+        - id: TextMate
+          count: 17
+          percentage: 1.38
+        - id: IntelliJ IDEA
+          count: 16
+          percentage: 1.3
+        - id: phpstorm
+          count: 16
+          percentage: 1.3
+        - id: PHP Storm
+          count: 12
+          percentage: 0.98
+        - id: coda
+          count: 12
+          percentage: 0.98
+        - id: Coda 2
+          count: 10
+          percentage: 0.81
+        - id: BBEdit
+          count: 9
+          percentage: 0.73
   - id: browsers
     usage:
       total: 11179
@@ -45,3 +109,67 @@ aggregations:
         - id: Edge
           count: 871
           percentage: 7.79
+    others:
+      total: 544
+      others_count: 75
+      buckets:
+        - id: Opera
+          count: 157
+          percentage: 42.63
+        - id: Brave
+          count: 92
+          percentage: 16.91
+        - id: Vivaldi
+          count: 56
+          percentage: 10.29
+        - id: IE11
+          count: 33
+          percentage: 6.07
+        - id: IE
+          count: 23
+          percentage: 4.23
+        - id: opera
+          count: 22
+          percentage: 4.04
+        - id: Internet Explorer
+          count: 20
+          percentage: 3.68
+        - id: Chromium
+          count: 12
+          percentage: 2.21
+        - id: IE 11
+          count: 11
+          percentage: 2.02
+        - id: Internet Explorer 11
+          count: 9
+          percentage: 1.65
+        - id: vivaldi
+          count: 8
+          percentage: 1.47
+        - id: UC Browser
+          count: 4
+          percentage: 0.74
+        - id: Yandex
+          count: 4
+          percentage: 0.74
+        - id: Yandex Browser
+          count: 4
+          percentage: 0.74
+        - id: Chrome Canary
+          count: 3
+          percentage: 0.55
+        - id: brave
+          count: 3
+          percentage: 0.55
+        - id: Ie
+          count: 2
+          percentage: 0.37
+        - id: Internet explorer 11
+          count: 2
+          percentage: 0.37
+        - id: 'Opera, Vivaldi'
+          count: 2
+          percentage: 0.37
+        - id: Samsung Internet
+          count: 2
+          percentage: 0.37

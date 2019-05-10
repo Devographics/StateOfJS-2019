@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 import { ResponsiveBar } from '@nivo/bar'
-import { Chip, useTheme } from '@nivo/core'
+import { useTheme } from '@nivo/core'
+import { Chip } from '@nivo/tooltip'
 
 // Define chart patterns
 const patterns = [

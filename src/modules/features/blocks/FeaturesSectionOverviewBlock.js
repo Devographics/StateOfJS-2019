@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
-import FeaturesCirclePackingChart from '../charts/FeaturesCirclePackingChart'
-import FeaturesScatterplotChart from '../charts/FeaturesScatterplotChart'
-import FeaturesTreeMapChart from '../charts/FeaturesTreeMapChart'
 import { mergeFeaturesResources } from '../featuresHelpers'
+import FeaturesCirclePackingChart from '../charts/FeaturesCirclePackingChart'
 
 const FeaturesSectionOverviewBlock = ({ block, data }) => {
     const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
@@ -12,8 +10,6 @@ const FeaturesSectionOverviewBlock = ({ block, data }) => {
     return (
         <Block id={block.id} showDescription={false}>
             <FeaturesCirclePackingChart features={features} />
-            <FeaturesScatterplotChart features={features} />
-            <FeaturesTreeMapChart features={features} />
         </Block>
     )
 }

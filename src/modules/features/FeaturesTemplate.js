@@ -30,16 +30,6 @@ export const query = graphql`
                         percentage
                     }
                 }
-                usageByExperience {
-                    total
-                    buckets {
-                        id
-                        filtered {
-                            count
-                            percentage
-                        }
-                    }
-                }
             }
             fields {
                 resources {

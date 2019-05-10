@@ -7,7 +7,6 @@ import FeatureUsageBarChart from '../charts/FeatureUsageBarChart'
 import { mergeFeaturesResources } from '../featuresHelpers'
 import FeatureUsageLegends from '../charts/FeatureUsageLegends'
 import ChartContainer from 'core/charts/ChartContainer'
-import FeatureUsageByExperienceSankeyChart from '../charts/FeatureUsageByExperienceSankeyChart'
 
 const FeatureResources = ({ caniuseInfo }) => {
     const { translate } = useI18n()
@@ -80,9 +79,6 @@ const FeatureBlock = ({ block, data }) => {
                 </div>
                 {caniuseInfo && <FeatureResources caniuseInfo={caniuseInfo} />}
             </div>
-            {feature.usageByExperience && (
-                <FeatureUsageByExperienceSankeyChart buckets={feature.usageByExperience.buckets} />
-            )}
         </Block>
     )
 }
@@ -106,19 +102,7 @@ FeatureBlock.propTypes = {
                                 percentage: PropTypes.number.isRequired
                             })
                         ).isRequired
-                    }).isRequired,
-                    usageByExperience: PropTypes.shape({
-                        total: PropTypes.number.isRequired,
-                        buckets: PropTypes.arrayOf(
-                            PropTypes.shape({
-                                id: PropTypes.string.isRequired,
-                                filtered: PropTypes.shape({
-                                    count: PropTypes.number.isRequired,
-                                    percentage: PropTypes.number.isRequired
-                                }).isRequired
-                            })
-                        ).isRequired
-                    })
+                    }).isRequired
                 })
             )
         }).isRequired

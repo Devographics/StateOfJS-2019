@@ -1,7 +1,6 @@
 import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
-import { usePie } from '@nivo/pie'
 import theme from 'nivoTheme'
 import { colors } from '../../../constants'
 
@@ -11,31 +10,6 @@ const fontSizeByRadius = radius => {
     if (radius < 50) return 10
     return 12
 }
-
-const NodePie = memo(({ radius, data }) => {
-    const { arcs, arcGenerator } = usePie({
-        radius: radius - 6,
-        value: d => d.count,
-        data: [
-            {
-                id: 'used',
-                count: data.usedCount
-            },
-            {
-                id: 'unused',
-                count: data.unusedCount
-            }
-        ]
-    })
-
-    return arcs.map(arc => (
-        <path
-            key={arc.data.id}
-            d={arcGenerator(arc)}
-            fill={arc.data.id === 'used' ? colors.blue : colors.teal}
-        />
-    ))
-})
 
 const Node = ({ node, handlers }) => {
     if (node.depth === 0) {
@@ -53,6 +27,8 @@ const Node = ({ node, handlers }) => {
         )
     }
 
+    const usageRadius = node.r * (node.data.usage / node.data.awareness)
+
     return (
         <g
             transform={`translate(${node.x},${node.y})`}
@@ -60,8 +36,8 @@ const Node = ({ node, handlers }) => {
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            <NodePie radius={node.r} data={node.data} />
-            <circle r={node.r} fill="none" stroke={colors.blue} strokeWidth={2} />
+            <circle r={node.r} fill={colors.teal} />
+            <circle r={usageRadius} fill={colors.blue} />
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
@@ -100,8 +76,8 @@ const FeaturesCirclePackingChart = ({ features }) => {
 
             return {
                 id: feature.id,
-                count: usageBucket.count + knowNotUsedBucket.count,
-                usedCount: usageBucket.count,
+                awareness: usageBucket.count + knowNotUsedBucket.count,
+                usage: usageBucket.count,
                 unusedCount: knowNotUsedBucket.count
             }
         })
@@ -113,27 +89,24 @@ const FeaturesCirclePackingChart = ({ features }) => {
     }, [features])
 
     return (
-        <>
-            <h4>awareness circle packing + used VS not used nested pie?</h4>
-            <div style={{ height: 440 }}>
-                <ResponsiveBubble
-                    theme={theme}
-                    margin={{
-                        top: 10,
-                        right: 10,
-                        bottom: 10,
-                        left: 10
-                    }}
-                    leavesOnly={false}
-                    padding={5}
-                    colors={['white', 'blue']}
-                    root={root}
-                    value="count"
-                    nodeComponent={Node}
-                    animate={false}
-                />
-            </div>
-        </>
+        <div style={{ height: 440 }}>
+            <ResponsiveBubble
+                theme={theme}
+                margin={{
+                    top: 2,
+                    right: 2,
+                    bottom: 2,
+                    left: 2
+                }}
+                leavesOnly={false}
+                padding={5}
+                colors={['white', 'blue']}
+                root={root}
+                value="awareness"
+                nodeComponent={Node}
+                animate={false}
+            />
+        </div>
     )
 }
 

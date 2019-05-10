@@ -29,7 +29,10 @@ const commonStyles = {
         fontWeight: 600,
         fontSize: '13px',
         lineHeight: '24px',
-        color: '#222'
+        color: '#222',
+        whiteSpace: 'pre',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
     }
 }
 
@@ -170,67 +173,64 @@ const ToolsOpinionMultiBarDiverging = ({ data }) => {
     }, [data])
 
     return (
-        <>
-            <h4>multiple bars chart (diverging)?</h4>
-            <div
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: '2fr 2fr 1fr',
-                    gridColumnGap: '40px',
-                    marginBottom: 40
-                }}
-            >
-                <div>
-                    <h4>satisfaction amongst users</h4>
-                    {computedData.satisfaction.map(tool => (
-                        <DivergingBar
-                            key={tool.id}
-                            negativeValue={tool.unsatisfiedUsers}
-                            negativeColor={colors.blueLighter}
-                            positiveValue={tool.satisfiedUsers}
-                            positiveColor={colors.blueLight}
-                            label={tool.id}
-                        />
-                    ))}
-                    <DivergingLegend
-                        negativeLabel="not satisfied"
-                        negativeColor={colors.blueLighter}
-                        positiveLabel="satisfied"
-                        positiveColor={colors.blueLight}
+        <div
+            style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr 2fr 2fr',
+                gridColumnGap: '40px',
+                marginBottom: 40
+            }}
+        >
+            <div>
+                <h4>awareness</h4>
+                {computedData.awareness.map(tool => (
+                    <SingleBar
+                        key={tool.id}
+                        label={tool.id}
+                        value={tool.awareness}
+                        color={colors.blueLight}
                     />
-                </div>
-                <div>
-                    <h4>interest amongst non-users</h4>
-                    {computedData.interest.map(tool => (
-                        <DivergingBar
-                            key={tool.id}
-                            negativeValue={tool.uninterestedUsers}
-                            negativeColor={colors.tealLight}
-                            positiveValue={tool.interestedUsers}
-                            positiveColor={colors.teal}
-                            label={tool.id}
-                        />
-                    ))}
-                    <DivergingLegend
-                        negativeLabel="not interested"
-                        negativeColor={colors.tealLight}
-                        positiveLabel="interested"
-                        positiveColor={colors.teal}
-                    />
-                </div>
-                <div>
-                    <h4>awareness</h4>
-                    {computedData.awareness.map(tool => (
-                        <SingleBar
-                            key={tool.id}
-                            label={tool.id}
-                            value={tool.awareness}
-                            color={colors.blueLight}
-                        />
-                    ))}
-                </div>
+                ))}
             </div>
-        </>
+            <div>
+                <h4>interest amongst non-users</h4>
+                {computedData.interest.map(tool => (
+                    <DivergingBar
+                        key={tool.id}
+                        negativeValue={tool.uninterestedUsers}
+                        negativeColor={colors.tealLight}
+                        positiveValue={tool.interestedUsers}
+                        positiveColor={colors.teal}
+                        label={tool.id}
+                    />
+                ))}
+                <DivergingLegend
+                    negativeLabel="not interested"
+                    negativeColor={colors.tealLight}
+                    positiveLabel="interested"
+                    positiveColor={colors.teal}
+                />
+            </div>
+            <div>
+                <h4>satisfaction amongst users</h4>
+                {computedData.satisfaction.map(tool => (
+                    <DivergingBar
+                        key={tool.id}
+                        negativeValue={tool.unsatisfiedUsers}
+                        negativeColor={colors.blueLighter}
+                        positiveValue={tool.satisfiedUsers}
+                        positiveColor={colors.blueLight}
+                        label={tool.id}
+                    />
+                ))}
+                <DivergingLegend
+                    negativeLabel="not satisfied"
+                    negativeColor={colors.blueLighter}
+                    positiveLabel="satisfied"
+                    positiveColor={colors.blueLight}
+                />
+            </div>
+        </div>
     )
 }
 
