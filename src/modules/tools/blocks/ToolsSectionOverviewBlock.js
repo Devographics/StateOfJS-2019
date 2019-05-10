@@ -1,7 +1,6 @@
 import React, { memo, useMemo } from 'react'
 import Block from 'core/components/Block'
 import { usePageContext } from 'core/helpers/pageContext'
-import ToolsOpinionMultiBarDivergingChart from '../charts/ToolsOpinionMultiBarDivergingChart'
 import ToolsOpinionBumpChart from '../charts/tools_opinion_bump_chart/ToolsOpinionBumpChart'
 
 const ToolsSectionOverviewBlock = ({ data }) => {
@@ -17,7 +16,6 @@ const ToolsSectionOverviewBlock = ({ data }) => {
     return (
         <Block id="overview" showDescription={false}>
             <ToolsOpinionBumpChart data={toolsData} />
-            <ToolsOpinionMultiBarDivergingChart data={toolsData} />
         </Block>
     )
 }

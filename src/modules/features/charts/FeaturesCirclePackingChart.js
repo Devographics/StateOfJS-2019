@@ -41,7 +41,7 @@ const Node = ({ node, handlers }) => {
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
-                stroke="#e0e4e4"
+                stroke="#232840"
                 strokeWidth={4}
                 strokeLinejoin="round"
                 style={{
@@ -55,7 +55,7 @@ const Node = ({ node, handlers }) => {
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
-                fill={colors.blueDark}
+                fill={colors.blueLighter}
                 style={{
                     pointerEvents: 'none',
                     fontSize: fontSizeByRadius(node.r),

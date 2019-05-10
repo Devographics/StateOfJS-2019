@@ -43,8 +43,7 @@ const ToolsOpinionBumpChart = ({ data }) => {
     return (
         <div
             style={{
-                height: computedData.length * 30 + 60,
-                marginBottom: 40
+                height: computedData.length * 30 + 60
             }}
         >
             <ResponsiveBumpChart

@@ -41,8 +41,8 @@ const getLabels = mode => ({ bars, getLabelTextColor }) => {
                     textAnchor="middle"
                     dominantBaseline="middle"
                     style={{
-                        strokeWidth: 3,
-                        stroke: '#e0e4e4',
+                        strokeWidth: 4,
+                        stroke: '#232840',
                         strokeLinejoin: 'round',
                         fontSize: 12,
                         fontWeight: 600
@@ -126,7 +126,7 @@ const GaugeBarChart = ({ buckets, mapping, mode, applyEmptyPatternTo, i18nNamesp
             enableLabel={false}
             labelTextColor={{
                 from: 'color',
-                modifiers: [['darker', 1.4]]
+                modifiers: [['brighter', 1.4]]
             }}
             axisLeft={null}
             axisBottom={null}
