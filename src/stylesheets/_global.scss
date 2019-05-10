@@ -15,7 +15,7 @@ body {
     line-height: 1.7;
 
     // background: linear-gradient(180deg, rgb(30, 32, 32) 0%, rgb(55, 58, 58) 100%) fixed;
-
+    @include text-shadow-faint;
     @include primary-font;
     @include small {
         font-size: $root-size-mobile;
@@ -36,6 +36,7 @@ h5,
 h6 {
     @include secondary-font;
     margin: 0 0 $spacing 0;
+    @include text-shadow;
 }
 
 p,
@@ -52,7 +53,9 @@ ol {
 
 a {
     text-decoration: none;
+    @include text-shadow-faint;
     @include font-bold;
+    transition: all ease-in 300ms;
     &,
     &:link,
     &:visited,
@@ -67,7 +70,8 @@ a {
     }
     &:hover {
         position: relative;
-        text-decoration: underline;
+        // text-decoration: underline;
+        text-shadow: 0px 2px 10px rgba($pink, 0.9);
     }
     &.button,
     &.resp-sharing-button__link {
@@ -75,6 +79,26 @@ a {
             animation: none;
         }
     }
+        position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $pink;
+        transform-origin: bottom right;
+        transform: scaleX(0);
+        transition: transform 0.5s ease;
+        @include box-shadow;
+      }
+      
+      &:hover::before {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
 }
 
 .conclusion__byline {

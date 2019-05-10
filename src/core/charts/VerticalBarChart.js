@@ -4,6 +4,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { colors } from '../../constants'
 import Trans from 'core/i18n/Trans'
+import ChartContainer from './ChartContainer'
 
 const margin = {
     top: 10,
@@ -51,13 +52,10 @@ export default class VerticalBarChart extends Component {
         return (
             <Trans>
                 {translate => (
-                    <div
-                        style={{
-                            height: 260
-                        }}
-                    >
+                    <ChartContainer height={260} className="Chart--verticalbar">
                         <ResponsiveBar
                             theme={theme}
+                            colors={[colors.blue]}
                             margin={margin}
                             padding={0.4}
                             maxValue={30}
@@ -65,6 +63,7 @@ export default class VerticalBarChart extends Component {
                             indexBy="range"
                             data={chartData}
                             labelFormat={d => `${d}%`}
+                            labelTextColor={colors.teal}
                             enableGridX={false}
                             enableGridY={true}
                             gridYValues={[0, 5, 10, 15, 20, 25, 30]}
@@ -88,7 +87,7 @@ export default class VerticalBarChart extends Component {
                             animate={false}
                             tooltip={this.renderTooltip(translate)}
                         />
-                    </div>
+                    </ChartContainer>
                 )}
             </Trans>
         )

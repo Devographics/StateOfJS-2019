@@ -29,8 +29,10 @@
     svg {
         height: 100%;
         width: 100%;
+        filter: drop-shadow( 0px 2px 3px rgba($pink, 0.7));
+
         path {
-            fill: $pink;
+            fill: $teal;
         }
     }
     // @include segmented;

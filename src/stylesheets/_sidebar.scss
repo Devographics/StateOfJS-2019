@@ -72,7 +72,7 @@
 }
 
 .Nav__Page__Link {
-    display: block;
+    display: inline-block;
     white-space: nowrap;
     font-size: $medium-font;
     margin: 0 0 $spacing / 3;
@@ -109,7 +109,7 @@
 
 .Nav__SubPages {
     padding-left: $spacing;
-    margin-top: $spacing * 0.5;
+    // margin-top: $spacing * 0.5;
 }
 
 .Nav__SubPages--lvl-1 {
