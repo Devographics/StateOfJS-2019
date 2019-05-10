@@ -168,11 +168,14 @@ aggregations:
   - id: other-css-in-js
     others:
       total: 331
-      others_count: 209
+      others_count: 173
       buckets:
         - id: Linaria
           count: 42
-          percentage: 75.84
+          percentage: 64.96
+        - id: CSS in JS
+          count: 25
+          percentage: 7.55
         - id: Fela
           count: 16
           percentage: 4.83
@@ -182,13 +185,19 @@ aggregations:
         - id: CSS Blocks
           count: 8
           percentage: 2.42
+        - id: elm-ui
+          count: 8
+          percentage: 2.42
+        - id: styled-system
+          count: 7
+          percentage: 2.11
+        - id: Styletron
+          count: 6
+          percentage: 1.81
         - id: Astroturf
           count: 5
           percentage: 1.51
         - id: Stylable
-          count: 4
-          percentage: 1.21
-        - id: Styletron
           count: 4
           percentage: 1.21
         - id: Angular
@@ -206,27 +215,18 @@ aggregations:
         - id: elm-css
           count: 3
           percentage: 0.91
-        - id: elm-ui
+        - id: react-native-web
           count: 3
           percentage: 0.91
+        - id: CSS Modules
+          count: 2
+          percentage: 0.6
         - id: I don't know
           count: 2
           percentage: 0.6
+        - id: Material UI
+          count: 2
+          percentage: 0.6
         - id: Scoped CSS
-          count: 2
-          percentage: 0.6
-        - id: Typestyle
-          count: 2
-          percentage: 0.6
-        - id: a
-          count: 2
-          percentage: 0.6
-        - id: don't know
-          count: 2
-          percentage: 0.6
-        - id: dont know
-          count: 2
-          percentage: 0.6
-        - id: react-native-web
           count: 2
           percentage: 0.6

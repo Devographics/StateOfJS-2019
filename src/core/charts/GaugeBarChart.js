@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 import { ResponsiveBar } from '@nivo/bar'
-import { Chip, useTheme } from '@nivo/core'
+import { useTheme } from '@nivo/core'
+import { Chip } from '@nivo/tooltip'
 
 // Define chart patterns
 const patterns = [
@@ -40,8 +41,8 @@ const getLabels = mode => ({ bars, getLabelTextColor }) => {
                     textAnchor="middle"
                     dominantBaseline="middle"
                     style={{
-                        strokeWidth: 3,
-                        stroke: '#e0e4e4',
+                        strokeWidth: 4,
+                        stroke: '#232840',
                         strokeLinejoin: 'round',
                         fontSize: 12,
                         fontWeight: 600
@@ -125,7 +126,7 @@ const GaugeBarChart = ({ buckets, mapping, mode, applyEmptyPatternTo, i18nNamesp
             enableLabel={false}
             labelTextColor={{
                 from: 'color',
-                modifiers: [['darker', 1.4]]
+                modifiers: [['brighter', 1.4]]
             }}
             axisLeft={null}
             axisBottom={null}
