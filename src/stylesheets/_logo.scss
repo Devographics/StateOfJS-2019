@@ -58,7 +58,13 @@
     .s2 {
         @include centerV;
         @include right;
-        text-align: right;
+        div {
+            text-align: right;
+            // background: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle r="10" x="0" y="0" /></g></svg>');
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 50 50" xml:space="preserve" height="10px" width="10px"><g ><circle r="15" cx="15" cy="15" fill="%23EC2F95"/></g></svg>');
+            background-clip: text;
+            color: transparent;
+        }
     }
     /*
 
@@ -294,11 +300,11 @@ Animations
 @keyframes slidetop {
     0% {
         opacity: 0;
-        transform: translateY(-200px);
+        transform: translateY(-200px) rotate(180deg);
     }
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0px) rotate(0deg);
     }
 }
 @keyframes blob {
@@ -339,8 +345,8 @@ Animations
 }
 
 // frame
-@include anim('frame', 'slidetop', 300ms, 800ms) {
-    transform: scale(0);
+@include anim('frame', 'slidetop', 600ms, 800ms) {
+    transform: scale(0) translateY(-200px) rotate(180deg);
 }
 
 // blob
@@ -352,7 +358,6 @@ Animations
     opacity: 0;
     transform: translateX(-100%);
 }
-
 
 // stripes
 @include anim('stripe1', 'slideleft', 400ms, 1200ms) {
@@ -398,7 +403,6 @@ Animations
 @include anim('year', 'appear', 300ms, 1800ms) {
     opacity: 0;
 }
-
 
 // .Logo__Wrapper {
 //     margin: 0;
