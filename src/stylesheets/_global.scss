@@ -15,7 +15,7 @@ body {
     line-height: 1.7;
 
     // background: linear-gradient(180deg, rgb(30, 32, 32) 0%, rgb(55, 58, 58) 100%) fixed;
-    @include text-shadow-faint;
+    // @include text-shadow-faint;
     @include primary-font;
     @include small {
         font-size: $root-size-mobile;

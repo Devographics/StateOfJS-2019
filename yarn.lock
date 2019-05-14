@@ -1047,23 +1047,6 @@
     lodash "^4.17.11"
     recompose "^0.30.0"
 
-"@nivo/line@0.57.0":
-  version "0.57.0"
-  resolved "https://registry.yarnpkg.com/@nivo/line/-/line-0.57.0.tgz#88ba61835d2afb54dc79f3787d7fb376fcb0da0c"
-  integrity sha512-gKbuNTpEiyw1kBBxRAP269Snov8uvOHMTEEH98nZao4vsRWF16zsyc8/x90/lE735fLuB+XWyklvr/17CRFqTg==
-  dependencies:
-    "@nivo/annotations" "0.57.0"
-    "@nivo/axes" "0.57.0"
-    "@nivo/colors" "0.57.0"
-    "@nivo/core" "0.57.0"
-    "@nivo/legends" "0.57.0"
-    "@nivo/scales" "0.57.0"
-    "@nivo/tooltip" "0.57.0"
-    "@nivo/voronoi" "0.57.0"
-    d3-shape "^1.3.5"
-    lodash "^4.17.11"
-    react-motion "^0.5.2"
-
 "@nivo/pie@0.57.0":
   version "0.57.0"
   resolved "https://registry.yarnpkg.com/@nivo/pie/-/pie-0.57.0.tgz#d8df1e92ec5c4058926fd2fe38d78ec0c58853fb"
@@ -1128,19 +1111,6 @@
     "@nivo/core" "0.57.0"
     react-measure "^2.2.4"
     react-motion "^0.5.2"
-
-"@nivo/treemap@0.57.0":
-  version "0.57.0"
-  resolved "https://registry.yarnpkg.com/@nivo/treemap/-/treemap-0.57.0.tgz#9e4d26aad196e34be0c9787ff32028242abded7d"
-  integrity sha512-LuAzjyUx4/Xdxr2hCLOB04pwEGz5y19+ZgGmLfT428MQnM9R+JwVMfnXrL6U8VCLY3IUFjZ/532+hcxBdr+Ewg==
-  dependencies:
-    "@nivo/colors" "0.57.0"
-    "@nivo/core" "0.57.0"
-    "@nivo/tooltip" "0.57.0"
-    d3-hierarchy "^1.1.8"
-    lodash "^4.17.11"
-    react-motion "^0.5.2"
-    recompose "^0.30.0"
 
 "@nivo/voronoi@0.57.0":
   version "0.57.0"

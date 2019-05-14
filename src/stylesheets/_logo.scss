@@ -1,25 +1,415 @@
+.LogoWrapper {
+    width: 800px;
+    height: 400px;
+    // background: white(0.1);
+}
+
+@mixin left($offset: 0%) {
+    left: 12% + $offset;
+}
+@mixin right($offset: 0%) {
+    right: 12% + $offset;
+}
+@mixin centerV {
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin centerH {
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin centerVH {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+@mixin square-ratio {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
 .Logo {
-    font-weight: 800;
-    // padding: 20px;
-    font-size: 1.4rem;
-    line-height: 1.7rem;
-    display: block;
-    border: $border;
-    border-left: 0;
-    svg {
-        display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    & > * {
+        position: absolute;
+    }
+    /*
+
+    Letters
+
+    */
+    .letter {
+        font-size: 18rem;
+        color: $pink;
+        @include font-bold;
+        line-height: 1;
+        // fill: $pink;
+    }
+    .c {
+        @include centerV;
+        @include left;
+        text-shadow: 10px 10px 0px $blue;
+    }
+    .s1 {
+        @include centerVH;
+    }
+    .s2 {
+        @include centerV;
+        @include right;
+        text-align: right;
+    }
+    /*
+
+    Text
+
+    */
+    .text {
+        font-size: 3rem;
+        font-style: italic;
+        color: $teal;
+    }
+    .stateof {
+        top: 5%;
+        left: 2%;
+    }
+    .year {
+        bottom: 5%;
+        right: 2%;
+        text-align: right;
+    }
+
+    /*
+
+    Triangle
+
+    */
+    .triangle {
+        width: 18%;
+        top: 45%;
+        @include left(-10%);
+        .inner {
+            width: 100%;
+            border: 100px solid transparent;
+            border-bottom-color: #3c52d1;
+            border-width: 0 72px 100px 72px;
+        }
+    }
+    /*
+
+    Stripes
+
+    */
+    .stripe {
+        height: 5px;
+        width: 100px;
+        background: $teal;
+    }
+    .stripe1 {
+        top: 62%;
+        left: 12%;
+    }
+    .stripe2 {
+        top: 67%;
+        left: 11%;
+    }
+    .stripe3 {
+        top: 72%;
+        left: 10%;
+    }
+    .stripe4 {
+        top: 77%;
+        left: 11%;
+    }
+    /*
+
+    Blobs
+
+    */
+    .blobs {
+        filter: url('#blob');
+        left: 100px;
+        top: 120px;
+        transform: rotate(-20deg);
+        width: 400px;
+        height: 200px;
+        @include flex-center;
+    }
+
+    .blob {
+        width: 50%;
+        height: 100%;
+        background: $teal;
+        border-radius: 50%;
+    }
+    .blob1 {
+    }
+    .blob2 {
+        transform: translateX(-40px);
+    }
+
+    /*
+
+    Circle
+
+    */
+    .circle {
+        width: 32%;
+        top: 50%;
+        left: 50%;
+        .inner {
+            transform: translateX(-50%) translateY(-50%);
+            div {
+                @include square-ratio;
+                border: 10px dashed $blue;
+                border-radius: 100%;
+                box-sizing: content-box;
+            }
+        }
+    }
+    /*
+
+    Frame
+
+    */
+    .frame {
+        width: 27%;
+        @include right(-1%);
+        top: 50%;
+        .inner {
+            transform: translateY(-50%) rotate(45deg);
+            div {
+                border: 10px solid $blue;
+                @include square-ratio;
+                box-sizing: content-box;
+                box-shadow: 7px 7px 0px 0px $teal;
+            }
+        }
+    }
+    /*
+
+    Other Elements
+
+    */
+    .tilde {
+        font-size: 7rem;
+        line-height: 1;
+    }
+    .tilde1 {
+        top: 20%;
+        @include right(-7%);
+    }
+    .tilde2 {
+        top: 25%;
+        @include right(-8%);
+    }
+    .tilde3 {
+        top: 30%;
+        @include right(-9%);
+    }
+    // font-weight: 800;
+    // // padding: 20px;
+    // font-size: 1.4rem;
+    // line-height: 1.7rem;
+    // display: block;
+    // border: $border;
+    // border-left: 0;
+    // svg {
+    //     display: block;
+    // }
+}
+
+/*
+
+Animations
+
+*/
+
+@mixin anim($className, $animationName, $duration, $delay) {
+    .Animated .#{$className} {
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-name: $animationName;
+        animation-duration: $duration;
+        animation-delay: $delay;
+        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        @content;
     }
 }
-.Logo__Wrapper {
-    margin: 0;
-}
-.Logo--desktop {
-    @include small-medium {
-        display: none;
+
+@keyframes appear {
+    to {
+        opacity: 1;
     }
 }
-.Logo--mobile {
-    @include large {
-        display: none;
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
+
+@keyframes popspin {
+    0% {
+        transform: scale(0) rotate(0);
+    }
+    50% {
+        transform: scale(1.2) rotate(800deg);
+    }
+    100% {
+        transform: scale(1) rotate(720deg);
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes slideright {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slidetop {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes blob {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-40px);
+    }
+}
+
+// letters
+@include anim('c>div', 'pop', 300ms, 100ms) {
+    opacity: 0;
+    transform: scale(0);
+}
+@include anim('s1>div', 'pop', 300ms, 200ms) {
+    opacity: 0;
+    transform: scale(0);
+}
+@include anim('s2>div', 'pop', 300ms, 300ms) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+// circle
+@include anim('circle>div>div', 'popspin', 600ms, 500ms) {
+    transform: scale(0);
+}
+
+// frame
+@include anim('frame', 'slidetop', 300ms, 800ms) {
+    transform: scale(0);
+}
+
+// blob
+@include anim('blob1', 'pop', 300ms, 900ms) {
+    opacity: 0;
+    transform: scale(0);
+}
+@include anim('blob2', 'blob', 500ms, 1100ms) {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+
+// stripes
+@include anim('stripe1', 'slideleft', 400ms, 1200ms) {
+    opacity: 0;
+    transform: translateX(40px);
+}
+@include anim('stripe2', 'slideleft', 400ms, 1300ms) {
+    opacity: 0;
+    transform: translateX(40px);
+}
+@include anim('stripe3', 'slideleft', 400ms, 1400ms) {
+    opacity: 0;
+    transform: translateX(40px);
+}
+@include anim('stripe4', 'slideleft', 400ms, 1500ms) {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+// tildes
+@include anim('tilde1', 'slideright', 400ms, 1300ms) {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+@include anim('tilde2', 'slideright', 400ms, 1400ms) {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+@include anim('tilde3', 'slideright', 400ms, 1500ms) {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+// triangle
+@include anim('triangle', 'popspin', 600ms, 1600ms) {
+    transform: scale(0);
+}
+
+// text
+@include anim('stateof', 'appear', 300ms, 1700ms) {
+    opacity: 0;
+}
+@include anim('year', 'appear', 300ms, 1800ms) {
+    opacity: 0;
+}
+
+
+// .Logo__Wrapper {
+//     margin: 0;
+// }
+// .Logo--desktop {
+//     @include small-medium {
+//         display: none;
+//     }
+// }
+// .Logo--mobile {
+//     @include large {
+//         display: none;
+//     }
+// }

@@ -1,9 +1,11 @@
 import React from 'react'
-import Illustration from '../core/components/Illustration'
+import Logo from '../core/components/Logo'
 
 const Home = () => (
     <div className="Home">
-        <Illustration ratio="landscape" />
+        <div className="LogoWrapper">
+        <Logo/>
+        </div>
     </div>
 )
 

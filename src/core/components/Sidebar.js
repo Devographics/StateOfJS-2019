@@ -25,7 +25,7 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
         <div className="Sidebar__Fixed">
             <h1 className="Logo__Wrapper">
                 <span className="Logo--mobile">
-                    <Logo />
+                    {/* <Logo /> */}
                     <span className="Sidebar__Close">
                         <button onClick={closeSidebar}>
                             <Close />
@@ -33,7 +33,7 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
                     </span>
                 </span>
                 <div className="Logo--desktop">
-                    <Logo />
+                    {/* <Logo /> */}
                 </div>
             </h1>
             <div className="Sidebar__Inner">
