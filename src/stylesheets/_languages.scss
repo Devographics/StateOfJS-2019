@@ -37,7 +37,7 @@
     }
     &:hover,
     .pagetitle .LanguageSwitcher--open & {
-        background: $teal-light;
+        // background: $teal-light;
     }
     .pagetitle & {
         padding: $spacing;
@@ -93,6 +93,7 @@
         }
         &:before {
             border-bottom-color: $border-color;
+            border-style: dashed;
         }
     }
     .LanguageSwitcher--top & {
@@ -106,6 +107,7 @@
         }
         &:before {
             border-top-color: $border-color;
+            border-style: dashed;
         }
     }
 }

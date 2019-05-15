@@ -1,6 +1,8 @@
 import React from 'react'
 import Nav from './Nav'
 import Logo from './Logo'
+import LogoSidebar2 from './LogoSidebar2'
+
 import ShareSite from '../share/ShareSite'
 
 const Close = () => (
@@ -25,7 +27,7 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
         <div className="Sidebar__Fixed">
             <h1 className="Logo__Wrapper">
                 <span className="Logo--mobile">
-                    {/* <Logo /> */}
+                    <LogoSidebar2/>
                     <span className="Sidebar__Close">
                         <button onClick={closeSidebar}>
                             <Close />
@@ -33,7 +35,8 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
                     </span>
                 </span>
                 <div className="Logo--desktop">
-                    {/* <Logo /> */}
+                    
+                    <LogoSidebar2/>
                 </div>
             </h1>
             <div className="Sidebar__Inner">

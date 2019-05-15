@@ -3,9 +3,7 @@ import Logo from '../core/components/Logo'
 
 const Home = () => (
     <div className="Home">
-        <div className="LogoWrapper">
-        <Logo/>
-        </div>
+        <Logo size="l"/>
     </div>
 )
 
