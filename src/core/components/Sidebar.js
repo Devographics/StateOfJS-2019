@@ -25,17 +25,17 @@ const Close = () => (
 const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
     <div className={`Sidebar ${sidebarClassName}`}>
         <div className="Sidebar__Fixed">
-            <h1 className="Logo__Wrapper">
-                <span className="Logo--mobile">
-                    <LogoSidebar2/>
+            <h1 className="Sidebar__Logo__Wrapper Logo__Wrapper">
+                <span className="Sidebar__Logo--mobile Logo--mobile">
+                    <div/>
+                    <div className="Sidebar__Logo__Inner"><LogoSidebar2/></div>
                     <span className="Sidebar__Close">
                         <button onClick={closeSidebar}>
                             <Close />
                         </button>
                     </span>
                 </span>
-                <div className="Logo--desktop">
-                    
+                <div className="Sidebar__Logo--desktop Logo--desktop">
                     <LogoSidebar2/>
                 </div>
             </h1>

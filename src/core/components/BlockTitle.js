@@ -25,8 +25,10 @@ const BlockTitle = ({ id, showDescription, isShareable, values }) => {
     return (
         <div className={`Block__Heading Block__Heading--${id}`}>
             <div className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}>
-                <SharePermalink url={meta.link} />
-                <h3 className="Block__Title__Text Block__Title__Text--short">{title}</h3>
+                <h3 className="Block__Title__Text Block__Title__Text--short">
+                    <SharePermalink url={meta.link} />
+                    {title}
+                </h3>
                 <h3 className="Block__Title__Text Block__Title__Text--full">
                     {title || translate(`fullcharts.${id}`, { values })}
                 </h3>

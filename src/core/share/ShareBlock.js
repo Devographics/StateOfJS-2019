@@ -29,7 +29,7 @@ const ShareBlock = ({ section, id, className, toggleClass }) => {
     }
 
     const meta = getBlockMeta(id, context, translate)
-    console.log(meta)
+
     return (
         <div
             className={classNames(className, 'share-wrapper', {

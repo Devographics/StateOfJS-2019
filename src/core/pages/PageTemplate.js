@@ -7,8 +7,6 @@ import BlockSwitcher from 'core/components/BlockSwitcher'
 const PageTemplate = ({ data = {} }) => {
     const context = usePageContext()
 
-    console.log({ context, data })
-
     return (
         <>
             <PageHeader />

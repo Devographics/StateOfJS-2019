@@ -32,6 +32,7 @@
         overflow: hidden; // make sure share options don't push past viewport limits
     }
     .share__link--permalink {
+        float: left;
         opacity: 0;
         line-height: 1;
         width: 22px;
@@ -39,7 +40,7 @@
         padding-right: 4px;
         transition: none;
         position: relative;
-        top: 1px;
+        top: 7px;
         &:hover::before{
             content: none;
         }

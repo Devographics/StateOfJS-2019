@@ -1,7 +1,7 @@
 import React from 'react'
 
 const LogoSidebar2 = () => (
-    <svg width="100%" viewBox="0 0 2631 868" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="Logo--simple" width="100%" viewBox="0 0 2631 868" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M51.594 498.258L223.5 200.508L395.406 498.258H51.594Z"
             stroke="#9AC6C9"

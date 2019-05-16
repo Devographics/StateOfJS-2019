@@ -398,31 +398,3 @@ Logo
 .Logo--l{
     @include logo(1);
 }
-
-/*
-
-Other Styles
-
-*/
-.Logo__Wrapper {
-    margin: 0;
-    border-bottom: $border;
-    @include flex-center;
-    padding: 5px 47px;
-}
-.Logo--desktop {
-    svg{
-        display: block;
-    }
-    @include small-medium {
-        display: none;
-    }
-}
-.Logo--mobile {
-    svg{
-        display: block;
-    }
-    @include large {
-        display: none;
-    }
-}

@@ -60,19 +60,19 @@
         pointer-events: auto;
         @include small {
             &.share__link--twitter {
-                transform: translateX(-760%) scale(1);
+                transform: translateX(-900%) scale(1);
             }
             &.share__link--facebook {
-                transform: translateX(-660%) scale(1);
+                transform: translateX(-820%) scale(1);
             }
             &.share__link--linkedin {
-                transform: translateX(-560%) scale(1);
+                transform: translateX(-740%) scale(1);
             }
             &.share__link--email {
-                transform: translateX(-460%) scale(1);
+                transform: translateX(-660%) scale(1);
             }
             &.share__link--image {
-                transform: translateX(-360%) scale(1);
+                transform: translateX(-580%) scale(1);
             }
         }
         @include medium-large {

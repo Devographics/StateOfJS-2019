@@ -1,8 +1,10 @@
 .FTBlock {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: $spacing * 2;
-    grid-row-gap: $spacing;
+    @include medium-large {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: $spacing * 2;
+        grid-row-gap: $spacing;
+    }
 }
 
 .FTBlock__Chart {

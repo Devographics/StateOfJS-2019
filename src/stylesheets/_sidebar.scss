@@ -51,18 +51,49 @@
     }
 }
 
+.Sidebar__Logo__Wrapper{
+    margin: 0;
+}
+
+.Sidebar__Logo--desktop {
+    margin: 0;
+    border-bottom: $border;
+    @include flex-center;
+    padding: 5px 47px;
+    svg {
+        display: block;
+    }
+    @include small-medium {
+        display: none;
+    }
+}
+
+.Sidebar__Logo--mobile {
+    // @include flex-center;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    border-bottom: $border;
+    // height: 50px;
+    .Sidebar__Logo__Inner{
+        @include flex-center;
+    }
+    .Logo--simple {
+        display: block;
+    }
+    @include large {
+        display: none;
+    }
+}
+
 .Sidebar__Close {
     margin: 0;
     padding: 0;
-    border: 1px solid $border-color;
-    border-right: none;
     button {
         background: none;
         cursor: pointer;
         border: none;
     }
     @include flex-center;
-    width: 100%;
     @include large {
         display: none;
     }
