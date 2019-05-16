@@ -5,6 +5,8 @@ import ShareBlock from '../share/ShareBlock'
 import { useI18n } from '../i18n/i18nContext'
 import { usePageContext } from '../helpers/pageContext'
 import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
+import { getBlockMeta } from '../helpers/blockHelpers'
+import SharePermalink from '../share/SharePermalink'
 
 const BlockTitle = ({ id, showDescription, isShareable, values }) => {
     const [showOptions, setShowOptions] = useState(false)
@@ -18,10 +20,12 @@ const BlockTitle = ({ id, showDescription, isShareable, values }) => {
             values
         })
     }
+    const meta = getBlockMeta(id, context, translate)
 
     return (
         <div className={`Block__Heading Block__Heading--${id}`}>
             <div className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}>
+                <SharePermalink url={meta.link} />
                 <h3 className="Block__Title__Text Block__Title__Text--short">{title}</h3>
                 <h3 className="Block__Title__Text Block__Title__Text--full">
                     {title || translate(`fullcharts.${id}`, { values })}

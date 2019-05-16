@@ -70,14 +70,18 @@ const FeatureBlock = ({ block, data }) => {
                         <FeatureUsageBarChart buckets={feature.usage.buckets} />
                     </ChartContainer>
                 </div>
-                <div className="Feature__Description FTBlock__Description">
-                    {mdnInfo ? (
-                        <p dangerouslySetInnerHTML={{ __html: mdnInfo.summary }} />
-                    ) : (
-                        translate(`block.description.${block.id}`)
-                    )}
-                </div>
-                {caniuseInfo && <FeatureResources caniuseInfo={caniuseInfo} />}
+                {!context.isCapturing && (
+                    <>
+                        <div className="Feature__Description FTBlock__Description">
+                            {mdnInfo ? (
+                                <p dangerouslySetInnerHTML={{ __html: mdnInfo.summary }} />
+                            ) : (
+                                translate(`block.description.${block.id}`)
+                            )}
+                        </div>
+                        {caniuseInfo && <FeatureResources caniuseInfo={caniuseInfo} />}
+                    </>
+                )}
             </div>
         </Block>
     )

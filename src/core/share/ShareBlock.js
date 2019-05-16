@@ -9,6 +9,8 @@ import ShareTwitter from './ShareTwitter'
 import ShareLinkedIn from './ShareLinkedIn'
 import ShareFacebook from './ShareFacebook'
 import ShareEmail from './ShareEmail'
+import SharePermalink from './SharePermalink'
+import ShareImage from './ShareImage'
 
 const ShareBlock = ({ section, id, className, toggleClass }) => {
     const [showOptions, setShowOptions] = useState(false)
@@ -27,7 +29,7 @@ const ShareBlock = ({ section, id, className, toggleClass }) => {
     }
 
     const meta = getBlockMeta(id, context, translate)
-
+    console.log(meta)
     return (
         <div
             className={classNames(className, 'share-wrapper', {
@@ -57,6 +59,10 @@ const ShareBlock = ({ section, id, className, toggleClass }) => {
                         subject={meta.emailSubject}
                         body={meta.emailBody}
                         trackingId={meta.trackingId}
+                    />
+                    <ShareImage
+                        trackingId={meta.trackingId}
+                        url={meta.imageUrl}
                     />
                 </div>
             </div>
