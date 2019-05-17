@@ -57,14 +57,14 @@ export default class Layout extends PureComponent {
         const { showAnim, showSidebar } = this.state
         const sidebarClassName = showSidebar ? 'Sidebar--shown' : 'Sidebar--hidden'
         const context = mergePageContext(pageContext, location)
-
+        console.log(context)
         return (
             <PageContextProvider value={context}>
                 <I18nContextProvider>
                     <div
                         className={classNames(
                             'pageLayout',
-                            `PageLayout--${currentPage && currentPage.section.id}`,
+                            `PageLayout--${context.id}`,
                             {
                                 'PageLayout--sidebar': showSidebar,
                                 'PageLayout--nosidebar': !showSidebar,

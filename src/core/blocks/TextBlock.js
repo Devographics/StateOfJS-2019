@@ -1,6 +1,4 @@
 import React from 'react'
-import addParagraphs from '../helpers/paragraphs'
-import parseBold from '../helpers/bold'
 
 const TextBlock = ({ text, title, children }) => {
     if (children) {
@@ -12,7 +10,7 @@ const TextBlock = ({ text, title, children }) => {
                 {text && (
                     <div
                         className="block__content"
-                        dangerouslySetInnerHTML={{ __html: parseBold(addParagraphs(text)) }}
+                        dangerouslySetInnerHTML={{ __html: text }}
                     />
                 )}
             </div>

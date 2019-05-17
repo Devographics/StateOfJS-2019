@@ -398,3 +398,8 @@ Logo
 .Logo--l{
     @include logo(1);
 }
+
+.Logo__Container{
+    @include flex-center;
+    margin-bottom: $spacing * 2;
+}

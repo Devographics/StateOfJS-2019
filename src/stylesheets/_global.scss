@@ -110,3 +110,16 @@ a {
 .note {
     color: $text-color-dark;
 }
+
+/*
+
+Page-specific styles
+
+*/
+.PageLayout--introduction{
+    .block__content{
+        p:first-child{
+            font-size: $larger-font;
+        }
+    }
+}

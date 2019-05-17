@@ -42,3 +42,11 @@ code {
 strong {
     font-weight: $bold;
 }
+
+.first-letter{
+    float: left;
+    display: block;
+    font-size: 6rem;
+    margin-right: $spacing/2;
+    line-height: 1;
+}
