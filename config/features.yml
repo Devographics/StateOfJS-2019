@@ -1,0 +1,46 @@
+
+css-grid:
+  name: CSS Grid Layout
+flexbox:
+  name: CSS Flexible Box Layout
+css-multi-column:
+  name: CSS Multi-column Layout
+css-writing-modes:
+  name: CSS Writing Modes
+css-exclusions:
+  name: CSS Exclusions
+css-shapes:
+  name: CSS Shapes
+object-fit:
+  name: object-fit
+clip-path:
+  name: clip-path
+blend-modes:
+  name: blend-mode
+css-filter-effects:
+  name: CSS Filters & Effects
+css-masks:
+  name: CSS Masking
+css-scroll-snap:
+  name: CSS Scroll Snap
+overscroll-behavior:
+  name: overscroll-behavior
+overflow-anchor:
+  name: overflow-anchor
+web-fonts-font-face:
+  name: |
+    @font-face
+variable-fonts:
+  name: Variable fonts
+line-breaking-properties:
+  name: CSS Line Breaking Properties
+font-variant:
+  name: font-variant
+initial-letter:
+  name: initial-letter
+css-transitions:
+  name: CSS Transitions
+css-transforms:
+  name: CSS Transforms
+css-animations:
+  name: CSS Animations

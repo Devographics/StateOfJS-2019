@@ -1,0 +1,223 @@
+angular:
+    description: |
+        Angular is a TypeScript-based open-source front-end web application platform. Note that from
+        this year on we are not be making a distinction between Angular and Angular.js anymore, while datapoints for 
+        2016 and 2017 correspond to Angular (a.k.a. "Angular 2").
+    name: Angular
+ant-design:
+    github: ant-design/ant-design
+    name: 'Ant Design'
+    npm: antd
+apollo:
+    description: "A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server.\n"
+    name: Apollo
+appcelerator:
+    name: Appcelerator
+atom:
+    name: Atom
+atomic-css:
+    description: |
+        Atomic CSS is a CSS architecture. It is not opinionated;
+        it simply defines a set of classes representing single-purpose styling units.
+    homepage: 'https://acss.io'
+    name: 'Atomic CSS'
+bem:
+    description: |
+        You will not be surprised to hear that BEM is an abbreviation
+        of the key elements of the methodology — Block, Element and Modifier.
+    homepage: 'http://getbem.com/'
+    name: BEM
+bootstrap:
+    github: twbs/bootstrap
+    name: Bootstrap
+    npm: bootstrap
+brackets:
+    name: Brackets
+bulma:
+    github: jgthms/bulma
+    name: Bulma
+    npm: bulma
+csharp:
+    name: 'C#'
+c-cplusplus:
+    name: C/C++
+dart:
+    name: Dart
+date-fns:
+    name: Date-fns
+django:
+    name: Django
+dotnet:
+    name: .NET
+elixir:
+    name: Elixir
+elm-test:
+    name: elm-test
+emacs:
+    name: emacs
+es6:
+    description: "ES6 and its descendants are the newer versions of JavaScript, usually run through Babel.\n"
+    name: ES6
+extjs:
+    name: 'Ext JS'
+firebase:
+    name: Firebase
+flutter:
+    name: Flutter
+foundation:
+    github: zurb/foundation-sites
+    name: Foundation
+golang:
+    name: Go
+haskell:
+    name: Haskell
+haxe:
+    name: Haxe
+intellij:
+    name: IntelliJ
+it-css:
+    description: |
+        itcss is a sane, scalable, managed
+        CSS architecture from CSS Wizardry
+    name: itcss
+java:
+    name: Java
+kotlin:
+    name: Kotlin
+laravel:
+    name: Laravel
+less:
+    github: less/less.js
+    name: Less
+    npm: less
+lodash:
+    name: lodash
+luxon:
+    name: luxon
+make:
+    name: Make
+materialize-css:
+    github: Dogfalo/materialize
+    name: 'Materialize CSS'
+    npm: materialize-css
+moment:
+    name: moment
+nano:
+    name: nano
+native-apps:
+    description: "The majority of mobile and desktop apps are still built with native languages like Java, Kotlin, Objective-C, or Swift.\n"
+    name: 'Native Apps'
+notepad++:
+    name: notepad++
+objective-c:
+    name: Objective-C
+ocaml:
+    name: OCaml
+oocss:
+    description: |
+        OOCSS, or object-oriented CSS, is a methodology to help programmers
+        write CSS that is succinct and easy to maintain.
+    name: OOCSS
+parcel:
+    name: Parcel
+phonegap-cordova:
+    description: "Apache Cordova is a mobile application development framework.\n"
+    name: Cordova
+php:
+    name: PHP
+phpstorm:
+    name: PhpStorm
+postcss:
+    github: postcss/postcss
+    name: PostCSS
+primer:
+    github: primer/css
+    name: Primer
+    npm: '@primer/css'
+purecss:
+    github: pure-css/pure
+    name: PureCSS
+    npm: purecss
+pwa:
+    name: 'Progressive Web Apps'
+pycharm:
+    name: PyCharm
+python:
+    name: Python
+rails:
+    name: Rails
+ramda:
+    name: Ramda
+ruby:
+    name: Ruby
+rust:
+    name: Rust
+sass:
+    github: sass/sass
+    name: Sass
+    npm: node-sass
+scala:
+    name: Scala
+selenium:
+    name: Selenium
+semantic-ui:
+    github: Semantic-Org/Semantic-UI
+    name: 'Semantic UI'
+    npm: semantic-ui
+service-workers:
+    name: 'Service Workers'
+smacss:
+    description: |
+        SMACSS (pronounced “smacks”) is more style guide than rigid framework.
+        There is no library within here for you to download or install.
+        There is no git repository for you to clone. SMACSS is a way to examine
+        your design process and as a way to fit those rigid frameworks into
+        a flexible thought process.
+    name: SMACSS
+stylus:
+    github: stylus/stylus
+    name: Stylus
+    npm: stylus
+sublime-text:
+    name: 'Sublime Text'
+swift:
+    name: Swift
+tachyons:
+    github: tachyons-css/tachyons
+    name: Tachyons
+tailwind:
+    github: tailwindcss/tailwindcss
+    name: Tailwind
+    npm: tailwindcss
+uikit:
+    github: uikit/uikit
+    name: UIKit
+    npm: uikit
+underscore:
+    name: underscore
+vanilla-js:
+    name: 'Vanilla JS'
+vim:
+    name: Vim
+visual-studio:
+    name: 'VS Code'
+web-animations-api:
+    name: 'Web Animations API'
+web-assembly:
+    name: WebAssembly
+web-audio-api:
+    name: 'Web Audio API'
+web-speech-api:
+    name: 'Web Speech API'
+webgl:
+    name: WebGL
+webrtc:
+    name: WebRTC
+webstorm:
+    name: WebStorm
+webvr:
+    name: WebVR
+weex:
+    name: weex
+xamarin:
+    name: xamarin

@@ -20,8 +20,15 @@ const ToolOpinionBlock = ({ block, data }) => {
 
     const { translate } = useI18n()
 
+    let githubName = resources.github && resources.github.name
+    githubName = githubName && githubName.charAt(0).toUpperCase() + githubName.slice(1)
+
     return (
-        <Block id={block.id} showDescription={false}>
+        <Block
+            id={block.id}
+            title={translate(`tool.${block.id}`)}
+            showDescription={false}
+        >
             <div className="Tool FTBlock">
                 <div className="Tool__Chart FTBlock__Chart">
                     <ToolOpinionsLegend />

@@ -8,12 +8,13 @@ import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
 import { getBlockMeta } from '../helpers/blockHelpers'
 import SharePermalink from '../share/SharePermalink'
 
-const BlockTitle = ({ id, showDescription, isShareable, values }) => {
+const BlockTitle = ({ id, showDescription, isShareable, values, title }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
 
-    const title = getBlockTitle(id, context, translate, { values })
+    title = title || getBlockTitle(id, context, translate, { values })
+    
     let description = ''
     if (showDescription === true) {
         description = getBlockDescription(id, context, translate, {
