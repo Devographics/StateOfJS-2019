@@ -61,10 +61,11 @@ const FeatureBlock = ({ block, data }) => {
         }
     }
 
+    const mdnInfoTitle = mdnInfo && mdnInfo.title
     const caniuseInfo = feature.resources.caniuse
 
     return (
-        <Block id={block.id} showDescription={false}>
+        <Block id={block.id} title={translate(`feature.${block.id}`, {}, mdnInfoTitle)} showDescription={false}>
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
                     <FeatureUsageLegends />

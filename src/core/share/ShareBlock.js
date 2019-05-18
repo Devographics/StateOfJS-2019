@@ -43,7 +43,7 @@ const ShareBlock = ({ section, id, className, toggleClass }) => {
                         toggleOptions(e)
                     }}
                 >
-                    {translate('share')}
+                    {translate('share.share')}
                 </div>
             </div>
             <div className="share-popup">

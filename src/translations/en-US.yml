@@ -170,6 +170,20 @@ translations:
     - key: features.usage.never_heard_not_sure
       t: Never heard of it/Not sure what it is
 
+    # Note: all other features get their title from MDN
+    - key: feature.flexbox
+      t: Flexbox
+    - key: feature.css-exclusions
+      t: CSS Exclusions
+    - key: feature.css-variables
+      t: CSS Variables
+    - key: feature.css-containment
+      t: CSS Containment
+    - key: feature.variable-fonts
+      t: Variable Fonts
+    - key: feature.line-breaking-properties
+      t: Line-breaking Properties
+
     ###########################################################################
     # Units & Selectors
     ###########################################################################
@@ -430,6 +444,8 @@ translations:
       t: Resources
 
     # sharing
+    - key: share.share
+      t: Share
     - key: share.site.title
       t: Discover the StateOf CSS 2019 results
     - key: share.site.twitter_text

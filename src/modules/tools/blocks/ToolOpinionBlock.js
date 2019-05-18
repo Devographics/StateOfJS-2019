@@ -26,7 +26,7 @@ const ToolOpinionBlock = ({ block, data }) => {
     return (
         <Block
             id={block.id}
-            title={translate(`tool.${block.id}`)}
+            title={translate(`tool.${block.id}`, {}, githubName)}
             showDescription={false}
         >
             <div className="Tool FTBlock">
