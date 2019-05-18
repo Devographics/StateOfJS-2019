@@ -18,7 +18,8 @@ exports.fetchGithubResource = async ownerAndRepo => {
         const res = await fetch(`https://api.github.com/repos/${ownerAndRepo}`)
         const json = await res.json()
 
-        return exports.normalizeGithubResource(json)
+        const data = exports.normalizeGithubResource(json)
+        return data
     } catch (error) {
         console.error(`an error occurred while fetching github resource`, error)
         throw error

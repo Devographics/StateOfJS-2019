@@ -179,6 +179,7 @@ exports.onCreateNode = async ({ node, actions }) => {
                 id: agg.id
             }
             const itemResourcesConfig = _.get(resources, `${node.section_id}.${agg.id}`)
+
             if (itemResourcesConfig !== undefined) {
                 if (itemResourcesConfig.mdn !== undefined) {
                     aggResources.mdn = await fetchMdnResource(itemResourcesConfig.mdn)

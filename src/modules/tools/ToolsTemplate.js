@@ -42,6 +42,14 @@ export const query = graphql`
             fields {
                 resources {
                     id
+                    github {
+                        name
+                        stars
+                        homepage
+                        full_name
+                        url
+                        description
+                    }
                 }
             }
         }

@@ -32,7 +32,23 @@ const ToolOpinionBlock = ({ block, data }) => {
                 <div className="Tool__Description FTBlock__Description">
                     <TextBlock text={getToolDescription(block, resources, translate)} />
                 </div>
-                <div className="Feature__Resources FTBlock__Resources">*resources*</div>
+                {resources.github && (
+                    <div className="Tool__Resources FTBlock__Resources">
+                        <h3>{translate('block.tool.links')}</h3>
+                        <ul>
+                            <li className="FTBlock__Links__Item">
+                                <a href={resources.github.url}>
+                                    {translate('block.tool.github_link')}
+                                </a>
+                            </li>
+                            <li className="FTBlock__Links__Item">
+                                <a href={resources.github.homepage}>
+                                    {translate('block.tool.homepage_link')}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                )}
             </div>
         </Block>
     )

@@ -993,3 +993,11 @@ translations:
       t: Non-Binary/Third Gender
     - key: genders.other
       t: Other
+
+
+    - key: block.tool.links
+      t: Links
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.homepage_link
+      t: Homepage

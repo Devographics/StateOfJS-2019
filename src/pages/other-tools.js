@@ -20,13 +20,13 @@ export const query = graphql`
                         percentage
                     }
                 }
-                others {
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
+                # others {
+                #     buckets {
+                #         id
+                #         count
+                #         percentage
+                #     }
+                # }
             }
         }
     }

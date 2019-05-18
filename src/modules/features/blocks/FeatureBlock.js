@@ -16,20 +16,20 @@ const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
             <ul>
                 {caniuseInfo.spec && (
                     <li className="Feature__Links__Item">
-                        <a href={caniuseInfo.spec} title="W3C Specification">
+                        <a href={caniuseInfo.spec}>
                             {translate('feature.specification_link')}
                         </a>
                     </li>
                 )}
                 {mdnInfo && (
                     <li className="Feature__Links__Item">
-                        <a href={`https://developer.mozilla.org${mdnInfo.url}`} title="MDN link">
+                        <a href={`https://developer.mozilla.org${mdnInfo.url}`}>
                             {translate('feature.mdn_link')}
                         </a>
                     </li>
                 )}
                 <li className="Feature__Links__Item">
-                    <a href={`https://caniuse.com/#feat=${id}`} title="CanIUse link">
+                    <a href={`https://caniuse.com/#feat=${id}`}>
                         {translate('feature.caniuse_link')}
                     </a>
                 </li>
