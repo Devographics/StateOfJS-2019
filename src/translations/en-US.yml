@@ -308,8 +308,15 @@ translations:
       t: Notify Me
 
     # features
+
+    - key: feature.learn_more
+      t: Learn More
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: CanIUse
     - key: feature.specification_link
-      t: Specification
+      t: W3C Specification
     - key: features.usage.used_it
       t: Have used it
     - key: features.usage.know_not_used

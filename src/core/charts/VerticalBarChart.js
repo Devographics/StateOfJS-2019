@@ -9,7 +9,7 @@ import ChartContainer from './ChartContainer'
 const margin = {
     top: 10,
     right: 52,
-    bottom: 46,
+    bottom: 50,
     left: 32
 }
 

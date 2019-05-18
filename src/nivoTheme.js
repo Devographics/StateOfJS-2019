@@ -46,14 +46,16 @@ export default {
             },
             text: {
                 fill: colors.teal,
-                fontSize: 12
+                fontSize: 12,
+                fontFamily
             }
         },
         legend: {
             text: {
                 fill: colors.teal,
                 fontSize: 14,
-                fontWeight: 600
+                fontWeight: 600,
+                fontFamily
             }
         }
     },

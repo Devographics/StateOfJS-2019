@@ -9,7 +9,7 @@ const Introduction = ({ data }) => (
     <>
         <Logo size="l"/>
         <TextBlock text={data.introduction.html} />
-        <SponsorsBlock />
+        {/* <SponsorsBlock /> */}
     </>
 )
 

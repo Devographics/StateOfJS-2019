@@ -5,6 +5,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@nivo/core'
 import { Chip } from '@nivo/tooltip'
+import { colors } from '../../constants'
 
 // Define chart patterns
 const patterns = [
@@ -14,7 +15,7 @@ const patterns = [
         background: 'transparent',
         color: 'inherit',
         rotation: -45,
-        lineWidth: 4,
+        lineWidth: 1,
         spacing: 8
     }
 ]
@@ -26,9 +27,11 @@ const getLabels = mode => ({ bars, getLabelTextColor }) => {
         // skip legend for small bars
         if (bar.width < 60) return null
 
-        let value = `${bar.data.value}`
-        if (mode === 'percentage') value = `${value}%`
+        // only keep 1 decimal
+        let value = Math.round(bar.data.value*10)/10
 
+        if (mode === 'percentage') value = `${value}%`
+        
         // `pointerEvents: none` is used to not
         // disturb mouse events
         return (
@@ -44,7 +47,7 @@ const getLabels = mode => ({ bars, getLabelTextColor }) => {
                         strokeWidth: 4,
                         stroke: '#232840',
                         strokeLinejoin: 'round',
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: 600
                     }}
                 >
@@ -54,8 +57,8 @@ const getLabels = mode => ({ bars, getLabelTextColor }) => {
                     textAnchor="middle"
                     dominantBaseline="middle"
                     style={{
-                        fill: getLabelTextColor(bar),
-                        fontSize: 12,
+                        fill: colors.greyLight,
+                        fontSize: 13,
                         fontWeight: 600
                     }}
                 >

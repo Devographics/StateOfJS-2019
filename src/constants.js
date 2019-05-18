@@ -2,6 +2,7 @@ export let colors = {
     greyLight: '#e0e4e4',
     grey: '#d9dedf',
     greyMedium: '#cecdcc',
+    greyDark: '#AEAFB5',
 
     blueLighter: '#B2BBEE',
     blueLight: '#808EE1',
@@ -66,7 +67,7 @@ export const usage = [
     },
     {
         id: 'never_heard_not_sure',
-        color: colors.greyMedium
+        color: colors.greyDark
     }
 ]
 

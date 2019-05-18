@@ -1,7 +1,7 @@
 .FTBlock {
     @include medium-large {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         grid-column-gap: $spacing * 2;
         grid-row-gap: $spacing;
     }
@@ -21,11 +21,7 @@
 }
 
 .Feature__Links__Item {
-    display: block;
-}
-
-.Feature__Links__Item:first-child {
-    margin-top: $spacing * 0.5;
+    margin-bottom: $spacing/3;
 }
 
 .Features__Overview {
@@ -56,4 +52,14 @@
     background: $border-color;
     color: #ffffff;
     cursor: pointer;
+}
+
+.FTBlock__Resources{
+    h3{
+        margin-bottom: $spacing/2;
+        font-size: $medium-font;
+    }
+    ul{
+        padding-left: $spacing;
+    }
 }

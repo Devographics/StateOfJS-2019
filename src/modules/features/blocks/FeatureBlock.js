@@ -8,38 +8,32 @@ import { mergeFeaturesResources } from '../featuresHelpers'
 import FeatureUsageLegends from '../charts/FeatureUsageLegends'
 import ChartContainer from 'core/charts/ChartContainer'
 
-const FeatureResources = ({ caniuseInfo }) => {
+const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
     const { translate } = useI18n()
-
     return (
         <div className="Feature__Resources FTBlock__Resources">
-            <div className="Feature__Support">browser support:</div>
-            <div className="Feature__Links">
-                {caniuseInfo && (
-                    <div>
-                        resources:
-                        <div>
-                            <a
-                                href={caniuseInfo.spec}
-                                title="spec"
-                                className="Feature__Links__Item"
-                            >
-                                {translate('feature.specication_link')}
-                            </a>
-                            {caniuseInfo.links.map((link, i) => (
-                                <a
-                                    key={i}
-                                    href={link.url}
-                                    title={link.title}
-                                    className="Feature__Links__Item"
-                                >
-                                    {link.title}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
+            <h3>{translate('feature.learn_more')}</h3>
+            <ul>
+                {caniuseInfo.spec && (
+                    <li className="Feature__Links__Item">
+                        <a href={caniuseInfo.spec} title="W3C Specification">
+                            {translate('feature.specification_link')}
+                        </a>
+                    </li>
                 )}
-            </div>
+                {mdnInfo && (
+                    <li className="Feature__Links__Item">
+                        <a href={`https://developer.mozilla.org${mdnInfo.url}`} title="MDN link">
+                            {translate('feature.mdn_link')}
+                        </a>
+                    </li>
+                )}
+                <li className="Feature__Links__Item">
+                    <a href={`https://caniuse.com/#feat=${id}`} title="CanIUse link">
+                        {translate('feature.caniuse_link')}
+                    </a>
+                </li>
+            </ul>
         </div>
     )
 }
@@ -79,7 +73,11 @@ const FeatureBlock = ({ block, data }) => {
                                 translate(`block.description.${block.id}`)
                             )}
                         </div>
-                        {caniuseInfo && <FeatureResources caniuseInfo={caniuseInfo} />}
+                        <FeatureResources
+                            id={feature.resources.id}
+                            mdnInfo={mdnInfo}
+                            caniuseInfo={caniuseInfo}
+                        />
                     </>
                 )}
             </div>
