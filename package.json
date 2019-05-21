@@ -25,6 +25,7 @@
     "@nivo/pie": "0.57.0",
     "@nivo/sankey": "0.57.0",
     "@nivo/scatterplot": "^0.57.0",
+    "@nivo/sunburst": "^0.58.0",
     "@nivo/waffle": "0.57.0",
     "bowser": "2.1.0",
     "classnames": "^2.2.6",

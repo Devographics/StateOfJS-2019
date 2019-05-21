@@ -1019,12 +1019,43 @@
     lodash.isplainobject "^4.0.6"
     react-motion "^0.5.2"
 
+"@nivo/colors@0.58.0":
+  version "0.58.0"
+  resolved "https://registry.yarnpkg.com/@nivo/colors/-/colors-0.58.0.tgz#8f4b1b1ddf6dfc65afd817ba3a6a437a953c91e5"
+  integrity sha512-+MKGu0dwnfup2TORLtFnL6j2d8h6tqBQtk8hRt2CiVhg8hEWpGhOn0euGy1bmcJDP2rrJ79wN8klCEyqjP1TSQ==
+  dependencies:
+    d3-color "^1.2.3"
+    d3-scale "^3.0.0"
+    d3-scale-chromatic "^1.3.3"
+    lodash.get "^4.4.2"
+    lodash.isplainobject "^4.0.6"
+    react-motion "^0.5.2"
+
 "@nivo/core@0.57.0":
   version "0.57.0"
   resolved "https://registry.yarnpkg.com/@nivo/core/-/core-0.57.0.tgz#264bd3625fc0f23edcd75644eda9704eb14434e2"
   integrity sha512-sMcwOUuix3E0j0OLRtR8Cg3LA7Dtlf/Q4ALquzKFyTNn3voS/kMwUt7/g4IZFqEe05Og5k7dFJZcsND6SCwpuQ==
   dependencies:
     "@nivo/tooltip" "0.57.0"
+    d3-color "^1.2.3"
+    d3-format "^1.3.2"
+    d3-hierarchy "^1.1.8"
+    d3-interpolate "^1.3.2"
+    d3-scale "^3.0.0"
+    d3-scale-chromatic "^1.3.3"
+    d3-shape "^1.3.5"
+    d3-time-format "^2.1.3"
+    lodash "^4.17.11"
+    react-measure "^2.2.4"
+    react-motion "^0.5.2"
+    recompose "^0.30.0"
+
+"@nivo/core@0.58.0":
+  version "0.58.0"
+  resolved "https://registry.yarnpkg.com/@nivo/core/-/core-0.58.0.tgz#67e82199db39a4a1bed17ef77b92b2b381ba763e"
+  integrity sha512-ad2PGqYlfRY7lgopSpuBKWTQF5hhSKdPhwb5AiGKT1vJCAYZuKdX0RGkpZg4wCnt8RvBaJBJyR4GL83R3bmTCA==
+  dependencies:
+    "@nivo/tooltip" "0.58.0"
     d3-color "^1.2.3"
     d3-format "^1.3.2"
     d3-hierarchy "^1.1.8"
@@ -1103,12 +1134,35 @@
     react-motion "^0.5.2"
     recompose "^0.30.0"
 
+"@nivo/sunburst@^0.58.0":
+  version "0.58.0"
+  resolved "https://registry.yarnpkg.com/@nivo/sunburst/-/sunburst-0.58.0.tgz#c229d64c3e8f67d3735e657e0c0d3315e82e9601"
+  integrity sha512-dPFq0UmrRIGTmscgDEefM29X0tNeSThwBNq7QUSmDBTlWfBgwr8soBwFjISOHiXm91RJfm1z+ehZtAQiz4DsGA==
+  dependencies:
+    "@nivo/colors" "0.58.0"
+    "@nivo/core" "0.58.0"
+    "@nivo/tooltip" "0.58.0"
+    d3-hierarchy "^1.1.8"
+    d3-shape "^1.3.5"
+    lodash "^4.17.11"
+    react-motion "^0.5.2"
+    recompose "^0.30.0"
+
 "@nivo/tooltip@0.57.0":
   version "0.57.0"
   resolved "https://registry.yarnpkg.com/@nivo/tooltip/-/tooltip-0.57.0.tgz#4cf0d5ca44c25efd0f5e2540ab9a758b72cf70c3"
   integrity sha512-ytJPWsugDNPoSgCRJl7Q9/h/PM+JuLae6IvLyWtmXBQ5L177yCBEXTs3F+tyt0V79ss5S+jKY7/IhIE0qhp73w==
   dependencies:
     "@nivo/core" "0.57.0"
+    react-measure "^2.2.4"
+    react-motion "^0.5.2"
+
+"@nivo/tooltip@0.58.0":
+  version "0.58.0"
+  resolved "https://registry.yarnpkg.com/@nivo/tooltip/-/tooltip-0.58.0.tgz#798dbca7bc46358ac348024af9bb4f83b3097d71"
+  integrity sha512-wqb1nbARmF96girnzm2yRYOk2XID05L+U8izAGHfYVmV9sGUfPIoNE3dUGFjimpbGldY3ptlCyavFOCcIbuW8g==
+  dependencies:
+    "@nivo/core" "0.58.0"
     react-measure "^2.2.4"
     react-motion "^0.5.2"
 
