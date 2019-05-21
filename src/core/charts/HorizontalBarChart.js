@@ -14,6 +14,7 @@ const Tooltip = memo(({ indexValue, value }) => (
 ))
 
 const HorizontalBarChart = ({ buckets }) => {
+    console.log(buckets)
     const data = useMemo(() => sortBy(buckets.map(bucket => ({ ...bucket })), 'count'), [buckets])
 
     return (

@@ -50,6 +50,8 @@
         blocks:
             - id: overview
               type: features-section-overview
+            - id: usage-ratio
+              type: features-usage-ratio
             - css-grid
             - flexbox
             - css-multi-column
@@ -66,6 +68,8 @@
         blocks:
             - id: overview
               type: features-section-overview
+            - id: usage-ratio
+              type: features-usage-ratio
             - css-shapes
             - object-fit
             - clip-path
@@ -83,6 +87,8 @@
         blocks:
             - id: overview
               type: features-section-overview
+            - id: usage-ratio
+              type: features-usage-ratio
             - css-scroll-snap
             - overscroll-behavior
             - overflow-anchor
@@ -97,6 +103,8 @@
         blocks:
             - id: overview
               type: features-section-overview
+            - id: usage-ratio
+              type: features-usage-ratio
             - web-fonts-font-face
             - variable-fonts
             - line-breaking-properties
@@ -113,6 +121,8 @@
         blocks:
             - id: overview
               type: features-section-overview
+            - id: usage-ratio
+              type: features-usage-ratio
             - css-transitions
             - css-transforms
             - css-animations
@@ -127,6 +137,8 @@
         blocks:
             - id: overview
               type: features-section-overview
+            - id: usage-ratio
+              type: features-usage-ratio
             - css-variables
             - support-queries
             - css-containment
@@ -186,6 +198,8 @@
         blocks:
             - id: overview
               type: tools-section-overview
+            - id: usage-ratio
+              type: tools-usage-ratio
             - sass
             - less
             - postcss
@@ -202,6 +216,8 @@
         blocks:
             - id: overview
               type: tools-section-overview
+            - id: usage-ratio
+              type: tools-usage-ratio
             - bootstrap
             - materialize-css
             - ant-design
@@ -225,6 +241,8 @@
         blocks:
             - id: overview
               type: tools-section-overview
+            - id: usage-ratio
+              type: tools-usage-ratio
             - bem
             - atomic-css
             - oocss
@@ -242,6 +260,8 @@
         blocks:
             - id: overview
               type: tools-section-overview
+            - id: usage-ratio
+              type: tools-usage-ratio
             - styled-components
             - glamor
             - aphrodite

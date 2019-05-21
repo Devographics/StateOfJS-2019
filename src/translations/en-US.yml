@@ -406,6 +406,8 @@ translations:
     ###########################################################################
 
     # pages 
+    - key: page.introduction
+      t: Introduction
     - key: page.demographics
       t: Demographics
     - key: page.features
@@ -485,6 +487,11 @@ translations:
     - key: general.notify_me
       t: Notify Me
 
+    # charts
+    - key: block.title.usage-ratio
+      t: Usage Ratio Ranking
+    - key: block.description.usage-ratio
+      t: Ranking usage ratios among users who are aware of a technology. 
 
 
 
