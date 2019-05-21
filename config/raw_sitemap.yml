@@ -191,6 +191,10 @@
   blocks:
       - id: tools-overview
         type: tools-overview
+      - id: tools-overview2
+        type: tools-overview2
+      - id: tools-overview3
+        type: tools-overview3
   children:
       - id: pre-post-processors
         path: /pre-post-processors

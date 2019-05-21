@@ -1166,6 +1166,19 @@
     react-measure "^2.2.4"
     react-motion "^0.5.2"
 
+"@nivo/treemap@^0.58.0":
+  version "0.58.0"
+  resolved "https://registry.yarnpkg.com/@nivo/treemap/-/treemap-0.58.0.tgz#2f19715f96972393661f05638806e7a160eccfc9"
+  integrity sha512-AO/sGi6FolSrVevp9r+OZX9JGIFHslLM2GaZWGniURA2pWGyahybKkw9ZKMlEutsvLVZVunUKI9ZmCpZrLH3tA==
+  dependencies:
+    "@nivo/colors" "0.58.0"
+    "@nivo/core" "0.58.0"
+    "@nivo/tooltip" "0.58.0"
+    d3-hierarchy "^1.1.8"
+    lodash "^4.17.11"
+    react-motion "^0.5.2"
+    recompose "^0.30.0"
+
 "@nivo/voronoi@0.57.0":
   version "0.57.0"
   resolved "https://registry.yarnpkg.com/@nivo/voronoi/-/voronoi-0.57.0.tgz#3537f15e906f139ef120e553c862b65518fa39ee"
