@@ -43,17 +43,17 @@ export const query = graphql`
                     caniuse {
                         title
                         spec
-                        links {
-                            title
-                            url
-                        }
-                        stats {
-                            browser
-                            by_version {
-                                version
-                                support
-                            }
-                        }
+                        # links {
+                        #     title
+                        #     url
+                        # }
+                        # stats {
+                        #     browser
+                        #     by_version {
+                        #         version
+                        #         support
+                        #     }
+                        # }
                     }
                 }
             }

@@ -31,13 +31,28 @@ const Node = ({ node, handlers }) => {
                 cy={node.y}
                 r={node.r}
                 fill="none"
-                stroke="#9AC6C9"
+                stroke={colors.teal}
                 strokeWidth={1}
                 strokeLinecap="round"
                 strokeDasharray="2 3"
             />
         )
     }
+
+    if (node.depth === 1) {
+      return (
+          <circle
+              cx={node.x}
+              cy={node.y}
+              r={node.r}
+              fill="rgba(255,255,255,0.1)"
+              stroke={colors.teal}
+              strokeWidth={1}
+              strokeLinecap="round"
+              strokeDasharray="2 3"
+          />
+      )
+  }
 
     const usageRadius = node.r * (node.data.usage / node.data.awareness)
 
@@ -80,33 +95,39 @@ const Node = ({ node, handlers }) => {
     )
 }
 
-const getChildren = features => {
-    return features.map(feature => {
-        const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
-        const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
+const getChildren = sections => {
+    return sections.map(section => {
+        const features = section.children.map(feature => {
+            const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+            const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
+
+            return {
+                id: feature.id,
+                awareness: usageBucket.count + knowNotUsedBucket.count,
+                usage: usageBucket.count,
+                unusedCount: knowNotUsedBucket.count
+            }
+        })
 
         return {
-            id: feature.id,
-            awareness: usageBucket.count + knowNotUsedBucket.count,
-            usage: usageBucket.count,
-            unusedCount: knowNotUsedBucket.count
+            id: section.id,
+            children: features
         }
     })
 }
 
-const FeaturesCirclePackingChart = ({ features }) => {
-    console.log(features)
+const FeaturesCirclePackingOverviewChart = ({ sections }) => {
 
     const root = useMemo(
         () => ({
             id: 'root',
-            children: getChildren(features)
+            children: getChildren(sections)
         }),
-        [features]
+        [sections]
     )
 
     return (
-        <div style={{ height: 440 }}>
+        <div style={{ height: 800 }}>
             <ResponsiveBubble
                 theme={theme}
                 margin={{
@@ -128,22 +149,26 @@ const FeaturesCirclePackingChart = ({ features }) => {
     )
 }
 
-FeaturesCirclePackingChart.propTypes = {
-    features: PropTypes.arrayOf(
+FeaturesCirclePackingOverviewChart.propTypes = {
+    sections: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            usage: PropTypes.shape({
-                total: PropTypes.number.isRequired,
-                buckets: PropTypes.arrayOf(
-                    PropTypes.shape({
-                        id: PropTypes.string.isRequired,
-                        count: PropTypes.number.isRequired,
-                        percentage: PropTypes.number.isRequired
-                    })
-                ).isRequired
-            }).isRequired
+            features: PropTypes.arrayOf(
+                PropTypes.shape({
+                    id: PropTypes.string.isRequired,
+                    usage: PropTypes.shape({
+                        total: PropTypes.number.isRequired,
+                        buckets: PropTypes.arrayOf(
+                            PropTypes.shape({
+                                id: PropTypes.string.isRequired,
+                                count: PropTypes.number.isRequired,
+                                percentage: PropTypes.number.isRequired
+                            })
+                        ).isRequired
+                    }).isRequired
+                })
+            )
         })
     )
 }
 
-export default memo(FeaturesCirclePackingChart)
+export default memo(FeaturesCirclePackingOverviewChart)

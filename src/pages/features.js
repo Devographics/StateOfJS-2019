@@ -14,7 +14,7 @@ export default FeaturesPage
 
 // TODO: change query so that it gets all features, and not just those for a specific section
 export const query = graphql`
-    query featuresOverviewByLocale3($locale: String!) {
+    query featuresOverview($locale: String!) {
         introduction: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }
@@ -24,7 +24,9 @@ export const query = graphql`
         ) {
             html
         }
-        features: featuresUsageYaml(section_id: { eq: "layout" }) {
+        features: allFeaturesUsageYaml {
+          nodes{
+            section_id
             aggregations {
                 id
                 usage {
@@ -35,32 +37,7 @@ export const query = graphql`
                     }
                 }
             }
-            fields {
-                resources {
-                    id
-                    mdn {
-                        locale
-                        url
-                        title
-                        summary
-                    }
-                    caniuse {
-                        title
-                        spec
-                        links {
-                            title
-                            url
-                        }
-                        stats {
-                            browser
-                            by_version {
-                                version
-                                support
-                            }
-                        }
-                    }
-                }
-            }
+          }
         }
     }
 `
