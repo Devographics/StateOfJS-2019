@@ -16,8 +16,6 @@ import FeatureBlock from 'modules/features/blocks/FeatureBlock'
 
 // tools
 import ToolsOverviewBlock from 'modules/tools/blocks/ToolsOverviewBlock'
-import ToolsOverviewBlock2 from 'modules/tools/blocks/ToolsOverviewBlock2'
-import ToolsOverviewBlock3 from 'modules/tools/blocks/ToolsOverviewBlock3'
 import ToolsSectionOverviewBlock from 'modules/tools/blocks/ToolsSectionOverviewBlock'
 import ToolsUsageRatioBlock from 'modules/tools/blocks/ToolsUsageRatioBlock'
 import ToolOpinionBlock from 'modules/tools/blocks/ToolOpinionBlock'
@@ -41,8 +39,6 @@ const blockRegistry = {
 
     // tools
     'tools-overview': ToolsOverviewBlock,
-    'tools-overview2': ToolsOverviewBlock2,
-    'tools-overview3': ToolsOverviewBlock3,
     'tools-section-overview': ToolsSectionOverviewBlock,
     'tools-usage-ratio': ToolsUsageRatioBlock,
     tool: ToolOpinionBlock

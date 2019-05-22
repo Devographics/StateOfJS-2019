@@ -1,57 +1,74 @@
 import React from 'react'
 import Block from 'core/components/Block'
 import ToolsSunburstChart from '../charts/ToolsSunburstChart'
+import ToolsCirclePackingChart from '../charts/ToolsCirclePackingChart'
 import compact from 'lodash/compact'
-import { colors, opinions } from '../../../constants'
+import { opinions } from '../../../constants'
+import round from 'lodash/round'
 
-const getData = data => {
+/*
+
+Parse data and convert it into a format compatible with the Circle Packing chart
+
+*/
+const getChartData = data => {
+    // remove "never heard" opinion
+    const buckets = opinions.filter(o => o.id !== 'never_heard')
+
     const sections = data.tools.nodes.map(section => {
         const { section_id, aggregations } = section
 
         const tools = aggregations.map(tool => {
+            // if tool doesn't have opinions data, abort
             if (!tool.opinion) {
                 return null
             }
 
+            // get count for a given bucket
             const getCount = id => tool.opinion.buckets.find(b => b.id === id).count
-            const getColor = id => opinions.find(b => b.id === id).color
 
-            const getNode = id => ({
-                id,
-                count: getCount(id),
-                color: getColor(id)
-            })
-
-            // const usageBucket = tool.opinion.buckets.find(b => b.id === 'used_it')
-            // const knowNotUsedBucket = tool.opinion.buckets.find(b => b.id === 'know_not_used')
-
-            const interestNode = {
-                id: 'not_used',
-                color: '#ff00ff',
-                children: [getNode('interested'), getNode('not_interested')]
+            // get sum of all other buckets up to current bucket
+            const getSum = id => {
+                const index = id ? buckets.findIndex(b => b.id === id) : buckets.length
+                let count = 0
+                for (let i = 0; i < index; i++) {
+                    count += getCount(buckets[i].id)
+                }
+                return count
             }
 
-            const satisfactionNode = {
-                id: 'used',
-                color: '#ff00ff',
-                children: [getNode('would_use'), getNode('would_not_use')]
+            const toolTotal = getSum()
+
+            // get bucket node
+            const getNode = ({ id, color }) => {
+                const count = getCount(id)
+                const offsetSum = getSum(id) // value by which to offset the arc segment
+                return {
+                    id,
+                    count,
+                    percent: round((count / toolTotal) * 100, 2),
+                    color,
+                    offsetSum,
+                    offsetPercent: round((offsetSum / toolTotal) * 100, 2)
+                }
             }
-            return {
+
+            const node = {
                 id: tool.id,
-                children: [interestNode, satisfactionNode]
-                // awareness: usageBucket.count + knowNotUsedBucket.count,
-                // usage: usageBucket.count,
-                // unusedCount: knowNotUsedBucket.count
+                opinions: buckets.map(getNode),
+                count: toolTotal
             }
+            return node
         })
 
+        // return section node
         return {
             id: section_id,
-            color: '#00ff00',
             children: compact(tools)
         }
     })
 
+    // return root node
     return {
         id: 'root',
         children: sections
@@ -59,11 +76,11 @@ const getData = data => {
 }
 
 const ToolsOverviewBlock = ({ data }) => {
-    const chartData = getData(data)
+    const chartData = getChartData(data)
 
     return (
         <Block id="tools-overview" showDescription={true}>
-            <ToolsSunburstChart data={chartData} />
+            <ToolsCirclePackingChart data={chartData} />
         </Block>
     )
 }
