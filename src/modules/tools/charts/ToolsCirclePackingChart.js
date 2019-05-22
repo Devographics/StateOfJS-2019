@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
 import { colors } from '../../../constants'
-import round from 'lodash/round'
+import ChartLabel from 'core/components/ChartLabel'
 
 // scale circles down to account for width of border
 const strokeWidth = 10
@@ -13,9 +13,9 @@ const scaleCoefficient = 0.9
 const rCoefficient = 15.91549430918952
 
 const fontSizeByRadius = radius => {
-    if (radius < 10) return 8
-    if (radius < 20) return 10
-    if (radius < 50) return 12
+    if (radius < 25) return 8
+    if (radius < 35) return 10
+    if (radius < 45) return 12
     return 14
 }
 
@@ -72,32 +72,7 @@ const Node = ({ node, handlers }) => {
                 )
             })}
 
-            <text
-                textAnchor="middle"
-                dominantBaseline="central"
-                stroke={colors.greyDarker}
-                strokeWidth={4}
-                strokeLinejoin="round"
-                style={{
-                    pointerEvents: 'none',
-                    fontSize: fontSizeByRadius(node.r),
-                    fontWeight: 600
-                }}
-            >
-                {node.label}
-            </text>
-            <text
-                textAnchor="middle"
-                dominantBaseline="central"
-                fill={colors.white}
-                style={{
-                    pointerEvents: 'none',
-                    fontSize: fontSizeByRadius(node.r),
-                    fontWeight: 600
-                }}
-            >
-                {node.label}
-            </text>
+            <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
         </g>
     )
 }

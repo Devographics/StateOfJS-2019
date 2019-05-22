@@ -1,27 +1,16 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
 import { colors } from '../../../constants'
+import ChartLabel from 'core/components/ChartLabel'
 
 const fontSizeByRadius = radius => {
-    if (radius < 10) return 6
-    if (radius < 20) return 8
-    if (radius < 50) return 10
-    return 12
+    if (radius < 25) return 8
+    if (radius < 35) return 10
+    if (radius < 45) return 12
+    return 14
 }
-
-const patterns = [
-    {
-        id: 'dots',
-        type: 'patternDots',
-        background: colors.teal,
-        color: '#6dafb3',
-        size: 3,
-        padding: 1,
-        stagger: true
-    }
-]
 
 const Node = ({ node, handlers }) => {
     if (node.depth === 0) {
@@ -63,68 +52,15 @@ const Node = ({ node, handlers }) => {
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            <circle r={node.r} fill="url(#dots)" stroke="#6dafb3" strokeWidth={3} />
-            <circle r={usageRadius} fill={colors.blue} stroke={colors.blueDark} strokeWidth={3} />
-            <text
-                textAnchor="middle"
-                dominantBaseline="central"
-                stroke={colors.teal}
-                strokeWidth={4}
-                strokeLinejoin="round"
-                style={{
-                    pointerEvents: 'none',
-                    fontSize: fontSizeByRadius(node.r),
-                    fontWeight: 600
-                }}
-            >
-                {node.label}
-            </text>
-            <text
-                textAnchor="middle"
-                dominantBaseline="central"
-                fill={colors.blueDark}
-                style={{
-                    pointerEvents: 'none',
-                    fontSize: fontSizeByRadius(node.r),
-                    fontWeight: 600
-                }}
-            >
-                {node.label}
-            </text>
+            <circle r={node.r} fill={colors.teal}  />
+            <circle r={usageRadius} fill={colors.blue}  />
+            <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
+            
         </g>
     )
 }
 
-const getChildren = sections => {
-    return sections.map(section => {
-        const features = section.children.map(feature => {
-            const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
-            const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
-
-            return {
-                id: feature.id,
-                awareness: usageBucket.count + knowNotUsedBucket.count,
-                usage: usageBucket.count,
-                unusedCount: knowNotUsedBucket.count
-            }
-        })
-
-        return {
-            id: section.id,
-            children: features
-        }
-    })
-}
-
-const FeaturesCirclePackingOverviewChart = ({ sections }) => {
-
-    const root = useMemo(
-        () => ({
-            id: 'root',
-            children: getChildren(sections)
-        }),
-        [sections]
-    )
+const FeaturesCirclePackingOverviewChart = ({ data }) => {
 
     return (
         <div style={{ height: 800 }}>
@@ -139,8 +75,7 @@ const FeaturesCirclePackingOverviewChart = ({ sections }) => {
                 leavesOnly={false}
                 padding={5}
                 colors={['white', 'blue']}
-                defs={patterns}
-                root={root}
+                root={data}
                 value="awareness"
                 nodeComponent={Node}
                 animate={false}

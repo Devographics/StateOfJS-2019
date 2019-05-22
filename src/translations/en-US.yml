@@ -165,6 +165,8 @@ translations:
       t: W3C Specification
     - key: features.usage.used_it
       t: Have used it
+    - key: features.usage.know_it
+      t: Know about it
     - key: features.usage.know_not_used
       t: Know what it is, but haven't used it
     - key: features.usage.never_heard_not_sure
@@ -451,6 +453,12 @@ translations:
       t: Environments
     - key: page.resources
       t: Resources
+    - key: page.opinions
+      t: Opinions
+    - key: page.awards
+      t: Awards
+    - key: page.conclusion
+      t: Conclusion
 
     # sharing
     - key: share.share

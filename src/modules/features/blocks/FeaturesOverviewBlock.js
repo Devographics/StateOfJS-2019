@@ -1,36 +1,61 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { memo, useMemo } from 'react'
 import Block from 'core/components/Block'
-import FeatureUsageWaffleChart from '../charts/FeatureUsageWaffleChart'
-import FeatureUsageLegends from '../charts/FeatureUsageLegends'
 import FeaturesCirclePackingOverviewChart from '../charts/FeaturesCirclePackingOverviewChart'
 import Legends from 'core/charts/Legends'
-import { usage } from '../../../constants'
 import { useI18n } from 'core/i18n/i18nContext'
-import sortBy from 'lodash/sortBy'
+import { colors } from '../../../constants'
 
-const FeaturesOverviewBlock = ({ data }) => {
+const getChartData = data => {
+    const sections = data.features.nodes.map(section => {
+        const { section_id, aggregations } = section
+        const features = section.aggregations.map(feature => {
+            const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+            const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
 
-    const sections = data.features.nodes.map(({ section_id, aggregations }) => {
+            return {
+                id: feature.id,
+                awareness: usageBucket.count + knowNotUsedBucket.count,
+                usage: usageBucket.count,
+                unusedCount: knowNotUsedBucket.count
+            }
+        })
+
         return {
             id: section_id,
-            children: aggregations,
-            isSection: true
+            isSection: true,
+            children: features
         }
     })
 
+    return {
+        id: 'root',
+        children: sections
+    }
+}
+
+const FeaturesOverviewBlock = ({ data }) => {
+    const chartData = useMemo(() => getChartData(data), [data])
+
     const { translate } = useI18n()
 
-    const legends = usage.filter(l => l.id !== 'never_heard_not_sure').map(item => ({
-        id: item.id,
-        label: translate(`features.usage.${item.id}`),
-        color: item.color
-    }))
+    // note: slightly different from Usage legend
+    const legends = [
+        {
+            id: 'know_it',
+            color: colors.teal,
+            label: translate(`features.usage.know_it`)
+        },
+        {
+            id: 'used_it',
+            color: colors.blue,
+            label: translate(`features.usage.used_it`)
+        }
+    ]
 
     return (
         <Block id="features-overview" showDescription={true}>
-            <Legends legends={legends} withFrame={false} layout="vertical"/>
-            <FeaturesCirclePackingOverviewChart sections={sections} />
+            <Legends legends={legends} withFrame={false} layout="vertical" />
+            <FeaturesCirclePackingOverviewChart data={chartData} />
         </Block>
     )
 }

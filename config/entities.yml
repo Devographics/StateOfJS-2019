@@ -8,6 +8,10 @@ ant-design:
     github: ant-design/ant-design
     name: 'Ant Design'
     npm: antd
+aphrodite:
+    github: Khan/aphrodite
+    name: Aphrodite
+    npm: aphrodite
 apollo:
     description: "A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server.\n"
     name: Apollo
@@ -41,6 +45,9 @@ csharp:
     name: 'C#'
 c-cplusplus:
     name: C/C++
+css-modules:
+    github: css-modules/css-modules
+    name: CSS Modules
 dart:
     name: Dart
 date-fns:
@@ -55,6 +62,10 @@ elm-test:
     name: elm-test
 emacs:
     name: emacs
+emotion:
+    github: emotion-js/emotion
+    name: Emotion
+    npm: emotion
 es6:
     description: "ES6 and its descendants are the newer versions of JavaScript, usually run through Babel.\n"
     name: ES6
@@ -67,6 +78,10 @@ flutter:
 foundation:
     github: zurb/foundation-sites
     name: Foundation
+glamor:
+    github: threepointone/glamor
+    name: Glamor
+    npm: glamor
 golang:
     name: Go
 haskell:
@@ -82,6 +97,10 @@ it-css:
     name: itcss
 java:
     name: Java
+jss:
+    github: cssinjs/jss
+    name: JSS
+    homepage: https://cssinjs.org
 kotlin:
     name: Kotlin
 laravel:
@@ -144,6 +163,11 @@ pycharm:
     name: PyCharm
 python:
     name: Python
+radium:
+    github: emotion-js/emotion
+    npm: '@emotion/core'
+    name: Radium
+    homepage: https://formidable.com/open-source/radium/
 rails:
     name: Rails
 ramda:
@@ -174,6 +198,15 @@ smacss:
         your design process and as a way to fit those rigid frameworks into
         a flexible thought process.
     name: SMACSS
+styled-components:
+    github: styled-components/styled-components
+    name: Styled Components
+    npm: styled-components
+    homepage: https://www.styled-components.com/
+styled-jsx: 
+    github: zeit/styled-jsx
+    name: Styled JSX
+    npm: styled-jsx
 stylus:
     github: stylus/stylus
     name: Stylus

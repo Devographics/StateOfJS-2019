@@ -12,7 +12,8 @@ const { omit } = require('lodash')
 
 const rawSitemap = yaml.safeLoad(fs.readFileSync('./config/raw_sitemap.yml', 'utf8'))
 const locales = yaml.safeLoad(fs.readFileSync('./config/locales.yml', 'utf8'))
-const resources = yaml.safeLoad(fs.readFileSync('./config/resources.yml', 'utf8'))
+const features = yaml.safeLoad(fs.readFileSync('./config/features.yml', 'utf8'))
+const entities = yaml.safeLoad(fs.readFileSync('./config/entities.yml', 'utf8'))
 
 const guessPageTemplate = type => {
     let template
@@ -172,24 +173,43 @@ exports.onCreateWebpackConfig = ({ stage, actions, plugins }) => {
 exports.onCreateNode = async ({ node, actions }) => {
     const { createNodeField } = actions
 
-    if (node.internal.type === `FeaturesUsageYaml` || node.internal.type === 'ToolsYaml') {
+    if (node.internal.type === `FeaturesUsageYaml`) {
         const nodeResources = []
         for (const agg of node.aggregations) {
             const aggResources = {
                 id: agg.id
             }
-            const itemResourcesConfig = _.get(resources, `${node.section_id}.${agg.id}`)
+            const featureResourcesConfig = features[agg.id]
 
-            if (itemResourcesConfig !== undefined) {
-                if (itemResourcesConfig.mdn !== undefined) {
-                    aggResources.mdn = await fetchMdnResource(itemResourcesConfig.mdn)
+            if (featureResourcesConfig !== undefined) {
+                if (featureResourcesConfig.mdn !== undefined) {
+                    aggResources.mdn = await fetchMdnResource(featureResourcesConfig.mdn)
                 }
-                if (itemResourcesConfig.caniuse !== undefined) {
-                    aggResources.caniuse = await fetchCaniuseResource(itemResourcesConfig.caniuse)
+                if (featureResourcesConfig.caniuse !== undefined) {
+                    aggResources.caniuse = await fetchCaniuseResource(
+                        featureResourcesConfig.caniuse
+                    )
                 }
-                if (itemResourcesConfig.github !== undefined) {
-                    aggResources.github = await fetchGithubResource(itemResourcesConfig.github)
-                }
+            }
+            nodeResources.push(aggResources)
+        }
+
+        await createNodeField({
+            name: `resources`,
+            node,
+            value: nodeResources
+        })
+    }
+
+    if (node.internal.type === 'ToolsYaml') {
+        const nodeResources = []
+        for (const agg of node.aggregations) {
+            const aggResources = {
+                id: agg.id
+            }
+            const entityResourcesConfig = entities[agg.id]
+            if (entityResourcesConfig && entityResourcesConfig.github) {
+                aggResources.github = await fetchGithubResource(entityResourcesConfig.github)
             }
             nodeResources.push(aggResources)
         }
