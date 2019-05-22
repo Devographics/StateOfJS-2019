@@ -5,6 +5,7 @@ import ToolsCirclePackingChart from '../charts/ToolsCirclePackingChart'
 import compact from 'lodash/compact'
 import { opinions } from '../../../constants'
 import round from 'lodash/round'
+import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
 
 /*
 
@@ -12,7 +13,6 @@ Parse data and convert it into a format compatible with the Circle Packing chart
 
 */
 const getChartData = data => {
-    // remove "never heard" opinion
     const buckets = opinions.filter(o => o.id !== 'never_heard')
 
     const sections = data.tools.nodes.map(section => {
@@ -79,7 +79,12 @@ const ToolsOverviewBlock = ({ data }) => {
     const chartData = getChartData(data)
 
     return (
-        <Block id="tools-overview" showDescription={true}>
+        <Block id="tools-overview" showDescription={true} className="ToolsOverviewBlock">
+            <ToolOpinionsLegend
+                // withFrame={false}
+                // layout="vertical"
+                opinions={opinions.filter(o => o.id !== 'never_heard')}
+            />
             <ToolsCirclePackingChart data={chartData} />
         </Block>
     )

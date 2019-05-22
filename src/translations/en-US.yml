@@ -226,6 +226,13 @@ translations:
     # Tools & Methodologies
     ########################################################################### 
   
+    - key: block.title.tools-overview
+      t: Tools & Methodologies Overview
+    - key: block.description.tools-overview
+      t: >
+        Overview of opinions on the tools and methodologies surveyed. The diameter
+        of each circle corresponds to the aggregate sum of respondents for all of these four options
+        (excluding respondents unaware of the technology).
     - key: block.tool.links
       t: Links
     - key: block.tool.github_link

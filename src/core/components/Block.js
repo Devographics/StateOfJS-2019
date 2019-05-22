@@ -30,7 +30,7 @@ export default class Block extends Component {
                     title={title}
                 />
                 {isShareable && <ShareBlockDebug id={id} />}
-                {children}
+                <div className="Block__Contents">{children}</div>
             </div>
         )
     }

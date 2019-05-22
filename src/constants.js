@@ -3,6 +3,7 @@ export let colors = {
     grey: '#d9dedf',
     greyMedium: '#cecdcc',
     greyDark: '#AEAFB5',
+    greyDarker: '#343539',
 
     blueLighter: '#B2BBEE',
     blueLight: '#808EE1',
@@ -14,14 +15,24 @@ export let colors = {
     pinkLight: '#EC75CB',
     pink: '#ec2f95',
 
+    greenLighter: '#E7FFED',
+    greenLight: '#ACFFC3',
+    green: '#85EBA2',
+    greenDark: '#59DF7F',
+
     tealLight: '#bad9db',
     teal: '#9ac6c9',
     tealDark: '#445a5a',
 
-    purple: '#9688e4',
+    purpleLight: '#B096E7',
+    purple: '#7854C3',
+    purpleDark: '#57457C',
+
     red: '#FE6A6A',
     yellow: '#fbf34c',
-    aqua: '#1ea0f2'
+    aqua: '#1ea0f2',
+
+    white: '#ffffff'
 }
 
 export const colorRange = [
@@ -74,19 +85,19 @@ export const usage = [
 export const opinions = [
     {
         id: 'would_use',
-        color: colors.blue
+        color: colors.greenDark
     },
     {
         id: 'would_not_use',
-        color: colors.blueLight
+        color: colors.pink
     },
     {
         id: 'interested',
-        color: colors.teal
+        color: colors.greenLight
     },
     {
         id: 'not_interested',
-        color: colors.tealLight
+        color: colors.pinkLight
     },
     {
         id: 'never_heard',

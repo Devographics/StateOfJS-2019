@@ -6,16 +6,17 @@ import { colors } from '../../../constants'
 import round from 'lodash/round'
 
 // scale circles down to account for width of border
+const strokeWidth = 10
 const scaleCoefficient = 0.9
 
 // see https://hackernoon.com/a-simple-pie-chart-in-svg-dbdd653b6936
 const rCoefficient = 15.91549430918952
 
 const fontSizeByRadius = radius => {
-    if (radius < 10) return 6
-    if (radius < 20) return 8
-    if (radius < 50) return 10
-    return 12
+    if (radius < 10) return 8
+    if (radius < 20) return 10
+    if (radius < 50) return 12
+    return 14
 }
 
 const Node = ({ node, handlers }) => {
@@ -64,16 +65,17 @@ const Node = ({ node, handlers }) => {
                         r={node.r * scaleCoefficient}
                         fill="transparent"
                         stroke={color}
-                        strokeWidth="10"
+                        strokeWidth={strokeWidth}
                         strokeDasharray={`${percent * rRatio} ${(100 - percent) * rRatio}`}
                         strokeDashoffset={(100 - offsetPercent) * rRatio}
                     />
                 )
             })}
+
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
-                stroke={colors.teal}
+                stroke={colors.greyDarker}
                 strokeWidth={4}
                 strokeLinejoin="round"
                 style={{
@@ -87,7 +89,7 @@ const Node = ({ node, handlers }) => {
             <text
                 textAnchor="middle"
                 dominantBaseline="central"
-                fill={colors.blueDark}
+                fill={colors.white}
                 style={{
                     pointerEvents: 'none',
                     fontSize: fontSizeByRadius(node.r),
