@@ -1,15 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
-import { mergeFeaturesResources } from '../featuresHelpers'
 import FeaturesCirclePackingChart from '../charts/FeaturesCirclePackingChart'
 
+const getChartData = data => {
+    const features = data.data.aggregations.map(feature => {
+        const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+        const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
+
+        return {
+            id: feature.id,
+            awareness: usageBucket.count + knowNotUsedBucket.count,
+            usage: usageBucket.count,
+            unusedCount: knowNotUsedBucket.count
+        }
+    })
+
+    return {
+        id: 'root',
+        children: features
+    }
+}
+
 const FeaturesSectionOverviewBlock = ({ block, data }) => {
-    const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
+    const chartData = getChartData(data)
 
     return (
         <Block id={block.id} showDescription={false}>
-            <FeaturesCirclePackingChart features={features} />
+            <FeaturesCirclePackingChart data={chartData} />
         </Block>
     )
 }

@@ -994,7 +994,7 @@
     react-motion "^0.5.2"
     recompose "^0.30.0"
 
-"@nivo/bump@0.58.0":
+"@nivo/bump@^0.58.0":
   version "0.58.0"
   resolved "https://registry.yarnpkg.com/@nivo/bump/-/bump-0.58.0.tgz#ae4fabc9933c73568057f6e8a0cb35883f05e0c2"
   integrity sha512-hh63DsLOsSUr8mb/nQl74JI5JeJYHb7eHZSU76UK3nTTclb3MZoFHvz4kV3x4fqV/cYb2addShn9e1W52Ga+UA==

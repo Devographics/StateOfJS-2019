@@ -76,7 +76,7 @@ const RatioChart = ({ buckets, mode = 'percentage' }) => {
                 // axisTop={{
                 //     format: '.2s'
                 // }}
-                axisBottom={false}
+                axisBottom={null}
                 axisLeft={{
                     tickSize: 0,
                     tickPadding: 10
@@ -94,14 +94,14 @@ const RatioChart = ({ buckets, mode = 'percentage' }) => {
     )
 }
 
-RatioChart.propTypes = {
-    buckets: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            counts: PropTypes.number.isRequired,
-            percentages: PropTypes.number
-        })
-    )
-}
+// RatioChart.propTypes = {
+//     buckets: PropTypes.arrayOf(
+//         PropTypes.shape({
+//             id: PropTypes.string.isRequired,
+//             counts: PropTypes.number.isRequired,
+//             percentages: PropTypes.number
+//         })
+//     )
+// }
 
 export default memo(RatioChart)
