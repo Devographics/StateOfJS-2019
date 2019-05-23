@@ -25,3 +25,5 @@ FeaturesCirclePackingOverviewChart.propTypes = {
         )
     })
 }
+
+export default FeaturesCirclePackingOverviewChart
