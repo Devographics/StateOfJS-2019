@@ -1,32 +1,36 @@
-import React, { Component } from 'react'
+import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import SourceBreakdownWaffleChart from '../charts/SourceBreakdownWaffleChart'
 
-export default class SourceBreakdownBlock extends Component {
-    static propTypes = {
+const SourceBreakdownBlock = ({ block, data }) => {
+    const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
+        block.id,
+        data.data.aggregations
+    ])
+
+    console.log({ blockData })
+
+    return (
+        <Block id={block.id} showDescription={false} className="Block--gender Gender__Block">
+            <SourceBreakdownWaffleChart data={blockData.breakdown.buckets} />
+        </Block>
+    )
+}
+
+SourceBreakdownBlock.propTypes = {
+    block: PropTypes.shape({
+        id: PropTypes.string.isRequired
+    }).isRequired,
+    data: PropTypes.shape({
         data: PropTypes.shape({
-            survey: PropTypes.string.isRequired,
-            total: PropTypes.number.isRequired,
-            by_source: PropTypes.arrayOf(
+            aggregations: PropTypes.arrayOf(
                 PropTypes.shape({
-                    source: PropTypes.string.isRequired,
-                    count: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
+                    id: PropTypes.string.isRequired
                 })
             ).isRequired
-        }),
-        chartId: PropTypes.string.isRequired
-    }
-
-    render() {
-        const { data, block } = this.props
-        const yearData = data.stats.source && data.stats.source.find(d => d.survey === '2018')
-
-        return (
-            <Block id={block.id} showDescription={false} className="Block--source Source__Block">
-                <SourceBreakdownWaffleChart total={yearData.total} data={yearData.by_source} />
-            </Block>
-        )
-    }
+        }).isRequired
+    }).isRequired
 }
+
+export default memo(SourceBreakdownBlock)

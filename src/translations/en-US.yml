@@ -192,6 +192,8 @@ translations:
       t: Gender Breakdown
     - key: block.title.source
       t: Source Breakdown
+    - key: block.description.source
+      t: How did participants find out about this survey?
     - key: block.description.gender
       t: Gender breakdown.
     - key: block.title.job-title

@@ -30,8 +30,10 @@
         dataKey: breakdown
         bucketKeys: companySize
         showDescription: true
-      # - id: source
-      #   type: source
+      - id: source
+        type: horizontal-bar
+        dataKey: breakdown
+        showDescription: true
       - id: gender
         type: gender
       - id: job-title

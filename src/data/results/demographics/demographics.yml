@@ -160,3 +160,89 @@ aggregations:
         - id: back_end_dev
           count: 183
           percentage: 1.78
+  - id: source
+    breakdown:
+      total: 7550
+      others_count: 977
+      buckets:
+        - id: email
+          count: 1725
+          percentage: 35.8
+        - id: twitter
+          count: 1295
+          percentage: 17.15
+        - id: work
+          count: 557
+          percentage: 7.38
+        - id: CSS Tricks
+          count: 546
+          percentage: 7.23
+        - id: stateofjs
+          count: 475
+          percentage: 6.29
+        - id: Newsletter
+          count: 203
+          percentage: 2.69
+        - id: reddit
+          count: 174
+          percentage: 2.3
+        - id: sidebar.io
+          count: 168
+          percentage: 2.23
+        - id: Slack
+          count: 160
+          percentage: 2.12
+        - id: facebook
+          count: 129
+          percentage: 1.71
+        - id: friend
+          count: 122
+          percentage: 1.62
+        - id: Frontend Focus
+          count: 105
+          percentage: 1.39
+        - id: Designer News
+          count: 103
+          percentage: 1.36
+        - id: Medium
+          count: 101
+          percentage: 1.34
+        - id: Codrops
+          count: 99
+          percentage: 1.31
+        - id: WordPress Tavern
+          count: 81
+          percentage: 1.07
+        - id: freeCodeCamp
+          count: 74
+          percentage: 0.98
+        - id: Muzli
+          count: 73
+          percentage: 0.97
+        - id: Telegram
+          count: 64
+          percentage: 0.85
+        - id: Hacker news
+          count: 60
+          percentage: 0.79
+        - id: Smashing Magazine
+          count: 56
+          percentage: 0.74
+        - id: Wes Bos
+          count: 55
+          percentage: 0.73
+        - id: Front-End Front
+          count: 46
+          percentage: 0.61
+        - id: CSS Weekly
+          count: 38
+          percentage: 0.5
+        - id: CSS Layout News
+          count: 24
+          percentage: 0.32
+        - id: One Page Love
+          count: 20
+          percentage: 0.26
+        - id: Responsive Design Weekly
+          count: 20
+          percentage: 0.26
