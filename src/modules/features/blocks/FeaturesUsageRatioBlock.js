@@ -7,16 +7,17 @@ import round from 'lodash/round'
 
 const FeatureUsageRatioBlock = ({ block, data }) => {
     const buckets = data.data.aggregations.map(({ id, usage }) => {
-        const neverHeard = usage.buckets.find(b => b.id === 'never_heard_not_sure').count
+        // const neverHeard = usage.buckets.find(b => b.id === 'never_heard_not_sure').count
         const notUsed = usage.buckets.find(b => b.id === 'know_not_used').count
         const usedIt = usage.buckets.find(b => b.id === 'used_it').count
-        const ratio = usedIt / (usedIt + notUsed)
-        const percentage = (100 - Math.round(ratio * 100)) / 100
+        // const ratio = usedIt / (usedIt + notUsed)
+        // const percentage = (100 - Math.round(ratio * 100)) / 100
+
         return {
             id,
             used: round(usedIt / (usedIt + notUsed), 2),
-            not_used1: round(notUsed / (usedIt + notUsed), 2)/2,
-            not_used2: round(notUsed / (usedIt + notUsed), 2)/2
+            not_used1: round(notUsed / (usedIt + notUsed), 2) / 2,
+            not_used2: round(notUsed / (usedIt + notUsed), 2) / 2
         }
     })
     const sortedBuckets = sortBy(buckets, 'used')

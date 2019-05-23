@@ -20,19 +20,19 @@ export const query = graphql`
             html
         }
         features: allFeaturesUsageYaml {
-          nodes{
-            section_id
-            aggregations {
-                id
-                usage {
-                    total
-                    buckets {
-                        id
-                        count
+            nodes {
+                section_id
+                aggregations {
+                    id
+                    usage {
+                        total
+                        buckets {
+                            id
+                            count
+                        }
                     }
                 }
             }
-          }
         }
     }
 `

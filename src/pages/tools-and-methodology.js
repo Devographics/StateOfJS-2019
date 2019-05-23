@@ -20,19 +20,19 @@ export const query = graphql`
             html
         }
         tools: allToolsYaml {
-          nodes{
-            section_id
-            aggregations {
-                id
-              opinion{
-                total
-                buckets{
-                  id
-                  count
+            nodes {
+                section_id
+                aggregations {
+                    id
+                    opinion {
+                        total
+                        buckets {
+                            id
+                            count
+                        }
+                    }
                 }
-              }
             }
-          }
         }
     }
 `

@@ -11,28 +11,37 @@
   path: /demographics
   type: page
   blocks:
-      - id: participation-by-country
-        type: countries
+      # - id: participation-by-country
+      #   type: countries
       - id: salary
-        type: vertical-bar
-      - id: salary-per-country
-        type: countries
+        type: range-breakdown
+        dataKey: breakdown
+        rangeId: salary
+        showDescription: true
+      # - id: salary-per-country
+      #   type: countries
       - id: years-of-experience
-        type: vertical-bar
+        dataKey: breakdown
+        type: range-breakdown
+        rangeId: yearsOfExperience
+        showDescription: true
       - id: company-size
-        type: vertical-bar
-      - id: source
-        type: source
-      - id: gender
-        type: gender
-      - id: job-titles
-        type: horizontal-bar
-      - id: javascript-proficiency
-        type: vertical-bar
-        fullLegend: true
-      - id: backend-proficiency
-        type: vertical-bar
-        fullLegend: true
+        type: range-breakdown
+        dataKey: breakdown
+        rangeId: companySize
+        showDescription: true
+      # - id: source
+      #   type: source
+      # - id: gender
+      #   type: gender
+      # - id: job-titles
+      #   type: horizontal-bar
+      # - id: javascript-proficiency
+      #   type: vertical-bar
+      #   fullLegend: true
+      # - id: backend-proficiency
+      #   type: vertical-bar
+      #   fullLegend: true
 
 - id: features
   path: /features
@@ -301,12 +310,12 @@
         type: horizontal-bar
         dataKey: environments
         showDescription: true
-      - id: print-styles
-        type: vertical-bar
-        dataKey: environments
-      - id: email-styles
-        type: vertical-bar
-        dataKey: environments
+      # - id: print-styles
+      #   type: vertical-bar
+      #   dataKey: environments
+      # - id: email-styles
+      #   type: vertical-bar
+      #   dataKey: environments
 
 - id: resources
   path: /resources

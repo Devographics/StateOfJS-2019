@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
@@ -57,7 +57,7 @@ const Node = ({ node, handlers }) => {
             onMouseLeave={handlers.onMouseLeave}
         >
             {node.data.opinions.map(bucket => {
-                const { id, count, percent, color, offsetSum, offsetPercent } = bucket
+                const { id, percent, color, offsetPercent } = bucket
                 const rRatio = (node.r / rCoefficient) * scaleCoefficient
                 return (
                     <circle

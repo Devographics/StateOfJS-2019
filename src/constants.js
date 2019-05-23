@@ -59,10 +59,25 @@ export const colorScale = [
     '#ca4040'
 ]
 
-export const keys = {
-    salary: ['work-for-free', '0-10', '10-30', '30-50', '50-100', '100-200', 'more-than-200'],
-    'company-size': ['1', '1-5', '5-10', '10-20', '20-50', '50-100', '100-1000', 'more-than-1000'],
-    'years-of-experience': ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']
+export const salaryRanges = ['none', '0_10', '10_30', '30_50', '50_100', '100_200', '200_more']
+
+const companySizeRanges = [
+    '1',
+    '1_5',
+    '5_10',
+    '10_20',
+    '20_50',
+    '50_100',
+    '100_1000',
+    'more_than_1000'
+]
+
+const yearsOfExperienceRanges = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+
+export const ranges = {
+    salary: salaryRanges,
+    companySize: companySizeRanges,
+    yearsOfExperience: yearsOfExperienceRanges
 }
 
 export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']

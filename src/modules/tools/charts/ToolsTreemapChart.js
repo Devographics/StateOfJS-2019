@@ -4,7 +4,6 @@ import { ResponsiveTreeMap } from '@nivo/treemap'
 import theme from 'nivoTheme'
 import { colors } from '../../../constants'
 
-
 const patterns = [
     {
         id: 'dots',
@@ -30,7 +29,6 @@ const ToolsTreemapChart = ({ data }) => {
                     left: 2
                 }}
                 identity="id"
-
                 leavesOnly={false}
                 padding={5}
                 colors={{ scheme: 'nivo' }}

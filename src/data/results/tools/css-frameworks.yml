@@ -228,11 +228,11 @@ aggregations:
   - id: other-css-frameworks
     others:
       total: 673
-      others_count: 388
+      others_count: 387
       buckets:
         - id: Skeleton
           count: 46
-          percentage: 64.47
+          percentage: 64.32
         - id: Material UI
           count: 34
           percentage: 5.05
@@ -246,12 +246,12 @@ aggregations:
           count: 25
           percentage: 3.71
         - id: styled-components
-          count: 23
-          percentage: 3.42
+          count: 22
+          percentage: 3.27
         - id: Vuetify
           count: 17
           percentage: 2.53
-        - id: Basscss
+        - id: BassCSS
           count: 16
           percentage: 2.38
         - id: elm-ui
@@ -275,18 +275,18 @@ aggregations:
         - id: Knacss
           count: 4
           percentage: 0.59
+        - id: CSS in JS
+          count: 3
+          percentage: 0.45
         - id: Milligram
+          count: 3
+          percentage: 0.45
+        - id: Suit CSS
           count: 3
           percentage: 0.45
         - id: Blaze UI
           count: 2
           percentage: 0.3
-        - id: Foundation
-          count: 2
-          percentage: 0.3
-        - id: Grommet
-          count: 2
-          percentage: 0.3
-        - id: IotaCSS
+        - id: CSS Modules
           count: 2
           percentage: 0.3

@@ -15,8 +15,8 @@ const RatioBlock = ({ block, data }) => {
         return {
             id,
             used: round(usedIt / (usedIt + notUsed), 2),
-            not_used1: round(notUsed / (usedIt + notUsed), 2)/2,
-            not_used2: round(notUsed / (usedIt + notUsed), 2)/2
+            not_used1: round(notUsed / (usedIt + notUsed), 2) / 2,
+            not_used2: round(notUsed / (usedIt + notUsed), 2) / 2
         }
     })
     const sortedBuckets = sortBy(buckets, 'used')

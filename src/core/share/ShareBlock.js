@@ -9,7 +9,6 @@ import ShareTwitter from './ShareTwitter'
 import ShareLinkedIn from './ShareLinkedIn'
 import ShareFacebook from './ShareFacebook'
 import ShareEmail from './ShareEmail'
-import SharePermalink from './SharePermalink'
 import ShareImage from './ShareImage'
 
 const ShareBlock = ({ section, id, className, toggleClass }) => {
@@ -60,10 +59,7 @@ const ShareBlock = ({ section, id, className, toggleClass }) => {
                         body={meta.emailBody}
                         trackingId={meta.trackingId}
                     />
-                    <ShareImage
-                        trackingId={meta.trackingId}
-                        url={meta.imageUrl}
-                    />
+                    <ShareImage trackingId={meta.trackingId} url={meta.imageUrl} />
                 </div>
             </div>
         </div>

@@ -29,19 +29,19 @@ const Node = ({ node, handlers }) => {
     }
 
     if (node.depth === 1) {
-      return (
-          <circle
-              cx={node.x}
-              cy={node.y}
-              r={node.r}
-              fill="rgba(255,255,255,0.1)"
-              stroke={colors.teal}
-              strokeWidth={1}
-              strokeLinecap="round"
-              strokeDasharray="2 3"
-          />
-      )
-  }
+        return (
+            <circle
+                cx={node.x}
+                cy={node.y}
+                r={node.r}
+                fill="rgba(255,255,255,0.1)"
+                stroke={colors.teal}
+                strokeWidth={1}
+                strokeLinecap="round"
+                strokeDasharray="2 3"
+            />
+        )
+    }
 
     const usageRadius = node.r * (node.data.usage / node.data.awareness)
 
@@ -52,16 +52,14 @@ const Node = ({ node, handlers }) => {
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            <circle r={node.r} fill={colors.teal}  />
-            <circle r={usageRadius} fill={colors.blue}  />
+            <circle r={node.r} fill={colors.teal} />
+            <circle r={usageRadius} fill={colors.blue} />
             <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
-            
         </g>
     )
 }
 
 const FeaturesCirclePackingOverviewChart = ({ data }) => {
-
     return (
         <div style={{ height: 800 }}>
             <ResponsiveBubble

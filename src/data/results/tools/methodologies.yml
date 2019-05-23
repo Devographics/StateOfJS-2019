@@ -108,39 +108,30 @@ aggregations:
   - id: other-methodologies
     others:
       total: 399
-      others_count: 268
+      others_count: 214
       buckets:
+        - id: Suit CSS
+          count: 50
+          percentage: 66.18
         - id: RSCSS
-          count: 23
-          percentage: 72.94
+          count: 37
+          percentage: 9.27
         - id: CSS Modules
-          count: 13
-          percentage: 3.26
-        - id: rscss
-          count: 12
-          percentage: 3.01
+          count: 27
+          percentage: 6.77
         - id: Functional CSS
-          count: 9
-          percentage: 2.26
-        - id: SUIT CSS
-          count: 9
-          percentage: 2.26
+          count: 11
+          percentage: 2.76
+        - id: CSS in JS
+          count: 10
+          percentage: 2.51
         - id: ABEM
           count: 8
           percentage: 2.01
-        - id: SUITCSS
-          count: 8
-          percentage: 2.01
-        - id: SuitCSS
-          count: 7
-          percentage: 1.75
-        - id: SUIT
+        - id: ECSS
           count: 6
           percentage: 1.5
         - id: BEMIT
-          count: 5
-          percentage: 1.25
-        - id: ECSS
           count: 5
           percentage: 1.25
         - id: BEVM
@@ -149,24 +140,33 @@ aggregations:
         - id: GPS
           count: 4
           percentage: 1
-        - id: css modules
-          count: 4
-          percentage: 1
-        - id: CSS-in-JS
+        - id: BEM
           count: 3
           percentage: 0.75
         - id: MaintainableCSS
           count: 3
           percentage: 0.75
+        - id: X
+          count: 3
+          percentage: 0.75
         - id: Atomic Design
           count: 2
           percentage: 0.5
-        - id: BEM
-          count: 2
-          percentage: 0.5
-        - id: CSS modules
-          count: 2
-          percentage: 0.5
         - id: Common sense
+          count: 2
+          percentage: 0.5
+        - id: FLOCSS
+          count: 2
+          percentage: 0.5
+        - id: I don't know
+          count: 2
+          percentage: 0.5
+        - id: Not sure
+          count: 2
+          percentage: 0.5
+        - id: Nothing
+          count: 2
+          percentage: 0.5
+        - id: Shadow DOM
           count: 2
           percentage: 0.5

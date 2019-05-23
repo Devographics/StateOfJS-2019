@@ -28,10 +28,10 @@ const getLabels = mode => ({ bars, getLabelTextColor }) => {
         if (bar.width < 60) return null
 
         // only keep 1 decimal
-        let value = Math.round(bar.data.value*10)/10
+        let value = Math.round(bar.data.value * 10) / 10
 
         if (mode === 'percentage') value = `${value}%`
-        
+
         // `pointerEvents: none` is used to not
         // disturb mouse events
         return (

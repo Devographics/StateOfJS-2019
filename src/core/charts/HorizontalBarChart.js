@@ -13,20 +13,21 @@ const Tooltip = memo(({ indexValue, value }) => (
     </span>
 ))
 
+const margin = {
+    top: 40,
+    right: 20,
+    bottom: 40,
+    left: 160
+}
+
 const HorizontalBarChart = ({ buckets }) => {
-    console.log(buckets)
     const data = useMemo(() => sortBy(buckets.map(bucket => ({ ...bucket })), 'count'), [buckets])
 
     return (
         <div style={{ height: buckets.length * 36 + 80 }}>
             <ResponsiveBar
                 layout="horizontal"
-                margin={{
-                    top: 40,
-                    right: 20,
-                    bottom: 40,
-                    left: 160
-                }}
+                margin={margin}
                 keys={['count']}
                 data={data}
                 theme={theme}

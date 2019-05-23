@@ -1,7 +1,12 @@
 import React from 'react'
 import { colors } from '../../constants'
 
-const ChartLabel = ({ label, fontSize, strokeColor = colors.greyDarker, fontColor = colors.white }) => (
+const ChartLabel = ({
+    label,
+    fontSize,
+    strokeColor = colors.greyDarker,
+    fontColor = colors.white
+}) => (
     <>
         <text
             textAnchor="middle"

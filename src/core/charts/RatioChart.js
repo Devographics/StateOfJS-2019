@@ -1,19 +1,10 @@
 import React, { memo, useMemo } from 'react'
-import { sortBy } from 'lodash'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { colors } from '../../constants'
 
-const Tooltip = memo(({ indexValue, value }) => (
-    <span>
-        {indexValue}
-        :&nbsp;
-        <strong>{value}</strong>
-    </span>
-))
-
-const getLabels = mode => ({ bars, getLabelTextColor }) => {
+const getLabels = mode => ({ bars }) => {
     return bars.map(bar => {
         if (bar.key.includes('not_used')) {
             return null
@@ -61,7 +52,6 @@ const getLabels = mode => ({ bars, getLabelTextColor }) => {
 }
 
 const RatioChart = ({ buckets, mode = 'percentage' }) => {
-
     const labelsLayer = useMemo(() => getLabels(mode), [mode])
 
     return (

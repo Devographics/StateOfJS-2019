@@ -1,105 +1,104 @@
-
 css-grid:
-  name: CSS Grid Layout
-  mdn: /en-US/docs/Web/CSS/CSS_Grid_Layout
-  caniuse: css-grid
+    name: CSS Grid Layout
+    mdn: /en-US/docs/Web/CSS/CSS_Grid_Layout
+    caniuse: css-grid
 flexbox:
-  name: CSS Flexible Box Layout
-  mdn: /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
-  caniuse: flexbox
+    name: CSS Flexible Box Layout
+    mdn: /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+    caniuse: flexbox
 css-multi-column:
-  name: CSS Multi-column Layout
-  mdn: /en-US/docs/Web/CSS/CSS_Columns
-  caniuse: multicolumn
+    name: CSS Multi-column Layout
+    mdn: /en-US/docs/Web/CSS/CSS_Columns
+    caniuse: multicolumn
 css-writing-modes:
-  name: CSS Writing Modes
-  mdn: /en-US/docs/Web/CSS/CSS_Writing_Modes
-  caniuse: css-writing-mode
+    name: CSS Writing Modes
+    mdn: /en-US/docs/Web/CSS/CSS_Writing_Modes
+    caniuse: css-writing-mode
 css-exclusions:
-  name: CSS Exclusions
-  caniuse: css-exclusions
+    name: CSS Exclusions
+    caniuse: css-exclusions
 css-shapes:
-  name: CSS Shapes
-  mdn: /en-US/docs/Web/CSS/CSS_Shapes
-  caniuse: css-shapes
+    name: CSS Shapes
+    mdn: /en-US/docs/Web/CSS/CSS_Shapes
+    caniuse: css-shapes
 object-fit:
-  name: object-fit
-  mdn: /en-US/docs/Web/CSS/object-fit
-  caniuse: object-fit
+    name: object-fit
+    mdn: /en-US/docs/Web/CSS/object-fit
+    caniuse: object-fit
 clip-path:
-  name: clip-path
-  mdn: /en-US/docs/Web/CSS/clip-path
-  caniuse: css-clip-path
+    name: clip-path
+    mdn: /en-US/docs/Web/CSS/clip-path
+    caniuse: css-clip-path
 blend-modes:
-  name: blend-mode
-  mdn: /en-US/docs/Web/CSS/blend-mode
-  caniuse: css-mixblendmode
+    name: blend-mode
+    mdn: /en-US/docs/Web/CSS/blend-mode
+    caniuse: css-mixblendmode
 css-filter-effects:
-  name: CSS Filters & Effects
-  mdn: /en-US/docs/Web/CSS/filter
-  caniuse: css-filters
+    name: CSS Filters & Effects
+    mdn: /en-US/docs/Web/CSS/filter
+    caniuse: css-filters
 css-masks:
-  name: CSS Masking
-  mdn: /en-US/docs/Web/CSS/CSS_Masking
-  caniuse: css-masks
+    name: CSS Masking
+    mdn: /en-US/docs/Web/CSS/CSS_Masking
+    caniuse: css-masks
 css-scroll-snap:
-  name: CSS Scroll Snap
-  mdn: /en-US/docs/Web/CSS/CSS_Scroll_Snap
-  caniuse: css-snappoints
+    name: CSS Scroll Snap
+    mdn: /en-US/docs/Web/CSS/CSS_Scroll_Snap
+    caniuse: css-snappoints
 overscroll-behavior:
-  name: overscroll-behavior
-  mdn: /en-US/docs/Web/CSS/overscroll-behavior
-  caniuse: css-overscroll-behavior
+    name: overscroll-behavior
+    mdn: /en-US/docs/Web/CSS/overscroll-behavior
+    caniuse: css-overscroll-behavior
 overflow-anchor:
-  name: overflow-anchor
-  mdn: /en-US/docs/Web/CSS/overflow-anchor
-  caniuse: css-overflow-anchor
+    name: overflow-anchor
+    mdn: /en-US/docs/Web/CSS/overflow-anchor
+    caniuse: css-overflow-anchor
 web-fonts-font-face:
-  name: |
-    @font-face
-  mdn: /en-US/docs/Web/CSS/@font-face
-  caniuse: fontface
+    name: |
+        @font-face
+    mdn: /en-US/docs/Web/CSS/@font-face
+    caniuse: fontface
 variable-fonts:
-  name: Variable fonts
-  mdn: /en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-  caniuse: variable-fonts
+    name: Variable fonts
+    mdn: /en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+    caniuse: variable-fonts
 line-breaking-properties:
-  name: CSS Line Breaking Properties
+    name: CSS Line Breaking Properties
 font-variant:
-  name: font-variant
-  mdn: /en-US/docs/Web/CSS/font-variant
-  caniuse: font-variant-alternates
+    name: font-variant
+    mdn: /en-US/docs/Web/CSS/font-variant
+    caniuse: font-variant-alternates
 initial-letter:
-  name: initial-letter
-  mdn: /en-US/docs/Web/CSS/initial-letter
-  caniuse: css-initial-letter
+    name: initial-letter
+    mdn: /en-US/docs/Web/CSS/initial-letter
+    caniuse: css-initial-letter
 css-transitions:
-  name: CSS Transitions
-  mdn: /en-US/docs/Web/CSS/CSS_Transitions
-  caniuse: css-transitions
+    name: CSS Transitions
+    mdn: /en-US/docs/Web/CSS/CSS_Transitions
+    caniuse: css-transitions
 css-transforms:
-  name: CSS Transforms
-  mdn: /en-US/docs/Web/CSS/CSS_Transforms
-  caniuse: transforms2d
+    name: CSS Transforms
+    mdn: /en-US/docs/Web/CSS/CSS_Transforms
+    caniuse: transforms2d
 css-animations:
-  name: CSS Animations
-  mdn: /en-US/docs/Web/CSS/CSS_Animations
-  caniuse: css-animation
+    name: CSS Animations
+    mdn: /en-US/docs/Web/CSS/CSS_Animations
+    caniuse: css-animation
 css-variables:
-  name: CSS Variables
-  mdn: /en-US/docs/Web/CSS/CSS_Variables
-  caniuse: css-variables
+    name: CSS Variables
+    mdn: /en-US/docs/Web/CSS/CSS_Variables
+    caniuse: css-variables
 support-queries:
-  name: '@supports'
-  mdn: /en-US/docs/Web/CSS/@supports
-  caniuse: css-supports-api
+    name: '@supports'
+    mdn: /en-US/docs/Web/CSS/@supports
+    caniuse: css-supports-api
 css-containment:
-  name: CSS Containment
+    name: CSS Containment
 will-change:
-  name: will-change
-  mdn: /en-US/docs/Web/CSS/will-change
-  caniuse: will-change
+    name: will-change
+    mdn: /en-US/docs/Web/CSS/will-change
+    caniuse: will-change
 calc:
-  name: calc()
-  mdn: /en-US/docs/Web/CSS/calc
-  caniuse: calc
+    name: calc()
+    mdn: /en-US/docs/Web/CSS/calc
+    caniuse: calc

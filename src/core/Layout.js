@@ -53,7 +53,7 @@ export default class Layout extends PureComponent {
     }
 
     render() {
-        const { showPagination, location, currentPage, pageContext } = this.props
+        const { showPagination, location, pageContext } = this.props
         const { showAnim, showSidebar } = this.state
         const sidebarClassName = showSidebar ? 'Sidebar--shown' : 'Sidebar--hidden'
         const context = mergePageContext(pageContext, location)
@@ -62,18 +62,14 @@ export default class Layout extends PureComponent {
             <PageContextProvider value={context}>
                 <I18nContextProvider>
                     <div
-                        className={classNames(
-                            'pageLayout',
-                            `PageLayout--${context.id}`,
-                            {
-                                'PageLayout--sidebar': showSidebar,
-                                'PageLayout--nosidebar': !showSidebar,
-                                'PageLayout--anim': showAnim,
-                                'PageLayout--noanim': !showAnim,
-                                capture: context.isCapturing,
-                                nocapture: !context.isCapturing
-                            }
-                        )}
+                        className={classNames('pageLayout', `PageLayout--${context.id}`, {
+                            'PageLayout--sidebar': showSidebar,
+                            'PageLayout--nosidebar': !showSidebar,
+                            'PageLayout--anim': showAnim,
+                            'PageLayout--noanim': !showAnim,
+                            capture: context.isCapturing,
+                            nocapture: !context.isCapturing
+                        })}
                     >
                         <Head />
                         <div className="pagelayout__inner">

@@ -8,10 +8,7 @@ const TextBlock = ({ text, title, children }) => {
             <div className="block block--text">
                 {title && <h3 className="Block__Title block__title">{title}</h3>}
                 {text && (
-                    <div
-                        className="block__content"
-                        dangerouslySetInnerHTML={{ __html: text }}
-                    />
+                    <div className="block__content" dangerouslySetInnerHTML={{ __html: text }} />
                 )}
             </div>
         )

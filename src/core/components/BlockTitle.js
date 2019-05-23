@@ -14,7 +14,7 @@ const BlockTitle = ({ id, showDescription, isShareable, values, title }) => {
     const { translate } = useI18n()
 
     title = title || getBlockTitle(id, context, translate, { values })
-    
+
     let description = ''
     if (showDescription === true) {
         description = getBlockDescription(id, context, translate, {

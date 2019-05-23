@@ -2,8 +2,7 @@ import React from 'react'
 import track from './tracking'
 
 const ShareImage = ({ trackingId, url }) => {
-
-  return (
+    return (
         <a
             onClick={track('Image', trackingId)}
             className="share__link--image share__link"

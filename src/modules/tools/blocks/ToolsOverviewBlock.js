@@ -1,6 +1,5 @@
 import React from 'react'
 import Block from 'core/components/Block'
-import ToolsSunburstChart from '../charts/ToolsSunburstChart'
 import ToolsCirclePackingChart from '../charts/ToolsCirclePackingChart'
 import compact from 'lodash/compact'
 import { opinions } from '../../../constants'

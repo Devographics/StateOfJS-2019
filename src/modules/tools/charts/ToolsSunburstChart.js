@@ -1,8 +1,4 @@
-import React, { memo, useMemo } from 'react'
-import PropTypes from 'prop-types'
-import { ResponsiveBubble } from '@nivo/circle-packing'
-import theme from 'nivoTheme'
-import { colors } from '../../../constants'
+import React, { memo } from 'react'
 import { ResponsiveSunburst } from '@nivo/sunburst'
 
 const ToolsSunburstChart = ({ data }) => {
@@ -18,7 +14,7 @@ const ToolsSunburstChart = ({ data }) => {
                 borderColor="white"
                 // colors={{ scheme: 'nivo' }}
                 // childColor={x => {console.log(x); return x.color}}
-                childColor={{ from: 'color'}}
+                childColor={{ from: 'color' }}
                 animate={true}
                 motionStiffness={90}
                 motionDamping={15}

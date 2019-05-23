@@ -23,37 +23,37 @@ aggregations:
       total: 11205
       others_count: 0
       buckets:
-        - id: 5-10
+        - id: '5_10'
           count: 3610
           filtered:
             count: 2161
             percentage: 59.86
           percentage: 32.22
-        - id: 10-20
+        - id: '10_20'
           count: 3064
           filtered:
             count: 1759
             percentage: 57.41
           percentage: 27.34
-        - id: 2-5
+        - id: '2_5'
           count: 2922
           filtered:
             count: 1754
             percentage: 60.03
           percentage: 26.08
-        - id: 1-2
+        - id: '1_2'
           count: 957
           filtered:
             count: 598
             percentage: 62.49
           percentage: 8.54
-        - id: more-than-20
+        - id: more_than_20
           count: 425
           filtered:
             count: 260
             percentage: 61.18
           percentage: 3.79
-        - id: less-than-1
+        - id: less_than_1
           count: 227
           filtered:
             count: 118
@@ -77,37 +77,37 @@ aggregations:
       total: 11205
       others_count: 0
       buckets:
-        - id: 5-10
+        - id: '5_10'
           count: 3610
           filtered:
             count: 1400
             percentage: 38.78
           percentage: 32.22
-        - id: 10-20
+        - id: '10_20'
           count: 3064
           filtered:
             count: 1322
             percentage: 43.15
           percentage: 27.34
-        - id: 2-5
+        - id: '2_5'
           count: 2922
           filtered:
             count: 931
             percentage: 31.86
           percentage: 26.08
-        - id: 1-2
+        - id: '1_2'
           count: 957
           filtered:
             count: 227
             percentage: 23.72
           percentage: 8.54
-        - id: more-than-20
+        - id: more_than_20
           count: 425
           filtered:
             count: 189
             percentage: 44.47
           percentage: 3.79
-        - id: less-than-1
+        - id: less_than_1
           count: 227
           filtered:
             count: 49
@@ -131,37 +131,37 @@ aggregations:
       total: 11205
       others_count: 0
       buckets:
-        - id: 5-10
+        - id: '5_10'
           count: 3610
           filtered:
             count: 181
             percentage: 5.01
           percentage: 32.22
-        - id: 10-20
+        - id: '10_20'
           count: 3064
           filtered:
             count: 172
             percentage: 5.61
           percentage: 27.34
-        - id: 2-5
+        - id: '2_5'
           count: 2922
           filtered:
             count: 111
             percentage: 3.8
           percentage: 26.08
-        - id: 1-2
+        - id: '1_2'
           count: 957
           filtered:
             count: 35
             percentage: 3.66
           percentage: 8.54
-        - id: more-than-20
+        - id: more_than_20
           count: 425
           filtered:
             count: 26
             percentage: 6.12
           percentage: 3.79
-        - id: less-than-1
+        - id: less_than_1
           count: 227
           filtered:
             count: 5
@@ -185,37 +185,37 @@ aggregations:
       total: 11205
       others_count: 0
       buckets:
-        - id: 5-10
+        - id: '5_10'
           count: 3610
           filtered:
             count: 1034
             percentage: 28.64
           percentage: 32.22
-        - id: 10-20
+        - id: '10_20'
           count: 3064
           filtered:
             count: 850
             percentage: 27.74
           percentage: 27.34
-        - id: 2-5
+        - id: '2_5'
           count: 2922
           filtered:
             count: 562
             percentage: 19.23
           percentage: 26.08
-        - id: 1-2
+        - id: '1_2'
           count: 957
           filtered:
             count: 107
             percentage: 11.18
           percentage: 8.54
-        - id: more-than-20
+        - id: more_than_20
           count: 425
           filtered:
             count: 83
             percentage: 19.53
           percentage: 3.79
-        - id: less-than-1
+        - id: less_than_1
           count: 227
           filtered:
             count: 12
@@ -239,37 +239,37 @@ aggregations:
       total: 11205
       others_count: 0
       buckets:
-        - id: 5-10
+        - id: '5_10'
           count: 3610
           filtered:
             count: 3216
             percentage: 89.09
           percentage: 32.22
-        - id: 10-20
+        - id: '10_20'
           count: 3064
           filtered:
             count: 2701
             percentage: 88.15
           percentage: 27.34
-        - id: 2-5
+        - id: '2_5'
           count: 2922
           filtered:
             count: 2509
             percentage: 85.87
           percentage: 26.08
-        - id: 1-2
+        - id: '1_2'
           count: 957
           filtered:
             count: 725
             percentage: 75.76
           percentage: 8.54
-        - id: more-than-20
+        - id: more_than_20
           count: 425
           filtered:
             count: 354
             percentage: 83.29
           percentage: 3.79
-        - id: less-than-1
+        - id: less_than_1
           count: 227
           filtered:
             count: 129

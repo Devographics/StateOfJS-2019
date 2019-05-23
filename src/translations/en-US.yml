@@ -14,59 +14,59 @@ translations:
     ###########################################################################
 
     # salary ranges
-    - key: salary.work-for-free.long
+    - key: salary.none.long
       t: I work for free
-    - key: salary.work-for-free.short
+    - key: salary.none.short
       t: work for free
-    - key: salary.0-10.long
+    - key: salary.0_10.long
       t: $0k-$10k
-    - key: salary.0-10.short
+    - key: salary.0_10.short
       t: $0k-$10k
-    - key: salary.10-30.long
+    - key: salary.10_30.long
       t: $10k-$30k
-    - key: salary.10-30.short
+    - key: salary.10_30.short
       t: $10k-$30k 
-    - key: salary.30-50.long
+    - key: salary.30_50.long
       t: $30k-$50k
-    - key: salary.30-50.short
+    - key: salary.30_50.short
       t: $30k-$50k 
-    - key: salary.50-100.long
+    - key: salary.50_100.long
       t: $50k-$100k
-    - key: salary.50-100.short
+    - key: salary.50_100.short
       t: $50k-$100k  
-    - key: salary.100-200.long
+    - key: salary.100_200.long
       t: $100k-$200k
-    - key: salary.100-200.short
+    - key: salary.100_200.short
       t: $100k-$200k   
-    - key: salary.more-than-200.long
+    - key: salary.200_more.long
       t: more than $200k
-    - key: salary.more-than-200.short
+    - key: salary.200_more.short
       t: $200k+   
 
     # years of experience
-    - key: years_of_experience.less-than-1.long
+    - key: years-of-experience.less_than_1.long
       t: Less than one year
-    - key: years_of_experience.less-than-1.short
+    - key: years-of-experience.less_than_1.short
       t: '<1 year'
-    - key: years_of_experience.1-2.long
+    - key: years-of-experience.1_2.long
       t: 1 to 2 years
-    - key: years_of_experience.1-2.short
+    - key: years-of-experience.1_2.short
       t: 1~2 years
-    - key: years_of_experience.2-5.long
+    - key: years-of-experience.2_5.long
       t: 2 to 5 years
-    - key: years_of_experience.2-5.short
+    - key: years-of-experience.2_5.short
       t: 2~5 years
-    - key: years_of_experience.5-10.long
+    - key: years-of-experience.5_10.long
       t: 5 to 10 years
-    - key: years_of_experience.5-10.short
+    - key: years-of-experience.5_10.short
       t: 5~10 years
-    - key: years_of_experience.10-20.long
+    - key: years-of-experience.10_20.long
       t: 10 to 20 years
-    - key: years_of_experience.10-20.short
+    - key: years-of-experience.10_20.short
       t: 10~20 years
-    - key: years_of_experience.more-than-20.long
+    - key: years-of-experience.more_than_20.long
       t: More than 20 years
-    - key: years_of_experience.more-than-20.short
+    - key: years-of-experience.more_than_20.short
       t: '>20 years'
 
     # company size
@@ -74,33 +74,33 @@ translations:
       t: One employee
     - key: company-size.1.short
       t: one
-    - key: company-size.1-5.long
+    - key: company-size.1_5.long
       t: 1 to 5 employees
-    - key: company-size.1-5.short
+    - key: company-size.1_5.short
       t: 1~5
-    - key: company-size.5-10.long
+    - key: company-size.5_10.long
       t: 5 to 10 employees
-    - key: company-size.5-10.short
+    - key: company-size.5_10.short
       t: 5~10
-    - key: company-size.10-20.long
+    - key: company-size.10_20.long
       t: 10 to 20 employees
-    - key: company-size.10-20.short
+    - key: company-size.10_20.short
       t: 10~20
-    - key: company-size.20-50.long
+    - key: company-size.20_50.long
       t: 20 to 50 employees
-    - key: company-size.20-50.short
+    - key: company-size.20_50.short
       t: 20~50
-    - key: company-size.50-100.long
+    - key: company-size.50_100.long
       t: 50 to 100 employees
-    - key: company-size.50-100.short
+    - key: company-size.50_100.short
       t: 50~100
-    - key: company-size.100-1000.long
+    - key: company-size.100_1000.long
       t: 100 to 1000 employees
-    - key: company-size.100-1000.short
+    - key: company-size.100_1000.short
       t: 100~1000
-    - key: company-size.more-than-1000.long
+    - key: company-size.more_than_1000.long
       t: More than 1000 employees
-    - key: company-size.more-than-1000.short
+    - key: company-size.more_than_1000.short
       t: 1000+
 
     # genders

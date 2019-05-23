@@ -203,7 +203,7 @@ styled-components:
     name: Styled Components
     npm: styled-components
     homepage: https://www.styled-components.com/
-styled-jsx: 
+styled-jsx:
     github: zeit/styled-jsx
     name: Styled JSX
     npm: styled-jsx

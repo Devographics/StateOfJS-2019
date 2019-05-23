@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import Block from 'core/components/Block'
 import FeaturesCirclePackingOverviewChart from '../charts/FeaturesCirclePackingOverviewChart'
 import Legends from 'core/charts/Legends'
@@ -7,7 +7,7 @@ import { colors } from '../../../constants'
 
 const getChartData = data => {
     const sections = data.features.nodes.map(section => {
-        const { section_id, aggregations } = section
+        const { section_id } = section
         const features = section.aggregations.map(feature => {
             const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
             const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')

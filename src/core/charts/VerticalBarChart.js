@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
@@ -13,6 +13,35 @@ const margin = {
     left: 32
 }
 
+const VerticalBarChart = ({ buckets }) => {
+    return (
+        <div style={{ height: 260 }}>
+            <ResponsiveBar
+                data={buckets}
+                indexBy="id"
+                keys={['percentage']}
+                margin={margin}
+                theme={theme}
+                enableGridX={false}
+                enableGridY={true}
+            />
+        </div>
+    )
+}
+
+VerticalBarChart.propTypes = {
+    buckets: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            count: PropTypes.number.isRequired,
+            percentage: PropTypes.number
+        })
+    )
+}
+
+export default memo(VerticalBarChart)
+
+/*
 export default class VerticalBarChart extends Component {
     static propTypes = {
         data: PropTypes.arrayOf(
@@ -93,3 +122,4 @@ export default class VerticalBarChart extends Component {
         )
     }
 }
+*/
