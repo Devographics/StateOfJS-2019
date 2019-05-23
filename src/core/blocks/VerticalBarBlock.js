@@ -1,25 +1,23 @@
 import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
-import { ranges } from '../../constants'
+import { keys } from '../../constants'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
-import RangeBreakdownBarChart from 'core/charts/RangeBreakdownBarChart'
+import VerticalBarChart from 'core/charts/VerticalBarChart'
 
-const RangeBreakdownBlock = ({ block, data }) => {
+const VerticalBarBlock = ({ block, data }) => {
     if (!data || !data.data) {
         return (
-            <div>
-                RangeBreakdownBlock: Missing data for block {block.id}, page data is undefined
-            </div>
+            <div>VerticalBarBlock: Missing data for block {block.id}, page data is undefined</div>
         )
     }
 
-    const rangeKeys = ranges[block.rangeId]
-    if (!Array.isArray(rangeKeys)) {
+    const bucketKeys = keys[block.bucketKeys]
+    if (!Array.isArray(bucketKeys)) {
         return (
             <div>
-                RangeBreakdownBlock: Missing range keys for block {block.id}, rangeId:{' '}
-                {block.rangeId || 'undefined'}
+                VerticalBarBlock: Missing bucket keys for block {block.id}, bucketKeys:{' '}
+                {block.bucketKeys || 'undefined'}
             </div>
         )
     }
@@ -29,7 +27,7 @@ const RangeBreakdownBlock = ({ block, data }) => {
         data.data
     ])
     if (!blockData) {
-        return <div>RangeBreakdownBlock: Missing data for block {block.id}</div>
+        return <div>VerticalBarBlock: Missing data for block {block.id}</div>
     }
     if (
         blockData[block.dataKey] === undefined ||
@@ -37,7 +35,7 @@ const RangeBreakdownBlock = ({ block, data }) => {
     ) {
         return (
             <div>
-                RangeBreakdownBlock: Non existing or invalid data key {block.data.key} for block{' '}
+                VerticalBarBlock: Non existing or invalid data key {block.data.key} for block{' '}
                 {block.id}
             </div>
         )
@@ -45,24 +43,22 @@ const RangeBreakdownBlock = ({ block, data }) => {
 
     const sortedBuckets = useMemo(
         () =>
-            rangeKeys.map(rangeKey => {
-                const bucket = blockData[block.dataKey].buckets.find(b => b.id === rangeKey)
+            bucketKeys.map(bucketKey => {
+                const bucket = blockData[block.dataKey].buckets.find(b => b.id === bucketKey)
                 if (bucket === undefined) {
-                    throw new Error(
-                        `no bucket found for range key: '${rangeKey}' in block: ${block.id}`
-                    )
+                    throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
                 }
 
                 return bucket
             }),
-        [blockData, block.dataKey, rangeKeys]
+        [blockData, block.dataKey, bucketKeys]
     )
 
     return (
         <Block id={block.id} showDescription={!!block.showDescription}>
             <ChartContainer>
-                <RangeBreakdownBarChart
-                    keys={rangeKeys}
+                <VerticalBarChart
+                    keys={bucketKeys}
                     buckets={sortedBuckets}
                     i18nNamespace={block.id}
                 />
@@ -71,11 +67,11 @@ const RangeBreakdownBlock = ({ block, data }) => {
     )
 }
 
-RangeBreakdownBlock.propTypes = {
+VerticalBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        rangeId: PropTypes.string.isRequired,
         dataKey: PropTypes.string.isRequired,
+        bucketKeys: PropTypes.oneOf(Object.keys(keys)).isRequired,
         showDescription: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({
@@ -89,4 +85,4 @@ RangeBreakdownBlock.propTypes = {
     }).isRequired
 }
 
-export default memo(RangeBreakdownBlock)
+export default memo(VerticalBarBlock)

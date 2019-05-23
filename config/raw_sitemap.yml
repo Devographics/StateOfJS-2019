@@ -14,21 +14,21 @@
       # - id: participation-by-country
       #   type: countries
       - id: salary
-        type: range-breakdown
+        type: vertical-bar
         dataKey: breakdown
-        rangeId: salary
+        bucketKeys: salary
         showDescription: true
       # - id: salary-per-country
       #   type: countries
       - id: years-of-experience
         dataKey: breakdown
-        type: range-breakdown
-        rangeId: yearsOfExperience
+        type: vertical-bar
+        bucketKeys: yearsOfExperience
         showDescription: true
       - id: company-size
-        type: range-breakdown
+        type: vertical-bar
         dataKey: breakdown
-        rangeId: companySize
+        bucketKeys: companySize
         showDescription: true
       # - id: source
       #   type: source
@@ -39,14 +39,14 @@
         dataKey: breakdown
         showDescription: true
       - id: javascript-proficiency
-        type: range-breakdown
+        type: vertical-bar
         dataKey: breakdown
-        rangeId: javascriptProficiency
+        bucketKeys: javascriptProficiency
         showDescription: true
       - id: backend-proficiency
-        type: range-breakdown
+        type: vertical-bar
         dataKey: breakdown
-        rangeId: backendProficiency
+        bucketKeys: backendProficiency
         showDescription: true
 
 - id: features

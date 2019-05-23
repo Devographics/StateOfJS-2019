@@ -89,7 +89,7 @@ const backendProficiencyKeys = [
     'able_to_setup_from_scratch'
 ]
 
-export const ranges = {
+export const keys = {
     salary: salaryKeys,
     companySize: companySizeKeys,
     yearsOfExperience: yearsOfExperienceKeys,

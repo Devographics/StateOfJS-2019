@@ -1,8 +1,8 @@
 // generic
 import HorizontalBarBlock from 'core/blocks/HorizontalBarBlock'
+import VerticalBarBlock from 'core/blocks/VerticalBarBlock'
 import CountriesBlock from 'core/blocks/CountriesBlock'
 import OpinionScaleBlock from 'core/blocks/OpinionScaleBlock'
-import RangeBreakdownBlock from 'core/blocks/RangeBreakdownBlock'
 
 // demographics
 import SourceBreakdownBlock from 'modules/demographics/blocks/SourceBreakdownBlock'
@@ -25,9 +25,9 @@ import ToolOpinionBlock from 'modules/tools/blocks/ToolOpinionBlock'
 const blockRegistry = {
     // generic
     'horizontal-bar': HorizontalBarBlock,
+    'vertical-bar': VerticalBarBlock,
     countries: CountriesBlock,
     'opinion-scale': OpinionScaleBlock,
-    'range-breakdown': RangeBreakdownBlock,
 
     //demographics
     source: SourceBreakdownBlock,

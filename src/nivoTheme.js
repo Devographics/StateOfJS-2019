@@ -29,10 +29,6 @@ export default {
         'non-binary/ third gender': colors.yellow,
         other: colors.greyMedium
     },
-    reasonsColors: {
-        like: colors.blue,
-        dislike: colors.red
-    },
     axis: {
         domain: {
             line: {
@@ -62,7 +58,8 @@ export default {
     grid: {
         line: {
             stroke: colors.teal,
-            strokeDasharray: '1 2'
+            strokeDasharray: '1 2',
+            strokeOpacity: 0.4
         }
     },
     streamTimelineAxis: {

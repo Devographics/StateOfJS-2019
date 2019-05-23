@@ -1,125 +1,90 @@
-import React, { memo } from 'react'
+import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
+import { useI18n } from 'core/i18n/i18nContext'
 import theme from 'nivoTheme'
 import { colors } from '../../constants'
-import Trans from 'core/i18n/Trans'
-import ChartContainer from './ChartContainer'
 
 const margin = {
     top: 10,
-    right: 52,
+    right: 56,
     bottom: 50,
     left: 32
 }
 
-const VerticalBarChart = ({ buckets }) => {
+const Tooltip = memo(({ translate, indexValue, value, data }) => {
+    return (
+        <div style={{ maxWidth: 300 }}>
+            {translate(indexValue)}:&nbsp;<strong>{value}%</strong>&nbsp;({data.count})
+        </div>
+    )
+})
+
+const VerticalBarChart = ({ buckets, i18nNamespace }) => {
+    const { translate } = useI18n()
+
+    const [translateShort, translateLong] = useMemo(
+        () => [
+            rangeKey => translate(`${i18nNamespace}.${rangeKey}.short`),
+            rangeKey => translate(`${i18nNamespace}.${rangeKey}.long`)
+        ],
+        [translate, i18nNamespace]
+    )
+
+    const maxValue = useMemo(
+        () => Math.ceil(Math.max(...buckets.map(b => b.percentage)) / 10) * 10,
+        [buckets]
+    )
+
     return (
         <div style={{ height: 260 }}>
             <ResponsiveBar
                 data={buckets}
                 indexBy="id"
                 keys={['percentage']}
+                maxValue={maxValue}
                 margin={margin}
+                padding={0.4}
                 theme={theme}
+                colors={[colors.blue]}
+                labelFormat={v => `${v}%`}
+                labelSkipHeight={16}
                 enableGridX={false}
+                gridYValues={maxValue / 10 + 1}
                 enableGridY={true}
+                axisLeft={{
+                    format: v => `${v}%`,
+                    tickValues: maxValue / 10 + 1
+                }}
+                axisRight={{
+                    format: v => `${v}%`,
+                    tickValues: maxValue / 10 + 1,
+                    legend: translate('users_percentage'),
+                    legendPosition: 'middle',
+                    legendOffset: 46
+                }}
+                axisBottom={{
+                    format: translateShort,
+                    legend: translate(`${i18nNamespace}.axis_legend`),
+                    legendPosition: 'middle',
+                    legendOffset: 40
+                }}
+                tooltip={barProps => <Tooltip translate={translateLong} {...barProps} />}
             />
         </div>
     )
 }
 
 VerticalBarChart.propTypes = {
+    keys: PropTypes.arrayOf(PropTypes.string).isRequired,
     buckets: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             count: PropTypes.number.isRequired,
             percentage: PropTypes.number
         })
-    )
+    ),
+    i18nNamespace: PropTypes.string.isRequired
 }
 
 export default memo(VerticalBarChart)
-
-/*
-export default class VerticalBarChart extends Component {
-    static propTypes = {
-        data: PropTypes.arrayOf(
-            PropTypes.shape({
-                range: PropTypes.string.isRequired,
-                count: PropTypes.number.isRequired,
-                percentage: PropTypes.number.isRequired
-            })
-        ).isRequired,
-        keys: PropTypes.arrayOf(PropTypes.string).isRequired,
-        i18nNamespace: PropTypes.string.isRequired
-    }
-
-    getTickLabel = translate => range => {
-        const { i18nNamespace } = this.props
-
-        return translate(`${i18nNamespace}.${range}.short`)
-    }
-
-    renderTooltip = translate => props => {
-        const { i18nNamespace } = this.props
-
-        return (
-            <span>
-                {translate(`${i18nNamespace}.${props.indexValue}.long`)}
-                :&nbsp;
-                <strong>{props.value}%</strong>
-            </span>
-        )
-    }
-
-    render() {
-        const { data, keys, i18nNamespace } = this.props
-
-        const chartData = keys.map(key => data.find(d => d.range === key))
-
-        return (
-            <Trans>
-                {translate => (
-                    <ChartContainer height={260} className="Chart--verticalbar">
-                        <ResponsiveBar
-                            theme={theme}
-                            colors={[colors.blue]}
-                            margin={margin}
-                            padding={0.4}
-                            maxValue={30}
-                            keys={['percentage']}
-                            indexBy="range"
-                            data={chartData}
-                            labelFormat={d => `${d}%`}
-                            labelTextColor={colors.teal}
-                            enableGridX={false}
-                            enableGridY={true}
-                            gridYValues={[0, 5, 10, 15, 20, 25, 30]}
-                            axisRight={{
-                                tickValues: 7,
-                                format: d => `${d}%`,
-                                legend: translate('users_percentage'),
-                                legendPosition: 'middle',
-                                legendOffset: 46
-                            }}
-                            axisLeft={{
-                                tickValues: 7,
-                                format: d => `${d}%`
-                            }}
-                            axisBottom={{
-                                format: this.getTickLabel(translate),
-                                legend: translate(`${i18nNamespace}_axis_legend`),
-                                legendPosition: 'middle',
-                                legendOffset: 40
-                            }}
-                            animate={false}
-                            tooltip={this.renderTooltip(translate)}
-                        />
-                    </ChartContainer>
-                )}
-            </Trans>
-        )
-    }
-}
-*/

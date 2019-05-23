@@ -41,7 +41,9 @@ translations:
     - key: salary.200_more.long
       t: more than $200k
     - key: salary.200_more.short
-      t: $200k+   
+      t: $200k+
+    - key: salary.axis_legend
+      t: salary range
 
     # years of experience
     - key: years-of-experience.less_than_1.long
@@ -68,6 +70,8 @@ translations:
       t: More than 20 years
     - key: years-of-experience.more_than_20.short
       t: '>20 years'
+    - key: years-of-experience.axis_legend
+      t: years of experience
 
     # company size
     - key: company-size.1.long
@@ -102,6 +106,8 @@ translations:
       t: More than 1000 employees
     - key: company-size.more_than_1000.short
       t: 1000+
+    - key: company-size.axis_legend
+      t: number of employees
 
     # genders
     - key: genders.female
@@ -138,6 +144,8 @@ translations:
       t: Expert
     - key: javascript-proficiency.entire_codebases_from_scratch.long
       t: Can architecture entire front-end codebases from scratch
+    - key: javascript-proficiency.axis_legend
+      t: javascript proficiency
 
     # backend proficiency
     - key: backend-proficiency.none.short
@@ -156,6 +164,8 @@ translations:
       t: Expert
     - key: backend-proficiency.able_to_setup_from_scratch.long
       t: Able to set up an entire back-end from scratch (Go, Node, etc.)
+    - key: backend-proficiency.axis_legend
+      t: back-end proficiency
 
       # other
     - key: block.title.participation-by-country
@@ -186,6 +196,8 @@ translations:
       t: Gender breakdown.
     - key: block.title.job-title
       t: Job Titles
+    - key: block.description.job-title
+      t: How participants introduce themselves at parties?
     - key: block.title.javascript-proficiency
       t: JavaScript Proficiency
     - key: block.description.javascript-proficiency
@@ -551,10 +563,8 @@ translations:
       t: Usage Ratio Ranking
     - key: block.description.usage-ratio
       t: Ranking usage ratios among users who are aware of a technology. 
-
-
-
-
+    - key: users_percentage
+      t: percentage of users
 
 # TODO: review this:
 
@@ -570,14 +580,6 @@ translations:
     - key: block.description.overview
       t: |
         Overall ${section} results.
-    - key: block.title.results-over-time
-      t: ${tool}'s Popularity Over Time  
-    - key: block.description.results-over-time 
-      t: ${tool}'s popularity evolution over time.
-    - key: block.results-over-time.empty
-      t: |
-        Sorry, we don't have enough data to display
-        the evolution of this library's popularity over time. 
     - key: block.title.happiness
       t: Overall Happiness
     - key: block.description.happiness
