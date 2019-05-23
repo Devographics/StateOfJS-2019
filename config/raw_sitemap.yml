@@ -48,6 +48,8 @@
   type: page
   defaultBlockType: feature
   blocks:
+      - id: features-radial-cluster-overview
+        type: features-radial-cluster-overview
       - id: features-overview
         type: features-overview
   children:
