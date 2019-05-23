@@ -994,6 +994,19 @@
     react-motion "^0.5.2"
     recompose "^0.30.0"
 
+"@nivo/bump@0.58.0":
+  version "0.58.0"
+  resolved "https://registry.yarnpkg.com/@nivo/bump/-/bump-0.58.0.tgz#ae4fabc9933c73568057f6e8a0cb35883f05e0c2"
+  integrity sha512-hh63DsLOsSUr8mb/nQl74JI5JeJYHb7eHZSU76UK3nTTclb3MZoFHvz4kV3x4fqV/cYb2addShn9e1W52Ga+UA==
+  dependencies:
+    "@nivo/colors" "0.58.0"
+    "@nivo/core" "0.58.0"
+    "@nivo/legends" "0.58.0"
+    "@nivo/tooltip" "0.58.0"
+    d3-shape "^1.3.5"
+    lodash "^4.17.11"
+    react-motion "^0.5.2"
+
 "@nivo/circle-packing@0.58.0":
   version "0.58.0"
   resolved "https://registry.yarnpkg.com/@nivo/circle-packing/-/circle-packing-0.58.0.tgz#3100bed97c73f7e7b4079edc6867cc90952e77e6"

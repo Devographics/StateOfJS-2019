@@ -95,8 +95,6 @@ const getChildren = features => {
 }
 
 const FeaturesCirclePackingChart = ({ features }) => {
-    console.log(features)
-
     const root = useMemo(
         () => ({
             id: 'root',

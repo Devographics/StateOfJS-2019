@@ -58,8 +58,6 @@ const RangeBreakdownBlock = ({ block, data }) => {
         [blockData, block.dataKey, rangeKeys]
     )
 
-    console.log({ sortedBuckets })
-
     return (
         <Block id={block.id} showDescription={!!block.showDescription}>
             <ChartContainer>

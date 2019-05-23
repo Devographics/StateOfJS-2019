@@ -45,6 +45,7 @@ const RangeBreakdownBarChart = ({ buckets, i18nNamespace }) => {
                 labelSkipHeight={16}
                 enableGridX={false}
                 enableGridY={true}
+                axisLeft={{ format: v => `${v}%` }}
                 axisBottom={{ format: translateShort }}
                 tooltip={barProps => <Tooltip translate={translateLong} {...barProps} />}
             />

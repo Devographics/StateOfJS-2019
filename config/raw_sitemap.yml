@@ -205,6 +205,8 @@
         path: /pre-post-processors
         type: tools
         blocks:
+            - id: scaled-ranking-overview
+              type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
             - id: usage-ratio
@@ -223,6 +225,8 @@
         path: /css-frameworks
         type: tools
         blocks:
+            - id: scaled-ranking-overview
+              type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
             - id: usage-ratio
@@ -248,6 +252,8 @@
         path: /methodologies
         type: tools
         blocks:
+            - id: scaled-ranking-overview
+              type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
             - id: usage-ratio
@@ -267,6 +273,8 @@
         path: /css-in-js
         type: tools
         blocks:
+            - id: scaled-ranking-overview
+              type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
             - id: usage-ratio
