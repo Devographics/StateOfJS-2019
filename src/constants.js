@@ -59,9 +59,9 @@ export const colorScale = [
     '#ca4040'
 ]
 
-export const salaryRanges = ['none', '0_10', '10_30', '30_50', '50_100', '100_200', '200_more']
+export const salaryKeys = ['none', '0_10', '10_30', '30_50', '50_100', '100_200', '200_more']
 
-const companySizeRanges = [
+const companySizeKeys = [
     '1',
     '1_5',
     '5_10',
@@ -72,12 +72,29 @@ const companySizeRanges = [
     'more_than_1000'
 ]
 
-const yearsOfExperienceRanges = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+const yearsOfExperienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+
+const javascriptProficiencyKeys = [
+    'none',
+    'short_simple_javascript',
+    'existing_codebases_using_modern_frameworks',
+    'advanced_front_end_patterns',
+    'entire_codebases_from_scratch'
+]
+
+const backendProficiencyKeys = [
+    'none',
+    'able_to_setup_cms_or_site_generator',
+    'able_to_use_existing_frameworks',
+    'able_to_setup_from_scratch'
+]
 
 export const ranges = {
-    salary: salaryRanges,
-    companySize: companySizeRanges,
-    yearsOfExperience: yearsOfExperienceRanges
+    salary: salaryKeys,
+    companySize: companySizeKeys,
+    yearsOfExperience: yearsOfExperienceKeys,
+    javascriptProficiency: javascriptProficiencyKeys,
+    backendProficiency: backendProficiencyKeys
 }
 
 export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']

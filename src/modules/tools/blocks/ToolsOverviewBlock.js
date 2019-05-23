@@ -2,10 +2,9 @@ import React from 'react'
 import Block from 'core/components/Block'
 import ToolsCirclePackingChart from '../charts/ToolsCirclePackingChart'
 import compact from 'lodash/compact'
-import { colors, opinions as foo } from '../../../constants'
+import { colors } from '../../../constants'
 import round from 'lodash/round'
 import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
-
 
 export const opinions = [
     {
@@ -31,7 +30,7 @@ export const opinions = [
     {
         id: 'would_not_use',
         color: colors.pink
-    },
+    }
 ]
 
 /*
@@ -52,7 +51,8 @@ const getChartData = data => {
             }
 
             // get count for a given bucket
-            const getCount = id => id === 'separator' ? 100 : tool.opinion.buckets.find(b => b.id === id).count
+            const getCount = id =>
+                id === 'separator' ? 100 : tool.opinion.buckets.find(b => b.id === id).count
 
             // get sum of all other buckets up to current bucket
             const getSum = id => {

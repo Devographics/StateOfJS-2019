@@ -117,7 +117,47 @@ translations:
     - key: sources.other_unknown
       t: Other/Unknown
 
-    # other
+    # javascript proficiency
+    - key: javascript-proficiency.none.short
+      t: none
+    - key: javascript-proficiency.none.long
+      t: Not able to write any JavaScript
+    - key: javascript-proficiency.advanced_front_end_patterns.short
+      t: Advanced 
+    - key: javascript-proficiency.advanced_front_end_patterns.long
+      t: Can handle advanced front-end patterns (state management, data loading, etc.) 
+    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
+      t: Frameworks 
+    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
+      t: Can work on existing front-end codebases using modern frameworks (React, Vue, etc.) 
+    - key: javascript-proficiency.short_simple_javascript.short
+      t: Beginner
+    - key: javascript-proficiency.short_simple_javascript.long
+      t: Can write short, simple JavaScript or jQuery statements
+    - key: javascript-proficiency.entire_codebases_from_scratch.short
+      t: Expert
+    - key: javascript-proficiency.entire_codebases_from_scratch.long
+      t: Can architecture entire front-end codebases from scratch
+
+    # backend proficiency
+    - key: backend-proficiency.none.short
+      t: none
+    - key: backend-proficiency.none.long
+      t: Not able to handle any back-end work
+    - key: backend-proficiency.able_to_setup_cms_or_site_generator.short
+      t: CMS/Static Site Generators
+    - key: backend-proficiency.able_to_setup_cms_or_site_generator.long
+      t: Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)
+    - key: backend-proficiency.able_to_use_existing_frameworks.short
+      t: Frameworks
+    - key: backend-proficiency.able_to_use_existing_frameworks.long
+      t: Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)
+    - key: backend-proficiency.able_to_setup_from_scratch.short
+      t: Expert
+    - key: backend-proficiency.able_to_setup_from_scratch.long
+      t: Able to set up an entire back-end from scratch (Go, Node, etc.)
+
+      # other
     - key: block.title.participation-by-country
       t: Participation by Country
     - key: block.description.participation-by-country
@@ -144,12 +184,16 @@ translations:
       t: Source Breakdown
     - key: block.description.gender
       t: Gender breakdown.
-    - key: block.title.job-titles
+    - key: block.title.job-title
       t: Job Titles
     - key: block.title.javascript-proficiency
       t: JavaScript Proficiency
+    - key: block.description.javascript-proficiency
+      t: How proficient participants were at JavaScript development?
     - key: block.title.backend-proficiency
       t: Back-end Proficiency
+    - key: block.description.backend-proficiency
+      t: How proficient participants were at Back-end development?
 
     ###########################################################################
     # Features

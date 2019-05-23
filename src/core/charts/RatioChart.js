@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { colors } from '../../constants'

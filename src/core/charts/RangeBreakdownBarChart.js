@@ -14,9 +14,9 @@ const margin = {
 
 const Tooltip = memo(({ translate, indexValue, value, data }) => {
     return (
-        <>
+        <div style={{ maxWidth: 300 }}>
             {translate(indexValue)}:&nbsp;<strong>{value}%</strong>&nbsp;({data.count})
-        </>
+        </div>
     )
 })
 
@@ -31,12 +31,18 @@ const RangeBreakdownBarChart = ({ buckets, i18nNamespace }) => {
         [translate, i18nNamespace]
     )
 
+    const maxValue = useMemo(
+        () => Math.ceil(Math.max(...buckets.map(b => b.percentage)) / 10) * 10,
+        [buckets]
+    )
+
     return (
         <div style={{ height: 260 }}>
             <ResponsiveBar
                 data={buckets}
                 indexBy="id"
                 keys={['percentage']}
+                maxValue={maxValue}
                 margin={margin}
                 padding={0.4}
                 theme={theme}
@@ -44,8 +50,12 @@ const RangeBreakdownBarChart = ({ buckets, i18nNamespace }) => {
                 labelFormat={v => `${v}%`}
                 labelSkipHeight={16}
                 enableGridX={false}
+                gridYValues={maxValue / 10 + 1}
                 enableGridY={true}
-                axisLeft={{ format: v => `${v}%` }}
+                axisLeft={{
+                    format: v => `${v}%`,
+                    tickValues: maxValue / 10 + 1
+                }}
                 axisBottom={{ format: translateShort }}
                 tooltip={barProps => <Tooltip translate={translateLong} {...barProps} />}
             />
