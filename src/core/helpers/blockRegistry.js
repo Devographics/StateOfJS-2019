@@ -10,6 +10,7 @@ import GenderBreakdownBlock from 'modules/demographics/blocks/GenderBreakdownBlo
 
 // features
 import FeaturesOverviewBlock from 'modules/features/blocks/FeaturesOverviewBlock'
+import FeaturesRadialClusterOverviewBlock from 'modules/features/blocks/FeaturesRadialClusterOverviewBlock'
 import FeaturesSectionOverviewBlock from 'modules/features/blocks/FeaturesSectionOverviewBlock'
 import FeaturesUsageRatioBlock from 'modules/features/blocks/FeaturesUsageRatioBlock'
 import FeatureBlock from 'modules/features/blocks/FeatureBlock'
@@ -34,6 +35,7 @@ const blockRegistry = {
 
     // features
     'features-overview': FeaturesOverviewBlock,
+    'features-radial-cluster-overview': FeaturesRadialClusterOverviewBlock,
     'features-section-overview': FeaturesSectionOverviewBlock,
     'features-usage-ratio': FeaturesUsageRatioBlock,
     feature: FeatureBlock,
