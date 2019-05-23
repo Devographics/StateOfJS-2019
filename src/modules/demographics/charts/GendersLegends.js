@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { memo, useMemo } from 'react'
 import theme from 'nivoTheme'
 import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
-import { genderNameToTranslationKey } from 'core/i18n/translation-key-getters'
+import { keys } from '../../../constants'
 
 const GenderLegends = () => {
     const { translate } = useI18n()
 
-    const legends = Object.keys(theme.genderColors).map(gender => ({
-        id: gender,
-        label: translate(genderNameToTranslationKey(gender)),
-        color: theme.genderColors[gender]
-    }))
+    const legends = useMemo(
+        () =>
+            keys.gender.map(gender => ({
+                id: gender,
+                label: translate(`gender.${gender}`),
+                color: theme.genderColors[gender]
+            })),
+        [keys.gender, theme.genderColors]
+    )
 
     return <Legends legends={legends} modifier="horizontal" />
 }
 
-export default GenderLegends
+export default memo(GenderLegends)

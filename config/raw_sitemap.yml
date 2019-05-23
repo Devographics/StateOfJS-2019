@@ -32,8 +32,8 @@
         showDescription: true
       # - id: source
       #   type: source
-      # - id: gender
-      #   type: gender
+      - id: gender
+        type: gender
       - id: job-title
         type: horizontal-bar
         dataKey: breakdown

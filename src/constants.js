@@ -89,12 +89,15 @@ const backendProficiencyKeys = [
     'able_to_setup_from_scratch'
 ]
 
+const genderKeys = ['female', 'male', 'non_binary', 'prefer_not_to_say']
+
 export const keys = {
     salary: salaryKeys,
     companySize: companySizeKeys,
     yearsOfExperience: yearsOfExperienceKeys,
     javascriptProficiency: javascriptProficiencyKeys,
-    backendProficiency: backendProficiencyKeys
+    backendProficiency: backendProficiencyKeys,
+    gender: genderKeys
 }
 
 export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']

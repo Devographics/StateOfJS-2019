@@ -1,10 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { ResponsiveWaffleCanvas } from '@nivo/waffle'
 import theme from 'nivoTheme'
 import ChartRatioContainer from 'core/charts/ChartRatioContainer'
-import GenderLegends from './GendersLegends'
 import { useI18n } from 'core/i18n/i18nContext'
-import { genderNameToTranslationKey } from 'core/i18n/translation-key-getters'
+import GenderLegends from './GendersLegends'
 
 const rows = 32
 const columns = 128
@@ -14,20 +14,16 @@ const GenderBreakdownWaffleChart = ({ data }) => {
 
     let total = 0
     const colors = []
-    const translatedData = data
-        .filter(d => d.gender !== 'prefer not to say')
-        .map(d => {
-            colors.push(theme.genderColors[d.gender])
-            total += d.count
+    const translatedData = data.map(bucket => {
+        colors.push(theme.genderColors[bucket.id])
+        total += bucket.count
 
-            const gender = translate(genderNameToTranslationKey(d.gender)) || d.gender
-
-            return {
-                id: d.gender,
-                label: gender,
-                value: d.count
-            }
-        })
+        return {
+            id: bucket.id,
+            label: translate(`gender.${bucket.id}`),
+            value: bucket.count
+        }
+    })
 
     return (
         <>
@@ -47,6 +43,15 @@ const GenderBreakdownWaffleChart = ({ data }) => {
             </div>
         </>
     )
+}
+
+GenderBreakdownWaffleChart.propTypes = {
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            count: PropTypes.number.isRequired
+        })
+    ).isRequired
 }
 
 export default GenderBreakdownWaffleChart

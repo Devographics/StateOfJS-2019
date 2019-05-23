@@ -109,15 +109,15 @@ translations:
     - key: company-size.axis_legend
       t: number of employees
 
-    # genders
-    - key: genders.female
+    # gender
+    - key: gender.female
       t: Female
-    - key: genders.male
+    - key: gender.male
       t: Male
-    - key: genders.non_binary__third_gender
+    - key: gender.non_binary
       t: Non-Binary/Third Gender
-    - key: genders.other
-      t: Other
+    - key: gender.prefer_not_to_say
+      t: Prefer not to say
 
     # sources
     - key: sources.other_unknown

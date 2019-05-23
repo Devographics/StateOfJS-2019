@@ -26,8 +26,8 @@ export default {
     genderColors: {
         female: colors.blueLight,
         male: colors.teal,
-        'non-binary/ third gender': colors.yellow,
-        other: colors.greyMedium
+        non_binary: colors.pinkLight,
+        prefer_not_to_say: colors.greyMedium
     },
     axis: {
         domain: {
