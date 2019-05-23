@@ -83,10 +83,10 @@ export default {
     tooltip: {
         container: {
             fontSize: 14,
-            background: '#ffffff',
-            color: colors.blue,
+            background: '#1b1f2f',
+            color: colors.tealLight,
             borderRadius: 0,
-            boxShadow: `0 5px 9px rgba(0, 0, 0, 0.2)`
+            boxShadow: `9px 9px 0 rgba(0, 0, 0, 0.15)`
         }
     },
     labels: {

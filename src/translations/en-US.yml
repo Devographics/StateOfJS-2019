@@ -167,7 +167,21 @@ translations:
     - key: backend-proficiency.axis_legend
       t: back-end proficiency
 
-      # other
+    # job title
+    - key: job-title.front_end_dev
+      t: Front-end Developer/Engineer
+    - key: job-title.full_stack_dev
+      t: Full-stack Developer/Engineer
+    - key: job-title.web_designer
+      t: Web Designer
+    - key: job-title.ux_designer
+      t: UX Designer
+    - key: job-title.ui_designer
+      t: UI Designer
+    - key: job-title.back_end_dev
+      t: Back-end Developer/Engineer
+
+    # other
     - key: block.title.participation-by-country
       t: Participation by Country
     - key: block.description.participation-by-country

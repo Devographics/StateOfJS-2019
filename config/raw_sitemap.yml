@@ -40,6 +40,7 @@
         type: horizontal-bar
         dataKey: breakdown
         showDescription: true
+        translateData: true
       - id: javascript-proficiency
         type: vertical-bar
         dataKey: breakdown

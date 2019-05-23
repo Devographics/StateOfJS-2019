@@ -3,6 +3,7 @@ import { sortBy } from 'lodash'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
+import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
 
 const Tooltip = memo(({ indexValue, value }) => (
@@ -17,11 +18,23 @@ const margin = {
     top: 40,
     right: 20,
     bottom: 40,
-    left: 160
+    left: 240
 }
 
-const HorizontalBarChart = ({ buckets }) => {
-    const data = useMemo(() => sortBy(buckets.map(bucket => ({ ...bucket })), 'count'), [buckets])
+const HorizontalBarChart = ({ buckets, i18nNamespace, translateData }) => {
+    const { translate } = useI18n()
+    const data = useMemo(
+        () =>
+            sortBy(buckets.map(bucket => ({ ...bucket })), 'count').map(bucket => {
+                if (translateData !== true) return bucket
+
+                return {
+                    ...bucket,
+                    id: translate(`${i18nNamespace}.${bucket.id}`)
+                }
+            }),
+        [buckets, translate, i18nNamespace, translateData]
+    )
 
     return (
         <div style={{ height: buckets.length * 36 + 80 }}>
@@ -60,7 +73,9 @@ HorizontalBarChart.propTypes = {
             count: PropTypes.number.isRequired,
             percentage: PropTypes.number
         })
-    )
+    ),
+    i18nNamespace: PropTypes.string.isRequired,
+    translateData: PropTypes.bool.isRequired
 }
 
 export default memo(HorizontalBarChart)

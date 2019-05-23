@@ -36,6 +36,7 @@ const HorizontalBarBlock = ({ block, data }) => {
                 <HorizontalBarChart
                     buckets={blockData[block.dataKey].buckets}
                     i18nNamespace={block.id}
+                    translateData={!!block.translateData}
                 />
             </ChartContainer>
         </Block>
@@ -46,7 +47,8 @@ HorizontalBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         dataKey: PropTypes.string.isRequired,
-        showDescription: PropTypes.bool
+        showDescription: PropTypes.bool,
+        translateData: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({
         data: PropTypes.shape({
