@@ -6,11 +6,14 @@ import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
 
-const Tooltip = memo(({ indexValue, value }) => (
+const Tooltip = memo(({ indexValue, value, mode }) => (
     <span>
         {indexValue}
         :&nbsp;
-        <strong>{value}</strong>
+        <strong>
+            {value}
+            {mode === 'percentage' && '%'}
+        </strong>
     </span>
 ))
 
@@ -21,7 +24,7 @@ const margin = {
     left: 240
 }
 
-const HorizontalBarChart = ({ buckets, i18nNamespace, translateData }) => {
+const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode = 'count' }) => {
     const { translate } = useI18n()
     const data = useMemo(
         () =>
@@ -41,7 +44,7 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData }) => {
             <ResponsiveBar
                 layout="horizontal"
                 margin={margin}
-                keys={['count']}
+                keys={[mode]}
                 data={data}
                 theme={theme}
                 enableGridX={true}
@@ -51,7 +54,7 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData }) => {
                 padding={0.68}
                 borderRadius={5}
                 axisTop={{
-                    format: '.2s'
+                    format: mode === 'percentage' ? v => `${v}%` : '.2s'
                 }}
                 axisBottom={{
                     format: '.2s'
@@ -60,7 +63,7 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData }) => {
                     tickSize: 0,
                     tickPadding: 10
                 }}
-                tooltip={barProps => <Tooltip {...barProps} />}
+                tooltip={barProps => <Tooltip mode={mode} {...barProps} />}
             />
         </div>
     )
@@ -75,7 +78,8 @@ HorizontalBarChart.propTypes = {
         })
     ),
     i18nNamespace: PropTypes.string.isRequired,
-    translateData: PropTypes.bool.isRequired
+    translateData: PropTypes.bool,
+    mode: PropTypes.string
 }
 
 export default memo(HorizontalBarChart)

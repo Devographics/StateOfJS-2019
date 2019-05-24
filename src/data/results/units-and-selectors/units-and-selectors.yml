@@ -53,7 +53,7 @@ aggregations:
       buckets:
         - id: '::before'
           count: 11059
-          percentage: -179.83
+          percentage: 99.22
         - id: '::after'
           count: 11057
           percentage: 99.13
