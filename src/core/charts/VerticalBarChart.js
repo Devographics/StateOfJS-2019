@@ -50,7 +50,7 @@ const VerticalBarChart = ({ buckets, i18nNamespace }) => {
                 labelFormat={v => `${v}%`}
                 labelSkipHeight={16}
                 enableGridX={false}
-                gridYValues={maxValue / 10 + 1}
+                gridYValues={[maxValue / 10 + 1]}
                 enableGridY={true}
                 axisLeft={{
                     format: v => `${v}%`,

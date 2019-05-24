@@ -4,8 +4,9 @@ import PropTypes from 'prop-types'
 export default class LegendsItem extends Component {
     static propTypes = {
         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-        color: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
+        color: PropTypes.string,
+        keyLabel: PropTypes.string,
         style: PropTypes.object.isRequired,
         chipSize: PropTypes.number.isRequired,
         chipStyle: PropTypes.object.isRequired,
@@ -38,7 +39,7 @@ export default class LegendsItem extends Component {
     }
 
     render() {
-        const { color, label, chipSize, style, chipStyle } = this.props
+        const { color, label, keyLabel, chipSize, style, chipStyle } = this.props
 
         return (
             <div
@@ -48,16 +49,19 @@ export default class LegendsItem extends Component {
                 onMouseLeave={this.handleMouseLeave}
                 onClick={this.handleClick}
             >
-                <span
-                    className="Legends__Item__Chip"
-                    style={{
-                        width: chipSize,
-                        height: chipSize,
-                        background: color,
-                        ...chipStyle
-                    }}
-                />
-                {label}
+                {color && (
+                    <span
+                        className="Legends__Item__Chip"
+                        style={{
+                            width: chipSize,
+                            height: chipSize,
+                            background: color,
+                            ...chipStyle
+                        }}
+                    />
+                )}
+                {keyLabel && <span className="Legends__Item__KeyLabel">{keyLabel}</span>}
+                <span className="Legends__Item__Label">{label}</span>
             </div>
         )
     }

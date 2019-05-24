@@ -43,7 +43,7 @@ translations:
     - key: salary.200_more.short
       t: $200k+
     - key: salary.axis_legend
-      t: salary range
+      t: Salary Range
 
     # years of experience
     - key: years-of-experience.less_than_1.long
@@ -71,7 +71,7 @@ translations:
     - key: years-of-experience.more_than_20.short
       t: '>20 years'
     - key: years-of-experience.axis_legend
-      t: years of experience
+      t: Years of Experience
 
     # company size
     - key: company-size.1.long
@@ -107,7 +107,7 @@ translations:
     - key: company-size.more_than_1000.short
       t: 1000+
     - key: company-size.axis_legend
-      t: number of employees
+      t: Number of Employees
 
     # gender
     - key: gender.female
@@ -124,48 +124,58 @@ translations:
       t: Other/Unknown
 
     # javascript proficiency
+    - key: block.title.javascript-proficiency
+      t: JavaScript Proficiency
+    - key: block.description.javascript-proficiency
+      t: How proficient are you at JavaScript development?
+    - key: javascript-proficiency.axis_legend
+      t: JavaScript Proficiency
     - key: javascript-proficiency.none.short
-      t: none
+      t: None
     - key: javascript-proficiency.none.long
-      t: Not able to write any JavaScript
+      t: I am not able to write any JavaScript
+    - key: javascript-proficiency.short_simple_javascript.short
+      t: Beginner
+    - key: javascript-proficiency.short_simple_javascript.long
+      t: I can write short, simple JavaScript or jQuery statements
+    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
+      t: Intermediate 
+    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
+      t: I can work on existing front-end codebases using modern frameworks (React, Vue, etc.)
     - key: javascript-proficiency.advanced_front_end_patterns.short
       t: Advanced 
     - key: javascript-proficiency.advanced_front_end_patterns.long
       t: Can handle advanced front-end patterns (state management, data loading, etc.) 
-    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
-      t: Frameworks 
-    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
-      t: Can work on existing front-end codebases using modern frameworks (React, Vue, etc.) 
-    - key: javascript-proficiency.short_simple_javascript.short
-      t: Beginner
-    - key: javascript-proficiency.short_simple_javascript.long
-      t: Can write short, simple JavaScript or jQuery statements
     - key: javascript-proficiency.entire_codebases_from_scratch.short
       t: Expert
     - key: javascript-proficiency.entire_codebases_from_scratch.long
       t: Can architecture entire front-end codebases from scratch
-    - key: javascript-proficiency.axis_legend
-      t: javascript proficiency
 
     # backend proficiency
-    - key: backend-proficiency.none.short
-      t: none
-    - key: backend-proficiency.none.long
-      t: Not able to handle any back-end work
-    - key: backend-proficiency.able_to_setup_cms_or_site_generator.short
-      t: CMS/Static Site Generators
-    - key: backend-proficiency.able_to_setup_cms_or_site_generator.long
-      t: Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)
-    - key: backend-proficiency.able_to_use_existing_frameworks.short
-      t: Frameworks
-    - key: backend-proficiency.able_to_use_existing_frameworks.long
-      t: Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)
-    - key: backend-proficiency.able_to_setup_from_scratch.short
-      t: Expert
-    - key: backend-proficiency.able_to_setup_from_scratch.long
-      t: Able to set up an entire back-end from scratch (Go, Node, etc.)
+
+    - key: block.title.backend-proficiency
+      t: Back-end Proficiency
+    - key: block.description.backend-proficiency
+      t: How proficient are you at back-end development?
     - key: backend-proficiency.axis_legend
-      t: back-end proficiency
+      t: Back-End Proficiency
+    - key: backend-proficiency.none.short
+      t: None
+    - key: backend-proficiency.none.long
+      t: I am not able to handle any back-end work
+    - key: backend-proficiency.able_to_setup_cms_or_site_generator.short
+      t: Beginner
+    - key: backend-proficiency.able_to_setup_cms_or_site_generator.long
+      t: I can set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)
+    - key: backend-proficiency.able_to_use_existing_frameworks.short
+      t: Intermediate
+    - key: backend-proficiency.able_to_use_existing_frameworks.long
+      t: I can develop apps using pre-existing frameworks (Rails, Laravel, etc.)
+    - key: backend-proficiency.able_to_setup_from_scratch.short
+      t: Advanced
+    - key: backend-proficiency.able_to_setup_from_scratch.long
+      t: I can set up an entire back-end from scratch (Go, Node, etc.)
+
 
     # job title
     - key: job-title.front_end_dev
@@ -213,15 +223,7 @@ translations:
     - key: block.title.job-title
       t: Job Titles
     - key: block.description.job-title
-      t: How participants introduce themselves at parties?
-    - key: block.title.javascript-proficiency
-      t: JavaScript Proficiency
-    - key: block.description.javascript-proficiency
-      t: How proficient participants were at JavaScript development?
-    - key: block.title.backend-proficiency
-      t: Back-end Proficiency
-    - key: block.description.backend-proficiency
-      t: How proficient participants were at Back-end development?
+      t: How do you introduce yourself at parties?
 
     ###########################################################################
     # Features
@@ -580,7 +582,7 @@ translations:
     - key: block.description.usage-ratio
       t: Ranking usage ratios among users who are aware of a technology. 
     - key: users_percentage
-      t: percentage of users
+      t: Percentage of Users
 
 # TODO: review this:
 

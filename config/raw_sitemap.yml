@@ -46,11 +46,13 @@
         dataKey: breakdown
         bucketKeys: javascriptProficiency
         showDescription: true
+        showLegend: true
       - id: backend-proficiency
         type: vertical-bar
         dataKey: breakdown
         bucketKeys: backendProficiency
         showDescription: true
+        showLegend: true
 
 - id: features
   path: /features

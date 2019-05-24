@@ -1,5 +1,6 @@
 .Legends {
     font-size: $small-font;
+    margin: $spacing 0;
 }
 
 .Legends--horizontal {
@@ -14,7 +15,6 @@
         // fit in as many columns as possible as long as they're wider than 150px
         grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     }
-    margin: $spacing 0;
     &.Legends--withFrame {
         @include small {
             padding: $spacing/2;
@@ -50,15 +50,21 @@
 .Legends__Item {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    // cursor: pointer;
     flex: 1;
     @include small{
         margin-bottom: $spacing/2;
     }
+    .Legends--vertical &{
+        margin-bottom: $spacing/2;
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
 }
 
 .Legends__Item:hover {
-    background: rgba(255, 255, 255, 0.15);
+    // background: rgba(255, 255, 255, 0.15);
 }
 
 .Legends__Item__Chip {
@@ -67,6 +73,9 @@
     flex-shrink: 0;
 }
 
+.Legends__Item__KeyLabel{
+    width: 120px;
+}
 // .Legends--connections {
 //     padding: $spacing / 2;
 //     display: grid;

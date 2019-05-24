@@ -2,60 +2,69 @@ import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { keys } from '../../constants'
 import Block from 'core/components/Block'
+import Legends from 'core/charts/Legends'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
+import { useI18n } from 'core/i18n/i18nContext'
 
-const VerticalBarBlock = ({ block, data }) => {
+const getChartData = (data, block) => {
     if (!data || !data.data) {
-        return (
-            <div>VerticalBarBlock: Missing data for block {block.id}, page data is undefined</div>
+        throw new Error(
+            `VerticalBarBlock: Missing data for block ${block.id}, page data is undefined`
         )
     }
 
     const bucketKeys = keys[block.bucketKeys]
     if (!Array.isArray(bucketKeys)) {
-        return (
-            <div>
-                VerticalBarBlock: Missing bucket keys for block {block.id}, bucketKeys:{' '}
-                {block.bucketKeys || 'undefined'}
-            </div>
+        throw new Error(
+            `VerticalBarBlock: Missing bucket keys for block ${
+                block.id
+            }, bucketKeys: ${block.bucketKeys || 'undefined'}`
         )
     }
 
-    const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
-        block,
-        data.data
-    ])
+    const blockData = data.data.aggregations.find(agg => agg.id === block.id)
+
     if (!blockData) {
-        return <div>VerticalBarBlock: Missing data for block {block.id}</div>
+        throw new Error(`VerticalBarBlock: Missing data for block ${block.id}`)
     }
     if (
         blockData[block.dataKey] === undefined ||
         !Array.isArray(blockData[block.dataKey].buckets)
     ) {
-        return (
-            <div>
-                VerticalBarBlock: Non existing or invalid data key {block.data.key} for block{' '}
-                {block.id}
-            </div>
+        throw new Error(
+            `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${
+                block.id
+            }`
         )
     }
 
-    const sortedBuckets = useMemo(
-        () =>
-            bucketKeys.map(bucketKey => {
-                const bucket = blockData[block.dataKey].buckets.find(b => b.id === bucketKey)
-                if (bucket === undefined) {
-                    throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
-                }
+    const sortedBuckets = bucketKeys.map(bucketKey => {
+        const bucket = blockData[block.dataKey].buckets.find(b => b.id === bucketKey)
+        if (bucket === undefined) {
+            throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
+        }
 
-                return bucket
-            }),
-        [blockData, block.dataKey, bucketKeys]
-    )
+        return bucket
+    })
+
+    return { sortedBuckets, bucketKeys }
+}
+
+const VerticalBarBlock = ({ block, data }) => {
+    const { translate } = useI18n()
+    const { showDescription, showLegend } = block
+    const { bucketKeys, sortedBuckets } = useMemo(() => getChartData(data, block), [data, block])
+
+    const legends = bucketKeys.map(key => ({
+        id: `${block.id}.${key}`,
+        label: translate(`${block.id}.${key}.long`),
+        keyLabel: `${translate(`${block.id}.${key}.short`)}:`
+    }))
 
     return (
-        <Block id={block.id} showDescription={!!block.showDescription}>
+        <Block id={block.id} showDescription={showDescription}>
+            {showLegend && <Legends legends={legends} layout="vertical" />}
             <ChartContainer>
                 <VerticalBarChart
                     keys={bucketKeys}

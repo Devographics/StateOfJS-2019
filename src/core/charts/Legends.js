@@ -23,7 +23,7 @@ const Legends = ({
 
     return (
         <div className={classNames.join(' ')} style={rootStyle}>
-            {legends.map(({ id, label, color }) => (
+            {legends.map(({ id, label, color, keyLabel }) => (
                 <LegendsItem
                     key={id}
                     id={id}
@@ -35,6 +35,7 @@ const Legends = ({
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseLeave}
                     onClick={onClick}
+                    keyLabel={keyLabel}
                 />
             ))}
         </div>
@@ -46,7 +47,8 @@ Legends.propTypes = {
         PropTypes.shape({
             id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             label: PropTypes.string.isRequired,
-            color: PropTypes.string.isRequired
+            keyLabel: PropTypes.string,
+            color: PropTypes.string
         })
     ).isRequired,
     layout: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
