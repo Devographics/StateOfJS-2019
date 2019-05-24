@@ -583,6 +583,8 @@ translations:
       t: Ranking usage ratios among users who are aware of a technology. 
     - key: users_percentage
       t: Percentage of Users
+    - key: users_count
+      t: Users Count
 
 # TODO: review this:
 

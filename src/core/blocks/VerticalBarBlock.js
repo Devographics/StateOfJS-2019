@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { keys } from '../../constants'
 import Block from 'core/components/Block'
@@ -51,7 +51,10 @@ const getChartData = (data, block) => {
     return { sortedBuckets, bucketKeys }
 }
 
-const VerticalBarBlock = ({ block, data }) => {
+const VerticalBarBlock = ({ block, data, usePercents }) => {
+
+    const [mode, setMode] = useState(usePercents ? 'percentage' : 'count');
+
     const { translate } = useI18n()
     const { showDescription, showLegend } = block
     const { bucketKeys, sortedBuckets } = useMemo(() => getChartData(data, block), [data, block])
@@ -64,12 +67,20 @@ const VerticalBarBlock = ({ block, data }) => {
 
     return (
         <Block id={block.id} showDescription={showDescription}>
+            <button onClick={() => {
+                if (mode === 'percentage') {
+                    setMode('count')
+                } else {
+                    setMode('percentage')
+                }
+            }}>toggle</button>
             {showLegend && <Legends legends={legends} layout="vertical" />}
             <ChartContainer>
                 <VerticalBarChart
                     keys={bucketKeys}
                     buckets={sortedBuckets}
                     i18nNamespace={block.id}
+                    mode={mode}
                 />
             </ChartContainer>
         </Block>

@@ -7,20 +7,20 @@ import { colors } from '../../constants'
 
 const margin = {
     top: 10,
-    right: 56,
+    right: 60,
     bottom: 50,
-    left: 32
+    left: 60
 }
 
-const Tooltip = memo(({ translate, indexValue, value, data }) => {
+const Tooltip = memo(({ translate, indexValue, value, data, mode }) => {
     return (
         <div style={{ maxWidth: 300 }}>
-            {translate(indexValue)}:&nbsp;<strong>{value}%</strong>&nbsp;({data.count})
+            {translate(indexValue)}:&nbsp;<strong>{value}{mode === 'percentage' && '%'}</strong>&nbsp;({data.count})
         </div>
     )
 })
 
-const VerticalBarChart = ({ buckets, i18nNamespace }) => {
+const VerticalBarChart = ({ buckets, i18nNamespace, mode = 'percentage' }) => {
     const { translate } = useI18n()
 
     const [translateShort, translateLong] = useMemo(
@@ -36,30 +36,32 @@ const VerticalBarChart = ({ buckets, i18nNamespace }) => {
         [buckets]
     )
 
+    const formatFunction = mode === 'percentage' ? v => `${v}%` : '.2s'
+
     return (
         <div style={{ height: 260 }}>
             <ResponsiveBar
                 data={buckets}
                 indexBy="id"
-                keys={['percentage']}
-                maxValue={maxValue}
+                keys={[mode]}
+                // maxValue={maxValue}
                 margin={margin}
                 padding={0.4}
                 theme={theme}
                 colors={[colors.blue]}
-                labelFormat={v => `${v}%`}
+                labelFormat={formatFunction}
                 labelSkipHeight={16}
                 enableGridX={false}
                 gridYValues={maxValue / 10 + 1}
                 enableGridY={true}
                 axisLeft={{
-                    format: v => `${v}%`,
+                    format: formatFunction,
                     tickValues: maxValue / 10 + 1
                 }}
                 axisRight={{
-                    format: v => `${v}%`,
+                    format: formatFunction,
                     tickValues: maxValue / 10 + 1,
-                    legend: translate('users_percentage'),
+                    legend: translate(`users_${mode}`),
                     legendPosition: 'middle',
                     legendOffset: 46
                 }}
@@ -69,7 +71,7 @@ const VerticalBarChart = ({ buckets, i18nNamespace }) => {
                     legendPosition: 'middle',
                     legendOffset: 40
                 }}
-                tooltip={barProps => <Tooltip translate={translateLong} {...barProps} />}
+                tooltip={barProps => <Tooltip mode={mode} translate={translateLong} {...barProps} />}
             />
         </div>
     )
@@ -84,7 +86,8 @@ VerticalBarChart.propTypes = {
             percentage: PropTypes.number
         })
     ),
-    i18nNamespace: PropTypes.string.isRequired
+    i18nNamespace: PropTypes.string.isRequired,
+    mode: PropTypes.string,
 }
 
 export default memo(VerticalBarChart)
