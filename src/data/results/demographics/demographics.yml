@@ -5,6 +5,416 @@
 #
 section_id: demographics
 aggregations:
+  - id: country
+    breakdown:
+      total: 10308
+      others_count: 98
+      buckets:
+        - id: USA
+          count: 2460
+          percentage: 24.75
+        - id: UK
+          count: 1033
+          percentage: 10.02
+        - id: Germany
+          count: 679
+          percentage: 6.59
+        - id: France
+          count: 504
+          percentage: 4.89
+        - id: Canada
+          count: 494
+          percentage: 4.79
+        - id: Netherlands
+          count: 354
+          percentage: 3.43
+        - id: Russia
+          count: 317
+          percentage: 3.08
+        - id: Australia
+          count: 286
+          percentage: 2.77
+        - id: Poland
+          count: 274
+          percentage: 2.66
+        - id: Brazil
+          count: 269
+          percentage: 2.61
+        - id: Spain
+          count: 262
+          percentage: 2.54
+        - id: India
+          count: 216
+          percentage: 2.1
+        - id: Sweden
+          count: 208
+          percentage: 2.02
+        - id: Belgium
+          count: 144
+          percentage: 1.4
+        - id: Italy
+          count: 143
+          percentage: 1.39
+        - id: Denmark
+          count: 129
+          percentage: 1.25
+        - id: Czech Republic
+          count: 122
+          percentage: 1.18
+        - id: Finland
+          count: 106
+          percentage: 1.03
+        - id: Argentina
+          count: 99
+          percentage: 0.96
+        - id: Portugal
+          count: 99
+          percentage: 0.96
+        - id: Romania
+          count: 94
+          percentage: 0.91
+        - id: Switzerland
+          count: 94
+          percentage: 0.91
+        - id: Mexico
+          count: 92
+          percentage: 0.89
+        - id: Austria
+          count: 87
+          percentage: 0.84
+        - id: Israel
+          count: 84
+          percentage: 0.81
+        - id: Norway
+          count: 84
+          percentage: 0.81
+        - id: New Zealand
+          count: 83
+          percentage: 0.81
+        - id: Colombia
+          count: 78
+          percentage: 0.76
+        - id: Philippines
+          count: 72
+          percentage: 0.7
+        - id: Belarus
+          count: 64
+          percentage: 0.62
+        - id: South Africa
+          count: 55
+          percentage: 0.53
+        - id: China
+          count: 52
+          percentage: 0.5
+        - id: Hungary
+          count: 50
+          percentage: 0.49
+        - id: Japan
+          count: 46
+          percentage: 0.45
+        - id: Bulgaria
+          count: 45
+          percentage: 0.44
+        - id: Indonesia
+          count: 45
+          percentage: 0.44
+        - id: Ireland
+          count: 44
+          percentage: 0.43
+        - id: Croatia
+          count: 40
+          percentage: 0.39
+        - id: Taiwan
+          count: 40
+          percentage: 0.39
+        - id: Serbia
+          count: 38
+          percentage: 0.37
+        - id: Greece
+          count: 37
+          percentage: 0.36
+        - id: Slovakia
+          count: 35
+          percentage: 0.34
+        - id: Egypt
+          count: 34
+          percentage: 0.33
+        - id: Turkey
+          count: 31
+          percentage: 0.3
+        - id: Lithuania
+          count: 28
+          percentage: 0.27
+        - id: Nigeria
+          count: 26
+          percentage: 0.25
+        - id: Malaysia
+          count: 25
+          percentage: 0.24
+        - id: Singapore
+          count: 25
+          percentage: 0.24
+        - id: Chile
+          count: 23
+          percentage: 0.22
+        - id: Pakistan
+          count: 22
+          percentage: 0.21
+        - id: Estonia
+          count: 20
+          percentage: 0.19
+        - id: Latvia
+          count: 20
+          percentage: 0.19
+        - id: Iran
+          count: 19
+          percentage: 0.18
+        - id: Korea
+          count: 18
+          percentage: 0.17
+        - id: Vietnam
+          count: 18
+          percentage: 0.17
+        - id: Slovenia
+          count: 17
+          percentage: 0.16
+        - id: Hong Kong
+          count: 15
+          percentage: 0.15
+        - id: Uruguay
+          count: 15
+          percentage: 0.15
+        - id: Costa Rica
+          count: 13
+          percentage: 0.13
+        - id: Iceland
+          count: 13
+          percentage: 0.13
+        - id: Ecuador
+          count: 12
+          percentage: 0.12
+        - id: Kazakhstan
+          count: 12
+          percentage: 0.12
+        - id: Thailand
+          count: 12
+          percentage: 0.12
+        - id: Peru
+          count: 11
+          percentage: 0.11
+        - id: El Salvador
+          count: 10
+          percentage: 0.1
+        - id: Nepal
+          count: 10
+          percentage: 0.1
+        - id: Luxembourg
+          count: 9
+          percentage: 0.09
+        - id: Tunisia
+          count: 9
+          percentage: 0.09
+        - id: Venezuela
+          count: 9
+          percentage: 0.09
+        - id: Bangladesh
+          count: 8
+          percentage: 0.08
+        - id: Dominican Republic
+          count: 8
+          percentage: 0.08
+        - id: Georgia
+          count: 8
+          percentage: 0.08
+        - id: Kenya
+          count: 7
+          percentage: 0.07
+        - id: Moldova
+          count: 7
+          percentage: 0.07
+        - id: Uzbekistan
+          count: 7
+          percentage: 0.07
+        - id: Bosnia and Herzegovina
+          count: 6
+          percentage: 0.06
+        - id: Lebanon
+          count: 6
+          percentage: 0.06
+        - id: Morocco
+          count: 6
+          percentage: 0.06
+        - id: American Samoa
+          count: 5
+          percentage: 0.05
+        - id: Armenia
+          count: 5
+          percentage: 0.05
+        - id: Azerbaijan
+          count: 5
+          percentage: 0.05
+        - id: Bolivia
+          count: 5
+          percentage: 0.05
+        - id: Guatemala
+          count: 5
+          percentage: 0.05
+        - id: Republic of Kosovo
+          count: 5
+          percentage: 0.05
+        - id: Algeria
+          count: 4
+          percentage: 0.04
+        - id: Cyprus
+          count: 4
+          percentage: 0.04
+        - id: Macedonia
+          count: 4
+          percentage: 0.04
+        - id: Malta
+          count: 4
+          percentage: 0.04
+        - id: Nicaragua
+          count: 4
+          percentage: 0.04
+        - id: Honduras
+          count: 3
+          percentage: 0.03
+        - id: Jamaica
+          count: 3
+          percentage: 0.03
+        - id: Madagascar
+          count: 3
+          percentage: 0.03
+        - id: Ukraine
+          count: 3
+          percentage: 0.03
+        - id: United Arab Emirates
+          count: 3
+          percentage: 0.03
+        - id: Bahrain
+          count: 2
+          percentage: 0.02
+        - id: 'Bonaire, Sint Eustatius and Saba'
+          count: 2
+          percentage: 0.02
+        - id: Cameroon
+          count: 2
+          percentage: 0.02
+        - id: Ghana
+          count: 2
+          percentage: 0.02
+        - id: Jordan
+          count: 2
+          percentage: 0.02
+        - id: Panama
+          count: 2
+          percentage: 0.02
+        - id: Qatar
+          count: 2
+          percentage: 0.02
+        - id: Sri Lanka
+          count: 2
+          percentage: 0.02
+        - id: Aruba
+          count: 1
+          percentage: 0.01
+        - id: Barbados
+          count: 1
+          percentage: 0.01
+        - id: Belize
+          count: 1
+          percentage: 0.01
+        - id: Botswana
+          count: 1
+          percentage: 0.01
+        - id: Cambodia
+          count: 1
+          percentage: 0.01
+        - id: Central African Republic
+          count: 1
+          percentage: 0.01
+        - id: Cuba
+          count: 1
+          percentage: 0.01
+        - id: Curaçao
+          count: 1
+          percentage: 0.01
+        - id: Côte d'Ivoire
+          count: 1
+          percentage: 0.01
+        - id: French Guiana
+          count: 1
+          percentage: 0.01
+        - id: Gibraltar
+          count: 1
+          percentage: 0.01
+        - id: Guyana
+          count: 1
+          percentage: 0.01
+        - id: Haiti
+          count: 1
+          percentage: 0.01
+        - id: Jersey
+          count: 1
+          percentage: 0.01
+        - id: Kyrgyzstan
+          count: 1
+          percentage: 0.01
+        - id: Maldives
+          count: 1
+          percentage: 0.01
+        - id: Mauritius
+          count: 1
+          percentage: 0.01
+        - id: Mongolia
+          count: 1
+          percentage: 0.01
+        - id: New Caledonia
+          count: 1
+          percentage: 0.01
+        - id: 'Palestine, State of'
+          count: 1
+          percentage: 0.01
+        - id: Papua New Guinea
+          count: 1
+          percentage: 0.01
+        - id: Paraguay
+          count: 1
+          percentage: 0.01
+        - id: Puerto Rico
+          count: 1
+          percentage: 0.01
+        - id: Rwanda
+          count: 1
+          percentage: 0.01
+        - id: Saudi Arabia
+          count: 1
+          percentage: 0.01
+        - id: Senegal
+          count: 1
+          percentage: 0.01
+        - id: Somalia
+          count: 1
+          percentage: 0.01
+        - id: South Sudan
+          count: 1
+          percentage: 0.01
+        - id: Syrian Arab Republic
+          count: 1
+          percentage: 0.01
+        - id: Tanzania
+          count: 1
+          percentage: 0.01
+        - id: Togo
+          count: 1
+          percentage: 0.01
+        - id: Zambia
+          count: 1
+          percentage: 0.01
+        - id: Zimbabwe
+          count: 1
+          percentage: 0.01
   - id: gender
     breakdown:
       total: 11100
@@ -162,36 +572,36 @@ aggregations:
           percentage: 1.78
   - id: source
     breakdown:
-      total: 7550
-      others_count: 977
+      total: 7523
+      others_count: 950
       buckets:
         - id: email
           count: 1725
-          percentage: 35.8
+          percentage: 35.56
         - id: twitter
           count: 1295
-          percentage: 17.15
+          percentage: 17.21
         - id: work
           count: 557
-          percentage: 7.38
+          percentage: 7.4
         - id: CSS Tricks
           count: 546
-          percentage: 7.23
+          percentage: 7.26
         - id: stateofjs
           count: 475
-          percentage: 6.29
+          percentage: 6.31
         - id: Newsletter
           count: 203
-          percentage: 2.69
+          percentage: 2.7
         - id: reddit
           count: 174
-          percentage: 2.3
+          percentage: 2.31
         - id: sidebar.io
           count: 168
           percentage: 2.23
         - id: Slack
           count: 160
-          percentage: 2.12
+          percentage: 2.13
         - id: facebook
           count: 129
           percentage: 1.71
@@ -200,19 +610,19 @@ aggregations:
           percentage: 1.62
         - id: Frontend Focus
           count: 105
-          percentage: 1.39
+          percentage: 1.4
         - id: Designer News
           count: 103
-          percentage: 1.36
+          percentage: 1.37
         - id: Medium
           count: 101
           percentage: 1.34
         - id: Codrops
           count: 99
-          percentage: 1.31
+          percentage: 1.32
         - id: WordPress Tavern
           count: 81
-          percentage: 1.07
+          percentage: 1.08
         - id: freeCodeCamp
           count: 74
           percentage: 0.98
@@ -224,7 +634,7 @@ aggregations:
           percentage: 0.85
         - id: Hacker news
           count: 60
-          percentage: 0.79
+          percentage: 0.8
         - id: Smashing Magazine
           count: 56
           percentage: 0.74
@@ -236,13 +646,13 @@ aggregations:
           percentage: 0.61
         - id: CSS Weekly
           count: 38
-          percentage: 0.5
+          percentage: 0.51
         - id: CSS Layout News
           count: 24
           percentage: 0.32
         - id: One Page Love
           count: 20
-          percentage: 0.26
+          percentage: 0.27
         - id: Responsive Design Weekly
           count: 20
-          percentage: 0.26
+          percentage: 0.27
