@@ -76,7 +76,7 @@ export default {
     },
     legends: {
         text: {
-            fontSize: 12,
+            fontSize: 11,
             fill: '#eee'
         }
     },

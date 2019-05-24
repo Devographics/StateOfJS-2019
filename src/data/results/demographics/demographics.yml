@@ -5,7 +5,7 @@
 #
 section_id: demographics
 aggregations:
-  - id: country
+  - id: participation-by-country
     breakdown:
       total: 10308
       others_count: 98

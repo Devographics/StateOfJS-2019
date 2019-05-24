@@ -7,6 +7,7 @@ import OpinionScaleBlock from 'core/blocks/OpinionScaleBlock'
 // demographics
 import SourceBreakdownBlock from 'modules/demographics/blocks/SourceBreakdownBlock'
 import GenderBreakdownBlock from 'modules/demographics/blocks/GenderBreakdownBlock'
+import ParticipationByCountryBlock from 'modules/demographics/blocks/ParticipationByCountryBlock'
 
 // features
 import FeaturesOverviewBlock from 'modules/features/blocks/FeaturesOverviewBlock'
@@ -32,6 +33,7 @@ const blockRegistry = {
     //demographics
     source: SourceBreakdownBlock,
     gender: GenderBreakdownBlock,
+    'participation-by-country': ParticipationByCountryBlock,
 
     // features
     'features-overview': FeaturesOverviewBlock,

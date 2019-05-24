@@ -11,8 +11,8 @@
   path: /demographics
   type: page
   blocks:
-      # - id: participation-by-country
-      #   type: countries
+      - id: participation-by-country
+        type: participation-by-country
       - id: salary
         type: vertical-bar
         dataKey: breakdown
