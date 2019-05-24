@@ -31,23 +31,25 @@ const getChartData = (data, block) => {
 }
 
 const HorizontalBarBlock = ({ block, data }) => {
-
-
     const { id, showDescription, usePercents = false, translateData } = block
 
-    const [mode, setMode] = useState(usePercents ? 'percentage' : 'count');
+    const [mode, setMode] = useState(usePercents ? 'percentage' : 'count')
 
     const buckets = useMemo(() => getChartData(data, block), [data, block])
 
     return (
         <Block id={id} showDescription={showDescription}>
-            <button onClick={() => {
-                if (mode === 'percentage') {
-                    setMode('count')
-                } else {
-                    setMode('percentage')
-                }
-            }}>toggle</button>
+            <button
+                onClick={() => {
+                    if (mode === 'percentage') {
+                        setMode('count')
+                    } else {
+                        setMode('percentage')
+                    }
+                }}
+            >
+                toggle
+            </button>
             <ChartContainer>
                 <HorizontalBarChart
                     buckets={buckets}
@@ -66,7 +68,7 @@ HorizontalBarBlock.propTypes = {
         dataKey: PropTypes.string.isRequired,
         showDescription: PropTypes.bool,
         translateData: PropTypes.bool,
-        usePercents: PropTypes.bool,
+        usePercents: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({
         data: PropTypes.shape({

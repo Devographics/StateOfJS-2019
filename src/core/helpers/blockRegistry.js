@@ -1,7 +1,6 @@
 // generic
 import HorizontalBarBlock from 'core/blocks/HorizontalBarBlock'
 import VerticalBarBlock from 'core/blocks/VerticalBarBlock'
-import CountriesBlock from 'core/blocks/CountriesBlock'
 import OpinionScaleBlock from 'core/blocks/OpinionScaleBlock'
 
 // demographics
@@ -27,10 +26,9 @@ const blockRegistry = {
     // generic
     'horizontal-bar': HorizontalBarBlock,
     'vertical-bar': VerticalBarBlock,
-    countries: CountriesBlock,
     'opinion-scale': OpinionScaleBlock,
 
-    //demographics
+    // demographics
     source: SourceBreakdownBlock,
     gender: GenderBreakdownBlock,
     'participation-by-country': ParticipationByCountryBlock,

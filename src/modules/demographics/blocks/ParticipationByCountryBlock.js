@@ -10,8 +10,6 @@ const ParticipationByCountryBlock = ({ block, data }) => {
         data.data.aggregations
     ])
 
-    console.log(blockData)
-
     return (
         <Block id={block.id} showDescription={true}>
             <ChartContainer>

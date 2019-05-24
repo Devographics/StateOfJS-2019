@@ -17,7 +17,6 @@ const features = countries.features.map(feature => {
 })
 
 const colorRange = [
-    //colors.blueDark,
     colors.blue,
     colors.blueLight,
     colors.blueLighter,

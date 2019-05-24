@@ -64,6 +64,7 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode = 'cou
                     tickPadding: 10
                 }}
                 tooltip={barProps => <Tooltip mode={mode} {...barProps} />}
+                animate={false}
             />
         </div>
     )

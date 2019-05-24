@@ -52,8 +52,7 @@ const getChartData = (data, block) => {
 }
 
 const VerticalBarBlock = ({ block, data, usePercents }) => {
-
-    const [mode, setMode] = useState(usePercents ? 'percentage' : 'count');
+    const [mode, setMode] = useState(usePercents ? 'percentage' : 'count')
 
     const { translate } = useI18n()
     const { showDescription, showLegend } = block
@@ -67,13 +66,17 @@ const VerticalBarBlock = ({ block, data, usePercents }) => {
 
     return (
         <Block id={block.id} showDescription={showDescription}>
-            <button onClick={() => {
-                if (mode === 'percentage') {
-                    setMode('count')
-                } else {
-                    setMode('percentage')
-                }
-            }}>toggle</button>
+            <button
+                onClick={() => {
+                    if (mode === 'percentage') {
+                        setMode('count')
+                    } else {
+                        setMode('percentage')
+                    }
+                }}
+            >
+                toggle
+            </button>
             {showLegend && <Legends legends={legends} layout="vertical" />}
             <ChartContainer>
                 <VerticalBarChart

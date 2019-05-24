@@ -15,7 +15,12 @@ const margin = {
 const Tooltip = memo(({ translate, indexValue, value, data, mode }) => {
     return (
         <div style={{ maxWidth: 300 }}>
-            {translate(indexValue)}:&nbsp;<strong>{value}{mode === 'percentage' && '%'}</strong>&nbsp;({data.count})
+            {translate(indexValue)}:&nbsp;
+            <strong>
+                {value}
+                {mode === 'percentage' && '%'}
+            </strong>
+            &nbsp;({data.count})
         </div>
     )
 })
@@ -71,7 +76,10 @@ const VerticalBarChart = ({ buckets, i18nNamespace, mode = 'percentage' }) => {
                     legendPosition: 'middle',
                     legendOffset: 40
                 }}
-                tooltip={barProps => <Tooltip mode={mode} translate={translateLong} {...barProps} />}
+                tooltip={barProps => (
+                    <Tooltip mode={mode} translate={translateLong} {...barProps} />
+                )}
+                animate={false}
             />
         </div>
     )
@@ -87,7 +95,7 @@ VerticalBarChart.propTypes = {
         })
     ),
     i18nNamespace: PropTypes.string.isRequired,
-    mode: PropTypes.string,
+    mode: PropTypes.string
 }
 
 export default memo(VerticalBarChart)
