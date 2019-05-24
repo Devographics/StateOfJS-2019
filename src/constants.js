@@ -140,29 +140,4 @@ export const opinions = [
     }
 ]
 
-export const verticalMargin = 30
-export const innerMargin = 10
-export const barHeight = 30
-export const labelsWidth = 150
-
-export const barChartProps = {
-    layout: 'horizontal',
-    enableGridX: true,
-    enableGridY: false,
-    enableLabel: false,
-    reverse: false,
-    enableLabels: false,
-    padding: 0.8,
-    borderRadius: 2.5,
-    margin: {
-        top: verticalMargin,
-        right: innerMargin,
-        bottom: verticalMargin,
-        left: labelsWidth
-    },
-    axisTop: {
-        format: '.2s'
-    }
-}
-
 export const fontFamily = `'IBM Plex Mono', monospace`
