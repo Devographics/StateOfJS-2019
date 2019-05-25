@@ -32,7 +32,9 @@ BlockSwitcher.propTypes = {
         // key used to pick bucket keys
         bucketKeys: PropTypes.oneOf(Object.keys(keys)),
         // enable/disable block description
-        showDescription: PropTypes.bool
+        showDescription: PropTypes.bool,
+        // which unit to use for generic bar charts
+        units: PropTypes.oneOf(['percentage', 'count'])
     }),
     data: PropTypes.any.isRequired
 }

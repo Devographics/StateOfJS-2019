@@ -72,7 +72,7 @@ aggregations:
       buckets:
         - id: '4'
           count: 2969
-          percentage: 26.6
+          percentage: 26.61
         - id: '2'
           count: 2786
           percentage: 24.97
@@ -133,7 +133,7 @@ aggregations:
         - id: |+
 
           count: 212
-          percentage: 88.22
+          percentage: 5.61
         - id: Container queries
           count: 71
           percentage: 1.88

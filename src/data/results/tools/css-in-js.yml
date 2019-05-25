@@ -72,7 +72,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 7710
-          percentage: 69.18
+          percentage: 69.17
         - id: not_interested
           count: 1668
           percentage: 14.96
@@ -172,7 +172,7 @@ aggregations:
       buckets:
         - id: Linaria
           count: 42
-          percentage: 64.96
+          percentage: 12.69
         - id: CSS in JS
           count: 25
           percentage: 7.55

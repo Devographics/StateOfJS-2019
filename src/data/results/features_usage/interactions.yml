@@ -12,7 +12,7 @@ aggregations:
       buckets:
         - id: never_heard_not_sure
           count: 5378
-          percentage: 47.87
+          percentage: 47.86
         - id: know_not_used
           count: 4550
           percentage: 40.49

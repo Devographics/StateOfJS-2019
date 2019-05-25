@@ -12,7 +12,7 @@ aggregations:
       buckets:
         - id: px
           count: 11212
-          percentage: -381.83
+          percentage: 99.52
         - id: '%'
           count: 10919
           percentage: 96.92
@@ -53,7 +53,7 @@ aggregations:
       buckets:
         - id: '::before'
           count: 11059
-          percentage: 99.22
+          percentage: 99.15
         - id: '::after'
           count: 11057
           percentage: 99.13
@@ -76,7 +76,7 @@ aggregations:
       buckets:
         - id: div span (descendant)
           count: 10862
-          percentage: -139.41
+          percentage: 97.52
         - id: div > span (child)
           count: 10784
           percentage: 96.82
@@ -93,7 +93,7 @@ aggregations:
       buckets:
         - id: ':first-child'
           count: 10706
-          percentage: -605.69
+          percentage: 96.23
         - id: ':nth-child()'
           count: 10635
           percentage: 95.59
@@ -140,7 +140,7 @@ aggregations:
       buckets:
         - id: 'div[foo="bar"] (Equality)'
           count: 9494
-          percentage: -177.49
+          percentage: 91.64
         - id: 'div[foo] (Presence)'
           count: 8718
           percentage: 84.15
@@ -163,7 +163,7 @@ aggregations:
       buckets:
         - id: ':link and :visited'
           count: 8540
-          percentage: 37.07
+          percentage: 89.17
         - id: ':target'
           count: 4976
           percentage: 51.96
@@ -180,7 +180,7 @@ aggregations:
       buckets:
         - id: ':hover'
           count: 11225
-          percentage: -120.35
+          percentage: 99.85
         - id: ':focus'
           count: 10881
           percentage: 96.79
@@ -200,7 +200,7 @@ aggregations:
       buckets:
         - id: ':checked'
           count: 9337
-          percentage: -122.23
+          percentage: 91.22
         - id: ':enabled and :disabled'
           count: 7112
           percentage: 69.48

@@ -32,7 +32,7 @@ aggregations:
       buckets:
         - id: not_interested
           count: 3603
-          percentage: 32.06
+          percentage: 32.07
         - id: would_not_use
           count: 3345
           percentage: 29.78
@@ -52,7 +52,7 @@ aggregations:
       buckets:
         - id: would_use
           count: 4070
-          percentage: 36.22
+          percentage: 36.21
         - id: interested
           count: 2671
           percentage: 23.76
@@ -92,7 +92,7 @@ aggregations:
       buckets:
         - id: SASS
           count: 196
-          percentage: 51.57
+          percentage: 28.45
         - id: styled-components
           count: 69
           percentage: 10.01

@@ -22,7 +22,8 @@ export let colors = {
 
     tealLight: '#bad9db',
     teal: '#9ac6c9',
-    tealDark: '#445a5a',
+    tealDark: '#6a8f92',
+    tealDarker: '#445a5a',
 
     purpleLight: '#B096E7',
     purple: '#7854C3',

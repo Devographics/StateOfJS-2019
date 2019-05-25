@@ -177,42 +177,34 @@
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
       - id: pseudo-elements
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
       - id: combinators
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
       - id: tree-document-structure
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
       - id: attributes
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
       - id: links-urls
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
       - id: interaction
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
       - id: form-controls
         type: horizontal-bar
         dataKey: usage
         showDescription: true
-        usePercents: true
 
 - id: tools-and-methodology
   path: /tools-and-methodology

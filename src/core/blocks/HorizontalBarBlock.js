@@ -2,7 +2,8 @@ import React, { memo, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
-import HorizontalBarChart from '../charts/HorizontalBarChart'
+import HorizontalBarChart from 'core/charts/HorizontalBarChart'
+import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
 const getChartData = (data, block) => {
     if (!data || !data.data) {
@@ -31,31 +32,21 @@ const getChartData = (data, block) => {
 }
 
 const HorizontalBarBlock = ({ block, data }) => {
-    const { id, showDescription, usePercents = false, translateData } = block
-
-    const [mode, setMode] = useState(usePercents ? 'percentage' : 'count')
-
+    const { id, showDescription, units: defaultUnits = 'percentage', translateData } = block
+    const [units, setUnits] = useState(defaultUnits)
     const buckets = useMemo(() => getChartData(data, block), [data, block])
 
     return (
         <Block id={id} showDescription={showDescription}>
-            <button
-                onClick={() => {
-                    if (mode === 'percentage') {
-                        setMode('count')
-                    } else {
-                        setMode('percentage')
-                    }
-                }}
-            >
-                toggle
-            </button>
+            <div className="ChartControls">
+                <ChartUnitsSelector units={units} onChange={setUnits} />
+            </div>
             <ChartContainer>
                 <HorizontalBarChart
                     buckets={buckets}
                     i18nNamespace={id}
                     translateData={translateData}
-                    mode={mode}
+                    units={units}
                 />
             </ChartContainer>
         </Block>

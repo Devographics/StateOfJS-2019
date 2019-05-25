@@ -12,7 +12,7 @@ aggregations:
       buckets:
         - id: Chrome
           count: 11134
-          percentage: -369.47
+          percentage: 99.16
         - id: Firefox
           count: 10007
           percentage: 89.13
@@ -65,7 +65,7 @@ aggregations:
       buckets:
         - id: Desktop
           count: 11114
-          percentage: -100.08
+          percentage: 99.7
         - id: Smartphone
           count: 10213
           percentage: 91.62

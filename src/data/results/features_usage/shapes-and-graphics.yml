@@ -66,7 +66,7 @@ aggregations:
       buckets:
         - id: used_it
           count: 4798
-          percentage: 42.59
+          percentage: 42.6
         - id: never_heard_not_sure
           count: 4145
           percentage: 36.8
@@ -120,7 +120,7 @@ aggregations:
       buckets:
         - id: know_not_used
           count: 4422
-          percentage: 39.27
+          percentage: 39.26
         - id: used_it
           count: 4381
           percentage: 38.9

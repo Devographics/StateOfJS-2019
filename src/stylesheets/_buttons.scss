@@ -16,40 +16,53 @@
         font-size: $medium-font;
     }
     white-space: nowrap;
+    transition: color 400ms, border-color 400ms;
+
     &,
     &:link,
     &:visited {
         color: $text-color;
         text-decoration: none;
     }
+
     &:hover {
         color: $hover-color;
         border-color: $hover-color;
+        border-style: solid;
         text-decoration: none;
     }
+
     &--small {
         font-size: $small-font;
-        padding: $spacing/4 $spacing/2;
+        padding: $spacing / 5 $spacing / 2;
         &:link {
             color: $darker-text-color;
         }
-        &:hover {
-            color: $secondary-color;
-        }
     }
-    &.large-button {
+
+    &--large {
         padding: $spacing $spacing;
         font-size: $large-font;
     }
+
     &--disabled {
-        color: #555;
+        color: $teal-dark;
+    }
+
+    &--active {
+        border-style: solid;
     }
 }
 
 .ButtonGroup {
-    position: relative;
     display: inline-flex;
     vertical-align: middle;
+    box-shadow: 7px 7px rgba(0, 0, 0, .15);
+    transition: box-shadow 400ms;
+
+    &:hover {
+        box-shadow: 3px 3px rgba(0, 0, 0, .25);
+    }
 
     .Button {
         border-left-width: 0;
@@ -60,9 +73,20 @@
 
             &:first-child {
                 border-left-color: $hover-color;
+                border-right-style: dashed;
             }
             &:last-child {
                 border-right-color: $hover-color;
+                border-left-style: dashed;
+            }
+        }
+
+        &--active {
+            &:first-child {
+                border-right-style: dashed;
+            }
+            &:last-child {
+                border-left-style: dashed;
             }
         }
 

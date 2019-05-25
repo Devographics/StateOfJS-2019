@@ -5,7 +5,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
-import { useBarFormatters } from './barHooks'
+import { useBarFormatters } from './hooks'
 import BarTooltip from './BarTooltip'
 import HorizontalBarStripes from './HorizontalBarStripes'
 
@@ -16,12 +16,12 @@ const margin = {
     left: 240
 }
 
-const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode }) => {
+const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, units }) => {
     const { translate } = useI18n()
     const { formatTick, formatValue } = useBarFormatters({
         i18nNamespace,
         shouldTranslate: translateData,
-        mode
+        units
     })
     const data = useMemo(() => sortBy(buckets.map(bucket => ({ ...bucket })), 'count'), [buckets])
 
@@ -30,7 +30,7 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode }) => 
             <ResponsiveBar
                 layout="horizontal"
                 margin={margin}
-                keys={[mode]}
+                keys={[units]}
                 data={data}
                 theme={theme}
                 enableGridX={true}
@@ -44,7 +44,7 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode }) => 
                 }}
                 axisBottom={{
                     format: formatValue,
-                    legend: translate(`users_${mode}`),
+                    legend: translate(`users_${units}`),
                     legendPosition: 'middle',
                     legendOffset: 40
                 }}
@@ -81,11 +81,10 @@ HorizontalBarChart.propTypes = {
     ),
     i18nNamespace: PropTypes.string.isRequired,
     translateData: PropTypes.bool.isRequired,
-    mode: PropTypes.oneOf(['count', 'percentage']).isRequired
+    units: PropTypes.oneOf(['count', 'percentage']).isRequired
 }
 HorizontalBarChart.defaultProps = {
-    translateData: false,
-    mode: 'count'
+    translateData: false
 }
 
 export default memo(HorizontalBarChart)

@@ -12,7 +12,7 @@ aggregations:
       buckets:
         - id: would_use
           count: 5090
-          percentage: 45.32
+          percentage: 45.33
         - id: would_not_use
           count: 4663
           percentage: 41.52
@@ -32,7 +32,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 3126
-          percentage: 27.84
+          percentage: 27.83
         - id: not_interested
           count: 2985
           percentage: 26.57
@@ -52,7 +52,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 7466
-          percentage: 66.5
+          percentage: 66.51
         - id: not_interested
           count: 1773
           percentage: 15.8
@@ -92,7 +92,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 5665
-          percentage: 50.47
+          percentage: 50.48
         - id: not_interested
           count: 2372
           percentage: 21.14
@@ -132,7 +132,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 6691
-          percentage: 59.8
+          percentage: 59.81
         - id: not_interested
           count: 2513
           percentage: 22.46
@@ -152,7 +152,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 7481
-          percentage: 66.83
+          percentage: 66.84
         - id: not_interested
           count: 1851
           percentage: 16.54
@@ -192,7 +192,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 7357
-          percentage: 65.69
+          percentage: 65.68
         - id: interested
           count: 1582
           percentage: 14.12
@@ -232,7 +232,7 @@ aggregations:
       buckets:
         - id: Skeleton
           count: 46
-          percentage: 64.32
+          percentage: 6.84
         - id: Material UI
           count: 34
           percentage: 5.05

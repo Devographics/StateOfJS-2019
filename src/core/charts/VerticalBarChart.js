@@ -4,7 +4,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import { useI18n } from 'core/i18n/i18nContext'
 import theme from 'nivoTheme'
 import { colors } from '../../constants'
-import { useBarFormatters } from './barHooks'
+import { useBarFormatters } from './hooks'
 import BarTooltip from './BarTooltip'
 
 const margin = {
@@ -14,12 +14,12 @@ const margin = {
     left: 60
 }
 
-const VerticalBarChart = ({ buckets, i18nNamespace, translateData, mode }) => {
+const VerticalBarChart = ({ buckets, i18nNamespace, translateData, units }) => {
     const { translate } = useI18n()
     const { formatTick, formatValue } = useBarFormatters({
         i18nNamespace,
         shouldTranslate: translateData,
-        mode
+        units
     })
     const maxValue = useMemo(
         () => Math.ceil(Math.max(...buckets.map(b => b.percentage)) / 10) * 10,
@@ -31,7 +31,7 @@ const VerticalBarChart = ({ buckets, i18nNamespace, translateData, mode }) => {
             <ResponsiveBar
                 data={buckets}
                 indexBy="id"
-                keys={[mode]}
+                keys={[units]}
                 // maxValue={maxValue}
                 margin={margin}
                 padding={0.4}
@@ -49,7 +49,7 @@ const VerticalBarChart = ({ buckets, i18nNamespace, translateData, mode }) => {
                 axisRight={{
                     format: formatValue,
                     tickValues: maxValue / 10 + 1,
-                    legend: translate(`users_${mode}`),
+                    legend: translate(`users_${units}`),
                     legendPosition: 'middle',
                     legendOffset: 52
                 }}
@@ -82,11 +82,10 @@ VerticalBarChart.propTypes = {
     ).isRequired,
     i18nNamespace: PropTypes.string.isRequired,
     translateData: PropTypes.bool.isRequired,
-    mode: PropTypes.oneOf(['percentage', 'count']).isRequired
+    units: PropTypes.oneOf(['percentage', 'count']).isRequired
 }
 VerticalBarChart.defaultProps = {
-    translateData: true,
-    mode: 'percentage'
+    translateData: true
 }
 
 export default memo(VerticalBarChart)

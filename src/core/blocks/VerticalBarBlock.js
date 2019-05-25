@@ -6,6 +6,7 @@ import Legends from 'core/charts/Legends'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
+import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
 const getChartData = (data, block) => {
     if (!data || !data.data) {
@@ -51,11 +52,16 @@ const getChartData = (data, block) => {
     return { sortedBuckets, bucketKeys }
 }
 
-const VerticalBarBlock = ({ block, data, usePercents }) => {
-    const [mode, setMode] = useState(usePercents ? 'percentage' : 'count')
-
+const VerticalBarBlock = ({ block, data }) => {
+    const {
+        id,
+        showDescription,
+        showLegend,
+        units: defaultUnits = 'percentage',
+        translateData
+    } = block
     const { translate } = useI18n()
-    const { showDescription, showLegend } = block
+    const [units, setUnits] = useState(defaultUnits)
     const { bucketKeys, sortedBuckets } = useMemo(() => getChartData(data, block), [data, block])
 
     const legends = bucketKeys.map(key => ({
@@ -65,25 +71,18 @@ const VerticalBarBlock = ({ block, data, usePercents }) => {
     }))
 
     return (
-        <Block id={block.id} showDescription={showDescription}>
-            <button
-                onClick={() => {
-                    if (mode === 'percentage') {
-                        setMode('count')
-                    } else {
-                        setMode('percentage')
-                    }
-                }}
-            >
-                toggle
-            </button>
+        <Block id={id} showDescription={showDescription}>
+            <div className="ChartControls">
+                <ChartUnitsSelector units={units} onChange={setUnits} />
+            </div>
             {showLegend && <Legends legends={legends} layout="vertical" />}
             <ChartContainer>
                 <VerticalBarChart
                     keys={bucketKeys}
                     buckets={sortedBuckets}
                     i18nNamespace={block.id}
-                    mode={mode}
+                    translateData={translateData}
+                    units={units}
                 />
             </ChartContainer>
         </Block>
@@ -95,7 +94,8 @@ VerticalBarBlock.propTypes = {
         id: PropTypes.string.isRequired,
         dataKey: PropTypes.string.isRequired,
         bucketKeys: PropTypes.oneOf(Object.keys(keys)).isRequired,
-        showDescription: PropTypes.bool
+        showDescription: PropTypes.bool,
+        units: PropTypes.oneOf(['percentage', 'count'])
     }).isRequired,
     data: PropTypes.shape({
         data: PropTypes.shape({

@@ -69,58 +69,6 @@
     }
 }
 
-.block--numberoflibs {
-    img {
-        display: block;
-        width: 100%;
-    }
-}
-
-.block--othersbubble {
-    .chart-wrapper {
-        @include small {
-            height: 300px;
-        }
-        @include medium-large {
-            height: 600px;
-        }
-    }
-}
-
-.block--connections {
-    .chart-wrapper {
-        margin-top: $spacing;
-    }
-}
-
-.OverTime__Chart,
-.Overview__Chart {
-    @include large {
-        display: grid;
-        grid-template-columns: auto 210px;
-        column-gap: $spacing * 1.5;
-    }
-}
-
-.OverTime__Chart__SwitchContainer {
-    height: 40px;
-    @include small-medium {
-        margin-top: $spacing;
-        height: auto;
-    }
-}
-
-.Overview__Chart__SwitchContainer {
-    height: $spacing * 3;
-    display: flex;
-    align-items: center;
-
-    @include small-medium {
-        margin-top: $spacing;
-        height: auto;
-    }
-}
-
 .Chart__Container__Outer {
     position: relative;
 }
@@ -237,131 +185,26 @@
     z-index: 1000;
 }
 
-.ToolPairing__HeatMapChart {
-    display: grid;
-    align-items: center;
-    font-size: $medium-font;
-}
-
-.ToolPairing__HeatMapChart__Section {
-    grid-column-start: 1;
-    @include font-bold;
-}
-
-.Reasons__Chart__Unit {
-    &--mobile {
-        @include large {
-            display: none;
-        }
-    }
-    &--desktop {
-        @include small-medium {
-            display: none;
-        }
-    }
-}
-
-.tool-over-time-no-data {
-    font-style: italic;
-    @include border2;
-    color: $text-color-dark;
-    @include small {
-        padding: $spacing;
-    }
-    @include medium-large {
-        padding: $spacing * 1.5;
-    }
-}
-
-.ToolsSubAggsHeatMapChart {
-    display: grid;
-    align-items: center;
-}
-
-.ToolsSubAggsHeatMapChart__Heading,
-.ToolPairing__HeatMapChart__Section {
-    font-size: 14px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-top: 1px dashed $dark-border-color;
-}
-
-.ToolPairing__HeatMapChart__Section:last-of-type {
-    border-bottom: 1px dashed $dark-border-color;
-}
-.ToolsSubAggsHeatMapChart__AverageHeading {
-    font-size: 14px;
-    @include font-bold;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-top: 1px dashed $dark-border-color;
-}
-
-.ToolsSubAggsHeatMapChart__AverageCell {
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
-    border-right: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-    color: $blue;
-}
-.ToolsSubAggsHeatMapChart__AverageCell--first {
-    border-left: 1px solid $border-color;
-}
-.ToolsSubAggsHeatMapChart__AverageCell--lowest {
-    &:before {
-        content: '';
-        position: absolute;
-        left: calc(50% - 5px);
-        bottom: 10px;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid $blue;
-    }
-}
-.ToolsSubAggsHeatMapChart__AverageCell--highest {
-    &:before {
-        content: '';
-        position: absolute;
-        left: calc(50% - 5px);
-        top: 11px;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 5px solid $blue;
-    }
-}
-
-.ToolsSubAggsHeatMapChart__Cell {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 12px;
-    color: $bg-color;
-    border-left: 1px solid $bg-color;
-    padding: 0 $spacing / 2;
-}
-.ToolsSubAggsHeatMapChart__Cell--first {
-    border-left: 0;
-}
-
-.Chart--verticalbar {
-    g rect {
-    }
-}
-
 .ToolsOverviewBlock {
     .Legends {
         margin-bottom: $spacing*2;
     }
+}
+
+.ChartControls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $spacing;
+}
+
+.ChartUnitsSelector {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ChartUnitsSelector__Label {
+    @include font-bold;
+    padding: $spacing / 5 $spacing / 1.5 $spacing / 5 0;
+    font-size: $small-font;
+    white-space: nowrap;
 }

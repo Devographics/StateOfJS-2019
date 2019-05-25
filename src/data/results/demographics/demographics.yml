@@ -12,7 +12,7 @@ aggregations:
       buckets:
         - id: USA
           count: 2460
-          percentage: 24.75
+          percentage: 23.86
         - id: UK
           count: 1033
           percentage: 10.02
@@ -439,7 +439,7 @@ aggregations:
       buckets:
         - id: '50_100'
           count: 3425
-          percentage: 31.86
+          percentage: 31.87
         - id: '30_50'
           count: 2254
           percentage: 20.98
@@ -517,7 +517,7 @@ aggregations:
       buckets:
         - id: able_to_setup_from_scratch
           count: 4722
-          percentage: 42.23
+          percentage: 42.24
         - id: able_to_setup_cms_or_site_generator
           count: 3034
           percentage: 27.14
@@ -554,7 +554,7 @@ aggregations:
       buckets:
         - id: front_end_dev
           count: 5299
-          percentage: 51.66
+          percentage: 51.65
         - id: full_stack_dev
           count: 3537
           percentage: 34.47
@@ -577,7 +577,7 @@ aggregations:
       buckets:
         - id: email
           count: 1725
-          percentage: 35.56
+          percentage: 22.93
         - id: twitter
           count: 1295
           percentage: 17.21

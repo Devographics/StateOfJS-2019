@@ -595,6 +595,12 @@ translations:
       t: Percentage of Users
     - key: users_count
       t: Users Count
+    - key: chart_units
+      t: units
+    - key: chart_units.percentage
+      t: percents
+    - key: chart_units.count
+      t: count
 
 # TODO: review this:
 
@@ -679,44 +685,3 @@ translations:
     - key: block.description.other-tools
       t: |
         Other answers mentioned by survey respondents, ranked by mention count.
-    - key: block.title.quadrants   
-      t: Quadrant Chart
-    - key: block.description.quadrants
-      t: |
-        This chart shows each technology’s **satisfaction ratio** over its **total usage**.
-
-
-        Additionally, technologies that have an **interest ratio** 
-        (percentage of non-users interested in learning it) over 50% are displayed as “on fire”.
-    
-    
-    # quadrant
-    - key: quadrant.satisfaction_legend
-      t: Satisfaction %
-    - key: quadrant.users_legend
-      t: Users
-    - key: quadrant.assess.label
-      t: Assess
-    - key: quadrant.assess.description
-      t: |
-        Low usage, high satisfaction.
-        Technologies worth keeping an eye on.
-    - key: quadrant.adopt.label
-      t: Adopt
-    - key: quadrant.adopt.description
-      t: |
-        High usage, high satisfaction. Safe technologies to adopt.
-    - key: quadrant.avoid.label
-      t: Avoid
-    - key: quadrant.avoid.description
-      t: |
-        Low usage, low satisfaction.
-        Technologies probably best avoided currently.
-    - key: quadrant.analyze.label
-      t: Analyze
-    - key: quadrant.analyze.description
-      t: |
-        High usage, low satisfaction.
-        Reassess these technologies if you're currently using them.
-
-    

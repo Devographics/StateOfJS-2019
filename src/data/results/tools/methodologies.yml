@@ -32,7 +32,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 3666
-          percentage: 32.81
+          percentage: 32.82
         - id: interested
           count: 2734
           percentage: 24.48
@@ -52,7 +52,7 @@ aggregations:
       buckets:
         - id: never_heard
           count: 4563
-          percentage: 40.98
+          percentage: 40.97
         - id: not_interested
           count: 2261
           percentage: 20.3
@@ -112,7 +112,7 @@ aggregations:
       buckets:
         - id: Suit CSS
           count: 50
-          percentage: 66.18
+          percentage: 12.53
         - id: RSCSS
           count: 37
           percentage: 9.27

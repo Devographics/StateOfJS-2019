@@ -12,7 +12,7 @@ aggregations:
       buckets:
         - id: CSS Tricks
           count: 10085
-          percentage: -58.65
+          percentage: 97.12
         - id: Smashing Magazine
           count: 6456
           percentage: 62.17
@@ -32,7 +32,7 @@ aggregations:
       buckets:
         - id: Stack Overflow
           count: 9732
-          percentage: -141.46
+          percentage: 88.46
         - id: MDN
           count: 8602
           percentage: 78.19
@@ -64,7 +64,7 @@ aggregations:
       buckets:
         - id: Syntax
           count: 2007
-          percentage: 10.75
+          percentage: 64.2
         - id: Shop Talk Show
           count: 1089
           percentage: 34.84
