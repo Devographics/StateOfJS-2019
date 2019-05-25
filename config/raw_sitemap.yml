@@ -177,34 +177,42 @@
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: pseudo-elements
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: combinators
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: tree-document-structure
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: attributes
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: links-urls
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: interaction
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: form-controls
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
 
 - id: tools-and-methodology
   path: /tools-and-methodology
@@ -314,10 +322,12 @@
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
       - id: browsers
         type: horizontal-bar
         dataKey: usage
         showDescription: true
+        mode: absolute
 
 - id: environments
   path: /environments
@@ -327,10 +337,12 @@
         type: horizontal-bar
         dataKey: environments
         showDescription: true
+        mode: absolute
       - id: form-factors
         type: horizontal-bar
         dataKey: environments
         showDescription: true
+        mode: absolute
       # - id: print-styles
       #   type: vertical-bar
       #   dataKey: environments
@@ -346,14 +358,17 @@
         type: horizontal-bar
         dataKey: resources
         showDescription: true
+        mode: absolute
       - id: sites-courses
         type: horizontal-bar
         dataKey: resources
         showDescription: true
+        mode: absolute
       - id: podcasts
         type: horizontal-bar
         dataKey: resources
         showDescription: true
+        mode: absolute
 
 - id: opinions
   path: /opinions

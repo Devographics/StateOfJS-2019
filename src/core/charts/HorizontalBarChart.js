@@ -5,7 +5,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
-import { useBarFormatters } from './hooks'
+import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 import HorizontalBarStripes from './HorizontalBarStripes'
 
@@ -16,11 +16,14 @@ const margin = {
     left: 240
 }
 
-const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, units }) => {
+const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, units }) => {
     const { translate } = useI18n()
-    const { formatTick, formatValue } = useBarFormatters({
+    const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
+        buckets,
+        total,
         i18nNamespace,
         shouldTranslate: translateData,
+        mode,
         units
     })
     const data = useMemo(() => sortBy(buckets.map(bucket => ({ ...bucket })), 'count'), [buckets])
@@ -32,17 +35,21 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, units }) =>
                 margin={margin}
                 keys={[units]}
                 data={data}
+                maxValue={maxValue}
                 theme={theme}
                 enableGridX={true}
+                gridXValues={tickCount}
                 enableGridY={false}
                 enableLabel={false}
                 colors={[colors.blue]}
                 padding={0.68}
                 borderRadius={5}
                 axisTop={{
+                    tickValues: tickCount,
                     format: formatValue
                 }}
                 axisBottom={{
+                    tickValues: tickCount,
                     format: formatValue,
                     legend: translate(`users_${units}`),
                     legendPosition: 'middle',
@@ -72,6 +79,7 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, units }) =>
 }
 
 HorizontalBarChart.propTypes = {
+    total: PropTypes.number.isRequired,
     buckets: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
@@ -81,6 +89,7 @@ HorizontalBarChart.propTypes = {
     ),
     i18nNamespace: PropTypes.string.isRequired,
     translateData: PropTypes.bool.isRequired,
+    mode: PropTypes.oneOf(['absolute', 'relative']).isRequired,
     units: PropTypes.oneOf(['count', 'percentage']).isRequired
 }
 HorizontalBarChart.defaultProps = {

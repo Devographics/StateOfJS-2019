@@ -595,6 +595,12 @@ translations:
       t: Percentage of Users
     - key: users_count
       t: Users Count
+    - key: chart_mode
+      t: mode
+    - key: chart_mode.absolute
+      t: absolute
+    - key: chart_mode.relative
+      t: relative
     - key: chart_units
       t: units
     - key: chart_units.percentage

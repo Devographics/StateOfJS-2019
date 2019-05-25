@@ -197,11 +197,17 @@
     margin-bottom: $spacing;
 }
 
+.ChartModeSelector,
 .ChartUnitsSelector {
     display: inline-flex;
     align-items: center;
 }
 
+.ChartModeSelector {
+    margin-right: $spacing;
+}
+
+.ChartModeSelector__Label,
 .ChartUnitsSelector__Label {
     @include font-bold;
     padding: $spacing / 5 $spacing / 1.5 $spacing / 5 0;

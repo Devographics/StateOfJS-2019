@@ -6,6 +6,7 @@ import Legends from 'core/charts/Legends'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
+import ChartModeSelector from 'core/charts/ChartModeSelector'
 import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
 const getChartData = (data, block) => {
@@ -25,10 +26,10 @@ const getChartData = (data, block) => {
     }
 
     const blockData = data.data.aggregations.find(agg => agg.id === block.id)
-
     if (!blockData) {
         throw new Error(`VerticalBarBlock: Missing data for block ${block.id}`)
     }
+
     if (
         blockData[block.dataKey] === undefined ||
         !Array.isArray(blockData[block.dataKey].buckets)
@@ -49,7 +50,7 @@ const getChartData = (data, block) => {
         return bucket
     })
 
-    return { sortedBuckets, bucketKeys }
+    return { sortedBuckets, bucketKeys, total: blockData[block.dataKey].total }
 }
 
 const VerticalBarBlock = ({ block, data }) => {
@@ -57,12 +58,20 @@ const VerticalBarBlock = ({ block, data }) => {
         id,
         showDescription,
         showLegend,
+        mode: defaultMode = 'relative',
         units: defaultUnits = 'percentage',
         translateData
     } = block
+
     const { translate } = useI18n()
+
+    const [mode, setMode] = useState(defaultMode)
     const [units, setUnits] = useState(defaultUnits)
-    const { bucketKeys, sortedBuckets } = useMemo(() => getChartData(data, block), [data, block])
+
+    const { bucketKeys, sortedBuckets, total } = useMemo(() => getChartData(data, block), [
+        data,
+        block
+    ])
 
     const legends = bucketKeys.map(key => ({
         id: `${block.id}.${key}`,
@@ -73,15 +82,18 @@ const VerticalBarBlock = ({ block, data }) => {
     return (
         <Block id={id} showDescription={showDescription}>
             <div className="ChartControls">
+                <ChartModeSelector mode={mode} onChange={setMode} />
                 <ChartUnitsSelector units={units} onChange={setUnits} />
             </div>
             {showLegend && <Legends legends={legends} layout="vertical" />}
             <ChartContainer>
                 <VerticalBarChart
                     keys={bucketKeys}
+                    total={total}
                     buckets={sortedBuckets}
                     i18nNamespace={block.id}
                     translateData={translateData}
+                    mode={mode}
                     units={units}
                 />
             </ChartContainer>
@@ -95,6 +107,7 @@ VerticalBarBlock.propTypes = {
         dataKey: PropTypes.string.isRequired,
         bucketKeys: PropTypes.oneOf(Object.keys(keys)).isRequired,
         showDescription: PropTypes.bool,
+        mode: PropTypes.oneOf(['absolute', 'relative']),
         units: PropTypes.oneOf(['percentage', 'count'])
     }).isRequired,
     data: PropTypes.shape({

@@ -14,6 +14,7 @@ export const query = graphql`
             aggregations {
                 id
                 environments {
+                    total
                     buckets {
                         id
                         count

@@ -1,11 +1,12 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import { useI18n } from 'core/i18n/i18nContext'
 import theme from 'nivoTheme'
 import { colors } from '../../constants'
-import { useBarFormatters } from './hooks'
+import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
+import VerticalBarShadows from './VerticalBarShadows'
 
 const margin = {
     top: 10,
@@ -14,17 +15,16 @@ const margin = {
     left: 60
 }
 
-const VerticalBarChart = ({ buckets, i18nNamespace, translateData, units }) => {
+const VerticalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, units }) => {
     const { translate } = useI18n()
-    const { formatTick, formatValue } = useBarFormatters({
+    const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
+        buckets,
+        total,
         i18nNamespace,
         shouldTranslate: translateData,
+        mode,
         units
     })
-    const maxValue = useMemo(
-        () => Math.ceil(Math.max(...buckets.map(b => b.percentage)) / 10) * 10,
-        [buckets]
-    )
 
     return (
         <div style={{ height: 260 }}>
@@ -32,23 +32,24 @@ const VerticalBarChart = ({ buckets, i18nNamespace, translateData, units }) => {
                 data={buckets}
                 indexBy="id"
                 keys={[units]}
-                // maxValue={maxValue}
+                maxValue={maxValue}
                 margin={margin}
                 padding={0.4}
                 theme={theme}
                 colors={[colors.blue]}
                 labelFormat={formatValue}
                 labelSkipHeight={16}
+                borderRadius={1}
                 enableGridX={false}
-                gridYValues={maxValue / 10 + 1}
+                gridYValues={tickCount}
                 enableGridY={true}
                 axisLeft={{
                     format: formatValue,
-                    tickValues: maxValue / 10 + 1
+                    tickValues: tickCount
                 }}
                 axisRight={{
                     format: formatValue,
-                    tickValues: maxValue / 10 + 1,
+                    tickValues: tickCount,
                     legend: translate(`users_${units}`),
                     legendPosition: 'middle',
                     legendOffset: 52
@@ -66,6 +67,12 @@ const VerticalBarChart = ({ buckets, i18nNamespace, translateData, units }) => {
                         {...barProps}
                     />
                 )}
+                layers={[
+                    layerProps => <VerticalBarShadows {...layerProps} />,
+                    'grid',
+                    'axes',
+                    'bars'
+                ]}
             />
         </div>
     )
@@ -73,6 +80,7 @@ const VerticalBarChart = ({ buckets, i18nNamespace, translateData, units }) => {
 
 VerticalBarChart.propTypes = {
     keys: PropTypes.arrayOf(PropTypes.string).isRequired,
+    total: PropTypes.number.isRequired,
     buckets: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
@@ -82,6 +90,7 @@ VerticalBarChart.propTypes = {
     ).isRequired,
     i18nNamespace: PropTypes.string.isRequired,
     translateData: PropTypes.bool.isRequired,
+    mode: PropTypes.oneOf(['absolute', 'relative']).isRequired,
     units: PropTypes.oneOf(['percentage', 'count']).isRequired
 }
 VerticalBarChart.defaultProps = {
