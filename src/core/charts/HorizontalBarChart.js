@@ -5,39 +5,25 @@ import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
-
-const Tooltip = memo(({ indexValue, value, mode }) => (
-    <span>
-        {indexValue}
-        :&nbsp;
-        <strong>
-            {value}
-            {mode === 'percentage' && '%'}
-        </strong>
-    </span>
-))
+import { useBarFormatters } from './barHooks'
+import BarTooltip from './BarTooltip'
+import HorizontalBarStripes from './HorizontalBarStripes'
 
 const margin = {
     top: 40,
     right: 20,
-    bottom: 40,
+    bottom: 50,
     left: 240
 }
 
-const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode = 'count' }) => {
+const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode }) => {
     const { translate } = useI18n()
-    const data = useMemo(
-        () =>
-            sortBy(buckets.map(bucket => ({ ...bucket })), 'count').map(bucket => {
-                if (translateData !== true) return bucket
-
-                return {
-                    ...bucket,
-                    id: translate(`${i18nNamespace}.${bucket.id}`)
-                }
-            }),
-        [buckets, translate, i18nNamespace, translateData]
-    )
+    const { formatTick, formatValue } = useBarFormatters({
+        i18nNamespace,
+        shouldTranslate: translateData,
+        mode
+    })
+    const data = useMemo(() => sortBy(buckets.map(bucket => ({ ...bucket })), 'count'), [buckets])
 
     return (
         <div style={{ height: buckets.length * 36 + 80 }}>
@@ -54,17 +40,32 @@ const HorizontalBarChart = ({ buckets, i18nNamespace, translateData, mode = 'cou
                 padding={0.68}
                 borderRadius={5}
                 axisTop={{
-                    format: mode === 'percentage' ? v => `${v}%` : '.2s'
+                    format: formatValue
                 }}
                 axisBottom={{
-                    format: '.2s'
+                    format: formatValue,
+                    legend: translate(`users_${mode}`),
+                    legendPosition: 'middle',
+                    legendOffset: 40
                 }}
                 axisLeft={{
+                    format: formatTick,
                     tickSize: 0,
                     tickPadding: 10
                 }}
-                tooltip={barProps => <Tooltip mode={mode} {...barProps} />}
-                animate={false}
+                tooltip={barProps => (
+                    <BarTooltip
+                        i18nNamespace={i18nNamespace}
+                        shouldTranslate={translateData}
+                        {...barProps}
+                    />
+                )}
+                layers={[
+                    layerProps => <HorizontalBarStripes {...layerProps} />,
+                    'grid',
+                    'axes',
+                    'bars'
+                ]}
             />
         </div>
     )
@@ -79,8 +80,12 @@ HorizontalBarChart.propTypes = {
         })
     ),
     i18nNamespace: PropTypes.string.isRequired,
-    translateData: PropTypes.bool,
-    mode: PropTypes.string
+    translateData: PropTypes.bool.isRequired,
+    mode: PropTypes.oneOf(['count', 'percentage']).isRequired
+}
+HorizontalBarChart.defaultProps = {
+    translateData: false,
+    mode: 'count'
 }
 
 export default memo(HorizontalBarChart)

@@ -15,9 +15,9 @@ Parenting books won't help much with this one, but that's where we come in: we'v
 The State of CSS Survey is created and maintained by:
 
 - [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
-- [Raphael Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
+- [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
 
-Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphael's React data visualization library [Nivo.js](https://nivo.rocks).
+Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
 
 ### Download Our Data
 

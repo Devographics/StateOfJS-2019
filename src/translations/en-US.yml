@@ -152,7 +152,6 @@ translations:
       t: Can architecture entire front-end codebases from scratch
 
     # backend proficiency
-
     - key: block.title.backend-proficiency
       t: Back-end Proficiency
     - key: block.description.backend-proficiency
@@ -176,19 +175,30 @@ translations:
     - key: backend-proficiency.able_to_setup_from_scratch.long
       t: I can set up an entire back-end from scratch (Go, Node, etc.)
 
-
     # job title
-    - key: job-title.front_end_dev
+    - key: job-title.front_end_dev.short
+      t: Front-end Developer
+    - key: job-title.front_end_dev.long
       t: Front-end Developer/Engineer
-    - key: job-title.full_stack_dev
+    - key: job-title.full_stack_dev.short
+      t: Full-stack Developer
+    - key: job-title.full_stack_dev.long
       t: Full-stack Developer/Engineer
-    - key: job-title.web_designer
+    - key: job-title.web_designer.short
       t: Web Designer
-    - key: job-title.ux_designer
+    - key: job-title.web_designer.long
+      t: Web Designer
+    - key: job-title.ux_designer.short
       t: UX Designer
-    - key: job-title.ui_designer
+    - key: job-title.ux_designer.long
+      t: UX Designer
+    - key: job-title.ui_designer.short
       t: UI Designer
-    - key: job-title.back_end_dev
+    - key: job-title.ui_designer.long
+      t: UI Designer
+    - key: job-title.back_end_dev.short
+      t: Back-end Developer
+    - key: job-title.back_end_dev.long
       t: Back-end Developer/Engineer
 
     # other
