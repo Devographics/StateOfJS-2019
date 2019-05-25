@@ -33,7 +33,7 @@ const Node = ({ node, handlers }) => {
                 cx={node.x}
                 cy={node.y}
                 r={node.r}
-                fill="rgba(255,255,255,0.1)"
+                fill={colors.backgroundDark}
                 stroke={colors.teal}
                 strokeWidth={1}
                 strokeLinecap="round"

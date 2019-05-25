@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import { colors } from '../../constants'
 
 const HorizontalBarStripes = ({ bars, width, yScale }) => {
     const step = yScale.step()
@@ -12,8 +13,8 @@ const HorizontalBarStripes = ({ bars, width, yScale }) => {
                 y={bar.y + bar.height / 2 - step / 2}
                 width={width}
                 height={step}
-                fill="black"
-                opacity={0.1}
+                fill={colors.backgroundDark}
+                opacity={0.4}
             />
         )
     })

@@ -142,7 +142,7 @@ const FeaturesRadialClusterOverviewBlock = ({ data }) => {
                 <circle
                     r={innerRadius + barScale(0.5)}
                     fill="none"
-                    stroke="#1a1f35"
+                    stroke={colors.backgroundDark}
                     strokeWidth={barMaxSize}
                 />
                 <circle r={radius} fill="none" stroke="white" opacity={0.4} />

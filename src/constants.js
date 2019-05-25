@@ -32,7 +32,11 @@ export let colors = {
     yellow: '#fbf34c',
     aqua: '#1ea0f2',
 
-    white: '#ffffff'
+    white: '#ffffff',
+
+    backgroundLight: '#303652',
+    background: '#232840',
+    backgroundDark: '#1a1f35'
 }
 
 export const colorRange = [
