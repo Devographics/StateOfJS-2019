@@ -35,6 +35,7 @@ export let colors = {
 
     white: '#ffffff',
 
+    backgroundLighter: '#484F73',
     backgroundLight: '#303652',
     background: '#232840',
     backgroundDark: '#1a1f35'

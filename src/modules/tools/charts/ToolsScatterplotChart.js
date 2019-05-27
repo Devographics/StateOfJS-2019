@@ -6,6 +6,57 @@ import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { colors } from '../../../constants'
 import { useI18n } from 'core/i18n/i18nContext'
 
+const Quadrants = ({ width, height }) => {
+
+    const qWidth = width / 2
+    const qHeight = height / 2
+
+    const quadrants = [
+        {
+            x: 0,
+            y: 0,
+            color: colors.backgroundLight,
+            label: 'Assess'
+        },
+        {
+            x: qWidth,
+            y: 0,
+            color: colors.backgroundLighter,
+            label: 'Adopt'
+        },
+        {
+            x: 0,
+            y: qHeight,
+            color: colors.backgroundDark,
+            label: 'Avoid'
+        },
+        {
+            x: qWidth,
+            y: qHeight,
+            color: colors.backgroundLight,
+            label: 'Analyze'
+        }
+    ]
+    return (
+        <g className="Quadrant__Background">
+            {quadrants.map(({ x, y, color, label }) => (
+                <>
+                    <rect x={x} y={y} width={qWidth} height={qHeight} fill={color} />
+                    <text
+                        className="Quadrant__Label"
+                        x={x + qWidth / 2}
+                        y={y + qHeight / 2}
+                        textAnchor="middle"
+                        alignmentBaseline="central"
+                    >
+                        {label}
+                    </text>
+                </>
+            ))}
+        </g>
+    )
+}
+
 const ToolsScatterplotChart = ({ data }) => {
     const { translate } = useI18n()
 
@@ -14,8 +65,8 @@ const ToolsScatterplotChart = ({ data }) => {
             <ResponsiveScatterPlot
                 data={data}
                 margin={{ top: 60, right: 140, bottom: 70, left: 90 }}
-                xScale={{ type: 'linear', min: 0, max: 'auto' }}
-                yScale={{ type: 'linear', min: 0, max: 'auto' }}
+                xScale={{ type: 'linear', min: 0, max: 10000 }}
+                yScale={{ type: 'linear', min: 0, max: 100 }}
                 symbolSize={16}
                 theme={theme}
                 axisTop={null}
@@ -36,8 +87,10 @@ const ToolsScatterplotChart = ({ data }) => {
                     tickRotation: 0,
                     legend: translate('satisfaction_percentage'),
                     legendPosition: 'middle',
-                    legendOffset: -60
+                    legendOffset: -60,
+                    format: s => `${s}%`
                 }}
+                layers={[Quadrants, 'grid', 'axes', 'points', 'markers', 'mesh', 'legends']}
                 colors={dot => dot.serie.color}
                 animate={false}
                 tooltip={({ id, serie, x, y, color }) => {
@@ -48,31 +101,27 @@ const ToolsScatterplotChart = ({ data }) => {
                             <strong>
                                 {dotId} ({serie.id})
                             </strong>
-                            : {`${x} ${translate('users')},  ${y}${translate('percent_satisfaction')}`}
+                            :{' '}
+                            {`${x} ${translate('users')},  ${y}${translate(
+                                'percent_satisfaction'
+                            )}`}
                         </span>
                     )
                 }}
-                // legends={[
-                //     {
-                //         anchor: 'bottom-right',
-                //         direction: 'column',
-                //         translateX: 130,
-                //         itemWidth: 100,
-                //         itemHeight: 12,
-                //         itemsSpacing: 5,
-                //         itemTextColor: '#999',
-                //         symbolSize: 12,
-                //         symbolShape: 'circle',
-                //         effects: [
-                //             {
-                //                 on: 'hover',
-                //                 style: {
-                //                     itemTextColor: '#000'
-                //                 }
-                //             }
-                //         ]
-                //     }
-                // ]}
+                legends={[
+                    {
+                        anchor: 'bottom-right',
+                        direction: 'column',
+                        translateX: -60,
+                        translateY: -10,
+                        itemWidth: 100,
+                        itemHeight: 18,
+                        itemsSpacing: 5,
+                        itemTextColor: colors.teal,
+                        symbolSize: 12,
+                        symbolShape: 'circle',
+                    }
+                ]}
             />
         </div>
     )

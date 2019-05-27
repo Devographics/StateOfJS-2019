@@ -77,7 +77,8 @@ export default {
     legends: {
         text: {
             fontSize: 11,
-            fill: colors.greyLight
+            fill: colors.greyLight,
+            fontFamily,
         }
     },
     tooltip: {

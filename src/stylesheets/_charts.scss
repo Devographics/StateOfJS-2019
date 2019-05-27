@@ -214,3 +214,12 @@
     font-size: $small-font;
     white-space: nowrap;
 }
+
+.Quadrant__Label{
+    color: $teal;
+    fill: $teal;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.75;
+    font-size: $larger-font;
+}
