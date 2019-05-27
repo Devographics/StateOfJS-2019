@@ -13,7 +13,7 @@ const HorizontalBarStripes = ({ bars, width, yScale }) => {
                 y={bar.y + bar.height / 2 - step / 2}
                 width={width}
                 height={step}
-                fill={colors.backgroundDark}
+                fill={colors.backgroundLight}
                 opacity={0.4}
             />
         )

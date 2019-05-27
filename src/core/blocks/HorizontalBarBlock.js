@@ -49,7 +49,7 @@ const HorizontalBarBlock = ({ block, data }) => {
     return (
         <Block id={id} showDescription={showDescription}>
             <div className="ChartControls">
-                <ChartModeSelector mode={mode} onChange={setMode} />
+                {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
                 <ChartUnitsSelector units={units} onChange={setUnits} />
             </div>
             <ChartContainer>

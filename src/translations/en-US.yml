@@ -595,6 +595,8 @@ translations:
       t: Percentage of Users
     - key: users_count
       t: Users Count
+    - key: satisfaction_percentage
+      t: Satisfaction Percentage
     - key: chart_mode
       t: mode
     - key: chart_mode.absolute
@@ -602,11 +604,15 @@ translations:
     - key: chart_mode.relative
       t: relative
     - key: chart_units
-      t: units
+      t: Units
     - key: chart_units.percentage
-      t: percents
+      t: Percents
     - key: chart_units.count
-      t: count
+      t: Count
+    - key: users
+      t: users
+    - key: percent_satisfaction
+      t: "% satisfaction"
 
 # TODO: review this:
 

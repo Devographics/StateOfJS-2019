@@ -1111,7 +1111,7 @@
     d3-time-format "^2.1.3"
     lodash "^4.17.11"
 
-"@nivo/scatterplot@0.58.0":
+"@nivo/scatterplot@^0.58.0":
   version "0.58.0"
   resolved "https://registry.yarnpkg.com/@nivo/scatterplot/-/scatterplot-0.58.0.tgz#c436c7d9a69413bbb3d25d5032ec8e5db9ee5a06"
   integrity sha512-4qzMh8i0vInWFeWYfRZqVSFk0McscVqw8GCwDIUHMSPE95YCZQCLPVShcU+xvFR/NqSBPo9pcPhYQnrUV7008w==

@@ -26,15 +26,15 @@ const colorRange = [
     colors.pink
 ]
 
-const ParticipationByCountryMapChart = ({ data }) => {
+const ParticipationByCountryMapChart = ({ data, units }) => {
     return (
         <div className="SalaryPerCountry__Chart">
             <ResponsiveChoropleth
                 features={features}
                 data={data}
-                value="percentage"
-                valueFormat={v => `${v.toFixed(1)}%`}
-                domain={[0, 8]}
+                value={units}
+                valueFormat={v => (units === 'percentage' ? `${v.toFixed(1)}%` : Math.round(v))}
+                domain={units === 'percentage' ? [0, 8] : [0, 700]}
                 colors={colorRange}
                 unknownColor={colors.backgroundLight}
                 projectionScale={118}

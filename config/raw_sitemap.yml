@@ -221,6 +221,8 @@
   blocks:
       - id: tools-overview
         type: tools-overview
+      - id: tools-scatterplot
+        type: tools-scatterplot
   children:
       - id: pre-post-processors
         path: /pre-post-processors

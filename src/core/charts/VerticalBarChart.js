@@ -7,6 +7,7 @@ import { colors } from '../../constants'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 import VerticalBarShadows from './VerticalBarShadows'
+import { constants } from 'os';
 
 const margin = {
     top: 10,
@@ -68,11 +69,13 @@ const VerticalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, 
                     />
                 )}
                 layers={[
-                    layerProps => <VerticalBarShadows {...layerProps} />,
+                    // layerProps => <VerticalBarShadows {...layerProps} />,
                     'grid',
                     'axes',
                     'bars'
                 ]}
+                labelTextColor={{ theme: 'labels.text.fill' }}
+
             />
         </div>
     )

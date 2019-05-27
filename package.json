@@ -26,7 +26,7 @@
     "@nivo/geo": "0.58.0",
     "@nivo/pie": "0.58.0",
     "@nivo/sankey": "0.58.0",
-    "@nivo/scatterplot": "0.58.0",
+    "@nivo/scatterplot": "^0.58.0",
     "@nivo/sunburst": "0.58.0",
     "@nivo/treemap": "0.58.0",
     "@nivo/waffle": "0.58.0",

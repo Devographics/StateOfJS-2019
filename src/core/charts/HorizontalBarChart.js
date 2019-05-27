@@ -42,8 +42,8 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                 enableGridY={false}
                 enableLabel={false}
                 colors={[colors.blue]}
-                padding={0.68}
-                borderRadius={5}
+                padding={0.6}
+                borderRadius={1}
                 axisTop={{
                     tickValues: tickCount,
                     format: formatValue

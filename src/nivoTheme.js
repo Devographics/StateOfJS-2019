@@ -33,7 +33,7 @@ export default {
         domain: {
             line: {
                 strokeWidth: 0,
-                stroke: '#bbb'
+                stroke: colors.greyDark
             }
         },
         ticks: {
@@ -66,40 +66,41 @@ export default {
         ticks: {
             line: {
                 strokeWidth: 2,
-                stroke: '#e8e8e8'
+                stroke: colors.greyLight
             },
             text: {
                 fontSize: 16,
-                fill: '#e8e8e8'
+                fill: colors.greyLight
             }
         }
     },
     legends: {
         text: {
             fontSize: 11,
-            fill: '#eee'
+            fill: colors.greyLight
         }
     },
     tooltip: {
         container: {
             fontSize: 14,
-            background: '#1b1f2f',
-            color: colors.tealLight,
+            background: colors.greyLight,
+            color: colors.blueDark,
             borderRadius: 0,
             boxShadow: `9px 9px 0 rgba(0, 0, 0, 0.15)`
         }
     },
     labels: {
         text: {
-            fill: '#ddd',
+            fill: colors.tealLight,
             fontSize: 12,
             fontWeight: 500,
-            fontFamily
+            fontFamily,
+            textShadow: `0px 2px 3px rgba(0,0,0,0.35)`
         }
     },
     dots: {
         text: {
-            fill: '#bbb',
+            fill: colors.greyDark,
             fontSize: 12
         }
     }

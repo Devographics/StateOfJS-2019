@@ -1,10 +1,13 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import ParticipationByCountryMapChart from '../charts/ParticipationByCountryMapChart'
+import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
-const ParticipationByCountryBlock = ({ block, data }) => {
+const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
+    const [units, setUnits] = useState(defaultUnits)
+
     const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
         block.id,
         data.data.aggregations
@@ -12,8 +15,11 @@ const ParticipationByCountryBlock = ({ block, data }) => {
 
     return (
         <Block id={block.id} showDescription={true}>
+            <div className="ChartControls">
+                <ChartUnitsSelector units={units} onChange={setUnits} />
+            </div>
             <ChartContainer>
-                <ParticipationByCountryMapChart data={blockData.breakdown.buckets} />
+                <ParticipationByCountryMapChart units={units} data={blockData.breakdown.buckets} />
             </ChartContainer>
         </Block>
     )
