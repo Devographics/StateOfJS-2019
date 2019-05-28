@@ -7,7 +7,7 @@ import { colors } from '../../../constants'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const Quadrants = ({ width, height }) => {
-
+    const { translate } = useI18n()
     const qWidth = width / 2
     const qHeight = height / 2
 
@@ -16,31 +16,31 @@ const Quadrants = ({ width, height }) => {
             x: 0,
             y: 0,
             color: colors.backgroundLight,
-            label: 'Assess'
+            label: translate('quadrants.assess')
         },
         {
             x: qWidth,
             y: 0,
             color: colors.backgroundLighter,
-            label: 'Adopt'
+            label: translate('quadrants.adopt')
         },
         {
             x: 0,
             y: qHeight,
             color: colors.backgroundDark,
-            label: 'Avoid'
+            label: translate('quadrants.avoid')
         },
         {
             x: qWidth,
             y: qHeight,
             color: colors.backgroundLight,
-            label: 'Analyze'
+            label: translate('quadrants.analyze')
         }
     ]
     return (
         <g className="Quadrant__Background">
             {quadrants.map(({ x, y, color, label }) => (
-                <>
+                <g key={label}>
                     <rect x={x} y={y} width={qWidth} height={qHeight} fill={color} />
                     <text
                         className="Quadrant__Label"
@@ -51,7 +51,7 @@ const Quadrants = ({ width, height }) => {
                     >
                         {label}
                     </text>
-                </>
+                </g>
             ))}
         </g>
     )
@@ -64,7 +64,7 @@ const ToolsScatterplotChart = ({ data }) => {
         <div style={{ height: 600 }}>
             <ResponsiveScatterPlot
                 data={data}
-                margin={{ top: 60, right: 140, bottom: 70, left: 90 }}
+                margin={{ top: 20, right: 90, bottom: 70, left: 90 }}
                 xScale={{ type: 'linear', min: 0, max: 10000 }}
                 yScale={{ type: 'linear', min: 0, max: 100 }}
                 symbolSize={16}
@@ -119,7 +119,7 @@ const ToolsScatterplotChart = ({ data }) => {
                         itemsSpacing: 5,
                         itemTextColor: colors.teal,
                         symbolSize: 12,
-                        symbolShape: 'circle',
+                        symbolShape: 'circle'
                     }
                 ]}
             />

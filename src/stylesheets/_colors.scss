@@ -1,83 +1,61 @@
 /*****************************************************************************\
   base colors
 \*****************************************************************************/
-$grey-light: #e0e4e4;
+
+$greyLight: #e0e4e4;
 $grey: #d9dedf;
-$grey-medium: #cecdcc;
-$grey-dark: #AEAFB5;
+$greyMedium: #cecdcc;
+$greyDark: #AEAFB5;
+$greyDarker: #343539;
 
-$blue-light: #3cefff;
-$blue-light: #96d9f8;
-$blue: #3C52D1;
-$blue-dark: #273aa2;
-$blue-darker: #232840;
+$blueLighter: #B2BBEE;
+$blueLight: #808EE1;
+$blue: #3c52d1;
+$blueDark: #273aa2;
 
-$teal-light: #bad9db;
-$teal: #9AC6C9;
-$teal-dark: #6a8f92;
-$teal-darker: #445a5a;
+$pinkLightest: #D3BBF2;
+$pinkLighter: #D68DF0;
+$pinkLight: #EC75CB;
+$pink: #ec2f95;
 
-$pink: #EC2F95;
+$greenLighter: #E7FFED;
+$greenLight: #ACFFC3;
+$green: #85EBA2;
+$greenDark: #59DF7F;
+
+$tealLight: #bad9db;
+$teal: #9ac6c9;
+$tealDark: #6a8f92;
+$tealDarker: #445a5a;
+
+$purpleLight: #B096E7;
+$purple: #7854C3;
+$purpleDark: #57457C;
+
+$red: #FE6A6A;
+$yellow: #fbf34c;
+$aqua: #1ea0f2;
+
+$white: #ffffff;
+
+$navyLighter: #484F73;
+$navyLight: #303652;
+$navy: #232840;
+$navyDark: #1a1f35;
 
 /*****************************************************************************\
   "functional" colors
 \*****************************************************************************/
-$bg-color: $blue-darker;
-$bg-color-light: $grey-light;
+
+$bg-color: $navy;
+$bg-color-light: $greyLight;
 
 $border-color: $teal;
-$dark-border-color: $teal-dark;
+$dark-border-color: $tealDark;
 $hover-color: $pink;
 
 $text-color: $teal;
+$text-color-inverted: $blueDark;
 $link-color: $pink;
 
 $active-color: $pink;
-
-/*****************************************************************************\
-  OLD colors
-  from StateOfJs 2018
-\*****************************************************************************/
-$blueLight: #8be7e7;
-$blue2: #49b7be; // mobile
-$blue-faded: #b3d8da;
-
-$pink-faded: #e0a4bc;
-
-$red: #fe6a6a;
-$redLight: #f89f9f;
-$redDark: #ca4040;
-
-$white: white;
-
-$yellow: #fbf34c;
-$yellow-faded: #fffec7;
-
-$purple: #4500ee;
-$purple-faded: #7d7494;
-
-$grey2: #dadada;
-$grey3: #cecece;
-$mediumgrey: #788080;
-$beige: #fffef0;
-
-$interest-dark: $blue;
-$interest-light: $blue-faded;
-$satisfaction-dark: $pink;
-$satisfaction-light: $pink-faded;
-$never-heard: $grey;
-
-$interest-dark: $yellow;
-$interest-light: $yellow-faded;
-$satisfaction-dark: $purple;
-$satisfaction-light: $purple-faded;
-$never-heard: $grey;
-
-$secondary-color: $red;
-
-$text-color-dark: #222;
-$text-color-inverted: $bg-color-light;
-$darker-text-color: $mediumgrey;
-$lighter-text-color: $mediumgrey;
-$light-border-color: $grey3;
-$highlight-color: $yellow-faded;

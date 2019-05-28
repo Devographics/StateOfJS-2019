@@ -187,7 +187,7 @@
 
 .ToolsOverviewBlock {
     .Legends {
-        margin-bottom: $spacing*2;
+        margin-bottom: $spacing * 2;
     }
 }
 
@@ -215,11 +215,23 @@
     white-space: nowrap;
 }
 
-.Quadrant__Label{
+.Quadrant__Label {
     color: $teal;
     fill: $teal;
     text-transform: uppercase;
     letter-spacing: 3px;
     opacity: 0.75;
     font-size: $larger-font;
+}
+
+.text-green {
+    color: $green;
+}
+
+.text-pink {
+    color: $pink;
+}
+
+.text-bold {
+    @include font-bold;
 }

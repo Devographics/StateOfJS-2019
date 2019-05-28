@@ -313,10 +313,11 @@ translations:
     ########################################################################### 
   
     - key: block.title.tools-overview
-      t: Tools & Methodologies Overview
+      t: Sentiment Overview
     - key: block.description.tools-overview
       t: >
-        Overview of opinions on the tools and methodologies surveyed. The diameter
+        Overview of opinions on the tools and methodologies surveyed. <span class="text-green text-bold">Green segments</span> represent positive opinions, 
+        while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. The diameter
         of each circle corresponds to the aggregate sum of respondents for all of these four options
         (excluding respondents unaware of the technology).
     - key: block.tool.links
@@ -329,6 +330,30 @@ translations:
     - key: block.title.other-methodologies
       t: Other Methodologies
   
+    # quadrant/scatterplot chart
+    - key: block.title.tools-scatterplot
+      t: Satisfaction vs Usage
+    - key: block.description.tools-scatterplot
+      t: >
+        This chart shows each technology’s **satisfaction ratio** over its total **user count**. 
+        It can be divided into four quadrants:
+        
+        - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
+        
+        - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
+        
+        - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
+        
+        - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+    - key: quadrants.assess
+      t: Assess
+    - key: quadrants.adopt
+      t: Adopt
+    - key: quadrants.avoid
+      t: Avoid
+    - key: quadrants.analyze
+      t: Analyze
+
     # opinions
     - key: opinions.legends.never_heard
       t: I've never heard of it
@@ -504,9 +529,7 @@ translations:
     - key: page.demographics
       t: Demographics
     - key: page.features
-      t: CSS Features
-    - key: page.features.label
-      t: CSS Features
+      t: Features
     - key: page.layout
       t: Layout
     - key: page.shapes-and-graphics
@@ -522,7 +545,7 @@ translations:
     - key: page.units-and-selectors
       t: Units & Selectors
     - key: page.tools-and-methodology
-      t: Tools & Methodology
+      t: Technologies
     - key: page.pre-post-processors
       t: Pre & Post Processors
     - key: page.css-frameworks

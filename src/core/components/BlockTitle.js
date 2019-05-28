@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown/with-html'
 import ShareBlock from '../share/ShareBlock'
 import { useI18n } from '../i18n/i18nContext'
 import { usePageContext } from '../helpers/pageContext'
@@ -46,7 +46,7 @@ const BlockTitle = ({ id, showDescription, isShareable, values, title }) => {
             </div>
             {showDescription && (
                 <div className="Block__Description">
-                    <ReactMarkdown source={description} />
+                    <ReactMarkdown source={description} escapeHtml={false}/>
                 </div>
             )}
         </div>

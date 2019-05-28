@@ -18,7 +18,6 @@
     }
 }
 .resources-sponsor {
-    color: $lighter-text-color;
     @include secondary-font;
     font-size: $small-font;
     img {
@@ -114,11 +113,10 @@
         fill: $grey;
     }
     a:hover svg {
-        fill: $secondary-color;
+        fill: $hover-color;
     }
 }
 .resources-sponsored {
-    color: $lighter-text-color;
     font-size: $smaller-font;
     text-align: center;
     @include secondary-font;

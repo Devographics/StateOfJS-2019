@@ -35,9 +35,6 @@
     &--small {
         font-size: $small-font;
         padding: $spacing / 5 $spacing / 2;
-        &:link {
-            color: $darker-text-color;
-        }
     }
 
     &--large {
@@ -46,7 +43,7 @@
     }
 
     &--disabled {
-        color: $teal-dark;
+        color: $tealDark;
     }
 
     &--active {

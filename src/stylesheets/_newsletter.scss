@@ -38,10 +38,10 @@
     max-width: 300px;
     &:focus {
         outline: none;
-        border-color: $secondary-color;
+        border-color: $hover-color;
     }
     .Newsletter--loading & {
-        background: $grey2;
+        background: $grey;
     }
 }
 .Newsletter__Button {
