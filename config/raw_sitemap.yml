@@ -73,8 +73,8 @@
         blocks:
             - id: overview
               type: features-section-overview
-            - id: usage-ratio
-              type: features-usage-ratio
+            # - id: usage-ratio
+            #   type: features-usage-ratio
             - css-grid
             - flexbox
             - css-multi-column
@@ -89,8 +89,8 @@
         blocks:
             - id: overview
               type: features-section-overview
-            - id: usage-ratio
-              type: features-usage-ratio
+            # - id: usage-ratio
+            #   type: features-usage-ratio
             - css-shapes
             - object-fit
             - clip-path
@@ -106,8 +106,8 @@
         blocks:
             - id: overview
               type: features-section-overview
-            - id: usage-ratio
-              type: features-usage-ratio
+            # - id: usage-ratio
+            #   type: features-usage-ratio
             - css-scroll-snap
             - overscroll-behavior
             - overflow-anchor
@@ -120,8 +120,8 @@
         blocks:
             - id: overview
               type: features-section-overview
-            - id: usage-ratio
-              type: features-usage-ratio
+            # - id: usage-ratio
+            #   type: features-usage-ratio
             - web-fonts-font-face
             - variable-fonts
             - line-breaking-properties

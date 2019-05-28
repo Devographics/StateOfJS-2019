@@ -1,6 +1,6 @@
 ---
 type: introduction
-section: introduction
+page: introduction
 locale: en-US
 ---
 

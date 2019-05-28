@@ -1,10 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PageTemplate from 'core/pages/PageTemplate'
+import TextBlock from '../core/blocks/TextBlock'
+import PageHeader from 'core/pages/PageHeader'
 
-const Conclusion = ({ data }) => {
-    return <PageTemplate data={data} />
-}
+const Conclusion = ({ data }) => (
+    <>
+        <PageHeader />
+        <TextBlock text={data.conclusion.html} />
+    </>
+)
 
 export default Conclusion
 
@@ -13,7 +17,7 @@ export const query = graphql`
         conclusion: markdownRemark(
             frontmatter: {
                 type: { eq: "conclusion" }
-                section: { eq: "conclusion" }
+                page: { eq: "conclusion" }
                 locale: { eq: $locale }
             }
         ) {

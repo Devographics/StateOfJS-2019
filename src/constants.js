@@ -35,6 +35,7 @@ export let colors = {
     orange: '#EF8D33',
     olive: '#599E38',
     aqua: '#3ABBB3',
+    indigo: '#4861EC',
 
     white: '#ffffff',
 
@@ -56,17 +57,17 @@ export const colorRange = [
 ]
 
 export const distinctColors = [
-    colors.blue,
+    colors.indigo,
     colors.teal,
     colors.pink,
     colors.red,
     colors.green,
-    colors.purple,
     colors.yellow,
     colors.aqua,
     colors.orange,
     colors.olive,
     colors.skyblue,
+    colors.purple,
 ]
 
 export const pinkRange = [colors.pinkLightest, colors.pinkLighter, colors.pinkLight, colors.pink]

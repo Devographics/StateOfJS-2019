@@ -2,6 +2,7 @@
 import HorizontalBarBlock from 'core/blocks/HorizontalBarBlock'
 import VerticalBarBlock from 'core/blocks/VerticalBarBlock'
 import OpinionScaleBlock from 'core/blocks/OpinionScaleBlock'
+import TextBlock from 'core/blocks/TextBlock';
 
 // demographics
 import SourceBreakdownBlock from 'modules/demographics/blocks/SourceBreakdownBlock'
@@ -28,6 +29,7 @@ const blockRegistry = {
     'horizontal-bar': HorizontalBarBlock,
     'vertical-bar': VerticalBarBlock,
     'opinion-scale': OpinionScaleBlock,
+    'text': TextBlock,
 
     // demographics
     source: SourceBreakdownBlock,

@@ -19,7 +19,7 @@ export const query = graphql`
         introduction: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }
-                section: { eq: "introduction" }
+                page: { eq: "introduction" }
                 locale: { eq: $locale }
             }
         ) {
