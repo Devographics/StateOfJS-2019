@@ -1,12 +1,16 @@
 import React, { memo, useMemo } from 'react'
-import { sortBy } from 'lodash'
 import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
 import ResponsiveBumpChart from './ResponsiveBumpChart'
+import compact from 'lodash/compact'
+import sortBy from 'lodash/sortBy'
 
 const ToolsOpinionBumpChart = ({ data }) => {
     const computedData = useMemo(() => {
-        const computed = data.map(tool => {
+        let computed = data.map(tool => {
+            if (!tool) {
+                return null
+            }
             const neverHeard = tool.opinion.buckets.find(bucket => bucket.id === 'never_heard')
             const interested = tool.opinion.buckets.find(bucket => bucket.id === 'interested')
             const notInterested = tool.opinion.buckets.find(
@@ -21,6 +25,9 @@ const ToolsOpinionBumpChart = ({ data }) => {
                 satisfaction: wouldUse.count / (wouldUse.count + wouldNotUse.count)
             }
         })
+        
+        computed = compact(computed)
+
         sortBy(computed, 'awareness')
             .reverse()
             .forEach((tool, i) => {

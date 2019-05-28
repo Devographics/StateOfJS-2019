@@ -543,7 +543,7 @@ translations:
     - key: page.animations-and-transforms
       t: Animations & Transforms
     - key: page.other-features
-      t: Other
+      t: Other Features
     - key: page.units-and-selectors
       t: Units & Selectors
     - key: page.tools-and-methodology

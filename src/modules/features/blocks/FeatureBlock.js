@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import { usePageContext } from 'core/helpers/pageContext'
@@ -7,8 +7,11 @@ import FeatureUsageBarChart from '../charts/FeatureUsageBarChart'
 import { mergeFeaturesResources } from '../featuresHelpers'
 import FeatureUsageLegends from '../charts/FeatureUsageLegends'
 import ChartContainer from 'core/charts/ChartContainer'
+import { usage } from '../../../constants'
+import GaugeBarChart from 'core/charts/GaugeBarChart'
 
 const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
+
     const { translate } = useI18n()
     if (!caniuseInfo && !mdnInfo) {
         return null
@@ -46,7 +49,10 @@ const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
     )
 }
 
-const FeatureBlock = ({ block, data }) => {
+const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
+
+    const [units, setUnits] = useState(defaultUnits)
+
     const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
     const feature = features.find(a => a.id === block.id)
 
@@ -69,12 +75,20 @@ const FeatureBlock = ({ block, data }) => {
             id={block.id}
             title={translate(`feature.${block.id}`, {}, mdnInfoTitle)}
             showDescription={false}
+            units={units}
+            setUnits={setUnits}
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
                     <FeatureUsageLegends />
                     <ChartContainer height={40}>
-                        <FeatureUsageBarChart buckets={feature.usage.buckets} />
+                    <GaugeBarChart
+        buckets={feature.usage.buckets}
+        mapping={usage}
+        units={units}
+        applyEmptyPatternTo="never_heard_not_sure"
+        i18nNamespace="features.usage"
+    />
                     </ChartContainer>
                 </div>
                 {!context.isCapturing && (

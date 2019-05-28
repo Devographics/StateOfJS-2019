@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import PageTemplate from 'core/pages/PageTemplate'
 
 const FeaturesTemplate = ({ data }) => {
+    console.log(data)
     return <PageTemplate data={data} />
 }
 

@@ -225,11 +225,12 @@
             - less
             - postcss
             - stylus
-            - id: other-pre-post-processors
-              type: horizontal-bar
-              dataKey: others
-            - id: conclusion
-              type: text
+            # - id: other-pre-post-processors
+            #   type: horizontal-bar
+            #   dataKey: others
+            #   units: count
+            # - id: conclusion
+            #   type: text
 
       - id: css-frameworks
         path: /css-frameworks
@@ -250,11 +251,12 @@
             - primer
             - tailwind
             - purecss
-            - id: other-css-frameworks
-              type: horizontal-bar
-              dataKey: others
-            - id: conclusion
-              type: text
+            # - id: other-css-frameworks
+            #   type: horizontal-bar
+            #   dataKey: others
+            #   units: count
+            # - id: conclusion
+            #   type: text
 
       - id: methodologies
         path: /methodologies
@@ -269,11 +271,12 @@
             - oocss
             - smacss
             - it-css
-            - id: other-methodologies
-              type: horizontal-bar
-              dataKey: others
-            - id: conclusion
-              type: text
+            # - id: other-methodologies
+            #   type: horizontal-bar
+            #   dataKey: others
+            #   units: count
+            # - id: conclusion
+            #   type: text
 
       - id: css-in-js
         path: /css-in-js
@@ -283,7 +286,6 @@
             #   type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
-            - id: usage-ratiage-ratio
             - styled-components
             - glamor
             - aphrodite
@@ -292,11 +294,12 @@
             - radium
             - emotion
             - css-modules
-            - id: other-css-in-js
-              type: horizontal-bar
-              dataKey: others
-            - id: conclusion
-              type: text
+            # - id: other-css-in-js
+            #   type: horizontal-bar
+            #   dataKey: others
+            #   units: count
+            # - id: conclusion
+            #   type: text
 
 - id: other-tools
   path: /other-tools
