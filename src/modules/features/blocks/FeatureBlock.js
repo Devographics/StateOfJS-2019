@@ -10,8 +10,10 @@ import ChartContainer from 'core/charts/ChartContainer'
 import { usage } from '../../../constants'
 import GaugeBarChart from 'core/charts/GaugeBarChart'
 
-const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
+// convert relative links into absolute MDN links
+const parseMDNLinks = content => content.replace(new RegExp(`href="/`, 'g'), `href="https://developer.mozilla.org/`)
 
+const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
     const { translate } = useI18n()
     if (!caniuseInfo && !mdnInfo) {
         return null
@@ -50,7 +52,6 @@ const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
 }
 
 const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
-
     const [units, setUnits] = useState(defaultUnits)
 
     const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
@@ -82,20 +83,20 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                 <div className="Feature__Chart FTBlock__Chart">
                     <FeatureUsageLegends />
                     <ChartContainer height={40}>
-                    <GaugeBarChart
-        buckets={feature.usage.buckets}
-        mapping={usage}
-        units={units}
-        applyEmptyPatternTo="never_heard_not_sure"
-        i18nNamespace="features.usage"
-    />
+                        <GaugeBarChart
+                            buckets={feature.usage.buckets}
+                            mapping={usage}
+                            units={units}
+                            applyEmptyPatternTo="never_heard_not_sure"
+                            i18nNamespace="features.usage"
+                        />
                     </ChartContainer>
                 </div>
                 {!context.isCapturing && (
                     <>
                         <div className="Feature__Description FTBlock__Description">
                             {mdnInfo ? (
-                                <p dangerouslySetInnerHTML={{ __html: mdnInfo.summary }} />
+                                <p dangerouslySetInnerHTML={{ __html: parseMDNLinks(mdnInfo.summary) }} />
                             ) : (
                                 translate(`block.description.${block.id}`)
                             )}
