@@ -392,11 +392,18 @@ Logo
     }
 }
 
-.Logo--s{
-    @include logo(0.145);
-}
-.Logo--l{
-    @include logo(1);
+.Logo__Container{
+    @include small{
+        @include logo(0.3);
+
+    }
+    @include medium{
+        @include logo(0.5);
+
+    }
+    @include large{
+        @include logo(0.8);
+    }
 }
 
 .Logo__Container{
