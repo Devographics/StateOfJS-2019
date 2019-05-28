@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import HorizontalBarChart from 'core/charts/HorizontalBarChart'
-import ChartModeSelector from 'core/charts/ChartModeSelector'
-import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
 const getChartData = (data, block) => {
     if (!data || !data.data) {
@@ -47,11 +45,7 @@ const HorizontalBarBlock = ({ block, data }) => {
     const blockData = useMemo(() => getChartData(data, block), [data, block])
 
     return (
-        <Block id={id} showDescription={showDescription}>
-            <div className="ChartControls">
-                {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
-                <ChartUnitsSelector units={units} onChange={setUnits} />
-            </div>
+        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits}>
             <ChartContainer>
                 <HorizontalBarChart
                     total={blockData.total}

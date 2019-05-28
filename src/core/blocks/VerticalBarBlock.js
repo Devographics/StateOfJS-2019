@@ -6,8 +6,6 @@ import Legends from 'core/charts/Legends'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
-import ChartModeSelector from 'core/charts/ChartModeSelector'
-import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
 const getChartData = (data, block) => {
     if (!data || !data.data) {
@@ -80,11 +78,7 @@ const VerticalBarBlock = ({ block, data }) => {
     }))
 
     return (
-        <Block id={id} showDescription={showDescription}>
-            <div className="ChartControls">
-                {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
-                <ChartUnitsSelector units={units} onChange={setUnits} />
-            </div>
+        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits}>
             {showLegend && <Legends legends={legends} layout="vertical" />}
             <ChartContainer>
                 <VerticalBarChart

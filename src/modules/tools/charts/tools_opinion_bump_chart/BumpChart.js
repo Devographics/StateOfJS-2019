@@ -2,7 +2,7 @@ import React, { memo, useMemo, useState } from 'react'
 import { withContainer, useDimensions, SvgWrapper, useTheme } from '@nivo/core'
 import { useOrdinalColorScale } from '@nivo/colors'
 import { Grid, Axes } from '@nivo/axes'
-import { colors } from '../../../../constants'
+import { distinctColors } from '../../../../constants'
 import { useScales, useLineGenerator } from './hooks'
 import BumpChartLine from './BumpChartLine'
 
@@ -50,14 +50,7 @@ const BumpChart = ({ margin: partialMargin, width, height, tools }) => {
     const [currentTool, setCurrentTool] = useState(null)
 
     const getColor = useOrdinalColorScale(
-        [
-            colors.blue,
-            colors.teal,
-            colors.blueDark,
-            colors.tealDark,
-            colors.pinkLight,
-            colors.purple
-        ],
+        distinctColors,
         'id'
     )
 

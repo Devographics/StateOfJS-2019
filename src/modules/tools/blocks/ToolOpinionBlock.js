@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import TextBlock from 'core/blocks/TextBlock'
 import ChartContainer from 'core/charts/ChartContainer'
 import { useI18n } from 'core/i18n/i18nContext'
 import { getToolDescription } from '../tools_helpers'
-import ToolOpinionsChart from '../charts/ToolOpinionsChart'
+import GaugeBarChart from 'core/charts/GaugeBarChart'
 import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
+import { opinions } from '../../../constants'
 
-const ToolOpinionBlock = ({ block, data }) => {
+const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
+    const [units, setUnits] = useState(defaultUnits)
+
     const blockData = data.data.aggregations.find(a => a.id === block.id)
     const resources = data.data.fields
         ? data.data.fields.resources.find(r => r.id === block.id)
@@ -28,12 +31,20 @@ const ToolOpinionBlock = ({ block, data }) => {
             id={block.id}
             title={translate(`tool.${block.id}`, {}, githubName)}
             showDescription={false}
+            units={units}
+            setUnits={setUnits}
         >
             <div className="Tool FTBlock">
                 <div className="Tool__Chart FTBlock__Chart">
                     <ToolOpinionsLegend />
                     <ChartContainer height={40}>
-                        <ToolOpinionsChart buckets={blockData.opinion.buckets} />
+                        <GaugeBarChart
+                            buckets={blockData.opinion.buckets}
+                            mapping={opinions}
+                            units={units}
+                            applyEmptyPatternTo="never_heard"
+                            i18nNamespace="opinions.legends"
+                        />
                     </ChartContainer>
                 </div>
                 <div className="Tool__Description FTBlock__Description">

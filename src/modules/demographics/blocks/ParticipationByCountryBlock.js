@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import ParticipationByCountryMapChart from '../charts/ParticipationByCountryMapChart'
-import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
 const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
@@ -14,10 +13,7 @@ const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'perce
     ])
 
     return (
-        <Block id={block.id} showDescription={true}>
-            <div className="ChartControls">
-                <ChartUnitsSelector units={units} onChange={setUnits} />
-            </div>
+        <Block id={block.id} showDescription={true} units={units} setUnits={setUnits}>
             <ChartContainer>
                 <ParticipationByCountryMapChart units={units} data={blockData.breakdown.buckets} />
             </ChartContainer>

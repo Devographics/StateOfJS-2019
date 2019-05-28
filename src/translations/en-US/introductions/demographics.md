@@ -4,8 +4,10 @@ section: demographics
 locale: en-US
 ---
 
-This year, we reached 20,268 developers in 153 different countries. While the **U.S.** dominates the survey as expected with 24% of respondents, **Germany** and **Australia** are both well-represented, with over 5% of respondents each. 
+This first ever State of CSS survey reached 11,307 in 135 different countries. This obviously only represents a tiny part of the overall CSS developer community, but for a first edition we think it's pretty encouraging. 
 
-Of course, we should mention that although we're doing our best to get as many developers as we can to fill out the survey, our audience is still only a small fraction of the overall JavaScript community, and you should keep this in mind when evaluating the following results (and you can [learn more about who took the survey](https://medium.freecodecamp.org/who-took-the-state-of-javascript-2018-survey-8b51bca63a0) on Medium).  
+And it's fair to assume our survey audience leans a bit towards early adopters and the more cutting-edge part of the community, since they are the ones most likely to hear about a survey in the first place. But we like to think this also means our data is a good preview of where the mainstream side of the ecosystem will be a few years from now. 
 
-Note: one factor that could definitely help us reach broader, more international audiences in the future would be translating the survey and survey results in multiple languages. If you think you can help, please [let us know](https://medium.com/@sachagreif/help-us-translate-the-state-of-javascript-2018-survey-results-1488efa525c1)!
+It's also worth mentioning that since a sizeable share of survey respondents learned about it through having previously filled out the [State of JS](https://stateofjs.com) survey, our data may also lean toward the “[back of the front-end](http://bradfrost.com/blog/link/how-to-think-like-a-front-end-developer-with-brad-frost/)”, in other words the more JavaScript-oriented part of the front-end world.
+
+All that being said, we still think there's a lot of very valuable insights in here, and we're very excited to finally be able to share them all with you!

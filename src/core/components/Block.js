@@ -18,7 +18,7 @@ export default class Block extends Component {
     }
 
     render() {
-        const { id, showDescription, isShareable, className, values, children, title } = this.props
+        const { id, showDescription, isShareable, className, values, children, title, units, setUnits } = this.props
 
         return (
             <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
@@ -28,6 +28,8 @@ export default class Block extends Component {
                     isShareable={isShareable}
                     values={values}
                     title={title}
+                    units={units}
+                    setUnits={setUnits}
                 />
                 {isShareable && <ShareBlockDebug id={id} />}
                 <div className="Block__Contents">{children}</div>

@@ -55,6 +55,15 @@
     }
 }
 
+.Block__Title__Left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.Block__Title__Right{
+
+}
 .Block__Title__Text {
     margin-bottom: 0;
     @include small {

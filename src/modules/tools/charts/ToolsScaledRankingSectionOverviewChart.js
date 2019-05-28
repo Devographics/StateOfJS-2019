@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { ResponsiveAreaBump } from '@nivo/bump'
 import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
-import { colors } from '../../../constants'
+import { distinctColors } from '../../../constants'
 
 const ToolsScaledRankingSectionOverviewChart = ({ data }) => {
     return (
@@ -19,14 +19,7 @@ const ToolsScaledRankingSectionOverviewChart = ({ data }) => {
                     left: 140
                 }}
                 spacing={4}
-                colors={[
-                    colors.blue,
-                    colors.teal,
-                    colors.blueDark,
-                    colors.tealDark,
-                    colors.pinkLight,
-                    colors.purple
-                ]}
+                colors={distinctColors}
                 blendMode="screen"
                 startLabel="id"
                 startLabelTextColor={{

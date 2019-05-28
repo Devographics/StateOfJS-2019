@@ -191,10 +191,14 @@
     }
 }
 
+/* 
+
+Chart Controls
+
+*/
 .ChartControls {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: $spacing;
 }
 
 .ChartModeSelector,
@@ -215,6 +219,11 @@
     white-space: nowrap;
 }
 
+/*
+
+Quadrant/Scatterplot Chart
+
+*/
 .Quadrant__Label {
     color: $teal;
     fill: $teal;

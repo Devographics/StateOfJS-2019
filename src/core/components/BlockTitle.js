@@ -7,8 +7,9 @@ import { usePageContext } from '../helpers/pageContext'
 import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
 import { getBlockMeta } from '../helpers/blockHelpers'
 import SharePermalink from '../share/SharePermalink'
+import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 
-const BlockTitle = ({ id, showDescription, isShareable, values, title }) => {
+const BlockTitle = ({ id, showDescription, isShareable, values, title, units, setUnits }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
@@ -26,27 +27,37 @@ const BlockTitle = ({ id, showDescription, isShareable, values, title }) => {
     return (
         <div className={`Block__Heading Block__Heading--${id}`}>
             <div className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}>
-                <h3 className="Block__Title__Text Block__Title__Text--short">
-                    <SharePermalink url={meta.link} />
-                    {title}
-                </h3>
-                <h3 className="Block__Title__Text Block__Title__Text--full">
+                <div className="Block__Title__Left">
+                    <h3 className="Block__Title__Text Block__Title__Text--short">
+                        <SharePermalink url={meta.link} />
+                        {title}
+                    </h3>
+                    {/* <h3 className="Block__Title__Text Block__Title__Text--full">
                     {title || translate(`fullcharts.${id}`, { values })}
-                </h3>
-                {isShareable && (
-                    <ShareBlock
-                        id={id}
-                        className="Block__Title__Share"
-                        values={values}
-                        toggleClass={() => {
-                            setShowOptions(!showOptions)
-                        }}
-                    />
-                )}
+                </h3> */}
+                    {isShareable && (
+                        <ShareBlock
+                            id={id}
+                            className="Block__Title__Share"
+                            values={values}
+                            toggleClass={() => {
+                                setShowOptions(!showOptions)
+                            }}
+                        />
+                    )}
+                </div>
+                <div className="Block__Title__Right">
+                    {units && setUnits && (
+                        <div className="Block__Title__ChartControls ChartControls">
+                            {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
+                            <ChartUnitsSelector units={units} onChange={setUnits} />
+                        </div>
+                    )}
+                </div>
             </div>
             {showDescription && (
                 <div className="Block__Description">
-                    <ReactMarkdown source={description} escapeHtml={false}/>
+                    <ReactMarkdown source={description} escapeHtml={false} />
                 </div>
             )}
         </div>

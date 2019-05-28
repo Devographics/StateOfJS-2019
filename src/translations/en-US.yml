@@ -204,30 +204,32 @@ translations:
     # other
     - key: block.title.participation-by-country
       t: Participation by Country
-    - key: block.description.participation-by-country
-      t: Survey participants by Country.
+    # - key: block.description.participation-by-country
+    #   t: Survey participants by Country.
     - key: block.title.salary
       t: Salary
     - key: block.description.salary
-      t: Salary range breakdown.
-    - key: block.title.salary-per-country
-      t: Average Salary per Country
-    - key: block.description.salary-per-country
-      t: Average Salary per Country.
+      t: Yearly salary in USD. 
+    # - key: block.title.salary-per-country
+    #   t: Average Salary per Country
+    # - key: block.description.salary-per-country
+    #   t: Average Salary per Country.
     - key: block.title.years-of-experience
       t: Years of Experience
     - key: block.description.years-of-experience
-      t: Years of experience breakdown.
+      t: How long you've been writing CSS.
     - key: block.title.company-size
       t: Company Size
-    - key: block.description.company-size
-      t: Company size breakdown.
+    # - key: block.description.company-size
+    #   t: Company size breakdown.
     - key: block.title.gender
       t: Gender Breakdown
     - key: block.title.source
       t: Source Breakdown
     - key: block.description.source
-      t: How did participants find out about this survey?
+      t: >
+        How participants found out about the survey (aggregation of self-reported answers and 
+        referrer tracking).
     - key: block.description.gender
       t: Gender breakdown.
     - key: block.title.job-title
@@ -644,7 +646,11 @@ translations:
 
 
     - key: block.title.features-overview
-      t: Overview
+      t: Overall Usage
+    - key: block.description.features-overview
+      t: >
+        The size of the outer circle corresponds to the total number of users who know about
+        a feature, while the inner one represents those who have actually used it. 
 
     - key: block.title.overview
       t: Overall Results

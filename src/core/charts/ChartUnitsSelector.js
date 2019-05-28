@@ -7,7 +7,7 @@ const ChartUnitsSelector = ({ units, onChange }) => {
 
     return (
         <div className="ChartUnitsSelector">
-            <span className="ChartUnitsSelector__Label">{translate('chart_units')}</span>
+            {/* <span className="ChartUnitsSelector__Label">{translate('chart_units')}</span> */}
             <span className="ButtonGroup">
                 <span
                     className={`Button Button--small Button--${

@@ -13,6 +13,7 @@
   blocks:
       - id: participation-by-country
         type: participation-by-country
+        showDescription: false
       - id: salary
         type: vertical-bar
         dataKey: breakdown
@@ -29,7 +30,7 @@
         type: vertical-bar
         dataKey: breakdown
         bucketKeys: companySize
-        showDescription: true
+        showDescription: false
       - id: source
         type: horizontal-bar
         dataKey: breakdown
@@ -79,8 +80,6 @@
             - css-multi-column
             - css-writing-modes
             - css-exclusions
-            - id: conclusion
-              type: conclusion
 
       - id: shapes-and-graphics
         path: /shapes-and-graphics
@@ -98,8 +97,6 @@
             - css-masks
             - blend-modes
             - css-filter-effects
-            - id: conclusion
-              type: conclusion
 
       - id: interactions
         path: /interactions
@@ -114,8 +111,6 @@
             - css-scroll-snap
             - overscroll-behavior
             - overflow-anchor
-            - id: conclusion
-              type: conclusion
 
       - id: typography
         path: /typography
@@ -132,8 +127,6 @@
             - line-breaking-properties
             - font-variant
             - initial-letter
-            - id: conclusion
-              type: conclusion
 
       - id: animations-and-transforms
         path: /animations-and-transforms
@@ -148,8 +141,6 @@
             - css-transitions
             - css-transforms
             - css-animations
-            - id: conclusion
-              type: conclusion
 
       - id: other-features
         path: /other-features
@@ -166,8 +157,6 @@
             - css-containment
             - will-change
             - calc
-            - id: conclusion
-              type: conclusion
 
 - id: units-and-selectors
   path: /units-and-selectors
@@ -228,12 +217,10 @@
         path: /pre-post-processors
         type: tools
         blocks:
-            - id: scaled-ranking-overview
-              type: tools-scaled-ranking-section-overview
+            # - id: scaled-ranking-overview
+            #   type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
-            - id: usage-ratio
-              type: tools-usage-ratio
             - sass
             - less
             - postcss
@@ -248,12 +235,10 @@
         path: /css-frameworks
         type: tools
         blocks:
-            - id: scaled-ranking-overview
-              type: tools-scaled-ranking-section-overview
+            # - id: scaled-ranking-overview
+            #   type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
-            - id: usage-ratio
-              type: tools-usage-ratio
             - bootstrap
             - materialize-css
             - ant-design
@@ -275,12 +260,10 @@
         path: /methodologies
         type: tools
         blocks:
-            - id: scaled-ranking-overview
-              type: tools-scaled-ranking-section-overview
+            # - id: scaled-ranking-overview
+            #   type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
-            - id: usage-ratio
-              type: tools-usage-ratio
             - bem
             - atomic-css
             - oocss
@@ -296,12 +279,11 @@
         path: /css-in-js
         type: tools
         blocks:
-            - id: scaled-ranking-overview
-              type: tools-scaled-ranking-section-overview
+            # - id: scaled-ranking-overview
+            #   type: tools-scaled-ranking-section-overview
             - id: overview
               type: tools-section-overview
-            - id: usage-ratio
-              type: tools-usage-ratio
+            - id: usage-ratiage-ratio
             - styled-components
             - glamor
             - aphrodite

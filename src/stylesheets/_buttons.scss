@@ -43,7 +43,7 @@
     }
 
     &--disabled {
-        color: $tealDark;
+        color: $tealDarker;
     }
 
     &--active {
@@ -54,12 +54,7 @@
 .ButtonGroup {
     display: inline-flex;
     vertical-align: middle;
-    box-shadow: 7px 7px rgba(0, 0, 0, .15);
-    transition: box-shadow 400ms;
 
-    &:hover {
-        box-shadow: 3px 3px rgba(0, 0, 0, .25);
-    }
 
     .Button {
         border-left-width: 0;
@@ -79,6 +74,8 @@
         }
 
         &--active {
+            cursor: default;
+            pointer-events: none;
             &:first-child {
                 border-right-style: dashed;
             }

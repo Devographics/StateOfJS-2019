@@ -9,19 +9,19 @@ import GenderLegends from './GendersLegends'
 const rows = 32
 const columns = 128
 
-const GenderBreakdownWaffleChart = ({ data }) => {
+const GenderBreakdownWaffleChart = ({ data, units }) => {
     const { translate } = useI18n()
 
     let total = 0
     const colors = []
     const translatedData = data.map(bucket => {
         colors.push(theme.genderColors[bucket.id])
-        total += bucket.count
+        total += bucket[units]
 
         return {
             id: bucket.id,
             label: translate(`gender.${bucket.id}`),
-            value: bucket.count
+            value: bucket[units]
         }
     })
 
