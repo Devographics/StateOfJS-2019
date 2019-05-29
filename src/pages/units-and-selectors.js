@@ -9,7 +9,16 @@ const UnitsAndSelectorsPage = ({ data }) => {
 export default UnitsAndSelectorsPage
 
 export const query = graphql`
-    query unitsAndSelectors {
+    query unitsAndSelectors($locale: String) {
+        introduction: markdownRemark(
+            frontmatter: {
+                type: { eq: "introduction" }
+                page: { eq: "units-and-selectors" }
+                locale: { eq: $locale }
+            }
+        ) {
+            html
+        }
         data: unitsAndSelectorsYaml(section_id: { eq: "units-and-selectors" }) {
             aggregations {
                 id
