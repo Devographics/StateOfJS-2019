@@ -1,5 +1,4 @@
 import React, { memo, useMemo } from 'react'
-import { sortBy } from 'lodash'
 import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
@@ -8,6 +7,8 @@ import { colors } from '../../constants'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 import HorizontalBarStripes from './HorizontalBarStripes'
+import sortBy from 'lodash/sortBy'
+import round from 'lodash/round'
 
 const margin = {
     top: 40,
@@ -40,9 +41,12 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                 enableGridX={true}
                 gridXValues={tickCount}
                 enableGridY={false}
-                enableLabel={false}
+                enableLabel={true}
+                label={d => units === 'percentage' ? `${round(d.value, 1)}%`: d.value}
+                labelTextColor={{ theme: 'labels.text.fill'}}
+                labelSkipWidth={40}
                 colors={[colors.blue]}
-                padding={0.6}
+                padding={0.4}
                 borderRadius={1}
                 axisTop={{
                     tickValues: tickCount,
@@ -71,7 +75,7 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                     layerProps => <HorizontalBarStripes {...layerProps} />,
                     'grid',
                     'axes',
-                    'bars'
+                    'bars',
                 ]}
             />
         </div>

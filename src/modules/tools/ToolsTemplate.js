@@ -42,14 +42,20 @@ export const query = graphql`
             fields {
                 resources {
                     id
-                    # github {
-                    #     name
-                    #     stars
-                    #     homepage
-                    #     full_name
-                    #     url
-                    #     description
-                    # }
+                    entity{
+                        name
+                        npm
+                        homepage
+                        description
+                    }
+                    github {
+                        name
+                        stars
+                        homepage
+                        full_name
+                        url
+                        description
+                    }
                 }
             }
         }

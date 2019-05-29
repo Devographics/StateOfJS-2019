@@ -39,15 +39,21 @@ Parse data and convert it into a format compatible with the Circle Packing chart
 
 */
 const getChartData = data => {
+
     const buckets = opinions.filter(o => o.id !== 'never_heard')
 
     const sections = data.tools.nodes.map(section => {
-        const { section_id, aggregations } = section
+        const { section_id, aggregations, fields } = section
 
         const tools = aggregations.map(tool => {
             // if tool doesn't have opinions data, abort
             if (!tool.opinion) {
                 return null
+            }
+
+            const getName = id => {
+                const resource = fields.resources.find(r => r.id === id)
+                return resource && resource.entity.name || id
             }
 
             // get count for a given bucket
@@ -76,14 +82,15 @@ const getChartData = data => {
                     percent: round((count / toolTotal) * 100, 2),
                     color,
                     offsetSum,
-                    offsetPercent: round((offsetSum / toolTotal) * 100, 2)
+                    offsetPercent: round((offsetSum / toolTotal) * 100, 2),
                 }
             }
 
             const node = {
                 id: tool.id,
                 opinions: buckets.map(getNode),
-                count: toolTotal
+                count: toolTotal,
+                name: getName(tool.id)
             }
             return node
         })

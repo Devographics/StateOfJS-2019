@@ -20,6 +20,7 @@ const fontSizeByRadius = radius => {
 }
 
 const Node = ({ node, handlers }) => {
+
     if (node.depth === 0) {
         return (
             <circle
@@ -72,7 +73,7 @@ const Node = ({ node, handlers }) => {
                 )
             })}
 
-            <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
+            <ChartLabel label={node.data.name} fontSize={fontSizeByRadius(node.r)} />
         </g>
     )
 }

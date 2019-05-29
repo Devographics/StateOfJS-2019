@@ -208,8 +208,11 @@ exports.onCreateNode = async ({ node, actions }) => {
                 id: agg.id
             }
             const entityResourcesConfig = entities[agg.id]
-            if (entityResourcesConfig && entityResourcesConfig.github) {
-                aggResources.github = await fetchGithubResource(entityResourcesConfig.github)
+            if (entityResourcesConfig) {
+                aggResources.entity = entityResourcesConfig
+                if (entityResourcesConfig.github) {
+                    aggResources.github = await fetchGithubResource(entityResourcesConfig.github)
+                }
             }
             nodeResources.push(aggResources)
         }

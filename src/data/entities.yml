@@ -1,0 +1,257 @@
+- id: angular
+  description: |
+      Angular is a TypeScript-based open-source front-end web application platform. Note that from
+      this year on we are not be making a distinction between Angular and Angular.js anymore, while datapoints for 
+      2016 and 2017 correspond to Angular (a.k.a. "Angular 2").
+  name: Angular
+- id: ant-design
+  github: ant-design/ant-design
+  name: 'Ant Design'
+  npm: antd
+- id: aphrodite
+  github: Khan/aphrodite
+  name: Aphrodite
+  npm: aphrodite
+- id: apollo
+  description: "A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server.\n"
+  name: Apollo
+- id: appcelerator
+  name: Appcelerator
+- id: atom
+  name: Atom
+- id: atomic-css
+  description: |
+      Atomic CSS is a CSS architecture. It is not opinionated;
+      it simply defines a set of classes representing single-purpose styling units.
+  homepage: 'https://acss.io'
+  name: 'Atomic CSS'
+- id: bem
+  description: |
+      You will not be surprised to hear that BEM is an abbreviation
+      of the key elements of the methodology — Block, Element and Modifier.
+  homepage: 'http://getbem.com/'
+  name: BEM
+- id: bootstrap
+  github: twbs/bootstrap
+  name: Bootstrap
+  npm: bootstrap
+- id: brackets
+  name: Brackets
+- id: bulma
+  github: jgthms/bulma
+  name: Bulma
+  npm: bulma
+- id: csharp
+  name: 'C#'
+- id: c-cplusplus
+  name: C/C++
+- id: css-modules
+  github: css-modules/css-modules
+  name: CSS Modules
+- id: dart
+  name: Dart
+- id: date-fns
+  name: Date-fns
+- id: django
+  name: Django
+- id: dotnet
+  name: .NET
+- id: elixir
+  name: Elixir
+- id: elm-test
+  name: elm-test
+- id: emacs
+  name: emacs
+- id: emotion
+  github: emotion-js/emotion
+  name: Emotion
+  npm: emotion
+- id: es6
+  description: "ES6 and its descendants are the newer versions of JavaScript, usually run through Babel.\n"
+  name: ES6
+- id: extjs
+  name: 'Ext JS'
+- id: firebase
+  name: Firebase
+- id: flutter
+  name: Flutter
+- id: foundation
+  github: zurb/foundation-sites
+  name: Foundation
+- id: glamor
+  github: threepointone/glamor
+  name: Glamor
+  npm: glamor
+- id: golang
+  name: Go
+- id: haskell
+  name: Haskell
+- id: haxe
+  name: Haxe
+- id: intellij
+  name: IntelliJ
+- id: it-css
+  description: |
+      ITCSS is a sane, scalable, managed
+      CSS architecture from CSS Wizardry
+  name: ITCSS
+  homepage: https://itcss.io/
+- id: java
+  name: Java
+- id: jss
+  github: cssinjs/jss
+  name: JSS
+  homepage: https://cssinjs.org
+- id: kotlin
+  name: Kotlin
+- id: laravel
+  name: Laravel
+- id: less
+  github: less/less.js
+  name: Less
+  npm: less
+- id: lodash
+  name: lodash
+- id: luxon
+  name: luxon
+- id: make
+  name: Make
+- id: materialize-css
+  github: Dogfalo/materialize
+  name: 'Materialize CSS'
+  npm: materialize-css
+- id: moment
+  name: moment
+- id: nano
+  name: nano
+- id: native-apps
+  description: "The majority of mobile and desktop apps are still built with native languages like Java, Kotlin, Objective-C, or Swift.\n"
+  name: 'Native Apps'
+- id: notepad++
+  name: notepad++
+- id: objective-c
+  name: Objective-C
+- id: ocaml
+  name: OCaml
+- id: oocss
+  description: |
+      OOCSS, or object-oriented CSS, is a methodology to help programmers
+      write CSS that is succinct and easy to maintain.
+  name: OOCSS
+- id: parcel
+  name: Parcel
+- id: phonegap-cordova
+  description: "Apache Cordova is a mobile application development framework.\n"
+  name: Cordova
+- id: php
+  name: PHP
+- id: phpstorm
+  name: PhpStorm
+- id: postcss
+  github: postcss/postcss
+  name: PostCSS
+- id: primer
+  github: primer/css
+  name: Primer
+  npm: '@primer/css'
+- id: purecss
+  github: pure-css/pure
+  name: PureCSS
+  npm: purecss
+- id: pwa
+  name: 'Progressive Web Apps'
+- id: pycharm
+  name: PyCharm
+- id: python
+  name: Python
+- id: radium
+  github: emotion-js/emotion
+  npm: '@emotion/core'
+  name: Radium
+  homepage: https://formidable.com/open-source/radium/
+- id: rails
+  name: Rails
+- id: ramda
+  name: Ramda
+- id: ruby
+  name: Ruby
+- id: rust
+  name: Rust
+- id: sass
+  github: sass/sass
+  name: Sass
+  npm: node-sass
+- id: scala
+  name: Scala
+- id: selenium
+  name: Selenium
+- id: semantic-ui
+  github: Semantic-Org/Semantic-UI
+  name: 'Semantic UI'
+  npm: semantic-ui
+- id: service-workers
+  name: 'Service Workers'
+- id: smacss
+  description: |
+      SMACSS (pronounced “smacks”) is more style guide than rigid framework.
+      There is no library within here for you to download or install.
+      There is no git repository for you to clone. SMACSS is a way to examine
+      your design process and as a way to fit those rigid frameworks into
+      a flexible thought process.
+  name: SMACSS
+- id: styled-components
+  github: styled-components/styled-components
+  name: Styled Components
+  npm: styled-components
+  homepage: https://www.styled-components.com/
+- id: styled-jsx
+  github: zeit/styled-jsx
+  name: Styled JSX
+  npm: styled-jsx
+- id: stylus
+  github: stylus/stylus
+  name: Stylus
+  npm: stylus
+- id: sublime-text
+  name: 'Sublime Text'
+- id: swift
+  name: Swift
+- id: tachyons
+  github: tachyons-css/tachyons
+  name: Tachyons
+- id: tailwind
+  github: tailwindcss/tailwindcss
+  name: Tailwind
+  npm: tailwindcss
+- id: uikit
+  github: uikit/uikit
+  name: UIKit
+  npm: uikit
+- id: underscore
+  name: underscore
+- id: vanilla-js
+  name: 'Vanilla JS'
+- id: vim
+  name: Vim
+- id: visual-studio
+  name: 'VS Code'
+- id: web-animations-api
+  name: 'Web Animations API'
+- id: web-assembly
+  name: WebAssembly
+- id: web-audio-api
+  name: 'Web Audio API'
+- id: web-speech-api
+  name: 'Web Speech API'
+- id: webgl
+  name: WebGL
+- id: webrtc
+  name: WebRTC
+- id: webstorm
+  name: WebStorm
+- id: webvr
+  name: WebVR
+- id: weex
+  name: weex
+- id: xamarin
+  name: xamarin

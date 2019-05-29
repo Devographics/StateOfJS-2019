@@ -13,7 +13,7 @@ export const query = graphql`
         introduction: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }
-                page: { eq: "layout" }
+                page: { eq: "technologies" }
                 locale: { eq: $locale }
             }
         ) {
@@ -29,6 +29,14 @@ export const query = graphql`
                         buckets {
                             id
                             count
+                        }
+                    }
+                }
+                fields {
+                    resources {
+                        id
+                        entity {
+                            name
                         }
                     }
                 }

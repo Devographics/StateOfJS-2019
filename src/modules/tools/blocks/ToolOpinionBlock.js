@@ -8,6 +8,7 @@ import { getToolDescription } from '../tools_helpers'
 import GaugeBarChart from 'core/charts/GaugeBarChart'
 import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
 import { opinions } from '../../../constants'
+import get from 'lodash/get'
 
 const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
@@ -23,13 +24,23 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
 
     const { translate } = useI18n()
 
-    let githubName = resources.github && resources.github.name
+    let githubName = get(resources, 'github.name')
     githubName = githubName && githubName.charAt(0).toUpperCase() + githubName.slice(1)
+
+    const fullName = get(resources, 'entity.name') || githubName
+    const githubLink = get(resources, 'github.url')
+    const homepageLink = get(resources, 'entity.homepage') || get(resources, 'github.homepage')
+    const npmLink = get(resources, 'entity.npm')
+    const description = translate(
+        `block.${block.id}.description`,
+        {},
+        get(resources, 'entity.description') || get(resources, 'github.description')
+    )
 
     return (
         <Block
             id={block.id}
-            title={translate(`tool.${block.id}`, {}, githubName)}
+            title={translate(`tool.${block.id}`, {}, fullName)}
             showDescription={false}
             units={units}
             setUnits={setUnits}
@@ -48,22 +59,29 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
                     </ChartContainer>
                 </div>
                 <div className="Tool__Description FTBlock__Description">
-                    <TextBlock text={getToolDescription(block, resources, translate)} />
+                    <TextBlock text={description} />
                 </div>
-                {resources.github && (
+                {(githubLink || homepageLink || npmLink) && (
                     <div className="Tool__Resources FTBlock__Resources">
                         <h3>{translate('block.tool.links')}</h3>
                         <ul>
-                            <li className="FTBlock__Links__Item">
-                                <a href={resources.github.url}>
-                                    {translate('block.tool.github_link')}
-                                </a>
-                            </li>
-                            <li className="FTBlock__Links__Item">
-                                <a href={resources.github.homepage}>
-                                    {translate('block.tool.homepage_link')}
-                                </a>
-                            </li>
+                            {githubLink && (
+                                <li className="FTBlock__Links__Item">
+                                    <a href={githubLink}>{translate('block.tool.github_link')}</a>
+                                </li>
+                            )}
+                            {homepageLink && (
+                                <li className="FTBlock__Links__Item">
+                                    <a href={homepageLink}>
+                                        {translate('block.tool.homepage_link')}
+                                    </a>
+                                </li>
+                            )}
+                            {npmLink && (
+                                <li className="FTBlock__Links__Item">
+                                    <a href={`https://www.npmjs.com/package/${npmLink}`}>{translate('block.tool.npm_link')}</a>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 )}

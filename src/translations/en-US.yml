@@ -328,7 +328,9 @@ translations:
       t: GitHub
     - key: block.tool.homepage_link
       t: Homepage
-
+    - key: block.tool.npm_link
+      t: NPM
+      
     - key: block.title.other-methodologies
       t: Other Methodologies
   
