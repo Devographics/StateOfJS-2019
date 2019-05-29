@@ -25,6 +25,10 @@
 - id: Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
   name: Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
   homepage: https://wesbos.com/
+# note: remove duplicate entry once we have better normalization
+- id: Wes Bos
+  name: Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
+  homepage: https://wesbos.com/
 - id: FreeCodeCamp
   name: FreeCodeCamp
   homepage: https://www.freecodecamp.org/
@@ -79,3 +83,46 @@
 - id: Emacs
   name: Emacs
   homepage: https://www.gnu.org/software/emacs/
+
+- id: Hacker News
+  name: Hacker News
+  homepage: https://news.ycombinator.com/
+- id: State of JS
+  name: State of JS
+  homepage: https://stateofjs.com
+- id: State of CSS
+  name: State of CSS
+  homepage: https://stateofcss.com
+- id: Reddit
+  name: Reddit
+  homepage: https://reddit.com
+- id: Sidebar
+  name: Sidebar
+  homepage: https://sidebar.io
+- id: Designer News
+  name: Designer News
+  homepage: https://www.designernews.co/
+- id: One Page Love
+  name: One Page Love
+  homepage: https://onepagelove.com/
+- id: Front-End Front
+  name: Front-End Front
+  homepage: https://frontendfront.com/
+- id: CSS Weekly
+  name: CSS Weekly
+  homepage: https://css-weekly.com/
+- id: CSS Layout News
+  name: CSS Layout News
+  homepage: http://csslayout.news/
+- id: Responsive Design Weekly
+  name: Responsive Design Weekly
+  homepage: http://responsivedesignweekly.com/
+- id: Muzli
+  name: Muzli
+  homepage: https://muz.li/
+- id: WordPress Tavern
+  name: WordPress Tavern
+  homepage: https://wptavern.com/
+- id: Frontend Focus
+  name: Frontend Focus
+  homepage: https://frontendfoc.us/
