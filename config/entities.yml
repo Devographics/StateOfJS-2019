@@ -92,9 +92,10 @@ intellij:
     name: IntelliJ
 it-css:
     description: |
-        itcss is a sane, scalable, managed
+        ITCSS is a sane, scalable, managed
         CSS architecture from CSS Wizardry
-    name: itcss
+    name: ITCSS
+    homepage: https://itcss.io/
 java:
     name: Java
 jss:

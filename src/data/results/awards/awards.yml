@@ -7,19 +7,19 @@
     type: highest_satisfaction
     tools:
         -
-            id: jest
+            id: postcss
             would_use: 7910
             would_not_use: 289
             total: 8199
             percentage: 96.5
         -
-            id: express
+            id: sass
             would_use: 12764
             would_not_use: 768
             total: 13532
             percentage: 94.3
         -
-            id: graphql
+            id: emotion
             would_use: 4108
             would_not_use: 254
             total: 4362

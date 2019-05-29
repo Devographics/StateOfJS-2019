@@ -454,6 +454,8 @@ translations:
     ###########################################################################
 
     # awards
+    - key: awards.runner_ups
+      t: Runner Ups
     - key: block.title.highest_satisfaction
       t: Highest Satisfaction
     - key: block.description.highest_satisfaction
@@ -520,6 +522,7 @@ translations:
         ${tools[0].label} has become the leading JavaScript text editor, and we can definitely see why!
     - key: award.special.runner_up
       t: ${tool.label}
+      
 
     ###########################################################################
     # Generic
