@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import HorizontalBarChart from 'core/charts/HorizontalBarChart'
+import { useEntities } from 'core/entities/entitiesContext';
+import sortBy from 'lodash/sortBy'
 
-const getChartData = (data, block) => {
+const getChartData = (data, block, getUrl) => {
     if (!data || !data.data) {
         throw new Error(
             `HorizontalBarBlock: Missing data for block ${block.id}, page data is undefined`
@@ -27,7 +29,17 @@ const getChartData = (data, block) => {
         )
     }
 
-    return blockData[block.dataKey]
+    let chartData = blockData[block.dataKey]
+
+    chartData.buckets = sortBy(chartData.buckets.map(bucket => ({ ...bucket })), 'count').map(
+        bucket => ({
+            ...bucket,
+            homepage: getUrl(bucket.id)
+        })
+    )
+
+    console.log(chartData)
+    return chartData
 }
 
 const HorizontalBarBlock = ({ block, data }) => {
@@ -39,10 +51,12 @@ const HorizontalBarBlock = ({ block, data }) => {
         translateData
     } = block
 
+    const { getUrl } = useEntities()
+
     const [mode, setMode] = useState(defaultMode)
     const [units, setUnits] = useState(defaultUnits)
 
-    const blockData = useMemo(() => getChartData(data, block), [data, block])
+    const blockData = useMemo(() => getChartData(data, block, getUrl), [data, block])
 
     return (
         <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits}>

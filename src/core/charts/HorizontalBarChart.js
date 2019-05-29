@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
-import { colors } from '../../constants'
+import { colors, fontFamily } from '../../constants'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 import HorizontalBarStripes from './HorizontalBarStripes'
 import sortBy from 'lodash/sortBy'
 import round from 'lodash/round'
+import { useEntities } from 'core/entities/entitiesContext'
 
 const margin = {
     top: 40,
@@ -17,8 +18,52 @@ const margin = {
     left: 240
 }
 
+const Text = ({ hasLink = false, value }) => (
+    <text
+        dominantBaseline="central"
+        textAnchor="end"
+        transform="translate(-10,0) rotate(0)"
+        style={{
+            fill: hasLink ? colors.pink : colors.teal,
+            fontSize: 14,
+            fontFamily
+        }}
+    >
+        {value}
+    </text>
+)
+const TickItem = tick => {
+    const { getUrl } = useEntities()
+
+    const { x, y, value } = tick
+    const link = getUrl(value)
+
+    return (
+        <g transform={`translate(${x},${y})`}>
+            <line
+                x1="0"
+                x2="0"
+                y1="0"
+                y2="0"
+                style={{
+                    stroke: colors.teal,
+                    strokeWidth: 1
+                }}
+            />
+            {link ? (
+                <a href={link}>
+                    <Text hasLink={true} value={value} />
+                </a>
+            ) : (
+                <Text hasLink={false} value={value} />
+            )}
+        </g>
+    )
+}
+
 const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, units }) => {
     const { translate } = useI18n()
+
     const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
         buckets,
         total,
@@ -42,8 +87,8 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                 gridXValues={tickCount}
                 enableGridY={false}
                 enableLabel={true}
-                label={d => units === 'percentage' ? `${round(d.value, 1)}%`: d.value}
-                labelTextColor={{ theme: 'labels.text.fill'}}
+                label={d => (units === 'percentage' ? `${round(d.value, 1)}%` : d.value)}
+                labelTextColor={{ theme: 'labels.text.fill' }}
                 labelSkipWidth={40}
                 colors={[colors.blue]}
                 padding={0.4}
@@ -62,7 +107,8 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                 axisLeft={{
                     format: formatTick,
                     tickSize: 0,
-                    tickPadding: 10
+                    tickPadding: 10,
+                    renderTick: tick => <TickItem {...tick} />
                 }}
                 tooltip={barProps => (
                     <BarTooltip
@@ -75,7 +121,7 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                     layerProps => <HorizontalBarStripes {...layerProps} />,
                     'grid',
                     'axes',
-                    'bars',
+                    'bars'
                 ]}
             />
         </div>
