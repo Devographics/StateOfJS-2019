@@ -136,8 +136,8 @@
         blocks:
             - id: overview
               type: features-section-overview
-            - id: usage-ratio
-              type: features-usage-ratio
+            # - id: usage-ratio
+            #   type: features-usage-ratio
             - css-transitions
             - css-transforms
             - css-animations
@@ -150,8 +150,8 @@
         blocks:
             - id: overview
               type: features-section-overview
-            - id: usage-ratio
-              type: features-usage-ratio
+            # - id: usage-ratio
+            #   type: features-usage-ratio
             - css-variables
             - support-queries
             - css-containment
