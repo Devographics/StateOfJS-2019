@@ -4,6 +4,7 @@ import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
 import { colors } from '../../../constants'
 import ChartLabel from 'core/components/ChartLabel'
+import { useEntities } from 'core/entities/entitiesContext'
 
 // scale circles down to account for width of border
 const strokeWidth = 10
@@ -20,6 +21,8 @@ const fontSizeByRadius = radius => {
 }
 
 const Node = ({ node, handlers }) => {
+
+    const { getName } = useEntities()
 
     if (node.depth === 0) {
         return (
@@ -73,7 +76,7 @@ const Node = ({ node, handlers }) => {
                 )
             })}
 
-            <ChartLabel label={node.data.name} fontSize={fontSizeByRadius(node.r)} />
+            <ChartLabel label={getName(node.id)} fontSize={fontSizeByRadius(node.r)} />
         </g>
     )
 }

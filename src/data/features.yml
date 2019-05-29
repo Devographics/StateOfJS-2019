@@ -1,0 +1,104 @@
+- id: css-grid
+  name: CSS Grid
+  mdn: /en-US/docs/Web/CSS/CSS_Grid_Layout
+  caniuse: css-grid
+- id: flexbox
+  name: Flexbox
+  mdn: /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+  caniuse: flexbox
+- id: css-multi-column
+  name: CSS Multi-column Layout
+  mdn: /en-US/docs/Web/CSS/CSS_Columns
+  caniuse: multicolumn
+- id: css-writing-modes
+  name: CSS Writing Modes
+  mdn: /en-US/docs/Web/CSS/CSS_Writing_Modes
+  caniuse: css-writing-mode
+- id: css-exclusions
+  name: CSS Exclusions
+  caniuse: css-exclusions
+- id: css-shapes
+  name: CSS Shapes
+  mdn: /en-US/docs/Web/CSS/CSS_Shapes
+  caniuse: css-shapes
+- id: object-fit
+  name: object-fit
+  mdn: /en-US/docs/Web/CSS/object-fit
+  caniuse: object-fit
+- id: clip-path
+  name: clip-path
+  mdn: /en-US/docs/Web/CSS/clip-path
+  caniuse: css-clip-path
+- id: blend-modes
+  name: blend-mode
+  mdn: /en-US/docs/Web/CSS/blend-mode
+  caniuse: css-mixblendmode
+- id: css-filter-effects
+  name: CSS Filters & Effects
+  mdn: /en-US/docs/Web/CSS/filter
+  caniuse: css-filters
+- id: css-masks
+  name: CSS Masking
+  mdn: /en-US/docs/Web/CSS/CSS_Masking
+  caniuse: css-masks
+- id: css-scroll-snap
+  name: CSS Scroll Snap
+  mdn: /en-US/docs/Web/CSS/CSS_Scroll_Snap
+  caniuse: css-snappoints
+- id: overscroll-behavior
+  name: overscroll-behavior
+  mdn: /en-US/docs/Web/CSS/overscroll-behavior
+  caniuse: css-overscroll-behavior
+- id: overflow-anchor
+  name: overflow-anchor
+  mdn: /en-US/docs/Web/CSS/overflow-anchor
+  caniuse: css-overflow-anchor
+- id: web-fonts-font-face
+  name: |
+      @font-face
+  mdn: /en-US/docs/Web/CSS/@font-face
+  caniuse: fontface
+- id: variable-fonts
+  name: Variable fonts
+  mdn: /en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+  caniuse: variable-fonts
+- id: line-breaking-properties
+  name: CSS Line Breaking Properties
+- id: font-variant
+  name: font-variant
+  mdn: /en-US/docs/Web/CSS/font-variant
+  caniuse: font-variant-alternates
+- id: initial-letter
+  name: initial-letter
+  mdn: /en-US/docs/Web/CSS/initial-letter
+  caniuse: css-initial-letter
+- id: css-transitions
+  name: CSS Transitions
+  mdn: /en-US/docs/Web/CSS/CSS_Transitions
+  caniuse: css-transitions
+- id: css-transforms
+  name: CSS Transforms
+  mdn: /en-US/docs/Web/CSS/CSS_Transforms
+  caniuse: transforms2d
+- id: css-animations
+  name: CSS Animations
+  mdn: /en-US/docs/Web/CSS/CSS_Animations
+  caniuse: css-animation
+- id: css-variables
+  name: CSS Variables
+  mdn: /en-US/docs/Web/CSS/CSS_Variables
+  caniuse: css-variables
+- id: support-queries
+  name: '@supports'
+  mdn: /en-US/docs/Web/CSS/@supports
+  caniuse: css-supports-api
+- id: css-containment
+  name: CSS Containment
+- id: will-change
+  name: will-change
+  mdn: /en-US/docs/Web/CSS/will-change
+  caniuse: will-change
+- id: calc
+  name: calc()
+  mdn: /en-US/docs/Web/CSS/calc
+  caniuse: calc

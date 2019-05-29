@@ -4,8 +4,9 @@ import FeaturesCirclePackingOverviewChart from '../charts/FeaturesCirclePackingO
 import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../../constants'
+import { useEntities } from 'core/entities/entitiesContext'
 
-const getChartData = data => {
+const getChartData = (data, getName, translate) => {
     const sections = data.features.nodes.map(section => {
         const { section_id } = section
         const features = section.aggregations.map(feature => {
@@ -16,14 +17,16 @@ const getChartData = data => {
                 id: feature.id,
                 awareness: usageBucket.count + knowNotUsedBucket.count,
                 usage: usageBucket.count,
-                unusedCount: knowNotUsedBucket.count
+                unusedCount: knowNotUsedBucket.count,
+                name: getName(feature.id),
             }
         })
 
         return {
             id: section_id,
             isSection: true,
-            children: features
+            children: features,
+            name: translate(`page.${section_id}`),
         }
     })
 
@@ -34,9 +37,12 @@ const getChartData = data => {
 }
 
 const FeaturesOverviewBlock = ({ data }) => {
-    const chartData = useMemo(() => getChartData(data), [data])
-
+    
+    const { getName } = useEntities()
     const { translate } = useI18n()
+
+    const chartData = useMemo(() => getChartData(data, getName, translate), [data])
+
 
     // note: slightly different from Usage legend
     const legends = [

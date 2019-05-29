@@ -9,6 +9,7 @@ import FeatureUsageLegends from '../charts/FeatureUsageLegends'
 import ChartContainer from 'core/charts/ChartContainer'
 import { usage } from '../../../constants'
 import GaugeBarChart from 'core/charts/GaugeBarChart'
+import { useEntities } from 'core/entities/entitiesContext';
 
 // convert relative links into absolute MDN links
 const parseMDNLinks = content => content.replace(new RegExp(`href="/`, 'g'), `href="https://developer.mozilla.org/`)
@@ -52,6 +53,9 @@ const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
 }
 
 const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
+
+    const { getName } = useEntities()
+
     const [units, setUnits] = useState(defaultUnits)
 
     const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
@@ -68,13 +72,12 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
         }
     }
 
-    const mdnInfoTitle = mdnInfo && mdnInfo.title
     const caniuseInfo = feature.resources.caniuse
 
     return (
         <Block
             id={block.id}
-            title={translate(`feature.${block.id}`, {}, mdnInfoTitle)}
+            title={translate(`feature.${block.id}`, {}, getName(block.id))}
             showDescription={false}
             units={units}
             setUnits={setUnits}

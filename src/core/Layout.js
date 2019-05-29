@@ -8,6 +8,7 @@ import Head from './components/Head'
 import { PageContextProvider } from './helpers/pageContext'
 import { mergePageContext } from './helpers/pageHelpers'
 import { I18nContextProvider } from './i18n/i18nContext'
+import { EntitiesContextProvider } from './entities/entitiesContext'
 import PageMetaDebug from './pages/PageMetaDebug'
 // import LangSelector from './i18n/LangSelector'
 
@@ -61,6 +62,7 @@ export default class Layout extends PureComponent {
         return (
             <PageContextProvider value={context}>
                 <I18nContextProvider>
+                    <EntitiesContextProvider>
                     <div
                         className={classNames('pageLayout', `PageLayout--${context.id}`, {
                             'PageLayout--sidebar': showSidebar,
@@ -95,6 +97,7 @@ export default class Layout extends PureComponent {
                             </div>
                         </div>
                     </div>
+                    </EntitiesContextProvider>
                 </I18nContextProvider>
             </PageContextProvider>
         )

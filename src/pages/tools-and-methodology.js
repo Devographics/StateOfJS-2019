@@ -32,14 +32,6 @@ export const query = graphql`
                         }
                     }
                 }
-                fields {
-                    resources {
-                        id
-                        entity {
-                            name
-                        }
-                    }
-                }
             }
         }
     }

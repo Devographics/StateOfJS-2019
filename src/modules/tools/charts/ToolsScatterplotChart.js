@@ -5,6 +5,7 @@ import theme from 'nivoTheme'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { colors } from '../../../constants'
 import { useI18n } from 'core/i18n/i18nContext'
+import { useEntities } from 'core/entities/entitiesContext'
 
 const Quadrants = ({ width, height }) => {
     const { translate } = useI18n()
@@ -59,6 +60,7 @@ const Quadrants = ({ width, height }) => {
 
 const ToolsScatterplotChart = ({ data }) => {
     const { translate } = useI18n()
+    const { getName } = useEntities()
 
     return (
         <div style={{ height: 600 }}>
@@ -99,7 +101,7 @@ const ToolsScatterplotChart = ({ data }) => {
                     return (
                         <span>
                             <strong>
-                                {dotId} ({serie.id})
+                                {getName(dotId)} ({translate(`page.${serie.id}`)})
                             </strong>
                             :{' '}
                             {`${x} ${translate('users')},  ${y}${translate(
