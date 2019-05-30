@@ -8,7 +8,7 @@ import theme from 'nivoTheme'
 import ResponsiveGeoMap from 'core/charts/geo/ResponsiveGeoMapCanvas'
 import { getToolName } from 'core/helpers/tools'
 import Trans from 'core/i18n/Trans'
-import ToolUsageByCountryMapChartTooltip from './ToolUsageByCountryMapChartTooltip'
+import ToolUsageByCountryMapChartTooltip from './_ToolUsageByCountryMapChartTooltip'
 
 const colorScale = scaleQuantize()
     .domain([-10, 10])

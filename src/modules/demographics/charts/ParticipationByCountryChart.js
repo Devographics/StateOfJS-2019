@@ -26,7 +26,7 @@ const colorRange = [
     colors.pink
 ]
 
-const ParticipationByCountryMapChart = ({ data, units }) => {
+const ParticipationByCountryChart = ({ data, units }) => {
     return (
         <div className="SalaryPerCountry__Chart">
             <ResponsiveChoropleth
@@ -63,4 +63,4 @@ const ParticipationByCountryMapChart = ({ data, units }) => {
     )
 }
 
-export default memo(ParticipationByCountryMapChart)
+export default memo(ParticipationByCountryChart)

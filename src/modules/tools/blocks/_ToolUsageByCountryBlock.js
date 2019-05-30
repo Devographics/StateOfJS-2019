@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
-import ToolUsageByCountryMapChart from '../charts/ToolUsageByCountryMapChart'
+import ToolUsageByCountryMapChart from '../charts/_ToolUsageByCountryMapChart'
 
 export default class ToolUsageByCountryBlock extends Component {
     render() {

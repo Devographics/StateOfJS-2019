@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import Block from 'core/components/Block'
-import FeaturesCirclePackingOverviewChart from '../charts/FeaturesCirclePackingOverviewChart'
+import FeaturesCirclePackingOverviewChart from '../charts/FeaturesOverviewCirclePackingChart'
 import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../../constants'

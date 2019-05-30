@@ -1,9 +1,9 @@
 import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
-import SourceBreakdownWaffleChart from '../charts/SourceBreakdownWaffleChart'
+import SourceWaffleChart from '../charts/SourceWaffleChart'
 
-const SourceBreakdownBlock = ({ block, data }) => {
+const SourceBlock = ({ block, data }) => {
     const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
         block.id,
         data.data.aggregations
@@ -13,12 +13,12 @@ const SourceBreakdownBlock = ({ block, data }) => {
 
     return (
         <Block id={block.id} showDescription={false} className="Block--gender Gender__Block">
-            <SourceBreakdownWaffleChart data={blockData.breakdown.buckets} />
+            <SourceWaffleChart data={blockData.breakdown.buckets} />
         </Block>
     )
 }
 
-SourceBreakdownBlock.propTypes = {
+SourceBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired
     }).isRequired,
@@ -33,4 +33,4 @@ SourceBreakdownBlock.propTypes = {
     }).isRequired
 }
 
-export default memo(SourceBreakdownBlock)
+export default memo(SourceBlock)

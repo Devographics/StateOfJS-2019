@@ -241,6 +241,14 @@ Quadrant/Scatterplot Chart
     color: $pink;
 }
 
+.text-teal {
+    color: $teal;
+}
+
+.text-blue {
+    color: $blue;
+}
+
 .text-bold {
     @include font-bold;
 }

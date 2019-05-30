@@ -6,7 +6,7 @@ import ChartContainer from 'core/charts/ChartContainer'
 import { useI18n } from 'core/i18n/i18nContext'
 import { getToolDescription } from '../tools_helpers'
 import GaugeBarChart from 'core/charts/GaugeBarChart'
-import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
+import ToolLegend from '../charts/ToolLegend'
 import { opinions } from '../../../constants'
 import get from 'lodash/get'
 
@@ -47,7 +47,7 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
         >
             <div className="Tool FTBlock">
                 <div className="Tool__Chart FTBlock__Chart">
-                    <ToolOpinionsLegend />
+                    <ToolLegend />
                     <ChartContainer height={40}>
                         <GaugeBarChart
                             buckets={blockData.opinion.buckets}

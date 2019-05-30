@@ -71,7 +71,7 @@
         data:
             section: layout
         blocks:
-            - id: overview
+            - id: features-section-overview
               type: features-section-overview
             # - id: usage-ratio
             #   type: features-usage-ratio
@@ -87,7 +87,7 @@
         data:
             section: shapes-and-graphics
         blocks:
-            - id: overview
+            - id: features-section-overview
               type: features-section-overview
             # - id: usage-ratio
             #   type: features-usage-ratio
@@ -104,7 +104,7 @@
         data:
             section: interactions
         blocks:
-            - id: overview
+            - id: features-section-overview
               type: features-section-overview
             # - id: usage-ratio
             #   type: features-usage-ratio
@@ -118,7 +118,7 @@
         data:
             section: typography
         blocks:
-            - id: overview
+            - id: features-section-overview
               type: features-section-overview
             # - id: usage-ratio
             #   type: features-usage-ratio
@@ -134,7 +134,7 @@
         data:
             section: animations-and-transforms
         blocks:
-            - id: overview
+            - id: features-section-overview
               type: features-section-overview
             # - id: usage-ratio
             #   type: features-usage-ratio
@@ -148,8 +148,9 @@
         data:
             section: other-features
         blocks:
-            - id: overview
+            - id: features-section-overview
               type: features-section-overview
+              showDescription: true
             # - id: usage-ratio
             #   type: features-usage-ratio
             - css-variables

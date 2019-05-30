@@ -1,10 +1,10 @@
 import React from 'react'
 import Block from 'core/components/Block'
-import ToolsCirclePackingChart from '../charts/ToolsCirclePackingChart'
+import ToolsCirclePackingChart from '../charts/ToolsOverviewCirclePackingChart'
 import compact from 'lodash/compact'
 import { colors } from '../../../constants'
 import round from 'lodash/round'
-import ToolOpinionsLegend from '../charts/ToolOpinionsLegend'
+import ToolOpinionsLegend from '../charts/ToolLegend'
 import { useEntities } from 'core/entities/entitiesContext'
 
 export const opinions = [

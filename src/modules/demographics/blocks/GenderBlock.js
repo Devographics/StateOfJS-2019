@@ -1,7 +1,7 @@
 import React, { memo, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
-import GenderBreakdownWaffleChart from '../charts/GenderBreakdownWaffleChart'
+import GenderWaffleChart from '../charts/GenderWaffleChart'
 
 const getChartData = (data, block) => {
     const blockData = data.data.aggregations.find(agg => agg.id === block.id)
@@ -18,7 +18,7 @@ const GenderBreakdownBlock = ({ block, data }) => {
 
     return (
         <Block id={block.id} showDescription={false} className="Block--gender Gender__Block" units={units} setUnits={setUnits}>
-            <GenderBreakdownWaffleChart units={units} data={chartData} />
+            <GenderWaffleChart units={units} data={chartData} />
         </Block>
     )
 }
