@@ -60,7 +60,7 @@ const FeaturesOverviewBlock = ({ data }) => {
 
     return (
         <Block id="features-overview" showDescription={true}>
-            <Legends legends={legends} withFrame={false} layout="vertical" />
+            <Legends legends={legends}/>
             <FeaturesCirclePackingOverviewChart
                 data={chartData}
                 height={800}

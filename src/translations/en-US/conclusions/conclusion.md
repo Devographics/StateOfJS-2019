@@ -3,14 +3,13 @@ type: conclusion
 page: conclusion
 locale: en-US
 ---
- After all is said and done, it looks like 2018 was mostly a continuation of the trends we already observed [last year](http://2017.stateofjs.com).
 
-That's bad news for us, because we can't come out with a big scoop on how React's days are numbered, or the next big thing is this new state management library created by a 17-year-old high-schooler in her spare time. 
+If we had to pick one theme for this year's survey, it would be new beginnings. A new survey in a brand new domain for us; new features for CSS; and a newfound respect for CSS's ever-improving capabilities from the community. 
 
-But that's great news for you, because it means you can spend less time worrying about what to use, and more time actually using it!
+To be fair, CSS has seen its share of doubters as well. The growing importance given to JavaScript over the past few years can sometimes leave some feeling like HTML & CSS are becoming second-tier players, and like their own skills in these fields aren't as valued anymore.  
 
-Things might get shaken up again in 2019 though. While all is currently calm on the front-end front, the question of how you get data from the database to the client is far from settled, and GraphQL is sure to start making bigger and bigger waves in that area. As GraphQL-tailored solutions emerge for both the back-end and the state management layer, we might soon feel the JavaScript ground shifting beneath our feet once more.
+But the data tells another story. While JavaScript isn't going anywhere, it also seems certain that CSS is not going to be replaced anytime soon. And the more powerful CSS becomes, the more valuable mastering it will be. 
 
-But for now, no need to panic. There's never been a better time to be a JavaScript developer than now, and we're willing to bet that 2019 will make that even clearer!
+And make no mistake, CSS is definitely evolving. Most of the features covered in the survey are far from mainstream yet, and upcoming features such as subgrids and aspect ratios are also sure to keep us busy. All this to say that we can't wait for the State of CSS 2020!
 
 <span class="conclusion__byline">– Sacha and Raphaël</span>

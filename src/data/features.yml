@@ -1,5 +1,5 @@
 - id: css-grid
-  name: CSS Grid
+  name: Grid
   mdn: /en-US/docs/Web/CSS/CSS_Grid_Layout
   caniuse: css-grid
 - id: flexbox
@@ -7,18 +7,18 @@
   mdn: /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
   caniuse: flexbox
 - id: css-multi-column
-  name: CSS Multi-column Layout
+  name: Multi-Column Layout
   mdn: /en-US/docs/Web/CSS/CSS_Columns
   caniuse: multicolumn
 - id: css-writing-modes
-  name: CSS Writing Modes
+  name: Writing Modes
   mdn: /en-US/docs/Web/CSS/CSS_Writing_Modes
   caniuse: css-writing-mode
 - id: css-exclusions
-  name: CSS Exclusions
+  name: Exclusions
   caniuse: css-exclusions
 - id: css-shapes
-  name: CSS Shapes
+  name: Shapes
   mdn: /en-US/docs/Web/CSS/CSS_Shapes
   caniuse: css-shapes
 - id: object-fit
@@ -34,15 +34,15 @@
   mdn: /en-US/docs/Web/CSS/blend-mode
   caniuse: css-mixblendmode
 - id: css-filter-effects
-  name: CSS Filters & Effects
+  name: Filters & Effects
   mdn: /en-US/docs/Web/CSS/filter
   caniuse: css-filters
 - id: css-masks
-  name: CSS Masking
+  name: Masking
   mdn: /en-US/docs/Web/CSS/CSS_Masking
   caniuse: css-masks
 - id: css-scroll-snap
-  name: CSS Scroll Snap
+  name: Scroll Snap
   mdn: /en-US/docs/Web/CSS/CSS_Scroll_Snap
   caniuse: css-snappoints
 - id: overscroll-behavior
@@ -59,11 +59,11 @@
   mdn: /en-US/docs/Web/CSS/@font-face
   caniuse: fontface
 - id: variable-fonts
-  name: Variable fonts
+  name: Variable Fonts
   mdn: /en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
   caniuse: variable-fonts
 - id: line-breaking-properties
-  name: CSS Line Breaking Properties
+  name: Line Breaking Properties
 - id: font-variant
   name: font-variant
   mdn: /en-US/docs/Web/CSS/font-variant
@@ -73,19 +73,19 @@
   mdn: /en-US/docs/Web/CSS/initial-letter
   caniuse: css-initial-letter
 - id: css-transitions
-  name: CSS Transitions
+  name: Transitions
   mdn: /en-US/docs/Web/CSS/CSS_Transitions
   caniuse: css-transitions
 - id: css-transforms
-  name: CSS Transforms
+  name: Transforms
   mdn: /en-US/docs/Web/CSS/CSS_Transforms
   caniuse: transforms2d
 - id: css-animations
-  name: CSS Animations
+  name: Animations
   mdn: /en-US/docs/Web/CSS/CSS_Animations
   caniuse: css-animation
 - id: css-variables
-  name: CSS Variables
+  name: Variables
   mdn: /en-US/docs/Web/CSS/CSS_Variables
   caniuse: css-variables
 - id: support-queries
@@ -93,7 +93,7 @@
   mdn: /en-US/docs/Web/CSS/@supports
   caniuse: css-supports-api
 - id: css-containment
-  name: CSS Containment
+  name: Containment
 - id: will-change
   name: will-change
   mdn: /en-US/docs/Web/CSS/will-change
