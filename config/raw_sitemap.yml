@@ -1,11 +1,10 @@
-- id: home
+- id: introduction
   path: /
   type: page
-  is_hidden: true
 
-- id: introduction
-  path: /introduction
-  type: page
+# - id: introduction
+#   path: /introduction
+#   type: page
 
 - id: demographics
   path: /demographics

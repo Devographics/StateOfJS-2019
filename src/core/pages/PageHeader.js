@@ -13,7 +13,7 @@ const PageHeader = ({ title: titleOverride, showIntro = true, introduction }) =>
     return (
         <>
             <h2 className="Page__Title">{title}</h2>
-            {showIntro && (
+            {showIntro && introduction && (
                 <div className="Page__Intro" dangerouslySetInnerHTML={{ __html: introduction }} />
             )}
         </>

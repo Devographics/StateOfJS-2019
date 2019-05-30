@@ -15,7 +15,8 @@ const ChartUnitsSelector = ({ units, onChange }) => {
                     }`}
                     onClick={() => onChange('percentage')}
                 >
-                    {translate('chart_units.percentage')}
+                    <span className="desktop">{translate('chart_units.percentage')}</span>
+                    <span className="mobile">%</span>
                 </span>
                 <span
                     className={`Button Button--small Button--${
@@ -23,7 +24,8 @@ const ChartUnitsSelector = ({ units, onChange }) => {
                     }`}
                     onClick={() => onChange('count')}
                 >
-                    {translate('chart_units.count')}
+                    <span className="desktop">{translate('chart_units.count')}</span>
+                    <span className="mobile">Σ</span>
                 </span>
             </span>
         </div>

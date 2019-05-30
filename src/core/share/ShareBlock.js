@@ -10,6 +10,30 @@ import ShareLinkedIn from './ShareLinkedIn'
 import ShareFacebook from './ShareFacebook'
 import ShareEmail from './ShareEmail'
 import ShareImage from './ShareImage'
+import { colors } from '../../constants'
+
+const ShareIcon = () => (
+    <svg
+        className="Share__Icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+    >
+        <g
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeMiterlimit="10"
+            id="New_icons_1_"
+            strokeWidth={2}
+        >
+            <line x1="11.5" y1="13.5" x2="11.5" y2="0.5" />
+            <polyline points="7,5 11.5,0.5 16,5" />
+            <polyline points="14.5,8.5 19.5,8.5 19.5,23.5 3.5,23.5 3.5,8.5 8.5,8.5" />
+        </g>
+    </svg>
+)
 
 const ShareBlock = ({ section, id, className, toggleClass }) => {
     const [showOptions, setShowOptions] = useState(false)
@@ -42,7 +66,10 @@ const ShareBlock = ({ section, id, className, toggleClass }) => {
                         toggleOptions(e)
                     }}
                 >
-                    {translate('share.share')}
+                    <span className="desktop">{translate('share.share')}</span>
+                    <span className="mobile">
+                        <ShareIcon />
+                    </span>
                 </div>
             </div>
             <div className="share-popup">

@@ -393,6 +393,7 @@ Logo
 }
 
 .Logo__Container{
+    overflow: hidden;
     @include small{
         @include logo(0.3);
 

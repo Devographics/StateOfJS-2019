@@ -60,24 +60,28 @@
 }
 
 .pagination__link__label {
-    @include small-medium {
-        display: inline-block;
-    }
-    @include large {
-        .pagetitle__wrapper--title & {
-            display: none;
-        }
-    }
-    &--short {
-        @include medium-large {
-            display: none;
-        }
-    }
-    &--full {
-        @include small {
-            display: none;
-        }
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    // @include small-medium {
+    //     display: inline-block;
+    // }
+    // @include large {
+    //     .pagetitle__wrapper--title & {
+    //         display: none;
+    //     }
+    // }
+    // &--short {
+    //     @include medium-large {
+    //         display: none;
+    //     }
+    // }
+    // &--full {
+    //     @include small {
+    //         display: none;
+    //     }
+    // }
 }
 
 .pagination__link__symbol {

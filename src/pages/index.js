@@ -1,10 +1,29 @@
+import { graphql } from 'gatsby'
 import React from 'react'
-import Logo from '../core/components/Logo'
+import TextBlock from '../core/blocks/TextBlock'
+// import SponsorsBlock from '../core/blocks/SponsorsBlock'
+import Logo from 'core/components/Logo'
 
-const Home = () => (
-    <div className="Home">
+const Introduction = ({ data }) => (
+    <>
         <Logo size="l" />
-    </div>
+        <TextBlock text={data.introduction.html} />
+        {/* <SponsorsBlock /> */}
+    </>
 )
 
-export default Home
+export default Introduction
+
+export const query = graphql`
+    query introByLocale($locale: String!) {
+        introduction: markdownRemark(
+            frontmatter: {
+                type: { eq: "introduction" }
+                page: { eq: "introduction" }
+                locale: { eq: $locale }
+            }
+        ) {
+            html
+        }
+    }
+`

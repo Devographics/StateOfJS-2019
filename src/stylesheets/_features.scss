@@ -55,6 +55,9 @@
 }
 
 .FTBlock__Resources{
+    @include small{
+        margin-top: $spacing;
+    }
     h3{
         margin-bottom: $spacing/2;
         font-size: $medium-font;

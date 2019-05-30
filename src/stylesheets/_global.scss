@@ -119,7 +119,20 @@ Page-specific styles
 .PageLayout--introduction{
     .block__content{
         p:first-child{
-            font-size: $larger-font;
+            @include medium-large{
+                font-size: $larger-font;
+            }
         }
+    }
+}
+
+.desktop{
+    @include small{
+        display: none;
+    }
+}
+.mobile{
+    @include medium-large{
+        display: none;
     }
 }

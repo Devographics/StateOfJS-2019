@@ -70,3 +70,9 @@ $border2: 1px solid $border-color;
         z-index: 100;
     }
 }
+
+@mixin disableUnderline {
+    &::before {
+        content: none;
+    }
+}

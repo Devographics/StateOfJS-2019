@@ -51,7 +51,7 @@
     }
 }
 
-.Sidebar__Logo__Wrapper{
+.Sidebar__Logo__Wrapper {
     margin: 0;
 }
 
@@ -75,7 +75,7 @@
     grid-template-columns: 50px 1fr 50px;
     border-bottom: $border;
     // height: 50px;
-    .Sidebar__Logo__Inner{
+    .Sidebar__Logo__Inner {
         @include flex-center;
     }
     .Logo--simple {
@@ -84,6 +84,10 @@
     @include large {
         display: none;
     }
+}
+
+.Sidebar__Logo__Link {
+    @include disableUnderline;
 }
 
 .Sidebar__Close {
@@ -124,7 +128,16 @@
 }
 
 .Nav__Page__Link--active {
+    color: $greenDark !important;
     @include font-bold;
+    span::before {
+        content: '> ';
+    }
+    @include small {
+        span::after {
+            content: ' <';
+        }
+    }
 }
 
 .Nav__Page__Link--lvl-1 {

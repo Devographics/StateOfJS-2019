@@ -43,7 +43,7 @@ export default class LegendsItem extends Component {
 
         return (
             <div
-                className="Legends__Item"
+                className={`Legends__Item ${keyLabel ? 'Legends__Item--withKeyLabel' : ''}`}
                 style={style}
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.handleMouseLeave}
@@ -60,7 +60,7 @@ export default class LegendsItem extends Component {
                         }}
                     />
                 )}
-                {keyLabel && <span className="Legends__Item__KeyLabel">{keyLabel}</span>}
+                {keyLabel && <span className="Legends__Item__KeyLabel">{keyLabel}{' '}</span>}
                 <span className="Legends__Item__Label">{label}</span>
             </div>
         )

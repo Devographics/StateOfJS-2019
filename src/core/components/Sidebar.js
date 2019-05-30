@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
 import LogoSidebar2 from './LogoSidebar2'
-
+import { Link } from 'gatsby'
 import ShareSite from '../share/ShareSite'
 
 const Close = () => (
@@ -28,7 +28,9 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
                 <span className="Sidebar__Logo--mobile Logo--mobile">
                     <div />
                     <div className="Sidebar__Logo__Inner">
-                        <LogoSidebar2 />
+                        <Link to="/">
+                            <LogoSidebar2 />
+                        </Link>
                     </div>
                     <span className="Sidebar__Close">
                         <button onClick={closeSidebar}>
@@ -37,7 +39,9 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
                     </span>
                 </span>
                 <div className="Sidebar__Logo--desktop Logo--desktop">
-                    <LogoSidebar2 />
+                    <Link className="Sidebar__Logo__Link" to="/">
+                        <LogoSidebar2 />
+                    </Link>
                 </div>
             </h1>
             <div className="Sidebar__Inner">

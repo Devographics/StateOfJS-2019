@@ -15,7 +15,7 @@ const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
         <>
             <div className={`Nav__Page Nav__Page--lvl-${level}`}>
                 <PageLink
-                    className={`Nav__Page__Link ${isActive ? ' Nav__Page__Link--active' : ''}`}
+                    className={`Nav__Page__Link`}
                     activeClassName="Nav__Page__Link--active"
                     onClick={closeSidebar}
                     page={page}
