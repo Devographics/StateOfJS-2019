@@ -245,6 +245,8 @@ translations:
       t: Have used it
     - key: features.usage.know_it
       t: Know about it
+    - key: features.usage.ratio
+      t: Usage Ratio
     - key: features.usage.know_not_used
       t: Know what it is, but haven't used it
     - key: features.usage.never_heard_not_sure
@@ -356,22 +358,36 @@ translations:
       t: I've never heard of it
     - key: opinions.legends_short.never_heard
       t: Never heard of it  
+    - key: opinions.legends_extrashort.never_heard
+      t: Never heard
+
     - key: opinions.legends.not_interested
       t: I've HEARD of it, and am NOT interested
     - key: opinions.legends_short.not_interested
       t: Heard of it, not interested
+    - key: opinions.legends_extrashort.not_interested
+      t: Not interested
+
     - key: opinions.legends.interested
       t: I've HEARD of it, and WOULD like to learn it
     - key: opinions.legends_short.interested
       t: Heard of it, would like to learn
+    - key: opinions.legends_extrashort.interested
+      t: Interested
+
     - key: opinions.legends.would_use  
       t: I've USED it before, and WOULD use it again
     - key: opinions.legends_short.would_use  
       t: Used it, would use again
+    - key: opinions.legends_extrashort.would_use  
+      t: Would use again
+
     - key: opinions.legends.would_not_use  
       t: I've USED it before, and would NOT use it again
     - key: opinions.legends_short.would_not_use  
       t: Used it, would not use again
+    - key: opinions.legends_extrashort.would_not_use  
+      t: Would not use
 
     ###########################################################################
     # Other Tools

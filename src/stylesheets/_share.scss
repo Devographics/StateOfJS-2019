@@ -21,28 +21,28 @@ $smallShareItemOffset: 150%;
     left: 50%;
     top: 50%;
 }
-.share-options{
+.share-options {
 }
 .share__link {
     display: block;
     flex-shrink: 0;
-    transform: translate(-50%, -50%);
-
     &:last-child {
         margin-right: 0;
     }
     svg {
         height: 100%;
         width: 100%;
-        filter: drop-shadow( 0px 2px 3px rgba($pink, 0.7));
+        filter: drop-shadow(0px 2px 3px rgba($pink, 0.7));
 
-        path, circle {
+        path,
+        circle {
             fill: $teal;
         }
     }
     // @include segmented;
     &:hover {
-        svg path, svg circle {
+        svg path,
+        svg circle {
             fill: $hover-color;
             // animation-name: blink2;
             // animation-duration: 300ms;
@@ -50,7 +50,7 @@ $smallShareItemOffset: 150%;
             // animation-timing-function: linear;
         }
     }
-    &:hover::before{
+    &:hover::before {
         content: none;
     }
     .share-options & {
@@ -59,6 +59,9 @@ $smallShareItemOffset: 150%;
         opacity: 0;
         height: 24px;
         width: 24px;
+        @include small {
+            transform: translate(-50%, -50%);
+        }
     }
     @include small {
         top: 0;
@@ -70,19 +73,22 @@ $smallShareItemOffset: 150%;
         pointer-events: auto;
         @include small {
             &.share__link--twitter {
-                transform: translateX(-$smallShareItemOffset - 50%) translateY(-$smallShareItemOffset - 50%) scale(1);
+                transform: translateX(-$smallShareItemOffset - 50%)
+                    translateY(-$smallShareItemOffset - 50%) scale(1);
             }
             &.share__link--facebook {
                 transform: translateX(-50%) translateY(-$smallShareItemOffset * 1.5 - 50%) scale(1);
             }
             &.share__link--linkedin {
-                transform: translateX($smallShareItemOffset - 50%) translateY(-$smallShareItemOffset - 50%) scale(1);
+                transform: translateX($smallShareItemOffset - 50%)
+                    translateY(-$smallShareItemOffset - 50%) scale(1);
             }
             &.share__link--email {
                 transform: translateX($smallShareItemOffset * 1.5 - 50%) translateY(-50%) scale(1);
             }
             &.share__link--image {
-                transform: translateX($smallShareItemOffset - 50%) translateY($smallShareItemOffset - 50%) scale(1);
+                transform: translateX($smallShareItemOffset - 50%)
+                    translateY($smallShareItemOffset - 50%) scale(1);
             }
         }
         @include medium-large {
@@ -169,11 +175,11 @@ $smallShareItemOffset: 150%;
     }
 }
 
-
-.Share__Icon{
+.Share__Icon {
     stroke: $teal;
     height: 16px;
     width: 16px;
+    .share-button:hover &,
     .share-popup-visible & {
         stroke: $pink;
     }

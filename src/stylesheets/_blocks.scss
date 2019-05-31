@@ -82,9 +82,6 @@
 }
 .Block__Title__Share {
     margin-left: $spacing/2;
-    @include small{
-        margin-right: $spacing/2;
-    }
 }
 
 .block__content {
@@ -98,4 +95,10 @@
 // hack to avoid having border-bottom block share buttons
 .block--othersbar {
     margin-bottom: $spacing * 10;
+}
+
+.Block__Title__ChartControls{
+    @include small{
+        margin-left: $spacing/2;
+    }
 }

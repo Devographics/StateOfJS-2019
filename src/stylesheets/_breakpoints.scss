@@ -1,10 +1,18 @@
-$small-break: 400px;
+$xsmall-break: 600px;
+$small-break: 600px;
 $medium-break: 1000px;
 $large-break: 1200px;
 
+$xsmall-minus-one: $xsmall-break - 1;
 $small-minus-one: $small-break - 1;
 $medium-minus-one: $medium-break - 1;
 
+@mixin xsmall() {
+    // smaller than small-break
+    @media screen and (max-width: $xsmall-minus-one) {
+        @content;
+    }
+}
 @mixin small() {
     // smaller than small-break
     @media screen and (max-width: $small-minus-one) {

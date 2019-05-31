@@ -6,6 +6,7 @@ import { colors } from '../../../constants'
 import round from 'lodash/round'
 import ToolOpinionsLegend from '../charts/ToolLegend'
 import { useEntities } from 'core/entities/entitiesContext'
+import { useI18n } from 'core/i18n/i18nContext'
 
 export const opinions = [
     {
@@ -39,7 +40,7 @@ export const opinions = [
 Parse data and convert it into a format compatible with the Circle Packing chart
 
 */
-const getChartData = (data, getName) => {
+const getChartData = (data, translate, getName) => {
 
     const buckets = opinions.filter(o => o.id !== 'never_heard')
 
@@ -94,7 +95,8 @@ const getChartData = (data, getName) => {
         // return section node
         return {
             id: section_id,
-            children: compact(tools)
+            children: compact(tools),
+            name: translate(`page.${section_id}`),
         }
     })
 
@@ -107,9 +109,10 @@ const getChartData = (data, getName) => {
 
 const ToolsOverviewBlock = ({ data }) => {
 
+    const { translate } = useI18n()
     const { getName } = useEntities()
 
-    const chartData = getChartData(data, getName)
+    const chartData = getChartData(data, translate, getName)
 
     return (
         <Block id="tools-overview" showDescription={true} className="ToolsOverviewBlock">

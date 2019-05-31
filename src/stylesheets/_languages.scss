@@ -13,10 +13,17 @@
     .Home__Wrapper & {
         padding: $spacing/2 $spacing;
     }
+    .Sidebar & {
+        margin-bottom: $spacing;
+        @include border;
+    }
 }
 
 .LanguageSwitcher__Inner {
     position: relative;
+    .Sidebar & {
+        padding: 8px 12px;
+    }
 }
 
 .LanguageSwitcher__Toggle {
@@ -42,25 +49,19 @@
     .pagetitle & {
         padding: $spacing;
     }
-    .Nav & {
-        margin-bottom: $spacing/2;
-    }
 }
 .LanguageSwitcher__Options {
     position: absolute;
-    width: 100%;
-    max-width: 300px;
-
-    @include small-medium {
-    }
-    @include large {
-        width: 300px;
-        left: 50%;
-        margin-left: -150px;
-    }
+    width: 300px;
+    left: 50%;
     border: $border;
     background: $bg-color;
     padding: $spacing;
+    transform: translateX(-50%);
+    z-index: 1;
+    @include xsmall {
+        max-width: 90vw;
+    }
     &:after,
     &:before {
         left: 50%;

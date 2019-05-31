@@ -28,7 +28,7 @@ const colorRange = [
 
 const ParticipationByCountryChart = ({ data, units }) => {
     return (
-        <div className="SalaryPerCountry__Chart">
+        <div className="ParticipationByCountryChart__Chart">
             <ResponsiveChoropleth
                 features={features}
                 data={data}

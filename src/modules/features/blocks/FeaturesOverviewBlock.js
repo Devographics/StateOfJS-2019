@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import Block from 'core/components/Block'
-import FeaturesCirclePackingOverviewChart from '../charts/FeaturesOverviewCirclePackingChart'
+import FeaturesOverviewCirclePackingChart from '../charts/FeaturesOverviewCirclePackingChart'
 import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../../constants'
@@ -16,7 +16,9 @@ const getChartData = (data, getName, translate) => {
             return {
                 id: feature.id,
                 awareness: usageBucket.count + knowNotUsedBucket.count,
+                awarenessColor: colors.teal,
                 usage: usageBucket.count,
+                usageColor: colors.blue,
                 unusedCount: knowNotUsedBucket.count,
                 name: getName(feature.id),
             }
@@ -59,9 +61,9 @@ const FeaturesOverviewBlock = ({ data }) => {
     ]
 
     return (
-        <Block id="features-overview" showDescription={true}>
+        <Block id="features-overview" className="FeaturesOverviewBlock" showDescription={true}>
             <Legends legends={legends}/>
-            <FeaturesCirclePackingOverviewChart
+            <FeaturesOverviewCirclePackingChart
                 data={chartData}
                 height={800}
                 variant="allFeatures"

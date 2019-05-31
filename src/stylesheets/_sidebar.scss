@@ -107,11 +107,17 @@
     }
 }
 
+.Nav{
+    @include small-medium{
+        @include flex-center;
+        flex-direction: column;
+    }
+}
 .Nav__Page__Link {
     display: inline-block;
     white-space: nowrap;
     font-size: $medium-font;
-    margin: 0 0 $spacing / 3;
+    margin: 0 0 $spacing / 3 0;
 }
 
 .Nav__Page--lvl-1,
@@ -133,7 +139,7 @@
     span::before {
         content: '> ';
     }
-    @include small {
+    @include small-medium {
         span::after {
             content: ' <';
         }
@@ -153,7 +159,9 @@
 }
 
 .Nav__SubPages {
-    padding-left: $spacing;
+    @include large{
+        padding-left: $spacing;
+    }
     // margin-top: $spacing * 0.5;
 }
 

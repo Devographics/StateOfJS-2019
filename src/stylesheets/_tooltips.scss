@@ -156,6 +156,22 @@ $tooltipDisplay: block;
     @include font-bold;
 }
 
+.Tooltip {
+    z-index: 1000;
+}
+
 .Tooltip__Link {
+    @include font-bold;
+}
+
+.Tooltip__Heading{
+    margin-bottom: $spacing/4;
+}
+.Tooltip__Item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Tooltip__Value{
     @include font-bold;
 }

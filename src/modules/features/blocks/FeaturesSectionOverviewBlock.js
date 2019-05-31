@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import FeaturesCirclePackingChart from '../charts/FeaturesCirclePackingChart'
+import { useEntities } from 'core/entities/entitiesContext'
+import { colors } from '../../../constants'
 
-const getChartData = data => {
+const getChartData = (data, getName) => {
     const features = data.data.aggregations.map(feature => {
         const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
         const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
@@ -11,8 +13,11 @@ const getChartData = data => {
         return {
             id: feature.id,
             awareness: usageBucket.count + knowNotUsedBucket.count,
+            awarenessColor: colors.teal,
             usage: usageBucket.count,
-            unusedCount: knowNotUsedBucket.count
+            usageColor: colors.blue,
+            unusedCount: knowNotUsedBucket.count,
+            name: getName(feature.id),
         }
     })
 
@@ -23,7 +28,10 @@ const getChartData = data => {
 }
 
 const FeaturesSectionOverviewBlock = ({ block, data }) => {
-    const chartData = getChartData(data)
+
+    const { getName } = useEntities()
+
+    const chartData = getChartData(data, getName)
 
     return (
         <Block id={block.id} showDescription={false}>

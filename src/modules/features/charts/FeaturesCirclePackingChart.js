@@ -4,7 +4,10 @@ import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
 import { colors } from '../../../constants'
 import ChartLabel from 'core/components/ChartLabel'
-import { useEntities } from 'core/entities/entitiesContext'
+import { useTheme } from '@nivo/core'
+// import { Chip } from '@nivo/tooltip'
+import { useI18n } from 'core/i18n/i18nContext'
+import round from 'lodash/round'
 
 const fontSizeByRadius = radius => {
     if (radius < 25) return 8
@@ -13,9 +16,47 @@ const fontSizeByRadius = radius => {
     return 14
 }
 
-const Node = ({ node, handlers }) => {
+const Chip = ({ color, color2 }) => (
+    <span className={`Chip Tooltip__Chip ${color2 && 'Chip--split'}`}>
+        <span style={{ background: color }}  className="Chip__Inner"/>
+        {color2 && <span style={{ background: color2 }} className="Chip__Inner" />}
+    </span>
+)
 
-    const { getName } = useEntities()
+const Tooltip = props => {
+    const { translate } = useI18n()
+    console.log(props)
+    const { data } = props
+    const { name, awareness, awarenessColor, usage, usageColor } = data
+    const theme = useTheme()
+
+    return (
+        <div style={theme.tooltip.basic}>
+            <div>
+                <h4 className="Tooltip__Heading">{name}</h4>
+                <div className="Tooltip__Item">
+                    <Chip color={awarenessColor} />
+                    {translate('features.usage.know_it')}:{' '}
+                    <strong className="Tooltip__Value">{awareness}</strong>
+                </div>
+                <div className="Tooltip__Item">
+                    <Chip color={usageColor} />
+                    {translate('features.usage.used_it')}:{' '}
+                    <strong className="Tooltip__Value">{usage}</strong>
+                </div>
+                <div className="Tooltip__Item">
+                    <Chip color={awarenessColor} color2={usageColor} />
+                    {translate('features.usage.ratio')}:{' '}
+                    <strong className="Tooltip__Value">
+                        {round((usage / awareness) * 100, 1)}%
+                    </strong>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const Node = ({ node, handlers }) => {
 
     if (node.depth === 0) {
         return (
@@ -56,14 +97,14 @@ const Node = ({ node, handlers }) => {
         >
             <circle r={node.r} fill={colors.teal} />
             <circle r={usageRadius} fill={colors.blue} />
-            <ChartLabel label={getName(node.label)} fontSize={fontSizeByRadius(node.r)} />
+            <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
         </g>
     )
 }
 
-const FeaturesCirclePackingOverviewChart = ({ data, height = 500 }) => {
+const FeaturesCirclePackingOverviewChart = ({ data }) => {
     return (
-        <div style={{ height }}>
+        <div className="FeaturesCirclePackingOverviewChart CirclePackingChart">
             <ResponsiveBubble
                 theme={theme}
                 margin={{
@@ -72,6 +113,7 @@ const FeaturesCirclePackingOverviewChart = ({ data, height = 500 }) => {
                     bottom: 2,
                     left: 2
                 }}
+                identity="name"
                 leavesOnly={false}
                 padding={5}
                 colors={['white', 'blue']}
@@ -79,6 +121,7 @@ const FeaturesCirclePackingOverviewChart = ({ data, height = 500 }) => {
                 value="awareness"
                 nodeComponent={Node}
                 animate={false}
+                tooltip={Tooltip}
             />
         </div>
     )
