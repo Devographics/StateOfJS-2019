@@ -6,12 +6,6 @@ import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
 
-const scaleLabel = translate => value => {
-    if (value === '1' || value === '3') return null
-
-    return translate(`opinion_scale.${value}.long`)
-}
-
 const SuperSad = ({ width, height }) => (
     <svg
         width={width}
@@ -153,13 +147,17 @@ const getChartData = buckets => {
     return sortedBuckets
 }
 
+const formatTick = translate => value => {
+    return translate(`opinion_scale.${value}.long`)
+}
+
 const OpinionScaleBlock = ({ block, data }) => {
     const { translate } = useI18n()
 
     const { units: defaultUnits = 'percentage', translateData } = block
     const [units, setUnits] = useState(defaultUnits)
 
-    const getScaleTickLabel = scaleLabel(translate)
+    const getScaleTickLabel = formatTick(translate)
 
     if (!data || !data.data) {
         return (
@@ -180,7 +178,7 @@ const OpinionScaleBlock = ({ block, data }) => {
     const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [
         blockData[dataKey].buckets
     ])
-
+    
     return (
         <Block
             id={block.id}
@@ -197,9 +195,7 @@ const OpinionScaleBlock = ({ block, data }) => {
                     translateData={translateData}
                     chartProps={{
                         axisBottom: {
-                            tickSize: 0,
-                            tickPadding: 15,
-                            format: getScaleTickLabel
+                            format: getScaleTickLabel,
                         },
                         layers: ['grid', 'axes', 'bars', Emojis]
                     }}
