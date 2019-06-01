@@ -1,12 +1,7 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import PageTemplate from 'core/pages/PageTemplate'
 
-const ToolsTemplate = ({ data }) => {
-    return <PageTemplate data={data} />
-}
-
-export default ToolsTemplate
+export default PageTemplate
 
 export const query = graphql`
     query toolsAndMethodologiesSectionByIdAndLocale($id: String!, $locale: String!) {

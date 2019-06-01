@@ -4,11 +4,14 @@ import { usePageContext } from '../helpers/pageContext'
 import { useI18n } from '../i18n/i18nContext'
 import { getPageLabel } from '../helpers/pageHelpers'
 
-const PageHeader = ({ title: titleOverride, showIntro = true, introduction }) => {
+const PageHeader = ({ title: _title, showIntro = true, introduction }) => {
     const context = usePageContext()
+    console.log('//////')
+    console.log(context)
+    console.log(useI18n())
     const { translate } = useI18n()
 
-    const title = titleOverride || getPageLabel(context, translate)
+    const title = _title || getPageLabel(context, translate)
 
     return (
         <>

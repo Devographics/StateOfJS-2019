@@ -1,13 +1,7 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import PageTemplate from 'core/pages/PageTemplate'
 
-const FeaturesTemplate = ({ data }) => {
-    console.log(data)
-    return <PageTemplate data={data} />
-}
-
-export default FeaturesTemplate
+export default PageTemplate
 
 export const query = graphql`
     query featuresOverviewByLocale2($section: String!, $locale: String!) {

@@ -13,7 +13,7 @@ const ToolsSunburstChart = ({ data }) => {
                 borderWidth={1}
                 borderColor="white"
                 // colors={{ scheme: 'nivo' }}
-                // childColor={x => {console.log(x); return x.color}}
+                // childColor={x => {return x.color}}
                 childColor={{ from: 'color' }}
                 animate={true}
                 motionStiffness={90}

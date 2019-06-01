@@ -85,7 +85,7 @@ const RatioChart = ({ buckets, mode = 'percentage' }) => {
                     tickSize: 0,
                     tickPadding: 10
                 }}
-                // labelFormat={x =>{console.log(x); return 'foo'}}
+                // labelFormat={x =>{return 'foo'}}
                 // tooltip={barProps => <Tooltip {...barProps} />}
 
                 layers={['grid', 'axes', 'bars', 'markers', 'legends', labelsLayer]}

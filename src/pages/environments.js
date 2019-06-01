@@ -1,12 +1,7 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import PageTemplate from 'core/pages/PageTemplate'
 
-const EnvironmentsPage = ({ data }) => {
-    return <PageTemplate data={data} />
-}
-
-export default EnvironmentsPage
+export default PageTemplate
 
 export const query = graphql`
     query environments {

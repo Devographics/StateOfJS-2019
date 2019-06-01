@@ -60,11 +60,9 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
             // onMouseLeave={handlers.onMouseLeave}
 
             onMouseOver={() => {
-                console.log(`enter ${node.id}`)
                 setActiveId(node.id)
             }}
             onMouseLeave={() => {
-                console.log(`leave ${node.id}`)
                 setNull()
             }}
             className={`CirclePackingNode ${

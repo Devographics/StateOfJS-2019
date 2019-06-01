@@ -25,7 +25,6 @@ const Chip = ({ color, color2 }) => (
 
 const Tooltip = props => {
     const { translate } = useI18n()
-    console.log(props)
     const { data } = props
     const { name, awareness, awarenessColor, usage, usageColor } = data
     const theme = useTheme()

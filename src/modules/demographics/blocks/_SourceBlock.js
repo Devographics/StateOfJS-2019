@@ -9,8 +9,6 @@ const SourceBlock = ({ block, data }) => {
         data.data.aggregations
     ])
 
-    console.log({ blockData })
-
     return (
         <Block id={block.id} showDescription={false} className="Block--gender Gender__Block">
             <SourceWaffleChart data={blockData.breakdown.buckets} />

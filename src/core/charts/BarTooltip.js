@@ -10,7 +10,6 @@ import { useI18n } from 'core/i18n/i18nContext'
 const BarTooltip = ({ indexValue, data, i18nNamespace, shouldTranslate }) => {
     const { translate } = useI18n()
     const label = shouldTranslate ? translate(`${i18nNamespace}.${indexValue}.long`) : indexValue
-    console.log(`${i18nNamespace}.${indexValue}.long`)
     return (
         <div style={{ maxWidth: 300 }}>
             {label}:&nbsp;

@@ -17,7 +17,6 @@ const patterns = [
 ]
 
 const ToolsTreemapChart = ({ data }) => {
-    console.log(data)
     return (
         <div style={{ height: 800 }}>
             <ResponsiveTreeMap
