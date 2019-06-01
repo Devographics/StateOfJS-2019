@@ -18,8 +18,14 @@ $smallShareItemOffset: 150%;
 .share-popup {
     pointer-events: none;
     position: absolute;
+    @include small{
     left: 50%;
     top: 50%;
+    }
+    @include medium-large{
+        top: 0;
+        left: 0;
+    }
 }
 .share-options {
 }

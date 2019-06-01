@@ -2,6 +2,24 @@ locale: en-US
 translations:
 
     ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: About the T-shirt
+    - key: tshirt.description
+      t: >
+          The shirt features the State of CSS logo along with snippets of the actual CSS
+          code used to create each shape. Who knows, you might learn a thing or two!
+
+
+          We use a high-quality, super-soft tri-blend shirt with a slim fit. If
+          you prefer a looser fit we recommend ordering one size up from what you
+          usually wear.
+    - key: tshirt.getit
+      t: Get It – Only $25
+
+    ###########################################################################
     # Demographics
     ###########################################################################
 
@@ -17,19 +35,19 @@ translations:
     - key: salary.10_30.long
       t: $10k-$30k
     - key: salary.10_30.short
-      t: $10k-$30k 
+      t: $10k-$30k
     - key: salary.30_50.long
       t: $30k-$50k
     - key: salary.30_50.short
-      t: $30k-$50k 
+      t: $30k-$50k
     - key: salary.50_100.long
       t: $50k-$100k
     - key: salary.50_100.short
-      t: $50k-$100k  
+      t: $50k-$100k
     - key: salary.100_200.long
       t: $100k-$200k
     - key: salary.100_200.short
-      t: $100k-$200k   
+      t: $100k-$200k
     - key: salary.200_more.long
       t: more than $200k
     - key: salary.200_more.short
@@ -131,13 +149,13 @@ translations:
     - key: javascript-proficiency.short_simple_javascript.long
       t: I can write short, simple JavaScript or jQuery statements
     - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
-      t: Intermediate 
+      t: Intermediate
     - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
       t: I can work on existing front-end codebases using modern frameworks (React, Vue, etc.)
     - key: javascript-proficiency.advanced_front_end_patterns.short
-      t: Advanced 
+      t: Advanced
     - key: javascript-proficiency.advanced_front_end_patterns.long
-      t: Can handle advanced front-end patterns (state management, data loading, etc.) 
+      t: Can handle advanced front-end patterns (state management, data loading, etc.)
     - key: javascript-proficiency.entire_codebases_from_scratch.short
       t: Expert
     - key: javascript-proficiency.entire_codebases_from_scratch.long
@@ -201,7 +219,7 @@ translations:
     - key: block.title.salary
       t: Salary
     - key: block.description.salary
-      t: Yearly salary in USD. 
+      t: Yearly salary in USD.
     # - key: block.title.salary-per-country
     #   t: Average Salary per Country
     # - key: block.description.salary-per-country
@@ -220,8 +238,8 @@ translations:
       t: Source
     - key: block.description.source
       t: >
-        How participants found out about the survey (aggregation of self-reported answers and 
-        referrer tracking).
+          How participants found out about the survey (aggregation of self-reported answers and 
+          referrer tracking).
     - key: block.description.gender
       t: Gender breakdown.
     - key: block.title.job-title
@@ -256,21 +274,20 @@ translations:
       t: Usage Overview
     - key: block.description.features-overview
       t: >
-        The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
-        a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
+          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
 
     - key: block.title.features-section-overview
       t: Usage Overview
     - key: block.description.features-section-overview
       t: >
-        The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
-        a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
-
+          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
 
     ###########################################################################
     # Units & Selectors
     ###########################################################################
-    
+
     - key: block.title.units
       t: Units
     - key: block.title.pseudo-elements
@@ -307,16 +324,16 @@ translations:
 
     ###########################################################################
     # Tools & Methodologies
-    ########################################################################### 
-  
+    ###########################################################################
+
     - key: block.title.tools-overview
       t: Sentiment Overview
     - key: block.description.tools-overview
       t: >
-        Overview of opinions on the tools and methodologies surveyed. <span class="text-green text-bold">Green segments</span> represent positive opinions, 
-        while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. The diameter
-        of each circle corresponds to the aggregate sum of respondents for all of these four options
-        (excluding respondents unaware of the technology).
+          Overview of opinions on the tools and methodologies surveyed. <span class="text-green text-bold">Green segments</span> represent positive opinions, 
+          while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. The diameter
+          of each circle corresponds to the aggregate sum of respondents for all of these four options
+          (excluding respondents unaware of the technology).
     - key: block.tool.links
       t: Links
     - key: block.tool.github_link
@@ -325,25 +342,25 @@ translations:
       t: Homepage
     - key: block.tool.npm_link
       t: NPM
-      
+
     - key: block.title.other-methodologies
       t: Other Methodologies
-  
+
     # quadrant/scatterplot chart
     - key: block.title.tools-scatterplot
       t: Satisfaction vs Usage
     - key: block.description.tools-scatterplot
       t: >
-        This chart shows each technology’s **satisfaction ratio** over its total **user count**. 
-        It can be divided into four quadrants:
-        
-        - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
-        
-        - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
-        
-        - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
-        
-        - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+          This chart shows each technology’s **satisfaction ratio** over its total **user count**. 
+          It can be divided into four quadrants:
+
+          - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
+
+          - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
+
+          - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
+
+          - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
     - key: quadrants.assess
       t: Assess
     - key: quadrants.adopt
@@ -357,7 +374,7 @@ translations:
     - key: opinions.legends.never_heard
       t: I've never heard of it
     - key: opinions.legends_short.never_heard
-      t: Never heard of it  
+      t: Never heard of it
     - key: opinions.legends_extrashort.never_heard
       t: Never heard
 
@@ -375,24 +392,24 @@ translations:
     - key: opinions.legends_extrashort.interested
       t: Interested
 
-    - key: opinions.legends.would_use  
+    - key: opinions.legends.would_use
       t: I've USED it before, and WOULD use it again
-    - key: opinions.legends_short.would_use  
+    - key: opinions.legends_short.would_use
       t: Used it, would use again
-    - key: opinions.legends_extrashort.would_use  
+    - key: opinions.legends_extrashort.would_use
       t: Would use again
 
-    - key: opinions.legends.would_not_use  
+    - key: opinions.legends.would_not_use
       t: I've USED it before, and would NOT use it again
-    - key: opinions.legends_short.would_not_use  
+    - key: opinions.legends_short.would_not_use
       t: Used it, would not use again
-    - key: opinions.legends_extrashort.would_not_use  
+    - key: opinions.legends_extrashort.would_not_use
       t: Would not use
 
     ###########################################################################
     # Other Tools
     ###########################################################################
-    
+
     - key: block.title.text-editors
       t: Text Editors
     - key: block.description.text-editors
@@ -405,7 +422,7 @@ translations:
     ###########################################################################
     # Environments
     ###########################################################################
-    
+
     - key: block.title.form-factors
       t: Form Factors
     - key: block.description.form-factors
@@ -414,7 +431,7 @@ translations:
     ###########################################################################
     # Resources
     ###########################################################################
-    
+
     - key: block.title.blogs-magazines
       t: Blogs & Magazines
     - key: block.description.blogs-magazines
@@ -431,7 +448,7 @@ translations:
     ###########################################################################
     # Opinions
     ###########################################################################
-    
+
     - key: block.title.easy-to-learn
       t: Learning Curve
     - key: block.description.easy-to-learn
@@ -456,7 +473,7 @@ translations:
       t: Programming Language
     - key: block.description.programming-language
       t: “CSS is a programming language”
-  
+
     - key: block.title.enjoy-css
       t: Enjoyment
     - key: block.description.enjoy-css
@@ -481,77 +498,78 @@ translations:
       t: Highest Satisfaction
     - key: block.description.highest_satisfaction
       t: |
-        Awarded to the library with the highest percentage of satisfied users.
+          Awarded to the library with the highest percentage of satisfied users.
     - key: award.highest_satisfaction.comment
       t: |
-        With **${tools[0].percentage}%** of users willing to use it again,
-        ${tools[0].label} proves it’s not kidding around.
+          With **${tools[0].percentage}%** of users willing to use it again,
+          ${tools[0].label} proves it’s not kidding around.
     - key: award.highest_satisfaction.runner_up
-      t: ${tool.label} ${tool.percentage}%  
+      t: ${tool.label} ${tool.percentage}%
     - key: block.title.highest_interest
       t: Highest Interest
     - key: block.description.highest_interest
       t: |
-        Awarded to the technology developers are most interested in learning.
+          Awarded to the technology developers are most interested in learning.
     - key: award.highest_interest.comment
       t: |
-        **${tools[0].percentage}%** of developers who have heard about
-        ${tools[0].label} want to learn it.
-        That’s some serious interest!
+          **${tools[0].percentage}%** of developers who have heard about
+          ${tools[0].label} want to learn it.
+          That’s some serious interest!
     - key: award.highest_interest.runner_up
       t: ${tool.label} ${tool.percentage}%
     - key: block.title.highest_usage
       t: Most Used
     - key: block.description.highest_usage
       t: |
-        Awarded to technology with the largest user base.
+          Awarded to technology with the largest user base.
     - key: award.highest_usage.comment
       t: |
-        With **${tools[0].count}** users ${tools[0].label}
-        is the most used library this year.        
+          With **${tools[0].count}** users ${tools[0].label}
+          is the most used library this year.
     - key: award.highest_usage.runner_up
       t: ${tool.label} ${tool.count}
     - key: block.title.most_mentioned
       t: Most Mentioned
     - key: block.description.most_mentioned
       t: |
-        Awarded to the library mentioned the most in the “other libraries” answer. 
+          Awarded to the library mentioned the most in the “other libraries” answer.
     - key: award.most_mentioned.comment
       t: |
-        ${tools[0].label} collected **${tools[0].count}** mentions,
-        making it the most submitted freeform answer by far.
+          ${tools[0].label} collected **${tools[0].count}** mentions,
+          making it the most submitted freeform answer by far.
     - key: award.most_mentioned.runner_up
       t: ${tool.label} ${tool.count}
     - key: block.title.prediction
       t: Prediction Award
     - key: block.description.prediction
       t: |
-        Awarded to an up-and-coming technology that might take over… or not?
+          Awarded to an up-and-coming technology that might take over… or not?
     - key: award.prediction.comment
       t: |
-        The Facebook team is two for two with React and GraphQL.
-        Will Reason follow the same path?
+          The Facebook team is two for two with React and GraphQL.
+          Will Reason follow the same path?
     - key: award.prediction.runner_up
       t: ${tool.label}
     - key: block.title.special
       t: Special Award
     - key: block.description.special
       t: |
-        Awarded to a technology that we just fell in love with this year.
+          Awarded to a technology that we just fell in love with this year.
     - key: award.special.comment
       t: |
-        ${tools[0].label} has become the leading JavaScript text editor, and we can definitely see why!
+          ${tools[0].label} has become the leading JavaScript text editor, and we can definitely see why!
     - key: award.special.runner_up
       t: ${tool.label}
-      
 
     ###########################################################################
     # Generic
     ###########################################################################
 
-    # pages 
+    # pages
     - key: page.introduction
       t: Introduction
+    - key: page.tshirt
+      t: T-shirt
     - key: page.demographics
       t: Demographics
     - key: page.features
@@ -639,7 +657,7 @@ translations:
     - key: block.title.usage-ratio
       t: Usage Ratio Ranking
     - key: block.description.usage-ratio
-      t: Ranking usage ratios among users who are aware of a technology. 
+      t: Ranking usage ratios among users who are aware of a technology.
     - key: users_percentage
       t: Percentage of Users
     - key: users_count
@@ -661,4 +679,4 @@ translations:
     - key: users
       t: users
     - key: percent_satisfaction
-      t: "% satisfaction"
+      t: '% satisfaction'

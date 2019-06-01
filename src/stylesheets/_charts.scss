@@ -219,8 +219,8 @@ Chart Controls
 Vertical Bar Chart
 
 */
-.OpinionScaleChart{
-    svg{
+.OpinionScaleChart {
+    svg {
         overflow: visible;
     }
 }
@@ -243,27 +243,27 @@ Features Overview Chart
         height: 800px;
     }
 }
-.CirclePackingNode{
-    &--inactive{
+.CirclePackingNode {
+    &--inactive {
         opacity: 0.15;
     }
 }
-.CirclePackingNode__Legend{
+.CirclePackingNode__Legend {
     pointer-events: none;
     opacity: 0;
     transition: all 300ms ease-in;
-    .CirclePackingNode--active &{
+    .CirclePackingNode--active & {
         opacity: 1;
     }
 }
-.CirclePackingNode__Legend__Label{
+.CirclePackingNode__Legend__Label {
     font-size: $smallish-font;
 }
-.CirclePackingNode__Legend__Value{
+.CirclePackingNode__Legend__Value {
     @include font-bold;
 }
-.ToolsOverviewCirclePackingChart{
-    svg{
+.ToolsOverviewCirclePackingChart {
+    svg {
         overflow: visible;
     }
 }

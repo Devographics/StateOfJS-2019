@@ -1,0 +1,75 @@
+$antsBg: $navyLight;
+$antsFg: $pink;
+
+.Tshirt__Introduction {
+    margin-bottom: $spacing * 2;
+}
+
+.Tshirt {
+    border: 1px solid $border-color;
+    @include medium-large {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    // background: $navyLight;
+}
+
+.Tshirt__Images {
+    @include small {
+        border-bottom: 1px solid $border-color;
+    }
+    @include medium-large {
+        border-right: 1px solid $border-color;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+.Tshirt__Image {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.Tshirt__Image0 {
+    border-bottom: 1px solid $border-color;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.Tshirt__Image1 {
+    border-right: 1px solid $border-color;
+}
+
+.Tshirt__Description {
+    padding: $spacing * 2;
+    h2 {
+        margin-bottom: $spacing/4;
+    }
+    h3 {
+        @include font-regular;
+    }
+}
+
+// via https://codepen.io/danichk/pen/PPRxrR
+@keyframes ants {
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.Tshirt__Button {
+    @include disableUnderline;
+    &:hover {
+        border: 1px solid transparent;
+        background: linear-gradient($antsBg, $antsBg) padding-box,
+            repeating-linear-gradient(
+                    -45deg,
+                    $antsFg 0,
+                    $antsFg 25%,
+                    transparent 0,
+                    transparent 50%
+                )
+                0 / 0.6em 0.6em;
+        animation: ants 12s linear infinite;
+    }
+}

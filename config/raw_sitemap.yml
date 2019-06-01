@@ -2,9 +2,9 @@
   path: /
   type: page
 
-# - id: introduction
-#   path: /introduction
-#   type: page
+- id: tshirt
+  path: /tshirt
+  type: page
 
 - id: demographics
   path: /demographics
