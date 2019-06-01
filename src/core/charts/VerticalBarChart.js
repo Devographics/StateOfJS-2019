@@ -6,8 +6,6 @@ import theme from 'nivoTheme'
 import { colors } from '../../constants'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
-import VerticalBarShadows from './VerticalBarShadows'
-import { constants } from 'os';
 
 const margin = {
     top: 10,

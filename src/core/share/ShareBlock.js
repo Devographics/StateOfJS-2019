@@ -10,7 +10,6 @@ import ShareLinkedIn from './ShareLinkedIn'
 import ShareFacebook from './ShareFacebook'
 import ShareEmail from './ShareEmail'
 import ShareImage from './ShareImage'
-import { colors } from '../../constants'
 
 const ShareIcon = () => (
     <svg

@@ -45,14 +45,13 @@ const HorizontalBarBlock = ({ block, data }) => {
     const {
         id,
         showDescription,
-        mode: defaultMode = 'relative',
+        mode = 'relative',
         units: defaultUnits = 'percentage',
         translateData
     } = block
 
     const { getUrl } = useEntities()
 
-    const [mode, setMode] = useState(defaultMode)
     const [units, setUnits] = useState(defaultUnits)
 
     const blockData = useMemo(() => getChartData(data, block, getUrl), [data, block])

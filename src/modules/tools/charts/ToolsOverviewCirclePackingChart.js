@@ -4,9 +4,7 @@ import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
 import { colors } from '../../../constants'
 import ChartLabel from 'core/components/ChartLabel'
-import { useTheme } from '@nivo/core'
 import { useI18n } from 'core/i18n/i18nContext'
-import round from 'lodash/round'
 
 // scale circles down to account for width of border
 const strokeWidth = 10
@@ -20,35 +18,6 @@ const fontSizeByRadius = radius => {
     if (radius < 35) return 10
     if (radius < 45) return 12
     return 14
-}
-
-const Chip = ({ color, color2 }) => (
-    <span className={`Chip Tooltip__Chip ${color2 && 'Chip--split'}`}>
-        <span style={{ background: color }} className="Chip__Inner" />
-        {color2 && <span style={{ background: color2 }} className="Chip__Inner" />}
-    </span>
-)
-
-const Tooltip = props => {
-    const { translate } = useI18n()
-    const { data } = props
-    const { name, awareness, awarenessColor, usage, usageColor } = data
-    const theme = useTheme()
-
-    return (
-        <div style={theme.tooltip.basic}>
-            <div>
-                <h4 className="Tooltip__Heading">{name}</h4>
-                {data.opinions.map(({ color, id, count }) => (
-                    <div className="Tooltip__Item">
-                        <Chip color={color} />
-                        {translate(`opinions.legends.${id}`)}:{' '}
-                        <strong className="Tooltip__Value">{count}</strong>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
 }
 
 const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
@@ -110,7 +79,7 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
             <circle r={node.r * scaleCoefficient * 1.3} fill="transparent" />
 
             {node.data.opinions.map((bucket, i) => {
-                const { id, percent, color, offsetPercent } = bucket
+                const { percent, color, offsetPercent } = bucket
                 const rRatio = (node.r / rCoefficient) * scaleCoefficient
                 return (
                     <circle
@@ -127,7 +96,7 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
 
             <g>
                 {node.data.opinions.map((bucket, i) => {
-                    const { id, count, percent, color, offsetPercent, data } = bucket
+                    const { id, count, percent, color, offsetPercent } = bucket
                     const r = node.r * scaleCoefficient
                     const arcOffset = offsetPercent + percent / 2
                     const arcAngle = (arcOffset * Math.PI * 2) / 100
@@ -135,9 +104,6 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
                     const sin = Math.sin(arcAngle)
                     const xOffset = r * cos
                     const yOffset = r * sin
-
-                    // const xOffset2 = 2 * r * Math.cos(halfArcAngle)
-                    // const yOffset2 = 2 * r * Math.sin(halfArcAngle)
 
                     const textWidth =
                         `${translate(`opinions.legends_extrashort.${id}`)} ${count}`.length * 10
@@ -234,7 +200,6 @@ const ToolsOverviewCirclePackingChart = ({ data }) => {
                     />
                 )}
                 animate={false}
-                tooltip={Tooltip}
             />
         </div>
     )

@@ -56,14 +56,13 @@ const VerticalBarBlock = ({ block, data }) => {
         id,
         showDescription,
         showLegend,
-        mode: defaultMode = 'relative',
+        mode = 'relative',
         units: defaultUnits = 'percentage',
         translateData
     } = block
 
     const { translate } = useI18n()
 
-    const [mode, setMode] = useState(defaultMode)
     const [units, setUnits] = useState(defaultUnits)
 
     const { bucketKeys, sortedBuckets, total } = useMemo(() => getChartData(data, block), [

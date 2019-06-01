@@ -1,10 +1,8 @@
 import React from 'react'
 import Block from 'core/components/Block'
-import ToolsCirclePackingChart from '../charts/ToolsOverviewCirclePackingChart'
 import compact from 'lodash/compact'
 import { colors } from '../../../constants'
 import round from 'lodash/round'
-import ToolOpinionsLegend from '../charts/ToolLegend'
 import ToolsScatterplotChart from '../charts/ToolsScatterplotChart'
 
 const sectionColors = {

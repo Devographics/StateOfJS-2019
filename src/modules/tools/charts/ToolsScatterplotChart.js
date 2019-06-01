@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { colors } from '../../../constants'
@@ -129,17 +128,17 @@ const ToolsScatterplotChart = ({ data }) => {
     )
 }
 
-// ToolsScatterplotChart.propTypes = {
-//     data: PropTypes.shape({
-//         id: PropTypes.string.isRequired,
-//         data: PropTypes.arrayOf(
-//             PropTypes.shape({
-//                 id: PropTypes.string.isRequired,
-//                 x: PropTypes.number.isRequired,
-//                 y: PropTypes.number.isRequired
-//             })
-//         )
-//     }).isRequired
-// }
+ToolsScatterplotChart.propTypes = {
+    data: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        data: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                x: PropTypes.number.isRequired,
+                y: PropTypes.number.isRequired
+            })
+        )
+    }).isRequired
+}
 
 export default memo(ToolsScatterplotChart)

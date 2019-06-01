@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useI18n } from 'core/i18n/i18nContext'
 import ReactMarkdown from 'react-markdown/with-html'
 
@@ -21,7 +20,7 @@ const TshirtBlock = () => {
                 <div>
                 <ReactMarkdown source={translate('tshirt.description')} escapeHtml={false} />
                 </div>
-                <a className="Button Tshirt__Button" href="">
+                <a className="Button Tshirt__Button" href="#xxx">
                     {translate('tshirt.getit')}
                 </a>
             </div>
