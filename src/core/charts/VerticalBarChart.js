@@ -16,7 +16,7 @@ const margin = {
     left: 60
 }
 
-const VerticalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, units }) => {
+const VerticalBarChart = ({ className, buckets, total, legendNamespace, i18nNamespace, translateData, mode, units, chartProps }) => {
     const { translate } = useI18n()
     const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
         buckets,
@@ -28,7 +28,7 @@ const VerticalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, 
     })
 
     return (
-        <div style={{ height: 260 }}>
+        <div style={{ height: 260 }} className={`VerticalBarChart ${className}`}>
             <ResponsiveBar
                 data={buckets}
                 indexBy="id"
@@ -75,7 +75,7 @@ const VerticalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, 
                     'bars'
                 ]}
                 labelTextColor={{ theme: 'labels.text.fill' }}
-
+                {...chartProps}
             />
         </div>
     )

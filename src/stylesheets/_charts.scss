@@ -214,7 +214,16 @@ Chart Controls
     font-size: $small-font;
     white-space: nowrap;
 }
+/*
 
+Vertical Bar Chart
+
+*/
+.OpinionScaleChart{
+    svg{
+        overflow: visible;
+    }
+}
 /*
 
 Features Overview Chart

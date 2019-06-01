@@ -433,31 +433,41 @@ translations:
     ###########################################################################
     
     - key: block.title.easy-to-learn
-      t: CSS is easy to learn
+      t: Learning Curve
+    - key: block.description.easy-to-learn
+      t: “CSS is easy to learn”
 
     - key: block.title.evolving-too-slowly
-      t: CSS is evolving too slowly
+      t: Rate of Change
+    - key: block.description.evolving-too-slowly
+      t: “CSS is evolving too slowly”
 
     - key: block.title.utility-classes
-      t: Non-semantic classes
+      t: Non-Semantic Classes
     - key: block.description.utility-classes
-      t: Non-semantic classes such as `.center`, `.large-text`, etc. should be avoided.
+      t: “Non-semantic classes such as `.center`, `.large-text`, etc. should be avoided.”
 
     - key: block.title.selector-nesting
-      t: Selector nesting
+      t: Selector Nesting
     - key: block.description.selector-nesting
-      t: Selector nesting such as `.foo .bar ul li {...}` should be avoided.
+      t: “Selector nesting such as `.foo .bar ul li {...}` should be avoided.”
 
     - key: block.title.programming-language
-      t: CSS is a programming language
+      t: Programming Language
+    - key: block.description.programming-language
+      t: “CSS is a programming language”
   
     - key: block.title.enjoy-css
-      t: Developers enjoy writing CSS
+      t: Enjoyment
+    - key: block.description.enjoy-css
+      t: “I enjoy writing CSS”
 
     # ?
     # CSS is moving in the right direction
 
     - key: block.title.missing-features
+      t: Missing Features
+    - key: block.description.missing-features
       t: What do developers feel is currently missing from CSS?
 
     ###########################################################################
@@ -602,15 +612,15 @@ translations:
       t: 'Here are some interesting CSS survey results (${title}): ${link}'
 
     # opinion scale
-    - key: opinion_scale.step.0
+    - key: opinion_scale.0.long
       t: Strongly Disagree
-    - key: opinion_scale.step.1
+    - key: opinion_scale.1.long
       t: Disagree
-    - key: opinion_scale.step.2
+    - key: opinion_scale.2.long
       t: Neutral
-    - key: opinion_scale.step.3
+    - key: opinion_scale.3.long
       t: Agree
-    - key: opinion_scale.step.4
+    - key: opinion_scale.4.long
       t: Strongly Agree
 
     # general
