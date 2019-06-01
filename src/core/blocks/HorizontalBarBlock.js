@@ -38,7 +38,6 @@ const getChartData = (data, block, getUrl) => {
         })
     )
 
-    console.log(chartData)
     return chartData
 }
 

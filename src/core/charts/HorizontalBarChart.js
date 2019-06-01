@@ -18,7 +18,7 @@ const margin = {
     left: 240
 }
 
-const Text = ({ hasLink = false, value }) => (
+const Text = ({ hasLink = false, label }) => (
     <text
         dominantBaseline="central"
         textAnchor="end"
@@ -29,14 +29,18 @@ const Text = ({ hasLink = false, value }) => (
             fontFamily
         }}
     >
-        {value}
+        {label}
     </text>
 )
 const TickItem = tick => {
-    const { getUrl } = useEntities()
 
-    const { x, y, value } = tick
+    const { getUrl } = useEntities()
+    const { translate } = useI18n()
+
+    const { x, y, value, shouldTranslate, i18nNamespace } = tick
     const link = getUrl(value)
+
+    const label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : value
 
     return (
         <g transform={`translate(${x},${y})`}>
@@ -52,16 +56,24 @@ const TickItem = tick => {
             />
             {link ? (
                 <a href={link}>
-                    <Text hasLink={true} value={value} />
+                    <Text hasLink={true} label={label} />
                 </a>
             ) : (
-                <Text hasLink={false} value={value} />
+                <Text hasLink={false} label={label} />
             )}
         </g>
     )
 }
 
-const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode, units }) => {
+const HorizontalBarChart = ({
+    buckets,
+    total,
+    i18nNamespace,
+    translateData,
+    mode,
+    units,
+    chartProps
+}) => {
     const { translate } = useI18n()
 
     const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
@@ -108,7 +120,13 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                     format: formatTick,
                     tickSize: 0,
                     tickPadding: 10,
-                    renderTick: tick => <TickItem {...tick} />
+                    renderTick: tick => (
+                        <TickItem
+                            i18nNamespace={i18nNamespace}
+                            shouldTranslate={translateData}
+                            {...tick}
+                        />
+                    )
                 }}
                 tooltip={barProps => (
                     <BarTooltip
@@ -123,6 +141,7 @@ const HorizontalBarChart = ({ buckets, total, i18nNamespace, translateData, mode
                     'axes',
                     'bars'
                 ]}
+                {...chartProps}
             />
         </div>
     )

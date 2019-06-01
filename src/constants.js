@@ -67,7 +67,7 @@ export const distinctColors = [
     colors.orange,
     colors.olive,
     colors.skyblue,
-    colors.purple,
+    colors.purple
 ]
 
 export const pinkRange = [colors.pinkLightest, colors.pinkLighter, colors.pinkLight, colors.pink]
@@ -113,7 +113,7 @@ const backendProficiencyKeys = [
     'able_to_setup_from_scratch'
 ]
 
-const genderKeys = ['female', 'male', 'non_binary', 'prefer_not_to_say']
+const genderKeys = ['male', 'female', 'non_binary', 'prefer_not_to_say']
 
 export const keys = {
     salary: salaryKeys,
@@ -162,6 +162,13 @@ export const opinions = [
         id: 'never_heard',
         color: colors.greyMedium
     }
+]
+
+export const gender = [
+    { id: 'male', color: colors.teal },
+    { id: 'female', color: colors.blueLight },
+    { id: 'non_binary', color: colors.pinkLight },
+    { id: 'prefer_not_to_say', color: colors.greyMedium }
 ]
 
 export const fontFamily = `'IBM Plex Mono', monospace`

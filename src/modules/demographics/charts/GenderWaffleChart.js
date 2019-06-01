@@ -4,7 +4,6 @@ import { ResponsiveWaffleCanvas } from '@nivo/waffle'
 import theme from 'nivoTheme'
 import ChartRatioContainer from 'core/charts/ChartRatioContainer'
 import { useI18n } from 'core/i18n/i18nContext'
-import GenderLegends from './GendersLegends'
 
 const rows = 32
 const columns = 128
@@ -27,7 +26,6 @@ const GenderBreakdownWaffleChart = ({ data, units }) => {
 
     return (
         <>
-            <GenderLegends />
             <div className="GenderBreakdown__Chart">
                 <ChartRatioContainer ratio={rows / columns} maxHeight={260}>
                     <ResponsiveWaffleCanvas
