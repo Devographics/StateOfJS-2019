@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
-import FeaturesCirclePackingOverviewChart from './FeaturesCirclePackingChart'
+import FeaturesCirclePackingChart from './FeaturesCirclePackingChart'
 
 // reuse chart component but keep separate file in order to define different propTypes
-FeaturesCirclePackingOverviewChart.propTypes = {
+FeaturesCirclePackingChart.propTypes = {
     data: PropTypes.shape({
         sections: PropTypes.arrayOf(
             PropTypes.shape({
@@ -26,4 +26,4 @@ FeaturesCirclePackingOverviewChart.propTypes = {
     })
 }
 
-export default FeaturesCirclePackingOverviewChart
+export default FeaturesCirclePackingChart

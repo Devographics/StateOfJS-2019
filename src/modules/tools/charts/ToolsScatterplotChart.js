@@ -100,7 +100,7 @@ const ToolsScatterplotChart = ({ data }) => {
                     return (
                         <span>
                             <strong>
-                                {getName(dotId)} ({translate(`page.${serie.id}`)})
+                                {dotId} ({serie.id})
                             </strong>
                             :{' '}
                             {`${x} ${translate('users')},  ${y}${translate(
@@ -113,7 +113,7 @@ const ToolsScatterplotChart = ({ data }) => {
                     {
                         anchor: 'bottom-right',
                         direction: 'column',
-                        translateX: -60,
+                        translateX: -70,
                         translateY: -10,
                         itemWidth: 100,
                         itemHeight: 18,

@@ -4,24 +4,24 @@ import compact from 'lodash/compact'
 import { colors } from '../../../constants'
 import round from 'lodash/round'
 import ToolsScatterplotChart from '../charts/ToolsScatterplotChart'
+import { useEntities } from 'core/entities/entitiesContext'
+import { useI18n } from 'core/i18n/i18nContext'
 
 const sectionColors = {
-  'css-frameworks': colors.purple,
-  'methodologies': colors.yellow,
-  'css-in-js': colors.greenDark,
-  'pre-post-processors': colors.red,
+    'css-frameworks': colors.purple,
+    methodologies: colors.yellow,
+    'css-in-js': colors.greenDark,
+    'pre-post-processors': colors.red
 }
 /*
 
 Parse data and convert it into a format compatible with the Circle Packing chart
 
 */
-const getChartData = data => {
-
+const getChartData = (data, translate, getName) => {
     const sections = data.tools.nodes.map(section => {
         const { section_id, aggregations } = section
         const sectionData = aggregations.map(tool => {
-
             const { id, opinion } = tool
 
             // if tool doesn't have opinions data, abort
@@ -36,24 +36,30 @@ const getChartData = data => {
             const satisfactionPercentage = round((getCount('would_use') / usersCount) * 100, 2)
 
             const node = {
-                id,
+                id: getName(id),
                 x: usersCount,
-                y: satisfactionPercentage
+                y: satisfactionPercentage,
+                name: getName(id)
             }
 
             return node
         })
         return {
-          color: sectionColors[section_id],
-            id: section_id,
-            data: compact(sectionData)
+            color: sectionColors[section_id],
+            id: translate(`page.${section_id}`),
+            data: compact(sectionData),
+            name: translate(section_id)
         }
     })
     return sections
 }
 
 const ToolsOverviewBlock = ({ data }) => {
-    const chartData = getChartData(data)
+    const { translate } = useI18n()
+    const { getName } = useEntities()
+
+    const chartData = getChartData(data, translate, getName)
+
     return (
         <Block id="tools-scatterplot" showDescription={true} className="ToolsScatterplotBlock">
             <ToolsScatterplotChart data={chartData} />

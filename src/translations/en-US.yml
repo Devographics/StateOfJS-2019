@@ -274,6 +274,9 @@ translations:
       t: Usage Overview
     - key: block.description.features-overview
       t: >
+          This chart presents the various adoption rates for all features, grouped by category. 
+
+
           The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
           a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
 
@@ -283,6 +286,11 @@ translations:
       t: >
           The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
           a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
+
+    - key: block.description.css-exclusions
+      t: >
+          An exclusion element is a block-level element which is not a float, and generates an exclusion box. 
+          An exclusion element establishes a new block formatting context (via <a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>).
 
     ###########################################################################
     # Units & Selectors
@@ -361,6 +369,7 @@ translations:
           - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
 
           - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+          
     - key: quadrants.assess
       t: Assess
     - key: quadrants.adopt

@@ -101,9 +101,9 @@ const Node = ({ node, handlers }) => {
     )
 }
 
-const FeaturesCirclePackingOverviewChart = ({ data }) => {
+const FeaturesCirclePackingChart = ({ data, className }) => {
     return (
-        <div className="FeaturesCirclePackingOverviewChart CirclePackingChart">
+        <div className={`CirclePackingChart ${className}`}>
             <ResponsiveBubble
                 theme={theme}
                 margin={{
@@ -126,7 +126,7 @@ const FeaturesCirclePackingOverviewChart = ({ data }) => {
     )
 }
 
-FeaturesCirclePackingOverviewChart.propTypes = {
+FeaturesCirclePackingChart.propTypes = {
     data: PropTypes.shape({
         features: PropTypes.arrayOf(
             PropTypes.shape({
@@ -146,4 +146,4 @@ FeaturesCirclePackingOverviewChart.propTypes = {
     })
 }
 
-export default memo(FeaturesCirclePackingOverviewChart)
+export default memo(FeaturesCirclePackingChart)

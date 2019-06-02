@@ -8,10 +8,11 @@ import FeatureUsageLegends from '../charts/FeatureUsageLegends'
 import ChartContainer from 'core/charts/ChartContainer'
 import { usage } from '../../../constants'
 import GaugeBarChart from 'core/charts/GaugeBarChart'
-import { useEntities } from 'core/entities/entitiesContext';
+import { useEntities } from 'core/entities/entitiesContext'
 
 // convert relative links into absolute MDN links
-const parseMDNLinks = content => content.replace(new RegExp(`href="/`, 'g'), `href="https://developer.mozilla.org/`)
+const parseMDNLinks = content =>
+    content.replace(new RegExp(`href="/`, 'g'), `href="https://developer.mozilla.org/`)
 
 const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
     const { translate } = useI18n()
@@ -52,7 +53,6 @@ const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
 }
 
 const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
-
     const { getName } = useEntities()
 
     const [units, setUnits] = useState(defaultUnits)
@@ -97,11 +97,13 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                 {!context.isCapturing && (
                     <>
                         <div className="Feature__Description FTBlock__Description">
-                            {mdnInfo ? (
-                                <p dangerouslySetInnerHTML={{ __html: parseMDNLinks(mdnInfo.summary) }} />
-                            ) : (
-                                translate(`block.description.${block.id}`)
-                            )}
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: mdnInfo
+                                        ? parseMDNLinks(mdnInfo.summary)
+                                        : translate(`block.description.${block.id}`)
+                                }}
+                            />
                         </div>
                         <FeatureResources
                             id={feature.resources.id}

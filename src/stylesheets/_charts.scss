@@ -229,7 +229,7 @@ Vertical Bar Chart
 Features Overview Chart
 
 */
-.CirclePackingChart {
+.FeaturesOverviewChart {
     @include xsmall {
         height: 200px;
     }
@@ -241,6 +241,20 @@ Features Overview Chart
     }
     @include large {
         height: 800px;
+    }
+}
+.FeaturesSectionOverviewChart {
+    @include xsmall {
+        height: 200px;
+    }
+    @include small {
+        height: 400px;
+    }
+    @include medium {
+        height: 500px;
+    }
+    @include large {
+        height: 500px;
     }
 }
 .CirclePackingNode {
@@ -281,20 +295,29 @@ Quadrant/Scatterplot Chart
     font-size: $larger-font;
 }
 
+@mixin coloredText($color) {
+    display: inline-block;
+    background: $teal;
+    color: $navy;
+    border-radius: 40px;
+    padding: 2px 8px;
+    background: $color;
+}
+
 .text-green {
-    color: $green;
+    @include coloredText($green);
 }
 
 .text-pink {
-    color: $pink;
+    @include coloredText($pink);
 }
 
 .text-teal {
-    color: $teal;
+    @include coloredText($teal);
 }
 
 .text-blue {
-    color: $blue;
+    @include coloredText($blue);
 }
 
 .text-bold {

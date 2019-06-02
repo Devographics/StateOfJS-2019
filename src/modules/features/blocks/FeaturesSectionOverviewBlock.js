@@ -30,12 +30,12 @@ const getChartData = (data, getName) => {
 const FeaturesSectionOverviewBlock = ({ block, data }) => {
 
     const { getName } = useEntities()
-
+    const { id, showDescription = true } = block
     const chartData = getChartData(data, getName)
 
     return (
-        <Block id={block.id} showDescription={false}>
-            <FeaturesCirclePackingChart data={chartData} />
+        <Block id={id} showDescription={showDescription}>
+            <FeaturesCirclePackingChart className="FeaturesSectionOverviewChart" data={chartData} />
         </Block>
     )
 }
