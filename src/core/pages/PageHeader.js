@@ -6,9 +6,6 @@ import { getPageLabel } from '../helpers/pageHelpers'
 
 const PageHeader = ({ title: _title, showIntro = true, introduction }) => {
     const context = usePageContext()
-    console.log('//////')
-    console.log(context)
-    console.log(useI18n())
     const { translate } = useI18n()
 
     const title = _title || getPageLabel(context, translate)

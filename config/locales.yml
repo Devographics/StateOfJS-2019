@@ -2,6 +2,6 @@
   path: default
   label: English
 
-- locale: fr-FR
-  path: fr
-  label: Français
+# - locale: fr-FR
+#   path: fr
+#   label: Français

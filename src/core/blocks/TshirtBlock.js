@@ -10,7 +10,7 @@ const TshirtBlock = () => {
         <div className="Tshirt">
             <div className="Tshirt__Images">
                 {images.map((image, i) => (
-                    <div className={`Tshirt__Image Tshirt__Image${i}`}>
+                    <div key={i} className={`Tshirt__Image Tshirt__Image${i}`}>
                         <img src={`/images/${image}`} alt={translate('tshirt.stateofcss')} />
                     </div>
                 ))}

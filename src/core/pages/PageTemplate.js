@@ -6,8 +6,6 @@ import BlockSwitcher from 'core/components/BlockSwitcher'
 
 const PageTemplate = (props) => {
     const { data = {} } = props
-    console.log('// props //')
-    console.log(props)
     const context = usePageContext()
 
     return (
