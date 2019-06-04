@@ -359,7 +359,8 @@ translations:
       t: Rankings
     - key: block.description.tools-section-overview
       t: > 
-        Awareness, interest, and satisfaction ratio rankings.
+        Awareness, interest, and satisfaction ratio rankings. 
+        Note that these three ratios all correspond to the same point in time.
     - key: opinions.legends.awareness_ratio
       t: Awareness
     - key: opinions.legends.interest_ratio

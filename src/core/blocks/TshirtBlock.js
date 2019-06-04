@@ -2,7 +2,8 @@ import React from 'react'
 import { useI18n } from 'core/i18n/i18nContext'
 import ReactMarkdown from 'react-markdown/with-html'
 
-const images = ['tshirt1.png', 'tshirt2.png', 'tshirt3.png']
+const images = ['tshirt5.jpg', 'tshirt6.jpg', 'tshirt4.png']
+
 const TshirtBlock = () => {
     const { translate } = useI18n()
 
@@ -11,7 +12,7 @@ const TshirtBlock = () => {
             <div className="Tshirt__Images">
                 {images.map((image, i) => (
                     <div key={i} className={`Tshirt__Image Tshirt__Image${i}`}>
-                        <img src={`/images/${image}`} alt={translate('tshirt.stateofcss')} />
+                        <a href={`/images/tshirt/${image}`} target="_blank"><img src={`/images/tshirt/${image}`} alt={translate('tshirt.stateofcss')} /></a>
                     </div>
                 ))}
             </div>
