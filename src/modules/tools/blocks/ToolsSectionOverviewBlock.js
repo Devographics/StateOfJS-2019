@@ -2,8 +2,10 @@ import React, { memo, useMemo } from 'react'
 import Block from 'core/components/Block'
 import { usePageContext } from 'core/helpers/pageContext'
 import ToolsOpinionBumpChart from '../charts/tools_opinion_bump_chart/ToolsOpinionBumpChart'
+import ToolsOpinionBumpChartLegend from '../charts/ToolsOpinionBumpChartLegend'
 
-const ToolsSectionOverviewBlock = ({ data }) => {
+const ToolsSectionOverviewBlock = ({ data, block }) => {
+    const { id, showDescription } = block
     const context = usePageContext()
     const toolsData = useMemo(
         () =>
@@ -14,7 +16,8 @@ const ToolsSectionOverviewBlock = ({ data }) => {
     )
 
     return (
-        <Block id="overview" showDescription={false}>
+        <Block id={id} showDescription={showDescription}>
+            <ToolsOpinionBumpChartLegend />
             <ToolsOpinionBumpChart data={toolsData} />
         </Block>
     )

@@ -203,8 +203,8 @@
         showDescription: true
         mode: absolute
 
-- id: tools-and-methodology
-  path: /tools-and-methodology
+- id: technologies
+  path: /technologies
   type: page
   defaultBlockType: tool
   blocks:
@@ -219,7 +219,7 @@
         blocks:
             # - id: scaled-ranking-overview
             #   type: tools-scaled-ranking-section-overview
-            - id: overview
+            - id: tools-section-overview
               type: tools-section-overview
             - sass
             - less
@@ -238,7 +238,7 @@
         blocks:
             # - id: scaled-ranking-overview
             #   type: tools-scaled-ranking-section-overview
-            - id: overview
+            - id: tools-section-overview
               type: tools-section-overview
             - bootstrap
             - materialize-css
@@ -264,7 +264,7 @@
         blocks:
             # - id: scaled-ranking-overview
             #   type: tools-scaled-ranking-section-overview
-            - id: overview
+            - id: tools-section-overview
               type: tools-section-overview
             - bem
             - atomic-css
@@ -284,7 +284,7 @@
         blocks:
             # - id: scaled-ranking-overview
             #   type: tools-scaled-ranking-section-overview
-            - id: overview
+            - id: tools-section-overview
               type: tools-section-overview
             - styled-components
             - glamor

@@ -354,6 +354,19 @@ translations:
     - key: block.title.other-methodologies
       t: Other Methodologies
 
+      # rankings/bump chart
+    - key: block.title.tools-section-overview
+      t: Rankings
+    - key: block.description.tools-section-overview
+      t: > 
+        Awareness, interest, and satisfaction ratio rankings.
+    - key: opinions.legends.awareness_ratio
+      t: Awareness
+    - key: opinions.legends.interest_ratio
+      t: Interest
+    - key: opinions.legends.satisfaction_ratio
+      t: Satisfaction
+
     # quadrant/scatterplot chart
     - key: block.title.tools-scatterplot
       t: Satisfaction vs Usage
@@ -414,6 +427,13 @@ translations:
       t: Used it, would not use again
     - key: opinions.legends_extrashort.would_not_use
       t: Would not use
+
+    - key: opinions.legends.total_respondents
+      t: Total Respondents
+    - key: opinions.legends_short.total_respondents
+      t: Total Respondents
+    - key: opinions.legends_extrashort.total_respondents
+      t: Total Respondents
 
     ###########################################################################
     # Other Tools
@@ -597,7 +617,7 @@ translations:
       t: Other Features
     - key: page.units-and-selectors
       t: Units & Selectors
-    - key: page.tools-and-methodology
+    - key: page.technologies
       t: Technologies
     - key: page.pre-post-processors
       t: Pre & Post Processors

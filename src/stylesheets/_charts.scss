@@ -302,8 +302,11 @@ Quadrant/Scatterplot Chart
     border-radius: 40px;
     padding: 2px 8px;
     background: $color;
+    @include font-bold;
 }
-
+.text-highlight{
+    @include coloredText(#000);
+}
 .text-green {
     @include coloredText($green);
 }

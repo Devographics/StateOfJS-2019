@@ -4,7 +4,6 @@ import theme from 'nivoTheme'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { colors } from '../../../constants'
 import { useI18n } from 'core/i18n/i18nContext'
-import { useEntities } from 'core/entities/entitiesContext'
 
 const Quadrants = ({ width, height }) => {
     const { translate } = useI18n()
@@ -15,25 +14,25 @@ const Quadrants = ({ width, height }) => {
         {
             x: 0,
             y: 0,
-            color: colors.backgroundLight,
+            color: colors.navyLight,
             label: translate('quadrants.assess')
         },
         {
             x: qWidth,
             y: 0,
-            color: colors.backgroundLighter,
+            color: colors.navyLighter,
             label: translate('quadrants.adopt')
         },
         {
             x: 0,
             y: qHeight,
-            color: colors.backgroundDark,
+            color: colors.navyDark,
             label: translate('quadrants.avoid')
         },
         {
             x: qWidth,
             y: qHeight,
-            color: colors.backgroundLight,
+            color: colors.navyLight,
             label: translate('quadrants.analyze')
         }
     ]
@@ -59,7 +58,6 @@ const Quadrants = ({ width, height }) => {
 
 const ToolsScatterplotChart = ({ data }) => {
     const { translate } = useI18n()
-    const { getName } = useEntities()
 
     return (
         <div style={{ height: 600 }}>

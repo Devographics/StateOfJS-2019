@@ -6,7 +6,7 @@ import { colors } from '../../../constants'
 
 const theme = {
     ...baseTheme,
-    background: colors.backgroundDark
+    background: colors.navyDark
 }
 
 const features = countries.features.map(feature => {
@@ -36,7 +36,7 @@ const ParticipationByCountryChart = ({ data, units }) => {
                 valueFormat={v => (units === 'percentage' ? `${v.toFixed(1)}%` : Math.round(v))}
                 domain={units === 'percentage' ? [0, 8] : [0, 700]}
                 colors={colorRange}
-                unknownColor={colors.backgroundLight}
+                unknownColor={colors.navyLight}
                 projectionScale={118}
                 projectionTranslation={[0.5, 0.7]}
                 projectionRotation={[-11, 0, 0]}

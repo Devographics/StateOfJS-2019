@@ -61,7 +61,7 @@ export default class LegendsItem extends Component {
                     />
                 )}
                 {keyLabel && <span className="Legends__Item__KeyLabel">{keyLabel}{' '}</span>}
-                <span className="Legends__Item__Label">{label}</span>
+                <span className="Legends__Item__Label" dangerouslySetInnerHTML={{ __html: label}}/>
             </div>
         )
     }

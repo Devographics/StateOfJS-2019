@@ -8,17 +8,17 @@ import { Chip } from '@nivo/tooltip'
 import { colors } from '../../constants'
 
 // Define chart patterns
-const patterns = [
-    {
-        id: 'empty',
-        type: 'patternLines',
-        background: 'transparent',
-        color: 'inherit',
-        rotation: -45,
-        lineWidth: 1,
-        spacing: 8
-    }
-]
+// const patterns = [
+//     {
+//         id: 'empty',
+//         type: 'patternLines',
+//         background: 'transparent',
+//         color: 'inherit',
+//         rotation: -45,
+//         lineWidth: 1,
+//         spacing: 8
+//     }
+// ]
 
 // Custom labels using an extra `layer`,
 // this way, we can add an extra outline to bar labels
@@ -141,7 +141,7 @@ const GaugeBarChart = ({ buckets, mapping, units, applyEmptyPatternTo, i18nNames
             animate={false}
             theme={theme}
             layers={['bars', labelsLayer]}
-            defs={patterns}
+            // defs={patterns}
             fill={patternRules}
             tooltip={bar => (
                 <Tooltip bar={bar} translate={translate} i18nNamespace={i18nNamespace} units={units}/>

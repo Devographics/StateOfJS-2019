@@ -39,10 +39,10 @@ export let colors = {
 
     white: '#ffffff',
 
-    backgroundLighter: '#484F73',
-    backgroundLight: '#303652',
-    background: '#232840',
-    backgroundDark: '#1a1f35'
+    navyLighter: '#484F73',
+    navyLight: '#303652',
+    navy: '#232840',
+    navyDark: '#1a1f35'
 }
 
 export const colorRange = [
@@ -137,7 +137,7 @@ export const usage = [
     },
     {
         id: 'never_heard_not_sure',
-        color: colors.greyDark
+        color: colors.navyLighter
     }
 ]
 
@@ -160,14 +160,14 @@ export const opinions = [
     },
     {
         id: 'never_heard',
-        color: colors.greyMedium
+        color: colors.navyLighter
     }
 ]
 
 export const gender = [
-    { id: 'male', color: colors.teal },
-    { id: 'female', color: colors.blueLight },
-    { id: 'non_binary', color: colors.pinkLight },
+    { id: 'male', color: colors.blue },
+    { id: 'female', color: colors.teal },
+    { id: 'non_binary', color: colors.purple },
     { id: 'prefer_not_to_say', color: colors.greyMedium }
 ]
 

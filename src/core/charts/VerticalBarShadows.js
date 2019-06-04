@@ -10,7 +10,7 @@ const VerticalBarShadows = ({ bars }) => {
                 y={bar.y + 7}
                 width={bar.width}
                 height={bar.height}
-                fill={colors.backgroundDark}
+                fill={colors.navyDark}
                 opacity={0.65}
             />
         )
