@@ -43,10 +43,10 @@ export const getBlockImage = (id, context, translate) => {
         .replace(/\//g, '_')}_${id}.png`
 }
 
-export const getBlockMeta = (id, context, translate) => {
+export const getBlockMeta = (id, context, translate, title) => {
     const link = `${context.host}${context.basePath}${id}`
     const trackingId = `${context.basePath}${id}`.replace(/^\//, '')
-    const title = getBlockTitle(id, context, translate)
+    title = title || getBlockTitle(id, context, translate)
 
     const imageUrl = getBlockImage(id, context, translate)
 

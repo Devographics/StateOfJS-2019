@@ -105,7 +105,7 @@ export const mergePageContext = (pageContext, location) => {
     const isDebugEnabled =
         location && location.search ? location.search.indexOf('debug') !== -1 : false
 
-    let host = 'https://2018.stateofjs.com'
+    let host = 'https://2019.stateofcss.com'
     if (location && location.host && location.protocol) {
         host = `${location.protocol}//${location.host}`
     }

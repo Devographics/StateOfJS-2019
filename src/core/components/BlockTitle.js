@@ -40,6 +40,7 @@ const BlockTitle = ({ id, showDescription, isShareable, values, title, units, se
                             id={id}
                             className="Block__Title__Share"
                             values={values}
+                            title={title}
                             toggleClass={() => {
                                 setShowOptions(!showOptions)
                             }}
