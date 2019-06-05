@@ -110,17 +110,11 @@ exports.onCreatePage = async ({ page, actions }) => {
 
     const { flat } = await computeSitemap(rawSitemap)
 
+    // handle 404 page separately
     const is404 = page.path.includes('404')
 
     const pagePath = page.path.toLowerCase()
     const matchingPage = flat.find(p => p.path === (is404 ? '/404/' : pagePath))
-
-if (is404) {
-    console.log(flat)
-    console.log(page)
-    console.log(matchingPage)
-
-}
 
     // if there's no matching page
     // it means we're dealing with an internal page
