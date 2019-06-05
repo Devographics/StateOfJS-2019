@@ -13,7 +13,7 @@ export let colors = {
     pinkLightest: '#D3BBF2',
     pinkLighter: '#D68DF0',
     pinkLight: '#EC75CB',
-    pink: '#ec2f95',
+    pink: '#F649A7',
 
     greenLighter: '#E7FFED',
     greenLight: '#ACFFC3',

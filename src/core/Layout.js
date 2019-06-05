@@ -78,9 +78,10 @@ export default class Layout extends PureComponent {
                             <Sidebar
                                 {...this.props}
                                 sidebarClassName={sidebarClassName}
+                                showSidebar={showSidebar}
                                 closeSidebar={this.closeSidebar}
                             />
-                            <div className="pagelayout__content">
+                            <main className="pagelayout__content">
                                 {showPagination && (
                                     <Pagination toggleSidebar={this.toggleSidebar} position="top" />
                                 )}
@@ -94,7 +95,7 @@ export default class Layout extends PureComponent {
                                         position="bottom"
                                     />
                                 )}
-                            </div>
+                            </main>
                         </div>
                     </div>
                     </EntitiesContextProvider>

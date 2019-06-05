@@ -659,7 +659,17 @@ translations:
       t: State Of CSS Survey Results
     - key: share.block.body
       t: 'Here are some interesting CSS survey results (${title}): ${link}'
-
+    - key: share.twitter
+      t: Share on Twitter
+    - key: share.facebook
+      t: Share on Facebook
+    - key: share.linkedin
+      t: Share on LinkedIn
+    - key: share.email
+      t: Share by email
+    - key: share.image
+      t: Get image
+      
     # opinion scale
     - key: opinion_scale.0.long
       t: Strongly Disagree
@@ -673,6 +683,8 @@ translations:
       t: Strongly Agree
 
     # general
+    - key: general.title
+      t: State of CSS 2019
     - key: general.description
       t: Discover the most popular CSS features & technologies of the year.
     - key: general.stay_tuned
@@ -691,7 +703,11 @@ translations:
         ## Error 404
         
         Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/state-of-css-2019/issues) if you think something might be broken. 
-
+    - key: general.back_to_intro
+      t: Back to introduction
+    - key: general.close_nav
+      t: Close navigation menu
+      
     # charts
     - key: block.title.usage-ratio
       t: Usage Ratio Ranking

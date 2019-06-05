@@ -62,6 +62,9 @@
     @include xsmall {
         max-width: 90vw;
     }
+    .LanguageSwitcher--closed & {
+        @include sr-only;
+    }
     &:after,
     &:before {
         left: 50%;

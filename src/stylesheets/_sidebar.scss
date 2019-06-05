@@ -17,7 +17,7 @@
         overflow-y: scroll;
         padding: 0 0 $spacing * 2 0;
         &.Sidebar--hidden {
-            display: none;
+            @include sr-only;
         }
         &.Sidebar--shown {
             overflow: hidden;

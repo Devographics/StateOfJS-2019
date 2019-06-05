@@ -1,7 +1,10 @@
 import React from 'react'
 import track from './tracking'
+import { useI18n } from '../i18n/i18nContext'
 
 const ShareImage = ({ trackingId, url }) => {
+    const { translate } = useI18n()
+
     return (
         <a
             onClick={track('Image', trackingId)}
@@ -9,7 +12,7 @@ const ShareImage = ({ trackingId, url }) => {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label=""
+            aria-label={translate('share.image')}
         >
             <div className="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
                 <div
@@ -33,6 +36,7 @@ const ShareImage = ({ trackingId, url }) => {
                     </svg>
                 </div>
             </div>
+            <span className="sr-only">{translate('share.image')}</span>
         </a>
     )
 }

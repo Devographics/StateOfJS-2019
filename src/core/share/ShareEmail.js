@@ -1,15 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import track from './tracking'
+import { useI18n } from '../i18n/i18nContext'
 
 const ShareEmail = ({ subject, body, trackingId }) => {
+    const { translate } = useI18n()
+
     return (
         <a
             onClick={track('Email', trackingId)}
             className="share__link--email share__link"
             href={`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
             target="_self"
-            aria-label=""
+            aria-label={translate('share.email')}
         >
             <div className="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
                 <div
@@ -30,6 +33,7 @@ const ShareEmail = ({ subject, body, trackingId }) => {
                     </svg>
                 </div>
             </div>
+            <span className="sr-only">{translate('share.email')}</span>
         </a>
     )
 }

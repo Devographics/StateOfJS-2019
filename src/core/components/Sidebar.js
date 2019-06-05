@@ -3,6 +3,7 @@ import Nav from './Nav'
 import LogoSidebar2 from './LogoSidebar2'
 import { Link } from 'gatsby'
 import ShareSite from '../share/ShareSite'
+import { useI18n } from 'core/i18n/i18nContext'
 
 const Close = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -21,29 +22,37 @@ const Close = () => (
     </svg>
 )
 
-const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
-    <div className={`Sidebar ${sidebarClassName}`}>
+const Sidebar = ({ showSidebar, sidebarClassName, closeSidebar, rest }) => {
+
+    const { translate } = useI18n()
+
+    return (
+    <nav className={`Sidebar ${sidebarClassName}`}>
         <div className="Sidebar__Fixed">
-            <h1 className="Sidebar__Logo__Wrapper Logo__Wrapper">
+            <div className="Sidebar__Logo__Wrapper Logo__Wrapper">
+                <h1 className="Sidebar__Title sr-only">{translate('general.title')}</h1>
                 <span className="Sidebar__Logo--mobile Logo--mobile">
                     <div />
                     <div className="Sidebar__Logo__Inner">
                         <Link to="/">
                             <LogoSidebar2 />
+                            <span className="sr-only">{translate('general.back_to_intro')}</span>
                         </Link>
                     </div>
                     <span className="Sidebar__Close">
                         <button onClick={closeSidebar}>
                             <Close />
+                            <span className="sr-only">{translate('general.close_nav')}</span>
                         </button>
                     </span>
                 </span>
                 <div className="Sidebar__Logo--desktop Logo--desktop">
                     <Link className="Sidebar__Logo__Link" to="/">
                         <LogoSidebar2 />
+                        <span className="sr-only">{translate('general.back_to_intro')}</span>
                     </Link>
                 </div>
-            </h1>
+            </div>
             <div className="Sidebar__Inner">
                 <Nav {...rest} closeSidebar={closeSidebar} />
             </div>
@@ -51,7 +60,7 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => (
                 <ShareSite />
             </div>
         </div>
-    </div>
-)
+    </nav>
+)}
 
 export default Sidebar

@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import track from './tracking'
+import { useI18n } from '../i18n/i18nContext'
 
 const ShareLinkedIn = ({ link, title, summary = '', trackingId }) => {
+    const { translate } = useI18n()
+
     return (
         <a
             onClick={track('LinkedIn', trackingId)}
@@ -12,7 +15,7 @@ const ShareLinkedIn = ({ link, title, summary = '', trackingId }) => {
             )}&title=${title}&summary=${summary}`}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label=""
+            aria-label={translate('share.linkedin')}
         >
             <div className="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
                 <div
@@ -29,6 +32,7 @@ const ShareLinkedIn = ({ link, title, summary = '', trackingId }) => {
                     </svg>
                 </div>
             </div>
+            <span className="sr-only">{translate('share.linkedin')}</span>
         </a>
     )
 }

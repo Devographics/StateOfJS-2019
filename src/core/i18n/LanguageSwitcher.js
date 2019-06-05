@@ -9,7 +9,6 @@ const svgs = {
 }
 
 const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
-
     const { translate } = useI18n()
 
     const context = usePageContext()
@@ -29,12 +28,14 @@ const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
                         {isOpened ? svgs[positionOpen] : svgs[position]}
                     </svg>
                 </div>
-                {isOpened && (
-                    <div className="LanguageSwitcher__Options">
-                        <Locales />
-                        <div className="LanguageSwitcher__Help"><a href="https://github.com/StateOfJS/state-of-css-2019/issues/30">{translate('general.help_us_translate')}</a></div>
+                <div className="LanguageSwitcher__Options">
+                    <Locales />
+                    <div className="LanguageSwitcher__Help">
+                        <a href="https://github.com/StateOfJS/state-of-css-2019/issues/30">
+                            {translate('general.help_us_translate')}
+                        </a>
                     </div>
-                )}
+                </div>
             </div>
         </div>
     )

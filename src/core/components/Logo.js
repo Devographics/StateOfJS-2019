@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Logo = ({ className, animated = true, showText = true, size = 'l' }) => (
-    <div className={`Logo__Container Logo--${size} ${className || ''}`}>
+    <div aria-hidden="true" className={`Logo__Container Logo--${size} ${className || ''}`}>
         <div className={`Logo ${animated ? 'Logo--animated' : ''}`}>
             <SVGFilter />
             {/* <svg viewBox="0 0 56 18">
