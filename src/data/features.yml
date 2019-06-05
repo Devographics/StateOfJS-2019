@@ -64,6 +64,7 @@
   caniuse: variable-fonts
 - id: line-breaking-properties
   name: Line Breaking Properties
+  mdn: /en-US/docs/Web/CSS/line-break
 - id: font-variant
   name: font-variant
   mdn: /en-US/docs/Web/CSS/font-variant
@@ -93,7 +94,8 @@
   mdn: /en-US/docs/Web/CSS/@supports
   caniuse: css-supports-api
 - id: css-containment
-  name: Containment
+  name: Contain
+  mdn: /en-US/docs/Web/CSS/contain
 - id: will-change
   name: will-change
   mdn: /en-US/docs/Web/CSS/will-change

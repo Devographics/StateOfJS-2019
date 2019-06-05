@@ -1,6 +1,7 @@
 import React, { memo, useState, useCallback } from 'react'
 import Locales from './Locales'
 import { usePageContext } from '../helpers/pageContext'
+import { useI18n } from 'core/i18n/i18nContext'
 
 const svgs = {
     top: <polygon stroke="#000" points="0,50 100,50 50,0" />,
@@ -8,6 +9,9 @@ const svgs = {
 }
 
 const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
+
+    const { translate } = useI18n()
+
     const context = usePageContext()
     const [isOpened, setIsOpened] = useState(false)
     const toggle = useCallback(() => setIsOpened(flag => !flag), [])
@@ -28,6 +32,7 @@ const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
                 {isOpened && (
                     <div className="LanguageSwitcher__Options">
                         <Locales />
+                        <div className="LanguageSwitcher__Help"><a href="https://github.com/StateOfJS/state-of-css-2019/issues/30">{translate('general.help_us_translate')}</a></div>
                     </div>
                 )}
             </div>

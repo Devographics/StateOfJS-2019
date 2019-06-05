@@ -13,8 +13,8 @@ const { omit } = require('lodash')
 
 const rawSitemap = yaml.safeLoad(fs.readFileSync('./config/raw_sitemap.yml', 'utf8'))
 const locales = yaml.safeLoad(fs.readFileSync('./config/locales.yml', 'utf8'))
-const features = yaml.safeLoad(fs.readFileSync('./config/features.yml', 'utf8'))
-const entities = yaml.safeLoad(fs.readFileSync('./config/entities.yml', 'utf8'))
+const features = yaml.safeLoad(fs.readFileSync('./src/data/features.yml', 'utf8'))
+const entities = yaml.safeLoad(fs.readFileSync('./src/data/entities.yml', 'utf8'))
 
 const guessPageTemplate = type => {
     let template
@@ -200,7 +200,7 @@ exports.onCreateNode = async ({ node, actions }) => {
             const aggResources = {
                 id: agg.id
             }
-            const featureResourcesConfig = features[agg.id]
+            const featureResourcesConfig = features.find(f => f.id ===agg.id)
 
             if (featureResourcesConfig !== undefined) {
                 if (featureResourcesConfig.mdn !== undefined) {
@@ -229,7 +229,7 @@ exports.onCreateNode = async ({ node, actions }) => {
                 id: agg.id,
                 github: defaultGitHubObject // pass default object to avoid GraphQL errors
             }
-            const entityResourcesConfig = entities[agg.id]
+            const entityResourcesConfig = entities.find(e => e.id === agg.id)
             if (entityResourcesConfig) {
                 aggResources.entity = entityResourcesConfig
                 if (entityResourcesConfig.github) {

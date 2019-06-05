@@ -54,11 +54,11 @@
     position: absolute;
     width: 300px;
     left: 50%;
-    border: $border;
+    border: $border2;
     background: $bg-color;
     padding: $spacing;
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 10000;
     @include xsmall {
         max-width: 90vw;
     }
@@ -132,4 +132,11 @@
     &--current {
         @include font-bold;
     }
+}
+
+.LanguageSwitcher__Help {
+    font-size: $small-font;
+    padding-top: $spacing/2;
+    margin-top: $spacing;
+    border-top: $border;
 }

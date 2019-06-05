@@ -292,6 +292,7 @@ translations:
           An exclusion element is a block-level element which is not a float, and generates an exclusion box. 
           An exclusion element establishes a new block formatting context (via <a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>).
 
+
     ###########################################################################
     # Units & Selectors
     ###########################################################################
@@ -673,7 +674,7 @@ translations:
 
     # general
     - key: general.description
-      t: Discover the most popular CSS technologies of the year.
+      t: Discover the most popular CSS features & technologies of the year.
     - key: general.stay_tuned
       t: Stay Tuned
     - key: general.leave_your_email
@@ -682,6 +683,8 @@ translations:
       t: Your Email
     - key: general.notify_me
       t: Notify Me
+    - key: general.help_us_translate
+      t: Help translate the survey →
     - key: general.not_found
       t: >
       

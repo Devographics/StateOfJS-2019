@@ -10,7 +10,7 @@ const Head = () => {
 
     const meta = getPageMeta(context, translate)
     const socialMeta = getPageSocialMeta(context, translate)
-    const description = translate(`meta.description`)
+    const description = translate(`general.description`)
 
     const mergedMeta = [
         { charset: 'utf-8' },

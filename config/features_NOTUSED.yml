@@ -64,6 +64,7 @@ variable-fonts:
     caniuse: variable-fonts
 line-breaking-properties:
     name: CSS Line Breaking Properties
+    mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/line-break
 font-variant:
     name: font-variant
     mdn: /en-US/docs/Web/CSS/font-variant

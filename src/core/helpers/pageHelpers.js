@@ -20,6 +20,7 @@ export const getPageLabel = (
     { isContextual = false, includeWebsite = false } = {}
 ) => {
     let label
+
     if (['features_intro', 'features_results', 'features_conclusion'].includes(page.type)) {
         label = translate(
             `page.${page.type}.${isContextual === true ? 'contextual_label' : 'label'}`,
@@ -54,7 +55,7 @@ export const getPageImageUrl = context => {
             .replace(/\/$/, '')
             .replace(/\//g, '_')}_${context.block}.png`
     } else {
-        imageUrl = `${baseUrl}stateofjs2018-social.png`
+        imageUrl = `${baseUrl}stateofcss_socialmedia.png`
     }
 
     return imageUrl
@@ -63,10 +64,11 @@ export const getPageImageUrl = context => {
 export const getPageMeta = (context, translate, overrides = {}) => {
     const url = `${context.host}${context.localePath}${context.basePath}`
     const imageUrl = getPageImageUrl(context)
+    const isRoot = context.path === '/' || context.basePath === '/'
 
     const meta = {
         url,
-        title: getPageLabel(context, translate, 'full'),
+        title: isRoot ? WEBSITE_TITLE : getPageLabel(context, translate, { includeWebsite: true}),
         imageUrl,
         ...overrides
     }

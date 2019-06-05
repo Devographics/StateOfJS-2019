@@ -3,7 +3,8 @@
     border-bottom: $border;
 
     // Fixes overlap with <Tooltip />
-    z-index: 0;
+    // TODO: not needed anymore? (also used to be 0)
+    z-index: 1;
 
     // background: $bg-color-light;
 }

@@ -165,7 +165,7 @@
 - id: python
   name: Python
 - id: radium
-  github: emotion-js/emotion
+  github: FormidableLabs/radium
   npm: '@emotion/core'
   name: Radium
   homepage: https://formidable.com/open-source/radium/

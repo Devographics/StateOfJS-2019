@@ -28,6 +28,10 @@ You can [download the data for this survey](https://www.kaggle.com/sachag/state-
 - [State of CSS Homepage](https://stateofcss.com)
 - [State of JS](https://stateofjs.com)
 
+### Thanks
+
+Special thanks to [Florian Rivoal](https://twitter.com/frivoal) for his huge help coming up with survey questions, as well as [Rachel Andrews](https://twitter.com/rachelandrew) and [Jenn Simmons](https://twitter.com/jensimmons) for their feedback, and everybody else who took part in this process on GitHub. 
+
 ### Credits & Stuff
 
 The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofcss.com)
