@@ -185,9 +185,9 @@ const defaultGitHubObject = {
     full_name: 'n/a',
     description: 'n/a',
     url: 'n/a',
-    stars: 'n/a',
-    forks: 'n/a',
-    opened_issues: 'n/a',
+    stars: -99,
+    forks: -99,
+    opened_issues: -99,
     homepage: 'n/a'
 }
 
