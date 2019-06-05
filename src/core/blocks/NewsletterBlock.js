@@ -7,8 +7,8 @@ const NewsletterBlock = () => {
 
     return (
         <div className="Block Block--Newsletter Newsletter">
-            <h3 className="Newsletter__Heading">{translate('stay_tuned')}</h3>
-            <div className="Newsletter__Description">{translate('leave_your_email')}</div>
+            <h3 className="Newsletter__Heading">{translate('general.stay_tuned')}</h3>
+            <div className="Newsletter__Description">{translate('general.leave_your_email')}</div>
             <Newsletter />
         </div>
     )

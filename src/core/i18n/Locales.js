@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import locales from '../../../config/locales.yml'
 import { usePageContext } from '../helpers/pageContext'
 
-const LangSelector = () => {
+const Locales = () => {
     const context = usePageContext()
     const links = locales.map(locale => {
         return {
@@ -16,10 +16,9 @@ const LangSelector = () => {
     return (
         <div className="Locales">
             {links.map(({ label, locale, link, isCurrent }) => (
-                <div>
+                <div key={locale}>
                     <Link
                         className={`Locales__Item Locales__Item--${isCurrent && 'current'}`}
-                        key={locale}
                         to={link}
                     >
                         {label}
@@ -30,4 +29,4 @@ const LangSelector = () => {
     )
 }
 
-export default LangSelector
+export default Locales

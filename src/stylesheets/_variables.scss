@@ -1,5 +1,8 @@
 $spacing: 20px;
 
+$antsBg: $navyLight;
+$antsFg: $pink;
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -75,4 +78,26 @@ $border2: 1px solid $border-color;
     &::before {
         content: none;
     }
+}
+
+
+// via https://codepen.io/danichk/pen/PPRxrR
+@keyframes ants {
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+@mixin ants {
+    border: 1px solid transparent;
+    background: linear-gradient($antsBg, $antsBg) padding-box,
+        repeating-linear-gradient(
+                -45deg,
+                $antsFg 0,
+                $antsFg 25%,
+                transparent 0,
+                transparent 50%
+            )
+            0 / 0.6em 0.6em;
+    animation: ants 12s linear infinite;
 }

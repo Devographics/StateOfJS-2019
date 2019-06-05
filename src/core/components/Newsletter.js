@@ -62,7 +62,7 @@ export default class Newsletter extends Component {
         return (
             <Trans>
                 {translate => {
-                    const { submitLabel = translate('notify_me') } = this.props
+                    const { submitLabel = translate('general.notify_me') } = this.props
 
                     return (
                         <div className={`Newsletter Newsletter--${loading ? 'loading' : ''}`}>
@@ -81,7 +81,7 @@ export default class Newsletter extends Component {
                                         id="field_0"
                                         name="field_0"
                                         type="email"
-                                        placeholder={translate('your_email')}
+                                        placeholder={translate('general.your_email')}
                                         onChange={this.handleChange}
                                         value={email}
                                         disabled={loading}
