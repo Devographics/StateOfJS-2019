@@ -1,10 +1,13 @@
 import React from 'react'
-import TextBlock from '../core/blocks/TextBlock'
+import TextBlock from 'core/blocks/TextBlock'
+import { useI18n } from 'core/i18n/i18nContext';
 
-const NotFound = () => (
+const NotFound = () => {
+    const { translate } = useI18n();
+    return (
     <>
-        <TextBlock text={`404 not found`} />
+        <TextBlock text={translate('general.not_found')} />
     </>
-)
+)}
 
 export default NotFound

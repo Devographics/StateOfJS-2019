@@ -397,3 +397,8 @@
   path: /support
   type: page
   is_hidden: true
+
+- id: notfound
+  path: /404
+  type: page
+  is_hidden: true

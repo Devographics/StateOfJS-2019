@@ -1,9 +1,11 @@
 import React from 'react'
 import Layout from './src/core/Layout'
 
-export const wrapRootElement = ({ element }) => {
+export const wrapPageElement = ({ element, props }) => {
+    const { pageContext, ...rest } = props
+
     return (
-        <Layout>
+        <Layout {...rest} pageContext={pageContext}>
             {element}
         </Layout>
     )

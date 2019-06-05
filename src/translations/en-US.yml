@@ -15,7 +15,7 @@ translations:
 
           We use a high-quality, super-soft tri-blend shirt with a slim fit. If
           you prefer a looser fit we recommend ordering one size up from what you
-          usually wear.
+          usually wear (I'm wearing an M in the photos).
     - key: tshirt.getit
       t: Get It – Only $25
 
@@ -682,6 +682,12 @@ translations:
       t: Your Email
     - key: general.notify_me
       t: Notify Me
+    - key: general.not_found
+      t: >
+      
+        ## Error 404
+        
+        Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/state-of-css-2019/issues) if you think something might be broken. 
 
     # charts
     - key: block.title.usage-ratio

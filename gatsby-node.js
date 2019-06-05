@@ -6,7 +6,8 @@ const { computeSitemap } = require('./node_src/sitemap')
 const {
     fetchMdnResource,
     fetchCaniuseResource,
-    fetchGithubResource
+    fetchGithubResource,
+    normalizeGithubResource
 } = require('./node_src/resources')
 const { omit } = require('lodash')
 
@@ -109,8 +110,17 @@ exports.onCreatePage = async ({ page, actions }) => {
 
     const { flat } = await computeSitemap(rawSitemap)
 
+    const is404 = page.path.includes('404')
+
     const pagePath = page.path.toLowerCase()
-    const matchingPage = flat.find(p => p.path === pagePath)
+    const matchingPage = flat.find(p => p.path === (is404 ? '/404/' : pagePath))
+
+if (is404) {
+    console.log(flat)
+    console.log(page)
+    console.log(matchingPage)
+
+}
 
     // if there's no matching page
     // it means we're dealing with an internal page
@@ -170,6 +180,23 @@ exports.onCreateWebpackConfig = ({ stage, actions, plugins }) => {
     })
 }
 
+/*
+
+When GitHub API rate limits are hit, GraphQL API will break
+unless default values are provided.
+
+*/
+const defaultGitHubObject = {
+    name: 'n/a',
+    full_name: 'n/a',
+    description: 'n/a',
+    url: 'n/a',
+    stars: 'n/a',
+    forks: 'n/a',
+    opened_issues: 'n/a',
+    homepage: 'n/a'
+}
+
 exports.onCreateNode = async ({ node, actions }) => {
     const { createNodeField } = actions
 
@@ -205,7 +232,8 @@ exports.onCreateNode = async ({ node, actions }) => {
         const nodeResources = []
         for (const agg of node.aggregations) {
             const aggResources = {
-                id: agg.id
+                id: agg.id,
+                github: defaultGitHubObject // pass default object to avoid GraphQL errors
             }
             const entityResourcesConfig = entities[agg.id]
             if (entityResourcesConfig) {

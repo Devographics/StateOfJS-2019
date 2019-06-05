@@ -12,7 +12,7 @@ const TshirtBlock = () => {
             <div className="Tshirt__Images">
                 {images.map((image, i) => (
                     <div key={i} className={`Tshirt__Image Tshirt__Image${i}`}>
-                        <a href={`/images/tshirt/${image}`} target="_blank"><img src={`/images/tshirt/${image}`} alt={translate('tshirt.stateofcss')} /></a>
+                        <a href={`/images/tshirt/${image}`} target="_blank" rel="noopener noreferrer"><img src={`/images/tshirt/${image}`} alt={translate('tshirt.stateofcss')} /></a>
                     </div>
                 ))}
             </div>

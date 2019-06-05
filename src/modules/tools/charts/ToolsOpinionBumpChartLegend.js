@@ -22,7 +22,7 @@ const ToolOpinionsLegend = props => {
                 'never_heard'
             )})/${l('total_respondents', colors.greyDark)}`,
             keyLabel: translate('opinions.legends.awareness_ratio')
-        },,
+        },
         {
             id: 'interest',
             label: `${l('interested')}/(${l('interested')} + ${l('not_interested')})`,
