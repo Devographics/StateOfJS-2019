@@ -18,7 +18,7 @@ const ToolsSectionOverviewBlock = ({ data, block }) => {
 
     return (
         <Block id={id} showDescription={showDescription}>
-            <ChartContainer height={200} fit={true}>
+            <ChartContainer fit={true}>
                 <ToolsOpinionBumpChart data={toolsData} />
             </ChartContainer>
             <ToolsOpinionBumpChartLegend />

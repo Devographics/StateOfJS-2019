@@ -63,7 +63,7 @@ const ToolsOverviewBlock = ({ data }) => {
 
     return (
         <Block id="tools-scatterplot" showDescription={true} className="ToolsScatterplotBlock">
-            <ChartContainer height={400} vscroll={true}>
+            <ChartContainer vscroll={true}>
                 <ToolsScatterplotChart data={chartData} />
             </ChartContainer>
         </Block>

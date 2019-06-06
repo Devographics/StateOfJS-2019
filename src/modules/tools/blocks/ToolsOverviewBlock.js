@@ -120,7 +120,7 @@ const ToolsOverviewBlock = ({ data }) => {
                 // layout="vertical"
                 opinions={opinions.filter(o => o.id !== 'never_heard')}
             />
-            <ChartContainer height={400} vscroll={true}>
+            <ChartContainer className="TechnologiesOverviewContainer" vscroll={true}>
                 <ToolsCirclePackingChart data={chartData} className="TechnologiesOverviewChart" />
             </ChartContainer>
         </Block>

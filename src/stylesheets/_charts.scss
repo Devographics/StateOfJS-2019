@@ -88,8 +88,13 @@
         }
     }
 }
+.Chart__Container__Outer--expand .Chart__Container__Inner {
+    @include small {
+        max-height: 400px;
+    }
+}
 .Chart__Container__Indicator {
-    @include small-medium {
+    @include small {
         position: absolute;
         @include flex-center;
         z-index: 100;
@@ -127,7 +132,7 @@
             transform: rotate(-90deg);
         }
     }
-    @include large {
+    @include medium-large {
         display: none;
     }
 }

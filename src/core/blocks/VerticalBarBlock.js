@@ -62,7 +62,6 @@ const VerticalBarBlock = ({ block, data }) => {
         translateData
     } = block
 
-
     const context = usePageContext()
     const { width } = context
 
@@ -94,15 +93,15 @@ const VerticalBarBlock = ({ block, data }) => {
                     units={units}
                     viewportWidth={width}
                 />
-                {showLegend && (
-                    <Legends
-                        legends={legends}
-                        layout="vertical"
-                        units={units}
-                        data={sortedBuckets.map(b => ({ ...b, id: `${block.id}.${b.id}` }))}
-                    />
-                )}
             </ChartContainer>
+            {showLegend && (
+                <Legends
+                    legends={legends}
+                    layout="vertical"
+                    units={units}
+                    data={sortedBuckets.map(b => ({ ...b, id: `${block.id}.${b.id}` }))}
+                />
+            )}
         </Block>
     )
 }
