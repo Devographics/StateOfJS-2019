@@ -11,6 +11,8 @@ import sortBy from 'lodash/sortBy'
 import round from 'lodash/round'
 import { useEntities } from 'core/entities/entitiesContext'
 
+const labelMaxLength = 12
+
 const margin = {
     top: 40,
     right: 20,
@@ -40,7 +42,9 @@ const TickItem = tick => {
     const { x, y, value, shouldTranslate, i18nNamespace } = tick
     const link = getUrl(value)
 
-    const label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : value
+    let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : value
+
+    label = label.length > labelMaxLength ? label.substr(0,labelMaxLength) + '…' : label
 
     return (
         <g transform={`translate(${x},${y})`}>
@@ -106,11 +110,11 @@ const HorizontalBarChart = ({
                 padding={0.4}
                 borderRadius={1}
                 axisTop={{
-                    tickValues: tickCount,
+                    tickValues: 5,
                     format: formatValue
                 }}
                 axisBottom={{
-                    tickValues: tickCount,
+                    tickValues: 5,
                     format: formatValue,
                     legend: translate(`users_${units}`),
                     legendPosition: 'middle',

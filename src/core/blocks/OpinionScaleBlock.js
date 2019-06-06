@@ -5,6 +5,7 @@ import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../constants'
+import { usePageContext } from '../helpers/pageContext'
 
 const SuperSad = ({ width, height }) => (
     <svg
@@ -152,6 +153,11 @@ const formatTick = translate => value => {
 }
 
 const OpinionScaleBlock = ({ block, data }) => {
+    const context = usePageContext()
+    const { width } = context
+
+    console.log(context)
+
     const { translate } = useI18n()
 
     const { units: defaultUnits = 'percentage', translateData } = block
@@ -178,14 +184,9 @@ const OpinionScaleBlock = ({ block, data }) => {
     const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [
         blockData[dataKey].buckets
     ])
-    
+
     return (
-        <Block
-            id={block.id}
-            showDescription={true}
-            units={units}
-            setUnits={setUnits}
-        >
+        <Block id={block.id} showDescription={true} units={units} setUnits={setUnits}>
             <ChartContainer fit={true}>
                 <VerticalBarChart
                     className="OpinionScaleChart"
@@ -196,9 +197,11 @@ const OpinionScaleBlock = ({ block, data }) => {
                     chartProps={{
                         axisBottom: {
                             format: getScaleTickLabel,
+                            tickRotation: width && width < 500 ? -45 : 0
                         },
                         layers: ['grid', 'axes', 'bars', Emojis]
                     }}
+                    viewportWidth={width}
                 />
             </ChartContainer>
         </Block>

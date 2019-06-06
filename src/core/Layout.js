@@ -29,6 +29,20 @@ export default class Layout extends PureComponent {
         }
     }
 
+    componentDidMount() {
+        this.updateWindowDimensions()
+        window.addEventListener('resize', this.updateWindowDimensions)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions)
+    }
+
+    updateWindowDimensions = () => {
+        console.log('updateWindowDimensions')
+        this.setState({ width: window.innerWidth, height: window.innerHeight })
+    }
+
     toggleSidebar = () => {
         this.setState({
             showSidebar: !this.state.showSidebar
@@ -57,47 +71,50 @@ export default class Layout extends PureComponent {
         const { showPagination, location, pageContext } = this.props
         const { showAnim, showSidebar } = this.state
         const sidebarClassName = showSidebar ? 'Sidebar--shown' : 'Sidebar--hidden'
-        const context = mergePageContext(pageContext, location)
+        const context = mergePageContext(pageContext, location, this.state)
 
         return (
             <PageContextProvider value={context}>
                 <I18nContextProvider>
                     <EntitiesContextProvider>
-                    <div
-                        className={classNames('pageLayout', `PageLayout--${context.id}`, {
-                            'PageLayout--sidebar': showSidebar,
-                            'PageLayout--nosidebar': !showSidebar,
-                            'PageLayout--anim': showAnim,
-                            'PageLayout--noanim': !showAnim,
-                            capture: context.isCapturing,
-                            nocapture: !context.isCapturing
-                        })}
-                    >
-                        <Head />
-                        <div className="pagelayout__inner">
-                            <Sidebar
-                                {...this.props}
-                                sidebarClassName={sidebarClassName}
-                                showSidebar={showSidebar}
-                                closeSidebar={this.closeSidebar}
-                            />
-                            <main className="pagelayout__content">
-                                {showPagination && (
-                                    <Pagination toggleSidebar={this.toggleSidebar} position="top" />
-                                )}
-                                <div className="pagelayout__main">
-                                    <PageMetaDebug />
-                                    {this.props.children}
-                                </div>
-                                {showPagination && (
-                                    <Pagination
-                                        toggleSidebar={this.toggleSidebar}
-                                        position="bottom"
-                                    />
-                                )}
-                            </main>
+                        <div
+                            className={classNames('pageLayout', `PageLayout--${context.id}`, {
+                                'PageLayout--sidebar': showSidebar,
+                                'PageLayout--nosidebar': !showSidebar,
+                                'PageLayout--anim': showAnim,
+                                'PageLayout--noanim': !showAnim,
+                                capture: context.isCapturing,
+                                nocapture: !context.isCapturing
+                            })}
+                        >
+                            <Head />
+                            <div className="pagelayout__inner">
+                                <Sidebar
+                                    {...this.props}
+                                    sidebarClassName={sidebarClassName}
+                                    showSidebar={showSidebar}
+                                    closeSidebar={this.closeSidebar}
+                                />
+                                <main className="pagelayout__content">
+                                    {showPagination && (
+                                        <Pagination
+                                            toggleSidebar={this.toggleSidebar}
+                                            position="top"
+                                        />
+                                    )}
+                                    <div className="pagelayout__main">
+                                        <PageMetaDebug />
+                                        {this.props.children}
+                                    </div>
+                                    {showPagination && (
+                                        <Pagination
+                                            toggleSidebar={this.toggleSidebar}
+                                            position="bottom"
+                                        />
+                                    )}
+                                </main>
+                            </div>
                         </div>
-                    </div>
                     </EntitiesContextProvider>
                 </I18nContextProvider>
             </PageContextProvider>

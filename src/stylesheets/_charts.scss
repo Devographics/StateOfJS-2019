@@ -99,7 +99,8 @@
             opacity: 0.5;
             overflow: visible;
         }
-        &--left, &--right{
+        &--left,
+        &--right {
             top: 0;
             bottom: 0;
             width: 20px;
@@ -111,7 +112,8 @@
             right: 10px;
             transform: rotate(180deg);
         }
-        &--top, &--bottom{
+        &--top,
+        &--bottom {
             left: 0;
             right: 0;
             height: 20px;
@@ -238,6 +240,7 @@ Vertical Bar Chart
 
 */
 .OpinionScaleChart {
+    padding-top: $spacing;
     svg {
         overflow: visible;
     }

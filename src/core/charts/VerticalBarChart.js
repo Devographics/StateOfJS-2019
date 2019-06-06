@@ -7,15 +7,18 @@ import { colors } from '../../constants'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 
-const margin = {
+const breakpoint = 600
+
+const getMargins = viewportWidth => ({
     top: 10,
     right: 70,
-    bottom: 50,
+    bottom: viewportWidth < breakpoint ? 110 : 60,
     left: 60
-}
+})
 
-const VerticalBarChart = ({ className, buckets, total, legendNamespace, i18nNamespace, translateData, mode, units, chartProps }) => {
+const VerticalBarChart = ({ viewportWidth, className, buckets, total, legendNamespace, i18nNamespace, translateData, mode, units, chartProps }) => {
     const { translate } = useI18n()
+
     const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
         buckets,
         total,
@@ -32,7 +35,7 @@ const VerticalBarChart = ({ className, buckets, total, legendNamespace, i18nName
                 indexBy="id"
                 keys={[units]}
                 maxValue={maxValue}
-                margin={margin}
+                margin={getMargins(viewportWidth)}
                 padding={0.4}
                 theme={theme}
                 colors={[colors.blue]}
@@ -57,7 +60,8 @@ const VerticalBarChart = ({ className, buckets, total, legendNamespace, i18nName
                     format: formatTick,
                     legend: translate(`${i18nNamespace}.axis_legend`),
                     legendPosition: 'middle',
-                    legendOffset: 40
+                    legendOffset: viewportWidth < breakpoint ? 90 : 50,
+                    tickRotation: viewportWidth < breakpoint ? -45 : 0
                 }}
                 tooltip={barProps => (
                     <BarTooltip

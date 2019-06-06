@@ -6,6 +6,7 @@ import Legends from 'core/charts/Legends'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
+import { usePageContext } from '../helpers/pageContext'
 
 const getChartData = (data, block) => {
     if (!data || !data.data) {
@@ -61,6 +62,10 @@ const VerticalBarBlock = ({ block, data }) => {
         translateData
     } = block
 
+
+    const context = usePageContext()
+    const { width } = context
+
     const { translate } = useI18n()
 
     const [units, setUnits] = useState(defaultUnits)
@@ -87,6 +92,7 @@ const VerticalBarBlock = ({ block, data }) => {
                     translateData={translateData}
                     mode={mode}
                     units={units}
+                    viewportWidth={width}
                 />
                 {showLegend && (
                     <Legends
