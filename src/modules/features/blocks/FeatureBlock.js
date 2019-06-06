@@ -83,8 +83,7 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
-                    <FeatureUsageLegends />
-                    <ChartContainer height={40}>
+                    <ChartContainer height={40} fit={true} className="FeatureChart">
                         <GaugeBarChart
                             buckets={feature.usage.buckets}
                             mapping={usage}
@@ -93,6 +92,7 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                             i18nNamespace="features.usage"
                         />
                     </ChartContainer>
+                    <FeatureUsageLegends data={feature.usage.buckets} units={units}/>
                 </div>
                 {!context.isCapturing && (
                     <>

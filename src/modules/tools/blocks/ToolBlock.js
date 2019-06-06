@@ -46,8 +46,7 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
         >
             <div className="Tool FTBlock">
                 <div className="Tool__Chart FTBlock__Chart">
-                    <ToolLegend />
-                    <ChartContainer height={40}>
+                    <ChartContainer height={40} fit={true}>
                         <GaugeBarChart
                             buckets={blockData.opinion.buckets}
                             mapping={opinions}
@@ -56,6 +55,7 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
                             i18nNamespace="opinions.legends"
                         />
                     </ChartContainer>
+                    <ToolLegend data={blockData.opinion.buckets} units={units}/>
                 </div>
                 <div className="Tool__Description FTBlock__Description">
                     <TextBlock text={description} />

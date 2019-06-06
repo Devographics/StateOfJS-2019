@@ -78,8 +78,7 @@ const VerticalBarBlock = ({ block, data }) => {
 
     return (
         <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits}>
-            {showLegend && <Legends legends={legends} layout="vertical" />}
-            <ChartContainer>
+            <ChartContainer fit={true}>
                 <VerticalBarChart
                     keys={bucketKeys}
                     total={total}
@@ -89,6 +88,14 @@ const VerticalBarBlock = ({ block, data }) => {
                     mode={mode}
                     units={units}
                 />
+                {showLegend && (
+                    <Legends
+                        legends={legends}
+                        layout="vertical"
+                        units={units}
+                        data={sortedBuckets.map(b => ({ ...b, id: `${block.id}.${b.id}` }))}
+                    />
+                )}
             </ChartContainer>
         </Block>
     )

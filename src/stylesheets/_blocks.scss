@@ -36,7 +36,12 @@
         padding-right: 4px;
         transition: none;
         position: relative;
-        top: 7px;
+        @include small {
+            top: 3px;
+        }
+        @include medium-large {
+            top: 7px;
+        }
         &:hover::before {
             content: none;
         }
@@ -73,12 +78,6 @@
             opacity: 0.2;
         }
     }
-    .nocapture &--full {
-        display: none;
-    }
-    .capture &--short {
-        display: none;
-    }
 }
 .Block__Title__Share {
     margin-left: $spacing/2;
@@ -97,8 +96,11 @@
     margin-bottom: $spacing * 10;
 }
 
-.Block__Title__ChartControls{
-    @include small{
+.Block__Title__ChartControls {
+    @include small {
         margin-left: $spacing/2;
+    }
+    .capture &{
+        display: none;
     }
 }

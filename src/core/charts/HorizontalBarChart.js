@@ -15,7 +15,7 @@ const margin = {
     top: 40,
     right: 20,
     bottom: 50,
-    left: 240
+    left: 140
 }
 
 const Text = ({ hasLink = false, label }) => (

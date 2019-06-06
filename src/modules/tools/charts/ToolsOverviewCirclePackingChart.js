@@ -155,7 +155,7 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
     )
 }
 
-const ToolsOverviewCirclePackingChart = ({ data }) => {
+const ToolsOverviewCirclePackingChart = ({ className, data }) => {
     const [activeId, _setActiveId] = useState(null)
 
     let leaveTimer
@@ -174,7 +174,7 @@ const ToolsOverviewCirclePackingChart = ({ data }) => {
     }
 
     return (
-        <div style={{ height: 800 }} className="ToolsOverviewCirclePackingChart CirclePackingChart">
+        <div className={`ToolsOverviewCirclePackingChart CirclePackingChart ${className}`}>
             <ResponsiveBubble
                 theme={theme}
                 margin={{

@@ -6,6 +6,7 @@ import round from 'lodash/round'
 import ToolsScatterplotChart from '../charts/ToolsScatterplotChart'
 import { useEntities } from 'core/entities/entitiesContext'
 import { useI18n } from 'core/i18n/i18nContext'
+import ChartContainer from 'core/charts/ChartContainer'
 
 const sectionColors = {
     'css-frameworks': colors.purple,
@@ -62,7 +63,9 @@ const ToolsOverviewBlock = ({ data }) => {
 
     return (
         <Block id="tools-scatterplot" showDescription={true} className="ToolsScatterplotBlock">
-            <ToolsScatterplotChart data={chartData} />
+            <ChartContainer height={400} vscroll={true}>
+                <ToolsScatterplotChart data={chartData} />
+            </ChartContainer>
         </Block>
     )
 }

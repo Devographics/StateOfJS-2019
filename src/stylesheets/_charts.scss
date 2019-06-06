@@ -81,30 +81,48 @@
     }
 }
 .Chart__Container__Inner {
-    @include small-medium {
-        min-width: 600px;
-        padding-bottom: $spacing;
+    .Chart__Container__Outer--expand & {
+        @include small-medium {
+            min-width: 800px;
+            padding-bottom: $spacing;
+        }
     }
 }
 .Chart__Container__Indicator {
     @include small-medium {
         position: absolute;
         @include flex-center;
-        top: 0;
-        bottom: 0;
-        width: 20px;
         z-index: 100;
         svg {
             display: block;
-            stroke: $grey;
-            opacity: 0.2;
+            stroke: $teal;
+            opacity: 0.5;
             overflow: visible;
+        }
+        &--left, &--right{
+            top: 0;
+            bottom: 0;
+            width: 20px;
         }
         &--left {
             left: 10px;
         }
         &--right {
             right: 10px;
+            transform: rotate(180deg);
+        }
+        &--top, &--bottom{
+            left: 0;
+            right: 0;
+            height: 20px;
+        }
+        &--top {
+            top: 10px;
+            transform: rotate(90deg);
+        }
+        &--bottom {
+            bottom: 10px;
+            transform: rotate(-90deg);
         }
     }
     @include large {
@@ -231,13 +249,13 @@ Features Overview Chart
 */
 .FeaturesOverviewChart {
     @include xsmall {
-        height: 200px;
+        height: 800px;
     }
     @include small {
-        height: 400px;
+        height: 800px;
     }
     @include medium {
-        height: 600px;
+        height: 800px;
     }
     @include large {
         height: 800px;
@@ -281,6 +299,26 @@ Features Overview Chart
         overflow: visible;
     }
 }
+
+/*
+
+Technologies Overview Chart
+
+*/
+.TechnologiesOverviewChart {
+    @include xsmall {
+        height: 800px;
+    }
+    @include small {
+        height: 800px;
+    }
+    @include medium {
+        height: 800px;
+    }
+    @include large {
+        height: 800px;
+    }
+}
 /*
 
 Quadrant/Scatterplot Chart
@@ -304,7 +342,7 @@ Quadrant/Scatterplot Chart
     background: $color;
     @include font-bold;
 }
-.text-highlight{
+.text-highlight {
     @include coloredText(#000);
 }
 .text-green {

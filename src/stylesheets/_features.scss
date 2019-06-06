@@ -9,6 +9,9 @@
 
 .FTBlock__Chart {
     grid-column: 1 / 3;
+    @include small{
+        margin-bottom: $spacing;
+    }
 }
 .Feature__Support {
     font-size: $smallish-font;

@@ -69,6 +69,21 @@ $smallShareItemOffset: 150%;
             transform: translate(-50%, -50%);
         }
     }
+    &.share__link--twitter {
+        transition-delay: 0ms;
+    }
+    &.share__link--facebook {
+        transition-delay: 100ms;
+    }
+    &.share__link--linkedin {
+        transition-delay: 200ms;
+    }
+    &.share__link--email {
+        transition-delay: 300ms;
+    }
+    &.share__link--image {   
+        transition-delay: 400ms;             
+    }
     @include small {
         top: 0;
         left: 0;
@@ -79,22 +94,21 @@ $smallShareItemOffset: 150%;
         pointer-events: auto;
         @include small {
             &.share__link--twitter {
+                transform: translateX(-50%) translateY(-$smallShareItemOffset * 1.5 - 50%) scale(1);
+            }
+            &.share__link--facebook {
                 transform: translateX(-$smallShareItemOffset - 50%)
                     translateY(-$smallShareItemOffset - 50%) scale(1);
             }
-            &.share__link--facebook {
-                transform: translateX(-50%) translateY(-$smallShareItemOffset * 1.5 - 50%) scale(1);
-            }
             &.share__link--linkedin {
-                transform: translateX($smallShareItemOffset - 50%)
-                    translateY(-$smallShareItemOffset - 50%) scale(1);
+                transform: translateX(-$smallShareItemOffset * 1.5 - 50%) translateY(-50%) scale(1);
             }
             &.share__link--email {
-                transform: translateX($smallShareItemOffset * 1.5 - 50%) translateY(-50%) scale(1);
-            }
-            &.share__link--image {
-                transform: translateX($smallShareItemOffset - 50%)
+                transform: translateX(-$smallShareItemOffset - 50%)
                     translateY($smallShareItemOffset - 50%) scale(1);
+            }
+            &.share__link--image {                
+                transform: translateX(-50%) translateY($smallShareItemOffset * 1.5 - 50%) scale(1);
             }
         }
         @include medium-large {

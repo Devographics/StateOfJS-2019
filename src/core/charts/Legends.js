@@ -12,7 +12,9 @@ const Legends = ({
     chipStyle,
     onMouseEnter,
     onMouseLeave,
-    onClick
+    onClick,
+    data,
+    units,
 }) => {
     const classNames = ['Legends', `Legends--${layout}`]
     if (withFrame === true) {
@@ -36,6 +38,8 @@ const Legends = ({
                     onMouseLeave={onMouseLeave}
                     onClick={onClick}
                     keyLabel={keyLabel}
+                    data={data && data.find(b => b.id === id)}
+                    units={units}
                 />
             ))}
         </div>

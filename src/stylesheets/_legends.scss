@@ -1,6 +1,6 @@
 .Legends {
     font-size: $small-font;
-    margin: $spacing 0;
+    margin-top: $spacing;
 }
 
 .Legends--horizontal {
@@ -92,3 +92,14 @@
 // .Legends--connections .Legends__Item {
 //     padding: $spacing / 2;
 // }
+
+.Legends__Item__Label{
+    @include small{
+        flex: 1;
+    }
+}
+.Legends__Item__Value{
+    display: inline-block;
+    margin-left: $spacing/2;
+    @include font-bold;
+}

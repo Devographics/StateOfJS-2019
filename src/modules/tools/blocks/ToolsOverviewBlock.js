@@ -7,6 +7,7 @@ import round from 'lodash/round'
 import ToolOpinionsLegend from '../charts/ToolLegend'
 import { useEntities } from 'core/entities/entitiesContext'
 import { useI18n } from 'core/i18n/i18nContext'
+import ChartContainer from 'core/charts/ChartContainer'
 
 export const opinions = [
     {
@@ -41,7 +42,6 @@ Parse data and convert it into a format compatible with the Circle Packing chart
 
 */
 const getChartData = (data, translate, getName) => {
-
     const buckets = opinions.filter(o => o.id !== 'never_heard')
 
     const sections = data.tools.nodes.map(section => {
@@ -79,7 +79,7 @@ const getChartData = (data, translate, getName) => {
                     percent: round((count / toolTotal) * 100, 2),
                     color,
                     offsetSum,
-                    offsetPercent: round((offsetSum / toolTotal) * 100, 2),
+                    offsetPercent: round((offsetSum / toolTotal) * 100, 2)
                 }
             }
 
@@ -96,7 +96,7 @@ const getChartData = (data, translate, getName) => {
         return {
             id: section_id,
             children: compact(tools),
-            name: translate(`page.${section_id}`),
+            name: translate(`page.${section_id}`)
         }
     })
 
@@ -108,7 +108,6 @@ const getChartData = (data, translate, getName) => {
 }
 
 const ToolsOverviewBlock = ({ data }) => {
-
     const { translate } = useI18n()
     const { getName } = useEntities()
 
@@ -121,7 +120,9 @@ const ToolsOverviewBlock = ({ data }) => {
                 // layout="vertical"
                 opinions={opinions.filter(o => o.id !== 'never_heard')}
             />
-            <ToolsCirclePackingChart data={chartData} />
+            <ChartContainer height={400} vscroll={true}>
+                <ToolsCirclePackingChart data={chartData} className="TechnologiesOverviewChart" />
+            </ChartContainer>
         </Block>
     )
 }

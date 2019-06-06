@@ -5,6 +5,7 @@ import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors } from '../../../constants'
 import { useEntities } from 'core/entities/entitiesContext'
+import ChartContainer from 'core/charts/ChartContainer'
 
 const getChartData = (data, getName, translate) => {
     const sections = data.features.nodes.map(section => {
@@ -20,7 +21,7 @@ const getChartData = (data, getName, translate) => {
                 usage: usageBucket.count,
                 usageColor: colors.blue,
                 unusedCount: knowNotUsedBucket.count,
-                name: getName(feature.id),
+                name: getName(feature.id)
             }
         })
 
@@ -28,7 +29,7 @@ const getChartData = (data, getName, translate) => {
             id: section_id,
             isSection: true,
             children: features,
-            name: translate(`page.${section_id}`),
+            name: translate(`page.${section_id}`)
         }
     })
 
@@ -39,12 +40,10 @@ const getChartData = (data, getName, translate) => {
 }
 
 const FeaturesOverviewBlock = ({ data }) => {
-    
     const { getName } = useEntities()
     const { translate } = useI18n()
 
     const chartData = useMemo(() => getChartData(data, getName, translate), [data])
-
 
     // note: slightly different from Usage legend
     const legends = [
@@ -62,13 +61,14 @@ const FeaturesOverviewBlock = ({ data }) => {
 
     return (
         <Block id="features-overview" className="FeaturesOverviewBlock" showDescription={true}>
-            <Legends legends={legends}/>
-            <FeaturesOverviewCirclePackingChart
-                className="FeaturesOverviewChart"
-                data={chartData}
-                height={800}
-                variant="allFeatures"
-            />
+            <ChartContainer height={400} vscroll={true}>
+                <FeaturesOverviewCirclePackingChart
+                    className="FeaturesOverviewChart"
+                    data={chartData}
+                    variant="allFeatures"
+                />
+            </ChartContainer>
+            <Legends legends={legends} />
         </Block>
     )
 }

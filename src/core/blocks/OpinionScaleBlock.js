@@ -186,7 +186,7 @@ const OpinionScaleBlock = ({ block, data }) => {
             units={units}
             setUnits={setUnits}
         >
-            <ChartContainer>
+            <ChartContainer fit={true}>
                 <VerticalBarChart
                     className="OpinionScaleChart"
                     buckets={buckets}

@@ -26,9 +26,7 @@ const GenderBreakdownBlock = ({ block, data }) => {
             units={units}
             setUnits={setUnits}
         >
-            <GenderLegends />
-            {/* <GenderWaffleChart units={units} data={chartData} /> */}
-            <ChartContainer height={200}>
+            <ChartContainer height={200} fit={true}>
                 <GaugeBarChart
                     units={units}
                     buckets={chartData}
@@ -36,6 +34,7 @@ const GenderBreakdownBlock = ({ block, data }) => {
                     i18nNamespace={block.id}
                 />
             </ChartContainer>
+            <GenderLegends data={chartData} units={units} />
         </Block>
     )
 }

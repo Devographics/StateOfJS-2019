@@ -58,7 +58,7 @@ const HorizontalBarBlock = ({ block, data }) => {
 
     return (
         <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits}>
-            <ChartContainer>
+            <ChartContainer fit={true}>
                 <HorizontalBarChart
                     total={blockData.total}
                     buckets={blockData.buckets}

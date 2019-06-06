@@ -24,7 +24,6 @@ import { colors } from '../../constants'
 // this way, we can add an extra outline to bar labels
 const getLabels = units => ({ bars, getLabelTextColor }) => {
     return bars.map(bar => {
-
         // skip legend for small bars
         if (bar.width < 60) return null
 
@@ -77,7 +76,10 @@ const Tooltip = memo(({ translate, i18nNamespace, bar, units }) => {
         <div style={theme.tooltip.basic}>
             <Chip color={bar.color} style={{ marginRight: 7 }} />
             {translate(`${i18nNamespace}.${bar.id}`)}:{' '}
-            <strong>{bar.data[`${bar.id}_${units}`]}{units === 'percentage' && '%'}</strong>
+            <strong>
+                {bar.data[`${bar.id}_${units}`]}
+                {units === 'percentage' && '%'}
+            </strong>
         </div>
     )
 })
@@ -144,7 +146,12 @@ const GaugeBarChart = ({ buckets, mapping, units, applyEmptyPatternTo, i18nNames
             // defs={patterns}
             fill={patternRules}
             tooltip={bar => (
-                <Tooltip bar={bar} translate={translate} i18nNamespace={i18nNamespace} units={units}/>
+                <Tooltip
+                    bar={bar}
+                    translate={translate}
+                    i18nNamespace={i18nNamespace}
+                    units={units}
+                />
             )}
         />
     )

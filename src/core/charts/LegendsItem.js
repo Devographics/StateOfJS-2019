@@ -39,7 +39,7 @@ export default class LegendsItem extends Component {
     }
 
     render() {
-        const { color, label, keyLabel, chipSize, style, chipStyle } = this.props
+        const { color, label, keyLabel, chipSize, style, chipStyle, data, units } = this.props
 
         return (
             <div
@@ -62,6 +62,7 @@ export default class LegendsItem extends Component {
                 )}
                 {keyLabel && <span className="Legends__Item__KeyLabel">{keyLabel}{' '}</span>}
                 <span className="Legends__Item__Label" dangerouslySetInnerHTML={{ __html: label}}/>
+                {data && <span className="Legends__Item__Value">{units === 'percentage' ? `${data[units]}%` : data[units]}</span>}
             </div>
         )
     }

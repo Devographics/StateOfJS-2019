@@ -4,7 +4,7 @@ import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { keys } from '../../../constants'
 
-const GenderLegends = () => {
+const GenderLegends = ({ data, units }) => {
     const { translate } = useI18n()
 
     const legends = useMemo(
@@ -17,7 +17,7 @@ const GenderLegends = () => {
         [keys.gender, theme.genderColors]
     )
 
-    return <Legends legends={legends} modifier="horizontal" />
+    return <Legends legends={legends} modifier="horizontal" data={data} units={units}/>
 }
 
 export default memo(GenderLegends)
