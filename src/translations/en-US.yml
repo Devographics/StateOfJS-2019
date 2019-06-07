@@ -17,7 +17,9 @@ translations:
           you prefer a looser fit we recommend ordering one size up from what you
           usually wear (I'm wearing an M in the photos).
     - key: tshirt.getit
-      t: Get It – Only $25
+      t: Get It
+    - key: tshirt.price
+      t: $${price} + shipping
 
     ###########################################################################
     # Demographics

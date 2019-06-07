@@ -39,7 +39,6 @@ export default class Layout extends PureComponent {
     }
 
     updateWindowDimensions = () => {
-        console.log('updateWindowDimensions')
         this.setState({ width: window.innerWidth, height: window.innerHeight })
     }
 
