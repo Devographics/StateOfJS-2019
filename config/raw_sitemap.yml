@@ -36,6 +36,7 @@
         showDescription: true
       - id: gender
         type: gender
+        showDescription: true
       - id: job-title
         type: horizontal-bar
         dataKey: breakdown

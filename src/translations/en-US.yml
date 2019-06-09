@@ -13,9 +13,9 @@ translations:
           code used to create each shape. Who knows, you might learn a thing or two!
 
 
-          We use a high-quality, super-soft tri-blend shirt with a slim fit. If
-          you prefer a looser fit we recommend ordering one size up from what you
-          usually wear (I'm wearing an M in the photos).
+          We use a high-quality, super-soft tri-blend shirt with a slim fit. This shirt
+          sizes small, so if you prefer a looser fit **we recommend ordering one size up from what you
+          usually wear** (I'm wearing an M in the photos).
     - key: tshirt.getit
       t: Get It
     - key: tshirt.price
@@ -236,6 +236,8 @@ translations:
     #   t: Company size breakdown.
     - key: block.title.gender
       t: Gender
+    - key: block.description.gender
+      t: Respondents gender.
     - key: block.title.source
       t: Source
     - key: block.description.source

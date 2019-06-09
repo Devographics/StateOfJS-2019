@@ -13,7 +13,7 @@ const getChartData = (data, block) => {
 }
 
 const GenderBreakdownBlock = ({ block, data }) => {
-    const { units: defaultUnits = 'percentage' } = block
+    const { units: defaultUnits = 'percentage', showDescription } = block
     const [units, setUnits] = useState(defaultUnits)
 
     const chartData = useMemo(() => getChartData(data, block), [data, block])

@@ -340,6 +340,35 @@ Quadrant/Scatterplot Chart
     opacity: 0.75;
     font-size: $larger-font;
 }
+.Scatterplot__Node{
+    
+    &:hover{
+        .Scatterplot__Node__Crosshairs{
+            opacity: 1;
+            transition: all 200ms ease-out;
+        }
+    }
+}
+
+.Scatterplot__Node__Label{
+    pointer-events: none;
+}
+
+.Scatterplot__Node__Point{
+}
+
+.Scatterplot__Node__Crosshairs{
+    pointer-events: none;
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+.Scatterplot__Node__PointHover{
+    opacity: 0.75;
+}
+.Scatterplot__Node__Crosshair__Label{
+    font-size: $small-font;
+}
+
 
 @mixin coloredText($color) {
     display: inline-block;
