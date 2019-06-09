@@ -359,6 +359,9 @@ Quadrant/Scatterplot Chart
             transition: all 200ms ease-out;
             // transform: scale(1.2) translateX(15px);
         }
+        .Scatterplot__Node__Crosshair__Line{
+            @include svgAnts;
+        }
     }
 }
 .Scatterplot__Node__Label {

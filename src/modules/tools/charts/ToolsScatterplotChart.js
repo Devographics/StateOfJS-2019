@@ -43,6 +43,7 @@ const Crosshair = ({ x, y, label, cutoffX = 0, cutoffY = 0 }) => {
         <g transform={`translate(${x},${y})`}>
             <g opacity={0.75}>
                 <line
+                    className="Scatterplot__Node__Crosshair__Line"
                     x1={0}
                     y1={0}
                     x2={-x - cutoffX}
