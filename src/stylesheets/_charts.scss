@@ -340,35 +340,55 @@ Quadrant/Scatterplot Chart
     opacity: 0.75;
     font-size: $larger-font;
 }
-.Scatterplot__Node{
-    
-    &:hover{
-        .Scatterplot__Node__Crosshairs{
+.Scatterplot__Node {
+    &:hover {
+        .Scatterplot__Node__Crosshairs {
             opacity: 1;
             transition: all 200ms ease-out;
         }
+        .Scatterplot__Node__Label {
+            transform: translateX(30px);
+            transition: all 200ms ease-out;
+        }
+        .Scatterplot__Node__Label__Background {
+            opacity: 0.75;
+            transition: all 200ms ease-out;
+        }
+        .Scatterplot__Node__Label__Text {
+            fill: $navy;
+            transition: all 200ms ease-out;
+            // transform: scale(1.2) translateX(15px);
+        }
     }
 }
-
-.Scatterplot__Node__Label{
+.Scatterplot__Node__Label {
     pointer-events: none;
+    transition: all 200ms ease-out;
+}
+.Scatterplot__Node__Label__Background {
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+.Scatterplot__Node__Label__Text {
+    font-size: $small-font;
+    transition: all 200ms ease-out;
 }
 
-.Scatterplot__Node__Point{
+.Scatterplot__Node__PointHoverZone {
+
 }
 
-.Scatterplot__Node__Crosshairs{
+.Scatterplot__Node__Crosshairs {
     pointer-events: none;
     opacity: 0;
     transition: all 200ms ease-out;
 }
-.Scatterplot__Node__PointHover{
+.Scatterplot__Node__PointHover {
     opacity: 0.75;
 }
-.Scatterplot__Node__Crosshair__Label{
+.Scatterplot__Node__Crosshair__Label {
     font-size: $small-font;
 }
-
 
 @mixin coloredText($color) {
     display: inline-block;

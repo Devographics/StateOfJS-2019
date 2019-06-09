@@ -5,6 +5,16 @@ import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { colors } from '../../../constants'
 import { useI18n } from 'core/i18n/i18nContext'
 
+const labelPositions = {
+    Emotion: [0, -10],
+    Tailwind: [0, 10],
+    ITCSS: [0, 2],
+    SMACSS: [0, -10],
+    PureCSS: [0, -10],
+    Tachyons: [0, 10],
+    // Glamor: [0, 5],
+    UIKit: [0, 15]
+}
 const sectionColors = {
     'CSS Frameworks': colors.purple,
     Methodologies: colors.yellow,
@@ -42,7 +52,6 @@ const Crosshair = ({ x, y, label, cutoffX = 0, cutoffY = 0 }) => {
                 />
                 <rect
                     x={-(width / 2)}
-                    y={-20 / 2}
                     y={-height / 2}
                     width={width}
                     height={height}
@@ -68,6 +77,9 @@ const Node = props => {
     const { name, formattedX, formattedY } = data
     const yInverted = height - margin.top - margin.bottom - y
     const cutoff = 12 // cut off the lines a little before the node
+    console.log(translateLabel)
+    const translateLabel = labelPositions[name] || [0, 0]
+
     return (
         <g className="Scatterplot__Node" transform={`translate(${x},${y})`}>
             <g className="Scatterplot__Node__Crosshairs">
@@ -82,16 +94,30 @@ const Node = props => {
             </g>
 
             <circle className="Scatterplot__Node__PointHoverZone" r={16} fill="transparent" />
-            <circle className="Scatterplot__Node__Point" r={8} fill={style.color} />
-            <text
+            <circle className="Scatterplot__Node__Point" r={6} fill={style.color} />
+
+            <g
                 className="Scatterplot__Node__Label"
-                transform={`translate(15,1)`}
-                textAnchor="left"
-                alignmentBaseline="middle"
-                fill={colors.teal}
+                transform={`translate(${12 + translateLabel[0]},${1 + translateLabel[1]})`}
             >
-                {name}
-            </text>
+                <rect
+                    className="Scatterplot__Node__Label__Background"
+                    x={-6}
+                    y={-10}
+                    width={name.length * 8 + 9}
+                    height={20}
+                    fill={colors.white}
+                    rx={3}
+                />
+                <text
+                    className="Scatterplot__Node__Label__Text"
+                    textAnchor="left"
+                    alignmentBaseline="middle"
+                    fill={colors.teal}
+                >
+                    {name}
+                </text>
+            </g>
         </g>
     )
 }
