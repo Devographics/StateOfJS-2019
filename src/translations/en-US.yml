@@ -645,6 +645,8 @@ translations:
       t: Awards
     - key: page.conclusion
       t: Conclusion
+    - key: page.support
+      t: Support Us
 
     # sharing
     - key: share.share
@@ -711,6 +713,18 @@ translations:
       t: Back to introduction
     - key: general.close_nav
       t: Close navigation menu
+
+    # partners
+    - key: partners.our_partners
+      t: Our Partners
+    - key: partners.become_partner
+      t: Help sponsor the survey
+    - key: partners.thanks
+      t: Thanks to our partners for supporting us!
+    - key: partners.learn_more
+      t: Learn more.
+    - key: block.title.recommended_resources
+      t: Recommended Resources
       
     # charts
     - key: block.title.usage-ratio

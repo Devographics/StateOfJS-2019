@@ -2,21 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
 import { Link } from 'gatsby'
-import resources from 'data/resources.yaml'
-import BlockTitle from './BlockTitle'
+import resources from 'data/sponsoredlinks.yaml'
+import BlockTitle from 'core/components/BlockTitle'
 import { useI18n } from '../i18n/i18nContext'
 
-const trackClick = (tool, resource, label) => {
+const trackClick = (id, resource, label) => {
     ReactGA.event({
         category: 'Sponsor Clicks',
-        action: `${tool}: ${resource.name}`,
+        action: `${id}: ${resource.name}`,
         label
     })
 }
 
-const ResourcesBlock = ({ tool }) => {
+const ResourcesBlock = ({ block }) => {
     const { translate } = useI18n()
-    const sectionResources = resources.filter(r => r.tool === tool)
+    const { id } = block
+    const sectionResources = resources.filter(r => block.items.includes(r.id))
 
     if (!sectionResources.length) {
         return null
@@ -36,7 +37,7 @@ const ResourcesBlock = ({ tool }) => {
                             ? resource.url
                             : `${
                                   resource.url
-                              }?utm_source=stateofjs&utm_medium=sponsor&utm_campaign=${tool}`
+                              }?utm_source=stateofjs&utm_medium=sponsor&utm_campaign=${id}`
 
                         return (
                             <div key={resource.name} className="resource">
@@ -44,7 +45,7 @@ const ResourcesBlock = ({ tool }) => {
                                     <div>
                                         {/* eslint-disable-next-line */}
                                         <a
-                                            onClick={() => trackClick(tool, resource, 'text')}
+                                            onClick={() => trackClick(id, resource, 'text')}
                                             href={`${url}&utm_content=textlink`}
                                             style={{
                                                 backgroundImage: `url(/images/resources/${
@@ -58,7 +59,7 @@ const ResourcesBlock = ({ tool }) => {
                                 <div className="resource-contents">
                                     <h4 className="resource-title">
                                         <a
-                                            onClick={() => trackClick(tool, resource, 'text')}
+                                            onClick={() => trackClick(id, resource, 'text')}
                                             href={`${url}&utm_content=textlink`}
                                         >
                                             {resource.name}
@@ -75,16 +76,11 @@ const ResourcesBlock = ({ tool }) => {
                         )
                     })}
                 </div>
-                <div
-                    className="resources-sponsored"
-                    dangerouslySetInnerHTML={{
-                        __html: translate('partners.thanks', {
-                            values: {
-                                link: <Link to="/support">{translate('partners.learn_more')}</Link>
-                            }
-                        })
-                    }}
-                />
+                <div className="resources-sponsored">
+                    <span>{translate('partners.thanks')}</span>
+                    {' '}
+                    <Link to="/support">{translate('partners.learn_more')}</Link>
+                </div>
             </div>
         </div>
     )

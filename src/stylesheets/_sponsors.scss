@@ -1,5 +1,5 @@
 .Sponsors {
-    background: $bg-color-light;
+    background: $navyLight;
     padding: $spacing * 1.5;
     margin-top: $spacing * 3;
 }
@@ -35,11 +35,6 @@
 .Sponsors__Support {
     font-size: $smallish-font;
     text-align: center;
-    display: block;
     margin-top: $spacing/2;
     @include font-regular;
-    &,
-    &:link,
-    &:visited {
-    }
 }

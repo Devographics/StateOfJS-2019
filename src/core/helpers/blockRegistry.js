@@ -3,6 +3,7 @@ import HorizontalBarBlock from 'core/blocks/HorizontalBarBlock'
 import VerticalBarBlock from 'core/blocks/VerticalBarBlock'
 import OpinionScaleBlock from 'core/blocks/OpinionScaleBlock'
 import TextBlock from 'core/blocks/TextBlock';
+import ResourcesBlock from 'core/blocks/ResourcesBlock';
 
 // demographics
 // import SourceBlock from 'modules/demographics/blocks/SourceBlock'
@@ -30,6 +31,7 @@ const blockRegistry = {
     'vertical-bar': VerticalBarBlock,
     'opinion-scale': OpinionScaleBlock,
     'text': TextBlock,
+    'resources': ResourcesBlock,
 
     // demographics
     // source: SourceBlock,

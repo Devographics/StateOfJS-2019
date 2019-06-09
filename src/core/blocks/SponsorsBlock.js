@@ -10,20 +10,22 @@ const SponsorsBlock = () => {
     return (
         <div className="Sponsors__Wrapper">
             <div className="Sponsors">
-                <h3 className="Sponsors__Heading">{translate('partners.premium_partners')}:</h3>
+                <h3 className="Sponsors__Heading">{translate('partners.our_partners')}:</h3>
                 <div className="Sponsors__Items">
                     {sponsors.map(({ name, image, url }) => (
                         <div className="Sponsors__Item" key={name}>
                             <a href={url}>
-                                <img title={name} alt="" src={`/images/sponsors/${image}`} />
+                                <img title={name} src={`/images/sponsors/${image}`} />
                             </a>
                         </div>
                     ))}
                 </div>
             </div>
-            <Link className="Sponsors__Support" to="/support">
+            <div className="Sponsors__Support" >
+            <Link to="/support">
                 {translate('partners.become_partner')}
             </Link>
+            </div>
         </div>
     )
 }
