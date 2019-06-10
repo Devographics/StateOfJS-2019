@@ -11,6 +11,10 @@ const {
 } = require('./node_src/resources')
 const { omit } = require('lodash')
 
+require('dotenv').config({
+    path: `.env`
+})
+
 const rawSitemap = yaml.safeLoad(fs.readFileSync('./config/raw_sitemap.yml', 'utf8'))
 const locales = yaml.safeLoad(fs.readFileSync('./config/locales.yml', 'utf8'))
 const features = yaml.safeLoad(fs.readFileSync('./src/data/features.yml', 'utf8'))
@@ -200,7 +204,7 @@ exports.onCreateNode = async ({ node, actions }) => {
             const aggResources = {
                 id: agg.id
             }
-            const featureResourcesConfig = features.find(f => f.id ===agg.id)
+            const featureResourcesConfig = features.find(f => f.id === agg.id)
 
             if (featureResourcesConfig !== undefined) {
                 if (featureResourcesConfig.mdn !== undefined) {

@@ -56,7 +56,11 @@
     color: #ffffff;
     cursor: pointer;
 }
-
+.FTBlock__Description{
+    .capture &{
+        grid-column: 1 / 3;
+    }
+}
 .FTBlock__Resources{
     @include small{
         margin-top: $spacing;
@@ -67,5 +71,8 @@
     }
     ul{
         padding-left: $spacing;
+    }
+    .capture &{
+        display: none;
     }
 }

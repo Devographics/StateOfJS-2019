@@ -252,6 +252,18 @@ Vertical Bar Chart
 }
 /*
 
+Gauge Chart
+
+*/
+.FTBlock{
+    .Legends__Item__Value{
+        @include large{
+            display: none;
+        }
+    }
+}
+/*
+
 Features Overview Chart
 
 */

@@ -18,7 +18,7 @@ const Node = ({ x, y, fill, label, isCurrent }) => (
             r={16}
             fill={isCurrent ? colors.white : colors.navy}
             stroke={fill}
-            strokeWidth={isCurrent ? 6.6 : 3}
+            strokeWidth={isCurrent ? 6 : 3}
         />
         <text fontSize={11} fill={isCurrent ? colors.navy : colors.teal} textAnchor="middle" alignmentBaseline="middle">
             {label}
