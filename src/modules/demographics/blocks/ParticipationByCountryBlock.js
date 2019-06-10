@@ -4,7 +4,7 @@ import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import ParticipationByCountryChart from '../charts/ParticipationByCountryChart'
 
-const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'percentage'}) => {
+const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
 
     const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
@@ -13,8 +13,13 @@ const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'perce
     ])
 
     return (
-        <Block id={block.id} showDescription={block.showDescription} units={units} setUnits={setUnits}>
-            <ChartContainer>
+        <Block
+            id={block.id}
+            showDescription={block.showDescription}
+            units={units}
+            setUnits={setUnits}
+        >
+            <ChartContainer height={500}>
                 <ParticipationByCountryChart units={units} data={blockData.breakdown.buckets} />
             </ChartContainer>
         </Block>

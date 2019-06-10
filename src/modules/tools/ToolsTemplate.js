@@ -37,7 +37,7 @@ export const query = graphql`
             fields {
                 resources {
                     id
-                    entity{
+                    entity {
                         name
                         npm
                         homepage

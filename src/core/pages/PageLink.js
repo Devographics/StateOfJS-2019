@@ -6,7 +6,11 @@ import { usePageContext } from '../helpers/pageContext'
 const PageLink = ({ page, children, ...rest }) => {
     const context = usePageContext()
 
-    return <Link {...rest} to={`${context.localePath}${page.path}`}><span>{children}</span></Link>
+    return (
+        <Link {...rest} to={`${context.localePath}${page.path}`}>
+            <span>{children}</span>
+        </Link>
+    )
 }
 
 PageLink.propTypes = {

@@ -37,10 +37,11 @@ export const getBlockDescription = (
 }
 
 export const getBlockImage = (id, context, translate) => {
-    return `${context.host}/images/captures/${context.basePath && context.basePath
-        .replace(/^\//, '')
-        .replace(/\/$/, '')
-        .replace(/\//g, '_')}_${id}.png`
+    return `${context.host}/images/captures/${context.basePath &&
+        context.basePath
+            .replace(/^\//, '')
+            .replace(/\/$/, '')
+            .replace(/\//g, '_')}_${id}.png`
 }
 
 export const getBlockMeta = (id, context, translate, title) => {

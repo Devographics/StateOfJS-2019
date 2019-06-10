@@ -23,44 +23,46 @@ const Close = () => (
 )
 
 const Sidebar = ({ showSidebar, sidebarClassName, closeSidebar, rest }) => {
-
     const { translate } = useI18n()
 
     return (
-    <nav className={`Sidebar ${sidebarClassName}`}>
-        <div className="Sidebar__Fixed">
-            <div className="Sidebar__Logo__Wrapper Logo__Wrapper">
-                <h1 className="Sidebar__Title sr-only">{translate('general.title')}</h1>
-                <span className="Sidebar__Logo--mobile Logo--mobile">
-                    <div />
-                    <div className="Sidebar__Logo__Inner">
-                        <Link to="/">
+        <nav className={`Sidebar ${sidebarClassName}`}>
+            <div className="Sidebar__Fixed">
+                <div className="Sidebar__Logo__Wrapper Logo__Wrapper">
+                    <h1 className="Sidebar__Title sr-only">{translate('general.title')}</h1>
+                    <span className="Sidebar__Logo--mobile Logo--mobile">
+                        <div />
+                        <div className="Sidebar__Logo__Inner">
+                            <Link to="/">
+                                <LogoSidebar2 />
+                                <span className="sr-only">
+                                    {translate('general.back_to_intro')}
+                                </span>
+                            </Link>
+                        </div>
+                        <span className="Sidebar__Close">
+                            <button onClick={closeSidebar}>
+                                <Close />
+                                <span className="sr-only">{translate('general.close_nav')}</span>
+                            </button>
+                        </span>
+                    </span>
+                    <div className="Sidebar__Logo--desktop Logo--desktop">
+                        <Link className="Sidebar__Logo__Link" to="/">
                             <LogoSidebar2 />
                             <span className="sr-only">{translate('general.back_to_intro')}</span>
                         </Link>
                     </div>
-                    <span className="Sidebar__Close">
-                        <button onClick={closeSidebar}>
-                            <Close />
-                            <span className="sr-only">{translate('general.close_nav')}</span>
-                        </button>
-                    </span>
-                </span>
-                <div className="Sidebar__Logo--desktop Logo--desktop">
-                    <Link className="Sidebar__Logo__Link" to="/">
-                        <LogoSidebar2 />
-                        <span className="sr-only">{translate('general.back_to_intro')}</span>
-                    </Link>
+                </div>
+                <div className="Sidebar__Inner">
+                    <Nav {...rest} closeSidebar={closeSidebar} />
+                </div>
+                <div className="Sidebar__Footer">
+                    <ShareSite />
                 </div>
             </div>
-            <div className="Sidebar__Inner">
-                <Nav {...rest} closeSidebar={closeSidebar} />
-            </div>
-            <div className="Sidebar__Footer">
-                <ShareSite />
-            </div>
-        </div>
-    </nav>
-)}
+        </nav>
+    )
+}
 
 export default Sidebar

@@ -77,8 +77,7 @@ const ResourcesBlock = ({ block }) => {
                     })}
                 </div>
                 <div className="resources-sponsored">
-                    <span>{translate('partners.thanks')}</span>
-                    {' '}
+                    <span>{translate('partners.thanks')}</span>{' '}
                     <Link to="/support">{translate('partners.learn_more')}</Link>
                 </div>
             </div>

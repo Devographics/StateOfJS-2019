@@ -78,7 +78,7 @@ export default {
         text: {
             fontSize: 11,
             fill: colors.greyLight,
-            fontFamily,
+            fontFamily
         }
     },
     tooltip: {

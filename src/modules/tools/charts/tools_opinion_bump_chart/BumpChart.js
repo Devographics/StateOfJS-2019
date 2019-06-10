@@ -49,10 +49,7 @@ const BumpChart = ({ margin: partialMargin, width, height, tools }) => {
 
     const [currentTool, setCurrentTool] = useState(null)
 
-    const getColor = useOrdinalColorScale(
-        distinctColors,
-        'id'
-    )
+    const getColor = useOrdinalColorScale(distinctColors, 'id')
 
     const theme = useTheme()
 

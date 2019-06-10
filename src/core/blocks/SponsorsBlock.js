@@ -14,17 +14,15 @@ const SponsorsBlock = () => {
                 <div className="Sponsors__Items">
                     {sponsors.map(({ name, image, url }) => (
                         <div className="Sponsors__Item" key={name}>
-                            <a href={url}>
-                                <img title={name} src={`/images/sponsors/${image}`} />
+                            <a href={url} title={name}>
+                                <img src={`/images/sponsors/${image}`} alt={name} />
                             </a>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="Sponsors__Support" >
-            <Link to="/support">
-                {translate('partners.become_partner')}
-            </Link>
+            <div className="Sponsors__Support">
+                <Link to="/support">{translate('partners.become_partner')}</Link>
             </div>
         </div>
     )

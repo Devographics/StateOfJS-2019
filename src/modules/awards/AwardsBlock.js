@@ -15,10 +15,9 @@ const AwardsBlock = ({ data }) => {
     const awards = data.awards.edges
     return (
         <div className="Block Block--Awards Awards__Block">
-
-            {awards.map(award => 
-              <Award key={award.node.type} type={award.node.type} tools={award.node.tools} />
-            )}
+            {awards.map(award => (
+                <Award key={award.node.type} type={award.node.type} tools={award.node.tools} />
+            ))}
 
             {/* <Award type="highest_satisfaction" tools={highestSatisfaction.node.tools} />
             <Award type="highest_interest" tools={highestInterest.node.tools} /> */}

@@ -1,9 +1,8 @@
 import React, { memo, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
-import Block from 'core/components/Block'
-// import GenderWaffleChart from '../charts/GenderWaffleChart'
-import GaugeBarChart from 'core/charts/GaugeBarChart'
 import { gender } from '../../../constants'
+import Block from 'core/components/Block'
+import GaugeBarChart from 'core/charts/GaugeBarChart'
 import ChartContainer from 'core/charts/ChartContainer'
 import GenderLegends from 'modules/demographics/charts/GendersLegends'
 
@@ -13,7 +12,7 @@ const getChartData = (data, block) => {
 }
 
 const GenderBreakdownBlock = ({ block, data }) => {
-    const { units: defaultUnits = 'percentage', showDescription } = block
+    const { units: defaultUnits = 'percentage' } = block
     const [units, setUnits] = useState(defaultUnits)
 
     const chartData = useMemo(() => getChartData(data, block), [data, block])

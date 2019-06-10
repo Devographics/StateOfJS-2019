@@ -17,7 +17,7 @@ const getChartData = (data, getName) => {
             usage: usageBucket.count,
             usageColor: colors.blue,
             unusedCount: knowNotUsedBucket.count,
-            name: getName(feature.id),
+            name: getName(feature.id)
         }
     })
 
@@ -28,7 +28,6 @@ const getChartData = (data, getName) => {
 }
 
 const FeaturesSectionOverviewBlock = ({ block, data }) => {
-
     const { getName } = useEntities()
     const { id, showDescription = true } = block
     const chartData = getChartData(data, getName)

@@ -55,7 +55,7 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
                             i18nNamespace="opinions.legends"
                         />
                     </ChartContainer>
-                    <ToolLegend data={blockData.opinion.buckets} units={units}/>
+                    <ToolLegend data={blockData.opinion.buckets} units={units} />
                 </div>
                 <div className="Tool__Description FTBlock__Description">
                     <TextBlock text={description} />
@@ -78,7 +78,9 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
                             )}
                             {npmLink && (
                                 <li className="FTBlock__Links__Item">
-                                    <a href={`https://www.npmjs.com/package/${npmLink}`}>{translate('block.tool.npm_link')}</a>
+                                    <a href={`https://www.npmjs.com/package/${npmLink}`}>
+                                        {translate('block.tool.npm_link')}
+                                    </a>
                                 </li>
                             )}
                         </ul>

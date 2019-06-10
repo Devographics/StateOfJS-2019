@@ -92,7 +92,7 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                             i18nNamespace="features.usage"
                         />
                     </ChartContainer>
-                    <FeatureUsageLegends data={feature.usage.buckets} units={units}/>
+                    <FeatureUsageLegends data={feature.usage.buckets} units={units} />
                 </div>
                 {!context.isCapturing && (
                     <>

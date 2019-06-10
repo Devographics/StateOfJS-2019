@@ -18,7 +18,7 @@ const fontSizeByRadius = radius => {
 
 const Chip = ({ color, color2 }) => (
     <span className={`Chip Tooltip__Chip ${color2 && 'Chip--split'}`}>
-        <span style={{ background: color }}  className="Chip__Inner"/>
+        <span style={{ background: color }} className="Chip__Inner" />
         {color2 && <span style={{ background: color2 }} className="Chip__Inner" />}
     </span>
 )
@@ -56,7 +56,6 @@ const Tooltip = props => {
 }
 
 const Node = ({ node, handlers }) => {
-
     if (node.depth === 0) {
         return (
             <circle

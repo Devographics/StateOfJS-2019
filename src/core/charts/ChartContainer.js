@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 
 const Indicator = () => (
     <svg
@@ -34,26 +35,26 @@ const Indicator = () => (
         </g>
     </svg>
 )
-const IndicatorLeft = () => (
+const IndicatorLeft = memo(() => (
     <span className="Chart__Container__Indicator Chart__Container__Indicator--left">
         <Indicator />
     </span>
-)
-const IndicatorRight = () => (
+))
+const IndicatorRight = memo(() => (
     <span className="Chart__Container__Indicator Chart__Container__Indicator--right">
         <Indicator />
     </span>
-)
-const IndicatorTop = () => (
+))
+const IndicatorTop = memo(() => (
     <span className="Chart__Container__Indicator Chart__Container__Indicator--top">
         <Indicator />
     </span>
-)
-const IndicatorBottom = () => (
+))
+const IndicatorBottom = memo(() => (
     <span className="Chart__Container__Indicator Chart__Container__Indicator--bottom">
         <Indicator />
     </span>
-)
+))
 
 /*
 
@@ -87,5 +88,12 @@ const ChartContainer = ({ children, height, fit = false, className = '', vscroll
         )}
     </div>
 )
+
+ChartContainer.propTypes = {
+    height: PropTypes.number,
+    fit: PropTypes.bool,
+    className: PropTypes.string,
+    vscroll: PropTypes.bool
+}
 
 export default ChartContainer

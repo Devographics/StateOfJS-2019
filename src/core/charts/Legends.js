@@ -14,7 +14,7 @@ const Legends = ({
     onMouseLeave,
     onClick,
     data,
-    units,
+    units
 }) => {
     const classNames = ['Legends', `Legends--${layout}`]
     if (withFrame === true) {

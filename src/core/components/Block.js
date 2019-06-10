@@ -18,7 +18,17 @@ export default class Block extends Component {
     }
 
     render() {
-        const { id, showDescription, isShareable, className, values, children, title, units, setUnits } = this.props
+        const {
+            id,
+            showDescription,
+            isShareable,
+            className,
+            values,
+            children,
+            title,
+            units,
+            setUnits
+        } = this.props
 
         return (
             <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>

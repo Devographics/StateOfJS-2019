@@ -16,7 +16,18 @@ const getMargins = viewportWidth => ({
     left: 60
 })
 
-const VerticalBarChart = ({ viewportWidth, className, buckets, total, legendNamespace, i18nNamespace, translateData, mode, units, chartProps }) => {
+const VerticalBarChart = ({
+    viewportWidth,
+    className,
+    buckets,
+    total,
+    legendNamespace,
+    i18nNamespace,
+    translateData,
+    mode,
+    units,
+    chartProps
+}) => {
     const { translate } = useI18n()
 
     const { formatTick, formatValue, maxValue, tickCount } = useBarChart({

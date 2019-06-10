@@ -25,7 +25,7 @@ const ToolsOpinionBumpChart = ({ data }) => {
                 satisfaction: wouldUse.count / (wouldUse.count + wouldNotUse.count)
             }
         })
-        
+
         computed = compact(computed)
 
         sortBy(computed, 'awareness')

@@ -35,7 +35,6 @@ const Text = ({ hasLink = false, label }) => (
     </text>
 )
 const TickItem = tick => {
-
     const { getUrl } = useEntities()
     const { translate } = useI18n()
 
@@ -44,7 +43,7 @@ const TickItem = tick => {
 
     let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : value
 
-    label = label.length > labelMaxLength ? label.substr(0,labelMaxLength) + '…' : label
+    label = label.length > labelMaxLength ? label.substr(0, labelMaxLength) + '…' : label
 
     return (
         <g transform={`translate(${x},${y})`}>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import HorizontalBarChart from 'core/charts/HorizontalBarChart'
-import { useEntities } from 'core/entities/entitiesContext';
+import { useEntities } from 'core/entities/entitiesContext'
 import sortBy from 'lodash/sortBy'
 
 const getChartData = (data, block, getUrl) => {

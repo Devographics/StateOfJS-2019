@@ -17,7 +17,7 @@ const GenderLegends = ({ data, units }) => {
         [keys.gender, theme.genderColors]
     )
 
-    return <Legends legends={legends} modifier="horizontal" data={data} units={units}/>
+    return <Legends legends={legends} modifier="horizontal" data={data} units={units} />
 }
 
 export default memo(GenderLegends)

@@ -7,20 +7,20 @@ import { colors } from '../../../constants'
 const ToolOpinionsLegend = props => {
     const { translate } = useI18n()
 
-    
     // with pills
     // const getColor = id => opinions.find(o => o.id === id).color
     // const l = (id, color) => `<span style="background: ${color || getColor(id)};" class="text-highlight">${translate(`opinions.legends_extrashort.${id}`)}</span>`
-    
+
     // without pills
     const l = (id, color) => translate(`opinions.legends_extrashort.${id}`)
 
     const legends = [
         {
             id: 'awareness',
-            label: `(${l('total_respondents', colors.greyDark)} - ${l(
-                'never_heard'
-            )})/${l('total_respondents', colors.greyDark)}`,
+            label: `(${l('total_respondents', colors.greyDark)} - ${l('never_heard')})/${l(
+                'total_respondents',
+                colors.greyDark
+            )}`,
             keyLabel: translate('opinions.legends.awareness_ratio')
         },
         {

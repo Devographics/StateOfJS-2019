@@ -359,9 +359,9 @@
         mode: absolute
       - id: resources-sponsors
         type: resources
-        items: 
-          - storybook1
-          - storybook2
+        items:
+            - storybook1
+            - storybook2
 
 - id: opinions
   path: /opinions

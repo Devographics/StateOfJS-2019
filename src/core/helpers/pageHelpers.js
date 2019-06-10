@@ -68,7 +68,7 @@ export const getPageMeta = (context, translate, overrides = {}) => {
 
     const meta = {
         url,
-        title: isRoot ? WEBSITE_TITLE : getPageLabel(context, translate, { includeWebsite: true}),
+        title: isRoot ? WEBSITE_TITLE : getPageLabel(context, translate, { includeWebsite: true }),
         imageUrl,
         ...overrides
     }
