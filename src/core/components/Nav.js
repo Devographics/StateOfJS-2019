@@ -9,11 +9,16 @@ const filteredNav = sitemap.filter(page => !page.is_hidden)
 
 const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
     const isActive = currentPath.indexOf(page.id) !== -1
-    const shouldDisplayChildren = page.children.length > 0 && (level < 1 || isActive)
+    const hasChildren = page.children.length > 0
+    const displayChildren = hasChildren > 0 && isActive
 
     return (
         <>
-            <div className={`Nav__Page Nav__Page--lvl-${level}`}>
+            <div
+                className={`Nav__Page Nav__Page--lvl-${level} Nav__Page--${
+                    displayChildren ? 'showChildren' : 'hideChildren'
+                }`}
+            >
                 <PageLink
                     className={`Nav__Page__Link`}
                     activeClassName="Nav__Page__Link--active"
@@ -22,7 +27,7 @@ const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
                 >
                     <PageLabel page={page} />
                 </PageLink>
-                {shouldDisplayChildren && (
+                {hasChildren && (
                     <div className={`Nav__SubPages Nav__SubPages--lvl-${level}`}>
                         {page.children.map(childPage => (
                             <NavItem
