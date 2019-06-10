@@ -392,6 +392,15 @@ Quadrant/Scatterplot Chart
 .Scatterplot__Node__Crosshair__Label {
     font-size: $small-font;
 }
+/*
+
+Bump Chart
+
+*/
+.BumpChart__Node{
+    transition: all 200ms ease-out;
+}
+
 
 @mixin coloredText($color) {
     display: inline-block;

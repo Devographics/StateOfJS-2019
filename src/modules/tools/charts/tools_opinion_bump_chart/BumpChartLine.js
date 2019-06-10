@@ -1,6 +1,6 @@
 import React, { memo, useCallback } from 'react'
 import { useTooltip } from '@nivo/tooltip'
-import BumpChartTooltip from './BumpChartTooltip'
+// import BumpChartTooltip from './BumpChartTooltip'
 
 const BumpChartLine = ({
     tool,
@@ -14,19 +14,19 @@ const BumpChartLine = ({
     const { showTooltipFromEvent, hideTooltip } = useTooltip()
     const onMouseEnter = useCallback(
         event => {
-            showTooltipFromEvent(<BumpChartTooltip tool={tool} />, event)
+            // showTooltipFromEvent(<BumpChartTooltip tool={tool} />, event)
             setCurrentTool(tool.id)
         },
         [tool, showTooltipFromEvent, setCurrentTool]
     )
     const onMouseMove = useCallback(
         event => {
-            showTooltipFromEvent(<BumpChartTooltip tool={tool} />, event)
+            // showTooltipFromEvent(<BumpChartTooltip tool={tool} />, event)
         },
         [tool, showTooltipFromEvent]
     )
     const onMouseLeave = useCallback(() => {
-        hideTooltip()
+        // hideTooltip()
         setCurrentTool(null)
     }, [hideTooltip, setCurrentTool])
 

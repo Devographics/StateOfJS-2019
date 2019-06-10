@@ -172,3 +172,5 @@ export const gender = [
 ]
 
 export const fontFamily = `'IBM Plex Mono', monospace`
+
+export const totalCount = 11307

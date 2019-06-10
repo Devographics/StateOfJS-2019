@@ -26,7 +26,7 @@ const margins = { top: 20, right: 90, bottom: 70, left: 90 }
 
 const Nodes = props => {
     console.log(props)
-    const { width, height, data, margin, nodes, renderNode } = props
+    const { width, height, margin, nodes } = props
     return (
         <g>
             {nodes.map(node => (
@@ -72,13 +72,10 @@ const Crosshair = ({ x, y, label, cutoffX = 0, cutoffY = 0 }) => {
     )
 }
 const Node = props => {
-    console.log(props)
-    // const { color, node,x, y } = props
-    const { size, data, style, x, y, width, height, margin } = props
+    const { data, style, x, y, height, margin } = props
     const { name, formattedX, formattedY } = data
     const yInverted = height - margin.top - margin.bottom - y
     const cutoff = 12 // cut off the lines a little before the node
-    console.log(translateLabel)
     const translateLabel = labelPositions[name] || [0, 0]
 
     return (

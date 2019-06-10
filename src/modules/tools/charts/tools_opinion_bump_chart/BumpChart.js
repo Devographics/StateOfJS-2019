@@ -5,8 +5,30 @@ import { Grid, Axes } from '@nivo/axes'
 import { distinctColors } from '../../../../constants'
 import { useScales, useLineGenerator } from './hooks'
 import BumpChartLine from './BumpChartLine'
+import { useEntities } from 'core/entities/entitiesContext'
+import { colors, totalCount } from '../../../../constants'
+import round from 'lodash/round'
+
+const Node = ({ x, y, fill, label, isCurrent }) => (
+    <g
+        className="BumpChart__Node"
+        transform={`translate(${x}, ${y}) scale(${isCurrent ? 1.2 : 1})`}
+    >
+        <circle
+            r={16}
+            fill={isCurrent ? colors.white : colors.navy}
+            stroke={fill}
+            strokeWidth={isCurrent ? 6.6 : 3}
+        />
+        <text fontSize={11} fill={isCurrent ? colors.navy : colors.teal} textAnchor="middle" alignmentBaseline="middle">
+            {label}
+        </text>
+    </g>
+)
 
 const BumpChart = ({ margin: partialMargin, width, height, tools }) => {
+    const { getName } = useEntities()
+
     const { margin, innerWidth, innerHeight, outerWidth, outerHeight } = useDimensions(
         width,
         height,
@@ -78,7 +100,7 @@ const BumpChart = ({ margin: partialMargin, width, height, tools }) => {
                             fill: getColor(tool)
                         }}
                     >
-                        {tool.id}
+                        {getName(tool.id)}
                     </text>
                 </g>
             ))}
@@ -95,31 +117,35 @@ const BumpChart = ({ margin: partialMargin, width, height, tools }) => {
                 />
             ))}
             {toolsWithPoints.map(tool => {
-                const radius = currentTool !== null && currentTool === tool.id ? 8 : 4
-
+                const isCurrent = currentTool === tool.id
+                const { awareness: awarenessCount, interest, satisfaction } = tool
+                const awareness = awarenessCount / totalCount
                 return (
                     <g
                         key={tool.id}
                         opacity={currentTool !== null && currentTool !== tool.id ? 0 : 1}
                         style={{ pointerEvents: 'none' }}
                     >
-                        <circle
-                            cx={xScale('awareness')}
-                            cy={yScale(tool.awarenessRank)}
-                            r={radius}
+                        <Node
+                            isCurrent={isCurrent}
+                            x={xScale('awareness')}
+                            y={yScale(tool.awarenessRank)}
                             fill={getColor(tool)}
+                            label={`${round(awareness * 100)}%`}
                         />
-                        <circle
-                            cx={xScale('interest')}
-                            cy={yScale(tool.interestedRank)}
-                            r={radius}
+                        <Node
+                            isCurrent={isCurrent}
+                            x={xScale('interest')}
+                            y={yScale(tool.interestedRank)}
                             fill={getColor(tool)}
+                            label={`${round(interest * 100)}%`}
                         />
-                        <circle
-                            cx={xScale('satisfaction')}
-                            cy={yScale(tool.satisfactionRank)}
-                            r={radius}
+                        <Node
+                            isCurrent={isCurrent}
+                            x={xScale('satisfaction')}
+                            y={yScale(tool.satisfactionRank)}
                             fill={getColor(tool)}
+                            label={`${round(satisfaction * 100)}%`}
                         />
                     </g>
                 )
