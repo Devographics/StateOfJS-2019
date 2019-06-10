@@ -4,7 +4,16 @@ import PageTemplate from 'core/pages/PageTemplate'
 export default PageTemplate
 
 export const query = graphql`
-    query resources {
+    query resources ($locale: String) {
+        introduction: markdownRemark(
+            frontmatter: {
+                type: { eq: "introduction" }
+                page: { eq: "resourcespage" }
+                locale: { eq: $locale }
+            }
+        ) {
+            html
+        }
         data: learningResourcesYaml(section_id: { eq: "resources" }) {
             aggregations {
                 id

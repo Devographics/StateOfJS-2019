@@ -448,11 +448,11 @@ translations:
     - key: block.title.text-editors
       t: Text Editors
     - key: block.description.text-editors
-      t: Which text editor(s) developers regularly use?
+      t: Which text editor(s) do you regularly use?
     - key: block.title.browsers
       t: Browsers
     - key: block.description.browsers
-      t: Which browser(s) do developers work in primarily during initial development?
+      t: Which browser(s) do you primarily work in during initial development?
 
     ###########################################################################
     # Environments
@@ -461,7 +461,7 @@ translations:
     - key: block.title.form-factors
       t: Form Factors
     - key: block.description.form-factors
-      t: Which form factors do developers test on?
+      t: Which form factors do you test on?
 
     ###########################################################################
     # Resources
@@ -470,15 +470,15 @@ translations:
     - key: block.title.blogs-magazines
       t: Blogs & Magazines
     - key: block.description.blogs-magazines
-      t: Which CSS-related blogs/magazines/etc. do developers read?
+      t: Which CSS-related blogs/magazines/etc. do you read?
     - key: block.title.sites-courses
       t: Sites & Courses
     - key: block.description.sites-courses
-      t: Which CSS-related sites/courses/etc. do developers consult?
+      t: Which CSS-related sites/courses/etc. do you consult?
     - key: block.title.podcasts
       t: Podcasts
     - key: block.description.podcasts
-      t: Which CSS or programming-related podcasts do developers listen to?
+      t: Which CSS or programming-related podcasts do you listen to?
 
     ###########################################################################
     # Opinions
