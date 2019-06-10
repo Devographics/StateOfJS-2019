@@ -2,7 +2,7 @@ import React from 'react'
 import * as ReactGA from 'react-ga'
 import Layout from 'core/Layout'
 
-ReactGA.initialize('UA-83022212-5')
+ReactGA.initialize('UA-83022212-7')
 
 // eslint-disable-next-line no-unused-vars
 const ascii = `STATE OF CSS`
