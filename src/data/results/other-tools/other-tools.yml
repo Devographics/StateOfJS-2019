@@ -28,6 +28,7 @@ aggregations:
         - id: Emacs
           count: 201
           percentage: 1.85
+  - id: text-editors-others
     others:
       total: 1227
       others_count: 199
@@ -79,6 +80,7 @@ aggregations:
         - id: Edge
           count: 871
           percentage: 7.79
+  - id: browsers-others
     others:
       total: 544
       others_count: 25

@@ -29,7 +29,7 @@ const getChartData = (data, block, getUrl) => {
         )
     }
 
-    let chartData = blockData[block.dataKey]
+    const chartData = blockData[block.dataKey]
 
     chartData.buckets = sortBy(chartData.buckets.map(bucket => ({ ...bucket })), 'count').map(
         bucket => ({

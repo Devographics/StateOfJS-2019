@@ -311,11 +311,23 @@
         dataKey: usage
         showDescription: true
         mode: absolute
+      - id: text-editors-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
       - id: browsers
         type: horizontal-bar
         dataKey: usage
         showDescription: true
         mode: absolute
+      - id: browsers-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
 
 - id: environments
   path: /environments
