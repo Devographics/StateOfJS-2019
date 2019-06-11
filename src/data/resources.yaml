@@ -13,6 +13,8 @@
   name: CSS Tricks
   homepage: https://css-tricks.com/
   category: blogs
+  aliases: 
+    - foo
 - id: Smashing Magazine
   name: Smashing Magazine
   homepage: https://www.smashingmagazine.com/
