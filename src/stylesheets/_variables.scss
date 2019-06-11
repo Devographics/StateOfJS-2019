@@ -112,7 +112,7 @@ $border2: 1px solid $border-color;
     animation: ants 12s linear infinite;
 }
 
-@-webkit-keyframes svgAnts {
+@keyframes svgAnts {
     to {
         stroke-dashoffset: 100%;
     }
@@ -121,5 +121,18 @@ $border2: 1px solid $border-color;
 @mixin svgAnts {
     stroke-dasharray: 8,4;
     animation: svgAnts 50s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes rotateAnim {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@mixin rotateAnim {
+    transform: rotate(0deg);
+    animation: rotateAnim 50s linear infinite;
     animation-fill-mode: forwards;
 }

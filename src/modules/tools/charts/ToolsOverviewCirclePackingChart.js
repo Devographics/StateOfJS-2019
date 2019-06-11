@@ -2,9 +2,10 @@ import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
-import { colors } from '../../../constants'
+import { colors, totalCount } from '../../../constants'
 import ChartLabel from 'core/components/ChartLabel'
 import { useI18n } from 'core/i18n/i18nContext'
+import { TotalCircle } from '../../features/charts/FeaturesCirclePackingChart'
 
 // scale circles down to account for width of border
 const strokeWidth = 10
@@ -22,6 +23,13 @@ const fontSizeByRadius = radius => {
 
 const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
     const { translate } = useI18n()
+
+
+    const surface = Math.PI * node.r * node.r
+    const surfaceRatio = surface/node.data.count
+    const totalSurface = surfaceRatio * totalCount
+    const totalRadius = Math.sqrt(totalSurface/Math.PI)
+    
 
     if (node.depth === 0) {
         return (
@@ -73,6 +81,7 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
                     : 'CirclePackingNode--inactive'
             }`}
         >
+            <TotalCircle radius={totalRadius} id={node.data.id}/>
             {/* used for larger mouseover zone */}
             <circle r={node.r * scaleCoefficient * 1.3} fill="transparent" />
 

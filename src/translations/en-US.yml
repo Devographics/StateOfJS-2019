@@ -734,7 +734,7 @@ translations:
     - key: users_percentage
       t: Percentage of Users
     - key: users_count
-      t: Users Count
+      t: User Count
     - key: satisfaction_percentage
       t: Satisfaction Percentage
     - key: chart_mode

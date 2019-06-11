@@ -25,7 +25,6 @@ const sectionColors = {
 const margins = { top: 20, right: 90, bottom: 70, left: 90 }
 
 const Nodes = props => {
-    console.log(props)
     const { width, height, margin, nodes } = props
     return (
         <g>
