@@ -127,67 +127,39 @@ aggregations:
           percentage: 3.95
   - id: missing-features
     features:
-      total: 3780
-      others_count: 3123
+      total: 3485
+      others_count: 2069
       buckets:
-        - id: |+
-
-          count: 212
-          percentage: 5.61
-        - id: Container queries
-          count: 71
-          percentage: 1.88
-        - id: Parent selector
-          count: 46
-          percentage: 1.22
-        - id: parent selector
-          count: 43
-          percentage: 1.14
-        - id: Parent selectors
-          count: 41
-          percentage: 1.08
-        - id: container queries
-          count: 34
-          percentage: 0.9
-        - id: ' '
-          count: 31
-          percentage: 0.82
-        - id: Nesting
-          count: 25
-          percentage: 0.66
-        - id: nesting
-          count: 21
-          percentage: 0.56
-        - id: Element queries
-          count: 19
-          percentage: 0.5
-        - id: parent selectors
-          count: 19
-          percentage: 0.5
-        - id: '-'
-          count: 15
-          percentage: 0.4
         - id: Container Queries
-          count: 15
-          percentage: 0.4
-        - id: element queries
-          count: 12
-          percentage: 0.32
+          count: 339
+          percentage: 9.73
+        - id: Parent Selector
+          count: 324
+          percentage: 9.3
+        - id: Nesting
+          count: 188
+          percentage: 5.39
+        - id: Browser Support
+          count: 120
+          percentage: 3.44
         - id: functions
-          count: 11
-          percentage: 0.29
+          count: 114
+          percentage: 3.27
+        - id: Scoping
+          count: 109
+          percentage: 3.13
+        - id: Mixins
+          count: 64
+          percentage: 1.84
         - id: Subgrid
-          count: 10
-          percentage: 0.26
+          count: 60
+          percentage: 1.72
         - id: Houdini
-          count: 9
-          percentage: 0.24
+          count: 39
+          percentage: 1.12
         - id: Nothing
-          count: 8
-          percentage: 0.21
-        - id: subgrid
-          count: 8
-          percentage: 0.21
-        - id: mixins
-          count: 7
-          percentage: 0.19
+          count: 33
+          percentage: 0.95
+        - id: ':has() selector'
+          count: 26
+          percentage: 0.75
