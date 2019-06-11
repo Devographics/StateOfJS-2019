@@ -107,3 +107,20 @@ aggregations:
         - id: mainly
           count: 57
           percentage: 0.51
+  - id: email-styles
+    usage:
+      total: 11154
+      others_count: 0
+      buckets:
+        - id: never
+          count: 6300
+          percentage: 56.48
+        - id: occasionally
+          count: 4159
+          percentage: 37.29
+        - id: often
+          count: 655
+          percentage: 5.87
+        - id: mainly
+          count: 40
+          percentage: 0.36

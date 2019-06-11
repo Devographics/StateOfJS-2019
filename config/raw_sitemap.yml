@@ -303,9 +303,12 @@
         bucketKeys: environmentUsage
         showDescription: true
         showLegend: true
-      # - id: email-styles
-      #   type: vertical-bar
-      #   dataKey: environments
+      - id: email-styles
+        type: vertical-bar
+        dataKey: usage
+        bucketKeys: environmentUsage
+        showDescription: true
+        showLegend: true
 
 - id: resources
   path: /resources

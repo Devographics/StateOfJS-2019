@@ -473,11 +473,11 @@ translations:
 
     # print styles
     - key: block.title.print-styles
-      t: Print Styles
+      t: CSS for Print
     - key: block.description.print-styles
       t: Do you write print styles?
-    - key: javascript-proficiency.axis_legend
-      t: Usage
+    - key: print-styles.axis_legend
+      t: Periodicity
     - key: print-styles.never.short
       t: Never
     - key: print-styles.never.long
@@ -494,6 +494,30 @@ translations:
       t: Mainly
     - key: print-styles.mainly.long
       t: I focus mainly on CSS for print
+
+    # email styles
+    - key: block.title.email-styles
+      t: CSS for Email Clients
+    - key: block.description.email-styles
+      t: Do you write CSS for email clients?
+    - key: email-styles.axis_legend
+      t: Periodicity
+    - key: email-styles.never.short
+      t: Never
+    - key: email-styles.never.long
+      t:  I (almost) never write CSS for email clients
+    - key: email-styles.occasionally.short
+      t: Occasionally
+    - key: email-styles.occasionally.long
+      t: I occasionally write CSS for email clients
+    - key: email-styles.often.short
+      t: Often
+    - key: email-styles.often.long
+      t: I write CSS for email clients as part of most projects
+    - key: email-styles.mainly.short
+      t: Mainly
+    - key: email-styles.mainly.long
+      t: I focus mainly on CSS for email clients
 
     ###########################################################################
     # Resources
