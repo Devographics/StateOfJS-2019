@@ -329,11 +329,11 @@ Circle Packing Chart
     pointer-events: none;
     opacity: 0;
     transform: scale(0.8);
-    transition: all 200ms ease-in;
+    // transition: all 200ms ease-in;
     .CirclePackingNode:hover & {
         opacity: 1;
         transform: scale(1);
-        transition: all 200ms ease-in;
+        // transition: all 200ms ease-in;
     }
 }
 
@@ -342,11 +342,12 @@ Circle Packing Chart
     pointer-events: none;
     animation: rotateAnim 20s linear infinite;
     animation-fill-mode: forwards;
-    transition: all 200ms ease-in;
+    // transition: all 200ms ease-in;
     font-size: $small-font;
+    @include font-bold;
     .CirclePackingNode:hover & {
         opacity: 1;
-        transition: all 200ms ease-in;
+        // transition: all 200ms ease-in;
     }
 }
 /*

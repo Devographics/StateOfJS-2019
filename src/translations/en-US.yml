@@ -449,10 +449,18 @@ translations:
       t: Text Editors
     - key: block.description.text-editors
       t: Which text editor(s) do you regularly use?
+    - key: block.title.text-editors-others
+      t: Other Text Editors
+    - key: block.description.text-editors-others
+      t: Other answers (freeform field).
     - key: block.title.browsers
       t: Browsers
     - key: block.description.browsers
       t: Which browser(s) do you primarily work in during initial development?
+    - key: block.title.browsers-others
+      t: Other Browsers
+    - key: block.description.browsers-others
+      t: Other answers (freeform field).
 
     ###########################################################################
     # Environments

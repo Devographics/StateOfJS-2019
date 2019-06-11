@@ -34,6 +34,8 @@ const entitiesQuery = graphql`
     }
 `
 
+const findEntity = (entities, id) => entities.find(e => e.id.toLowerCase() === id.toLowerCase() || e.name.toLowerCase() === id.toLowerCase())
+
 export const EntitiesContextProvider = ({ children }) => {
     return (
         <StaticQuery query={entitiesQuery}>
@@ -43,9 +45,9 @@ export const EntitiesContextProvider = ({ children }) => {
                 const resources = _resources.edges.map(t => t.node)
 
                 const getName = id => {
-                    const entity = entities.find(e => e.id === id)
-                    const feature = features.find(e => e.id === id)
-                    const resource = resources.find(e => e.id === id)
+                    const entity = findEntity(entities, id)
+                    const feature = findEntity(features, id)
+                    const resource = findEntity(resources, id)
                     return (
                         (entity && entity.name) ||
                         (feature && feature.name) ||
@@ -55,8 +57,8 @@ export const EntitiesContextProvider = ({ children }) => {
                 }
 
                 const getUrl = id => {
-                    const entity = entities.find(e => e.id === id)
-                    const resource = resources.find(e => e.id === id)
+                    const entity = findEntity(entities, id)
+                    const resource = findEntity(resources, id)
                     return (entity && entity.homepage) || (resource && resource.homepage) || null
                 }
 
