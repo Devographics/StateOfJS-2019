@@ -1,128 +1,155 @@
+# sample item to set the schema fields
+- id: aaa
+  name: aaa
+  description: aaa
+  aliases:
+    - aaa
+    - bbb
+  homepage: aaa
+  npm: aaa
+  github: aaa
+# ------------------------------------ #
 - id: CSS Tricks
   name: CSS Tricks
   homepage: https://css-tricks.com/
+  category: blogs
 - id: Smashing Magazine
   name: Smashing Magazine
   homepage: https://www.smashingmagazine.com/
+  category: blogs
 - id: A List Apart
   name: A List Apart
   homepage: https://alistapart.com/
+  category: blogs
 - id: CoDrops
   name: CoDrops
   homepage: https://tympanus.net/codrops/
+  category: blogs
 - id: SitePoint
   name: SitePoint
   homepage: https://www.sitepoint.com/
+  category: blogs
 - id: Stack Overflow
   name: Stack Overflow
   homepage: https://stackoverflow.com/
+  category: resources
 - id: MDN
   name: MDN
   homepage: https://developer.mozilla.org/en-US/
+  category: resources
 - id: W3Schools
   name: W3Schools
   homepage: https://www.w3schools.com/
-- id: Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
+  category: resources
+- id: wesbos
   name: Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
   homepage: https://wesbos.com/
-# note: remove duplicate entry once we have better normalization
-- id: Wes Bos
-  name: Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
-  homepage: https://wesbos.com/
+  category: courses
 - id: FreeCodeCamp
   name: FreeCodeCamp
   homepage: https://www.freecodecamp.org/
+  category: courses
 - id: Codecademy
   name: Codecademy
   homepage: https://www.codecademy.com/
+  category: courses
 - id: The CSS Specs
   name: The CSS Specs
   homepage: https://www.w3.org/Style/CSS/specs.en.html
+  category: resources
 - id: Pluralsight
   name: Pluralsight
   homepage: https://www.pluralsight.com/
-- id: LevelUp Tutorials
-  name: LevelUp Tutorials
+  category: courses
+- id: levelup
+  name: Level Up Tutorials
+  aliases: 
+    - LevelUp Tutorials
   homepage: https://www.leveluptutorials.com/
+  category: courses
+
 - id: Syntax
   name: Syntax
   homepage: https://syntax.fm/
+  category: podcasts
 - id: Shop Talk Show
   name: Shop Talk Show
   homepage: https://shoptalkshow.com/
+  category: podcasts
 - id: The Changelog
   name: The Changelog
   homepage: https://changelog.com/
+  category: podcasts
 - id: The Web Ahead
   name: The Web Ahead
   homepage: http://thewebahead.net/
+  category: podcasts
 - id: The Big Web Show
   name: The Big Web Show
   homepage: https://5by5.tv/bigwebshow
+  category: podcasts
 - id: Style Guide Podcast
   name: Style Guide Podcast
   homepage: http://styleguides.io/podcast/
+  category: podcasts
 - id: Non Breaking Space Show
   name: Non Breaking Space Show
   homepage: https://goodstuff.fm/nbsp/
-- id: VS Code
-  name: VS Code
-  homepage: https://code.visualstudio.com/
-- id: Sublime Text
-  name: Sublime Text
-  homepage: https://www.sublimetext.com/
-- id: Atom
-  name: Atom
-  homepage: https://atom.io/
-- id: Webstorm
-  name: Webstorm
-  homepage: https://www.jetbrains.com/webstorm/
-- id: Vim
-  name: Vim
-  homepage: https://www.vim.org/
-- id: Emacs
-  name: Emacs
-  homepage: https://www.gnu.org/software/emacs/
+  category: podcasts
 
 - id: hn
   name: Hacker News
   homepage: https://news.ycombinator.com/
+  category: socialmedia
 - id: stateofjs
   name: State of JS
   homepage: https://stateofjs.com
+  category: resources
 - id: State of CSS
   name: State of CSS
   homepage: https://stateofcss.com
+  category: resources
 - id: reddit
   name: Reddit
   homepage: https://reddit.com
+  category: socialmedia
 - id: sidebar
   name: Sidebar
   homepage: https://sidebar.io
+  category: newsletters
 - id: Designer News
   name: Designer News
   homepage: https://www.designernews.co/
+  category: socialmedia
 - id: One Page Love
   name: One Page Love
   homepage: https://onepagelove.com/
+  category: resources
 - id: Front-End Front
   name: Front-End Front
   homepage: https://frontendfront.com/
+  category: newsletters
 - id: CSS Weekly
   name: CSS Weekly
   homepage: https://css-weekly.com/
+  category: newsletters
 - id: CSS Layout News
   name: CSS Layout News
   homepage: http://csslayout.news/
+  category: newsletters
 - id: Responsive Design Weekly
   name: Responsive Design Weekly
   homepage: http://responsivedesignweekly.com/
+  category: newsletters
 - id: Muzli
   name: Muzli
   homepage: https://muz.li/
+  category: resources
 - id: WordPress Tavern
   name: WordPress Tavern
   homepage: https://wptavern.com/
+  category: resources
 - id: Frontend Focus
   name: Frontend Focus
   homepage: https://frontendfoc.us/
+  category: newsletters

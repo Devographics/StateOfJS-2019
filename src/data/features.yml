@@ -1,3 +1,13 @@
+# sample item to set the schema fields
+- id: aaa
+  name: aaa
+  description: aaa
+  aliases:
+    - aaa
+    - bbb
+  caniuse: aaa
+  mdn: aaa
+# ------------------------------------ #
 - id: css-grid
   name: Grid
   mdn: /en-US/docs/Web/CSS/CSS_Grid_Layout

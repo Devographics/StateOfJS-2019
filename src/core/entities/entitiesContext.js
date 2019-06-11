@@ -11,6 +11,7 @@ const entitiesQuery = graphql`
                     id
                     name
                     homepage
+                    aliases
                 }
             }
         }
@@ -19,6 +20,7 @@ const entitiesQuery = graphql`
                 node {
                     id
                     name
+                    aliases
                 }
             }
         }
@@ -28,16 +30,21 @@ const entitiesQuery = graphql`
                     id
                     name
                     homepage
+                    aliases
                 }
             }
         }
     }
 `
 
-const findEntity = (entities, id) =>
-    entities.find(
-        e => e.id.toLowerCase() === id.toLowerCase() || e.name.toLowerCase() === id.toLowerCase()
-    )
+const findEntity = (entities, key) =>
+    entities.find(({ id, name, aliases }) => {
+        const lowerCaseKey = key.toLowerCase()
+        const idMatch = id.toLowerCase() === lowerCaseKey
+        const nameMatch = name.toLowerCase() === lowerCaseKey
+        const aliasMatch = aliases && aliases.some(a => a.toLowerCase() === lowerCaseKey)
+        return idMatch || nameMatch || aliasMatch
+    })
 
 export const EntitiesContextProvider = ({ children }) => {
     return (

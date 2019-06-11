@@ -1,3 +1,14 @@
+# sample item to set the schema fields
+- id: aaa
+  name: aaa
+  description: aaa
+  aliases:
+    - aaa
+    - bbb
+  homepage: aaa
+  npm: aaa
+  github: aaa
+# ------------------------------------ #
 - id: angular
   description: |
       Angular is a TypeScript-based open-source front-end web application platform. Note that from
@@ -19,6 +30,7 @@
   name: Appcelerator
 - id: atom
   name: Atom
+  homepage: https://atom.io/
 - id: atomic-css
   description: |
       Atomic CSS is a CSS architecture. It is not opinionated;
@@ -49,6 +61,18 @@
   github: jgthms/bulma
   name: Bulma
   npm: bulma
+- id: chrome
+  name: Chrome
+  homepage: https://www.google.com/chrome/
+  category: browsers
+- id: chrome-android
+  name: Chrome Android
+  homepage: https://www.google.com/chrome/
+  category: browsers
+- id: chrome-ios
+  name: Chrome iOS
+  homepage: https://www.google.com/chrome/
+  category: browsers
 - id: csharp
   name: 'C#'
 - id: c-cplusplus
@@ -70,12 +94,16 @@
 - id: dreamweaver
   name: Dreamweaver
   homepage: https://www.adobe.com/products/dreamweaver.html
+- id: edge
+  name: Edge
+  homepage: https://www.microsoft.com/en-us/windows/microsoft-edge
 - id: elixir
   name: Elixir
 - id: elm-test
   name: elm-test
 - id: emacs
-  name: emacs
+  name: Emacs
+  homepage: https://www.gnu.org/software/emacs/
 - id: emotion
   github: emotion-js/emotion
   name: Emotion
@@ -87,6 +115,14 @@
   name: 'Ext JS'
 - id: firebase
   name: Firebase
+- id: firefox
+  name: Firefox
+  homepage: https://www.mozilla.org/en-US/firefox/new/
+  category: browsers
+- id: firefox-android
+  name: Firefox Android
+  homepage: https://www.mozilla.org/en-US/firefox/new/
+  category: browsers
 - id: flutter
   name: Flutter
 - id: foundation
@@ -111,6 +147,12 @@
       CSS architecture from CSS Wizardry
   name: ITCSS
   homepage: https://itcss.io/
+- id: internet-explorer-11
+  name: Internet Explorer 11
+  homepage: https://www.microsoft.com/en-us/download/internet-explorer-11-for-windows-7-details.aspx
+- id: internet-explorer-8-9-10
+  name: Internet Explorer 8/9/10
+  homepage: https://www.microsoft.com/en-us/download/internet-explorer.aspx
 - id: java
   name: Java
 - id: jss
@@ -159,6 +201,10 @@
   name: Opera
   homepage: https://www.opera.com/
   category: browsers
+- id: opera-mini
+  name: Opera Mini
+  homepage: https://www.opera.com/mobile
+  category: browsers
 - id: parcel
   name: Parcel
 - id: phonegap-cordova
@@ -199,6 +245,18 @@
   name: Ruby
 - id: rust
   name: Rust
+- id: safari
+  name: Safari
+  homepage: https://www.apple.com/safari/
+  category: browsers
+- id: safari-ios
+  name: Safari iOS
+  homepage: https://www.apple.com/safari/
+  category: browsers
+- id: samsung-internet
+  name: Samsung Internet
+  homepage: https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser&hl=en_US
+  category: browsers
 - id: sass
   github: sass/sass
   name: Sass
@@ -236,6 +294,7 @@
   npm: stylus
 - id: sublime-text
   name: 'Sublime Text'
+  homepage: https://www.sublimetext.com/
 - id: swift
   name: Swift
 - id: tachyons
@@ -248,6 +307,12 @@
 - id: textmate
   name: Textmate
   homepage: https://macromates.com/
+- id: twitter
+  name: Twitter
+- id: ucbrowser
+  name: UC Browser
+  homepage: https://www.ucweb.com/
+  category: browsers
 - id: uikit
   github: uikit/uikit
   name: UIKit
@@ -258,8 +323,10 @@
   name: 'Vanilla JS'
 - id: vim
   name: Vim
+  homepage: https://www.vim.org/
 - id: visual-studio
   name: 'VS Code'
+  homepage: https://code.visualstudio.com/
 - id: visual-studio-not-code
   name: Visual Studio
   homepage: https://visualstudio.microsoft.com/
@@ -281,6 +348,7 @@
   name: WebRTC
 - id: webstorm
   name: WebStorm
+  homepage: https://www.jetbrains.com/webstorm/
 - id: webvr
   name: WebVR
 - id: weex

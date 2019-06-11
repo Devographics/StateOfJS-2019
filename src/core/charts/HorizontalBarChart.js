@@ -11,7 +11,7 @@ import sortBy from 'lodash/sortBy'
 import round from 'lodash/round'
 import { useEntities } from 'core/entities/entitiesContext'
 
-const labelMaxLength = 12
+const labelMaxLength = 13
 
 const margin = {
     top: 40,
@@ -35,13 +35,13 @@ const Text = ({ hasLink = false, label }) => (
     </text>
 )
 const TickItem = tick => {
-    const { getUrl } = useEntities()
+    const { getUrl, getName } = useEntities()
     const { translate } = useI18n()
 
     const { x, y, value, shouldTranslate, i18nNamespace } = tick
     const link = getUrl(value)
 
-    let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : value
+    let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : getName(value)
 
     label = label.length > labelMaxLength ? label.substr(0, labelMaxLength) + '…' : label
 
