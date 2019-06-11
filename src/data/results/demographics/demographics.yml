@@ -572,87 +572,96 @@ aggregations:
           percentage: 1.78
   - id: source
     breakdown:
-      total: 7523
-      others_count: 950
+      total: 9882
+      others_count: 460
       buckets:
-        - id: email
-          count: 1725
-          percentage: 22.93
-        - id: twitter
-          count: 1295
-          percentage: 17.21
-        - id: work
-          count: 557
-          percentage: 7.4
-        - id: CSS Tricks
-          count: 546
-          percentage: 7.26
         - id: stateofjs
-          count: 475
-          percentage: 6.31
-        - id: Newsletter
-          count: 203
-          percentage: 2.7
+          count: 3342
+          percentage: 33.82
+        - id: announcement
+          count: 2144
+          percentage: 21.7
+        - id: twitter
+          count: 640
+          percentage: 6.48
+        - id: wesbos
+          count: 409
+          percentage: 4.14
+        - id: sidebar
+          count: 398
+          percentage: 4.03
+        - id: csstricks-article
+          count: 377
+          percentage: 3.82
+        - id: csstricks
+          count: 356
+          percentage: 3.6
+        - id: work
+          count: 330
+          percentage: 3.34
+        - id: email
+          count: 171
+          percentage: 1.73
+        - id: designernews
+          count: 137
+          percentage: 1.39
         - id: reddit
-          count: 174
-          percentage: 2.31
-        - id: sidebar.io
-          count: 168
-          percentage: 2.23
+          count: 121
+          percentage: 1.22
+        - id: sidebar_campaign
+          count: 121
+          percentage: 1.22
         - id: Slack
-          count: 160
-          percentage: 2.13
+          count: 112
+          percentage: 1.13
         - id: facebook
-          count: 129
-          percentage: 1.71
-        - id: friend
-          count: 122
-          percentage: 1.62
-        - id: Frontend Focus
-          count: 105
-          percentage: 1.4
-        - id: Designer News
-          count: 103
-          percentage: 1.37
-        - id: Medium
-          count: 101
-          percentage: 1.34
-        - id: Codrops
-          count: 99
-          percentage: 1.32
+          count: 104
+          percentage: 1.05
         - id: WordPress Tavern
           count: 81
-          percentage: 1.08
-        - id: freeCodeCamp
-          count: 74
-          percentage: 0.98
-        - id: Muzli
+          percentage: 0.82
+        - id: friend
           count: 73
-          percentage: 0.97
-        - id: Telegram
-          count: 64
-          percentage: 0.85
-        - id: Hacker news
-          count: 60
-          percentage: 0.8
-        - id: Smashing Magazine
-          count: 56
           percentage: 0.74
-        - id: Wes Bos
-          count: 55
+        - id: rwebdev
+          count: 72
           percentage: 0.73
-        - id: Front-End Front
-          count: 46
-          percentage: 0.61
+        - id: producthunt
+          count: 69
+          percentage: 0.7
+        - id: Newsletter
+          count: 56
+          percentage: 0.57
+        - id: Telegram
+          count: 54
+          percentage: 0.55
+        - id: Smashing Magazine
+          count: 53
+          percentage: 0.54
+        - id: Designer News
+          count: 52
+          percentage: 0.53
         - id: CSS Weekly
-          count: 38
-          percentage: 0.51
-        - id: CSS Layout News
+          count: 34
+          percentage: 0.34
+        - id: hangouts
           count: 24
-          percentage: 0.32
+          percentage: 0.24
         - id: One Page Love
           count: 20
-          percentage: 0.27
+          percentage: 0.2
         - id: Responsive Design Weekly
           count: 20
-          percentage: 0.27
+          percentage: 0.2
+        - id: CSS Tricks
+          count: 19
+          percentage: 0.19
+        - id: rweb_design
+          count: 15
+          percentage: 0.15
+        - id: hn
+          count: 11
+          percentage: 0.11
+        - id: chat
+          count: 7
+          percentage: 0.07

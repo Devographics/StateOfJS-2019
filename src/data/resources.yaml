@@ -84,19 +84,19 @@
   name: Emacs
   homepage: https://www.gnu.org/software/emacs/
 
-- id: Hacker News
+- id: hn
   name: Hacker News
   homepage: https://news.ycombinator.com/
-- id: State of JS
+- id: stateofjs
   name: State of JS
   homepage: https://stateofjs.com
 - id: State of CSS
   name: State of CSS
   homepage: https://stateofcss.com
-- id: Reddit
+- id: reddit
   name: Reddit
   homepage: https://reddit.com
-- id: Sidebar
+- id: sidebar
   name: Sidebar
   homepage: https://sidebar.io
 - id: Designer News
