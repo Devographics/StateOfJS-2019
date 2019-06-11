@@ -114,9 +114,9 @@ const Node = ({ node, handlers }) => {
         )
     }
     const surface = Math.PI * node.r * node.r
-    const surfaceRatio = surface/node.data.awareness
+    const surfaceRatio = surface / node.data.awareness
     const totalSurface = surfaceRatio * totalCount
-    const totalRadius = Math.sqrt(totalSurface/Math.PI)
+    const totalRadius = Math.sqrt(totalSurface / Math.PI)
     const usageRadius = node.r * (node.data.usage / node.data.awareness)
 
     return (

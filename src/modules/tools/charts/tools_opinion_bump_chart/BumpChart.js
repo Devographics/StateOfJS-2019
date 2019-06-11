@@ -20,7 +20,12 @@ const Node = ({ x, y, fill, label, isCurrent }) => (
             stroke={fill}
             strokeWidth={isCurrent ? 6 : 3}
         />
-        <text fontSize={11} fill={isCurrent ? colors.navy : colors.teal} textAnchor="middle" alignmentBaseline="middle">
+        <text
+            fontSize={11}
+            fill={isCurrent ? colors.navy : colors.teal}
+            textAnchor="middle"
+            alignmentBaseline="middle"
+        >
             {label}
         </text>
     </g>

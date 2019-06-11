@@ -34,7 +34,10 @@ const entitiesQuery = graphql`
     }
 `
 
-const findEntity = (entities, id) => entities.find(e => e.id.toLowerCase() === id.toLowerCase() || e.name.toLowerCase() === id.toLowerCase())
+const findEntity = (entities, id) =>
+    entities.find(
+        e => e.id.toLowerCase() === id.toLowerCase() || e.name.toLowerCase() === id.toLowerCase()
+    )
 
 export const EntitiesContextProvider = ({ children }) => {
     return (

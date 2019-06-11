@@ -24,12 +24,10 @@ const fontSizeByRadius = radius => {
 const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
     const { translate } = useI18n()
 
-
     const surface = Math.PI * node.r * node.r
-    const surfaceRatio = surface/node.data.count
+    const surfaceRatio = surface / node.data.count
     const totalSurface = surfaceRatio * totalCount
-    const totalRadius = Math.sqrt(totalSurface/Math.PI)
-    
+    const totalRadius = Math.sqrt(totalSurface / Math.PI)
 
     if (node.depth === 0) {
         return (
@@ -81,7 +79,7 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
                     : 'CirclePackingNode--inactive'
             }`}
         >
-            <TotalCircle radius={totalRadius} id={node.data.id}/>
+            <TotalCircle radius={totalRadius} id={node.data.id} />
             {/* used for larger mouseover zone */}
             <circle r={node.r * scaleCoefficient * 1.3} fill="transparent" />
 
