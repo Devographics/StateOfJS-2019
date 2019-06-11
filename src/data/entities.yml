@@ -75,6 +75,9 @@
   name: Chrome iOS
   homepage: https://www.google.com/chrome/
   category: browsers
+- id: chromium
+  name: Chromium
+  homepage: https://www.chromium.org/Home
 - id: csharp
   name: 'C#'
 - id: c-cplusplus
@@ -121,6 +124,12 @@
   name: Firefox
   homepage: https://www.mozilla.org/en-US/firefox/new/
   category: browsers
+- id: firefox-developer
+  name: Firefox Quantum
+  homepage: https://www.mozilla.org/en-US/firefox/developer/
+  category: browsers
+  aliases: 
+    - Firefox Developers Edition
 - id: firefox-android
   name: Firefox Android
   homepage: https://www.mozilla.org/en-US/firefox/new/
@@ -155,6 +164,8 @@
 - id: internet-explorer-8-9-10
   name: Internet Explorer 8/9/10
   homepage: https://www.microsoft.com/en-us/download/internet-explorer.aspx
+  aliases:
+    - Internet Explorer
 - id: java
   name: Java
 - id: jss
@@ -182,7 +193,7 @@
 - id: moment
   name: moment
 - id: nano
-  name: nano
+  name: Nano
   homepage: https://www.nano-editor.org/
 - id: native-apps
   description: "The majority of mobile and desktop apps are still built with native languages like Java, Kotlin, Objective-C, or Swift.\n"
@@ -259,6 +270,8 @@
   name: Samsung Internet
   homepage: https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser&hl=en_US
   category: browsers
+  aliases: 
+    - Samsung
 - id: sass
   github: sass/sass
   name: Sass
