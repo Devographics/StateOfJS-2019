@@ -1,11 +1,11 @@
 - name: Learn Storybook Tutorial
   id: storybook1
-  url: https://www.learnstorybook.com/?utm_source=stateofjs2018&utm_campaign=stateofjs2018
-  description: Get a free 9-chapter tutorial that teaches Storybook best practices as you build a UI from scratch.
+  url: https://www.learnstorybook.com/?utm_source=stateofcss2019&utm_campaign=stateofcss2019
+  description: Storybook is the fastest way to build components and their CSS. Learn Storybook best practices as you use this tutorial to build a UI from scratch.
   image: sojs2018-lsb.jpg
 
 - name: Component-Driven Development
   id: storybook2
-  url: https://blog.hichroma.com/component-driven-development-ce1109d56c8e?utm_source=stateofjs2018&utm_campaign=stateofjs2018
+  url: https://blog.hichroma.com/component-driven-development-ce1109d56c8e?utm_source=stateofcss2019&utm_campaign=stateofcss2019
   description: Learn how to speed up development in Storybook by building UIs from the “bottom up” starting at components and ending with screens.
   image: sojs2018-cdd.jpg
