@@ -1,5 +1,5 @@
-- name: Chromatic
-  url: https://www.chromaticqa.com/
+- name: Chroma
+  url: https://www.hichroma.com/
   image: chroma_logo.svg
 - name: ZensHome
   url: https://zenshome.jp
