@@ -60,8 +60,6 @@
   type: page
   defaultBlockType: feature
   blocks:
-      # - id: features-radial-cluster-overview
-      #   type: features-radial-cluster-overview
       - id: features-overview
         type: features-overview
   children:
@@ -73,8 +71,6 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
-            # - id: usage-ratio
-            #   type: features-usage-ratio
             - css-grid
             - flexbox
             - css-multi-column
@@ -89,8 +85,6 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
-            # - id: usage-ratio
-            #   type: features-usage-ratio
             - css-shapes
             - object-fit
             - clip-path
@@ -106,8 +100,6 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
-            # - id: usage-ratio
-            #   type: features-usage-ratio
             - css-scroll-snap
             - overscroll-behavior
             - overflow-anchor
@@ -120,8 +112,6 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
-            # - id: usage-ratio
-            #   type: features-usage-ratio
             - web-fonts-font-face
             - variable-fonts
             - line-breaking-properties
@@ -136,8 +126,6 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
-            # - id: usage-ratio
-            #   type: features-usage-ratio
             - css-transitions
             - css-transforms
             - css-animations
@@ -151,8 +139,6 @@
             - id: features-section-overview
               type: features-section-overview
               showDescription: true
-            # - id: usage-ratio
-            #   type: features-usage-ratio
             - css-variables
             - support-queries
             - css-containment
@@ -218,27 +204,17 @@
         path: /pre-post-processors
         type: tools
         blocks:
-            # - id: scaled-ranking-overview
-            #   type: tools-scaled-ranking-section-overview
             - id: tools-section-overview
               type: tools-section-overview
             - sass
             - less
             - postcss
             - stylus
-            # - id: other-pre-post-processors
-            #   type: horizontal-bar
-            #   dataKey: others
-            #   units: count
-            # - id: conclusion
-            #   type: text
 
       - id: css-frameworks
         path: /css-frameworks
         type: tools
         blocks:
-            # - id: scaled-ranking-overview
-            #   type: tools-scaled-ranking-section-overview
             - id: tools-section-overview
               type: tools-section-overview
             - bootstrap
@@ -252,19 +228,11 @@
             - primer
             - tailwind
             - purecss
-            # - id: other-css-frameworks
-            #   type: horizontal-bar
-            #   dataKey: others
-            #   units: count
-            # - id: conclusion
-            #   type: text
 
       - id: methodologies
         path: /methodologies
         type: tools
         blocks:
-            # - id: scaled-ranking-overview
-            #   type: tools-scaled-ranking-section-overview
             - id: tools-section-overview
               type: tools-section-overview
             - bem
@@ -272,19 +240,11 @@
             - oocss
             - smacss
             - it-css
-            # - id: other-methodologies
-            #   type: horizontal-bar
-            #   dataKey: others
-            #   units: count
-            # - id: conclusion
-            #   type: text
 
       - id: css-in-js
         path: /css-in-js
         type: tools
         blocks:
-            # - id: scaled-ranking-overview
-            #   type: tools-scaled-ranking-section-overview
             - id: tools-section-overview
               type: tools-section-overview
             - styled-components
@@ -295,12 +255,6 @@
             - radium
             - emotion
             - css-modules
-            # - id: other-css-in-js
-            #   type: horizontal-bar
-            #   dataKey: others
-            #   units: count
-            # - id: conclusion
-            #   type: text
 
 - id: other-tools
   path: /other-tools
@@ -343,9 +297,12 @@
         dataKey: environments
         showDescription: true
         mode: absolute
-      # - id: print-styles
-      #   type: vertical-bar
-      #   dataKey: environments
+      - id: print-styles
+        type: vertical-bar
+        dataKey: usage
+        bucketKeys: environmentUsage
+        showDescription: true
+        showLegend: true
       # - id: email-styles
       #   type: vertical-bar
       #   dataKey: environments

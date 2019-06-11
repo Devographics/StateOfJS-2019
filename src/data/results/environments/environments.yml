@@ -90,3 +90,20 @@ aggregations:
         - id: Gaming Console
           count: 68
           percentage: 0.61
+  - id: print-styles
+    usage:
+      total: 11156
+      others_count: 0
+      buckets:
+        - id: never
+          count: 7043
+          percentage: 63.13
+        - id: occasionally
+          count: 3447
+          percentage: 30.9
+        - id: often
+          count: 609
+          percentage: 5.46
+        - id: mainly
+          count: 57
+          percentage: 0.51

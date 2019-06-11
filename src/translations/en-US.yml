@@ -471,6 +471,30 @@ translations:
     - key: block.description.form-factors
       t: Which form factors do you test on?
 
+    # print styles
+    - key: block.title.print-styles
+      t: Print Styles
+    - key: block.description.print-styles
+      t: Do you write print styles?
+    - key: javascript-proficiency.axis_legend
+      t: Usage
+    - key: print-styles.never.short
+      t: Never
+    - key: print-styles.never.long
+      t:  I (almost) never write print styles
+    - key: print-styles.occasionally.short
+      t: Occasionally
+    - key: print-styles.occasionally.long
+      t: I occasionally write print styles
+    - key: print-styles.often.short
+      t: Often
+    - key: print-styles.often.long
+      t: I write print styles as part of most projects
+    - key: print-styles.mainly.short
+      t: Mainly
+    - key: print-styles.mainly.long
+      t: I focus mainly on CSS for print
+
     ###########################################################################
     # Resources
     ###########################################################################

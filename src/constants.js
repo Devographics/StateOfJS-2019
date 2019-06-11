@@ -115,13 +115,16 @@ const backendProficiencyKeys = [
 
 const genderKeys = ['male', 'female', 'non_binary', 'prefer_not_to_say']
 
+const environmentUsageKeys = ['never', 'occasionally', 'often', 'mainly']
+
 export const keys = {
     salary: salaryKeys,
     companySize: companySizeKeys,
     yearsOfExperience: yearsOfExperienceKeys,
     javascriptProficiency: javascriptProficiencyKeys,
     backendProficiency: backendProficiencyKeys,
-    gender: genderKeys
+    gender: genderKeys,
+    environmentUsage: environmentUsageKeys
 }
 
 export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']
