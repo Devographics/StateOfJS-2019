@@ -5,7 +5,7 @@
 #
 section_id: environments
 aggregations:
-  - id: browsers
+  - id: env-browsers
     environments:
       total: 11228
       others_count: 0

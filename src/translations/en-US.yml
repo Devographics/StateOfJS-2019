@@ -471,6 +471,11 @@ translations:
     - key: block.description.form-factors
       t: Which form factors do you test on?
 
+    - key: block.title.env-browsers
+      t: Browsers
+    - key: block.description.env-browsers
+      t: Which browsers do you test in?
+
     # print styles
     - key: block.title.print-styles
       t: CSS for Print
