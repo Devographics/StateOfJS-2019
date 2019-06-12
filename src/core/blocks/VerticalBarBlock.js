@@ -29,9 +29,10 @@ const getChartData = (data, block) => {
         throw new Error(`VerticalBarBlock: Missing data for block ${block.id}`)
     }
 
+    const blockAgg = blockData[block.dataKey]
     if (
-        blockData[block.dataKey] === undefined ||
-        !Array.isArray(blockData[block.dataKey].buckets)
+        blockAgg === undefined ||
+        !Array.isArray(blockAgg.buckets)
     ) {
         throw new Error(
             `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${
@@ -41,7 +42,7 @@ const getChartData = (data, block) => {
     }
 
     const sortedBuckets = bucketKeys.map(bucketKey => {
-        const bucket = blockData[block.dataKey].buckets.find(b => b.id === bucketKey)
+        const bucket = blockAgg.buckets.find(b => b.id === bucketKey)
         if (bucket === undefined) {
             throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
         }
@@ -49,7 +50,12 @@ const getChartData = (data, block) => {
         return bucket
     })
 
-    return { sortedBuckets, bucketKeys, total: blockData[block.dataKey].total }
+    return {
+        sortedBuckets,
+        bucketKeys,
+        completion: blockAgg.completion,
+        total: blockAgg.total
+    }
 }
 
 const VerticalBarBlock = ({ block, data }) => {
@@ -69,10 +75,10 @@ const VerticalBarBlock = ({ block, data }) => {
 
     const [units, setUnits] = useState(defaultUnits)
 
-    const { bucketKeys, sortedBuckets, total } = useMemo(() => getChartData(data, block), [
-        data,
-        block
-    ])
+    const { bucketKeys, sortedBuckets, total, completion } = useMemo(
+        () => getChartData(data, block),
+        [data, block]
+    )
 
     const legends = bucketKeys.map(key => ({
         id: `${block.id}.${key}`,
@@ -81,7 +87,7 @@ const VerticalBarBlock = ({ block, data }) => {
     }))
 
     return (
-        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} total={total}>
+        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} completion={completion}>
             <ChartContainer fit={true}>
                 <VerticalBarChart
                     keys={bucketKeys}
@@ -119,7 +125,7 @@ VerticalBarBlock.propTypes = {
         data: PropTypes.shape({
             aggregations: PropTypes.arrayOf(
                 PropTypes.shape({
-                    id: PropTypes.string.isRequired
+                    id: PropTypes.string.isRequired,
                 })
             ).isRequired
         }).isRequired

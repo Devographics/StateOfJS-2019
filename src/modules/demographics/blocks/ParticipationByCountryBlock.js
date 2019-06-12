@@ -18,7 +18,7 @@ const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'perce
             showDescription={block.showDescription}
             units={units}
             setUnits={setUnits}
-            total={blockData.breakdown.total}
+            completion={blockData.breakdown.completion}
         >
             <ChartContainer height={500}>
                 <ParticipationByCountryChart units={units} data={blockData.breakdown.buckets} />
