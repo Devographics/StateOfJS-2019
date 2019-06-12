@@ -21,41 +21,54 @@ const fontSizeByRadius = radius => {
     return 14
 }
 
+const sectionLabelOffsets = {
+    'pre-post-processors': 400,
+    'css-frameworks': 100,
+    'css-in-js': 300,
+    methodologies: 0
+}
+
 const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
     const { translate } = useI18n()
 
+    const radius = node.r
     const surface = Math.PI * node.r * node.r
     const surfaceRatio = surface / node.data.count
     const totalSurface = surfaceRatio * totalCount
     const totalRadius = Math.sqrt(totalSurface / Math.PI)
 
     if (node.depth === 0) {
-        return (
-            <circle
-                cx={node.x}
-                cy={node.y}
-                r={node.r}
-                fill="none"
-                stroke={colors.teal}
-                strokeWidth={1}
-                strokeLinecap="round"
-                strokeDasharray="2 3"
-            />
-        )
+        return null
     }
 
     if (node.depth === 1) {
         return (
-            <circle
-                cx={node.x}
-                cy={node.y}
-                r={node.r}
-                fill="rgba(255,255,255,0.1)"
-                stroke={colors.teal}
-                strokeWidth={1}
-                strokeLinecap="round"
-                strokeDasharray="2 3"
-            />
+            <g transform={`translate(${node.x},${node.y})`}>
+                <defs>
+                    <path
+                        d={`M-${radius},0a${radius},${radius} 0 1,0 ${radius *
+                            2},0a${radius},${radius} 0 1,0 -${radius * 2},0`}
+                        id={`textcircle-${node.data.id}`}
+                    />
+                </defs>
+                <text
+                    className="CirclePackingNode__SectionLabel"
+                    dy={30}
+                >
+                    <textPath xlinkHref={`#textcircle-${node.data.id}`} fill={colors.teal} side="right" startOffset={sectionLabelOffsets[node.data.id]}>
+                        {node.id}
+                    </textPath>
+                </text>
+
+                <circle
+                    r={node.r}
+                    fill="rgba(255,255,255,0.1)"
+                    stroke={colors.teal}
+                    strokeWidth={1}
+                    strokeLinecap="round"
+                    strokeDasharray="2 3"
+                />
+            </g>
         )
     }
     return (

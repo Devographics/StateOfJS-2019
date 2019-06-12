@@ -208,7 +208,7 @@
 
 .ToolsOverviewBlock {
     .Legends {
-        margin-bottom: $spacing * 2;
+        margin-top: $spacing * 2;
     }
 }
 
@@ -350,6 +350,9 @@ Circle Packing Chart
         // transition: all 200ms ease-in;
     }
 }
+.CirclePackingNode__SectionLabel{
+    opacity: 0.65;
+}
 /*
 
 Technologies Overview Chart
@@ -468,6 +471,11 @@ Bump Chart
 
 .text-blue {
     @include coloredText($blue);
+}
+.text-blackpink {
+    @include coloredText(black(0.3));
+    color: $teal;
+    border: 1px solid $pink;
 }
 
 .text-bold {

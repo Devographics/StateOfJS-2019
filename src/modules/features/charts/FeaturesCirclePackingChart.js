@@ -23,6 +23,15 @@ const Chip = ({ color, color2 }) => (
     </span>
 )
 
+const sectionLabelOffsets = {
+    'shapes-and-graphics': 0,
+    'layout': 300,
+    'interactions': 150,
+    'animations-and-transforms': 0,
+    'typography': 50,
+    'other-features': 250
+}
+
 const Tooltip = props => {
     const { translate } = useI18n()
     const { data } = props
@@ -85,32 +94,41 @@ export const TotalCircle = ({ radius, id }) => {
 }
 
 const Node = ({ node, handlers }) => {
+    
+    const radius = node.r
+
     if (node.depth === 0) {
-        return (
-            <circle
-                cx={node.x}
-                cy={node.y}
-                r={node.r}
-                fill="none"
-                stroke={colors.teal}
-                strokeWidth={1}
-                strokeLinecap="round"
-                strokeDasharray="2 3"
-            />
-        )
+        return null
     }
-    if (node.depth === 1 && node.data.isSection) {
+
+    if (node.depth === 1) {
         return (
-            <circle
-                cx={node.x}
-                cy={node.y}
-                r={node.r}
-                fill={colors.navyLight}
-                stroke={colors.teal}
-                strokeWidth={1}
-                strokeLinecap="round"
-                strokeDasharray="2 3"
-            />
+            <g transform={`translate(${node.x},${node.y})`}>
+                <defs>
+                    <path
+                        d={`M-${radius},0a${radius},${radius} 0 1,0 ${radius *
+                            2},0a${radius},${radius} 0 1,0 -${radius * 2},0`}
+                        id={`textcircle-${node.data.id}`}
+                    />
+                </defs>
+                <text
+                    className="CirclePackingNode__SectionLabel"
+                    dy={30}
+                >
+                    <textPath xlinkHref={`#textcircle-${node.data.id}`} fill={colors.teal} side="right" startOffset={sectionLabelOffsets[node.data.id]}>
+                        {node.id}
+                    </textPath>
+                </text>
+
+                <circle
+                    r={node.r}
+                    fill="rgba(255,255,255,0.1)"
+                    stroke={colors.teal}
+                    strokeWidth={1}
+                    strokeLinecap="round"
+                    strokeDasharray="2 3"
+                />
+            </g>
         )
     }
     const surface = Math.PI * node.r * node.r

@@ -4,7 +4,7 @@ import ToolsCirclePackingChart from '../charts/ToolsOverviewCirclePackingChart'
 import compact from 'lodash/compact'
 import { colors } from '../../../constants'
 import round from 'lodash/round'
-import ToolOpinionsLegend from '../charts/ToolLegend'
+import ToolLegend from '../charts/ToolLegend'
 import { useEntities } from 'core/entities/entitiesContext'
 import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
@@ -115,14 +115,10 @@ const ToolsOverviewBlock = ({ data }) => {
 
     return (
         <Block id="tools-overview" showDescription={true} className="ToolsOverviewBlock">
-            <ToolOpinionsLegend
-                // withFrame={false}
-                // layout="vertical"
-                opinions={opinions.filter(o => o.id !== 'never_heard')}
-            />
             <ChartContainer className="TechnologiesOverviewContainer" vscroll={true}>
                 <ToolsCirclePackingChart data={chartData} className="TechnologiesOverviewChart" />
             </ChartContainer>
+            <ToolLegend opinions={opinions.filter(o => o.id !== 'never_heard')} />
         </Block>
     )
 }

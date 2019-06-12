@@ -284,6 +284,9 @@ translations:
           The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
           a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
 
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+
     - key: block.title.features-section-overview
       t: Usage Overview
     - key: block.description.features-section-overview
@@ -344,9 +347,14 @@ translations:
     - key: block.description.tools-overview
       t: >
           Overview of opinions on the tools and methodologies surveyed. <span class="text-green text-bold">Green segments</span> represent positive opinions, 
-          while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. The diameter
-          of each circle corresponds to the aggregate sum of respondents for all of these four options
-          (excluding respondents unaware of the technology).
+          while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. 
+          
+          
+          The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
+          (excluding respondents unaware of the technology). 
+
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
     - key: block.tool.links
       t: Links
     - key: block.tool.github_link
