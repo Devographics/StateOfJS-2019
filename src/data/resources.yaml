@@ -15,7 +15,7 @@
   category: blogs
   aliases: 
     - foo
-- id: Smashing Magazine
+- id: smashing_magazine
   name: Smashing Magazine
   homepage: https://www.smashingmagazine.com/
   category: blogs
@@ -131,7 +131,7 @@
   name: Designer News
   homepage: https://www.designernews.co/
   category: socialmedia
-- id: One Page Love
+- id: one_page_love
   name: One Page Love
   homepage: https://onepagelove.com/
   category: resources
@@ -143,7 +143,7 @@
   name: Front-End Front
   homepage: https://frontendfront.com/
   category: newsletters
-- id: CSS Weekly
+- id: css_weekly
   name: CSS Weekly
   homepage: https://css-weekly.com/
   category: newsletters
@@ -151,7 +151,7 @@
   name: CSS Layout News
   homepage: http://csslayout.news/
   category: newsletters
-- id: responsive-design-weekly
+- id: responsive_design_weekly
   name: Responsive Design Weekly
   homepage: http://responsivedesignweekly.com/
   category: newsletters
@@ -159,7 +159,7 @@
   name: Muzli
   homepage: https://muz.li/
   category: resources
-- id: wptavern
+- id: wordpress_tavern
   name: WordPress Tavern
   homepage: https://wptavern.com/
   category: resources
