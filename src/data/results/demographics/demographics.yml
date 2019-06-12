@@ -573,7 +573,7 @@ aggregations:
   - id: source
     breakdown:
       total: 9882
-      others_count: 460
+      others_count: 444
       buckets:
         - id: stateofjs
           count: 3342
@@ -581,21 +581,18 @@ aggregations:
         - id: announcement
           count: 2144
           percentage: 21.7
+        - id: csstricks
+          count: 752
+          percentage: 7.61
         - id: twitter
           count: 640
           percentage: 6.48
+        - id: sidebar
+          count: 519
+          percentage: 5.25
         - id: wesbos
           count: 409
           percentage: 4.14
-        - id: sidebar
-          count: 398
-          percentage: 4.03
-        - id: csstricks-article
-          count: 377
-          percentage: 3.82
-        - id: csstricks
-          count: 356
-          percentage: 3.6
         - id: work
           count: 330
           percentage: 3.34
@@ -606,9 +603,6 @@ aggregations:
           count: 137
           percentage: 1.39
         - id: reddit
-          count: 121
-          percentage: 1.22
-        - id: sidebar_campaign
           count: 121
           percentage: 1.22
         - id: Slack
@@ -653,9 +647,6 @@ aggregations:
         - id: Responsive Design Weekly
           count: 20
           percentage: 0.2
-        - id: CSS Tricks
-          count: 19
-          percentage: 0.19
         - id: rweb_design
           count: 15
           percentage: 0.15
@@ -665,3 +656,12 @@ aggregations:
         - id: chat
           count: 7
           percentage: 0.07
+        - id: Frontend Focus
+          count: 6
+          percentage: 0.06
+        - id: Medium
+          count: 6
+          percentage: 0.06
+        - id: Codrops
+          count: 4
+          percentage: 0.04
