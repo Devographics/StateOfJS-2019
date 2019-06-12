@@ -47,6 +47,8 @@
   name: Wes Bos
   homepage: https://wesbos.com/
   category: courses
+  aliases: 
+    - Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
 - id: freecodecamp
   name: FreeCodeCamp
   homepage: https://www.freecodecamp.org/

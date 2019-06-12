@@ -24,7 +24,7 @@ const fontSizeByRadius = radius => {
 const sectionLabelOffsets = {
     'pre-post-processors': 400,
     'css-frameworks': 100,
-    'css-in-js': 0,
+    'css-in-js': 250,
     methodologies: 300
 }
 
