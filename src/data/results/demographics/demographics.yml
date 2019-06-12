@@ -600,7 +600,7 @@ aggregations:
       completion:
         count: 9882
         percentage: 87.32
-      others_count: 443
+      others_count: 429
       buckets:
         - id: stateofjs
           count: 3566
@@ -614,24 +614,21 @@ aggregations:
         - id: twitter
           count: 640
           percentage: 5.66
+        - id: word_of_mouth
+          count: 553
+          percentage: 4.89
         - id: sidebar
           count: 519
           percentage: 4.59
         - id: wesbos
           count: 414
           percentage: 3.66
-        - id: word_of_mouth
-          count: 403
-          percentage: 3.56
         - id: reddit
           count: 219
           percentage: 1.94
         - id: designernews
           count: 189
           percentage: 1.67
-        - id: slack
-          count: 112
-          percentage: 0.99
         - id: facebook
           count: 104
           percentage: 0.92
@@ -653,9 +650,6 @@ aggregations:
         - id: responsive_design_weekly
           count: 31
           percentage: 0.27
-        - id: hangouts
-          count: 24
-          percentage: 0.21
         - id: one_page_love
           count: 20
           percentage: 0.18
