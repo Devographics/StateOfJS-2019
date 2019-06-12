@@ -7,120 +7,132 @@ section_id: environments
 aggregations:
   - id: env-browsers
     environments:
-      total: 11228
+      total: 11317
+      completion:
+        count: 11228
+        percentage: 99.21
       others_count: 0
       buckets:
         - id: Chrome
           count: 11134
-          percentage: 99.16
+          percentage: 98.38
         - id: Firefox
           count: 10007
-          percentage: 89.13
+          percentage: 88.42
         - id: Safari
           count: 7748
-          percentage: 69.01
+          percentage: 68.46
         - id: Edge
           count: 6724
-          percentage: 59.89
+          percentage: 59.42
         - id: Safari iOS
           count: 6252
-          percentage: 55.68
+          percentage: 55.24
         - id: Internet Explorer 11
           count: 5825
-          percentage: 51.88
+          percentage: 51.47
         - id: Chrome Android
           count: 5766
-          percentage: 51.35
+          percentage: 50.95
         - id: Chrome iOS
           count: 3867
-          percentage: 34.44
+          percentage: 34.17
         - id: Firefox Android
           count: 2268
-          percentage: 20.2
+          percentage: 20.04
         - id: Opera
           count: 1295
-          percentage: 11.53
+          percentage: 11.44
         - id: Samsung Internet
           count: 943
-          percentage: 8.4
+          percentage: 8.33
         - id: Internet Explorer 8/9/10
           count: 848
-          percentage: 7.55
+          percentage: 7.49
         - id: Brave
           count: 410
-          percentage: 3.65
+          percentage: 3.62
         - id: Vivaldi
           count: 319
-          percentage: 2.84
+          percentage: 2.82
         - id: Opera Mini
           count: 240
-          percentage: 2.14
+          percentage: 2.12
         - id: UC Browser
           count: 200
-          percentage: 1.78
+          percentage: 1.77
   - id: form-factors
     environments:
-      total: 11147
+      total: 11317
+      completion:
+        count: 11147
+        percentage: 98.5
       others_count: 0
       buckets:
         - id: Desktop
           count: 11114
-          percentage: 99.7
+          percentage: 98.21
         - id: Smartphone
           count: 10213
-          percentage: 91.62
+          percentage: 90.24
         - id: Tablet
           count: 7744
-          percentage: 69.47
+          percentage: 68.43
         - id: Print
           count: 1511
-          percentage: 13.56
+          percentage: 13.35
         - id: Screen Reader
           count: 1383
-          percentage: 12.41
+          percentage: 12.22
         - id: Feature Phone
           count: 984
-          percentage: 8.83
+          percentage: 8.69
         - id: TV
           count: 296
-          percentage: 2.66
+          percentage: 2.62
         - id: Smart Watch
           count: 102
-          percentage: 0.92
+          percentage: 0.9
         - id: Gaming Console
           count: 68
-          percentage: 0.61
+          percentage: 0.6
   - id: print-styles
     usage:
-      total: 11156
+      total: 11317
+      completion:
+        count: 11156
+        percentage: 98.58
       others_count: 0
       buckets:
         - id: never
           count: 7043
-          percentage: 63.13
+          percentage: 62.23
         - id: occasionally
           count: 3447
-          percentage: 30.9
+          percentage: 30.46
         - id: often
           count: 609
-          percentage: 5.46
+          percentage: 5.38
         - id: mainly
           count: 57
-          percentage: 0.51
+          percentage: 0.5
   - id: email-styles
     usage:
-      total: 11154
+      total: 11317
+      completion:
+        count: 11154
+        percentage: 98.56
       others_count: 0
       buckets:
         - id: never
           count: 6300
-          percentage: 56.48
+          percentage: 55.67
         - id: occasionally
           count: 4159
-          percentage: 37.29
+          percentage: 36.75
         - id: often
           count: 655
-          percentage: 5.87
+          percentage: 5.79
         - id: mainly
           count: 40
-          percentage: 0.36
+          percentage: 0.35

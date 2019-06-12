@@ -7,226 +7,253 @@ section_id: css-in-js
 aggregations:
   - id: styled-components
     opinion:
-      total: 11145
+      total: 11317
+      completion:
+        count: 11145
+        percentage: 98.48
       others_count: 0
       buckets:
         - id: would_use
           count: 3754
-          percentage: 33.68
+          percentage: 33.17
         - id: interested
           count: 2969
-          percentage: 26.64
+          percentage: 26.23
         - id: never_heard
           count: 2338
-          percentage: 20.98
+          percentage: 20.66
         - id: not_interested
           count: 1418
-          percentage: 12.72
+          percentage: 12.53
         - id: would_not_use
           count: 666
-          percentage: 5.98
+          percentage: 5.88
   - id: glamor
     opinion:
-      total: 11067
+      total: 11317
+      completion:
+        count: 11067
+        percentage: 97.79
       others_count: 0
       buckets:
         - id: never_heard
           count: 7865
-          percentage: 71.07
+          percentage: 69.5
         - id: not_interested
           count: 1607
-          percentage: 14.52
+          percentage: 14.2
         - id: interested
           count: 1039
-          percentage: 9.39
+          percentage: 9.18
         - id: would_use
           count: 306
-          percentage: 2.76
+          percentage: 2.7
         - id: would_not_use
           count: 250
-          percentage: 2.26
+          percentage: 2.21
   - id: aphrodite
     opinion:
-      total: 11146
+      total: 11317
+      completion:
+        count: 11146
+        percentage: 98.49
       others_count: 0
       buckets:
         - id: never_heard
           count: 9038
-          percentage: 81.09
+          percentage: 79.86
         - id: not_interested
           count: 1307
-          percentage: 11.73
+          percentage: 11.55
         - id: interested
           count: 542
-          percentage: 4.86
+          percentage: 4.79
         - id: would_not_use
           count: 175
-          percentage: 1.57
+          percentage: 1.55
         - id: would_use
           count: 84
-          percentage: 0.75
+          percentage: 0.74
   - id: jss
     opinion:
-      total: 11147
+      total: 11317
+      completion:
+        count: 11147
+        percentage: 98.5
       others_count: 0
       buckets:
         - id: never_heard
           count: 7710
-          percentage: 69.17
+          percentage: 68.13
         - id: not_interested
           count: 1668
-          percentage: 14.96
+          percentage: 14.74
         - id: interested
           count: 1018
-          percentage: 9.13
+          percentage: 9
         - id: would_use
           count: 444
-          percentage: 3.98
+          percentage: 3.92
         - id: would_not_use
           count: 307
-          percentage: 2.75
+          percentage: 2.71
   - id: styled-jsx
     opinion:
-      total: 11102
+      total: 11317
+      completion:
+        count: 11102
+        percentage: 98.1
       others_count: 0
       buckets:
         - id: never_heard
           count: 6184
-          percentage: 55.7
+          percentage: 54.64
         - id: not_interested
           count: 1886
-          percentage: 16.99
+          percentage: 16.67
         - id: interested
           count: 1515
-          percentage: 13.65
+          percentage: 13.39
         - id: would_use
           count: 1018
-          percentage: 9.17
+          percentage: 9
         - id: would_not_use
           count: 499
-          percentage: 4.49
+          percentage: 4.41
   - id: radium
     opinion:
-      total: 11095
+      total: 11317
+      completion:
+        count: 11095
+        percentage: 98.04
       others_count: 0
       buckets:
         - id: never_heard
           count: 9117
-          percentage: 82.17
+          percentage: 80.56
         - id: not_interested
           count: 1248
-          percentage: 11.25
+          percentage: 11.03
         - id: interested
           count: 440
-          percentage: 3.97
+          percentage: 3.89
         - id: would_not_use
           count: 213
-          percentage: 1.92
+          percentage: 1.88
         - id: would_use
           count: 77
-          percentage: 0.69
+          percentage: 0.68
   - id: emotion
     opinion:
-      total: 11188
+      total: 11317
+      completion:
+        count: 11188
+        percentage: 98.86
       others_count: 0
       buckets:
         - id: never_heard
           count: 8158
-          percentage: 72.92
+          percentage: 72.09
         - id: interested
           count: 1232
-          percentage: 11.01
+          percentage: 10.89
         - id: not_interested
           count: 949
-          percentage: 8.48
+          percentage: 8.39
         - id: would_use
           count: 735
-          percentage: 6.57
+          percentage: 6.49
         - id: would_not_use
           count: 114
-          percentage: 1.02
+          percentage: 1.01
   - id: css-modules
     opinion:
-      total: 11190
+      total: 11317
+      completion:
+        count: 11190
+        percentage: 98.88
       others_count: 0
       buckets:
         - id: never_heard
           count: 4102
-          percentage: 36.66
+          percentage: 36.25
         - id: interested
           count: 3428
-          percentage: 30.63
+          percentage: 30.29
         - id: would_use
           count: 2389
-          percentage: 21.35
+          percentage: 21.11
         - id: not_interested
           count: 873
-          percentage: 7.8
+          percentage: 7.71
         - id: would_not_use
           count: 398
-          percentage: 3.56
+          percentage: 3.52
   - id: other-css-in-js
     others:
-      total: 331
+      total: 11317
+      completion:
+        count: 331
+        percentage: 2.92
       others_count: 173
       buckets:
         - id: Linaria
           count: 42
-          percentage: 12.69
+          percentage: 0.37
         - id: CSS in JS
           count: 25
-          percentage: 7.55
+          percentage: 0.22
         - id: Fela
           count: 16
-          percentage: 4.83
+          percentage: 0.14
         - id: styled-components
           count: 11
-          percentage: 3.32
+          percentage: 0.1
         - id: CSS Blocks
           count: 8
-          percentage: 2.42
+          percentage: 0.07
         - id: elm-ui
           count: 8
-          percentage: 2.42
+          percentage: 0.07
         - id: styled-system
           count: 7
-          percentage: 2.11
+          percentage: 0.06
         - id: Styletron
           count: 6
-          percentage: 1.81
+          percentage: 0.05
         - id: Astroturf
           count: 5
-          percentage: 1.51
+          percentage: 0.04
         - id: Stylable
           count: 4
-          percentage: 1.21
+          percentage: 0.04
         - id: Angular
           count: 3
-          percentage: 0.91
+          percentage: 0.03
         - id: Vue
           count: 3
-          percentage: 0.91
+          percentage: 0.03
         - id: Vue single file components
           count: 3
-          percentage: 0.91
+          percentage: 0.03
         - id: X
           count: 3
-          percentage: 0.91
+          percentage: 0.03
         - id: elm-css
           count: 3
-          percentage: 0.91
+          percentage: 0.03
         - id: react-native-web
           count: 3
-          percentage: 0.91
+          percentage: 0.03
         - id: CSS Modules
           count: 2
-          percentage: 0.6
+          percentage: 0.02
         - id: I don't know
           count: 2
-          percentage: 0.6
+          percentage: 0.02
         - id: Material UI
           count: 2
-          percentage: 0.6
+          percentage: 0.02
         - id: Scoped CSS
           count: 2
-          percentage: 0.6
+          percentage: 0.02

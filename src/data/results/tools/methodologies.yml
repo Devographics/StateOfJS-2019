@@ -7,166 +7,184 @@ section_id: methodologies
 aggregations:
   - id: bem
     opinion:
-      total: 11203
+      total: 11317
+      completion:
+        count: 11203
+        percentage: 98.99
       others_count: 0
       buckets:
         - id: would_use
           count: 5840
-          percentage: 52.13
+          percentage: 51.6
         - id: never_heard
           count: 1982
-          percentage: 17.69
+          percentage: 17.51
         - id: interested
           count: 1418
-          percentage: 12.66
+          percentage: 12.53
         - id: not_interested
           count: 1031
-          percentage: 9.2
+          percentage: 9.11
         - id: would_not_use
           count: 932
-          percentage: 8.32
+          percentage: 8.24
   - id: atomic-css
     opinion:
-      total: 11169
+      total: 11317
+      completion:
+        count: 11169
+        percentage: 98.69
       others_count: 0
       buckets:
         - id: never_heard
           count: 3666
-          percentage: 32.82
+          percentage: 32.39
         - id: interested
           count: 2734
-          percentage: 24.48
+          percentage: 24.16
         - id: would_use
           count: 2249
-          percentage: 20.14
+          percentage: 19.87
         - id: not_interested
           count: 1981
-          percentage: 17.74
+          percentage: 17.5
         - id: would_not_use
           count: 539
-          percentage: 4.83
+          percentage: 4.76
   - id: oocss
     opinion:
-      total: 11137
+      total: 11317
+      completion:
+        count: 11137
+        percentage: 98.41
       others_count: 0
       buckets:
         - id: never_heard
           count: 4563
-          percentage: 40.97
+          percentage: 40.32
         - id: not_interested
           count: 2261
-          percentage: 20.3
+          percentage: 19.98
         - id: interested
           count: 2049
-          percentage: 18.4
+          percentage: 18.11
         - id: would_use
           count: 1749
-          percentage: 15.7
+          percentage: 15.45
         - id: would_not_use
           count: 515
-          percentage: 4.62
+          percentage: 4.55
   - id: smacss
     opinion:
-      total: 11144
+      total: 11317
+      completion:
+        count: 11144
+        percentage: 98.47
       others_count: 0
       buckets:
         - id: never_heard
           count: 5087
-          percentage: 45.65
+          percentage: 44.95
         - id: not_interested
           count: 2081
-          percentage: 18.67
+          percentage: 18.39
         - id: interested
           count: 1815
-          percentage: 16.29
+          percentage: 16.04
         - id: would_use
           count: 1688
-          percentage: 15.15
+          percentage: 14.92
         - id: would_not_use
           count: 473
-          percentage: 4.24
+          percentage: 4.18
   - id: it-css
     opinion:
-      total: 11207
+      total: 11317
+      completion:
+        count: 11207
+        percentage: 99.03
       others_count: 0
       buckets:
         - id: never_heard
           count: 8484
-          percentage: 75.7
+          percentage: 74.97
         - id: not_interested
           count: 1072
-          percentage: 9.57
+          percentage: 9.47
         - id: would_use
           count: 791
-          percentage: 7.06
+          percentage: 6.99
         - id: interested
           count: 714
-          percentage: 6.37
+          percentage: 6.31
         - id: would_not_use
           count: 146
-          percentage: 1.3
+          percentage: 1.29
   - id: other-methodologies
     others:
-      total: 399
+      total: 11317
+      completion:
+        count: 399
+        percentage: 3.53
       others_count: 214
       buckets:
         - id: Suit CSS
           count: 50
-          percentage: 12.53
+          percentage: 0.44
         - id: RSCSS
           count: 37
-          percentage: 9.27
+          percentage: 0.33
         - id: CSS Modules
           count: 27
-          percentage: 6.77
+          percentage: 0.24
         - id: Functional CSS
           count: 11
-          percentage: 2.76
+          percentage: 0.1
         - id: CSS in JS
           count: 10
-          percentage: 2.51
+          percentage: 0.09
         - id: ABEM
           count: 8
-          percentage: 2.01
+          percentage: 0.07
         - id: ECSS
           count: 6
-          percentage: 1.5
+          percentage: 0.05
         - id: BEMIT
           count: 5
-          percentage: 1.25
+          percentage: 0.04
         - id: BEVM
           count: 4
-          percentage: 1
+          percentage: 0.04
         - id: GPS
           count: 4
-          percentage: 1
+          percentage: 0.04
         - id: BEM
           count: 3
-          percentage: 0.75
+          percentage: 0.03
         - id: MaintainableCSS
           count: 3
-          percentage: 0.75
+          percentage: 0.03
         - id: X
           count: 3
-          percentage: 0.75
+          percentage: 0.03
         - id: Atomic Design
           count: 2
-          percentage: 0.5
+          percentage: 0.02
         - id: Common sense
           count: 2
-          percentage: 0.5
+          percentage: 0.02
         - id: FLOCSS
           count: 2
-          percentage: 0.5
+          percentage: 0.02
         - id: I don't know
           count: 2
-          percentage: 0.5
+          percentage: 0.02
         - id: Not sure
           count: 2
-          percentage: 0.5
+          percentage: 0.02
         - id: Nothing
           count: 2
-          percentage: 0.5
+          percentage: 0.02
         - id: Shadow DOM
           count: 2
-          percentage: 0.5
+          percentage: 0.02
