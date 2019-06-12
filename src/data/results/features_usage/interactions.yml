@@ -7,20 +7,23 @@ section_id: interactions
 aggregations:
   - id: css-scroll-snap
     usage:
-      total: 11236
+      total: 11317
+      completion:
+        count: 11236
+        percentage: 99.28
       others_count: 0
       buckets:
         - id: never_heard_not_sure
           count: 5378
-          percentage: 47.86
+          percentage: 47.52
         - id: know_not_used
           count: 4550
-          percentage: 40.49
+          percentage: 40.21
         - id: used_it
           count: 1308
-          percentage: 11.64
+          percentage: 11.56
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -28,53 +31,56 @@ aggregations:
           filtered:
             count: 407
             percentage: 11.27
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 432
             percentage: 14.1
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 296
             percentage: 10.13
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 74
             percentage: 7.73
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 70
             percentage: 16.47
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 18
             percentage: 7.93
-          percentage: 2.03
+          percentage: 2.01
   - id: overscroll-behavior
     usage:
-      total: 11227
+      total: 11317
+      completion:
+        count: 11227
+        percentage: 99.2
       others_count: 0
       buckets:
         - id: never_heard_not_sure
           count: 6525
-          percentage: 58.12
+          percentage: 57.66
         - id: know_not_used
           count: 2461
-          percentage: 21.92
+          percentage: 21.75
         - id: used_it
           count: 2241
-          percentage: 19.96
+          percentage: 19.8
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -82,53 +88,56 @@ aggregations:
           filtered:
             count: 707
             percentage: 19.58
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 599
             percentage: 19.55
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 603
             percentage: 20.64
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 203
             percentage: 21.21
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 84
             percentage: 19.76
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 28
             percentage: 12.33
-          percentage: 2.03
+          percentage: 2.01
   - id: overflow-anchor
     usage:
-      total: 11239
+      total: 11317
+      completion:
+        count: 11239
+        percentage: 99.31
       others_count: 0
       buckets:
         - id: never_heard_not_sure
           count: 8772
-          percentage: 78.05
+          percentage: 77.51
         - id: know_not_used
           count: 1646
-          percentage: 14.65
+          percentage: 14.54
         - id: used_it
           count: 821
-          percentage: 7.3
+          percentage: 7.25
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -136,34 +145,34 @@ aggregations:
           filtered:
             count: 228
             percentage: 6.32
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 176
             percentage: 5.74
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 263
             percentage: 9
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 104
             percentage: 10.87
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 27
             percentage: 6.35
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 17
             percentage: 7.49
-          percentage: 2.03
+          percentage: 2.01

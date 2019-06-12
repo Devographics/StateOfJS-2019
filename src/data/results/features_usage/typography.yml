@@ -7,20 +7,23 @@ section_id: typography
 aggregations:
   - id: web-fonts-font-face
     usage:
-      total: 11249
+      total: 11317
+      completion:
+        count: 11249
+        percentage: 99.4
       others_count: 0
       buckets:
         - id: used_it
           count: 10507
-          percentage: 93.4
+          percentage: 92.84
         - id: know_not_used
           count: 547
-          percentage: 4.86
+          percentage: 4.83
         - id: never_heard_not_sure
           count: 195
-          percentage: 1.73
+          percentage: 1.72
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -28,53 +31,56 @@ aggregations:
           filtered:
             count: 3454
             percentage: 95.68
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 2997
             percentage: 97.81
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 2638
             percentage: 90.28
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 789
             percentage: 82.45
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 401
             percentage: 94.35
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 159
             percentage: 70.04
-          percentage: 2.03
+          percentage: 2.01
   - id: variable-fonts
     usage:
-      total: 11252
+      total: 11317
+      completion:
+        count: 11252
+        percentage: 99.43
       others_count: 0
       buckets:
         - id: know_not_used
           count: 4970
-          percentage: 44.17
+          percentage: 43.92
         - id: never_heard_not_sure
           count: 3376
-          percentage: 30
+          percentage: 29.83
         - id: used_it
           count: 2906
-          percentage: 25.83
+          percentage: 25.68
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -82,53 +88,56 @@ aggregations:
           filtered:
             count: 927
             percentage: 25.68
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 640
             percentage: 20.89
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 856
             percentage: 29.3
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 300
             percentage: 31.35
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 100
             percentage: 23.53
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 63
             percentage: 27.75
-          percentage: 2.03
+          percentage: 2.01
   - id: line-breaking-properties
     usage:
-      total: 11257
+      total: 11317
+      completion:
+        count: 11257
+        percentage: 99.47
       others_count: 0
       buckets:
         - id: used_it
           count: 9900
-          percentage: 87.95
+          percentage: 87.48
         - id: know_not_used
           count: 946
-          percentage: 8.4
+          percentage: 8.36
         - id: never_heard_not_sure
           count: 411
-          percentage: 3.65
+          percentage: 3.63
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -136,53 +145,56 @@ aggregations:
           filtered:
             count: 3273
             percentage: 90.66
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 2816
             percentage: 91.91
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 2541
             percentage: 86.96
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 689
             percentage: 72
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 386
             percentage: 90.82
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 130
             percentage: 57.27
-          percentage: 2.03
+          percentage: 2.01
   - id: font-variant
     usage:
-      total: 11228
+      total: 11317
+      completion:
+        count: 11228
+        percentage: 99.21
       others_count: 0
       buckets:
         - id: never_heard_not_sure
           count: 5285
-          percentage: 47.07
+          percentage: 46.7
         - id: know_not_used
           count: 3210
-          percentage: 28.59
+          percentage: 28.36
         - id: used_it
           count: 2733
-          percentage: 24.34
+          percentage: 24.15
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -190,53 +202,56 @@ aggregations:
           filtered:
             count: 869
             percentage: 24.07
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 968
             percentage: 31.59
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 556
             percentage: 19.03
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 121
             percentage: 12.64
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 161
             percentage: 37.88
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 35
             percentage: 15.42
-          percentage: 2.03
+          percentage: 2.01
   - id: initial-letter
     usage:
-      total: 11247
+      total: 11317
+      completion:
+        count: 11247
+        percentage: 99.38
       others_count: 0
       buckets:
         - id: never_heard_not_sure
           count: 4039
-          percentage: 35.91
+          percentage: 35.69
         - id: know_not_used
           count: 4015
-          percentage: 35.7
+          percentage: 35.48
         - id: used_it
           count: 3193
-          percentage: 28.39
+          percentage: 28.21
     usageByExperience:
-      total: 11205
+      total: 11317
       others_count: 0
       buckets:
         - id: '5_10'
@@ -244,34 +259,34 @@ aggregations:
           filtered:
             count: 1036
             percentage: 28.7
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
           filtered:
             count: 1141
             percentage: 37.24
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
           filtered:
             count: 638
             percentage: 21.83
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
           filtered:
             count: 140
             percentage: 14.63
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
           filtered:
             count: 185
             percentage: 43.53
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
           filtered:
             count: 32
             percentage: 14.1
-          percentage: 2.03
+          percentage: 2.01

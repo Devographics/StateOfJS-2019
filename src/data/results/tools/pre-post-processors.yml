@@ -7,236 +7,251 @@ section_id: pre-post-processors
 aggregations:
   - id: sass
     opinion:
-      total: 11238
+      total: 11317
+      completion:
+        count: 11238
+        percentage: 99.3
       others_count: 0
       buckets:
         - id: would_use
           count: 8726
-          percentage: 77.65
+          percentage: 77.11
         - id: would_not_use
           count: 956
-          percentage: 8.51
+          percentage: 8.45
         - id: interested
           count: 888
-          percentage: 7.9
+          percentage: 7.85
         - id: not_interested
           count: 627
-          percentage: 5.58
+          percentage: 5.54
         - id: never_heard
           count: 41
           percentage: 0.36
   - id: less
     opinion:
-      total: 11234
+      total: 11317
+      completion:
+        count: 11234
+        percentage: 99.27
       others_count: 0
       buckets:
         - id: not_interested
           count: 3603
-          percentage: 32.07
+          percentage: 31.84
         - id: would_not_use
           count: 3345
-          percentage: 29.78
+          percentage: 29.56
         - id: would_use
           count: 2881
-          percentage: 25.65
+          percentage: 25.46
         - id: interested
           count: 1250
-          percentage: 11.13
+          percentage: 11.05
         - id: never_heard
           count: 155
-          percentage: 1.38
+          percentage: 1.37
   - id: postcss
     opinion:
-      total: 11240
+      total: 11317
+      completion:
+        count: 11240
+        percentage: 99.32
       others_count: 0
       buckets:
         - id: would_use
           count: 4070
-          percentage: 36.21
+          percentage: 35.96
         - id: interested
           count: 2671
-          percentage: 23.76
+          percentage: 23.6
         - id: not_interested
           count: 2238
-          percentage: 19.91
+          percentage: 19.78
         - id: never_heard
           count: 1865
-          percentage: 16.59
+          percentage: 16.48
         - id: would_not_use
           count: 396
-          percentage: 3.52
+          percentage: 3.5
   - id: stylus
     opinion:
-      total: 11231
+      total: 11317
+      completion:
+        count: 11231
+        percentage: 99.24
       others_count: 0
       buckets:
         - id: not_interested
           count: 4712
-          percentage: 41.96
+          percentage: 41.64
         - id: never_heard
           count: 3118
-          percentage: 27.76
+          percentage: 27.55
         - id: interested
           count: 1539
-          percentage: 13.7
+          percentage: 13.6
         - id: would_not_use
           count: 980
-          percentage: 8.73
+          percentage: 8.66
         - id: would_use
           count: 882
-          percentage: 7.85
+          percentage: 7.79
   - id: other-pre-post-processors
     others:
-      total: 689
+      total: 11317
+      completion:
+        count: 689
+        percentage: 6.09
       others_count: 160
       buckets:
         - id: SASS
           count: 196
-          percentage: 28.45
+          percentage: 1.73
         - id: styled-components
           count: 69
-          percentage: 10.01
+          percentage: 0.61
         - id: Autoprefixer
           count: 64
-          percentage: 9.29
+          percentage: 0.57
         - id: CSS in JS
           count: 29
-          percentage: 4.21
+          percentage: 0.26
         - id: CSS Modules
           count: 26
-          percentage: 3.77
+          percentage: 0.23
         - id: Compass
           count: 19
-          percentage: 2.76
+          percentage: 0.17
         - id: CSS Next
           count: 15
-          percentage: 2.18
+          percentage: 0.13
         - id: PostCSS
           count: 13
-          percentage: 1.89
+          percentage: 0.11
         - id: elm-ui
           count: 11
-          percentage: 1.6
+          percentage: 0.1
         - id: pug
           count: 7
-          percentage: 1.02
+          percentage: 0.06
         - id: JSS
           count: 6
-          percentage: 0.87
+          percentage: 0.05
         - id: Emotion
           count: 5
-          percentage: 0.73
+          percentage: 0.04
         - id: Less
           count: 5
-          percentage: 0.73
+          percentage: 0.04
         - id: Stylable
           count: 4
-          percentage: 0.58
+          percentage: 0.04
         - id: Gulp
           count: 3
-          percentage: 0.44
+          percentage: 0.03
         - id: Pleeease
           count: 3
-          percentage: 0.44
+          percentage: 0.03
         - id: elm-css
           count: 3
-          percentage: 0.44
+          percentage: 0.03
         - id: Bourbon
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: Codekit
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: Don't know any
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: I don't know
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: Not sure
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: PurgeCSS
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: SASS/SCSS
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: Styled-jsx
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: Stylis
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: SugarSS
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: What?
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: X
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: don't know
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: gulp
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: idk
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: o
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: tailwind css
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: what?
           count: 2
-          percentage: 0.29
+          percentage: 0.02
         - id: '-prefix-free'
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: ..
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: /shrug
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: '1'
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: '123'
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: And
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: BEMCSS
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSS
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSS Blocks
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSS Imports
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSS Loader
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSS needs to implement features and remove the need for processors
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSS-Crush
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSS4
           count: 1
-          percentage: 0.15
+          percentage: 0.01
         - id: CSSNano
           count: 1
-          percentage: 0.15
+          percentage: 0.01

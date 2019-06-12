@@ -7,261 +7,264 @@ section_id: demographics
 aggregations:
   - id: participation-by-country
     breakdown:
-      total: 10308
+      total: 11317
+      completion:
+        count: 10308
+        percentage: 91.08
       others_count: 98
       buckets:
         - id: USA
           count: 2460
-          percentage: 23.86
+          percentage: 21.74
         - id: UK
           count: 1033
-          percentage: 10.02
+          percentage: 9.13
         - id: Germany
           count: 679
-          percentage: 6.59
+          percentage: 6
         - id: France
           count: 504
-          percentage: 4.89
+          percentage: 4.45
         - id: Canada
           count: 494
-          percentage: 4.79
+          percentage: 4.37
         - id: Netherlands
           count: 354
-          percentage: 3.43
+          percentage: 3.13
         - id: Russia
           count: 317
-          percentage: 3.08
+          percentage: 2.8
         - id: Australia
           count: 286
-          percentage: 2.77
+          percentage: 2.53
         - id: Poland
           count: 274
-          percentage: 2.66
+          percentage: 2.42
         - id: Brazil
           count: 269
-          percentage: 2.61
+          percentage: 2.38
         - id: Spain
           count: 262
-          percentage: 2.54
+          percentage: 2.32
         - id: India
           count: 216
-          percentage: 2.1
+          percentage: 1.91
         - id: Sweden
           count: 208
-          percentage: 2.02
+          percentage: 1.84
         - id: Belgium
           count: 144
-          percentage: 1.4
+          percentage: 1.27
         - id: Italy
           count: 143
-          percentage: 1.39
+          percentage: 1.26
         - id: Denmark
           count: 129
-          percentage: 1.25
+          percentage: 1.14
         - id: Czech Republic
           count: 122
-          percentage: 1.18
+          percentage: 1.08
         - id: Finland
           count: 106
-          percentage: 1.03
+          percentage: 0.94
         - id: Argentina
           count: 99
-          percentage: 0.96
+          percentage: 0.87
         - id: Portugal
           count: 99
-          percentage: 0.96
+          percentage: 0.87
         - id: Romania
           count: 94
-          percentage: 0.91
+          percentage: 0.83
         - id: Switzerland
           count: 94
-          percentage: 0.91
+          percentage: 0.83
         - id: Mexico
           count: 92
-          percentage: 0.89
+          percentage: 0.81
         - id: Austria
           count: 87
-          percentage: 0.84
+          percentage: 0.77
         - id: Israel
           count: 84
-          percentage: 0.81
+          percentage: 0.74
         - id: Norway
           count: 84
-          percentage: 0.81
+          percentage: 0.74
         - id: New Zealand
           count: 83
-          percentage: 0.81
+          percentage: 0.73
         - id: Colombia
           count: 78
-          percentage: 0.76
+          percentage: 0.69
         - id: Philippines
           count: 72
-          percentage: 0.7
+          percentage: 0.64
         - id: Belarus
           count: 64
-          percentage: 0.62
+          percentage: 0.57
         - id: South Africa
           count: 55
-          percentage: 0.53
+          percentage: 0.49
         - id: China
           count: 52
-          percentage: 0.5
+          percentage: 0.46
         - id: Hungary
           count: 50
-          percentage: 0.49
+          percentage: 0.44
         - id: Japan
           count: 46
-          percentage: 0.45
+          percentage: 0.41
         - id: Bulgaria
           count: 45
-          percentage: 0.44
+          percentage: 0.4
         - id: Indonesia
           count: 45
-          percentage: 0.44
+          percentage: 0.4
         - id: Ireland
           count: 44
-          percentage: 0.43
+          percentage: 0.39
         - id: Croatia
           count: 40
-          percentage: 0.39
+          percentage: 0.35
         - id: Taiwan
           count: 40
-          percentage: 0.39
+          percentage: 0.35
         - id: Serbia
           count: 38
-          percentage: 0.37
+          percentage: 0.34
         - id: Greece
           count: 37
-          percentage: 0.36
+          percentage: 0.33
         - id: Slovakia
           count: 35
-          percentage: 0.34
+          percentage: 0.31
         - id: Egypt
           count: 34
-          percentage: 0.33
+          percentage: 0.3
         - id: Turkey
           count: 31
-          percentage: 0.3
+          percentage: 0.27
         - id: Lithuania
           count: 28
-          percentage: 0.27
+          percentage: 0.25
         - id: Nigeria
           count: 26
-          percentage: 0.25
+          percentage: 0.23
         - id: Malaysia
           count: 25
-          percentage: 0.24
+          percentage: 0.22
         - id: Singapore
           count: 25
-          percentage: 0.24
+          percentage: 0.22
         - id: Chile
           count: 23
-          percentage: 0.22
+          percentage: 0.2
         - id: Pakistan
           count: 22
-          percentage: 0.21
+          percentage: 0.19
         - id: Estonia
           count: 20
-          percentage: 0.19
+          percentage: 0.18
         - id: Latvia
           count: 20
-          percentage: 0.19
+          percentage: 0.18
         - id: Iran
           count: 19
-          percentage: 0.18
+          percentage: 0.17
         - id: Korea
           count: 18
-          percentage: 0.17
+          percentage: 0.16
         - id: Vietnam
           count: 18
-          percentage: 0.17
+          percentage: 0.16
         - id: Slovenia
           count: 17
-          percentage: 0.16
+          percentage: 0.15
         - id: Hong Kong
           count: 15
-          percentage: 0.15
+          percentage: 0.13
         - id: Uruguay
           count: 15
-          percentage: 0.15
+          percentage: 0.13
         - id: Costa Rica
           count: 13
-          percentage: 0.13
+          percentage: 0.11
         - id: Iceland
           count: 13
-          percentage: 0.13
+          percentage: 0.11
         - id: Ecuador
           count: 12
-          percentage: 0.12
+          percentage: 0.11
         - id: Kazakhstan
           count: 12
-          percentage: 0.12
+          percentage: 0.11
         - id: Thailand
           count: 12
-          percentage: 0.12
+          percentage: 0.11
         - id: Peru
           count: 11
-          percentage: 0.11
+          percentage: 0.1
         - id: El Salvador
           count: 10
-          percentage: 0.1
+          percentage: 0.09
         - id: Nepal
           count: 10
-          percentage: 0.1
+          percentage: 0.09
         - id: Luxembourg
           count: 9
-          percentage: 0.09
+          percentage: 0.08
         - id: Tunisia
           count: 9
-          percentage: 0.09
+          percentage: 0.08
         - id: Venezuela
           count: 9
-          percentage: 0.09
+          percentage: 0.08
         - id: Bangladesh
           count: 8
-          percentage: 0.08
+          percentage: 0.07
         - id: Dominican Republic
           count: 8
-          percentage: 0.08
+          percentage: 0.07
         - id: Georgia
           count: 8
-          percentage: 0.08
+          percentage: 0.07
         - id: Kenya
           count: 7
-          percentage: 0.07
+          percentage: 0.06
         - id: Moldova
           count: 7
-          percentage: 0.07
+          percentage: 0.06
         - id: Uzbekistan
           count: 7
-          percentage: 0.07
+          percentage: 0.06
         - id: Bosnia and Herzegovina
           count: 6
-          percentage: 0.06
+          percentage: 0.05
         - id: Lebanon
           count: 6
-          percentage: 0.06
+          percentage: 0.05
         - id: Morocco
           count: 6
-          percentage: 0.06
+          percentage: 0.05
         - id: American Samoa
           count: 5
-          percentage: 0.05
+          percentage: 0.04
         - id: Armenia
           count: 5
-          percentage: 0.05
+          percentage: 0.04
         - id: Azerbaijan
           count: 5
-          percentage: 0.05
+          percentage: 0.04
         - id: Bolivia
           count: 5
-          percentage: 0.05
+          percentage: 0.04
         - id: Guatemala
           count: 5
-          percentage: 0.05
+          percentage: 0.04
         - id: Republic of Kosovo
           count: 5
-          percentage: 0.05
+          percentage: 0.04
         - id: Algeria
           count: 4
           percentage: 0.04
@@ -417,251 +420,275 @@ aggregations:
           percentage: 0.01
   - id: gender
     breakdown:
-      total: 11100
+      total: 11317
+      completion:
+        count: 11100
+        percentage: 98.08
       others_count: 0
       buckets:
         - id: male
           count: 9587
-          percentage: 86.37
+          percentage: 84.71
         - id: female
           count: 1120
-          percentage: 10.09
+          percentage: 9.9
         - id: prefer_not_to_say
           count: 296
-          percentage: 2.67
+          percentage: 2.62
         - id: non_binary
           count: 97
-          percentage: 0.87
+          percentage: 0.86
   - id: salary
     breakdown:
-      total: 10746
+      total: 11317
+      completion:
+        count: 10746
+        percentage: 94.95
       others_count: 0
       buckets:
         - id: '50_100'
           count: 3425
-          percentage: 31.87
+          percentage: 30.26
         - id: '30_50'
           count: 2254
-          percentage: 20.98
+          percentage: 19.92
         - id: '10_30'
           count: 1957
-          percentage: 18.21
+          percentage: 17.29
         - id: '100_200'
           count: 1604
-          percentage: 14.93
+          percentage: 14.17
         - id: '0_10'
           count: 840
-          percentage: 7.82
+          percentage: 7.42
         - id: none
           count: 533
-          percentage: 4.96
+          percentage: 4.71
         - id: 200_more
           count: 133
-          percentage: 1.24
+          percentage: 1.18
   - id: company-size
     breakdown:
-      total: 11146
+      total: 11317
+      completion:
+        count: 11146
+        percentage: 98.49
       others_count: 0
       buckets:
         - id: '100_1000'
           count: 2184
-          percentage: 19.59
+          percentage: 19.3
         - id: more_than_1000
           count: 1651
-          percentage: 14.81
+          percentage: 14.59
         - id: '20_50'
           count: 1534
-          percentage: 13.76
+          percentage: 13.55
         - id: '1'
           count: 1453
-          percentage: 13.04
+          percentage: 12.84
         - id: '50_100'
           count: 1264
-          percentage: 11.34
+          percentage: 11.17
         - id: '10_20'
           count: 1131
-          percentage: 10.15
+          percentage: 9.99
         - id: '1_5'
           count: 1014
-          percentage: 9.1
+          percentage: 8.96
         - id: '5_10'
           count: 915
-          percentage: 8.21
+          percentage: 8.09
   - id: years-of-experience
     breakdown:
-      total: 11205
+      total: 11317
+      completion:
+        count: 11205
+        percentage: 99.01
       others_count: 0
       buckets:
         - id: '5_10'
           count: 3610
-          percentage: 32.22
+          percentage: 31.9
         - id: '10_20'
           count: 3064
-          percentage: 27.34
+          percentage: 27.07
         - id: '2_5'
           count: 2922
-          percentage: 26.08
+          percentage: 25.82
         - id: '1_2'
           count: 957
-          percentage: 8.54
+          percentage: 8.46
         - id: more_than_20
           count: 425
-          percentage: 3.79
+          percentage: 3.76
         - id: less_than_1
           count: 227
-          percentage: 2.03
+          percentage: 2.01
   - id: backend-proficiency
     breakdown:
-      total: 11180
+      total: 11317
+      completion:
+        count: 11180
+        percentage: 98.79
       others_count: 0
       buckets:
         - id: able_to_setup_from_scratch
           count: 4722
-          percentage: 42.24
+          percentage: 41.72
         - id: able_to_setup_cms_or_site_generator
           count: 3034
-          percentage: 27.14
+          percentage: 26.81
         - id: able_to_use_existing_frameworks
           count: 2350
-          percentage: 21.02
+          percentage: 20.77
         - id: none
           count: 1074
-          percentage: 9.61
+          percentage: 9.49
   - id: javascript-proficiency
     breakdown:
-      total: 11199
+      total: 11317
+      completion:
+        count: 11199
+        percentage: 98.96
       others_count: 0
       buckets:
         - id: advanced_front_end_patterns
           count: 4243
-          percentage: 37.89
+          percentage: 37.49
         - id: existing_codebases_using_modern_frameworks
           count: 2784
-          percentage: 24.86
+          percentage: 24.6
         - id: entire_codebases_from_scratch
           count: 2088
-          percentage: 18.64
+          percentage: 18.45
         - id: short_simple_javascript
           count: 1926
-          percentage: 17.2
+          percentage: 17.02
         - id: none
           count: 158
-          percentage: 1.41
+          percentage: 1.4
   - id: job-title
     breakdown:
-      total: 10260
+      total: 11317
+      completion:
+        count: 10260
+        percentage: 90.66
       others_count: 0
       buckets:
         - id: front_end_dev
           count: 5299
-          percentage: 51.65
+          percentage: 46.82
         - id: full_stack_dev
           count: 3537
-          percentage: 34.47
+          percentage: 31.25
         - id: web_designer
           count: 735
-          percentage: 7.16
+          percentage: 6.49
         - id: ux_designer
           count: 299
-          percentage: 2.91
+          percentage: 2.64
         - id: ui_designer
           count: 207
-          percentage: 2.02
+          percentage: 1.83
         - id: back_end_dev
           count: 183
-          percentage: 1.78
+          percentage: 1.62
   - id: source
     breakdown:
-      total: 9882
-      others_count: 444
+      total: 11317
+      completion:
+        count: 9882
+        percentage: 87.32
+      others_count: 439
       buckets:
         - id: stateofjs
           count: 3342
-          percentage: 33.82
+          percentage: 29.53
         - id: announcement
           count: 2144
-          percentage: 21.7
+          percentage: 18.94
         - id: csstricks
           count: 752
-          percentage: 7.61
+          percentage: 6.64
         - id: twitter
           count: 640
-          percentage: 6.48
+          percentage: 5.66
         - id: sidebar
           count: 519
-          percentage: 5.25
+          percentage: 4.59
         - id: wesbos
           count: 409
-          percentage: 4.14
+          percentage: 3.61
         - id: work
           count: 330
-          percentage: 3.34
+          percentage: 2.92
+        - id: designernews
+          count: 189
+          percentage: 1.67
         - id: email
           count: 171
-          percentage: 1.73
-        - id: designernews
-          count: 137
-          percentage: 1.39
+          percentage: 1.51
         - id: reddit
           count: 121
-          percentage: 1.22
+          percentage: 1.07
         - id: Slack
           count: 112
-          percentage: 1.13
+          percentage: 0.99
         - id: facebook
           count: 104
-          percentage: 1.05
+          percentage: 0.92
         - id: WordPress Tavern
           count: 81
-          percentage: 0.82
+          percentage: 0.72
         - id: friend
           count: 73
-          percentage: 0.74
+          percentage: 0.65
         - id: rwebdev
           count: 72
-          percentage: 0.73
+          percentage: 0.64
         - id: producthunt
           count: 69
-          percentage: 0.7
+          percentage: 0.61
         - id: Newsletter
           count: 56
-          percentage: 0.57
+          percentage: 0.49
         - id: Telegram
           count: 54
-          percentage: 0.55
+          percentage: 0.48
         - id: Smashing Magazine
           count: 53
-          percentage: 0.54
-        - id: Designer News
-          count: 52
-          percentage: 0.53
+          percentage: 0.47
         - id: CSS Weekly
           count: 34
-          percentage: 0.34
+          percentage: 0.3
         - id: hangouts
           count: 24
-          percentage: 0.24
+          percentage: 0.21
         - id: One Page Love
           count: 20
-          percentage: 0.2
+          percentage: 0.18
         - id: Responsive Design Weekly
           count: 20
-          percentage: 0.2
+          percentage: 0.18
         - id: rweb_design
           count: 15
-          percentage: 0.15
+          percentage: 0.13
         - id: hn
           count: 11
-          percentage: 0.11
+          percentage: 0.1
+        - id: Medium
+          count: 7
+          percentage: 0.06
         - id: chat
           count: 7
-          percentage: 0.07
+          percentage: 0.06
         - id: Frontend Focus
           count: 6
-          percentage: 0.06
-        - id: Medium
-          count: 6
-          percentage: 0.06
+          percentage: 0.05
         - id: Codrops
+          count: 4
+          percentage: 0.04
+        - id: Good
           count: 4
           percentage: 0.04

@@ -7,79 +7,88 @@ section_id: resources
 aggregations:
   - id: blogs-magazines
     resources:
-      total: 10384
+      total: 11317
+      completion:
+        count: 10384
+        percentage: 91.76
       others_count: 0
       buckets:
         - id: CSS Tricks
           count: 10085
-          percentage: 97.12
+          percentage: 89.11
         - id: Smashing Magazine
           count: 6456
-          percentage: 62.17
+          percentage: 57.05
         - id: A List Apart
           count: 3861
-          percentage: 37.18
+          percentage: 34.12
         - id: CoDrops
           count: 3216
-          percentage: 30.97
+          percentage: 28.42
         - id: SitePoint
           count: 2942
-          percentage: 28.33
+          percentage: 26
   - id: sites-courses
     resources:
-      total: 11001
+      total: 11317
+      completion:
+        count: 11001
+        percentage: 97.21
       others_count: 0
       buckets:
         - id: Stack Overflow
           count: 9732
-          percentage: 88.46
+          percentage: 85.99
         - id: MDN
           count: 8602
-          percentage: 78.19
+          percentage: 76.01
         - id: W3Schools
           count: 5951
-          percentage: 54.1
+          percentage: 52.58
         - id: 'Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)'
           count: 3351
-          percentage: 30.46
+          percentage: 29.61
         - id: FreeCodeCamp
           count: 2326
-          percentage: 21.14
+          percentage: 20.55
         - id: Codecademy
           count: 2221
-          percentage: 20.19
+          percentage: 19.63
         - id: The CSS Specs
           count: 2174
-          percentage: 19.76
+          percentage: 19.21
         - id: Pluralsight
           count: 1223
-          percentage: 11.12
+          percentage: 10.81
         - id: LevelUp Tutorials
           count: 715
-          percentage: 6.5
+          percentage: 6.32
   - id: podcasts
     resources:
-      total: 3126
+      total: 11317
+      completion:
+        count: 3126
+        percentage: 27.62
       others_count: 0
       buckets:
         - id: Syntax
           count: 2007
-          percentage: 64.2
+          percentage: 17.73
         - id: Shop Talk Show
           count: 1089
-          percentage: 34.84
+          percentage: 9.62
         - id: The Changelog
           count: 560
-          percentage: 17.91
+          percentage: 4.95
         - id: The Web Ahead
           count: 429
-          percentage: 13.72
+          percentage: 3.79
         - id: The Big Web Show
           count: 385
-          percentage: 12.32
+          percentage: 3.4
         - id: Style Guide Podcast
           count: 227
-          percentage: 7.26
+          percentage: 2.01
         - id: Non Breaking Space Show
           count: 100
-          percentage: 3.2
+          percentage: 0.88
