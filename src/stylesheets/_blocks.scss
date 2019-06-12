@@ -100,7 +100,64 @@
     @include small {
         margin-left: $spacing/2;
     }
-    .capture &{
+    .capture & {
         display: none;
+    }
+}
+
+.CompletionIndicator {
+    margin-left: $spacing/2;
+    position: relative;
+    padding: 2px;
+}
+.CompletionIndicator__Tooltip {
+    left: 50%;
+    position: absolute;
+    background: $teal;
+    color: $navy;
+    font-size: $small-font;
+    padding: 4px 8px;
+    @include border-radius;
+    white-space: nowrap;
+    // top: -100%;
+    // left: -50%;
+    transform: translate(-50%, -130%);
+    opacity: 0;
+    transition: all 200ms ease-in;
+    &:after {
+        top: 99%;
+        left: 50%;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: $teal;
+        border-width: 8px;
+        margin-left: -8px;
+    }
+    .CompletionIndicator:hover & {
+        opacity: 1;
+        transition: all 200ms ease-in;
+    }
+}
+.CompletionIndicator__Data {
+    @include sr-only;
+}
+.CompletionIndicator__Chart {
+    overflow: visible;
+}
+.CompletionIndicator__Chart__Bg {
+    fill: $tealDarker;
+    .CompletionIndicator:hover & {
+        // fill: $blueDark;
+    }
+}
+.CompletionIndicator__Chart__Fg {
+    stroke: $teal;
+    .CompletionIndicator:hover & {
+        // stroke: $blue;
     }
 }

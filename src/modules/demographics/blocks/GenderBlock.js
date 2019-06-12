@@ -8,7 +8,7 @@ import GenderLegends from 'modules/demographics/charts/GendersLegends'
 
 const getChartData = (data, block) => {
     const blockData = data.data.aggregations.find(agg => agg.id === block.id)
-    return blockData.breakdown.buckets
+    return blockData.breakdown
 }
 
 const GenderBreakdownBlock = ({ block, data }) => {
@@ -24,16 +24,17 @@ const GenderBreakdownBlock = ({ block, data }) => {
             className="Block--gender Gender__Block"
             units={units}
             setUnits={setUnits}
+            total={chartData.total}
         >
             <ChartContainer height={200} fit={true}>
                 <GaugeBarChart
                     units={units}
-                    buckets={chartData}
+                    buckets={chartData.buckets}
                     mapping={gender}
                     i18nNamespace={block.id}
                 />
             </ChartContainer>
-            <GenderLegends data={chartData} units={units} />
+            <GenderLegends data={chartData.buckets} units={units} />
         </Block>
     )
 }

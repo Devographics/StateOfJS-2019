@@ -61,7 +61,7 @@ const Tooltip = ({ library, variant }) => {
                 { 'arrow-right': variant === 'vertical' }
             )}
         >
-            <div className="toolip__topzone" />
+            <div className="tooltip__topzone" />
             <div className="tooltip__inner">
                 <h3 className="tooltip__title">
                     <span className="tooltip__title__homepage">{library.name}</span>

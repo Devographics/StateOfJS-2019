@@ -12,6 +12,10 @@ $antsFg: $pink;
 $border: 1px dashed $border-color;
 $border2: 1px solid $border-color;
 
+@mixin border-radius{
+    border-radius: 3px;
+}
+
 @mixin border {
     border: $border;
 }

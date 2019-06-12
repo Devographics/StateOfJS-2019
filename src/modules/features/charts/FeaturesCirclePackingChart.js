@@ -101,7 +101,7 @@ const Node = ({ node, handlers }) => {
         return null
     }
 
-    if (node.depth === 1) {
+    if (node.depth === 1 && node.data.isSection) {
         return (
             <g transform={`translate(${node.x},${node.y})`}>
                 <defs>

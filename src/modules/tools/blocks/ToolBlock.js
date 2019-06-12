@@ -43,6 +43,7 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
             showDescription={false}
             units={units}
             setUnits={setUnits}
+            total={blockData.opinion.total}
         >
             <div className="Tool FTBlock">
                 <div className="Tool__Chart FTBlock__Chart">

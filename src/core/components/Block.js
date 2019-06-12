@@ -27,7 +27,8 @@ export default class Block extends Component {
             children,
             title,
             units,
-            setUnits
+            setUnits,
+            total,
         } = this.props
 
         return (
@@ -40,6 +41,7 @@ export default class Block extends Component {
                     title={title}
                     units={units}
                     setUnits={setUnits}
+                    total={total}
                 />
                 {isShareable && <ShareBlockDebug id={id} />}
                 <div className="Block__Contents">{children}</div>

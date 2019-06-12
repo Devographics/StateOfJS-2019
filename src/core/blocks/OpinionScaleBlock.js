@@ -156,8 +156,6 @@ const OpinionScaleBlock = ({ block, data }) => {
     const context = usePageContext()
     const { width } = context
 
-    console.log(context)
-
     const { translate } = useI18n()
 
     const { units: defaultUnits = 'percentage', translateData } = block
@@ -186,7 +184,13 @@ const OpinionScaleBlock = ({ block, data }) => {
     ])
 
     return (
-        <Block id={block.id} showDescription={true} units={units} setUnits={setUnits}>
+        <Block
+            id={block.id}
+            showDescription={true}
+            units={units}
+            setUnits={setUnits}
+            total={blockData[dataKey].total}
+        >
             <ChartContainer fit={true}>
                 <VerticalBarChart
                     className="OpinionScaleChart"

@@ -81,7 +81,7 @@ const VerticalBarBlock = ({ block, data }) => {
     }))
 
     return (
-        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits}>
+        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} total={total}>
             <ChartContainer fit={true}>
                 <VerticalBarChart
                     keys={bucketKeys}

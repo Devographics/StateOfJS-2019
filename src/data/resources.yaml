@@ -44,13 +44,19 @@
   homepage: https://www.w3schools.com/
   category: resources
 - id: wesbos
-  name: Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
+  name: Wes Bos
   homepage: https://wesbos.com/
   category: courses
-- id: FreeCodeCamp
+- id: freecodecamp
   name: FreeCodeCamp
   homepage: https://www.freecodecamp.org/
   category: courses
+- id: freecodecamp-announcement-css2019
+  name: Announcement
+  homepage: https://medium.com/free-code-camp/announcing-the-state-of-css-2019-survey-e1e4268df64d
+  category: blogs
+  aliases: 
+    - announcement
 - id: Codecademy
   name: Codecademy
   homepage: https://www.codecademy.com/
@@ -119,7 +125,7 @@
   name: Sidebar
   homepage: https://sidebar.io
   category: newsletters
-- id: Designer News
+- id: designernews
   name: Designer News
   homepage: https://www.designernews.co/
   category: socialmedia
@@ -127,6 +133,10 @@
   name: One Page Love
   homepage: https://onepagelove.com/
   category: resources
+- id: free
+  name: Sidebar
+  homepage: https://sidebar.io
+  category: newsletters
 - id: Front-End Front
   name: Front-End Front
   homepage: https://frontendfront.com/
@@ -139,19 +149,22 @@
   name: CSS Layout News
   homepage: http://csslayout.news/
   category: newsletters
-- id: Responsive Design Weekly
+- id: responsive-design-weekly
   name: Responsive Design Weekly
   homepage: http://responsivedesignweekly.com/
   category: newsletters
-- id: Muzli
+- id: muzli
   name: Muzli
   homepage: https://muz.li/
   category: resources
-- id: WordPress Tavern
+- id: wptavern
   name: WordPress Tavern
   homepage: https://wptavern.com/
   category: resources
-- id: Frontend Focus
+- id: frontend-focus
   name: Frontend Focus
   homepage: https://frontendfoc.us/
   category: newsletters
+- id: facebook
+  name: Facebook
+  category: socialmedia

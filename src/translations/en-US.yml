@@ -244,6 +244,12 @@ translations:
       t: >
           How participants found out about the survey (aggregation of self-reported answers and 
           referrer tracking).
+
+
+          - **State of JS**: subscribers from our previous JavaScript surveys. 
+
+          - **Announcement**: our official announcement post on [FreeCodeCamp](https://www.freecodecamp.org).
+
     - key: block.description.gender
       t: Gender breakdown.
     - key: block.title.job-title
@@ -782,6 +788,8 @@ translations:
       t: Back to introduction
     - key: general.close_nav
       t: Close navigation menu
+    - key: general.completion_percentage
+      t: "Completion Percentage:"
 
     # partners
     - key: partners.our_partners

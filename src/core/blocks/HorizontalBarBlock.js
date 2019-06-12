@@ -57,7 +57,7 @@ const HorizontalBarBlock = ({ block, data }) => {
     const blockData = useMemo(() => getChartData(data, block, getUrl), [data, block])
 
     return (
-        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits}>
+        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} total={blockData.total}>
             <ChartContainer fit={true}>
                 <HorizontalBarChart
                     total={blockData.total}

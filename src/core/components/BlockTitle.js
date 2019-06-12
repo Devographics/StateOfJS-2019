@@ -8,8 +8,48 @@ import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
 import { getBlockMeta } from '../helpers/blockHelpers'
 import SharePermalink from '../share/SharePermalink'
 import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
+import { colors, totalCount } from '../../constants'
 
-const BlockTitle = ({ id, showDescription, isShareable, values, title, units, setUnits }) => {
+const CompletionIndicator = ({ total }) => {
+    const { translate } = useI18n()
+    const completionPercentage = Math.round((total / totalCount) * 100)
+    return (
+        <div className="CompletionIndicator">
+            <div className="CompletionIndicator__Tooltip">
+                {translate('general.completion_percentage')}{' '}
+                <strong>{completionPercentage}%</strong>
+            </div>
+            <div className="CompletionIndicator__Data">
+                {translate('general.completion_percentage')}{' '}
+                <strong>{completionPercentage}%</strong>
+            </div>
+            <svg className="CompletionIndicator__Chart" height="16" width="16" viewBox="0 0 20 20">
+                <circle className="CompletionIndicator__Chart__Bg" r="10" cx="10" cy="10" />
+                <circle
+                    className="CompletionIndicator__Chart__Fg"
+                    r="5"
+                    cx="10"
+                    cy="10"
+                    fill="transparent"
+                    strokeWidth="10"
+                    strokeDasharray={`calc(${completionPercentage} * 31.4 / 100) 31.4`}
+                    transform="rotate(-90) translate(-20)"
+                />
+            </svg>
+        </div>
+    )
+}
+
+const BlockTitle = ({
+    id,
+    showDescription,
+    isShareable,
+    values,
+    title,
+    units,
+    setUnits,
+    total
+}) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
@@ -32,6 +72,7 @@ const BlockTitle = ({ id, showDescription, isShareable, values, title, units, se
                         <SharePermalink url={meta.link} />
                         {title}
                     </h3>
+                    {total && <CompletionIndicator total={total} />}
                     {/* <h3 className="Block__Title__Text Block__Title__Text--full">
                     {title || translate(`fullcharts.${id}`, { values })}
                 </h3> */}

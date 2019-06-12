@@ -39,6 +39,7 @@ export let colors = {
 
     white: '#ffffff',
 
+    navyLightest: '#7e86ad',
     navyLighter: '#484F73',
     navyLight: '#303652',
     navy: '#232840',

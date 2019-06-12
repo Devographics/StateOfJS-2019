@@ -80,6 +80,7 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
             showDescription={false}
             units={units}
             setUnits={setUnits}
+            total={feature.usage.total}
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
