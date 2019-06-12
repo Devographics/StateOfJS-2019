@@ -23,6 +23,10 @@ Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://v
 
 You can [download the data for this survey](https://www.kaggle.com/sachag/state-of-css-2019). Let us know if you end up making your own data visualizations!
 
+### Completion Percentages
+
+Because all survey questions could be skipped, some questions ended up with fewer answers than others. So we've added a small pie chart indicator to each question to let you know which proportion of total respondents answered it.  
+
 ### Other Links
 
 - [State of CSS Homepage](https://stateofcss.com)

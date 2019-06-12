@@ -147,7 +147,7 @@
     @include sr-only;
 }
 .CompletionIndicator__Chart {
-    overflow: visible;
+    display: block;
 }
 .CompletionIndicator__Chart__Bg {
     fill: $tealDarker;
