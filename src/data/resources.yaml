@@ -170,3 +170,23 @@
 - id: facebook
   name: Facebook
   category: socialmedia
+  homepage: https://facebook.com
+- id: word_of_mouth
+  name: Word Of Mouth
+  category: socialmedia
+- id: producthunt
+  name: Product Hunt
+  category: socialmedia
+  homepage: https://www.producthunt.com/
+- id: telegram
+  name: Telegram
+  category: socialmedia
+  homepage: https://telegram.org/
+- id: slack
+  name: Slack
+  category: socialmedia
+  homepage: https://slack.com/
+- id: hangouts
+  name: Hangouts
+  category: socialmedia
+  homepage: https://tools.google.com/dlpage/hangoutplugin

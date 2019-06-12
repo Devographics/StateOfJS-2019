@@ -140,6 +140,7 @@
     }
     .CompletionIndicator:hover & {
         opacity: 1;
+        transform: translate(-50%, -140%);
         transition: all 200ms ease-in;
     }
 }

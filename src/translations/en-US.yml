@@ -246,8 +246,9 @@ translations:
           referrer tracking).
 
           
-          Note that **State of JS** indicates subscribers from our previous JavaScript surveys,
-          while **Announcement** corresponds to our official announcement post on [FreeCodeCamp](https://www.freecodecamp.org).
+          **State of JS** indicates subscribers from our previous JavaScript surveys,
+          **Announcement** corresponds to our official announcement post on [FreeCodeCamp](https://www.freecodecamp.org), 
+          and **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
 
     - key: block.description.gender
       t: Gender breakdown.
