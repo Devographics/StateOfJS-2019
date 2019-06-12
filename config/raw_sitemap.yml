@@ -76,6 +76,10 @@
             - css-multi-column
             - css-writing-modes
             - css-exclusions
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - designcode1
 
       - id: shapes-and-graphics
         path: /shapes-and-graphics
@@ -144,6 +148,10 @@
             - css-containment
             - will-change
             - calc
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - designcode2
 
 - id: units-and-selectors
   path: /units-and-selectors

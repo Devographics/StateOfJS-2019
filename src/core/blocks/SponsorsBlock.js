@@ -12,8 +12,8 @@ const SponsorsBlock = () => {
             <div className="Sponsors">
                 <h3 className="Sponsors__Heading">{translate('partners.our_partners')}:</h3>
                 <div className="Sponsors__Items">
-                    {sponsors.map(({ name, image, url }) => (
-                        <div className="Sponsors__Item" key={name}>
+                    {sponsors.map(({ name, image, url, id }) => (
+                        <div className={`Sponsors__Item Sponsors__Item--${id}`} key={name}>
                             <a href={url} title={name}>
                                 <img src={`/images/sponsors/${image}`} alt={name} />
                             </a>

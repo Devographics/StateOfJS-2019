@@ -1,6 +1,12 @@
 - name: Chroma
+  id: chroma
   url: https://www.hichroma.com/
   image: chroma_logo.svg
 - name: ZensHome
+  id: zenshome
   url: https://zenshome.jp
   image: zenshome-whitebg.svg
+- name: Design+Code
+  id: designcode
+  url: https://designcode.io/
+  image: designcode.svg

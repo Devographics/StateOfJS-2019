@@ -3,3 +3,13 @@
   url: https://www.learnstorybook.com/?utm_source=stateofcss2019&utm_campaign=stateofcss2019
   description: Storybook is the fastest way to build components and their CSS. Learn Storybook best practices as you use this tutorial to build a UI from scratch.
   image: sojs2018-lsb.jpg
+- name: Learn CSS Layout and Animations
+  id: designcode1
+  description: Video course teaching layout with CSS Grid, Flexbox and CSS animations in CodePen
+  url: https://designcode.io/css-layout-and-animations?csssurvey
+  image: designcode1.jpg
+- name: 70 hours of content for CSS, Javascript
+  id: designcode2
+  description: Design+Code video courses to learn UI design, CSS, SwiftUI, React, React Native, Vue
+  url: https://designcode.io/?csssurvey
+  image: designcode2.jpg
