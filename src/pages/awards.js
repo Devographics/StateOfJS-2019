@@ -9,7 +9,7 @@ const Awards = ({ data }) => {
         <>
             <PageHeader />
             {data.introduction && <TextBlock text={data.introduction.html} />}
-            <AwardsBlock data={data} />
+            {/* <AwardsBlock data={data} /> */}
         </>
     )
 }
