@@ -28,6 +28,7 @@ const SuperSad = ({ width, height }) => (
         <path d="M73 32L59 36" stroke="#9AC6C9" strokeWidth="4" strokeLinecap="round" />
     </svg>
 )
+
 const Sad = ({ width, height }) => (
     <svg
         width={width}
@@ -112,6 +113,7 @@ const SuperHappy = ({ width, height }) => (
         />
     </svg>
 )
+
 const emojiIcons = [SuperSad, Sad, Neutral, Happy, SuperHappy]
 
 /* eslint-disable jsx-a11y/accessible-emoji */
@@ -145,6 +147,7 @@ const getChartData = buckets => {
 
         return bucket
     })
+
     return sortedBuckets
 }
 
@@ -189,7 +192,7 @@ const OpinionScaleBlock = ({ block, data }) => {
             showDescription={true}
             units={units}
             setUnits={setUnits}
-            total={blockData[dataKey].total}
+            completion={blockData[dataKey].completion}
         >
             <ChartContainer fit={true}>
                 <VerticalBarChart

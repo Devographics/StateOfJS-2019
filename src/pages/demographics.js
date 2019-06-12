@@ -19,6 +19,10 @@ export const query = graphql`
                 id
                 breakdown {
                     total
+                    completion {
+                        count
+                        percentage
+                    }
                     buckets {
                         id
                         count

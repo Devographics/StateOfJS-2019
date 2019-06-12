@@ -9,48 +9,11 @@ import ChartContainer from 'core/charts/ChartContainer'
 import { usage } from '../../../constants'
 import GaugeBarChart from 'core/charts/GaugeBarChart'
 import { useEntities } from 'core/entities/entitiesContext'
+import FeatureResources from 'modules/features/components/FeatureResources'
 
 // convert relative links into absolute MDN links
 const parseMDNLinks = content =>
     content.replace(new RegExp(`href="/`, 'g'), `href="https://developer.mozilla.org/`)
-
-const FeatureResources = ({ id, mdnInfo, caniuseInfo }) => {
-    const { translate } = useI18n()
-    if (!caniuseInfo && !mdnInfo) {
-        return null
-    }
-    return (
-        <div className="Feature__Resources FTBlock__Resources">
-            <h3>{translate('feature.learn_more')}</h3>
-            <ul>
-                {mdnInfo && (
-                    <li className="Feature__Links__Item">
-                        <a href={`https://developer.mozilla.org${mdnInfo.url}`}>
-                            {translate('feature.mdn_link')}
-                        </a>
-                    </li>
-                )}
-
-                {caniuseInfo && (
-                    <>
-                        {caniuseInfo.spec && (
-                            <li className="Feature__Links__Item">
-                                <a href={caniuseInfo.spec}>
-                                    {translate('feature.specification_link')}
-                                </a>
-                            </li>
-                        )}
-                        <li className="Feature__Links__Item">
-                            <a href={`https://caniuse.com/#feat=${id}`}>
-                                {translate('feature.caniuse_link')}
-                            </a>
-                        </li>
-                    </>
-                )}
-            </ul>
-        </div>
-    )
-}
 
 const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const { getName } = useEntities()
@@ -80,7 +43,7 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
             showDescription={false}
             units={units}
             setUnits={setUnits}
-            total={feature.usage.total}
+            completion={feature.usage.completion}
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">

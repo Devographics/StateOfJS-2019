@@ -18,9 +18,11 @@ const getChartData = (data, block, getUrl) => {
     if (!blockData) {
         throw new Error(`HorizontalBarBlock: Missing data for block ${block.id}`)
     }
+
+    const blockAgg = blockData[block.dataKey]
     if (
-        blockData[block.dataKey] === undefined ||
-        !Array.isArray(blockData[block.dataKey].buckets)
+        blockAgg === undefined ||
+        !Array.isArray(blockAgg.buckets)
     ) {
         throw new Error(
             `HorizontalBarBlock: Non existing or invalid data key ${block.data.key} for block ${
@@ -29,16 +31,14 @@ const getChartData = (data, block, getUrl) => {
         )
     }
 
-    const chartData = blockData[block.dataKey]
-
-    chartData.buckets = sortBy(chartData.buckets.map(bucket => ({ ...bucket })), 'count').map(
+    blockAgg.buckets = sortBy(blockAgg.buckets.map(bucket => ({ ...bucket })), 'count').map(
         bucket => ({
             ...bucket,
             homepage: getUrl(bucket.id)
         })
     )
 
-    return chartData
+    return blockAgg
 }
 
 const HorizontalBarBlock = ({ block, data }) => {
@@ -57,7 +57,7 @@ const HorizontalBarBlock = ({ block, data }) => {
     const blockData = useMemo(() => getChartData(data, block, getUrl), [data, block])
 
     return (
-        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} total={blockData.total}>
+        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} completion={blockData.completion}>
             <ChartContainer fit={true}>
                 <HorizontalBarChart
                     total={blockData.total}

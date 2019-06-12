@@ -18,6 +18,10 @@ export const query = graphql`
             aggregations {
                 id
                 opinion {
+                    completion {
+                        count
+                        percentage
+                    }
                     buckets {
                         id
                         count
@@ -25,6 +29,10 @@ export const query = graphql`
                     }
                 }
                 features {
+                    completion {
+                        count
+                        percentage
+                    }
                     buckets {
                         id
                         count

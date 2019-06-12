@@ -19,6 +19,10 @@ export const query = graphql`
                 id
                 environments {
                     total
+                    completion {
+                        count
+                        percentage
+                    }
                     buckets {
                         id
                         count
@@ -27,6 +31,10 @@ export const query = graphql`
                 }
                 usage {
                     total
+                    completion {
+                        count
+                        percentage
+                    }
                     buckets {
                         id
                         count
