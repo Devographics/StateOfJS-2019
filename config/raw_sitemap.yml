@@ -12,7 +12,7 @@
   blocks:
       - id: participation-by-country
         type: participation-by-country
-        showDescription: false
+        showDescription: true
       - id: salary
         type: vertical-bar
         dataKey: breakdown

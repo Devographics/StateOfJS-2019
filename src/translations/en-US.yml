@@ -216,8 +216,8 @@ translations:
     # other
     - key: block.title.participation-by-country
       t: Participation by Country
-    # - key: block.description.participation-by-country
-    #   t: Survey participants by Country.
+    - key: block.description.participation-by-country
+      t: Which proportion of survey respondents came from each country. 
     - key: block.title.salary
       t: Salary
     - key: block.description.salary
