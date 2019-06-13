@@ -300,6 +300,9 @@ translations:
           The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
           a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
 
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+
     - key: block.description.css-exclusions
       t: >
           An exclusion element is a block-level element which is not a float, and generates an exclusion box. 
