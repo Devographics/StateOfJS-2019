@@ -34,7 +34,7 @@ aggregations:
       completion:
         count: 660
         percentage: 5.83
-      others_count: 266
+      others_count: 383
       buckets:
         - id: medium
           count: 92
@@ -51,42 +51,6 @@ aggregations:
         - id: twitter
           count: 25
           percentage: 0.22
-        - id: w3schools
-          count: 16
-          percentage: 0.14
-        - id: css_weekly
-          count: 14
-          percentage: 0.12
-        - id: devto
-          count: 14
-          percentage: 0.12
-        - id: google
-          count: 13
-          percentage: 0.11
-        - id: css_wizardry
-          count: 11
-          percentage: 0.1
-        - id: sidebar
-          count: 11
-          percentage: 0.1
-        - id: caniuse
-          count: 9
-          percentage: 0.08
-        - id: reddit
-          count: 8
-          percentage: 0.07
-        - id: web_standards
-          count: 8
-          percentage: 0.07
-        - id: alligator
-          count: 6
-          percentage: 0.05
-        - id: frontend_focus
-          count: 4
-          percentage: 0.04
-        - id: css_layout_news
-          count: 3
-          percentage: 0.03
   - id: sites-courses
     resources:
       total: 11317
@@ -128,7 +92,7 @@ aggregations:
       completion:
         count: 669
         percentage: 5.91
-      others_count: 157
+      others_count: 315
       buckets:
         - id: udemy
           count: 133
@@ -145,51 +109,6 @@ aggregations:
         - id: egghead
           count: 47
           percentage: 0.42
-        - id: treehouse
-          count: 30
-          percentage: 0.27
-        - id: lynda
-          count: 18
-          percentage: 0.16
-        - id: codepen
-          count: 15
-          percentage: 0.13
-        - id: youtube
-          count: 15
-          percentage: 0.13
-        - id: google
-          count: 14
-          percentage: 0.12
-        - id: superhi
-          count: 11
-          percentage: 0.1
-        - id: platzi
-          count: 10
-          percentage: 0.09
-        - id: devdocs
-          count: 9
-          percentage: 0.08
-        - id: scrimba
-          count: 7
-          percentage: 0.06
-        - id: flexbox_zombies
-          count: 6
-          percentage: 0.05
-        - id: mdn
-          count: 6
-          percentage: 0.05
-        - id: medium
-          count: 5
-          percentage: 0.04
-        - id: reddit
-          count: 4
-          percentage: 0.04
-        - id: traversy_media
-          count: 4
-          percentage: 0.04
-        - id: udacity
-          count: 4
-          percentage: 0.04
   - id: podcasts
     resources:
       total: 11317
@@ -225,7 +144,7 @@ aggregations:
       completion:
         count: 474
         percentage: 4.19
-      others_count: 209
+      others_count: 264
       buckets:
         - id: web_standards
           count: 100
@@ -242,30 +161,3 @@ aggregations:
         - id: fullstack_radio
           count: 22
           percentage: 0.19
-        - id: web_standards_ru
-          count: 10
-          percentage: 0.09
-        - id: http_203
-          count: 8
-          percentage: 0.07
-        - id: code_newbie
-          count: 7
-          percentage: 0.06
-        - id: developer_tea
-          count: 6
-          percentage: 0.05
-        - id: react_podcast
-          count: 6
-          percentage: 0.05
-        - id: software_engineering
-          count: 6
-          percentage: 0.05
-        - id: codepen
-          count: 5
-          percentage: 0.04
-        - id: youtube
-          count: 4
-          percentage: 0.04
-        - id: the_web_platform
-          count: 3
-          percentage: 0.03
