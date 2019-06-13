@@ -124,9 +124,9 @@ aggregations:
     others:
       total: 11317
       completion:
-        count: 399
-        percentage: 3.53
-      others_count: 214
+        count: 397
+        percentage: 3.51
+      others_count: 212
       buckets:
         - id: Suit CSS
           count: 50
@@ -182,9 +182,9 @@ aggregations:
         - id: Not sure
           count: 2
           percentage: 0.02
-        - id: Nothing
+        - id: Shadow DOM
           count: 2
           percentage: 0.02
-        - id: Shadow DOM
+        - id: Utility classes
           count: 2
           percentage: 0.02

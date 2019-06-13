@@ -542,18 +542,35 @@ translations:
     # Resources
     ###########################################################################
 
+    # blogs & magazines
     - key: block.title.blogs-magazines
       t: Blogs & Magazines
     - key: block.description.blogs-magazines
       t: Which CSS-related blogs/magazines/etc. do you read?
+    - key: block.title.blogs-magazines-others
+      t: Other Blogs & Magazines
+    - key: block.description.blogs-magazines-others
+      t: Other answers (freeform field).
+  
+    # sites & courses
     - key: block.title.sites-courses
       t: Sites & Courses
     - key: block.description.sites-courses
       t: Which CSS-related sites/courses/etc. do you consult?
+    - key: block.title.sites-courses-others
+      t: Other Sites & Courses
+    - key: block.description.sites-courses-others
+      t: Other answers (freeform field).
+
+    # podcasts
     - key: block.title.podcasts
       t: Podcasts
     - key: block.description.podcasts
       t: Which CSS or programming-related podcasts do you listen to?
+    - key: block.title.podcasts-others
+      t: Other Podcasts
+    - key: block.description.podcasts-others
+      t: Other answers (freeform field).
 
     ###########################################################################
     # Opinions

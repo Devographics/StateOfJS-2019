@@ -262,9 +262,9 @@ aggregations:
     others:
       total: 11317
       completion:
-        count: 673
-        percentage: 5.95
-      others_count: 387
+        count: 670
+        percentage: 5.92
+      others_count: 383
       buckets:
         - id: Skeleton
           count: 46
@@ -314,6 +314,9 @@ aggregations:
         - id: CSS in JS
           count: 3
           percentage: 0.03
+        - id: Material Design Lite
+          count: 3
+          percentage: 0.03
         - id: Milligram
           count: 3
           percentage: 0.03
@@ -321,8 +324,5 @@ aggregations:
           count: 3
           percentage: 0.03
         - id: Blaze UI
-          count: 2
-          percentage: 0.02
-        - id: CSS Modules
           count: 2
           percentage: 0.02
