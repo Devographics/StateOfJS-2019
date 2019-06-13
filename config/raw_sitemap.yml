@@ -327,16 +327,34 @@
         dataKey: resources
         showDescription: true
         mode: absolute
+      - id: blogs-magazines-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
       - id: sites-courses
         type: horizontal-bar
         dataKey: resources
         showDescription: true
         mode: absolute
+      - id: sites-courses-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
       - id: podcasts
         type: horizontal-bar
         dataKey: resources
         showDescription: true
         mode: absolute
+      - id: podcasts-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
       - id: resources-sponsors
         type: resources
         items:

@@ -190,3 +190,140 @@
   name: Hangouts
   category: socialmedia
   homepage: https://tools.google.com/dlpage/hangoutplugin
+- id: udemy
+  name: Udemy
+  homepage: https://www.udemy.com/
+  category: resources
+- id: lynda
+  name: Lynda
+  homepage: https://www.lynda.com/
+  category: resources
+- id: egghead
+  name: egghead.io
+  homepage: https://egghead.io/
+  category: resources
+- id: caniuse
+  name: Can I use
+  homepage: https://caniuse.com/
+  category: resources
+- id: front_end_masters
+  name: Frontend Masters
+  homepage: https://frontendmasters.com/
+  category: resources
+- id: treehouse
+  name: treehouse
+  homepage: https://teamtreehouse.com/
+  category: resources
+- id: codepen
+  name: CodePen
+  homepage: https://codepen.io/
+  category: resources
+- id: udacity
+  name: Udacity
+  homepage: https://www.udacity.com/
+  category: resources
+- id: http_203
+  name: HTTP 203
+  homepage: https://developers.google.com/web/shows/http203/podcast/
+  category: resources
+- id: alligator
+  name: alligator.io
+  homepage: https://alligator.io/
+  category: resources
+- id: devto
+  name: dev.to
+  homepage: https://dev.to/
+  category: resources
+- id: css_wizardry
+  name: CSS Wizardry
+  homepage: https://css_wizardry.com
+  category: resources
+- id: web_standards
+  name: Web Standards
+  homepage: https://www.webstandards.org/
+  category: resources
+- id: medium
+  name: Medium
+  category: resources
+- id: google
+  name: Google
+  category: resources
+- id: youtube
+  name: YouTube
+  category: resources
+- id: stackoverflow
+  name: Stack Overflow
+  homepage: https://stackoverflow.com/
+  category: resources
+- id: frontend_focus
+  name: Frontend Focus
+  homepage: https://frontendfoc.us/
+  category: resources
+- id: css_layout_news
+  name: CSS Layout News
+  homepage: http://csslayout.news/
+  category: resources
+- id: flexbox_zombies
+  name: Flexbox Zombies
+  homepage: https://mastery.games/p/flexbox-zombies
+  category: resources
+- id: traversy_media
+  name: Traversy Media
+  homepage: https://www.traversymedia.com/
+  category: resources
+- id: superhi
+  name: SuperHi
+  homepage: https://www.superhi.com/
+  category: resources
+- id: platzi
+  name: Platzi
+  homepage: https://platzi.com/
+  category: resources
+- id: scrimba
+  name: Scrimba
+  homepage: https://scrimba.com/
+  category: resources
+- id: devdocs
+  name: devdocs.io
+  homepage: https://devdocs.io
+  category: resources
+- id: front_end_happy_hour
+  name: Front End Happy Hour
+  homepage: https://frontendhappyhour.com/
+  category: resources
+- id: toolsday
+  name: Toolsday
+  homepage: https://spec.fm/podcasts/toolsday
+  category: resources
+- id: fullstack_radio
+  name: Full Stack Radio
+  homepage: http://www.fullstackradio.com/
+  category: resources
+- id: react_podcast
+  name: React Podcast
+  homepage: https://reactpodcast.simplecast.fm/
+  category: resources
+- id: code_newbie
+  name: Code Newbie
+  homepage: https://www.codenewbie.org/
+  category: resources
+- id: developer_tea
+  name: Developer Tea
+  homepage: https://developertea.simplecast.fm/
+  category: resources
+- id: the_web_platform
+  name: The Web Platform Podcast
+  homepage: https://thewebplatformpodcast.com/
+  category: resources
+- id: web_standards_ru
+  name: Веб-стандарты
+  homepage: https://web-standards.ru/
+  category: resources
+- id: working_draft
+  name: Working Draft Podcast
+  homepage: https://workingdraft.de/
+  category: resources
+- id: software_engineering
+  name: Software Engineering Radio
+  homepage: https://www.se-radio.net/
+  category: resources

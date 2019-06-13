@@ -101,9 +101,9 @@ aggregations:
     others:
       total: 11317
       completion:
-        count: 689
-        percentage: 6.09
-      others_count: 160
+        count: 688
+        percentage: 6.08
+      others_count: 159
       buckets:
         - id: SASS
           count: 196

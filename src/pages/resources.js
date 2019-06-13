@@ -29,6 +29,18 @@ export const query = graphql`
                         percentage
                     }
                 }
+                others {
+                    total
+                    completion {
+                        count
+                        percentage
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
+                }
             }
         }
     }
