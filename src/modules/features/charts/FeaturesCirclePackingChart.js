@@ -24,12 +24,12 @@ const Chip = ({ color, color2 }) => (
 )
 
 const sectionLabelOffsets = {
-    'shapes-and-graphics': 250,
-    'layout': 0,
-    'interactions': 0,
+    'shapes-and-graphics': 350,
+    'layout': 300,
+    'interactions': 50,
     'animations-and-transforms': 0,
     'typography': 250,
-    'other-features': 300
+    'other-features': 0
 }
 
 const Tooltip = props => {
