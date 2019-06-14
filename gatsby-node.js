@@ -52,7 +52,7 @@ const getPageContext = page => {
 }
 
 const createBlockPages = (page, context, createPage) => {
-    const blocks = context.blocks
+    const blocks = page.blocks
     if (!Array.isArray(blocks) || blocks.length === 0) {
         return
     }

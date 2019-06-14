@@ -23,7 +23,7 @@ exports.pageFromConfig = (stack, config, parent) => {
         page.blocks = page.blocks.map(block => {
             // block can either be a string (used as `id`); or an object with an `id` property
             const blockObject = typeof block === 'string' ? { id: block } : block
-
+            const blockId = typeof block === 'string' ? block : block.id
             // if block type is missing, get it from parent
             if (!blockObject.type) {
                 blockObject.type = page.defaultBlockType
@@ -31,7 +31,7 @@ exports.pageFromConfig = (stack, config, parent) => {
 
             return {
                 ...blockObject,
-                path: `${page.path}${block.id}/`
+                path: `${page.path}${blockId}/`
             }
         })
     }
