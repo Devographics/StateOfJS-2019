@@ -52,13 +52,14 @@ const getPageContext = page => {
 }
 
 const createBlockPages = (page, context, createPage) => {
-    if (!Array.isArray(page.blocks) || page.blocks.length === 0) {
+    const blocks = context.blocks
+    if (!Array.isArray(blocks) || blocks.length === 0) {
         return
     }
 
-    page.blocks.forEach(block => {
+    blocks.forEach(block => {
         locales.forEach(locale => {
-            createPage({
+            const blockPage = {
                 path: localizedPath(block.path, locale),
                 component: path.resolve(`./src/core/share/ShareBlockTemplate.js`),
                 context: {
@@ -68,14 +69,14 @@ const createBlockPages = (page, context, createPage) => {
                     locale: locale.locale,
                     localePath: locale.path === 'default' ? '' : `/${locale.path}`
                 }
-            })
+            }
+            createPage(blockPage)
         })
     })
 }
 
 exports.createPages = async ({ actions: { createPage } }) => {
     const { flat } = await computeSitemap(rawSitemap)
-
     flat.forEach(page => {
         const context = getPageContext(page)
         if (page.type !== 'page') {
