@@ -810,6 +810,12 @@ translations:
       t: Close navigation menu
     - key: general.completion_percentage
       t: "Completion Percentage:"
+    - key: general.previous
+      t: "Previous:"
+    - key: general.next
+      t: "Next:"
+    - key: general.start
+      t: Start
 
     # partners
     - key: partners.our_partners

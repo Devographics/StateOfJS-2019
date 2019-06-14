@@ -2,12 +2,14 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import TextBlock from 'core/blocks/TextBlock'
 import Logo from 'core/components/Logo'
-import SponsorsBlock from '../core/blocks/SponsorsBlock'
+import SponsorsBlock from 'core/blocks/SponsorsBlock'
+import IntroductionFooter from 'core/pages/IntroductionFooter'
 
 const Introduction = ({ data }) => (
     <>
         <Logo size="l" />
         <TextBlock text={data.introduction.html} />
+        <IntroductionFooter />
         <SponsorsBlock />
     </>
 )

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import AwardsBlock from 'modules/awards/AwardsBlock'
 import PageHeader from 'core/pages/PageHeader'
+import PageFooter from 'core/pages/PageFooter'
 import TextBlock from 'core/blocks/TextBlock'
 
 const Awards = ({ data }) => {
@@ -10,6 +11,7 @@ const Awards = ({ data }) => {
             <PageHeader />
             {data.introduction && <TextBlock text={data.introduction.html} />}
             {/* <AwardsBlock data={data} /> */}
+            <PageFooter />
         </>
     )
 }

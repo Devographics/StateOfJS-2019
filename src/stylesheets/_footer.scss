@@ -2,3 +2,33 @@
     text-align: center;
     font-size: $medium-font;
 }
+
+.PageFooter {
+    @include small{
+        margin-top: $spacing*4;
+    }
+    @include medium-large{
+        @include flex-center;
+        margin-top: $spacing * 6;
+    }
+}
+.IntroductionFooter{
+    margin-top: $spacing * 2;
+}
+.PageFooter__Link {
+    @include small{
+        display: block;
+        text-align: center;
+    }
+    &--start {
+        font-size: $largest-font;
+    }
+    &--previous {
+        @include small{
+            margin-bottom: $spacing;
+        }
+        @include medium-large{
+            margin-right: $spacing;
+        }
+    }
+}

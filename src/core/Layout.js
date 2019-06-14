@@ -105,12 +105,12 @@ export default class Layout extends PureComponent {
                                         <PageMetaDebug />
                                         {this.props.children}
                                     </div>
-                                    {showPagination && (
+                                    {/* {showPagination && (
                                         <Pagination
                                             toggleSidebar={this.toggleSidebar}
                                             position="bottom"
                                         />
-                                    )}
+                                    )} */}
                                 </main>
                             </div>
                         </div>
