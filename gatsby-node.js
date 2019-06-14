@@ -186,14 +186,14 @@ unless default values are provided.
 
 */
 const defaultGitHubObject = {
-    name: 'n/a',
-    full_name: 'n/a',
-    description: 'n/a',
-    url: 'n/a',
+    name: '',
+    full_name: '',
+    description: '',
+    url: '',
     stars: -99,
     forks: -99,
     opened_issues: -99,
-    homepage: 'n/a'
+    homepage: ''
 }
 
 exports.onCreateNode = async ({ node, actions }) => {
