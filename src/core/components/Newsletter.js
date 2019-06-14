@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
 import Trans from '../i18n/Trans'
-
-const postUrl =
-    'https://emailoctopus.com/lists/463dc2a9-b2ff-11e8-a3c9-06b79b628af2/members/embedded/1.3/add'
+import { emailOctopusUrl, emailOctopusCode, emailOctopusSiteKey } from '../../constants'
+const postUrl = emailOctopusUrl
 
 export default class Newsletter extends Component {
     static propTypes = {
@@ -73,7 +72,7 @@ export default class Newsletter extends Component {
                                 <form
                                     method="post"
                                     action={postUrl}
-                                    datasitekey="6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6"
+                                    datasitekey={emailOctopusSiteKey}
                                     onSubmit={this.handleSubmit}
                                 >
                                     <input
@@ -89,7 +88,7 @@ export default class Newsletter extends Component {
 
                                     <input
                                         type="text"
-                                        name="hp463dc2a9-b2ff-11e8-a3c9-06b79b628af2"
+                                        name={emailOctopusCode}
                                         tabIndex="-1"
                                         autoComplete="nope"
                                         className="Newsletter__Hidden"

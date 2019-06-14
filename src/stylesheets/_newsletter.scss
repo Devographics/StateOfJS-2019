@@ -13,6 +13,7 @@
 .Block--Newsletter {
     @include border2;
     padding: $spacing * 1.5;
+    margin-bottom: $spacing*2;
     .newsletter {
         margin-bottom: 0;
     }
