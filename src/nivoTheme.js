@@ -24,7 +24,7 @@ export default {
         'Other/Unknown': colors.greyMedium
     },
     genderColors: {
-        female: colors.blueLight,
+        female: colors.teal,
         male: colors.blue,
         non_binary: colors.purple,
         prefer_not_to_say: colors.greyMedium

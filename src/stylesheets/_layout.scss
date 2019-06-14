@@ -34,6 +34,7 @@ $sidebar_width: 270px;
 }
 
 .pagelayout__main {
+    overflow-x: hidden;
     flex-grow: 1;
     @include small-medium {
         padding: $spacing $spacing $spacing * 4 $spacing;
