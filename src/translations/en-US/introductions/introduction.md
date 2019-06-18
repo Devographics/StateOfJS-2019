@@ -19,9 +19,9 @@ The State of CSS Survey is created and maintained by:
 
 Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
 
-### Download Our Data
+### Download Our Data (coming soon)
 
-You can [download the data for this survey](https://www.kaggle.com/sachag/state-of-css-2019). Let us know if you end up making your own data visualizations!
+You can [download the raw JSON data for this survey](https://www.kaggle.com/sachag/state-of-css-2019). Let us know if you end up making your own data visualizations!
 
 ### Completion Percentages
 

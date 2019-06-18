@@ -54,6 +54,10 @@
         bucketKeys: backendProficiency
         showDescription: true
         showLegend: true
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-design
 
 - id: features
   path: /features
@@ -80,6 +84,7 @@
               type: resources
               items:
                   - designcode1
+                  - frontendmasters-grid
 
       - id: shapes-and-graphics
         path: /shapes-and-graphics
@@ -95,6 +100,10 @@
             - css-masks
             - blend-modes
             - css-filter-effects
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - frontendmasters-svg
 
       - id: interactions
         path: /interactions
@@ -121,6 +130,10 @@
             - line-breaking-properties
             - font-variant
             - initial-letter
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - frontendmasters-typography
 
       - id: animations-and-transforms
         path: /animations-and-transforms
@@ -133,6 +146,10 @@
             - css-transitions
             - css-transforms
             - css-animations
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - frontendmasters-css
 
       - id: other-features
         path: /other-features
@@ -197,6 +214,10 @@
         dataKey: usage
         showDescription: true
         mode: absolute
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-code
 
 - id: technologies
   path: /technologies
@@ -218,6 +239,10 @@
             - less
             - postcss
             - stylus
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - frontendmasters-sass
 
       - id: css-frameworks
         path: /css-frameworks
@@ -263,6 +288,10 @@
             - radium
             - emotion
             - css-modules
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - frontendmasters-react
 
 - id: other-tools
   path: /other-tools
