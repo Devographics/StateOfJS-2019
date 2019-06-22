@@ -1,15 +1,15 @@
 ---
 type: conclusion
 page: conclusion
-locale: en-US
+locale: zh-TW
 ---
 
-If we had to pick one theme for this year's survey, it would be new beginnings. A new survey in a brand new domain for us; new features for CSS; and a newfound respect for CSS's ever-improving capabilities from the community. 
+如果要從今年的調查選出主軸，應該就屬新初學者 (new beginner) 了。對我們來說全新領域的新調查；CSS 的新功能，還有各種 CSS 來自社群一直在進化的能力，所獲得的致敬。
 
-To be fair, CSS has seen its share of doubters as well. The growing importance given to JavaScript over the past few years can sometimes leave some feeling like HTML & CSS are becoming second-tier players, and like their own skills in these fields aren't as valued anymore.  
+但是平心而論，CSS 也是有相當份量的質疑者。過去幾年 JavaScript 不斷成長的重要程度，使得 HTML 和 CSS 好像變得是二線球員，也因此，這領域的技能不再如過往般有價值。
 
-But the data tells another story. While JavaScript isn't going anywhere, it also seems certain that CSS is not going to be replaced anytime soon. And the more powerful CSS becomes, the more valuable mastering it will be. 
+這份資料倒是透露出另外的訊息。JavaScript 將如何發展還是未知數，但是，CSS 短期之內都不會遭到取代。所以，只要 CSS 變得越好用，精通它也會變得越有價值。
 
-And make no mistake, CSS is definitely evolving. Most of the features covered in the survey are far from mainstream yet, and upcoming features such as subgrids and aspect ratios are also sure to keep us busy. All this to say that we can't wait for the State of CSS 2020!
+還很確定的是 CSS 一直在進化。本次調查裡包含的功能距離進入主流還早得很，接下來還有像是 subgrid 和等比例 (aspect ratio) 功能，肯定會讓我們忙碌一陣子。早就已經等不及 CSS 現況調查 2020 了！
 
-<span class="conclusion__byline">– Sacha and Raphaël</span>
+<span class="conclusion__byline">– Sacha 和 Raphaël</span>
