@@ -1,0 +1,858 @@
+locale: en-US
+translations:
+
+    ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: About the T-shirt
+    - key: tshirt.description
+      t: >
+          The shirt features the State of CSS logo along with snippets of the actual CSS
+          code used to create each shape. Who knows, you might learn a thing or two!
+
+
+          We use a high-quality, super-soft tri-blend shirt with a slim fit. This shirt
+          sizes small, so if you prefer a looser fit **we recommend ordering one size up from what you
+          usually wear** (I'm wearing an M in the photos).
+    - key: tshirt.getit
+      t: Get It
+    - key: tshirt.price
+      t: $${price} + shipping
+
+    ###########################################################################
+    # Demographics
+    ###########################################################################
+
+    # salary ranges
+    - key: salary.none.long
+      t: I work for free
+    - key: salary.none.short
+      t: work for free
+    - key: salary.0_10.long
+      t: $0k-$10k
+    - key: salary.0_10.short
+      t: $0k-$10k
+    - key: salary.10_30.long
+      t: $10k-$30k
+    - key: salary.10_30.short
+      t: $10k-$30k
+    - key: salary.30_50.long
+      t: $30k-$50k
+    - key: salary.30_50.short
+      t: $30k-$50k
+    - key: salary.50_100.long
+      t: $50k-$100k
+    - key: salary.50_100.short
+      t: $50k-$100k
+    - key: salary.100_200.long
+      t: $100k-$200k
+    - key: salary.100_200.short
+      t: $100k-$200k
+    - key: salary.200_more.long
+      t: more than $200k
+    - key: salary.200_more.short
+      t: $200k+
+    - key: salary.axis_legend
+      t: Salary Range
+
+    # years of experience
+    - key: years-of-experience.less_than_1.long
+      t: Less than one year
+    - key: years-of-experience.less_than_1.short
+      t: '<1 year'
+    - key: years-of-experience.1_2.long
+      t: 1 to 2 years
+    - key: years-of-experience.1_2.short
+      t: 1~2 years
+    - key: years-of-experience.2_5.long
+      t: 2 to 5 years
+    - key: years-of-experience.2_5.short
+      t: 2~5 years
+    - key: years-of-experience.5_10.long
+      t: 5 to 10 years
+    - key: years-of-experience.5_10.short
+      t: 5~10 years
+    - key: years-of-experience.10_20.long
+      t: 10 to 20 years
+    - key: years-of-experience.10_20.short
+      t: 10~20 years
+    - key: years-of-experience.more_than_20.long
+      t: More than 20 years
+    - key: years-of-experience.more_than_20.short
+      t: '>20 years'
+    - key: years-of-experience.axis_legend
+      t: Years of Experience
+
+    # company size
+    - key: company-size.1.long
+      t: One employee
+    - key: company-size.1.short
+      t: one
+    - key: company-size.1_5.long
+      t: 1 to 5 employees
+    - key: company-size.1_5.short
+      t: 1~5
+    - key: company-size.5_10.long
+      t: 5 to 10 employees
+    - key: company-size.5_10.short
+      t: 5~10
+    - key: company-size.10_20.long
+      t: 10 to 20 employees
+    - key: company-size.10_20.short
+      t: 10~20
+    - key: company-size.20_50.long
+      t: 20 to 50 employees
+    - key: company-size.20_50.short
+      t: 20~50
+    - key: company-size.50_100.long
+      t: 50 to 100 employees
+    - key: company-size.50_100.short
+      t: 50~100
+    - key: company-size.100_1000.long
+      t: 100 to 1000 employees
+    - key: company-size.100_1000.short
+      t: 100~1000
+    - key: company-size.more_than_1000.long
+      t: More than 1000 employees
+    - key: company-size.more_than_1000.short
+      t: 1000+
+    - key: company-size.axis_legend
+      t: Number of Employees
+
+    # gender
+    - key: gender.female
+      t: Female
+    - key: gender.male
+      t: Male
+    - key: gender.non_binary
+      t: Non-Binary/Third Gender
+    - key: gender.prefer_not_to_say
+      t: Prefer not to say
+
+    # sources
+    - key: sources.other_unknown
+      t: Other/Unknown
+
+    # javascript proficiency
+    - key: block.title.javascript-proficiency
+      t: JavaScript Proficiency
+    - key: block.description.javascript-proficiency
+      t: How proficient are you at JavaScript development?
+    - key: javascript-proficiency.axis_legend
+      t: JavaScript Proficiency
+    - key: javascript-proficiency.none.short
+      t: None
+    - key: javascript-proficiency.none.long
+      t: I am not able to write any JavaScript
+    - key: javascript-proficiency.short_simple_javascript.short
+      t: Beginner
+    - key: javascript-proficiency.short_simple_javascript.long
+      t: I can write short, simple JavaScript or jQuery statements
+    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
+      t: Intermediate
+    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
+      t: I can work on existing front-end codebases using modern frameworks (React, Vue, etc.)
+    - key: javascript-proficiency.advanced_front_end_patterns.short
+      t: Advanced
+    - key: javascript-proficiency.advanced_front_end_patterns.long
+      t: Can handle advanced front-end patterns (state management, data loading, etc.)
+    - key: javascript-proficiency.entire_codebases_from_scratch.short
+      t: Expert
+    - key: javascript-proficiency.entire_codebases_from_scratch.long
+      t: Can architecture entire front-end codebases from scratch
+
+    # backend proficiency
+    - key: block.title.backend-proficiency
+      t: Back-end Proficiency
+    - key: block.description.backend-proficiency
+      t: How proficient are you at back-end development?
+    - key: backend-proficiency.axis_legend
+      t: Back-End Proficiency
+    - key: backend-proficiency.none.short
+      t: None
+    - key: backend-proficiency.none.long
+      t: I am not able to handle any back-end work
+    - key: backend-proficiency.able_to_setup_cms_or_site_generator.short
+      t: Beginner
+    - key: backend-proficiency.able_to_setup_cms_or_site_generator.long
+      t: I can set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)
+    - key: backend-proficiency.able_to_use_existing_frameworks.short
+      t: Intermediate
+    - key: backend-proficiency.able_to_use_existing_frameworks.long
+      t: I can develop apps using pre-existing frameworks (Rails, Laravel, etc.)
+    - key: backend-proficiency.able_to_setup_from_scratch.short
+      t: Advanced
+    - key: backend-proficiency.able_to_setup_from_scratch.long
+      t: I can set up an entire back-end from scratch (Go, Node, etc.)
+
+    # job title
+    - key: job-title.front_end_dev.short
+      t: Front-end Developer
+    - key: job-title.front_end_dev.long
+      t: Front-end Developer/Engineer
+    - key: job-title.full_stack_dev.short
+      t: Full-stack Developer
+    - key: job-title.full_stack_dev.long
+      t: Full-stack Developer/Engineer
+    - key: job-title.web_designer.short
+      t: Web Designer
+    - key: job-title.web_designer.long
+      t: Web Designer
+    - key: job-title.ux_designer.short
+      t: UX Designer
+    - key: job-title.ux_designer.long
+      t: UX Designer
+    - key: job-title.ui_designer.short
+      t: UI Designer
+    - key: job-title.ui_designer.long
+      t: UI Designer
+    - key: job-title.back_end_dev.short
+      t: Back-end Developer
+    - key: job-title.back_end_dev.long
+      t: Back-end Developer/Engineer
+
+    # other
+    - key: block.title.participation-by-country
+      t: Participation by Country
+    - key: block.description.participation-by-country
+      t: Which proportion of survey respondents came from each country. 
+    - key: block.title.salary
+      t: Salary
+    - key: block.description.salary
+      t: Yearly salary in USD.
+    # - key: block.title.salary-per-country
+    #   t: Average Salary per Country
+    # - key: block.description.salary-per-country
+    #   t: Average Salary per Country.
+    - key: block.title.years-of-experience
+      t: Years of Experience
+    - key: block.description.years-of-experience
+      t: How long you've been writing CSS.
+    - key: block.title.company-size
+      t: Company Size
+    # - key: block.description.company-size
+    #   t: Company size breakdown.
+    - key: block.title.gender
+      t: Gender
+    - key: block.description.gender
+      t: Respondents gender.
+    - key: block.title.source
+      t: Source
+    - key: block.description.source
+      t: >
+          How participants found out about the survey (aggregation of self-reported answers and 
+          referrer tracking).
+
+          
+          **State of JS** indicates subscribers from our previous JavaScript surveys,
+          **Announcement** corresponds to our official announcement post on [FreeCodeCamp](https://www.freecodecamp.org), 
+          and **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
+
+    - key: block.description.gender
+      t: Gender breakdown.
+    - key: block.title.job-title
+      t: Job Title
+    - key: block.description.job-title
+      t: How do you introduce yourself at parties?
+
+    ###########################################################################
+    # Features
+    ###########################################################################
+
+    - key: feature.learn_more
+      t: Learn More
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: CanIUse
+    - key: feature.specification_link
+      t: W3C Specification
+    - key: features.usage.used_it
+      t: Have used it
+    - key: features.usage.know_it
+      t: Know about it
+    - key: features.usage.ratio
+      t: Usage Ratio
+    - key: features.usage.know_not_used
+      t: Know what it is, but haven't used it
+    - key: features.usage.never_heard_not_sure
+      t: Never heard of it/Not sure what it is
+
+    - key: block.title.features-overview
+      t: Usage Overview
+    - key: block.description.features-overview
+      t: >
+          This chart presents the various adoption rates for all features, grouped by category. 
+
+
+          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
+
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+
+    - key: block.title.features-section-overview
+      t: Usage Overview
+    - key: block.description.features-section-overview
+      t: >
+          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
+
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+
+    - key: block.description.css-exclusions
+      t: >
+          An exclusion element is a block-level element which is not a float, and generates an exclusion box. 
+          An exclusion element establishes a new block formatting context (via <a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>).
+
+
+    ###########################################################################
+    # Units & Selectors
+    ###########################################################################
+
+    - key: block.title.units
+      t: Units
+    - key: block.title.pseudo-elements
+      t: Pseudo-Elements
+    - key: block.title.combinators
+      t: Combinators
+    - key: block.title.tree-document-structure
+      t: Tree & Document Structure
+    - key: block.title.attributes
+      t: Attributes
+    - key: block.title.links-urls
+      t: Link & URLs
+    - key: block.title.interaction
+      t: Interaction
+    - key: block.title.form-controls
+      t: Form Controls
+
+    - key: block.description.units
+      t: Which CSS units do developers use?
+    - key: block.description.pseudo-elements
+      t: Which pseudo CSS selectors do developers use?
+    - key: block.description.combinators
+      t: Which combinations of CSS selectors do developers use?
+    - key: block.description.tree-document-structure
+      t: Which structure related CSS selectors do developers use?
+    - key: block.description.attributes
+      t: Which attributes CSS selectors do developers use?
+    - key: block.description.links-urls
+      t: Which links & URLs related CSS selectors do developers use?
+    - key: block.description.interaction
+      t: Which interaction CSS selectors do developers use?
+    - key: block.description.form-controls
+      t: Which form related CSS selectors do developers use?
+
+    ###########################################################################
+    # Tools & Methodologies
+    ###########################################################################
+
+    - key: block.title.tools-overview
+      t: Sentiment Overview
+    - key: block.description.tools-overview
+      t: >
+          Overview of opinions on the tools and methodologies surveyed. <span class="text-green text-bold">Green segments</span> represent positive opinions, 
+          while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. 
+          
+          
+          The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
+          (excluding respondents unaware of the technology). 
+
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+    - key: block.tool.links
+      t: Links
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.homepage_link
+      t: Homepage
+    - key: block.tool.npm_link
+      t: NPM
+
+    - key: block.title.other-methodologies
+      t: Other Methodologies
+
+      # rankings/bump chart
+    - key: block.title.tools-section-overview
+      t: Rankings
+    - key: block.description.tools-section-overview
+      t: > 
+        Awareness, interest, and satisfaction ratio rankings. 
+        Note that these three ratios all correspond to the same point in time.
+    - key: opinions.legends.awareness_ratio
+      t: Awareness
+    - key: opinions.legends.interest_ratio
+      t: Interest
+    - key: opinions.legends.satisfaction_ratio
+      t: Satisfaction
+
+    # quadrant/scatterplot chart
+    - key: block.title.tools-scatterplot
+      t: Satisfaction vs Usage
+    - key: block.description.tools-scatterplot
+      t: >
+          This chart shows each technology’s **satisfaction ratio** over its total **user count**. 
+          It can be divided into four quadrants:
+
+          - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
+
+          - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
+
+          - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
+
+          - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+          
+    - key: quadrants.assess
+      t: Assess
+    - key: quadrants.adopt
+      t: Adopt
+    - key: quadrants.avoid
+      t: Avoid
+    - key: quadrants.analyze
+      t: Analyze
+
+    # opinions
+    - key: opinions.legends.never_heard
+      t: I've never heard of it
+    - key: opinions.legends_short.never_heard
+      t: Never heard of it
+    - key: opinions.legends_extrashort.never_heard
+      t: Never heard
+
+    - key: opinions.legends.not_interested
+      t: I've HEARD of it, and am NOT interested
+    - key: opinions.legends_short.not_interested
+      t: Heard of it, not interested
+    - key: opinions.legends_extrashort.not_interested
+      t: Not interested
+
+    - key: opinions.legends.interested
+      t: I've HEARD of it, and WOULD like to learn it
+    - key: opinions.legends_short.interested
+      t: Heard of it, would like to learn
+    - key: opinions.legends_extrashort.interested
+      t: Interested
+
+    - key: opinions.legends.would_use
+      t: I've USED it before, and WOULD use it again
+    - key: opinions.legends_short.would_use
+      t: Used it, would use again
+    - key: opinions.legends_extrashort.would_use
+      t: Would use again
+
+    - key: opinions.legends.would_not_use
+      t: I've USED it before, and would NOT use it again
+    - key: opinions.legends_short.would_not_use
+      t: Used it, would not use again
+    - key: opinions.legends_extrashort.would_not_use
+      t: Would not use
+
+    - key: opinions.legends.total_respondents
+      t: Total Respondents
+    - key: opinions.legends_short.total_respondents
+      t: Total Respondents
+    - key: opinions.legends_extrashort.total_respondents
+      t: Total Respondents
+
+    ###########################################################################
+    # Other Tools
+    ###########################################################################
+
+    - key: block.title.text-editors
+      t: Text Editors
+    - key: block.description.text-editors
+      t: Which text editor(s) do you regularly use?
+    - key: block.title.text-editors-others
+      t: Other Text Editors
+    - key: block.description.text-editors-others
+      t: Other answers (freeform field).
+    - key: block.title.browsers
+      t: Browsers
+    - key: block.description.browsers
+      t: Which browser(s) do you primarily work in during initial development?
+    - key: block.title.browsers-others
+      t: Other Browsers
+    - key: block.description.browsers-others
+      t: Other answers (freeform field).
+
+    ###########################################################################
+    # Environments
+    ###########################################################################
+
+    - key: block.title.form-factors
+      t: Form Factors
+    - key: block.description.form-factors
+      t: Which form factors do you test on?
+
+    - key: block.title.env-browsers
+      t: Browsers
+    - key: block.description.env-browsers
+      t: Which browsers do you test in?
+
+    # print styles
+    - key: block.title.print-styles
+      t: CSS for Print
+    - key: block.description.print-styles
+      t: Do you write print styles?
+    - key: print-styles.axis_legend
+      t: Periodicity
+    - key: print-styles.never.short
+      t: Never
+    - key: print-styles.never.long
+      t:  I (almost) never write print styles
+    - key: print-styles.occasionally.short
+      t: Occasionally
+    - key: print-styles.occasionally.long
+      t: I occasionally write print styles
+    - key: print-styles.often.short
+      t: Often
+    - key: print-styles.often.long
+      t: I write print styles as part of most projects
+    - key: print-styles.mainly.short
+      t: Mainly
+    - key: print-styles.mainly.long
+      t: I focus mainly on CSS for print
+
+    # email styles
+    - key: block.title.email-styles
+      t: CSS for Email Clients
+    - key: block.description.email-styles
+      t: Do you write CSS for email clients?
+    - key: email-styles.axis_legend
+      t: Periodicity
+    - key: email-styles.never.short
+      t: Never
+    - key: email-styles.never.long
+      t:  I (almost) never write CSS for email clients
+    - key: email-styles.occasionally.short
+      t: Occasionally
+    - key: email-styles.occasionally.long
+      t: I occasionally write CSS for email clients
+    - key: email-styles.often.short
+      t: Often
+    - key: email-styles.often.long
+      t: I write CSS for email clients as part of most projects
+    - key: email-styles.mainly.short
+      t: Mainly
+    - key: email-styles.mainly.long
+      t: I focus mainly on CSS for email clients
+
+    ###########################################################################
+    # Resources
+    ###########################################################################
+
+    # blogs & magazines
+    - key: block.title.blogs-magazines
+      t: Blogs & Magazines
+    - key: block.description.blogs-magazines
+      t: Which CSS-related blogs/magazines/etc. do you read?
+    - key: block.title.blogs-magazines-others
+      t: Other Blogs & Magazines
+    - key: block.description.blogs-magazines-others
+      t: Other answers (freeform field).
+  
+    # sites & courses
+    - key: block.title.sites-courses
+      t: Sites & Courses
+    - key: block.description.sites-courses
+      t: Which CSS-related sites/courses/etc. do you consult?
+    - key: block.title.sites-courses-others
+      t: Other Sites & Courses
+    - key: block.description.sites-courses-others
+      t: Other answers (freeform field).
+
+    # podcasts
+    - key: block.title.podcasts
+      t: Podcasts
+    - key: block.description.podcasts
+      t: Which CSS or programming-related podcasts do you listen to?
+    - key: block.title.podcasts-others
+      t: Other Podcasts
+    - key: block.description.podcasts-others
+      t: Other answers (freeform field).
+
+    ###########################################################################
+    # Opinions
+    ###########################################################################
+
+    - key: block.title.easy-to-learn
+      t: Learning Curve
+    - key: block.description.easy-to-learn
+      t: “CSS is easy to learn”
+
+    - key: block.title.evolving-too-slowly
+      t: Rate of Change
+    - key: block.description.evolving-too-slowly
+      t: “CSS is evolving too slowly”
+
+    - key: block.title.utility-classes
+      t: Non-Semantic Classes
+    - key: block.description.utility-classes
+      t: “Non-semantic classes such as `.center`, `.large-text`, etc. should be avoided.”
+
+    - key: block.title.selector-nesting
+      t: Selector Nesting
+    - key: block.description.selector-nesting
+      t: “Selector nesting such as `.foo .bar ul li {...}` should be avoided.”
+
+    - key: block.title.programming-language
+      t: Programming Language
+    - key: block.description.programming-language
+      t: “CSS is a programming language”
+
+    - key: block.title.enjoy-css
+      t: Enjoyment
+    - key: block.description.enjoy-css
+      t: “I enjoy writing CSS”
+
+    # ?
+    # CSS is moving in the right direction
+
+    - key: block.title.missing-features
+      t: Missing Features
+    - key: block.description.missing-features
+      t: What do developers feel is currently missing from CSS?
+
+    ###########################################################################
+    # Awards
+    ###########################################################################
+
+    # awards
+    - key: awards.runner_ups
+      t: Runner Ups
+    - key: block.title.highest_satisfaction
+      t: Highest Satisfaction
+    - key: block.description.highest_satisfaction
+      t: |
+          Awarded to the library with the highest percentage of satisfied users.
+    - key: award.highest_satisfaction.comment
+      t: |
+          With **${tools[0].percentage}%** of users willing to use it again,
+          ${tools[0].label} proves it’s not kidding around.
+    - key: award.highest_satisfaction.runner_up
+      t: ${tool.label} ${tool.percentage}%
+    - key: block.title.highest_interest
+      t: Highest Interest
+    - key: block.description.highest_interest
+      t: |
+          Awarded to the technology developers are most interested in learning.
+    - key: award.highest_interest.comment
+      t: |
+          **${tools[0].percentage}%** of developers who have heard about
+          ${tools[0].label} want to learn it.
+          That’s some serious interest!
+    - key: award.highest_interest.runner_up
+      t: ${tool.label} ${tool.percentage}%
+    - key: block.title.highest_usage
+      t: Most Used
+    - key: block.description.highest_usage
+      t: |
+          Awarded to technology with the largest user base.
+    - key: award.highest_usage.comment
+      t: |
+          With **${tools[0].count}** users ${tools[0].label}
+          is the most used library this year.
+    - key: award.highest_usage.runner_up
+      t: ${tool.label} ${tool.count}
+    - key: block.title.most_mentioned
+      t: Most Mentioned
+    - key: block.description.most_mentioned
+      t: |
+          Awarded to the library mentioned the most in the “other libraries” answer.
+    - key: award.most_mentioned.comment
+      t: |
+          ${tools[0].label} collected **${tools[0].count}** mentions,
+          making it the most submitted freeform answer by far.
+    - key: award.most_mentioned.runner_up
+      t: ${tool.label} ${tool.count}
+    - key: block.title.prediction
+      t: Prediction Award
+    - key: block.description.prediction
+      t: |
+          Awarded to an up-and-coming technology that might take over… or not?
+    - key: award.prediction.comment
+      t: |
+          The Facebook team is two for two with React and GraphQL.
+          Will Reason follow the same path?
+    - key: award.prediction.runner_up
+      t: ${tool.label}
+    - key: block.title.special
+      t: Special Award
+    - key: block.description.special
+      t: |
+          Awarded to a technology that we just fell in love with this year.
+    - key: award.special.comment
+      t: |
+          ${tools[0].label} has become the leading JavaScript text editor, and we can definitely see why!
+    - key: award.special.runner_up
+      t: ${tool.label}
+
+    ###########################################################################
+    # Generic
+    ###########################################################################
+
+    # pages
+    - key: page.introduction
+      t: Introduction
+    - key: page.tshirt
+      t: T-shirt
+    - key: page.demographics
+      t: Demographics
+    - key: page.features
+      t: Features
+    - key: page.layout
+      t: Layout
+    - key: page.shapes-and-graphics
+      t: Shapes & Graphics
+    - key: page.interactions
+      t: Interactions
+    - key: page.typography
+      t: Typography
+    - key: page.animations-and-transforms
+      t: Animations & Transforms
+    - key: page.other-features
+      t: Other Features
+    - key: page.units-and-selectors
+      t: Units & Selectors
+    - key: page.technologies
+      t: Technologies
+    - key: page.pre-post-processors
+      t: Pre & Post Processors
+    - key: page.css-frameworks
+      t: CSS Frameworks
+    - key: page.methodologies
+      t: Methodologies
+    - key: page.css-in-js
+      t: CSS-in-JS
+    - key: page.other-tools
+      t: Other Tools
+    - key: page.environments
+      t: Environments
+    - key: page.resources
+      t: Resources
+    - key: page.opinions
+      t: Opinions
+    - key: page.awards
+      t: Awards
+    - key: page.conclusion
+      t: Conclusion
+    - key: page.support
+      t: Support Us
+
+    # sharing
+    - key: share.share
+      t: Share
+    - key: share.site.title
+      t: Discover the StateOf CSS 2019 results
+    - key: share.site.twitter_text
+      t: 'Discover the State Of CSS 2019 results ${link} #StateOfCSS'
+    - key: share.site.subject
+      t: State Of CSS Survey Results
+    - key: share.site.body
+      t: 'Here are some interesting CSS survey results: ${link}'
+    - key: share.block.twitter_text
+      t: '#StateOfJS 2019: ${title} ${link}'
+    - key: share.block.subject
+      t: State Of CSS Survey Results
+    - key: share.block.body
+      t: 'Here are some interesting CSS survey results (${title}): ${link}'
+    - key: share.twitter
+      t: Share on Twitter
+    - key: share.facebook
+      t: Share on Facebook
+    - key: share.linkedin
+      t: Share on LinkedIn
+    - key: share.email
+      t: Share by email
+    - key: share.image
+      t: Get image
+      
+    # opinion scale
+    - key: opinion_scale.0.long
+      t: Strongly Disagree
+    - key: opinion_scale.1.long
+      t: Disagree
+    - key: opinion_scale.2.long
+      t: Neutral
+    - key: opinion_scale.3.long
+      t: Agree
+    - key: opinion_scale.4.long
+      t: Strongly Agree
+
+    # general
+    - key: general.title
+      t: State of CSS 2019
+    - key: general.description
+      t: Discover the most popular CSS features & technologies of the year.
+    - key: general.stay_tuned
+      t: Stay Tuned
+    - key: general.leave_your_email
+      t: "If you'd like to know when we release additional results or announce next year's edition, just leave us your email below:"
+    - key: general.your_email
+      t: Your Email
+    - key: general.notify_me
+      t: Notify Me
+    - key: general.help_us_translate
+      t: Help translate the survey →
+    - key: general.not_found
+      t: >
+      
+        ## Error 404
+        
+        Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/state-of-css-2019/issues) if you think something might be broken. 
+    - key: general.back_to_intro
+      t: Back to introduction
+    - key: general.close_nav
+      t: Close navigation menu
+    - key: general.completion_percentage
+      t: "Completion Percentage:"
+    - key: general.previous
+      t: "Previous:"
+    - key: general.next
+      t: "Next:"
+    - key: general.start
+      t: Start
+
+    # partners
+    - key: partners.our_partners
+      t: Our Partners
+    - key: partners.become_partner
+      t: Help sponsor the survey
+    - key: partners.thanks
+      t: Thanks to our partners for supporting us!
+    - key: partners.learn_more
+      t: Learn more.
+    - key: block.title.recommended_resources
+      t: Recommended Resources
+      
+    # charts
+    - key: block.title.usage-ratio
+      t: Usage Ratio Ranking
+    - key: block.description.usage-ratio
+      t: Ranking usage ratios among users who are aware of a technology.
+    - key: users_percentage
+      t: Percentage of Users
+    - key: users_count
+      t: User Count
+    - key: satisfaction_percentage
+      t: Satisfaction Percentage
+    - key: chart_mode
+      t: mode
+    - key: chart_mode.absolute
+      t: absolute
+    - key: chart_mode.relative
+      t: relative
+    - key: chart_units
+      t: Units
+    - key: chart_units.percentage
+      t: Percents
+    - key: chart_units.count
+      t: Count
+    - key: users
+      t: users
+    - key: percent_satisfaction
+      t: '% satisfaction'
