@@ -4,3 +4,6 @@
 # - locale: fr-FR
 #   path: fr
 #   label: Français
+- locale: zh-TW
+  path: tw
+  label: 中文
