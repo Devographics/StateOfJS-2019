@@ -151,19 +151,19 @@ aggregations:
         percentage: 30.72
       others_count: 2069
       buckets:
-        - id: 容器查詢
+        - id: Container Queries
           count: 339
           percentage: 3
-        - id: 上層選擇器
+        - id: Parent Selector
           count: 324
           percentage: 2.86
-        - id: 巢狀結構
+        - id: Nesting
           count: 188
           percentage: 1.66
-        - id: 瀏覽器支援
+        - id: Browser Support
           count: 120
           percentage: 1.06
-        - id: 函式
+        - id: functions
           count: 114
           percentage: 1.01
         - id: Scoping
@@ -178,9 +178,9 @@ aggregations:
         - id: Houdini
           count: 39
           percentage: 0.34
-        - id: ':has() 選擇器'
+        - id: ':has() selector'
           count: 26
           percentage: 0.23
-        - id: 沒有
+        - id: Nothing
           count: 25
           percentage: 0.22

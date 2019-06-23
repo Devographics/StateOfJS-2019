@@ -54,7 +54,7 @@
   homepage: https://www.freecodecamp.org/
   category: courses
 - id: freecodecamp-announcement-css2019
-  name: 公告
+  name: Announcement
   homepage: https://medium.com/free-code-camp/announcing-the-state-of-css-2019-survey-e1e4268df64d
   category: blogs
   aliases: 
@@ -64,7 +64,7 @@
   homepage: https://www.codecademy.com/
   category: courses
 - id: The CSS Specs
-  name: CSS 規格
+  name: The CSS Specs
   homepage: https://www.w3.org/Style/CSS/specs.en.html
   category: resources
 - id: Pluralsight
@@ -72,7 +72,7 @@
   homepage: https://www.pluralsight.com/
   category: courses
 - id: levelup
-  name: Level Up 課程
+  name: Level Up Tutorials
   aliases: 
     - LevelUp Tutorials
   homepage: https://www.leveluptutorials.com/
@@ -112,11 +112,11 @@
   homepage: https://news.ycombinator.com/
   category: socialmedia
 - id: stateofjs
-  name: JS 現況
+  name: State of JS
   homepage: https://stateofjs.com
   category: resources
 - id: State of CSS
-  name: CSS 現況
+  name: State of CSS
   homepage: https://stateofcss.com
   category: resources
 - id: reddit
@@ -172,7 +172,7 @@
   category: socialmedia
   homepage: https://facebook.com
 - id: word_of_mouth
-  name: 口耳相傳
+  name: Word Of Mouth
   category: socialmedia
 - id: producthunt
   name: Product Hunt

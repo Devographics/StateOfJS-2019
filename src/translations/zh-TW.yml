@@ -87,7 +87,7 @@ translations:
     - key: company-size.1.long
       t: 一位員工
     - key: company-size.1.short
-      t: 1
+      t: '1'
     - key: company-size.1_5.long
       t: 1 到 5 位員工
     - key: company-size.1_5.short
@@ -381,7 +381,7 @@ translations:
 
     # quadrant/scatterplot chart
     - key: block.title.tools-scatterplot
-      t: 使用與滿意度
+      t: 使用量與滿意度
     - key: block.description.tools-scatterplot
       t: >
           此圖表顯示每個技術根據**使用者總數**的**滿意比例**。
@@ -492,19 +492,19 @@ translations:
     - key: print-styles.never.short
       t: 從不
     - key: print-styles.never.long
-      t: 我（幾乎）沒寫過列印的樣式
+      t: 我（幾乎）沒寫過列印的樣式。
     - key: print-styles.occasionally.short
       t: 偶爾
     - key: print-styles.occasionally.long
-      t: 我偶爾寫列印的樣式
+      t: 我偶爾寫列印的樣式。
     - key: print-styles.often.short
       t: 經常
     - key: print-styles.often.long
-      t: 我在許多專案裡會把列印用的樣式當作一部份來撰寫
+      t: 我在許多專案裡會把列印用的樣式當作一部份來撰寫。
     - key: print-styles.mainly.short
       t: 主要
     - key: print-styles.mainly.long
-      t: 我主要就是在做列印用的 CSS
+      t: 我主要就是在做列印用的 CSS。
 
     # email styles
     - key: block.title.email-styles
@@ -516,19 +516,19 @@ translations:
     - key: email-styles.never.short
       t: 從不
     - key: email-styles.never.long
-      t: 我（幾乎）沒寫過 Email 客戶端的 CSS
+      t: 我（幾乎）沒寫過 Email 客戶端的 CSS。
     - key: email-styles.occasionally.short
       t: 偶爾
     - key: email-styles.occasionally.long
-      t: 我偶爾寫 Email 客戶端的 CSS
+      t: 我偶爾寫 Email 客戶端的 CSS。
     - key: email-styles.often.short
       t: 經常
     - key: email-styles.often.long
-      t: 我在許多專案裡會把 Email 客戶端的 CSS 當作一部份來撰寫
+      t: 我在許多專案裡會把 Email 客戶端的 CSS 當作一部份來撰寫。
     - key: email-styles.mainly.short
       t: 主要
     - key: email-styles.mainly.long
-      t: 我主要就是在做 Email 客戶端的 CSS
+      t: 我主要就是在做 Email 客戶端的 CSS。
 
     ###########################################################################
     # Resources
@@ -620,12 +620,12 @@ translations:
           頒給擁有最高使用者滿意度的函示庫。
     - key: award.highest_satisfaction.comment
       t: |
-          With **${tools[0].percentage}%** of users willing to use it again,
+          根據 **${tools[0].percentage}%** 的使用者願意再次使用，
           ${tools[0].label} proves it’s not kidding around.
     - key: award.highest_satisfaction.runner_up
       t: ${tool.label} ${tool.percentage}%
     - key: block.title.highest_interest
-      t: Highest Interest
+      t: 最有興趣
     - key: block.description.highest_interest
       t: |
           Awarded to the technology developers are most interested in learning.
@@ -637,7 +637,7 @@ translations:
     - key: award.highest_interest.runner_up
       t: ${tool.label} ${tool.percentage}%
     - key: block.title.highest_usage
-      t: Most Used
+      t: 最多使用
     - key: block.description.highest_usage
       t: |
           Awarded to technology with the largest user base.
@@ -670,7 +670,7 @@ translations:
     - key: award.prediction.runner_up
       t: ${tool.label}
     - key: block.title.special
-      t: Special Award
+      t: 特別獎項S
     - key: block.description.special
       t: |
           Awarded to a technology that we just fell in love with this year.
@@ -710,11 +710,11 @@ translations:
     - key: page.technologies
       t: 技術
     - key: page.pre-post-processors
-      t: 預 & 後處理器
+      t: Pre & Post Processors
     - key: page.css-frameworks
-      t: CSS 框架
+      t: CSS Frameworks
     - key: page.methodologies
-      t: 方法論
+      t: Methodologies
     - key: page.css-in-js
       t: CSS-in-JS
     - key: page.other-tools
@@ -776,7 +776,7 @@ translations:
     - key: general.title
       t: CSS 現況調查 2019
     - key: general.description
-      t: Discover the most popular CSS features & technologies of the year.
+      t: 探訪本年度最廣泛使用的 CSS 功能與技術。
     - key: general.stay_tuned
       t: 敬請期待
     - key: general.leave_your_email

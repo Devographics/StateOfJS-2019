@@ -4,7 +4,7 @@ page: introduction
 locale: zh-TW
 ---
 
-<span class="first-letter">在</span>網頁開發的世界裡，JavaScript 如同充滿怒氣、叛逆的青少年，每年都進入全新境界，說你太老聽不懂。而 CSS 就像認真上課、舉止得宜的小朋友，永遠保持有禮貌，不草率下決定。
+<span class="first-letter">在</span>網頁開發的世界裡，JavaScript 給人的感覺如同充滿怒氣、叛逆的青少年，每年都進入全新境界，說你太老聽不懂。而 CSS 就像認真上課、舉止得宜的小朋友，永遠保持有禮貌，不草率下決定。
 
 不過，不要把事事當作理所當然：儘管已經超過 20 歲，CSS 有跡象開始如同 JavaScript 經歷過的青少年時期吵吵鬧鬧。Flexbox! Grid! CSS-in-JS! 到了 2019 年，CSS 總算把頭髮染成粉紅色，跑去刺青，其實它私下早就想這樣做了。
 
