@@ -6,540 +6,529 @@ translations:
     ###########################################################################
 
     - key: tshirt.about
-      t: About the T-shirt
+      t: 關於這件 T-shirt
     - key: tshirt.description
       t: >
-          The shirt features the State of CSS logo along with snippets of the actual CSS
-          code used to create each shape. Who knows, you might learn a thing or two!
+          這件衣服最特別的地方是 CSS 現況調查的標誌，附上可以做出每個圖形的 CSS 實際程式碼片段。說不定，你可以從中學到一兩招！
 
 
-          We use a high-quality, super-soft tri-blend shirt with a slim fit. This shirt
-          sizes small, so if you prefer a looser fit **we recommend ordering one size up from what you
-          usually wear** (I'm wearing an M in the photos).
+          我們使用高品質、超柔軟的 Tri-blend 合身剪裁。尺寸比較小一些，所以如果習慣較為寬鬆，**我們建議訂購比你平常穿著還要大一號的**（在照片裡，我穿的是 M 號。）
+
     - key: tshirt.getit
-      t: Get It
+      t: 入手
     - key: tshirt.price
-      t: $${price} + shipping
+      t: $${price} + 運費
 
     ###########################################################################
-    # Demographics
+    # 參與者統計
     ###########################################################################
 
-    # salary ranges
+    # 薪資範圍
     - key: salary.none.long
-      t: I work for free
+      t: 我免費做功德
     - key: salary.none.short
-      t: work for free
+      t: 做功德
     - key: salary.0_10.long
-      t: $0k-$10k
+      t: 美金 0-10k
     - key: salary.0_10.short
-      t: $0k-$10k
+      t: 美金 0-10k
     - key: salary.10_30.long
-      t: $10k-$30k
+      t: 美金 10-30k
     - key: salary.10_30.short
-      t: $10k-$30k
+      t: 美金 10-30k
     - key: salary.30_50.long
-      t: $30k-$50k
+      t: 美金 30-50k
     - key: salary.30_50.short
-      t: $30k-$50k
+      t: 美金 30-50k
     - key: salary.50_100.long
-      t: $50k-$100k
+      t: 美金 50-100k
     - key: salary.50_100.short
-      t: $50k-$100k
+      t: 美金 50-100k
     - key: salary.100_200.long
-      t: $100k-$200k
+      t: 美金 100-200k
     - key: salary.100_200.short
-      t: $100k-$200k
+      t: 美金 100-200k
     - key: salary.200_more.long
-      t: more than $200k
+      t: 美金 200k 以上
     - key: salary.200_more.short
-      t: $200k+
+      t: 美金 200k+
     - key: salary.axis_legend
-      t: Salary Range
+      t: 薪資範圍
 
-    # years of experience
+    # 資歷
     - key: years-of-experience.less_than_1.long
-      t: Less than one year
+      t: 不到一年
     - key: years-of-experience.less_than_1.short
-      t: '<1 year'
+      t: '<1 年'
     - key: years-of-experience.1_2.long
-      t: 1 to 2 years
+      t: 1 到 2 年
     - key: years-of-experience.1_2.short
-      t: 1~2 years
+      t: 1~2 年
     - key: years-of-experience.2_5.long
-      t: 2 to 5 years
+      t: 2 到 5 年
     - key: years-of-experience.2_5.short
-      t: 2~5 years
+      t: 2~5 年
     - key: years-of-experience.5_10.long
-      t: 5 to 10 years
+      t: 5 到 10 年
     - key: years-of-experience.5_10.short
-      t: 5~10 years
+      t: 5~10 年
     - key: years-of-experience.10_20.long
-      t: 10 to 20 years
+      t: 10 到 20 年
     - key: years-of-experience.10_20.short
-      t: 10~20 years
+      t: 10~20 年
     - key: years-of-experience.more_than_20.long
-      t: More than 20 years
+      t: 20 年以上
     - key: years-of-experience.more_than_20.short
-      t: '>20 years'
+      t: '>20 年'
     - key: years-of-experience.axis_legend
-      t: Years of Experience
+      t: 資歷年數
 
     # company size
     - key: company-size.1.long
-      t: One employee
+      t: 一位員工
     - key: company-size.1.short
-      t: one
+      t: 1
     - key: company-size.1_5.long
-      t: 1 to 5 employees
+      t: 1 到 5 位員工
     - key: company-size.1_5.short
       t: 1~5
     - key: company-size.5_10.long
-      t: 5 to 10 employees
+      t: 5 到 10 位員工
     - key: company-size.5_10.short
       t: 5~10
     - key: company-size.10_20.long
-      t: 10 to 20 employees
+      t: 10 到 20 位員工
     - key: company-size.10_20.short
       t: 10~20
     - key: company-size.20_50.long
-      t: 20 to 50 employees
+      t: 20 到 50 位員工
     - key: company-size.20_50.short
       t: 20~50
     - key: company-size.50_100.long
-      t: 50 to 100 employees
+      t: 50 到 100 位員工
     - key: company-size.50_100.short
       t: 50~100
     - key: company-size.100_1000.long
-      t: 100 to 1000 employees
+      t: 100 到 1000 位員工
     - key: company-size.100_1000.short
       t: 100~1000
     - key: company-size.more_than_1000.long
-      t: More than 1000 employees
+      t: 大於 1000 位員工
     - key: company-size.more_than_1000.short
       t: 1000+
     - key: company-size.axis_legend
-      t: Number of Employees
+      t: 員工數
 
     # gender
     - key: gender.female
-      t: Female
+      t: 女
     - key: gender.male
-      t: Male
+      t: 男
     - key: gender.non_binary
-      t: Non-Binary/Third Gender
+      t: 非二元性別/第三性
     - key: gender.prefer_not_to_say
-      t: Prefer not to say
+      t: 不想說
 
     # sources
     - key: sources.other_unknown
-      t: Other/Unknown
+      t: 其他/未知
 
-    # javascript proficiency
+    # javascript 理解程度
     - key: block.title.javascript-proficiency
-      t: JavaScript Proficiency
+      t: JavaScript 理解程度
     - key: block.description.javascript-proficiency
-      t: How proficient are you at JavaScript development?
+      t: 你的 JavaScript 開發理解程度如何？
     - key: javascript-proficiency.axis_legend
-      t: JavaScript Proficiency
+      t: JavaScript 理解程度
     - key: javascript-proficiency.none.short
-      t: None
+      t: 無
     - key: javascript-proficiency.none.long
-      t: I am not able to write any JavaScript
+      t: 我不會寫任何 JavaScript
     - key: javascript-proficiency.short_simple_javascript.short
-      t: Beginner
+      t: 初學者
     - key: javascript-proficiency.short_simple_javascript.long
-      t: I can write short, simple JavaScript or jQuery statements
+      t: 我會寫簡短的 Javascript 或 jQuery 陳述式
     - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
-      t: Intermediate
+      t: 中等
     - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
-      t: I can work on existing front-end codebases using modern frameworks (React, Vue, etc.)
+      t: 我可以在已經架設好的現代前端架構程式碼（React、Vue 等。）
     - key: javascript-proficiency.advanced_front_end_patterns.short
-      t: Advanced
+      t: 進階
     - key: javascript-proficiency.advanced_front_end_patterns.long
-      t: Can handle advanced front-end patterns (state management, data loading, etc.)
+      t: 有能力處理進階的前端模式（狀態管理、資料讀取⋯等。）
     - key: javascript-proficiency.entire_codebases_from_scratch.short
-      t: Expert
+      t: 專家
     - key: javascript-proficiency.entire_codebases_from_scratch.long
-      t: Can architecture entire front-end codebases from scratch
+      t: 有能力從無到有建構整組前端程式庫
 
-    # backend proficiency
+    # 後端理解程度
     - key: block.title.backend-proficiency
-      t: Back-end Proficiency
+      t: 後端理解程度
     - key: block.description.backend-proficiency
-      t: How proficient are you at back-end development?
+      t: 你的後端開發理解程度如何？
     - key: backend-proficiency.axis_legend
-      t: Back-End Proficiency
+      t: 後端理解程度
     - key: backend-proficiency.none.short
-      t: None
+      t: 無
     - key: backend-proficiency.none.long
-      t: I am not able to handle any back-end work
+      t: 我無法處理任何後端的工作
     - key: backend-proficiency.able_to_setup_cms_or_site_generator.short
-      t: Beginner
+      t: 初學者
     - key: backend-proficiency.able_to_setup_cms_or_site_generator.long
-      t: I can set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)
+      t: 我有能力安裝打包好的 CMS（WordPress⋯等）或靜態網頁產生器（Jekyll⋯等。）
     - key: backend-proficiency.able_to_use_existing_frameworks.short
-      t: Intermediate
+      t: 中等
     - key: backend-proficiency.able_to_use_existing_frameworks.long
-      t: I can develop apps using pre-existing frameworks (Rails, Laravel, etc.)
+      t: 我有能力以現有的框架開發應用程式（Rails、Laravel⋯等。）
     - key: backend-proficiency.able_to_setup_from_scratch.short
-      t: Advanced
+      t: 進階Advanced
     - key: backend-proficiency.able_to_setup_from_scratch.long
-      t: I can set up an entire back-end from scratch (Go, Node, etc.)
+      t: 我有能力從無到有安裝整組後端 (Go、Node⋯等。)
 
-    # job title
+    # 職稱
     - key: job-title.front_end_dev.short
-      t: Front-end Developer
+      t: 前端開發者
     - key: job-title.front_end_dev.long
-      t: Front-end Developer/Engineer
+      t: 前端開發者/工程師
     - key: job-title.full_stack_dev.short
-      t: Full-stack Developer
+      t: 全端開發者
     - key: job-title.full_stack_dev.long
-      t: Full-stack Developer/Engineer
+      t: 全端開發者/工程師
     - key: job-title.web_designer.short
-      t: Web Designer
+      t: 網頁設計師
     - key: job-title.web_designer.long
-      t: Web Designer
+      t: 網頁設計師
     - key: job-title.ux_designer.short
-      t: UX Designer
+      t: UX 設計師
     - key: job-title.ux_designer.long
-      t: UX Designer
+      t: UX 設計師
     - key: job-title.ui_designer.short
-      t: UI Designer
+      t: UI 設計師
     - key: job-title.ui_designer.long
-      t: UI Designer
+      t: UI 設計師
     - key: job-title.back_end_dev.short
-      t: Back-end Developer
+      t: 後端開發者
     - key: job-title.back_end_dev.long
-      t: Back-end Developer/Engineer
+      t: 後端開發者/工程師
 
     # other
     - key: block.title.participation-by-country
-      t: Participation by Country
+      t: 以國家分類
     - key: block.description.participation-by-country
-      t: Which proportion of survey respondents came from each country. 
+      t: 答題者的國家比例
     - key: block.title.salary
-      t: Salary
+      t: 薪資
     - key: block.description.salary
-      t: Yearly salary in USD.
+      t: 年收入（美金）
     # - key: block.title.salary-per-country
-    #   t: Average Salary per Country
+    #   t: 以國家區分平均薪資
     # - key: block.description.salary-per-country
-    #   t: Average Salary per Country.
+    #   t: 以國家區分平均薪資
     - key: block.title.years-of-experience
-      t: Years of Experience
+      t: 資歷
     - key: block.description.years-of-experience
-      t: How long you've been writing CSS.
+      t: 撰寫 CSS 的時間
     - key: block.title.company-size
-      t: Company Size
+      t: 公司規模
     # - key: block.description.company-size
-    #   t: Company size breakdown.
+    #   t: 公司規模細節.
     - key: block.title.gender
-      t: Gender
+      t: 性別
     - key: block.description.gender
-      t: Respondents gender.
+      t: 答題者的性別。
     - key: block.title.source
-      t: Source
+      t: 來源
     - key: block.description.source
       t: >
-          How participants found out about the survey (aggregation of self-reported answers and 
-          referrer tracking).
+          參與者找到這次調查的來源（綜合自行答題和來源網址追蹤。）
 
-          
-          **State of JS** indicates subscribers from our previous JavaScript surveys,
-          **Announcement** corresponds to our official announcement post on [FreeCodeCamp](https://www.freecodecamp.org), 
-          and **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
+
+          **JS 現況**代表先前我們的 JavaScript 調查訂閱者；**公告**是我們貼在 [FreeCodeCamp](https://www.freecodecamp.org) 的正式公告，還有**口耳相傳**是綜合來自 Slack、朋友、同事⋯等來源。
 
     - key: block.description.gender
-      t: Gender breakdown.
+      t: 性別細節。
     - key: block.title.job-title
-      t: Job Title
+      t: 職稱
     - key: block.description.job-title
-      t: How do you introduce yourself at parties?
+      t: 你在聚會中如何介紹自己？
 
     ###########################################################################
     # Features
     ###########################################################################
 
     - key: feature.learn_more
-      t: Learn More
+      t: 深入詳情
     - key: feature.mdn_link
       t: MDN
     - key: feature.caniuse_link
       t: CanIUse
     - key: feature.specification_link
-      t: W3C Specification
+      t: W3C 規格書
     - key: features.usage.used_it
-      t: Have used it
+      t: 已經在用
     - key: features.usage.know_it
-      t: Know about it
+      t: 知道
     - key: features.usage.ratio
-      t: Usage Ratio
+      t: 使用比例
     - key: features.usage.know_not_used
-      t: Know what it is, but haven't used it
+      t: 知道是什麼，但沒用過
     - key: features.usage.never_heard_not_sure
-      t: Never heard of it/Not sure what it is
+      t: 沒聽過/不確定那是什麼
 
     - key: block.title.features-overview
-      t: Usage Overview
+      t: 使用情況概觀
     - key: block.description.features-overview
       t: >
-          This chart presents the various adoption rates for all features, grouped by category. 
+          此圖表顯示所有功能個別的採用程度，以分類來區別。
 
+          <span class="text-teal text-bold">外圍圓圈</span>的大小代表知道某功能的使用者總數，而<span class="text-blue text-bold">內圈</span>代表實際在使用的人數。
 
-          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
-
-
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+          將滑鼠移到節點上，就可以看到詳細資料，還有代表此問卷答題者總數的<span class="text-blackpink text-bold">區塊</span>。
 
     - key: block.title.features-section-overview
-      t: Usage Overview
+      t: 使用情況概觀
     - key: block.description.features-section-overview
       t: >
-          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
+          <span class="text-teal text-bold">外圍圓圈</span>的大小代表知道某功能的使用者總數，而<span class="text-blue text-bold">內圈</span>代表實際在使用的人數。
 
-
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+          將滑鼠移到節點上，就可以看到詳細資料，還有代表此問卷答題者總數的<span class="text-blackpink text-bold">區塊</span>。
 
     - key: block.description.css-exclusions
       t: >
-          An exclusion element is a block-level element which is not a float, and generates an exclusion box. 
-          An exclusion element establishes a new block formatting context (via <a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>).
+          Exclusion 是 block 等級元素，功能是產生排除區塊 (exclusion box)，而且不是 float。
 
+          Exclusion 元素提供全新的 block 格式情境（來源：<a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>。）
 
     ###########################################################################
     # Units & Selectors
     ###########################################################################
 
     - key: block.title.units
-      t: Units
+      t: 單位
     - key: block.title.pseudo-elements
-      t: Pseudo-Elements
+      t: 偽元素
     - key: block.title.combinators
-      t: Combinators
+      t: 組合
     - key: block.title.tree-document-structure
-      t: Tree & Document Structure
+      t: 樹狀/文件結構
     - key: block.title.attributes
-      t: Attributes
+      t: 屬性
     - key: block.title.links-urls
-      t: Link & URLs
+      t: 連結與網址
     - key: block.title.interaction
-      t: Interaction
+      t: 互動
     - key: block.title.form-controls
-      t: Form Controls
+      t: 表單控制 (Form Controls)
 
     - key: block.description.units
-      t: Which CSS units do developers use?
+      t: 開發者們在用哪些 CSS 單位？
     - key: block.description.pseudo-elements
-      t: Which pseudo CSS selectors do developers use?
+      t: 開發者們在用哪些偽選擇器 (pseudo selector)？
     - key: block.description.combinators
-      t: Which combinations of CSS selectors do developers use?
+      t: 開發者們在用哪些 CSS 選擇器組合？
     - key: block.description.tree-document-structure
-      t: Which structure related CSS selectors do developers use?
+      t: 開發者們在用哪些結構相關的 CSS 選擇器組合？
     - key: block.description.attributes
-      t: Which attributes CSS selectors do developers use?
+      t: 開發者們在用哪些 CSS 屬性選擇器 (attirbute selector)？
     - key: block.description.links-urls
-      t: Which links & URLs related CSS selectors do developers use?
+      t: 開發者們在用哪些連結與網址相關的 CSS 選擇器？
     - key: block.description.interaction
-      t: Which interaction CSS selectors do developers use?
+      t: 開發者們在用哪些互動的 CSS 選擇器組合？
     - key: block.description.form-controls
-      t: Which form related CSS selectors do developers use?
+      t: 開發者們在用哪些表單相關的選擇器？
 
     ###########################################################################
     # Tools & Methodologies
     ###########################################################################
 
     - key: block.title.tools-overview
-      t: Sentiment Overview
+      t: 看法概觀
     - key: block.description.tools-overview
       t: >
-          Overview of opinions on the tools and methodologies surveyed. <span class="text-green text-bold">Green segments</span> represent positive opinions, 
-          while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. 
-          
-          
-          The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
-          (excluding respondents unaware of the technology). 
+          此部分的概觀是調查對於工具與方法論的意見。<span class="text-green text-bold">綠色區塊</span>代表正面的意見，而<span class="text-pink text-bold">粉紅色區塊</span>則是對應負面看法。
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+          每個圓圈的直徑代表所有四種意見經過調整的回應總數（排除不知道該技術的回應。）
+
+
+          將滑鼠移到節點上，就可以看到詳細資料，還有代表此問卷答題者總數的<span class="text-blackpink text-bold">區塊</span>。
+
     - key: block.tool.links
-      t: Links
+      t: 連結
     - key: block.tool.github_link
       t: GitHub
     - key: block.tool.homepage_link
-      t: Homepage
+      t: 首頁
     - key: block.tool.npm_link
       t: NPM
 
     - key: block.title.other-methodologies
-      t: Other Methodologies
+      t: 其他方法
 
       # rankings/bump chart
     - key: block.title.tools-section-overview
-      t: Rankings
+      t: 排名
     - key: block.description.tools-section-overview
-      t: > 
-        Awareness, interest, and satisfaction ratio rankings. 
+      t: >
+        知道、有興趣與滿意度比例的排名。
         Note that these three ratios all correspond to the same point in time.
     - key: opinions.legends.awareness_ratio
-      t: Awareness
+      t: 有注意到
     - key: opinions.legends.interest_ratio
-      t: Interest
+      t: 有興趣
     - key: opinions.legends.satisfaction_ratio
-      t: Satisfaction
+      t: 滿意度
 
     # quadrant/scatterplot chart
     - key: block.title.tools-scatterplot
-      t: Satisfaction vs Usage
+      t: 使用與滿意度
     - key: block.description.tools-scatterplot
       t: >
-          This chart shows each technology’s **satisfaction ratio** over its total **user count**. 
-          It can be divided into four quadrants:
+          此圖表顯示每個技術根據**使用者總數**的**滿意比例**。
+          可以分成四個象限：
 
-          - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
+          - **評估**: 低使用量、高滿意度。是值得關注的技術。
 
-          - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
+          - **採用**: 高使用量、高滿意度。可以放心採用的技術。
 
-          - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
+          - **迴避**: 低使用量、低滿意度。近期最好避免的技術。
 
-          - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+          - **分析**: 高使用量、低滿意度。如果正在使用這些技術，要進行重新評估。
           
     - key: quadrants.assess
-      t: Assess
+      t: 評估
     - key: quadrants.adopt
-      t: Adopt
+      t: 採用
     - key: quadrants.avoid
-      t: Avoid
+      t: 迴避
     - key: quadrants.analyze
-      t: Analyze
+      t: 分析
 
     # opinions
     - key: opinions.legends.never_heard
-      t: I've never heard of it
+      t: 從來沒有聽過
     - key: opinions.legends_short.never_heard
-      t: Never heard of it
+      t: 從未聽過
     - key: opinions.legends_extrashort.never_heard
-      t: Never heard
+      t: 沒聽過
 
     - key: opinions.legends.not_interested
-      t: I've HEARD of it, and am NOT interested
+      t: 我有聽說過，但是沒有興趣
     - key: opinions.legends_short.not_interested
-      t: Heard of it, not interested
+      t: 有聽過，但沒興趣
     - key: opinions.legends_extrashort.not_interested
-      t: Not interested
+      t: 沒興趣
 
     - key: opinions.legends.interested
-      t: I've HEARD of it, and WOULD like to learn it
+      t: 我有聽說過，也有想要學習
     - key: opinions.legends_short.interested
-      t: Heard of it, would like to learn
+      t: 有聽過，有興趣學
     - key: opinions.legends_extrashort.interested
-      t: Interested
+      t: 有興趣
 
     - key: opinions.legends.would_use
-      t: I've USED it before, and WOULD use it again
+      t: 我之前使用過，而且願意再次使用
     - key: opinions.legends_short.would_use
-      t: Used it, would use again
+      t: 有用過，願意再次使用
     - key: opinions.legends_extrashort.would_use
-      t: Would use again
+      t: 會再次用
 
     - key: opinions.legends.would_not_use
-      t: I've USED it before, and would NOT use it again
+      t: 我之前使用過，但是不願意再次使用
     - key: opinions.legends_short.would_not_use
-      t: Used it, would not use again
+      t: 有用過，不願意再次使用
     - key: opinions.legends_extrashort.would_not_use
-      t: Would not use
+      t: 不願意用
 
     - key: opinions.legends.total_respondents
-      t: Total Respondents
+      t: 所有回應
     - key: opinions.legends_short.total_respondents
-      t: Total Respondents
+      t: 所有回應
     - key: opinions.legends_extrashort.total_respondents
-      t: Total Respondents
+      t: 所有回應
 
     ###########################################################################
     # Other Tools
     ###########################################################################
 
     - key: block.title.text-editors
-      t: Text Editors
+      t: 文字編輯器
     - key: block.description.text-editors
-      t: Which text editor(s) do you regularly use?
+      t: 你平常都使用哪些文字編輯器？
     - key: block.title.text-editors-others
-      t: Other Text Editors
+      t: 其他文字編輯器
     - key: block.description.text-editors-others
-      t: Other answers (freeform field).
+      t: 其他回答（自由填寫表單）
     - key: block.title.browsers
-      t: Browsers
+      t: 瀏覽器
     - key: block.description.browsers
-      t: Which browser(s) do you primarily work in during initial development?
+      t: 在開發初期時，你主要在哪些瀏覽器進行？
     - key: block.title.browsers-others
-      t: Other Browsers
+      t: 其他瀏覽器
     - key: block.description.browsers-others
-      t: Other answers (freeform field).
+      t: 其他回答（自由填寫表單）
 
     ###########################################################################
     # Environments
     ###########################################################################
 
     - key: block.title.form-factors
-      t: Form Factors
+      t: 裝置
     - key: block.description.form-factors
-      t: Which form factors do you test on?
+      t: 你會在哪些裝置上測試？
 
     - key: block.title.env-browsers
-      t: Browsers
+      t: 瀏覽器
     - key: block.description.env-browsers
-      t: Which browsers do you test in?
+      t: 你會在哪些瀏覽器測試？
 
     # print styles
     - key: block.title.print-styles
-      t: CSS for Print
+      t: 列印用的 CSS
     - key: block.description.print-styles
-      t: Do you write print styles?
+      t: 你有在撰寫列印用的樣式嗎？
     - key: print-styles.axis_legend
-      t: Periodicity
+      t: 頻率
     - key: print-styles.never.short
-      t: Never
+      t: 從不
     - key: print-styles.never.long
-      t:  I (almost) never write print styles
+      t: 我（幾乎）沒寫過列印的樣式
     - key: print-styles.occasionally.short
-      t: Occasionally
+      t: 偶爾
     - key: print-styles.occasionally.long
-      t: I occasionally write print styles
+      t: 我偶爾寫列印的樣式
     - key: print-styles.often.short
-      t: Often
+      t: 經常
     - key: print-styles.often.long
-      t: I write print styles as part of most projects
+      t: 我在許多專案裡會把列印用的樣式當作一部份來撰寫
     - key: print-styles.mainly.short
-      t: Mainly
+      t: 主要
     - key: print-styles.mainly.long
-      t: I focus mainly on CSS for print
+      t: 我主要就是在做列印用的 CSS
 
     # email styles
     - key: block.title.email-styles
-      t: CSS for Email Clients
+      t: Email 客戶端的 CSS
     - key: block.description.email-styles
-      t: Do you write CSS for email clients?
+      t: 你有在撰寫 Email 客戶端的 CSS 嗎？
     - key: email-styles.axis_legend
-      t: Periodicity
+      t: 頻率
     - key: email-styles.never.short
-      t: Never
+      t: 從不
     - key: email-styles.never.long
-      t:  I (almost) never write CSS for email clients
+      t: 我（幾乎）沒寫過 Email 客戶端的 CSS
     - key: email-styles.occasionally.short
-      t: Occasionally
+      t: 偶爾
     - key: email-styles.occasionally.long
-      t: I occasionally write CSS for email clients
+      t: 我偶爾寫 Email 客戶端的 CSS
     - key: email-styles.often.short
-      t: Often
+      t: 經常
     - key: email-styles.often.long
-      t: I write CSS for email clients as part of most projects
+      t: 我在許多專案裡會把 Email 客戶端的 CSS 當作一部份來撰寫
     - key: email-styles.mainly.short
-      t: Mainly
+      t: 主要
     - key: email-styles.mainly.long
-      t: I focus mainly on CSS for email clients
+      t: 我主要就是在做 Email 客戶端的 CSS
 
     ###########################################################################
     # Resources
@@ -547,75 +536,75 @@ translations:
 
     # blogs & magazines
     - key: block.title.blogs-magazines
-      t: Blogs & Magazines
+      t: 部落格 & 雜誌
     - key: block.description.blogs-magazines
-      t: Which CSS-related blogs/magazines/etc. do you read?
+      t: 你在閱讀哪些 CSS 相關的部落格/雜誌⋯等？
     - key: block.title.blogs-magazines-others
-      t: Other Blogs & Magazines
+      t: 其他部落格 & 雜誌
     - key: block.description.blogs-magazines-others
-      t: Other answers (freeform field).
+      t: 其他回答（自由填寫表單）
   
     # sites & courses
     - key: block.title.sites-courses
-      t: Sites & Courses
+      t: 網站 & 課程
     - key: block.description.sites-courses
-      t: Which CSS-related sites/courses/etc. do you consult?
+      t: 你在哪些網站/課程⋯等參考資料？
     - key: block.title.sites-courses-others
-      t: Other Sites & Courses
+      t: 其他網站 & 課程
     - key: block.description.sites-courses-others
-      t: Other answers (freeform field).
+      t: 其他回答（自由填寫表單）
 
     # podcasts
     - key: block.title.podcasts
-      t: Podcasts
+      t: Podcast
     - key: block.description.podcasts
-      t: Which CSS or programming-related podcasts do you listen to?
+      t: 你在聽哪些 CSS 或程式相關的 Podcast？
     - key: block.title.podcasts-others
-      t: Other Podcasts
+      t: 其他 Podcast
     - key: block.description.podcasts-others
-      t: Other answers (freeform field).
+      t: 其他回答（自由填寫表單）
 
     ###########################################################################
     # Opinions
     ###########################################################################
 
     - key: block.title.easy-to-learn
-      t: Learning Curve
+      t: 學習曲線
     - key: block.description.easy-to-learn
-      t: “CSS is easy to learn”
+      t: 「CSS 很容易學」
 
     - key: block.title.evolving-too-slowly
-      t: Rate of Change
+      t: 變動頻率
     - key: block.description.evolving-too-slowly
-      t: “CSS is evolving too slowly”
+      t: 「CSS 的演進實在太慢了」
 
     - key: block.title.utility-classes
-      t: Non-Semantic Classes
+      t: 非情境 Class
     - key: block.description.utility-classes
-      t: “Non-semantic classes such as `.center`, `.large-text`, etc. should be avoided.”
+      t: 「應該要避免使用像是 `.center` 和 `.large-text` 這樣非情境的 class」
 
     - key: block.title.selector-nesting
-      t: Selector Nesting
+      t: 巢狀選擇器
     - key: block.description.selector-nesting
-      t: “Selector nesting such as `.foo .bar ul li {...}` should be avoided.”
+      t: 「應該要避免使用像是 `.foo .bar ul li {...}` 這樣的巢狀選擇器」
 
     - key: block.title.programming-language
-      t: Programming Language
+      t: 程式語言
     - key: block.description.programming-language
-      t: “CSS is a programming language”
+      t: 「CSS 是一種程式語言」
 
     - key: block.title.enjoy-css
-      t: Enjoyment
+      t: 愉悅感
     - key: block.description.enjoy-css
-      t: “I enjoy writing CSS”
+      t: 「我喜歡撰寫 CSS」
 
     # ?
     # CSS is moving in the right direction
 
     - key: block.title.missing-features
-      t: Missing Features
+      t: 不足的功能
     - key: block.description.missing-features
-      t: What do developers feel is currently missing from CSS?
+      t: 開發者覺得 CSS 目前還缺了什麼？
 
     ###########################################################################
     # Awards
@@ -625,10 +614,10 @@ translations:
     - key: awards.runner_ups
       t: Runner Ups
     - key: block.title.highest_satisfaction
-      t: Highest Satisfaction
+      t: 最高滿意度
     - key: block.description.highest_satisfaction
       t: |
-          Awarded to the library with the highest percentage of satisfied users.
+          頒給擁有最高使用者滿意度的函示庫。
     - key: award.highest_satisfaction.comment
       t: |
           With **${tools[0].percentage}%** of users willing to use it again,
@@ -697,55 +686,55 @@ translations:
 
     # pages
     - key: page.introduction
-      t: Introduction
+      t: 簡介
     - key: page.tshirt
       t: T-shirt
     - key: page.demographics
-      t: Demographics
+      t: 參與者統計
     - key: page.features
-      t: Features
+      t: 功能
     - key: page.layout
-      t: Layout
+      t: 版面安排
     - key: page.shapes-and-graphics
-      t: Shapes & Graphics
+      t: 形狀 & 圖形
     - key: page.interactions
-      t: Interactions
+      t: 互動
     - key: page.typography
-      t: Typography
+      t: 文字排版
     - key: page.animations-and-transforms
-      t: Animations & Transforms
+      t: 動畫 & 變形
     - key: page.other-features
-      t: Other Features
+      t: 其他功能
     - key: page.units-and-selectors
-      t: Units & Selectors
+      t: 單位 & 選擇器
     - key: page.technologies
-      t: Technologies
+      t: 技術
     - key: page.pre-post-processors
-      t: Pre & Post Processors
+      t: 預 & 後處理器
     - key: page.css-frameworks
-      t: CSS Frameworks
+      t: CSS 框架
     - key: page.methodologies
-      t: Methodologies
+      t: 方法論
     - key: page.css-in-js
       t: CSS-in-JS
     - key: page.other-tools
-      t: Other Tools
+      t: 其他工具
     - key: page.environments
-      t: Environments
+      t: 環境
     - key: page.resources
-      t: Resources
+      t: 資源
     - key: page.opinions
-      t: Opinions
+      t: 意見
     - key: page.awards
-      t: Awards
+      t: 獎項
     - key: page.conclusion
-      t: Conclusion
+      t: 結論
     - key: page.support
-      t: Support Us
+      t: 贊助我們
 
     # sharing
     - key: share.share
-      t: Share
+      t: 分享
     - key: share.site.title
       t: Discover the StateOf CSS 2019 results
     - key: share.site.twitter_text
@@ -765,39 +754,39 @@ translations:
     - key: share.facebook
       t: Share on Facebook
     - key: share.linkedin
-      t: Share on LinkedIn
+      t: 在 LinkedIn 分享
     - key: share.email
-      t: Share by email
+      t: 以 Email 分享
     - key: share.image
-      t: Get image
+      t: 取得圖像
       
     # opinion scale
     - key: opinion_scale.0.long
-      t: Strongly Disagree
+      t: 非常不同意
     - key: opinion_scale.1.long
-      t: Disagree
+      t: 不同意
     - key: opinion_scale.2.long
-      t: Neutral
+      t: 沒意見
     - key: opinion_scale.3.long
-      t: Agree
+      t: 同意
     - key: opinion_scale.4.long
-      t: Strongly Agree
+      t: 非常同意
 
     # general
     - key: general.title
-      t: State of CSS 2019
+      t: CSS 現況調查 2019
     - key: general.description
       t: Discover the most popular CSS features & technologies of the year.
     - key: general.stay_tuned
-      t: Stay Tuned
+      t: 敬請期待
     - key: general.leave_your_email
       t: "If you'd like to know when we release additional results or announce next year's edition, just leave us your email below:"
     - key: general.your_email
-      t: Your Email
+      t: 你的 Email 地址
     - key: general.notify_me
-      t: Notify Me
+      t: 到時候通知我
     - key: general.help_us_translate
-      t: Help translate the survey →
+      t: 幫忙翻譯這次調查 →
     - key: general.not_found
       t: >
       
@@ -805,54 +794,54 @@ translations:
         
         Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/state-of-css-2019/issues) if you think something might be broken. 
     - key: general.back_to_intro
-      t: Back to introduction
+      t: 回到簡介
     - key: general.close_nav
-      t: Close navigation menu
+      t: 關閉導覽選單
     - key: general.completion_percentage
-      t: "Completion Percentage:"
+      t: "完成答題百分比"
     - key: general.previous
-      t: "Previous:"
+      t: "上一篇："
     - key: general.next
-      t: "Next:"
+      t: "下一篇："
     - key: general.start
-      t: Start
+      t: 開始
 
     # partners
     - key: partners.our_partners
-      t: Our Partners
+      t: 我們的合作夥伴
     - key: partners.become_partner
-      t: Help sponsor the survey
+      t: 幫忙贊助這份調查
     - key: partners.thanks
-      t: Thanks to our partners for supporting us!
+      t: 感謝贊助我們的合作夥伴！
     - key: partners.learn_more
-      t: Learn more.
+      t: 深入詳情。
     - key: block.title.recommended_resources
-      t: Recommended Resources
+      t: 推薦資源
       
     # charts
     - key: block.title.usage-ratio
-      t: Usage Ratio Ranking
+      t: 使用比例排名
     - key: block.description.usage-ratio
       t: Ranking usage ratios among users who are aware of a technology.
     - key: users_percentage
-      t: Percentage of Users
+      t: 使用者百分比
     - key: users_count
-      t: User Count
+      t: 使用者數量
     - key: satisfaction_percentage
-      t: Satisfaction Percentage
+      t: 滿意度百分比
     - key: chart_mode
-      t: mode
+      t: 模式
     - key: chart_mode.absolute
-      t: absolute
+      t: 絕對
     - key: chart_mode.relative
-      t: relative
+      t: 相對
     - key: chart_units
-      t: Units
+      t: 單位
     - key: chart_units.percentage
-      t: Percents
+      t: 百分比
     - key: chart_units.count
-      t: Count
+      t: 數量
     - key: users
-      t: users
+      t: 使用者
     - key: percent_satisfaction
-      t: '% satisfaction'
+      t: '% 滿意度'
