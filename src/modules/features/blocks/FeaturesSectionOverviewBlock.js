@@ -6,7 +6,7 @@ import { useEntities } from 'core/entities/entitiesContext'
 import { colors } from '../../../constants'
 
 const getChartData = (data, getName) => {
-    const features = data.data.aggregations.map(feature => {
+    const features = data.data.aggregations.filter(a => a.usage !== null).map(feature => {
         const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
         const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
 
@@ -58,7 +58,7 @@ FeaturesSectionOverviewBlock.propTypes = {
                                 percentage: PropTypes.number.isRequired
                             })
                         ).isRequired
-                    }).isRequired
+                    })
                 })
             )
         }).isRequired
