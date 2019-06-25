@@ -54,6 +54,14 @@ const HeatmapChart = ({ bucketKeys, items }) => {
 }
 
 HeatmapChart.propTypes = {
+    bucketKeys: PropTypes.arrayOf(
+        PropTypes.string
+    ).isRequired,
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+        })
+    ).isRequired,
 }
 
 export default memo(HeatmapChart)
