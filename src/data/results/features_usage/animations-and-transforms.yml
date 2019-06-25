@@ -176,3 +176,86 @@ aggregations:
             count: 145
             percentage: 63.88
           percentage: 2.01
+  - id: animations-and-transforms-experience-heatmap
+    heatmap:
+      - id: animations_transforms_csstransitions
+        count: 10606
+        buckets:
+          - id: '5_10'
+            count: 3434
+            absolute_percentage: 32.38
+            relative_percentage: 95.12
+          - id: '10_20'
+            count: 2946
+            absolute_percentage: 27.78
+            relative_percentage: 96.15
+          - id: '2_5'
+            count: 2739
+            absolute_percentage: 25.83
+            relative_percentage: 93.74
+          - id: '1_2'
+            count: 848
+            absolute_percentage: 8
+            relative_percentage: 88.61
+          - id: more_than_20
+            count: 401
+            absolute_percentage: 3.78
+            relative_percentage: 94.35
+          - id: less_than_1
+            count: 171
+            absolute_percentage: 1.61
+            relative_percentage: 75.33
+      - id: animations_transforms_csstransforms
+        count: 10551
+        buckets:
+          - id: '5_10'
+            count: 3432
+            absolute_percentage: 32.53
+            relative_percentage: 95.07
+          - id: '10_20'
+            count: 2921
+            absolute_percentage: 27.68
+            relative_percentage: 95.33
+          - id: '2_5'
+            count: 2717
+            absolute_percentage: 25.75
+            relative_percentage: 92.98
+          - id: '1_2'
+            count: 846
+            absolute_percentage: 8.02
+            relative_percentage: 88.4
+          - id: more_than_20
+            count: 402
+            absolute_percentage: 3.81
+            relative_percentage: 94.59
+          - id: less_than_1
+            count: 168
+            absolute_percentage: 1.59
+            relative_percentage: 74.01
+      - id: animations_transforms_cssanimations
+        count: 10128
+        buckets:
+          - id: '5_10'
+            count: 3321
+            absolute_percentage: 32.79
+            relative_percentage: 91.99
+          - id: '10_20'
+            count: 2833
+            absolute_percentage: 27.97
+            relative_percentage: 92.46
+          - id: '2_5'
+            count: 2605
+            absolute_percentage: 25.72
+            relative_percentage: 89.15
+          - id: '1_2'
+            count: 786
+            absolute_percentage: 7.76
+            relative_percentage: 82.13
+          - id: more_than_20
+            count: 378
+            absolute_percentage: 3.73
+            relative_percentage: 88.94
+          - id: less_than_1
+            count: 145
+            absolute_percentage: 1.43
+            relative_percentage: 63.88

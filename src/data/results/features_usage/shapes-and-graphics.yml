@@ -347,3 +347,167 @@ aggregations:
             count: 61
             percentage: 26.87
           percentage: 2.01
+  - id: shapes-and-graphics-heatmap
+    heatmap:
+      - id: shapes_graphics_cssshapes
+        count: 2431
+        buckets:
+          - id: '5_10'
+            count: 833
+            absolute_percentage: 34.27
+            relative_percentage: 23.07
+          - id: '10_20'
+            count: 636
+            absolute_percentage: 26.16
+            relative_percentage: 20.76
+          - id: '2_5'
+            count: 616
+            absolute_percentage: 25.34
+            relative_percentage: 21.08
+          - id: '1_2'
+            count: 184
+            absolute_percentage: 7.57
+            relative_percentage: 19.23
+          - id: more_than_20
+            count: 94
+            absolute_percentage: 3.87
+            relative_percentage: 22.12
+          - id: less_than_1
+            count: 42
+            absolute_percentage: 1.73
+            relative_percentage: 18.5
+      - id: shapes_graphics_objectfit
+        count: 4798
+        buckets:
+          - id: '5_10'
+            count: 1551
+            absolute_percentage: 32.33
+            relative_percentage: 42.96
+          - id: '10_20'
+            count: 1391
+            absolute_percentage: 28.99
+            relative_percentage: 45.4
+          - id: '2_5'
+            count: 1235
+            absolute_percentage: 25.74
+            relative_percentage: 42.27
+          - id: '1_2'
+            count: 339
+            absolute_percentage: 7.07
+            relative_percentage: 35.42
+          - id: more_than_20
+            count: 190
+            absolute_percentage: 3.96
+            relative_percentage: 44.71
+          - id: less_than_1
+            count: 58
+            absolute_percentage: 1.21
+            relative_percentage: 25.55
+      - id: shapes_graphics_clippath
+        count: 4381
+        buckets:
+          - id: '5_10'
+            count: 1466
+            absolute_percentage: 33.46
+            relative_percentage: 40.61
+          - id: '10_20'
+            count: 1324
+            absolute_percentage: 30.22
+            relative_percentage: 43.21
+          - id: '2_5'
+            count: 1040
+            absolute_percentage: 23.74
+            relative_percentage: 35.59
+          - id: '1_2'
+            count: 289
+            absolute_percentage: 6.6
+            relative_percentage: 30.2
+          - id: more_than_20
+            count: 179
+            absolute_percentage: 4.09
+            relative_percentage: 42.12
+          - id: less_than_1
+            count: 53
+            absolute_percentage: 1.21
+            relative_percentage: 23.35
+      - id: shapes_graphics_cssmasks
+        count: 2986
+        buckets:
+          - id: '5_10'
+            count: 1049
+            absolute_percentage: 35.13
+            relative_percentage: 29.06
+          - id: '10_20'
+            count: 915
+            absolute_percentage: 30.64
+            relative_percentage: 29.86
+          - id: '2_5'
+            count: 688
+            absolute_percentage: 23.04
+            relative_percentage: 23.55
+          - id: '1_2'
+            count: 154
+            absolute_percentage: 5.16
+            relative_percentage: 16.09
+          - id: more_than_20
+            count: 133
+            absolute_percentage: 4.45
+            relative_percentage: 31.29
+          - id: less_than_1
+            count: 21
+            absolute_percentage: 0.7
+            relative_percentage: 9.25
+      - id: shapes_graphics_blendmodes
+        count: 3820
+        buckets:
+          - id: '5_10'
+            count: 1326
+            absolute_percentage: 34.71
+            relative_percentage: 36.73
+          - id: '10_20'
+            count: 1272
+            absolute_percentage: 33.3
+            relative_percentage: 41.51
+          - id: '2_5'
+            count: 823
+            absolute_percentage: 21.54
+            relative_percentage: 28.17
+          - id: more_than_20
+            count: 175
+            absolute_percentage: 4.58
+            relative_percentage: 41.18
+          - id: '1_2'
+            count: 172
+            absolute_percentage: 4.5
+            relative_percentage: 17.97
+          - id: less_than_1
+            count: 31
+            absolute_percentage: 0.81
+            relative_percentage: 13.66
+      - id: shapes_graphics_cssfiltereffects
+        count: 6649
+        buckets:
+          - id: '5_10'
+            count: 2205
+            absolute_percentage: 33.16
+            relative_percentage: 61.08
+          - id: '10_20'
+            count: 2018
+            absolute_percentage: 30.35
+            relative_percentage: 65.86
+          - id: '2_5'
+            count: 1623
+            absolute_percentage: 24.41
+            relative_percentage: 55.54
+          - id: '1_2'
+            count: 433
+            absolute_percentage: 6.51
+            relative_percentage: 45.25
+          - id: more_than_20
+            count: 263
+            absolute_percentage: 3.96
+            relative_percentage: 61.88
+          - id: less_than_1
+            count: 61
+            absolute_percentage: 0.92
+            relative_percentage: 26.87
