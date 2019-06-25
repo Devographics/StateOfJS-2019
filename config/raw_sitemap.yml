@@ -80,6 +80,10 @@
             - css-multi-column
             - css-writing-modes
             - css-exclusions
+            - id: layout-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
             - id: resources-sponsors
               type: resources
               items:
@@ -100,6 +104,10 @@
             - css-masks
             - blend-modes
             - css-filter-effects
+            - id: shapes-and-graphics-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
             - id: resources-sponsors
               type: resources
               items:
@@ -116,6 +124,10 @@
             - css-scroll-snap
             - overscroll-behavior
             - overflow-anchor
+            - id: interactions-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
 
       - id: typography
         path: /typography
@@ -130,6 +142,10 @@
             - line-breaking-properties
             - font-variant
             - initial-letter
+            - id: typography-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
             - id: resources-sponsors
               type: resources
               items:
@@ -146,6 +162,10 @@
             - css-transitions
             - css-transforms
             - css-animations
+            - id: animations-and-transforms-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
             - id: resources-sponsors
               type: resources
               items:
@@ -165,6 +185,10 @@
             - css-containment
             - will-change
             - calc
+            - id: other-features-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
             - id: resources-sponsors
               type: resources
               items:

@@ -347,7 +347,7 @@ aggregations:
             count: 61
             percentage: 26.87
           percentage: 2.01
-  - id: shapes-and-graphics-heatmap
+  - id: shapes-and-graphics-experience-heatmap
     heatmap:
       - id: shapes_graphics_cssshapes
         count: 2431

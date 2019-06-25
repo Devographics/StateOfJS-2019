@@ -290,7 +290,7 @@ aggregations:
             count: 129
             percentage: 56.83
           percentage: 2.01
-  - id: other-features-heatmap
+  - id: other-features-experience-heatmap
     heatmap:
       - id: otherfeatures_cssvariables
         count: 6689

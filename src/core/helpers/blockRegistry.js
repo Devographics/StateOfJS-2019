@@ -4,6 +4,7 @@ import VerticalBarBlock from 'core/blocks/VerticalBarBlock'
 import OpinionScaleBlock from 'core/blocks/OpinionScaleBlock'
 import TextBlock from 'core/blocks/TextBlock'
 import ResourcesBlock from 'core/blocks/ResourcesBlock'
+import HeatmapBlock from 'core/blocks/HeatmapBlock'
 
 // demographics
 // import SourceBlock from 'modules/demographics/blocks/SourceBlock'
@@ -32,6 +33,7 @@ const blockRegistry = {
     'opinion-scale': OpinionScaleBlock,
     text: TextBlock,
     resources: ResourcesBlock,
+    'heatmap': HeatmapBlock,
 
     // demographics
     // source: SourceBlock,

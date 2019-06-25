@@ -290,7 +290,7 @@ aggregations:
             count: 5
             percentage: 2.2
           percentage: 2.01
-  - id: layout-heatmap
+  - id: layout-experience-heatmap
     heatmap:
       - id: layout_cssgrid
         count: 6153

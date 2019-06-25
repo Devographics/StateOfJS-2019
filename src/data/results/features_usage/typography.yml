@@ -292,138 +292,139 @@ aggregations:
           percentage: 2.01
   - id: typography-experience-heatmap
     heatmap:
-      - id: layout_cssgrid
-        count: 6153
+      - id: typography_webfonts_fontface
+        count: 10507
         buckets:
           - id: '5_10'
-            count: 1930
-            absolute_percentage: 31.37
-            relative_percentage: 53.46
+            count: 3454
+            absolute_percentage: 32.87
+            relative_percentage: 95.68
           - id: '10_20'
-            count: 1711
-            absolute_percentage: 27.81
-            relative_percentage: 55.84
+            count: 2997
+            absolute_percentage: 28.52
+            relative_percentage: 97.81
           - id: '2_5'
-            count: 1564
-            absolute_percentage: 25.42
-            relative_percentage: 53.52
+            count: 2638
+            absolute_percentage: 25.11
+            relative_percentage: 90.28
           - id: '1_2'
-            count: 533
-            absolute_percentage: 8.66
-            relative_percentage: 55.69
+            count: 789
+            absolute_percentage: 7.51
+            relative_percentage: 82.45
           - id: more_than_20
-            count: 257
-            absolute_percentage: 4.18
-            relative_percentage: 60.47
+            count: 401
+            absolute_percentage: 3.82
+            relative_percentage: 94.35
           - id: less_than_1
-            count: 114
-            absolute_percentage: 1.85
-            relative_percentage: 50.22
-      - id: layout_flexbox
-        count: 10687
+            count: 159
+            absolute_percentage: 1.51
+            relative_percentage: 70.04
+      - id: typography_variablefonts
+        count: 2906
         buckets:
           - id: '5_10'
-            count: 3425
-            absolute_percentage: 32.05
-            relative_percentage: 94.88
-          - id: '10_20'
-            count: 2924
-            absolute_percentage: 27.36
-            relative_percentage: 95.43
+            count: 927
+            absolute_percentage: 31.9
+            relative_percentage: 25.68
           - id: '2_5'
-            count: 2765
-            absolute_percentage: 25.87
-            relative_percentage: 94.63
+            count: 856
+            absolute_percentage: 29.46
+            relative_percentage: 29.3
+          - id: '10_20'
+            count: 640
+            absolute_percentage: 22.02
+            relative_percentage: 20.89
           - id: '1_2'
-            count: 888
-            absolute_percentage: 8.31
-            relative_percentage: 92.79
+            count: 300
+            absolute_percentage: 10.32
+            relative_percentage: 31.35
           - id: more_than_20
-            count: 404
-            absolute_percentage: 3.78
-            relative_percentage: 95.06
+            count: 100
+            absolute_percentage: 3.44
+            relative_percentage: 23.53
           - id: less_than_1
-            count: 191
-            absolute_percentage: 1.79
-            relative_percentage: 84.14
-      - id: layout_cssmulticolumn
-        count: 3492
+            count: 63
+            absolute_percentage: 2.17
+            relative_percentage: 27.75
+      - id: >-
+          typography_linebreakingproperties_overflowwrap_wordbreak_linebreak_hyphens
+        count: 9900
         buckets:
-          - id: '10_20'
-            count: 1342
-            absolute_percentage: 38.43
-            relative_percentage: 43.8
           - id: '5_10'
-            count: 1162
-            absolute_percentage: 33.28
-            relative_percentage: 32.19
+            count: 3273
+            absolute_percentage: 33.06
+            relative_percentage: 90.66
+          - id: '10_20'
+            count: 2816
+            absolute_percentage: 28.44
+            relative_percentage: 91.91
           - id: '2_5'
-            count: 628
-            absolute_percentage: 17.98
-            relative_percentage: 21.49
-          - id: more_than_20
-            count: 186
-            absolute_percentage: 5.33
-            relative_percentage: 43.76
+            count: 2541
+            absolute_percentage: 25.67
+            relative_percentage: 86.96
           - id: '1_2'
+            count: 689
+            absolute_percentage: 6.96
+            relative_percentage: 72
+          - id: more_than_20
+            count: 386
+            absolute_percentage: 3.9
+            relative_percentage: 90.82
+          - id: less_than_1
             count: 130
-            absolute_percentage: 3.72
-            relative_percentage: 13.58
-          - id: less_than_1
-            count: 24
-            absolute_percentage: 0.69
-            relative_percentage: 10.57
-      - id: layout_csswritingmodes
-        count: 832
+            absolute_percentage: 1.31
+            relative_percentage: 57.27
+      - id: typography_fontvariant
+        count: 2733
         buckets:
           - id: '10_20'
-            count: 276
-            absolute_percentage: 33.17
-            relative_percentage: 9.01
+            count: 968
+            absolute_percentage: 35.42
+            relative_percentage: 31.59
           - id: '5_10'
-            count: 239
-            absolute_percentage: 28.73
-            relative_percentage: 6.62
+            count: 869
+            absolute_percentage: 31.8
+            relative_percentage: 24.07
           - id: '2_5'
-            count: 195
-            absolute_percentage: 23.44
-            relative_percentage: 6.67
-          - id: '1_2'
-            count: 55
-            absolute_percentage: 6.61
-            relative_percentage: 5.75
+            count: 556
+            absolute_percentage: 20.34
+            relative_percentage: 19.03
           - id: more_than_20
-            count: 49
+            count: 161
             absolute_percentage: 5.89
-            relative_percentage: 11.53
-          - id: less_than_1
-            count: 10
-            absolute_percentage: 1.2
-            relative_percentage: 4.41
-      - id: layout_cssexclusions
-        count: 802
-        buckets:
-          - id: '5_10'
-            count: 268
-            absolute_percentage: 33.42
-            relative_percentage: 7.42
-          - id: '10_20'
-            count: 240
-            absolute_percentage: 29.93
-            relative_percentage: 7.83
-          - id: '2_5'
-            count: 192
-            absolute_percentage: 23.94
-            relative_percentage: 6.57
+            relative_percentage: 37.88
           - id: '1_2'
-            count: 48
-            absolute_percentage: 5.99
-            relative_percentage: 5.02
-          - id: more_than_20
-            count: 38
-            absolute_percentage: 4.74
-            relative_percentage: 8.94
+            count: 121
+            absolute_percentage: 4.43
+            relative_percentage: 12.64
           - id: less_than_1
-            count: 5
-            absolute_percentage: 0.62
-            relative_percentage: 2.2
+            count: 35
+            absolute_percentage: 1.28
+            relative_percentage: 15.42
+      - id: typography_initialletter
+        count: 3193
+        buckets:
+          - id: '10_20'
+            count: 1141
+            absolute_percentage: 35.73
+            relative_percentage: 37.24
+          - id: '5_10'
+            count: 1036
+            absolute_percentage: 32.45
+            relative_percentage: 28.7
+          - id: '2_5'
+            count: 638
+            absolute_percentage: 19.98
+            relative_percentage: 21.83
+          - id: more_than_20
+            count: 185
+            absolute_percentage: 5.79
+            relative_percentage: 43.53
+          - id: '1_2'
+            count: 140
+            absolute_percentage: 4.38
+            relative_percentage: 14.63
+          - id: less_than_1
+            count: 32
+            absolute_percentage: 1
+            relative_percentage: 14.1

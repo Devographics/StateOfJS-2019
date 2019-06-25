@@ -1,0 +1,40 @@
+.Heatmap {
+    display: grid;
+}
+
+.Heatmap__Header {
+    width: 60px;
+    font-weight: 600;
+    font-size: $small-font;
+    padding: $spacing / 2 0;
+    text-align: center;
+}
+
+.Heatmap__Subject {
+    height: 40px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: $spacing;
+    border-top: $border;
+    display: flex;
+    align-items: center;
+}
+.Heatmap__Subject--last {
+    border-bottom: $border;
+}
+
+.Heatmap__Cell {
+    width: 60px;
+    height: 40px;
+    font-weight: 600;
+    color: $navy;
+    font-size: $smaller-font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $navy;
+}
+.Heatmap__Cell--last {
+    border-bottom: 1px solid $navy;
+}

@@ -176,7 +176,7 @@ aggregations:
             count: 17
             percentage: 7.49
           percentage: 2.01
-  - id: interactions-heatmap
+  - id: interactions-experience-heatmap
     heatmap:
       - id: interactions_cssscrollsnap
         count: 1308
