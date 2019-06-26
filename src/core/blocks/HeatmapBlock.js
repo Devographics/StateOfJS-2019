@@ -1,6 +1,7 @@
 import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { keys } from '../../constants'
+import { useI18n } from '../i18n/i18nContext'
 import Block from 'core/components/Block'
 import HeatmapChart from 'core/charts/HeatmapChart'
 
@@ -50,13 +51,15 @@ const getChartData = (data, block) => {
 }
 
 const HeatmapBlock = ({ block, data }) => {
+    const { translate } = useI18n()
+
     const { bucketKeys, items } = useMemo(
         () => getChartData(data, block),
         [data, block]
     )
 
     return (
-        <Block id={block.id} showDescription={true}>
+        <Block id={block.id} title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)} showDescription={true}>
             <HeatmapChart bucketKeys={bucketKeys} items={items}/>
         </Block>
     )
@@ -66,6 +69,7 @@ HeatmapBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         heatmapType: PropTypes.oneOf(['experience', 'salary']).isRequired,
+        subject: PropTypes.oneOf(['tools', 'features']).isRequired,
     }).isRequired,
 }
 

@@ -308,6 +308,8 @@ translations:
           An exclusion element is a block-level element which is not a float, and generates an exclusion box. 
           An exclusion element establishes a new block formatting context (via <a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>).
 
+    - key: block.title.features_experience_heatmap
+      t: Usage by Years Of Experience
 
     ###########################################################################
     # Units & Selectors
@@ -376,7 +378,12 @@ translations:
     - key: block.title.other-methodologies
       t: Other Methodologies
 
-      # rankings/bump chart
+    - key: block.title.tools_experience_heatmap
+      t: Usage by Years Of Experience
+    - key: block.title.tools_salary_heatmap
+      t: Usage by Salary Range
+
+    # rankings/bump chart
     - key: block.title.tools-section-overview
       t: Rankings
     - key: block.description.tools-section-overview

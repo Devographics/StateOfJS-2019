@@ -5,12 +5,12 @@ import ShareBlockDebug from '../share/ShareBlockDebug'
 
 const Block = ({
     id,
+    title,
     showDescription,
     isShareable,
     className,
     values,
     children,
-    title,
     units,
     setUnits,
     completion,
@@ -19,10 +19,10 @@ const Block = ({
         <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
             <BlockTitle
                 id={id}
+                title={title}
                 showDescription={showDescription}
                 isShareable={isShareable}
                 values={values}
-                title={title}
                 units={units}
                 setUnits={setUnits}
                 completion={completion}
@@ -35,6 +35,7 @@ const Block = ({
 
 Block.propTypes = {
     id: PropTypes.string.isRequired,
+    title: PropTypes.node,
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired,
     className: PropTypes.string,
