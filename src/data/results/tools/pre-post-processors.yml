@@ -257,7 +257,7 @@ aggregations:
           percentage: 0.01
   - id: pre-post-processors-experience-heatmap
     heatmap:
-      - id: pre_postprocessors_sass
+      - id: sass
         count: 8726
         buckets:
           - id: '5_10'
@@ -284,7 +284,7 @@ aggregations:
             count: 117
             absolute_percentage: 1.34
             relative_percentage: 51.54
-      - id: pre_postprocessors_less
+      - id: less
         count: 2881
         buckets:
           - id: '5_10'
@@ -311,7 +311,7 @@ aggregations:
             count: 26
             absolute_percentage: 0.9
             relative_percentage: 11.45
-      - id: pre_postprocessors_postcss
+      - id: postcss
         count: 4070
         buckets:
           - id: '5_10'
@@ -338,7 +338,7 @@ aggregations:
             count: 24
             absolute_percentage: 0.59
             relative_percentage: 10.57
-      - id: pre_postprocessors_stylus
+      - id: stylus
         count: 882
         buckets:
           - id: '5_10'
@@ -367,7 +367,7 @@ aggregations:
             relative_percentage: 2.64
   - id: pre-post-processors-salary-heatmap
     heatmap:
-      - id: pre_postprocessors_sass
+      - id: sass
         count: 8726
         buckets:
           - id: '50_100'
@@ -398,7 +398,7 @@ aggregations:
             count: 94
             absolute_percentage: 1.08
             relative_percentage: 70.68
-      - id: pre_postprocessors_less
+      - id: less
         count: 2881
         buckets:
           - id: '50_100'
@@ -429,7 +429,7 @@ aggregations:
             count: 47
             absolute_percentage: 1.63
             relative_percentage: 35.34
-      - id: pre_postprocessors_postcss
+      - id: postcss
         count: 4070
         buckets:
           - id: '50_100'
@@ -460,7 +460,7 @@ aggregations:
             count: 63
             absolute_percentage: 1.55
             relative_percentage: 47.37
-      - id: pre_postprocessors_stylus
+      - id: stylus
         count: 882
         buckets:
           - id: '50_100'

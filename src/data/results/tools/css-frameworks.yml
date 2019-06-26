@@ -328,7 +328,7 @@ aggregations:
           percentage: 0.02
   - id: css-frameworks-experience-heatmap
     heatmap:
-      - id: cssframeworks_bootstrap
+      - id: bootstrap
         count: 5090
         buckets:
           - id: '5_10'
@@ -355,7 +355,7 @@ aggregations:
             count: 99
             absolute_percentage: 1.94
             relative_percentage: 43.61
-      - id: cssframeworks_materializecss
+      - id: materialize-css
         count: 1930
         buckets:
           - id: '2_5'
@@ -382,7 +382,7 @@ aggregations:
             count: 30
             absolute_percentage: 1.55
             relative_percentage: 13.22
-      - id: cssframeworks_antdesign
+      - id: ant-design
         count: 497
         buckets:
           - id: '2_5'
@@ -409,7 +409,7 @@ aggregations:
             count: 3
             absolute_percentage: 0.6
             relative_percentage: 1.32
-      - id: cssframeworks_semanticui
+      - id: semantic-ui
         count: 1044
         buckets:
           - id: '5_10'
@@ -436,7 +436,7 @@ aggregations:
             count: 22
             absolute_percentage: 2.11
             relative_percentage: 9.69
-      - id: cssframeworks_bulma
+      - id: bulma
         count: 1136
         buckets:
           - id: '5_10'
@@ -463,7 +463,7 @@ aggregations:
             count: 17
             absolute_percentage: 1.5
             relative_percentage: 7.49
-      - id: cssframeworks_foundation
+      - id: foundation
         count: 1596
         buckets:
           - id: '5_10'
@@ -490,7 +490,7 @@ aggregations:
             count: 7
             absolute_percentage: 0.44
             relative_percentage: 3.08
-      - id: cssframeworks_uikit
+      - id: uikit
         count: 370
         buckets:
           - id: '5_10'
@@ -517,7 +517,7 @@ aggregations:
             count: 5
             absolute_percentage: 1.35
             relative_percentage: 2.2
-      - id: cssframeworks_tachyons
+      - id: tachyons
         count: 467
         buckets:
           - id: '5_10'
@@ -544,7 +544,7 @@ aggregations:
             count: 7
             absolute_percentage: 1.5
             relative_percentage: 3.08
-      - id: cssframeworks_primer
+      - id: primer
         count: 70
         buckets:
           - id: '5_10'
@@ -571,7 +571,7 @@ aggregations:
             count: 1
             absolute_percentage: 1.43
             relative_percentage: 0.44
-      - id: cssframeworks_tailwind
+      - id: tailwind
         count: 555
         buckets:
           - id: '5_10'
@@ -598,7 +598,7 @@ aggregations:
             count: 4
             absolute_percentage: 0.72
             relative_percentage: 1.76
-      - id: cssframeworks_purecss
+      - id: purecss
         count: 616
         buckets:
           - id: '5_10'
@@ -627,7 +627,7 @@ aggregations:
             relative_percentage: 2.64
   - id: css-frameworks-salary-heatmap
     heatmap:
-      - id: cssframeworks_bootstrap
+      - id: bootstrap
         count: 5090
         buckets:
           - id: '50_100'
@@ -658,7 +658,7 @@ aggregations:
             count: 48
             absolute_percentage: 0.94
             relative_percentage: 36.09
-      - id: cssframeworks_materializecss
+      - id: materialize-css
         count: 1930
         buckets:
           - id: '50_100'
@@ -689,7 +689,7 @@ aggregations:
             count: 22
             absolute_percentage: 1.14
             relative_percentage: 16.54
-      - id: cssframeworks_antdesign
+      - id: ant-design
         count: 497
         buckets:
           - id: '50_100'
@@ -720,7 +720,7 @@ aggregations:
             count: 8
             absolute_percentage: 1.61
             relative_percentage: 6.02
-      - id: cssframeworks_semanticui
+      - id: semantic-ui
         count: 1044
         buckets:
           - id: '50_100'
@@ -751,7 +751,7 @@ aggregations:
             count: 15
             absolute_percentage: 1.44
             relative_percentage: 11.28
-      - id: cssframeworks_bulma
+      - id: bulma
         count: 1136
         buckets:
           - id: '50_100'
@@ -782,7 +782,7 @@ aggregations:
             count: 8
             absolute_percentage: 0.7
             relative_percentage: 6.02
-      - id: cssframeworks_foundation
+      - id: foundation
         count: 1596
         buckets:
           - id: '50_100'
@@ -813,7 +813,7 @@ aggregations:
             count: 16
             absolute_percentage: 1
             relative_percentage: 12.03
-      - id: cssframeworks_uikit
+      - id: uikit
         count: 370
         buckets:
           - id: '50_100'
@@ -844,7 +844,7 @@ aggregations:
             count: 4
             absolute_percentage: 1.08
             relative_percentage: 3.01
-      - id: cssframeworks_tachyons
+      - id: tachyons
         count: 467
         buckets:
           - id: '50_100'
@@ -875,7 +875,7 @@ aggregations:
             count: 9
             absolute_percentage: 1.93
             relative_percentage: 6.77
-      - id: cssframeworks_primer
+      - id: primer
         count: 70
         buckets:
           - id: '50_100'
@@ -902,7 +902,7 @@ aggregations:
             count: 2
             absolute_percentage: 2.86
             relative_percentage: 0.24
-      - id: cssframeworks_tailwind
+      - id: tailwind
         count: 555
         buckets:
           - id: '50_100'
@@ -933,7 +933,7 @@ aggregations:
             count: 5
             absolute_percentage: 0.9
             relative_percentage: 3.76
-      - id: cssframeworks_purecss
+      - id: purecss
         count: 616
         buckets:
           - id: '50_100'

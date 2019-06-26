@@ -190,7 +190,7 @@ aggregations:
           percentage: 0.02
   - id: methodologies-experience-heatmap
     heatmap:
-      - id: methodologies_bem
+      - id: bem
         count: 5840
         buckets:
           - id: '5_10'
@@ -217,7 +217,7 @@ aggregations:
             count: 70
             absolute_percentage: 1.2
             relative_percentage: 30.84
-      - id: methodologies_atomiccss
+      - id: atomic-css
         count: 2249
         buckets:
           - id: '5_10'
@@ -244,7 +244,7 @@ aggregations:
             count: 5
             absolute_percentage: 0.22
             relative_percentage: 2.2
-      - id: methodologies_oocss
+      - id: oocss
         count: 1749
         buckets:
           - id: '5_10'
@@ -271,7 +271,7 @@ aggregations:
             count: 7
             absolute_percentage: 0.4
             relative_percentage: 3.08
-      - id: methodologies_smacss
+      - id: smacss
         count: 1688
         buckets:
           - id: '5_10'
@@ -298,7 +298,7 @@ aggregations:
             count: 5
             absolute_percentage: 0.3
             relative_percentage: 2.2
-      - id: methodologies_itcss
+      - id: it-css
         count: 791
         buckets:
           - id: '5_10'
@@ -323,7 +323,7 @@ aggregations:
             relative_percentage: 2.4
   - id: methodologies-salary-heatmap
     heatmap:
-      - id: methodologies_bem
+      - id: bem
         count: 5840
         buckets:
           - id: '50_100'
@@ -354,7 +354,7 @@ aggregations:
             count: 48
             absolute_percentage: 0.82
             relative_percentage: 36.09
-      - id: methodologies_atomiccss
+      - id: atomic-css
         count: 2249
         buckets:
           - id: '50_100'
@@ -385,7 +385,7 @@ aggregations:
             count: 22
             absolute_percentage: 0.98
             relative_percentage: 16.54
-      - id: methodologies_oocss
+      - id: oocss
         count: 1749
         buckets:
           - id: '50_100'
@@ -416,7 +416,7 @@ aggregations:
             count: 19
             absolute_percentage: 1.09
             relative_percentage: 14.29
-      - id: methodologies_smacss
+      - id: smacss
         count: 1688
         buckets:
           - id: '50_100'
@@ -447,7 +447,7 @@ aggregations:
             count: 21
             absolute_percentage: 1.24
             relative_percentage: 15.79
-      - id: methodologies_itcss
+      - id: it-css
         count: 791
         buckets:
           - id: '50_100'

@@ -259,7 +259,7 @@ aggregations:
           percentage: 0.02
   - id: css-in-js-experience-heatmap
     heatmap:
-      - id: cssinjs_styledcomponents
+      - id: styled-components
         count: 3754
         buckets:
           - id: '5_10'
@@ -286,7 +286,7 @@ aggregations:
             count: 58
             absolute_percentage: 1.55
             relative_percentage: 25.55
-      - id: cssinjs_glamor
+      - id: glamor
         count: 306
         buckets:
           - id: '5_10'
@@ -313,7 +313,7 @@ aggregations:
             count: 1
             absolute_percentage: 0.33
             relative_percentage: 0.44
-      - id: cssinjs_aphrodite
+      - id: aphrodite
         count: 84
         buckets:
           - id: '5_10'
@@ -336,7 +336,7 @@ aggregations:
             count: 4
             absolute_percentage: 4.76
             relative_percentage: 0.94
-      - id: cssinjs_jss
+      - id: jss
         count: 444
         buckets:
           - id: '5_10'
@@ -363,7 +363,7 @@ aggregations:
             count: 2
             absolute_percentage: 0.45
             relative_percentage: 0.88
-      - id: cssinjs_styledjsx
+      - id: styled-jsx
         count: 1018
         buckets:
           - id: '5_10'
@@ -390,7 +390,7 @@ aggregations:
             count: 14
             absolute_percentage: 1.38
             relative_percentage: 6.17
-      - id: cssinjs_radium
+      - id: radium
         count: 77
         buckets:
           - id: '5_10'
@@ -417,7 +417,7 @@ aggregations:
             count: 1
             absolute_percentage: 1.3
             relative_percentage: 0.44
-      - id: cssinjs_emotion
+      - id: emotion
         count: 735
         buckets:
           - id: '5_10'
@@ -444,7 +444,7 @@ aggregations:
             count: 2
             absolute_percentage: 0.27
             relative_percentage: 0.88
-      - id: cssinjs_cssmodules
+      - id: css-modules
         count: 2389
         buckets:
           - id: '5_10'
@@ -473,7 +473,7 @@ aggregations:
             relative_percentage: 12.33
   - id: css-in-js-salary-heatmap
     heatmap:
-      - id: cssinjs_styledcomponents
+      - id: styled-components
         count: 3754
         buckets:
           - id: '50_100'
@@ -504,7 +504,7 @@ aggregations:
             count: 43
             absolute_percentage: 1.15
             relative_percentage: 32.33
-      - id: cssinjs_glamor
+      - id: glamor
         count: 306
         buckets:
           - id: '50_100'
@@ -535,7 +535,7 @@ aggregations:
             count: 8
             absolute_percentage: 2.61
             relative_percentage: 1.5
-      - id: cssinjs_aphrodite
+      - id: aphrodite
         count: 84
         buckets:
           - id: '50_100'
@@ -562,7 +562,7 @@ aggregations:
             count: 2
             absolute_percentage: 2.38
             relative_percentage: 0.24
-      - id: cssinjs_jss
+      - id: jss
         count: 444
         buckets:
           - id: '50_100'
@@ -593,7 +593,7 @@ aggregations:
             count: 9
             absolute_percentage: 2.03
             relative_percentage: 6.77
-      - id: cssinjs_styledjsx
+      - id: styled-jsx
         count: 1018
         buckets:
           - id: '50_100'
@@ -624,7 +624,7 @@ aggregations:
             count: 10
             absolute_percentage: 0.98
             relative_percentage: 7.52
-      - id: cssinjs_radium
+      - id: radium
         count: 77
         buckets:
           - id: '50_100'
@@ -655,7 +655,7 @@ aggregations:
             count: 1
             absolute_percentage: 1.3
             relative_percentage: 0.75
-      - id: cssinjs_emotion
+      - id: emotion
         count: 735
         buckets:
           - id: '50_100'
@@ -686,7 +686,7 @@ aggregations:
             count: 22
             absolute_percentage: 2.99
             relative_percentage: 16.54
-      - id: cssinjs_cssmodules
+      - id: css-modules
         count: 2389
         buckets:
           - id: '50_100'
