@@ -319,7 +319,7 @@ aggregations:
             count: 114
             absolute_percentage: 1.85
             relative_percentage: 50.22
-      - id: fllexbox
+      - id: flexbox
         count: 10687
         buckets:
           - id: '5_10'

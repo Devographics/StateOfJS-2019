@@ -1,11 +1,12 @@
 import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { keys } from '../../constants'
-import { useI18n } from '../i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
+import { useEntities } from 'core/entities/entitiesContext'
 import Block from 'core/components/Block'
 import HeatmapChart from 'core/charts/HeatmapChart'
 
-const getChartData = (data, block) => {
+const getChartData = (data, block, getName) => {
     const bucketKeys = keys[block.bucketKeys]
     if (!Array.isArray(bucketKeys)) {
         throw new Error(
@@ -29,7 +30,10 @@ const getChartData = (data, block) => {
         throw new Error(`ExperienceHeatmapBlock: Missing data for block ${block.id}`)
     }
     items = items.map(item => {
-        const itemWithKeys = { ...item }
+        const itemWithKeys = {
+            ...item,
+            name: getName(item.id),
+        }
         bucketKeys.forEach(key => {
             let bucket = item.buckets.find(b => b.id === key)
             if (!bucket) {
@@ -52,10 +56,11 @@ const getChartData = (data, block) => {
 
 const HeatmapBlock = ({ block, data }) => {
     const { translate } = useI18n()
+    const { getName } = useEntities()
 
     const { bucketKeys, items } = useMemo(
-        () => getChartData(data, block),
-        [data, block]
+        () => getChartData(data, block, getName),
+        [data, block, getName]
     )
 
     return (

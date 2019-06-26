@@ -5,7 +5,6 @@ import theme from 'nivoTheme'
 import { colors, totalCount } from '../../../constants'
 import ChartLabel from 'core/components/ChartLabel'
 import { useTheme } from '@nivo/core'
-// import { Chip } from '@nivo/tooltip'
 import { useI18n } from 'core/i18n/i18nContext'
 import round from 'lodash/round'
 

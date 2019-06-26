@@ -29,7 +29,7 @@ const HeatmapChart = ({ bucketKeys, items }) => {
                 return (
                     <Fragment key={item.id}>
                         <div className={`Heatmap__Subject${isLast ? ` Heatmap__Subject--last` : ''}`}>
-                            {item.id}
+                            {item.name}
                         </div>
                         {bucketKeys.map(key => {
                             const value = item[key].relative_percentage
@@ -60,6 +60,7 @@ HeatmapChart.propTypes = {
     items: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
         })
     ).isRequired,
 }
