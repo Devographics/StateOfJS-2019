@@ -39,18 +39,6 @@ export const query = graphql`
                         relative_percentage
                     }
                 }
-                others {
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
             }
             fields {
                 resources {
