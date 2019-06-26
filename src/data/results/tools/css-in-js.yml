@@ -471,3 +471,249 @@ aggregations:
             count: 28
             absolute_percentage: 1.17
             relative_percentage: 12.33
+  - id: css-in-js-salary-heatmap
+    heatmap:
+      - id: cssinjs_styledcomponents
+        count: 3754
+        buckets:
+          - id: '50_100'
+            count: 1164
+            absolute_percentage: 31.01
+            relative_percentage: 33.99
+          - id: '30_50'
+            count: 755
+            absolute_percentage: 20.11
+            relative_percentage: 33.5
+          - id: '100_200'
+            count: 652
+            absolute_percentage: 17.37
+            relative_percentage: 40.65
+          - id: '10_30'
+            count: 611
+            absolute_percentage: 16.28
+            relative_percentage: 31.22
+          - id: '0_10'
+            count: 255
+            absolute_percentage: 6.79
+            relative_percentage: 30.36
+          - id: none
+            count: 143
+            absolute_percentage: 3.81
+            relative_percentage: 26.83
+          - id: 200_more
+            count: 43
+            absolute_percentage: 1.15
+            relative_percentage: 32.33
+      - id: cssinjs_glamor
+        count: 306
+        buckets:
+          - id: '50_100'
+            count: 101
+            absolute_percentage: 33.01
+            relative_percentage: 2.95
+          - id: '100_200'
+            count: 79
+            absolute_percentage: 25.82
+            relative_percentage: 4.93
+          - id: '30_50'
+            count: 62
+            absolute_percentage: 20.26
+            relative_percentage: 2.75
+          - id: '10_30'
+            count: 32
+            absolute_percentage: 10.46
+            relative_percentage: 1.64
+          - id: '0_10'
+            count: 9
+            absolute_percentage: 2.94
+            relative_percentage: 1.07
+          - id: 200_more
+            count: 9
+            absolute_percentage: 2.94
+            relative_percentage: 6.77
+          - id: none
+            count: 8
+            absolute_percentage: 2.61
+            relative_percentage: 1.5
+      - id: cssinjs_aphrodite
+        count: 84
+        buckets:
+          - id: '50_100'
+            count: 30
+            absolute_percentage: 35.71
+            relative_percentage: 0.88
+          - id: '100_200'
+            count: 20
+            absolute_percentage: 23.81
+            relative_percentage: 1.25
+          - id: '30_50'
+            count: 16
+            absolute_percentage: 19.05
+            relative_percentage: 0.71
+          - id: '10_30'
+            count: 10
+            absolute_percentage: 11.9
+            relative_percentage: 0.51
+          - id: 200_more
+            count: 5
+            absolute_percentage: 5.95
+            relative_percentage: 3.76
+          - id: '0_10'
+            count: 2
+            absolute_percentage: 2.38
+            relative_percentage: 0.24
+      - id: cssinjs_jss
+        count: 444
+        buckets:
+          - id: '50_100'
+            count: 140
+            absolute_percentage: 31.53
+            relative_percentage: 4.09
+          - id: '30_50'
+            count: 83
+            absolute_percentage: 18.69
+            relative_percentage: 3.68
+          - id: '100_200'
+            count: 80
+            absolute_percentage: 18.02
+            relative_percentage: 4.99
+          - id: '10_30'
+            count: 77
+            absolute_percentage: 17.34
+            relative_percentage: 3.93
+          - id: '0_10'
+            count: 30
+            absolute_percentage: 6.76
+            relative_percentage: 3.57
+          - id: none
+            count: 15
+            absolute_percentage: 3.38
+            relative_percentage: 2.81
+          - id: 200_more
+            count: 9
+            absolute_percentage: 2.03
+            relative_percentage: 6.77
+      - id: cssinjs_styledjsx
+        count: 1018
+        buckets:
+          - id: '50_100'
+            count: 331
+            absolute_percentage: 32.51
+            relative_percentage: 9.66
+          - id: '30_50'
+            count: 204
+            absolute_percentage: 20.04
+            relative_percentage: 9.05
+          - id: '100_200'
+            count: 166
+            absolute_percentage: 16.31
+            relative_percentage: 10.35
+          - id: '10_30'
+            count: 159
+            absolute_percentage: 15.62
+            relative_percentage: 8.12
+          - id: '0_10'
+            count: 71
+            absolute_percentage: 6.97
+            relative_percentage: 8.45
+          - id: none
+            count: 44
+            absolute_percentage: 4.32
+            relative_percentage: 8.26
+          - id: 200_more
+            count: 10
+            absolute_percentage: 0.98
+            relative_percentage: 7.52
+      - id: cssinjs_radium
+        count: 77
+        buckets:
+          - id: '50_100'
+            count: 28
+            absolute_percentage: 36.36
+            relative_percentage: 0.82
+          - id: '100_200'
+            count: 17
+            absolute_percentage: 22.08
+            relative_percentage: 1.06
+          - id: '10_30'
+            count: 8
+            absolute_percentage: 10.39
+            relative_percentage: 0.41
+          - id: none
+            count: 8
+            absolute_percentage: 10.39
+            relative_percentage: 1.5
+          - id: '30_50'
+            count: 6
+            absolute_percentage: 7.79
+            relative_percentage: 0.27
+          - id: '0_10'
+            count: 5
+            absolute_percentage: 6.49
+            relative_percentage: 0.6
+          - id: 200_more
+            count: 1
+            absolute_percentage: 1.3
+            relative_percentage: 0.75
+      - id: cssinjs_emotion
+        count: 735
+        buckets:
+          - id: '50_100'
+            count: 242
+            absolute_percentage: 32.93
+            relative_percentage: 7.07
+          - id: '100_200'
+            count: 188
+            absolute_percentage: 25.58
+            relative_percentage: 11.72
+          - id: '30_50'
+            count: 119
+            absolute_percentage: 16.19
+            relative_percentage: 5.28
+          - id: '10_30'
+            count: 88
+            absolute_percentage: 11.97
+            relative_percentage: 4.5
+          - id: '0_10'
+            count: 31
+            absolute_percentage: 4.22
+            relative_percentage: 3.69
+          - id: none
+            count: 24
+            absolute_percentage: 3.27
+            relative_percentage: 4.5
+          - id: 200_more
+            count: 22
+            absolute_percentage: 2.99
+            relative_percentage: 16.54
+      - id: cssinjs_cssmodules
+        count: 2389
+        buckets:
+          - id: '50_100'
+            count: 751
+            absolute_percentage: 31.44
+            relative_percentage: 21.93
+          - id: '100_200'
+            count: 477
+            absolute_percentage: 19.97
+            relative_percentage: 29.74
+          - id: '30_50'
+            count: 458
+            absolute_percentage: 19.17
+            relative_percentage: 20.32
+          - id: '10_30'
+            count: 372
+            absolute_percentage: 15.57
+            relative_percentage: 19.01
+          - id: '0_10'
+            count: 117
+            absolute_percentage: 4.9
+            relative_percentage: 13.93
+          - id: none
+            count: 80
+            absolute_percentage: 3.35
+            relative_percentage: 15.01
+          - id: 200_more
+            count: 49
+            absolute_percentage: 2.05
+            relative_percentage: 36.84

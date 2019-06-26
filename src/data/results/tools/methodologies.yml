@@ -321,3 +321,160 @@ aggregations:
             count: 23
             absolute_percentage: 2.91
             relative_percentage: 2.4
+  - id: methodologies-salary-heatmap
+    heatmap:
+      - id: methodologies_bem
+        count: 5840
+        buckets:
+          - id: '50_100'
+            count: 1878
+            absolute_percentage: 32.16
+            relative_percentage: 54.83
+          - id: '30_50'
+            count: 1233
+            absolute_percentage: 21.11
+            relative_percentage: 54.7
+          - id: '10_30'
+            count: 1041
+            absolute_percentage: 17.83
+            relative_percentage: 53.19
+          - id: '100_200'
+            count: 837
+            absolute_percentage: 14.33
+            relative_percentage: 52.18
+          - id: '0_10'
+            count: 394
+            absolute_percentage: 6.75
+            relative_percentage: 46.9
+          - id: none
+            count: 180
+            absolute_percentage: 3.08
+            relative_percentage: 33.77
+          - id: 200_more
+            count: 48
+            absolute_percentage: 0.82
+            relative_percentage: 36.09
+      - id: methodologies_atomiccss
+        count: 2249
+        buckets:
+          - id: '50_100'
+            count: 783
+            absolute_percentage: 34.82
+            relative_percentage: 22.86
+          - id: '30_50'
+            count: 487
+            absolute_percentage: 21.65
+            relative_percentage: 21.61
+          - id: '100_200'
+            count: 401
+            absolute_percentage: 17.83
+            relative_percentage: 25
+          - id: '10_30'
+            count: 332
+            absolute_percentage: 14.76
+            relative_percentage: 16.96
+          - id: '0_10'
+            count: 95
+            absolute_percentage: 4.22
+            relative_percentage: 11.31
+          - id: none
+            count: 37
+            absolute_percentage: 1.65
+            relative_percentage: 6.94
+          - id: 200_more
+            count: 22
+            absolute_percentage: 0.98
+            relative_percentage: 16.54
+      - id: methodologies_oocss
+        count: 1749
+        buckets:
+          - id: '50_100'
+            count: 597
+            absolute_percentage: 34.13
+            relative_percentage: 17.43
+          - id: '30_50'
+            count: 386
+            absolute_percentage: 22.07
+            relative_percentage: 17.13
+          - id: '100_200'
+            count: 327
+            absolute_percentage: 18.7
+            relative_percentage: 20.39
+          - id: '10_30'
+            count: 251
+            absolute_percentage: 14.35
+            relative_percentage: 12.83
+          - id: '0_10'
+            count: 63
+            absolute_percentage: 3.6
+            relative_percentage: 7.5
+          - id: none
+            count: 32
+            absolute_percentage: 1.83
+            relative_percentage: 6
+          - id: 200_more
+            count: 19
+            absolute_percentage: 1.09
+            relative_percentage: 14.29
+      - id: methodologies_smacss
+        count: 1688
+        buckets:
+          - id: '50_100'
+            count: 587
+            absolute_percentage: 34.77
+            relative_percentage: 17.14
+          - id: '100_200'
+            count: 336
+            absolute_percentage: 19.91
+            relative_percentage: 20.95
+          - id: '30_50'
+            count: 335
+            absolute_percentage: 19.85
+            relative_percentage: 14.86
+          - id: '10_30'
+            count: 241
+            absolute_percentage: 14.28
+            relative_percentage: 12.31
+          - id: '0_10'
+            count: 77
+            absolute_percentage: 4.56
+            relative_percentage: 9.17
+          - id: none
+            count: 26
+            absolute_percentage: 1.54
+            relative_percentage: 4.88
+          - id: 200_more
+            count: 21
+            absolute_percentage: 1.24
+            relative_percentage: 15.79
+      - id: methodologies_itcss
+        count: 791
+        buckets:
+          - id: '50_100'
+            count: 291
+            absolute_percentage: 36.79
+            relative_percentage: 8.5
+          - id: '30_50'
+            count: 198
+            absolute_percentage: 25.03
+            relative_percentage: 8.78
+          - id: '100_200'
+            count: 129
+            absolute_percentage: 16.31
+            relative_percentage: 8.04
+          - id: '10_30'
+            count: 100
+            absolute_percentage: 12.64
+            relative_percentage: 5.11
+          - id: '0_10'
+            count: 28
+            absolute_percentage: 3.54
+            relative_percentage: 3.33
+          - id: none
+            count: 11
+            absolute_percentage: 1.39
+            relative_percentage: 2.06
+          - id: 200_more
+            count: 7
+            absolute_percentage: 0.88
+            relative_percentage: 5.26
