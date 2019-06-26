@@ -15,7 +15,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
         <div
             className="Heatmap"
             style={{
-                gridTemplateColumns: `auto ${'60px '.repeat(keys.length)}`
+                gridTemplateColumns: `auto ${'70px '.repeat(keys.length)}`
             }}
         >
             <div className="Heatmap__Legend">
@@ -24,7 +24,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
             {keys.map(key => {
                 return (
                     <div key={key} className="Heatmap__Header">
-                        {translate(`${i18nNamespace}.${key}.short`)}
+                        {translate(`${i18nNamespace}.${key}.shorter`)}
                     </div>
                 )
             })}

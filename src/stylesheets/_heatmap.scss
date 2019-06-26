@@ -10,15 +10,12 @@
 }
 
 .Heatmap__Header {
-    width: 60px;
-    height: 100px;
     font-size: $small-font;
     font-weight: 600;
     padding: $spacing / 2 0;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .Heatmap__Subject {
@@ -44,7 +41,6 @@
 }
 
 .Heatmap__Cell {
-    width: 60px;
     height: 40px;
     font-weight: 600;
     color: $navy;
