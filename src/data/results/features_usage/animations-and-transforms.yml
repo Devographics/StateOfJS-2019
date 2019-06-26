@@ -178,7 +178,7 @@ aggregations:
           percentage: 2.01
   - id: animations-and-transforms-experience-heatmap
     heatmap:
-      - id: animations_transforms_csstransitions
+      - id: css-transitions
         count: 10606
         buckets:
           - id: '5_10'
@@ -205,7 +205,7 @@ aggregations:
             count: 171
             absolute_percentage: 1.61
             relative_percentage: 75.33
-      - id: animations_transforms_csstransforms
+      - id: css-transforms
         count: 10551
         buckets:
           - id: '5_10'
@@ -232,7 +232,7 @@ aggregations:
             count: 168
             absolute_percentage: 1.59
             relative_percentage: 74.01
-      - id: animations_transforms_cssanimations
+      - id: css-animations
         count: 10128
         buckets:
           - id: '5_10'

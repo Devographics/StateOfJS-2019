@@ -178,7 +178,7 @@ aggregations:
           percentage: 2.01
   - id: interactions-experience-heatmap
     heatmap:
-      - id: interactions_cssscrollsnap
+      - id: css-scroll-snap
         count: 1308
         buckets:
           - id: '10_20'
@@ -205,7 +205,7 @@ aggregations:
             count: 18
             absolute_percentage: 1.38
             relative_percentage: 7.93
-      - id: interactions_overscrollbehavior
+      - id: overscroll-behavior
         count: 2241
         buckets:
           - id: '5_10'
@@ -232,7 +232,7 @@ aggregations:
             count: 28
             absolute_percentage: 1.25
             relative_percentage: 12.33
-      - id: interactions_overflowanchor
+      - id: overflow-anchor
         count: 821
         buckets:
           - id: '2_5'

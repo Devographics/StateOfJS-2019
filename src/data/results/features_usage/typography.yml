@@ -292,7 +292,7 @@ aggregations:
           percentage: 2.01
   - id: typography-experience-heatmap
     heatmap:
-      - id: typography_webfonts_fontface
+      - id: web-fonts-font-face
         count: 10507
         buckets:
           - id: '5_10'
@@ -319,7 +319,7 @@ aggregations:
             count: 159
             absolute_percentage: 1.51
             relative_percentage: 70.04
-      - id: typography_variablefonts
+      - id: variable-fonts
         count: 2906
         buckets:
           - id: '5_10'
@@ -346,8 +346,7 @@ aggregations:
             count: 63
             absolute_percentage: 2.17
             relative_percentage: 27.75
-      - id: >-
-          typography_linebreakingproperties_overflowwrap_wordbreak_linebreak_hyphens
+      - id: line-breaking-properties
         count: 9900
         buckets:
           - id: '5_10'
@@ -374,7 +373,7 @@ aggregations:
             count: 130
             absolute_percentage: 1.31
             relative_percentage: 57.27
-      - id: typography_fontvariant
+      - id: font-variant
         count: 2733
         buckets:
           - id: '10_20'
@@ -401,7 +400,7 @@ aggregations:
             count: 35
             absolute_percentage: 1.28
             relative_percentage: 15.42
-      - id: typography_initialletter
+      - id: initial-letter
         count: 3193
         buckets:
           - id: '10_20'

@@ -292,7 +292,7 @@ aggregations:
           percentage: 2.01
   - id: layout-experience-heatmap
     heatmap:
-      - id: layout_cssgrid
+      - id: css-grid
         count: 6153
         buckets:
           - id: '5_10'
@@ -319,7 +319,7 @@ aggregations:
             count: 114
             absolute_percentage: 1.85
             relative_percentage: 50.22
-      - id: layout_flexbox
+      - id: fllexbox
         count: 10687
         buckets:
           - id: '5_10'
@@ -346,7 +346,7 @@ aggregations:
             count: 191
             absolute_percentage: 1.79
             relative_percentage: 84.14
-      - id: layout_cssmulticolumn
+      - id: css-multi-column
         count: 3492
         buckets:
           - id: '10_20'
@@ -373,7 +373,7 @@ aggregations:
             count: 24
             absolute_percentage: 0.69
             relative_percentage: 10.57
-      - id: layout_csswritingmodes
+      - id: css-writing-modes
         count: 832
         buckets:
           - id: '10_20'
@@ -400,7 +400,7 @@ aggregations:
             count: 10
             absolute_percentage: 1.2
             relative_percentage: 4.41
-      - id: layout_cssexclusions
+      - id: css-exclusions
         count: 802
         buckets:
           - id: '5_10'

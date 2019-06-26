@@ -292,7 +292,7 @@ aggregations:
           percentage: 2.01
   - id: other-features-experience-heatmap
     heatmap:
-      - id: otherfeatures_cssvariables
+      - id: css-variables
         count: 6689
         buckets:
           - id: '5_10'
@@ -319,7 +319,7 @@ aggregations:
             count: 118
             absolute_percentage: 1.76
             relative_percentage: 51.98
-      - id: otherfeatures_featuresupportqueries_supports
+      - id: support-queries
         count: 4145
         buckets:
           - id: '5_10'
@@ -346,7 +346,7 @@ aggregations:
             count: 49
             absolute_percentage: 1.18
             relative_percentage: 21.59
-      - id: otherfeatures_csscontainment
+      - id: css-containment
         count: 535
         buckets:
           - id: '5_10'
@@ -373,7 +373,7 @@ aggregations:
             count: 5
             absolute_percentage: 0.93
             relative_percentage: 2.2
-      - id: otherfeatures_willchange
+      - id: will-change
         count: 2670
         buckets:
           - id: '5_10'
@@ -400,7 +400,7 @@ aggregations:
             count: 12
             absolute_percentage: 0.45
             relative_percentage: 5.29
-      - id: otherfeatures_calc
+      - id: calc
         count: 9690
         buckets:
           - id: '5_10'

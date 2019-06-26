@@ -349,7 +349,7 @@ aggregations:
           percentage: 2.01
   - id: shapes-and-graphics-experience-heatmap
     heatmap:
-      - id: shapes_graphics_cssshapes
+      - id: css-shapes
         count: 2431
         buckets:
           - id: '5_10'
@@ -376,7 +376,7 @@ aggregations:
             count: 42
             absolute_percentage: 1.73
             relative_percentage: 18.5
-      - id: shapes_graphics_objectfit
+      - id: object-fit
         count: 4798
         buckets:
           - id: '5_10'
@@ -403,7 +403,7 @@ aggregations:
             count: 58
             absolute_percentage: 1.21
             relative_percentage: 25.55
-      - id: shapes_graphics_clippath
+      - id: clip-path
         count: 4381
         buckets:
           - id: '5_10'
@@ -430,7 +430,7 @@ aggregations:
             count: 53
             absolute_percentage: 1.21
             relative_percentage: 23.35
-      - id: shapes_graphics_cssmasks
+      - id: css-masks
         count: 2986
         buckets:
           - id: '5_10'
@@ -457,7 +457,7 @@ aggregations:
             count: 21
             absolute_percentage: 0.7
             relative_percentage: 9.25
-      - id: shapes_graphics_blendmodes
+      - id: blend-modes
         count: 3820
         buckets:
           - id: '5_10'
@@ -484,7 +484,7 @@ aggregations:
             count: 31
             absolute_percentage: 0.81
             relative_percentage: 13.66
-      - id: shapes_graphics_cssfiltereffects
+      - id: css-filter-effects
         count: 6649
         buckets:
           - id: '5_10'
