@@ -6,10 +6,12 @@
     font-size: $smallish-font;
     font-weight: 600;
     padding: $spacing / 2 0;
+    align-self: end;
 }
 
 .Heatmap__Header {
     width: 60px;
+    height: 100px;
     font-size: $small-font;
     font-weight: 600;
     padding: $spacing / 2 0;
@@ -50,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid $navy;
+    border-top: 1px solid $navyDark;
 }
 .Heatmap__Cell--last {
     border-bottom: 1px solid $navy;

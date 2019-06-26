@@ -79,7 +79,7 @@ const HeatmapBlock = ({ block, data }) => {
         <Block
             id={block.id}
             title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)}
-            descripion={translate(`block.description.${block.subject}_${block.heatmapType}_heatmap`)}
+            description={translate(`block.description.${block.subject}_${block.heatmapType}_heatmap`)}
             showDescription={true}
         >
             <HeatmapChart keys={config.keys} items={items} i18nNamespace={config.i18nNamespace}/>

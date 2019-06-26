@@ -310,6 +310,13 @@ translations:
 
     - key: block.title.features_experience_heatmap
       t: Usage by Years Of Experience
+    - key: block.description.features_experience_heatmap
+      t: |
+        <span class="text-pink-lighter text-bold">Light pink</span> means
+        **lower usage** for a given years of experience range while
+        <span class="text-blue text-bold">bluish color</span> means
+        **higher usage**.
+        **Usage** corresponds to participants who selected *"Have used it"*.
 
     ###########################################################################
     # Units & Selectors
@@ -380,8 +387,26 @@ translations:
 
     - key: block.title.tools_experience_heatmap
       t: Usage by Years Of Experience
+    - key: block.description.tools_experience_heatmap
+      t: |
+        <span class="text-pink-lighter text-bold">Light pink</span> means
+        **lower usage** for a given years of experience range while
+        <span class="text-blue text-bold">bluish color</span> means
+        **higher usage**.
+        **Usage** corresponds to participants who selected
+        *"I've USED it before, and WOULD use it again"* or
+        *"I've USED it before, and would NOT use it again"*.
     - key: block.title.tools_salary_heatmap
       t: Usage by Salary Range
+    - key: block.description.tools_salary_heatmap
+      t: |
+        <span class="text-pink-lighter text-bold">Light pink</span> means
+        **lower usage** for a given salary range while
+        <span class="text-blue text-bold">bluish color</span> means
+        **higher usage**.
+        **Usage** corresponds to participants who selected
+        *"I've USED it before, and WOULD use it again"* or
+        *"I've USED it before, and would NOT use it again"*.
 
     # rankings/bump chart
     - key: block.title.tools-section-overview

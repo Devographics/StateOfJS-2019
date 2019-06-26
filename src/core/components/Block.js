@@ -6,6 +6,7 @@ import ShareBlockDebug from '../share/ShareBlockDebug'
 const Block = ({
     id,
     title,
+    description,
     showDescription,
     isShareable,
     className,
@@ -20,6 +21,7 @@ const Block = ({
             <BlockTitle
                 id={id}
                 title={title}
+                description={description}
                 showDescription={showDescription}
                 isShareable={isShareable}
                 values={values}
@@ -36,6 +38,7 @@ const Block = ({
 Block.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.node,
+    description: PropTypes.node,
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired,
     className: PropTypes.string,

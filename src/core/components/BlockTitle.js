@@ -12,10 +12,11 @@ import CompletionIndicator from './CompletionIndicator'
 
 const BlockTitle = ({
     id,
+    title,
+    description: descriptionOverride,
     showDescription,
     isShareable,
     values,
-    title,
     units,
     setUnits,
     completion,
@@ -28,7 +29,7 @@ const BlockTitle = ({
 
     let description = ''
     if (showDescription === true) {
-        description = getBlockDescription(id, context, translate, {
+        description = descriptionOverride || getBlockDescription(id, context, translate, {
             values
         })
     }
@@ -80,6 +81,8 @@ const BlockTitle = ({
 
 BlockTitle.propTypes = {
     id: PropTypes.string.isRequired,
+    title: PropTypes.node,
+    description: PropTypes.node,
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired,
     completion: PropTypes.shape({
