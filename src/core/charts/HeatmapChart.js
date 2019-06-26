@@ -2,24 +2,29 @@ import React, { Fragment, memo } from 'react'
 import PropTypes from 'prop-types'
 import { scaleLinear } from 'd3-scale'
 import { colors } from '../../constants'
+import { useI18n } from 'core/i18n/i18nContext'
 
 const colorScale = scaleLinear()
     .domain([0, 100])
-    .range([colors.teal, colors.blue])
+    .range([colors.pinkLighter, colors.blue])
 
-const HeatmapChart = ({ bucketKeys, items }) => {
+const HeatmapChart = ({ keys, items, i18nNamespace }) => {
+    const { translate } = useI18n()
+
     return (
         <div
             className="Heatmap"
             style={{
-                gridTemplateColumns: `auto ${'60px '.repeat(bucketKeys.length)}`
+                gridTemplateColumns: `auto ${'60px '.repeat(keys.length)}`
             }}
         >
-            <span/>
-            {bucketKeys.map(key => {
+            <div className="Heatmap__Legend">
+                {translate(`${i18nNamespace}.axis_legend`)}
+            </div>
+            {keys.map(key => {
                 return (
                     <div key={key} className="Heatmap__Header">
-                        {key}
+                        {translate(`${i18nNamespace}.${key}.short`)}
                     </div>
                 )
             })}
@@ -31,7 +36,7 @@ const HeatmapChart = ({ bucketKeys, items }) => {
                         <div className={`Heatmap__Subject${isLast ? ` Heatmap__Subject--last` : ''}`}>
                             {item.name}
                         </div>
-                        {bucketKeys.map(key => {
+                        {keys.map(key => {
                             const value = item[key].relative_percentage
 
                             return (
@@ -54,7 +59,7 @@ const HeatmapChart = ({ bucketKeys, items }) => {
 }
 
 HeatmapChart.propTypes = {
-    bucketKeys: PropTypes.arrayOf(
+    keys: PropTypes.arrayOf(
         PropTypes.string
     ).isRequired,
     items: PropTypes.arrayOf(
@@ -63,6 +68,7 @@ HeatmapChart.propTypes = {
             name: PropTypes.string.isRequired,
         })
     ).isRequired,
+    i18nNamespace: PropTypes.string.isRequired,
 }
 
 export default memo(HeatmapChart)

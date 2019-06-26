@@ -82,9 +82,8 @@
             - css-exclusions
             - id: layout-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: features
+              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -107,9 +106,8 @@
             - css-filter-effects
             - id: shapes-and-graphics-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: features
+              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -128,9 +126,8 @@
             - overflow-anchor
             - id: interactions-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: features
+              heatmapType: experience
 
       - id: typography
         path: /typography
@@ -147,9 +144,8 @@
             - initial-letter
             - id: typography-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: features
+              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -168,9 +164,8 @@
             - css-animations
             - id: animations-and-transforms-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: features
+              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -192,9 +187,8 @@
             - calc
             - id: other-features-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: features
+              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -271,14 +265,12 @@
             - stylus
             - id: pre-post-processors-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: tools
+              heatmapType: experience
             - id: pre-post-processors-salary-heatmap
               type: heatmap
-              heatmapType: salary
-              bucketKeys: salary
               subject: tools
+              heatmapType: salary
             - id: resources-sponsors
               type: resources
               items:
@@ -303,14 +295,12 @@
             - purecss
             - id: css-frameworks-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: tools
+              heatmapType: experience
             - id: css-frameworks-salary-heatmap
               type: heatmap
-              heatmapType: salary
-              bucketKeys: salary
               subject: tools
+              heatmapType: salary
 
       - id: methodologies
         path: /methodologies
@@ -325,14 +315,12 @@
             - it-css
             - id: methodologies-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: tools
+              heatmapType: experience
             - id: methodologies-salary-heatmap
               type: heatmap
-              heatmapType: salary
-              bucketKeys: salary
               subject: tools
+              heatmapType: salary
 
       - id: css-in-js
         path: /css-in-js
@@ -350,14 +338,12 @@
             - css-modules
             - id: css-in-js-experience-heatmap
               type: heatmap
-              heatmapType: experience
-              bucketKeys: yearsOfExperience
               subject: tools
+              heatmapType: experience
             - id: css-in-js-salary-heatmap
               type: heatmap
-              heatmapType: salary
-              bucketKeys: salary
               subject: tools
+              heatmapType: salary
             - id: resources-sponsors
               type: resources
               items:

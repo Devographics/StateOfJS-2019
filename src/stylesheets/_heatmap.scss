@@ -2,26 +2,43 @@
     display: grid;
 }
 
+.Heatmap__Legend {
+    font-size: $smallish-font;
+    font-weight: 600;
+    padding: $spacing / 2 0;
+}
+
 .Heatmap__Header {
     width: 60px;
-    font-weight: 600;
     font-size: $small-font;
+    font-weight: 600;
     padding: $spacing / 2 0;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .Heatmap__Subject {
     height: 40px;
-    font-weight: 600;
+    padding-right: $spacing / 2;
+    font-size: $smallish-font;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: $spacing;
     border-top: $border;
     display: flex;
     align-items: center;
+    padding-left: 0;
+    transition: padding 200ms, background-color 200ms;
 }
 .Heatmap__Subject--last {
     border-bottom: $border;
+}
+.Heatmap__Subject:hover {
+    background: $navyDark;
+    padding-left: $spacing;
 }
 
 .Heatmap__Cell {

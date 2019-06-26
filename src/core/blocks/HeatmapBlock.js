@@ -6,19 +6,30 @@ import { useEntities } from 'core/entities/entitiesContext'
 import Block from 'core/components/Block'
 import HeatmapChart from 'core/charts/HeatmapChart'
 
-const getChartData = (data, block, getName) => {
-    const bucketKeys = keys[block.bucketKeys]
-    if (!Array.isArray(bucketKeys)) {
-        throw new Error(
-            `ExperienceHeatmapBlock: Missing bucket keys for block ${
-                block.id
-            }, bucketKeys: ${block.bucketKeys || 'undefined'}`
-        )
+const configByType = {
+    salary: {
+        keys: keys.salary,
+        i18nNamespace: 'salary',
+    },
+    experience: {
+        keys: keys.yearsOfExperience,
+        i18nNamespace: 'years-of-experience',
+    },
+}
+
+const getConfig = block => {
+    const config = configByType[block.heatmapType]
+    if (!config) {
+        throw new Error(`HeatmapBlock: Invalid heatmap type: ${block.heatmapType}`)
     }
 
+    return config
+}
+
+const getChartData = (data, block, config, getName) => {
     if (!data || !data.data) {
         throw new Error(
-            `ExperienceHeatmapBlock: Missing data for block ${block.id}, page data is undefined`
+            `HeatmapBlock: Missing data for block ${block.id}, page data is undefined`
         )
     }
 
@@ -27,14 +38,14 @@ const getChartData = (data, block, getName) => {
         items = items.heatmap
     }
     if (!items) {
-        throw new Error(`ExperienceHeatmapBlock: Missing data for block ${block.id}`)
+        throw new Error(`HeatmapBlock: Missing data for block ${block.id}`)
     }
     items = items.map(item => {
         const itemWithKeys = {
             ...item,
             name: getName(item.id),
         }
-        bucketKeys.forEach(key => {
+        config.keys.forEach(key => {
             let bucket = item.buckets.find(b => b.id === key)
             if (!bucket) {
                 bucket = {
@@ -51,21 +62,27 @@ const getChartData = (data, block, getName) => {
         return itemWithKeys
     })
 
-    return { bucketKeys, items }
+    return items
 }
 
 const HeatmapBlock = ({ block, data }) => {
     const { translate } = useI18n()
     const { getName } = useEntities()
 
-    const { bucketKeys, items } = useMemo(
-        () => getChartData(data, block, getName),
-        [data, block, getName]
+    const config = useMemo(() => getConfig(block), [block])
+    const items = useMemo(
+        () => getChartData(data, block, config, getName),
+        [data, block, config, getName]
     )
 
     return (
-        <Block id={block.id} title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)} showDescription={true}>
-            <HeatmapChart bucketKeys={bucketKeys} items={items}/>
+        <Block
+            id={block.id}
+            title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)}
+            descripion={translate(`block.description.${block.subject}_${block.heatmapType}_heatmap`)}
+            showDescription={true}
+        >
+            <HeatmapChart keys={config.keys} items={items} i18nNamespace={config.i18nNamespace}/>
         </Block>
     )
 }
