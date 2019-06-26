@@ -188,3 +188,136 @@ aggregations:
         - id: Utility classes
           count: 2
           percentage: 0.02
+  - id: methodologies-experience-heatmap
+    heatmap:
+      - id: methodologies_bem
+        count: 5840
+        buckets:
+          - id: '5_10'
+            count: 1974
+            absolute_percentage: 33.8
+            relative_percentage: 54.68
+          - id: '10_20'
+            count: 1661
+            absolute_percentage: 28.44
+            relative_percentage: 54.21
+          - id: '2_5'
+            count: 1476
+            absolute_percentage: 25.27
+            relative_percentage: 50.51
+          - id: '1_2'
+            count: 447
+            absolute_percentage: 7.65
+            relative_percentage: 46.71
+          - id: more_than_20
+            count: 188
+            absolute_percentage: 3.22
+            relative_percentage: 44.24
+          - id: less_than_1
+            count: 70
+            absolute_percentage: 1.2
+            relative_percentage: 30.84
+      - id: methodologies_atomiccss
+        count: 2249
+        buckets:
+          - id: '5_10'
+            count: 834
+            absolute_percentage: 37.08
+            relative_percentage: 23.1
+          - id: '10_20'
+            count: 711
+            absolute_percentage: 31.61
+            relative_percentage: 23.2
+          - id: '2_5'
+            count: 516
+            absolute_percentage: 22.94
+            relative_percentage: 17.66
+          - id: '1_2'
+            count: 92
+            absolute_percentage: 4.09
+            relative_percentage: 9.61
+          - id: more_than_20
+            count: 85
+            absolute_percentage: 3.78
+            relative_percentage: 20
+          - id: less_than_1
+            count: 5
+            absolute_percentage: 0.22
+            relative_percentage: 2.2
+      - id: methodologies_oocss
+        count: 1749
+        buckets:
+          - id: '5_10'
+            count: 662
+            absolute_percentage: 37.85
+            relative_percentage: 18.34
+          - id: '10_20'
+            count: 649
+            absolute_percentage: 37.11
+            relative_percentage: 21.18
+          - id: '2_5'
+            count: 290
+            absolute_percentage: 16.58
+            relative_percentage: 9.92
+          - id: more_than_20
+            count: 75
+            absolute_percentage: 4.29
+            relative_percentage: 17.65
+          - id: '1_2'
+            count: 61
+            absolute_percentage: 3.49
+            relative_percentage: 6.37
+          - id: less_than_1
+            count: 7
+            absolute_percentage: 0.4
+            relative_percentage: 3.08
+      - id: methodologies_smacss
+        count: 1688
+        buckets:
+          - id: '5_10'
+            count: 641
+            absolute_percentage: 37.97
+            relative_percentage: 17.76
+          - id: '10_20'
+            count: 628
+            absolute_percentage: 37.2
+            relative_percentage: 20.5
+          - id: '2_5'
+            count: 270
+            absolute_percentage: 16
+            relative_percentage: 9.24
+          - id: more_than_20
+            count: 85
+            absolute_percentage: 5.04
+            relative_percentage: 20
+          - id: '1_2'
+            count: 54
+            absolute_percentage: 3.2
+            relative_percentage: 5.64
+          - id: less_than_1
+            count: 5
+            absolute_percentage: 0.3
+            relative_percentage: 2.2
+      - id: methodologies_itcss
+        count: 791
+        buckets:
+          - id: '5_10'
+            count: 309
+            absolute_percentage: 39.06
+            relative_percentage: 8.56
+          - id: '10_20'
+            count: 295
+            absolute_percentage: 37.29
+            relative_percentage: 9.63
+          - id: '2_5'
+            count: 129
+            absolute_percentage: 16.31
+            relative_percentage: 4.41
+          - id: more_than_20
+            count: 35
+            absolute_percentage: 4.42
+            relative_percentage: 8.24
+          - id: '1_2'
+            count: 23
+            absolute_percentage: 2.91
+            relative_percentage: 2.4

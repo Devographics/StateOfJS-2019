@@ -255,3 +255,113 @@ aggregations:
         - id: CSSNano
           count: 1
           percentage: 0.01
+  - id: pre-post-processors-experience-heatmap
+    heatmap:
+      - id: pre_postprocessors_sass
+        count: 8726
+        buckets:
+          - id: '5_10'
+            count: 2909
+            absolute_percentage: 33.34
+            relative_percentage: 80.58
+          - id: '10_20'
+            count: 2384
+            absolute_percentage: 27.32
+            relative_percentage: 77.81
+          - id: '2_5'
+            count: 2283
+            absolute_percentage: 26.16
+            relative_percentage: 78.13
+          - id: '1_2'
+            count: 693
+            absolute_percentage: 7.94
+            relative_percentage: 72.41
+          - id: more_than_20
+            count: 301
+            absolute_percentage: 3.45
+            relative_percentage: 70.82
+          - id: less_than_1
+            count: 117
+            absolute_percentage: 1.34
+            relative_percentage: 51.54
+      - id: pre_postprocessors_less
+        count: 2881
+        buckets:
+          - id: '5_10'
+            count: 990
+            absolute_percentage: 34.36
+            relative_percentage: 27.42
+          - id: '10_20'
+            count: 851
+            absolute_percentage: 29.54
+            relative_percentage: 27.77
+          - id: '2_5'
+            count: 704
+            absolute_percentage: 24.44
+            relative_percentage: 24.09
+          - id: '1_2'
+            count: 165
+            absolute_percentage: 5.73
+            relative_percentage: 17.24
+          - id: more_than_20
+            count: 131
+            absolute_percentage: 4.55
+            relative_percentage: 30.82
+          - id: less_than_1
+            count: 26
+            absolute_percentage: 0.9
+            relative_percentage: 11.45
+      - id: pre_postprocessors_postcss
+        count: 4070
+        buckets:
+          - id: '5_10'
+            count: 1477
+            absolute_percentage: 36.29
+            relative_percentage: 40.91
+          - id: '10_20'
+            count: 1288
+            absolute_percentage: 31.65
+            relative_percentage: 42.04
+          - id: '2_5'
+            count: 914
+            absolute_percentage: 22.46
+            relative_percentage: 31.28
+          - id: '1_2'
+            count: 197
+            absolute_percentage: 4.84
+            relative_percentage: 20.59
+          - id: more_than_20
+            count: 155
+            absolute_percentage: 3.81
+            relative_percentage: 36.47
+          - id: less_than_1
+            count: 24
+            absolute_percentage: 0.59
+            relative_percentage: 10.57
+      - id: pre_postprocessors_stylus
+        count: 882
+        buckets:
+          - id: '5_10'
+            count: 309
+            absolute_percentage: 35.03
+            relative_percentage: 8.56
+          - id: '2_5'
+            count: 261
+            absolute_percentage: 29.59
+            relative_percentage: 8.93
+          - id: '10_20'
+            count: 227
+            absolute_percentage: 25.74
+            relative_percentage: 7.41
+          - id: '1_2'
+            count: 44
+            absolute_percentage: 4.99
+            relative_percentage: 4.6
+          - id: more_than_20
+            count: 32
+            absolute_percentage: 3.63
+            relative_percentage: 7.53
+          - id: less_than_1
+            count: 6
+            absolute_percentage: 0.68
+            relative_percentage: 2.64
