@@ -351,6 +351,7 @@ translations:
     # Tools & Methodologies
     ###########################################################################
 
+    # general
     - key: block.title.tools-overview
       t: Sentiment Overview
     - key: block.description.tools-overview
@@ -483,6 +484,7 @@ translations:
     # Environments
     ###########################################################################
 
+    # general
     - key: block.title.form-factors
       t: Form Factors
     - key: block.description.form-factors
