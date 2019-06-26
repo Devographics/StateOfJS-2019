@@ -267,6 +267,10 @@
               type: heatmap
               heatmapType: experience
               bucketKeys: yearsOfExperience
+            - id: pre-post-processors-salary-heatmap
+              type: heatmap
+              heatmapType: salary
+              bucketKeys: salary
             - id: resources-sponsors
               type: resources
               items:
@@ -293,6 +297,10 @@
               type: heatmap
               heatmapType: experience
               bucketKeys: yearsOfExperience
+            - id: css-frameworks-salary-heatmap
+              type: heatmap
+              heatmapType: salary
+              bucketKeys: salary
 
       - id: methodologies
         path: /methodologies
@@ -309,6 +317,10 @@
               type: heatmap
               heatmapType: experience
               bucketKeys: yearsOfExperience
+            - id: methodologies-salary-heatmap
+              type: heatmap
+              heatmapType: salary
+              bucketKeys: salary
 
       - id: css-in-js
         path: /css-in-js
@@ -328,6 +340,10 @@
               type: heatmap
               heatmapType: experience
               bucketKeys: yearsOfExperience
+            - id: css-in-js-salary-heatmap
+              type: heatmap
+              heatmapType: salary
+              bucketKeys: salary
             - id: resources-sponsors
               type: resources
               items:
