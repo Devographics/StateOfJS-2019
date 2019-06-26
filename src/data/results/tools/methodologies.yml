@@ -191,290 +191,290 @@ aggregations:
   - id: methodologies-experience-heatmap
     heatmap:
       - id: bem
-        count: 5840
+        count: 6772
         buckets:
           - id: '5_10'
-            count: 1974
-            absolute_percentage: 33.8
-            relative_percentage: 54.68
+            count: 2296
+            absolute_percentage: 33.9
+            relative_percentage: 63.6
           - id: '10_20'
-            count: 1661
-            absolute_percentage: 28.44
-            relative_percentage: 54.21
+            count: 1988
+            absolute_percentage: 29.36
+            relative_percentage: 64.88
           - id: '2_5'
-            count: 1476
-            absolute_percentage: 25.27
-            relative_percentage: 50.51
+            count: 1663
+            absolute_percentage: 24.56
+            relative_percentage: 56.91
           - id: '1_2'
-            count: 447
-            absolute_percentage: 7.65
-            relative_percentage: 46.71
+            count: 488
+            absolute_percentage: 7.21
+            relative_percentage: 50.99
           - id: more_than_20
-            count: 188
-            absolute_percentage: 3.22
-            relative_percentage: 44.24
+            count: 237
+            absolute_percentage: 3.5
+            relative_percentage: 55.76
           - id: less_than_1
-            count: 70
-            absolute_percentage: 1.2
-            relative_percentage: 30.84
-      - id: atomic-css
-        count: 2249
-        buckets:
-          - id: '5_10'
-            count: 834
-            absolute_percentage: 37.08
-            relative_percentage: 23.1
-          - id: '10_20'
-            count: 711
-            absolute_percentage: 31.61
-            relative_percentage: 23.2
-          - id: '2_5'
-            count: 516
-            absolute_percentage: 22.94
-            relative_percentage: 17.66
-          - id: '1_2'
-            count: 92
-            absolute_percentage: 4.09
-            relative_percentage: 9.61
-          - id: more_than_20
-            count: 85
-            absolute_percentage: 3.78
-            relative_percentage: 20
-          - id: less_than_1
-            count: 5
-            absolute_percentage: 0.22
-            relative_percentage: 2.2
-      - id: oocss
-        count: 1749
-        buckets:
-          - id: '5_10'
-            count: 662
-            absolute_percentage: 37.85
-            relative_percentage: 18.34
-          - id: '10_20'
-            count: 649
-            absolute_percentage: 37.11
-            relative_percentage: 21.18
-          - id: '2_5'
-            count: 290
-            absolute_percentage: 16.58
-            relative_percentage: 9.92
-          - id: more_than_20
             count: 75
-            absolute_percentage: 4.29
-            relative_percentage: 17.65
+            absolute_percentage: 1.11
+            relative_percentage: 33.04
+      - id: atomic-css
+        count: 2788
+        buckets:
+          - id: '5_10'
+            count: 1015
+            absolute_percentage: 36.41
+            relative_percentage: 28.12
+          - id: '10_20'
+            count: 917
+            absolute_percentage: 32.89
+            relative_percentage: 29.93
+          - id: '2_5'
+            count: 613
+            absolute_percentage: 21.99
+            relative_percentage: 20.98
+          - id: more_than_20
+            count: 120
+            absolute_percentage: 4.3
+            relative_percentage: 28.24
           - id: '1_2'
-            count: 61
-            absolute_percentage: 3.49
-            relative_percentage: 6.37
+            count: 110
+            absolute_percentage: 3.95
+            relative_percentage: 11.49
+          - id: less_than_1
+            count: 6
+            absolute_percentage: 0.22
+            relative_percentage: 2.64
+      - id: oocss
+        count: 2264
+        buckets:
+          - id: '10_20'
+            count: 863
+            absolute_percentage: 38.12
+            relative_percentage: 28.17
+          - id: '5_10'
+            count: 836
+            absolute_percentage: 36.93
+            relative_percentage: 23.16
+          - id: '2_5'
+            count: 370
+            absolute_percentage: 16.34
+            relative_percentage: 12.66
+          - id: more_than_20
+            count: 109
+            absolute_percentage: 4.81
+            relative_percentage: 25.65
+          - id: '1_2'
+            count: 74
+            absolute_percentage: 3.27
+            relative_percentage: 7.73
           - id: less_than_1
             count: 7
-            absolute_percentage: 0.4
+            absolute_percentage: 0.31
             relative_percentage: 3.08
       - id: smacss
-        count: 1688
+        count: 2161
         buckets:
-          - id: '5_10'
-            count: 641
-            absolute_percentage: 37.97
-            relative_percentage: 17.76
           - id: '10_20'
-            count: 628
-            absolute_percentage: 37.2
-            relative_percentage: 20.5
+            count: 843
+            absolute_percentage: 39.01
+            relative_percentage: 27.51
+          - id: '5_10'
+            count: 789
+            absolute_percentage: 36.51
+            relative_percentage: 21.86
           - id: '2_5'
-            count: 270
-            absolute_percentage: 16
-            relative_percentage: 9.24
+            count: 340
+            absolute_percentage: 15.73
+            relative_percentage: 11.64
           - id: more_than_20
-            count: 85
-            absolute_percentage: 5.04
-            relative_percentage: 20
+            count: 114
+            absolute_percentage: 5.28
+            relative_percentage: 26.82
           - id: '1_2'
-            count: 54
-            absolute_percentage: 3.2
-            relative_percentage: 5.64
+            count: 63
+            absolute_percentage: 2.92
+            relative_percentage: 6.58
           - id: less_than_1
             count: 5
-            absolute_percentage: 0.3
+            absolute_percentage: 0.23
             relative_percentage: 2.2
       - id: it-css
-        count: 791
+        count: 937
         buckets:
           - id: '5_10'
-            count: 309
-            absolute_percentage: 39.06
-            relative_percentage: 8.56
+            count: 367
+            absolute_percentage: 39.17
+            relative_percentage: 10.17
           - id: '10_20'
-            count: 295
-            absolute_percentage: 37.29
-            relative_percentage: 9.63
+            count: 353
+            absolute_percentage: 37.67
+            relative_percentage: 11.52
           - id: '2_5'
-            count: 129
-            absolute_percentage: 16.31
-            relative_percentage: 4.41
+            count: 147
+            absolute_percentage: 15.69
+            relative_percentage: 5.03
           - id: more_than_20
-            count: 35
-            absolute_percentage: 4.42
-            relative_percentage: 8.24
+            count: 43
+            absolute_percentage: 4.59
+            relative_percentage: 10.12
           - id: '1_2'
-            count: 23
-            absolute_percentage: 2.91
-            relative_percentage: 2.4
+            count: 27
+            absolute_percentage: 2.88
+            relative_percentage: 2.82
   - id: methodologies-salary-heatmap
     heatmap:
       - id: bem
-        count: 5840
+        count: 6772
         buckets:
           - id: '50_100'
-            count: 1878
-            absolute_percentage: 32.16
-            relative_percentage: 54.83
+            count: 2169
+            absolute_percentage: 32.03
+            relative_percentage: 63.33
           - id: '30_50'
-            count: 1233
-            absolute_percentage: 21.11
-            relative_percentage: 54.7
+            count: 1421
+            absolute_percentage: 20.98
+            relative_percentage: 63.04
           - id: '10_30'
-            count: 1041
-            absolute_percentage: 17.83
-            relative_percentage: 53.19
+            count: 1172
+            absolute_percentage: 17.31
+            relative_percentage: 59.89
           - id: '100_200'
-            count: 837
-            absolute_percentage: 14.33
-            relative_percentage: 52.18
+            count: 1035
+            absolute_percentage: 15.28
+            relative_percentage: 64.53
           - id: '0_10'
-            count: 394
-            absolute_percentage: 6.75
-            relative_percentage: 46.9
+            count: 438
+            absolute_percentage: 6.47
+            relative_percentage: 52.14
           - id: none
-            count: 180
-            absolute_percentage: 3.08
-            relative_percentage: 33.77
+            count: 202
+            absolute_percentage: 2.98
+            relative_percentage: 37.9
           - id: 200_more
-            count: 48
-            absolute_percentage: 0.82
-            relative_percentage: 36.09
-      - id: atomic-css
-        count: 2249
-        buckets:
-          - id: '50_100'
-            count: 783
-            absolute_percentage: 34.82
-            relative_percentage: 22.86
-          - id: '30_50'
-            count: 487
-            absolute_percentage: 21.65
-            relative_percentage: 21.61
-          - id: '100_200'
-            count: 401
-            absolute_percentage: 17.83
-            relative_percentage: 25
-          - id: '10_30'
-            count: 332
-            absolute_percentage: 14.76
-            relative_percentage: 16.96
-          - id: '0_10'
-            count: 95
-            absolute_percentage: 4.22
-            relative_percentage: 11.31
-          - id: none
-            count: 37
-            absolute_percentage: 1.65
-            relative_percentage: 6.94
-          - id: 200_more
-            count: 22
-            absolute_percentage: 0.98
-            relative_percentage: 16.54
-      - id: oocss
-        count: 1749
-        buckets:
-          - id: '50_100'
-            count: 597
-            absolute_percentage: 34.13
-            relative_percentage: 17.43
-          - id: '30_50'
-            count: 386
-            absolute_percentage: 22.07
-            relative_percentage: 17.13
-          - id: '100_200'
-            count: 327
-            absolute_percentage: 18.7
-            relative_percentage: 20.39
-          - id: '10_30'
-            count: 251
-            absolute_percentage: 14.35
-            relative_percentage: 12.83
-          - id: '0_10'
-            count: 63
-            absolute_percentage: 3.6
-            relative_percentage: 7.5
-          - id: none
-            count: 32
-            absolute_percentage: 1.83
-            relative_percentage: 6
-          - id: 200_more
-            count: 19
+            count: 74
             absolute_percentage: 1.09
-            relative_percentage: 14.29
+            relative_percentage: 55.64
+      - id: atomic-css
+        count: 2788
+        buckets:
+          - id: '50_100'
+            count: 949
+            absolute_percentage: 34.04
+            relative_percentage: 27.71
+          - id: '30_50'
+            count: 597
+            absolute_percentage: 21.41
+            relative_percentage: 26.49
+          - id: '100_200'
+            count: 515
+            absolute_percentage: 18.47
+            relative_percentage: 32.11
+          - id: '10_30'
+            count: 412
+            absolute_percentage: 14.78
+            relative_percentage: 21.05
+          - id: '0_10'
+            count: 115
+            absolute_percentage: 4.12
+            relative_percentage: 13.69
+          - id: none
+            count: 53
+            absolute_percentage: 1.9
+            relative_percentage: 9.94
+          - id: 200_more
+            count: 33
+            absolute_percentage: 1.18
+            relative_percentage: 24.81
+      - id: oocss
+        count: 2264
+        buckets:
+          - id: '50_100'
+            count: 764
+            absolute_percentage: 33.75
+            relative_percentage: 22.31
+          - id: '30_50'
+            count: 484
+            absolute_percentage: 21.38
+            relative_percentage: 21.47
+          - id: '100_200'
+            count: 459
+            absolute_percentage: 20.27
+            relative_percentage: 28.62
+          - id: '10_30'
+            count: 312
+            absolute_percentage: 13.78
+            relative_percentage: 15.94
+          - id: '0_10'
+            count: 82
+            absolute_percentage: 3.62
+            relative_percentage: 9.76
+          - id: none
+            count: 42
+            absolute_percentage: 1.86
+            relative_percentage: 7.88
+          - id: 200_more
+            count: 31
+            absolute_percentage: 1.37
+            relative_percentage: 23.31
       - id: smacss
-        count: 1688
+        count: 2161
         buckets:
           - id: '50_100'
-            count: 587
-            absolute_percentage: 34.77
-            relative_percentage: 17.14
+            count: 737
+            absolute_percentage: 34.1
+            relative_percentage: 21.52
           - id: '100_200'
-            count: 336
-            absolute_percentage: 19.91
-            relative_percentage: 20.95
+            count: 452
+            absolute_percentage: 20.92
+            relative_percentage: 28.18
           - id: '30_50'
-            count: 335
-            absolute_percentage: 19.85
-            relative_percentage: 14.86
+            count: 427
+            absolute_percentage: 19.76
+            relative_percentage: 18.94
           - id: '10_30'
-            count: 241
-            absolute_percentage: 14.28
-            relative_percentage: 12.31
-          - id: '0_10'
-            count: 77
-            absolute_percentage: 4.56
-            relative_percentage: 9.17
-          - id: none
-            count: 26
-            absolute_percentage: 1.54
-            relative_percentage: 4.88
-          - id: 200_more
-            count: 21
-            absolute_percentage: 1.24
-            relative_percentage: 15.79
-      - id: it-css
-        count: 791
-        buckets:
-          - id: '50_100'
             count: 291
-            absolute_percentage: 36.79
-            relative_percentage: 8.5
-          - id: '30_50'
-            count: 198
-            absolute_percentage: 25.03
-            relative_percentage: 8.78
-          - id: '100_200'
-            count: 129
-            absolute_percentage: 16.31
-            relative_percentage: 8.04
-          - id: '10_30'
-            count: 100
-            absolute_percentage: 12.64
-            relative_percentage: 5.11
+            absolute_percentage: 13.47
+            relative_percentage: 14.87
           - id: '0_10'
-            count: 28
-            absolute_percentage: 3.54
-            relative_percentage: 3.33
+            count: 93
+            absolute_percentage: 4.3
+            relative_percentage: 11.07
           - id: none
-            count: 11
-            absolute_percentage: 1.39
-            relative_percentage: 2.06
+            count: 42
+            absolute_percentage: 1.94
+            relative_percentage: 7.88
           - id: 200_more
-            count: 7
-            absolute_percentage: 0.88
-            relative_percentage: 5.26
+            count: 34
+            absolute_percentage: 1.57
+            relative_percentage: 25.56
+      - id: it-css
+        count: 937
+        buckets:
+          - id: '50_100'
+            count: 345
+            absolute_percentage: 36.82
+            relative_percentage: 10.07
+          - id: '30_50'
+            count: 226
+            absolute_percentage: 24.12
+            relative_percentage: 10.03
+          - id: '100_200'
+            count: 160
+            absolute_percentage: 17.08
+            relative_percentage: 9.98
+          - id: '10_30'
+            count: 113
+            absolute_percentage: 12.06
+            relative_percentage: 5.77
+          - id: '0_10'
+            count: 35
+            absolute_percentage: 3.74
+            relative_percentage: 4.17
+          - id: none
+            count: 14
+            absolute_percentage: 1.49
+            relative_percentage: 2.63
+          - id: 200_more
+            count: 9
+            absolute_percentage: 0.96
+            relative_percentage: 6.77
