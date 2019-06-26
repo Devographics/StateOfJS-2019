@@ -29,18 +29,6 @@ export const query = graphql`
                         percentage
                     }
                 }
-                usageByExperience {
-                    total
-                    buckets {
-                        id
-                        count
-                        percentage
-                        filtered {
-                            count
-                            percentage
-                        }
-                    }
-                }
                 heatmap {
                     id
                     count
