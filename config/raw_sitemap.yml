@@ -263,6 +263,10 @@
             - less
             - postcss
             - stylus
+            - id: pre-post-processors-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
             - id: resources-sponsors
               type: resources
               items:
@@ -285,6 +289,10 @@
             - primer
             - tailwind
             - purecss
+            - id: css-frameworks-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
 
       - id: methodologies
         path: /methodologies
@@ -297,6 +305,10 @@
             - oocss
             - smacss
             - it-css
+            - id: methodologies-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
 
       - id: css-in-js
         path: /css-in-js
@@ -312,6 +324,10 @@
             - radium
             - emotion
             - css-modules
+            - id: css-in-js-experience-heatmap
+              type: heatmap
+              heatmapType: experience
+              bucketKeys: yearsOfExperience
             - id: resources-sponsors
               type: resources
               items:
