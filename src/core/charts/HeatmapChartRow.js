@@ -58,8 +58,7 @@ const HeatmapChartRow = ({
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
-                        {value > 0 && '+'}
-                        {value}%
+                        {item[key].relative_percentage}%
                     </div>
                 )
             })}

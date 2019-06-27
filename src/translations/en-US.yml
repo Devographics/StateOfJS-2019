@@ -914,7 +914,7 @@ translations:
       t: users
     - key: percent_satisfaction
       t: '% satisfaction'
-    - key: average
-      t: average
+    - key: heatmap.average
+      t: overall
     - key: difference_from_average_usage
       t: difference from average usage

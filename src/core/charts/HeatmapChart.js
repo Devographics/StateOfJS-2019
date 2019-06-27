@@ -35,7 +35,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                 }}
             >
                 <div className="Heatmap__Legend">{translate(`${i18nNamespace}.axis_legend`)}</div>
-                <div className="Heatmap__Header">{translate(`average`)}</div>
+                <div className="Heatmap__Header">{translate(`heatmap.average`)}</div>
                 {keys.map(key => {
                     return (
                         <div key={key} className="Heatmap__Header">
