@@ -464,7 +464,9 @@ Bump Chart
 .text-pink {
     @include coloredText($pink);
 }
-
+.text-pink-light {
+    @include coloredText($pinkLight);
+}
 .text-pink-lighter {
     @include coloredText($pinkLighter);
 }

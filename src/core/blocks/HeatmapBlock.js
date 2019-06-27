@@ -45,18 +45,25 @@ const getChartData = (data, block, config, getName) => {
             ...item,
             name: getName(item.id),
         }
+
+        const total = item.buckets.reduce((t, b) => t + b.relative_percentage, 0)
+        itemWithKeys.average = Number((total / config.keys.length).toFixed(2))
+
         config.keys.forEach(key => {
             let bucket = item.buckets.find(b => b.id === key)
             if (!bucket) {
                 bucket = {
                     id: key,
                     count: 0,
-                    absolute_percentage: 0,
                     relative_percentage: 0,
+                    absolute_percentage: 0,
                 }
             }
 
-            itemWithKeys[key] = bucket
+            itemWithKeys[key] = {
+                ...bucket,
+                diff: Number((bucket.relative_percentage - itemWithKeys.average).toFixed(2))
+            }
         })
 
         return itemWithKeys
