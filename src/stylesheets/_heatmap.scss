@@ -65,3 +65,31 @@
 .Heatmap__Cell--inactive {
     opacity: .1;
 }
+
+.Heatmap__ColorLegend__Label,
+.Heatmap__ColorLegend {
+    margin-top: $spacing * 1.5;
+}
+
+.Heatmap__ColorLegend__Label {
+    text-align: right;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: $smallish-font;
+    padding-right: $spacing;
+    align-self: start;
+}
+
+.Heatmap__ColorLegend {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: start;
+    grid-column-start: 3;
+}
+
+.Heatmap__ColorLegend__Cell {
+    font-size: $small-font;
+    text-align: center;
+    border-bottom: 6px solid;
+    padding: 2px 0 8px;
+}

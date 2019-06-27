@@ -916,3 +916,5 @@ translations:
       t: '% satisfaction'
     - key: average
       t: average
+    - key: difference_from_average_usage
+      t: difference from average usage
