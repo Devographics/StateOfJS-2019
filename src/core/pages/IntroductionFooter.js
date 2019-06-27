@@ -13,7 +13,7 @@ const IntroductionFooter = () => {
                 className="PageFooter__Link PageFooter__Link--start Button"
                 to={`${context.localePath}${context.next.path}`}
             >
-                {translate('general.start')}{' '}»
+                {translate('general.start')} »
             </Link>
         </div>
     )

@@ -10,20 +10,22 @@ import ChartContainer from 'core/charts/ChartContainer'
 const getChartData = (data, getName, translate) => {
     const sections = data.features.nodes.map(section => {
         const { section_id } = section
-        const features = section.aggregations.filter(a => a.usage !== null).map(feature => {
-            const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
-            const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
+        const features = section.aggregations
+            .filter(a => a.usage !== null)
+            .map(feature => {
+                const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+                const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
 
-            return {
-                id: feature.id,
-                awareness: usageBucket.count + knowNotUsedBucket.count,
-                awarenessColor: colors.teal,
-                usage: usageBucket.count,
-                usageColor: colors.blue,
-                unusedCount: knowNotUsedBucket.count,
-                name: getName(feature.id)
-            }
-        })
+                return {
+                    id: feature.id,
+                    awareness: usageBucket.count + knowNotUsedBucket.count,
+                    awarenessColor: colors.teal,
+                    usage: usageBucket.count,
+                    usageColor: colors.blue,
+                    unusedCount: knowNotUsedBucket.count,
+                    name: getName(feature.id)
+                }
+            })
 
         return {
             id: section_id,

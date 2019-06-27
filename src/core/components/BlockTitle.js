@@ -19,7 +19,7 @@ const BlockTitle = ({
     values,
     units,
     setUnits,
-    completion,
+    completion
 }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
@@ -29,9 +29,11 @@ const BlockTitle = ({
 
     let description = ''
     if (showDescription === true) {
-        description = descriptionOverride || getBlockDescription(id, context, translate, {
-            values
-        })
+        description =
+            descriptionOverride ||
+            getBlockDescription(id, context, translate, {
+                values
+            })
     }
     const meta = getBlockMeta(id, context, translate)
 
@@ -87,8 +89,8 @@ BlockTitle.propTypes = {
     isShareable: PropTypes.bool.isRequired,
     completion: PropTypes.shape({
         count: PropTypes.number.isRequired,
-        percentage: PropTypes.number.isRequired,
-    }),
+        percentage: PropTypes.number.isRequired
+    })
 }
 
 BlockTitle.defaultProps = {

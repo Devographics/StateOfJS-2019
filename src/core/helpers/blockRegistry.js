@@ -33,7 +33,7 @@ const blockRegistry = {
     'opinion-scale': OpinionScaleBlock,
     text: TextBlock,
     resources: ResourcesBlock,
-    'heatmap': HeatmapBlock,
+    heatmap: HeatmapBlock,
 
     // demographics
     // source: SourceBlock,

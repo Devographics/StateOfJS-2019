@@ -338,8 +338,8 @@ translations:
       t: Usage by Years Of Experience
     - key: block.description.features_experience_heatmap
       t: |
-        <span class="text-pink-lighter text-bold">Light pink</span> means
-        **lower usage** for a given years of experience range while
+        <span class="text-teal text-bold">Teal</span> means
+        **lower usage** from average for a given years of experience range while
         <span class="text-blue text-bold">bluish color</span> means
         **higher usage**.
         **Usage** corresponds to participants who selected *"Have used it"*.
@@ -416,8 +416,8 @@ translations:
       t: Usage by Years Of Experience
     - key: block.description.tools_experience_heatmap
       t: |
-        <span class="text-pink-lighter text-bold">Light pink</span> means
-        **lower usage** for a given years of experience range while
+        <span class="text-teal text-bold">Teal</span> means
+        **lower usage** from average for a given years of experience range while
         <span class="text-blue text-bold">bluish color</span> means
         **higher usage**.
         **Usage** corresponds to participants who selected
@@ -427,8 +427,8 @@ translations:
       t: Usage by Salary Range
     - key: block.description.tools_salary_heatmap
       t: |
-        <span class="text-pink-lighter text-bold">Light pink</span> means
-        **lower usage** for a given salary range while
+        <span class="text-teal text-bold">Teal</span> means
+        **lower usage** from average for a given salary range while
         <span class="text-blue text-bold">bluish color</span> means
         **higher usage**.
         **Usage** corresponds to participants who selected
@@ -916,3 +916,7 @@ translations:
       t: users
     - key: percent_satisfaction
       t: '% satisfaction'
+    - key: average
+      t: average
+    - key: difference_from_average_usage
+      t: difference from average usage

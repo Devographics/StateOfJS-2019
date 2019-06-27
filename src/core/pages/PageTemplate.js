@@ -18,7 +18,6 @@ const PageTemplate = props => {
                     <BlockSwitcher key={block.id} block={block} data={data} index={i} />
                 ))}
             <PageFooter />
-
         </>
     )
 }

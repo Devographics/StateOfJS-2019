@@ -8,7 +8,7 @@ const Tshirt = ({ data }) => (
     <>
         <TextBlock className="Tshirt__Introduction" text={data.introduction.html} />
         <TshirtBlock />
-        <PageFooter/>
+        <PageFooter />
     </>
 )
 
