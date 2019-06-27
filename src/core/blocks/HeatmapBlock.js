@@ -9,12 +9,12 @@ import HeatmapChart from 'core/charts/HeatmapChart'
 const configByType = {
     salary: {
         keys: keys.salary,
-        i18nNamespace: 'salary',
+        i18nNamespace: 'salary'
     },
     experience: {
         keys: keys.yearsOfExperience,
-        i18nNamespace: 'years-of-experience',
-    },
+        i18nNamespace: 'years-of-experience'
+    }
 }
 
 const getConfig = block => {
@@ -28,9 +28,7 @@ const getConfig = block => {
 
 const getChartData = (data, block, config, getName) => {
     if (!data || !data.data) {
-        throw new Error(
-            `HeatmapBlock: Missing data for block ${block.id}, page data is undefined`
-        )
+        throw new Error(`HeatmapBlock: Missing data for block ${block.id}, page data is undefined`)
     }
 
     let items = data.data.aggregations.find(agg => agg.id === block.id)
@@ -43,7 +41,7 @@ const getChartData = (data, block, config, getName) => {
     items = items.map(item => {
         const itemWithKeys = {
             ...item,
-            name: getName(item.id),
+            name: getName(item.id)
         }
 
         const total = item.buckets.reduce((t, b) => t + b.relative_percentage, 0)
@@ -56,7 +54,7 @@ const getChartData = (data, block, config, getName) => {
                     id: key,
                     count: 0,
                     relative_percentage: 0,
-                    absolute_percentage: 0,
+                    absolute_percentage: 0
                 }
             }
 
@@ -77,19 +75,23 @@ const HeatmapBlock = ({ block, data }) => {
     const { getName } = useEntities()
 
     const config = useMemo(() => getConfig(block), [block])
-    const items = useMemo(
-        () => getChartData(data, block, config, getName),
-        [data, block, config, getName]
-    )
+    const items = useMemo(() => getChartData(data, block, config, getName), [
+        data,
+        block,
+        config,
+        getName
+    ])
 
     return (
         <Block
             id={block.id}
             title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)}
-            description={translate(`block.description.${block.subject}_${block.heatmapType}_heatmap`)}
+            description={translate(
+                `block.description.${block.subject}_${block.heatmapType}_heatmap`
+            )}
             showDescription={true}
         >
-            <HeatmapChart keys={config.keys} items={items} i18nNamespace={config.i18nNamespace}/>
+            <HeatmapChart keys={config.keys} items={items} i18nNamespace={config.i18nNamespace} />
         </Block>
     )
 }
@@ -98,8 +100,8 @@ HeatmapBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         heatmapType: PropTypes.oneOf(['experience', 'salary']).isRequired,
-        subject: PropTypes.oneOf(['tools', 'features']).isRequired,
-    }).isRequired,
+        subject: PropTypes.oneOf(['tools', 'features']).isRequired
+    }).isRequired
 }
 
 export default memo(HeatmapBlock)

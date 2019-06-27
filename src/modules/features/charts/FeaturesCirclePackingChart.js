@@ -24,10 +24,10 @@ const Chip = ({ color, color2 }) => (
 
 const sectionLabelOffsets = {
     'shapes-and-graphics': 50,
-    'layout': 300,
-    'interactions': 150,
+    layout: 300,
+    interactions: 150,
     'animations-and-transforms': 0,
-    'typography': 50,
+    typography: 50,
     'other-features': 300
 }
 
@@ -93,7 +93,6 @@ export const TotalCircle = ({ radius, id }) => {
 }
 
 const Node = ({ node, handlers }) => {
-    
     const radius = node.r
 
     if (node.depth === 0) {
@@ -110,11 +109,13 @@ const Node = ({ node, handlers }) => {
                         id={`textcircle-${node.data.id}`}
                     />
                 </defs>
-                <text
-                    className="CirclePackingNode__SectionLabel"
-                    dy={30}
-                >
-                    <textPath xlinkHref={`#textcircle-${node.data.id}`} fill={colors.teal} side="right" startOffset={sectionLabelOffsets[node.data.id]}>
+                <text className="CirclePackingNode__SectionLabel" dy={30}>
+                    <textPath
+                        xlinkHref={`#textcircle-${node.data.id}`}
+                        fill={colors.teal}
+                        side="right"
+                        startOffset={sectionLabelOffsets[node.data.id]}
+                    >
                         {node.id}
                     </textPath>
                 </text>

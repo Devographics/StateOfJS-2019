@@ -13,14 +13,8 @@ const HeatmapChartRow = ({
     isInactive,
     isEven
 }) => {
-    const onMouseEnter = useCallback(
-        () => setCurrent(index),
-        [setCurrent, index]
-    )
-    const onMouseLeave = useCallback(
-        () => setCurrent(null),
-        [setCurrent]
-    )
+    const onMouseEnter = useCallback(() => setCurrent(index), [setCurrent, index])
+    const onMouseLeave = useCallback(() => setCurrent(null), [setCurrent])
 
     return (
         <>
@@ -28,7 +22,7 @@ const HeatmapChartRow = ({
                 className={classNames('Heatmap__Subject', {
                     'Heatmap__Subject--even': isEven,
                     'Heatmap__Subject--active': isActive,
-                    'Heatmap__Subject--inactive': isInactive,
+                    'Heatmap__Subject--inactive': isInactive
                 })}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
@@ -39,7 +33,7 @@ const HeatmapChartRow = ({
                 className={classNames('Heatmap__Average', {
                     'Heatmap__Average--even': isEven,
                     'Heatmap__Average--active': isActive,
-                    'Heatmap__Average--inactive': isInactive,
+                    'Heatmap__Average--inactive': isInactive
                 })}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
@@ -55,7 +49,7 @@ const HeatmapChartRow = ({
                         className={classNames('Heatmap__Cell', {
                             'Heatmap__Cell--even': isEven,
                             'Heatmap__Cell--active': isActive,
-                            'Heatmap__Cell--inactive': isInactive,
+                            'Heatmap__Cell--inactive': isInactive
                         })}
                         style={{
                             background: backgroundColorScale(value),
@@ -64,7 +58,8 @@ const HeatmapChartRow = ({
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
-                        {value > 0 && '+'}{value}%
+                        {value > 0 && '+'}
+                        {value}%
                     </div>
                 )
             })}
@@ -76,11 +71,9 @@ HeatmapChartRow.propTypes = {
     item: PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        average: PropTypes.number.isRequired,
+        average: PropTypes.number.isRequired
     }).isRequired,
-    keys: PropTypes.arrayOf(
-        PropTypes.string
-    ).isRequired,
+    keys: PropTypes.arrayOf(PropTypes.string).isRequired,
     index: PropTypes.number.isRequired,
     backgroundColorScale: PropTypes.func.isRequired,
     textColorScale: PropTypes.func.isRequired,

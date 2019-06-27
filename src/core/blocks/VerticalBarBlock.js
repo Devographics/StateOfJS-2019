@@ -30,10 +30,7 @@ const getChartData = (data, block) => {
     }
 
     const blockAgg = blockData[block.dataKey]
-    if (
-        blockAgg === undefined ||
-        !Array.isArray(blockAgg.buckets)
-    ) {
+    if (blockAgg === undefined || !Array.isArray(blockAgg.buckets)) {
         throw new Error(
             `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${
                 block.id
@@ -87,7 +84,13 @@ const VerticalBarBlock = ({ block, data }) => {
     }))
 
     return (
-        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} completion={completion}>
+        <Block
+            id={id}
+            showDescription={showDescription}
+            units={units}
+            setUnits={setUnits}
+            completion={completion}
+        >
             <ChartContainer fit={true}>
                 <VerticalBarChart
                     keys={bucketKeys}
@@ -125,7 +128,7 @@ VerticalBarBlock.propTypes = {
         data: PropTypes.shape({
             aggregations: PropTypes.arrayOf(
                 PropTypes.shape({
-                    id: PropTypes.string.isRequired,
+                    id: PropTypes.string.isRequired
                 })
             ).isRequired
         }).isRequired

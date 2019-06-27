@@ -51,11 +51,13 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
                         id={`textcircle-${node.data.id}`}
                     />
                 </defs>
-                <text
-                    className="CirclePackingNode__SectionLabel"
-                    dy={30}
-                >
-                    <textPath xlinkHref={`#textcircle-${node.data.id}`} fill={colors.teal} side="right" startOffset={sectionLabelOffsets[node.data.id]}>
+                <text className="CirclePackingNode__SectionLabel" dy={30}>
+                    <textPath
+                        xlinkHref={`#textcircle-${node.data.id}`}
+                        fill={colors.teal}
+                        side="right"
+                        startOffset={sectionLabelOffsets[node.data.id]}
+                    >
                         {node.id}
                     </textPath>
                 </text>

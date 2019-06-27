@@ -19,7 +19,7 @@ const colorLegendGradient = `linear-gradient(${[
     backgroundColorScale(-10),
     backgroundColorScale(0),
     backgroundColorScale(10),
-    backgroundColorScale(20),
+    backgroundColorScale(20)
 ].join(', ')})`
 
 const HeatmapChart = ({ keys, items, i18nNamespace }) => {
@@ -34,12 +34,8 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                     gridTemplateColumns: `auto ${'70px '.repeat(keys.length + 1)}`
                 }}
             >
-                <div className="Heatmap__Legend">
-                    {translate(`${i18nNamespace}.axis_legend`)}
-                </div>
-                <div className="Heatmap__Header">
-                    {translate(`average`)}
-                </div>
+                <div className="Heatmap__Legend">{translate(`${i18nNamespace}.axis_legend`)}</div>
+                <div className="Heatmap__Header">{translate(`average`)}</div>
                 {keys.map(key => {
                     return (
                         <div key={key} className="Heatmap__Header">
@@ -73,7 +69,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                     <span
                         className="Heatmap__ColorLegend__Cell"
                         style={{
-                            borderColor: backgroundColorScale(-20),
+                            borderColor: backgroundColorScale(-20)
                         }}
                     >
                         -20%
@@ -81,7 +77,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                     <span
                         className="Heatmap__ColorLegend__Cell"
                         style={{
-                            borderColor: backgroundColorScale(-10),
+                            borderColor: backgroundColorScale(-10)
                         }}
                     >
                         -10%
@@ -89,7 +85,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                     <span
                         className="Heatmap__ColorLegend__Cell"
                         style={{
-                            borderColor: backgroundColorScale(0),
+                            borderColor: backgroundColorScale(0)
                         }}
                     >
                         0
@@ -97,7 +93,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                     <span
                         className="Heatmap__ColorLegend__Cell"
                         style={{
-                            borderColor: backgroundColorScale(10),
+                            borderColor: backgroundColorScale(10)
                         }}
                     >
                         +10%
@@ -105,7 +101,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                     <span
                         className="Heatmap__ColorLegend__Cell"
                         style={{
-                            borderColor: backgroundColorScale(20),
+                            borderColor: backgroundColorScale(20)
                         }}
                     >
                         +20%
@@ -117,17 +113,15 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
 }
 
 HeatmapChart.propTypes = {
-    keys: PropTypes.arrayOf(
-        PropTypes.string
-    ).isRequired,
+    keys: PropTypes.arrayOf(PropTypes.string).isRequired,
     items: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
-            average: PropTypes.number.isRequired,
+            average: PropTypes.number.isRequired
         })
     ).isRequired,
-    i18nNamespace: PropTypes.string.isRequired,
+    i18nNamespace: PropTypes.string.isRequired
 }
 
 export default memo(HeatmapChart)

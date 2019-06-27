@@ -20,10 +20,7 @@ const getChartData = (data, block, getUrl) => {
     }
 
     const blockAgg = blockData[block.dataKey]
-    if (
-        blockAgg === undefined ||
-        !Array.isArray(blockAgg.buckets)
-    ) {
+    if (blockAgg === undefined || !Array.isArray(blockAgg.buckets)) {
         throw new Error(
             `HorizontalBarBlock: Non existing or invalid data key ${block.data.key} for block ${
                 block.id
@@ -57,7 +54,13 @@ const HorizontalBarBlock = ({ block, data }) => {
     const blockData = useMemo(() => getChartData(data, block, getUrl), [data, block])
 
     return (
-        <Block id={id} showDescription={showDescription} units={units} setUnits={setUnits} completion={blockData.completion}>
+        <Block
+            id={id}
+            showDescription={showDescription}
+            units={units}
+            setUnits={setUnits}
+            completion={blockData.completion}
+        >
             <ChartContainer fit={true}>
                 <HorizontalBarChart
                     total={blockData.total}

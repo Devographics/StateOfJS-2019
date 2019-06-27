@@ -14,7 +14,7 @@ const Block = ({
     children,
     units,
     setUnits,
-    completion,
+    completion
 }) => {
     return (
         <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
@@ -45,8 +45,8 @@ Block.propTypes = {
     values: PropTypes.object,
     completion: PropTypes.shape({
         count: PropTypes.number.isRequired,
-        percentage: PropTypes.number.isRequired,
-    }),
+        percentage: PropTypes.number.isRequired
+    })
 }
 Block.defaultProps = {
     showDescription: true,

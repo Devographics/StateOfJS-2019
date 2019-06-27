@@ -180,7 +180,8 @@ export const fontFamily = `'IBM Plex Mono', monospace`
 
 export const totalCount = 11307
 
-export const emailOctopusUrl = 'https://emailoctopus.com/lists/ed0386c4-2f55-11e9-a3c9-06b79b628af2/members/embedded/1.3/add'
+export const emailOctopusUrl =
+    'https://emailoctopus.com/lists/ed0386c4-2f55-11e9-a3c9-06b79b628af2/members/embedded/1.3/add'
 
 export const emailOctopusSiteKey = '6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6'
 

@@ -9,13 +9,11 @@ const CompletionIndicator = ({ completion }) => {
         <div className="CompletionIndicator">
             <div className="CompletionIndicator__Tooltip">
                 {translate('general.completion_percentage')}{' '}
-                <strong>{completion.percentage}%</strong>{' '}
-                ({completion.count})
+                <strong>{completion.percentage}%</strong> ({completion.count})
             </div>
             <div className="CompletionIndicator__Data">
                 {translate('general.completion_percentage')}{' '}
-                <strong>{completion.percentage}%</strong>{' '}
-                ({completion.count})
+                <strong>{completion.percentage}%</strong> ({completion.count})
             </div>
             <svg className="CompletionIndicator__Chart" height="16" width="16" viewBox="0 0 20 20">
                 <circle className="CompletionIndicator__Chart__Bg" r="10" cx="10" cy="10" />
@@ -37,8 +35,8 @@ const CompletionIndicator = ({ completion }) => {
 CompletionIndicator.propTypes = {
     completion: PropTypes.shape({
         count: PropTypes.number.isRequired,
-        percentage: PropTypes.number.isRequired,
-    }).isRequired,
+        percentage: PropTypes.number.isRequired
+    }).isRequired
 }
 
 export default memo(CompletionIndicator)
