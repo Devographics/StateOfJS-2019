@@ -8,12 +8,12 @@ import HeatmapChartRow from './HeatmapChartRow'
 const backgroundColorScale = scaleLinear()
     .domain([-20, -10, 0, 10, 20])
     .range([colors.teal, colors.tealDark, colors.navy, colors.blueDark, colors.blue])
-    // .clamp(true)
+// .clamp(true)
 
 const textColorScale = scaleLinear()
     .domain([-20, -10, 0, 10, 20])
     .range([colors.navy, colors.navyDark, colors.navy, colors.tealLight, colors.tealLight])
-    // .clamp(true)
+// .clamp(true)
 
 const HeatmapChart = ({ keys, items, i18nNamespace }) => {
     const { translate } = useI18n()

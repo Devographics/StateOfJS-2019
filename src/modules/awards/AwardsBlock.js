@@ -1,38 +1,214 @@
-import React from 'react'
+import React, { memo, useMemo } from 'react'
+import { sortBy } from 'lodash'
+import PropTypes from 'prop-types'
+import { useEntities } from 'core/entities/entitiesContext'
 import Award from './Award'
-// import staticAwards from 'data/static_awards.yml'
 
-const staticAwards = {
-    prediction: [{ id: 'tailwind' }, { id: 'emotion' }, { id: 'it-css' }],
-    special: [{ id: 'visual-studio' }, { id: 'storybook' }, { id: 'nextjs' }]
+const getBlockData = (data, getName) => {
+    const features = data.features.nodes.reduce(
+        (acc, section) => [...acc, ...section.aggregations.filter(agg => agg.usage !== null)],
+        []
+    )
+
+    const featureAdoption = sortBy(features, feature => {
+        const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+        return usageBucket.count
+    })
+        .reverse()
+        .slice(0, 3)
+        .map(feature => {
+            const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+
+            return {
+                id: feature.id,
+                name: getName(feature.id),
+                value: usageBucket.count
+            }
+        })
+
+    const tools = data.tools.nodes.reduce(
+        (acc, section) => [
+            ...acc,
+            ...section.aggregations
+                .filter(agg => agg.opinion !== null)
+                .map(agg => {
+                    const wouldUseBucket = agg.opinion.buckets.find(b => b.id === 'would_use')
+                    const wouldNotUseBucket = agg.opinion.buckets.find(
+                        b => b.id === 'would_not_use'
+                    )
+
+                    const interestedBucket = agg.opinion.buckets.find(b => b.id === 'interested')
+                    const notInterestedBucket = agg.opinion.buckets.find(
+                        b => b.id === 'not_interested'
+                    )
+
+                    const usage = wouldUseBucket.count + wouldNotUseBucket.count
+                    const satisfaction = Number(((wouldUseBucket.count / usage) * 100).toFixed(2))
+                    const interest = Number(
+                        (
+                            (interestedBucket.count /
+                                (interestedBucket.count + notInterestedBucket.count)) *
+                            100
+                        ).toFixed(2)
+                    )
+
+                    return {
+                        ...agg,
+                        name: getName(agg.id),
+                        usage,
+                        satisfaction,
+                        interest
+                    }
+                })
+        ],
+        []
+    )
+
+    const toolUsage = sortBy(tools, 'usage')
+        .reverse()
+        .slice(0, 3)
+        .map(tool => ({
+            id: tool.id,
+            name: tool.name,
+            value: tool.usage
+        }))
+    const toolSatisfaction = sortBy(tools, 'satisfaction')
+        .reverse()
+        .slice(0, 3)
+        .map(tool => ({
+            id: tool.id,
+            name: tool.name,
+            value: tool.satisfaction
+        }))
+    const toolInterest = sortBy(tools, 'interest')
+        .reverse()
+        .slice(0, 3)
+        .map(tool => ({
+            id: tool.id,
+            name: tool.name,
+            value: tool.interest
+        }))
+
+    const resources = []
+    data.resources.nodes[0].aggregations
+        .filter(agg => agg.resources !== null)
+        .forEach(section => {
+            section.resources.buckets.forEach(bucket => {
+                resources.push({
+                    ...bucket,
+                    name: bucket.id
+                })
+            })
+        })
+
+    const resourceUsage = sortBy(resources, 'count')
+        .reverse()
+        .slice(0, 3)
+        .map(resource => ({
+            id: resource.id,
+            name: resource.name,
+            value: resource.count
+        }))
+
+    return [
+        {
+            type: 'feature_adoption',
+            items: featureAdoption
+        },
+        {
+            type: 'tool_usage',
+            items: toolUsage
+        },
+        {
+            type: 'tool_satisfaction',
+            items: toolSatisfaction
+        },
+        {
+            type: 'tool_interest',
+            items: toolInterest
+        },
+        {
+            type: 'resource_usage',
+            items: resourceUsage
+        }
+    ]
 }
 
 const AwardsBlock = ({ data }) => {
-    // const highestSatisfaction = data.awards.edges.find(d => d.node.type === 'highest_satisfaction')
-    // const highestInterest = data.awards.edges.find(d => d.node.type === 'highest_interest')
-    // const highestUsage = data.awards.edges.find(d => d.node.type === 'highest_usage')
-    // const mostMentioned = data.awards.edges.find(d => d.node.type === 'most_mentioned')
-    const awards = data.awards.edges
+    const { getName } = useEntities()
+    const awards = useMemo(() => getBlockData(data, getName), [data, getName])
+
     return (
         <div className="Block Block--Awards Awards__Block">
             {awards.map(award => (
-                <Award key={award.node.type} type={award.node.type} tools={award.node.tools} />
+                <Award key={award.type} type={award.type} items={award.items} />
             ))}
-
-            {/* <Award type="highest_satisfaction" tools={highestSatisfaction.node.tools} />
-            <Award type="highest_interest" tools={highestInterest.node.tools} /> */}
-
-            {/* <Award type="most_adopted_feature" tools={mostMentioned.node.tools} /> */}
-
-            {/* <Award type="most_used_resource" tools={mostMentioned.node.tools} /> */}
-
-            {/* <Award type="highest_paying_tool" tools={mostMentioned.node.tools} /> */}
-
-            <Award type="prediction" tools={staticAwards.prediction} />
-
-            <Award type="special" tools={staticAwards.special} />
         </div>
     )
 }
 
-export default AwardsBlock
+AwardsBlock.propTypes = {
+    data: PropTypes.shape({
+        features: PropTypes.shape({
+            nodes: PropTypes.arrayOf(
+                PropTypes.shape({
+                    aggregations: PropTypes.arrayOf(
+                        PropTypes.shape({
+                            id: PropTypes.string.isRequired,
+                            usage: PropTypes.shape({
+                                buckets: PropTypes.arrayOf(
+                                    PropTypes.shape({
+                                        id: PropTypes.string.isRequired,
+                                        count: PropTypes.number.isRequired,
+                                        percentage: PropTypes.number.isRequired
+                                    })
+                                ).isRequired
+                            })
+                        })
+                    ).isRequired
+                })
+            ).isRequired
+        }).isRequired,
+        tools: PropTypes.shape({
+            nodes: PropTypes.arrayOf(
+                PropTypes.shape({
+                    aggregations: PropTypes.arrayOf(
+                        PropTypes.shape({
+                            id: PropTypes.string.isRequired,
+                            opinion: PropTypes.shape({
+                                buckets: PropTypes.arrayOf(
+                                    PropTypes.shape({
+                                        id: PropTypes.string.isRequired,
+                                        count: PropTypes.number.isRequired,
+                                        percentage: PropTypes.number.isRequired
+                                    })
+                                ).isRequired
+                            })
+                        })
+                    ).isRequired
+                })
+            ).isRequired
+        }).isRequired,
+        resources: PropTypes.shape({
+            nodes: PropTypes.arrayOf(
+                PropTypes.shape({
+                    aggregations: PropTypes.arrayOf(
+                        PropTypes.shape({
+                            id: PropTypes.string.isRequired,
+                            opinion: PropTypes.shape({
+                                buckets: PropTypes.arrayOf(
+                                    PropTypes.shape({
+                                        id: PropTypes.string.isRequired,
+                                        count: PropTypes.number.isRequired
+                                    })
+                                ).isRequired
+                            })
+                        })
+                    ).isRequired
+                })
+            ).isRequired
+        }).isRequired
+    }).isRequired
+}
+
+export default memo(AwardsBlock)
