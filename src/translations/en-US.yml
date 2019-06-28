@@ -681,75 +681,90 @@ translations:
     # Awards
     ###########################################################################
 
-    # awards
     - key: awards.runner_ups
       t: Runner Ups
-    - key: block.title.highest_satisfaction
+
+    # feature_adoption
+    - key: award.feature_adoption.title
+      t: Most Adopted Feature
+    - key: award.feature_adoption.description
+      t: |
+          Awarded to the most adopted CSS feature.
+    - key: award.feature_adoption.comment
+      t: |
+          With **${items[0].value}** users ${items[0].name}
+          is the most used CSS feature this year.
+    - key: award.feature_adoption.runner_up
+      t: ${item.name} ${item.value}
+
+    # tool_satisfaction
+    - key: award.tool_satisfaction.title
       t: Highest Satisfaction
-    - key: block.description.highest_satisfaction
+    - key: award.tool_satisfaction.description
       t: |
-          Awarded to the library with the highest percentage of satisfied users.
-    - key: award.highest_satisfaction.comment
+          Awarded to the technology with the highest
+          percentage of satisfied users.
+    - key: award.tool_satisfaction.comment
       t: |
-          With **${tools[0].percentage}%** of users willing to use it again,
-          ${tools[0].label} proves it’s not kidding around.
-    - key: award.highest_satisfaction.runner_up
-      t: ${tool.label} ${tool.percentage}%
-    - key: block.title.highest_interest
+          With **${items[0].value}%** of users willing to use it again,
+          ${items[0].name} proves it’s not kidding around.
+    - key: award.tool_satisfaction.runner_up
+      t: ${item.name} ${item.value}%
+
+    # tool_interest
+    - key: award.tool_interest.title
       t: Highest Interest
-    - key: block.description.highest_interest
+    - key: award.tool_interest.description
       t: |
-          Awarded to the technology developers are most interested in learning.
-    - key: award.highest_interest.comment
+          Awarded to the technology developers
+          are most interested in learning.
+    - key: award.tool_interest.comment
       t: |
-          **${tools[0].percentage}%** of developers who have heard about
-          ${tools[0].label} want to learn it.
+          **${items[0].value}%** of developers who have heard
+          about ${items[0].name} want to learn it.
           That’s some serious interest!
-    - key: award.highest_interest.runner_up
-      t: ${tool.label} ${tool.percentage}%
-    - key: block.title.highest_usage
-      t: Most Used
-    - key: block.description.highest_usage
+    - key: award.tool_interest.runner_up
+      t: ${item.name} ${item.value}%
+
+    # tool_usage
+    - key: award.tool_usage.title
+      t: Most Used Technology
+    - key: award.tool_usage.description
       t: |
           Awarded to technology with the largest user base.
-    - key: award.highest_usage.comment
+    - key: award.tool_usage.comment
       t: |
-          With **${tools[0].count}** users ${tools[0].label}
-          is the most used library this year.
-    - key: award.highest_usage.runner_up
-      t: ${tool.label} ${tool.count}
-    - key: block.title.most_mentioned
+          With **${items[0].value}** users ${items[0].name}
+          is the most used technology this year.
+    - key: award.tool_usage.runner_up
+      t: ${item.name} ${item.value}
+
+    # resource_usage
+    - key: award.resource_usage.title
+      t: Most Used Resource
+    - key: award.resource_usage.description
+      t: |
+          Awarded to resource with the largest user base.
+    - key: award.resource_usage.comment
+      t: |
+          With **${items[0].value}** users ${items[0].name}
+          is the most used resource this year.
+    - key: award.resource_usage.runner_up
+      t: ${item.name} ${item.value}
+
+    # tool_mention
+    - key: award.tool_mention.title
       t: Most Mentioned
-    - key: block.description.most_mentioned
+    - key: award.tool_mention.description
       t: |
-          Awarded to the library mentioned the most in the “other libraries” answer.
-    - key: award.most_mentioned.comment
+          Awarded to the library mentioned
+          the most in the “other libraries” answer.
+    - key: award.tool_mention.comment
       t: |
-          ${tools[0].label} collected **${tools[0].count}** mentions,
+          ${items[0].name} collected **${items[0].value}** mentions,
           making it the most submitted freeform answer by far.
-    - key: award.most_mentioned.runner_up
-      t: ${tool.label} ${tool.count}
-    - key: block.title.prediction
-      t: Prediction Award
-    - key: block.description.prediction
-      t: |
-          Awarded to an up-and-coming technology that might take over… or not?
-    - key: award.prediction.comment
-      t: |
-          The Facebook team is two for two with React and GraphQL.
-          Will Reason follow the same path?
-    - key: award.prediction.runner_up
-      t: ${tool.label}
-    - key: block.title.special
-      t: Special Award
-    - key: block.description.special
-      t: |
-          Awarded to a technology that we just fell in love with this year.
-    - key: award.special.comment
-      t: |
-          ${tools[0].label} has become the leading JavaScript text editor, and we can definitely see why!
-    - key: award.special.runner_up
-      t: ${tool.label}
+    - key: award.tool_mention.runner_up
+      t: ${item.name} ${item.value}
 
     ###########################################################################
     # Generic
@@ -916,7 +931,7 @@ translations:
       t: users
     - key: percent_satisfaction
       t: '% satisfaction'
-    - key: average
-      t: average
+    - key: heatmap.average
+      t: overall
     - key: difference_from_average_usage
       t: difference from average usage

@@ -10,7 +10,7 @@ const Awards = ({ data }) => {
         <>
             <PageHeader />
             {data.introduction && <TextBlock text={data.introduction.html} />}
-            {/* <AwardsBlock data={data} /> */}
+            <AwardsBlock data={data} />
             <PageFooter />
         </>
     )
@@ -29,14 +29,46 @@ export const query = graphql`
         ) {
             html
         }
-        awards: allAwardsYaml(filter: { type: { ne: null } }) {
-            edges {
-                node {
-                    type
-                    tools {
-                        id
-                        percentage
-                        count
+        features: allFeaturesUsageYaml {
+            nodes {
+                aggregations {
+                    id
+                    usage {
+                        total
+                        buckets {
+                            id
+                            count
+                            percentage
+                        }
+                    }
+                }
+            }
+        }
+        tools: allToolsYaml {
+            nodes {
+                aggregations {
+                    id
+                    opinion {
+                        total
+                        buckets {
+                            id
+                            count
+                            percentage
+                        }
+                    }
+                }
+            }
+        }
+        resources: allLearningResourcesYaml {
+            nodes {
+                aggregations {
+                    id
+                    resources {
+                        buckets {
+                            id
+                            count
+                            percentage
+                        }
                     }
                 }
             }

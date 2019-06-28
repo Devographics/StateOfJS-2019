@@ -1,54 +1,45 @@
-import React, { useState } from 'react'
+import React, { memo, useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import ShareBlock from 'core/share/ShareBlock'
 import ShareBlockDebug from 'core/share/ShareBlockDebug'
-import slugify from 'core/helpers/slugify'
 import { useI18n } from 'core/i18n/i18nContext'
 
-const Award = ({ type, tools: _tools }) => {
+const Award = ({ type, items }) => {
     const { translate } = useI18n()
 
     const [isRevealed, setIsRevealed] = useState(false)
-
-    const handleClick = () => {
+    const handleClick = useCallback(() => {
         setIsRevealed(true)
-    }
+    }, [setIsRevealed])
 
-    const blockId = slugify(type)
-
-    const tools = _tools.map(tool => ({
-        ...tool,
-        label: tool.id
-    }))
-
-    const winner = tools[0]
-    const runnerUps = tools.slice(1)
+    const winner = items[0]
+    const runnerUps = items.slice(1)
 
     return (
-        <div className={`Award Award--${isRevealed ? 'show' : 'hide'}`} id={blockId}>
-            <h3 className="Award__Heading">{translate(`block.title.${type}`)}</h3>
-            <div className="Award__Description">{translate(`block.description.${type}`)}</div>
+        <div className={`Award Award--${isRevealed ? 'show' : 'hide'}`} id={type}>
+            <h3 className="Award__Heading">{translate(`award.${type}.title`)}</h3>
+            <div className="Award__Description">{translate(`award.${type}.description`)}</div>
             <div className="Award__Element__Container">
                 <div className="Award__Element" onClick={handleClick}>
                     <div className="Award__Element__Face Award__Element__Face--front">?</div>
                     <div className="Award__Element__Face Award__Element__Face--back">
-                        {winner.label}
+                        {winner.name}
                     </div>
                 </div>
             </div>
             <div className="Award__Comment">
                 <ReactMarkdown
                     source={translate(`award.${type}.comment`, {
-                        values: { tools }
+                        values: { items }
                     })}
                 />
                 <ShareBlock
                     title={`${translate(`award.${type}.heading`)} Award`}
-                    id={blockId}
+                    id={type}
                     className="Award__Share"
                 />
-                <ShareBlockDebug id={blockId} />
+                <ShareBlockDebug id={type} />
             </div>
             <div className="Awards__RunnerUps">
                 <h4 className="Awards__RunnerUps__Heading">{translate(`awards.runner_ups`)}</h4>
@@ -59,7 +50,7 @@ const Award = ({ type, tools: _tools }) => {
                     >
                         {i + 2}.{' '}
                         {translate(`award.${type}.runner_up`, {
-                            values: { tool: runnerUp }
+                            values: { item: runnerUp }
                         })}
                     </div>
                 ))}
@@ -70,18 +61,22 @@ const Award = ({ type, tools: _tools }) => {
 
 Award.propTypes = {
     type: PropTypes.oneOf([
-        'highest_satisfaction',
-        'highest_interest',
-        'highest_usage',
-        'most_mentioned',
+        'feature_adoption',
+        'tool_satisfaction',
+        'tool_interest',
+        'tool_usage',
+        'tool_mention',
+        'resource_usage',
         'prediction',
         'special'
     ]).isRequired,
-    tools: PropTypes.arrayOf(
+    items: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.string.isRequired
+            id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            value: PropTypes.number.isRequired
         })
     ).isRequired
 }
 
-export default Award
+export default memo(Award)

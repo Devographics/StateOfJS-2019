@@ -8,19 +8,12 @@ import HeatmapChartRow from './HeatmapChartRow'
 const backgroundColorScale = scaleLinear()
     .domain([-20, -10, 0, 10, 20])
     .range([colors.teal, colors.tealDark, colors.navy, colors.blueDark, colors.blue])
+// .clamp(true)
 
 const textColorScale = scaleLinear()
     .domain([-20, -10, 0, 10, 20])
     .range([colors.navy, colors.navyDark, colors.navy, colors.tealLight, colors.tealLight])
-
-const colorLegendGradient = `linear-gradient(${[
-    `to right`,
-    backgroundColorScale(-20),
-    backgroundColorScale(-10),
-    backgroundColorScale(0),
-    backgroundColorScale(10),
-    backgroundColorScale(20)
-].join(', ')})`
+// .clamp(true)
 
 const HeatmapChart = ({ keys, items, i18nNamespace }) => {
     const { translate } = useI18n()
@@ -35,7 +28,7 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                 }}
             >
                 <div className="Heatmap__Legend">{translate(`${i18nNamespace}.axis_legend`)}</div>
-                <div className="Heatmap__Header">{translate(`average`)}</div>
+                <div className="Heatmap__Header">{translate(`heatmap.average`)}</div>
                 {keys.map(key => {
                     return (
                         <div key={key} className="Heatmap__Header">
