@@ -75,15 +75,15 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
+            - id: layout-experience-heatmap
+              type: heatmap
+              subject: features
+              heatmapType: experience
             - css-grid
             - flexbox
             - css-multi-column
             - css-writing-modes
             - css-exclusions
-            - id: layout-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -98,16 +98,16 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
+            - id: shapes-and-graphics-experience-heatmap
+              type: heatmap
+              subject: features
+              heatmapType: experience
             - css-shapes
             - object-fit
             - clip-path
             - css-masks
             - blend-modes
             - css-filter-effects
-            - id: shapes-and-graphics-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -121,13 +121,13 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
-            - css-scroll-snap
-            - overscroll-behavior
-            - overflow-anchor
             - id: interactions-experience-heatmap
               type: heatmap
               subject: features
               heatmapType: experience
+            - css-scroll-snap
+            - overscroll-behavior
+            - overflow-anchor
 
       - id: typography
         path: /typography
@@ -137,15 +137,15 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
+            - id: typography-experience-heatmap
+              type: heatmap
+              subject: features
+              heatmapType: experience
             - web-fonts-font-face
             - variable-fonts
             - line-breaking-properties
             - font-variant
             - initial-letter
-            - id: typography-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -159,13 +159,13 @@
         blocks:
             - id: features-section-overview
               type: features-section-overview
-            - css-transitions
-            - css-transforms
-            - css-animations
             - id: animations-and-transforms-experience-heatmap
               type: heatmap
               subject: features
               heatmapType: experience
+            - css-transitions
+            - css-transforms
+            - css-animations
             - id: resources-sponsors
               type: resources
               items:
@@ -180,15 +180,15 @@
             - id: features-section-overview
               type: features-section-overview
               showDescription: true
+            - id: other-features-experience-heatmap
+              type: heatmap
+              subject: features
+              heatmapType: experience
             - css-variables
             - support-queries
             - css-containment
             - will-change
             - calc
-            - id: other-features-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
             - id: resources-sponsors
               type: resources
               items:
@@ -259,10 +259,6 @@
         blocks:
             - id: tools-section-overview
               type: tools-section-overview
-            - sass
-            - less
-            - postcss
-            - stylus
             - id: pre-post-processors-experience-heatmap
               type: heatmap
               subject: tools
@@ -271,6 +267,10 @@
               type: heatmap
               subject: tools
               heatmapType: salary
+            - sass
+            - less
+            - postcss
+            - stylus
             - id: resources-sponsors
               type: resources
               items:
@@ -282,6 +282,14 @@
         blocks:
             - id: tools-section-overview
               type: tools-section-overview
+            - id: css-frameworks-experience-heatmap
+              type: heatmap
+              subject: tools
+              heatmapType: experience
+            - id: css-frameworks-salary-heatmap
+              type: heatmap
+              subject: tools
+              heatmapType: salary
             - bootstrap
             - materialize-css
             - ant-design
@@ -293,14 +301,6 @@
             - primer
             - tailwind
             - purecss
-            - id: css-frameworks-experience-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: experience
-            - id: css-frameworks-salary-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: salary
 
       - id: methodologies
         path: /methodologies
@@ -308,11 +308,6 @@
         blocks:
             - id: tools-section-overview
               type: tools-section-overview
-            - bem
-            - atomic-css
-            - oocss
-            - smacss
-            - it-css
             - id: methodologies-experience-heatmap
               type: heatmap
               subject: tools
@@ -321,6 +316,11 @@
               type: heatmap
               subject: tools
               heatmapType: salary
+            - bem
+            - atomic-css
+            - oocss
+            - smacss
+            - it-css
 
       - id: css-in-js
         path: /css-in-js
@@ -328,14 +328,6 @@
         blocks:
             - id: tools-section-overview
               type: tools-section-overview
-            - styled-components
-            - glamor
-            - aphrodite
-            - jss
-            - styled-jsx
-            - radium
-            - emotion
-            - css-modules
             - id: css-in-js-experience-heatmap
               type: heatmap
               subject: tools
@@ -344,6 +336,14 @@
               type: heatmap
               subject: tools
               heatmapType: salary
+            - styled-components
+            - glamor
+            - aphrodite
+            - jss
+            - styled-jsx
+            - radium
+            - emotion
+            - css-modules
             - id: resources-sponsors
               type: resources
               items:

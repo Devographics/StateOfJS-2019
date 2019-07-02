@@ -338,11 +338,12 @@ translations:
       t: Usage by Years Of Experience
     - key: block.description.features_experience_heatmap
       t: |
-        <span class="text-teal text-bold">Teal</span> means
-        **lower usage** from average for a given years of experience range while
-        <span class="text-blue text-bold">bluish color</span> means
-        **higher usage**.
-        **Usage** corresponds to participants who selected *"Have used it"*.
+        The “overall” column shows overall usage for each feature (respondents who selected “have used it”), 
+        while the following columns show the usage ratio for each “years of experience” bracket. 
+
+        A brighter <span class="text-pink text-bold">pink</span> background indicates 
+        a higher-than-overall-average ratio for a given bracket.
+
 
     ###########################################################################
     # Units & Selectors
@@ -416,24 +417,22 @@ translations:
       t: Usage by Years Of Experience
     - key: block.description.tools_experience_heatmap
       t: |
-        <span class="text-teal text-bold">Teal</span> means
-        **lower usage** from average for a given years of experience range while
-        <span class="text-blue text-bold">bluish color</span> means
-        **higher usage**.
-        **Usage** corresponds to participants who selected
-        *"I've USED it before, and WOULD use it again"* or
-        *"I've USED it before, and would NOT use it again"*.
+
+        The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
+        while the following columns show the usage ratio for each “years of experience” bracket. 
+
+        A brighter <span class="text-pink text-bold">pink</span> background indicates 
+        a higher-than-overall-average ratio for a given bracket.
+
     - key: block.title.tools_salary_heatmap
       t: Usage by Salary Range
     - key: block.description.tools_salary_heatmap
       t: |
-        <span class="text-teal text-bold">Teal</span> means
-        **lower usage** from average for a given salary range while
-        <span class="text-blue text-bold">bluish color</span> means
-        **higher usage**.
-        **Usage** corresponds to participants who selected
-        *"I've USED it before, and WOULD use it again"* or
-        *"I've USED it before, and would NOT use it again"*.
+        The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
+        while the following columns show the usage ratio for each “yearly salary” bracket. 
+
+        A brighter <span class="text-pink text-bold">pink</span> background indicates 
+        a higher-than-overall-average ratio for a given bracket.
 
     # rankings/bump chart
     - key: block.title.tools-section-overview
@@ -934,4 +933,4 @@ translations:
     - key: heatmap.average
       t: overall
     - key: difference_from_average_usage
-      t: difference from average usage
+      t: 'Difference from overall usage:'

@@ -57,6 +57,7 @@
     "react-helmet": "^5.2.0",
     "react-markdown": "^4.0.8",
     "remove-markdown": "^0.3.0",
+    "tinycolor2": "^1.4.1",
     "topojson-client": "^3.0.0"
   },
   "devDependencies": {

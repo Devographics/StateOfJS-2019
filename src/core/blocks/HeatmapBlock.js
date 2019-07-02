@@ -5,6 +5,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 import { useEntities } from 'core/entities/entitiesContext'
 import Block from 'core/components/Block'
 import HeatmapChart from 'core/charts/HeatmapChart'
+import sortBy from 'lodash/sortBy'
 
 const configByType = {
     salary: {
@@ -66,6 +67,8 @@ const getChartData = (data, block, config, getName) => {
 
         return itemWithKeys
     })
+
+    items = sortBy(items, 'average').reverse()
 
     return items
 }

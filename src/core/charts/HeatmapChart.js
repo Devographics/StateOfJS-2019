@@ -4,15 +4,35 @@ import { scaleLinear } from 'd3-scale'
 import { colors } from '../../constants'
 import { useI18n } from 'core/i18n/i18nContext'
 import HeatmapChartRow from './HeatmapChartRow'
+import tinycolor from 'tinycolor2'
+
+// accepts either a number of steps and an offset for regular steps,
+// or a specified array of alpha steps
+const getAlphaScale = (color, alphaSteps, startOffset) => {
+    const a = Array.isArray(alphaSteps) ? alphaSteps : Array.from({ length: alphaSteps })
+    return a.map((step, i) => {
+        const c = tinycolor(color)
+        c.setAlpha(step ? step : startOffset + ((1 - startOffset) * i) / alphaSteps)
+        const cs = c.toRgbString()
+        return cs
+    })
+}
 
 const backgroundColorScale = scaleLinear()
     .domain([-20, -10, 0, 10, 20])
-    .range([colors.teal, colors.tealDark, colors.navy, colors.blueDark, colors.blue])
+    // .range([colors.teal, colors.tealDark, colors.navy, colors.blueDark, colors.blue])
+    .range(getAlphaScale(colors.pink, 5, 0.15))
 // .clamp(true)
 
 const textColorScale = scaleLinear()
     .domain([-20, -10, 0, 10, 20])
-    .range([colors.navy, colors.navyDark, colors.navy, colors.tealLight, colors.tealLight])
+    .range([
+        colors.tealLight,
+        colors.tealLight,
+        colors.tealLight,
+        colors.tealLight,
+        colors.tealLight
+    ])
 // .clamp(true)
 
 const HeatmapChart = ({ keys, items, i18nNamespace }) => {
