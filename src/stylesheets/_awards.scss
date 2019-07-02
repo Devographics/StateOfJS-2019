@@ -207,40 +207,11 @@
     }
 }
 
-/* Icons */
-
-.FeatureIcon {
-    .st0 {
-        fill: none;
-    }
-    .st1 {
-        fill: $navyLighter;
-    }
-    .st2 {
-        fill: none;
-        stroke: $pink;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-    }
-    .st3 {
-        fill: $pink;
-    }
-    .st4 {
-        fill: $navyLighter;
-        stroke: $pink;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-    }
-    .st5 {
-        fill: $pink;
-        stroke: $navyLighter;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-    }
-    .st6 {
-        fill: none;
+.Award__Element__Confetti{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    canvas{
+        transform: translate(-50%, -50%);
     }
 }

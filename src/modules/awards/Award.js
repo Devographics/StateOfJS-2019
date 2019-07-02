@@ -5,6 +5,8 @@ import ShareBlock from 'core/share/ShareBlock'
 import ShareBlockDebug from 'core/share/ShareBlockDebug'
 import { useI18n } from 'core/i18n/i18nContext'
 import AwardIcon from './AwardIcon'
+import Confetti from 'react-confetti'
+import { distinctColors } from '../../constants'
 
 const Award = ({ type, items }) => {
     const { translate } = useI18n()
@@ -27,6 +29,20 @@ const Award = ({ type, items }) => {
                         <AwardIcon />
                     </div>
                     <div className="Award__Element__Face Award__Element__Face--back">
+                        {isRevealed && (
+                            <div className="Award__Element__Confetti">
+                                <Confetti
+                                    width="500px"
+                                    height="300px"
+                                    recycle={false}
+                                    numberOfPieces={80}
+                                    initialVelocityX={5}
+                                    initialVelocityY={20}
+                                    confettiSource={{x: 200, y: 100, w: 100, h:100}}
+                                    colors={distinctColors}
+                                    />
+                            </div>
+                        )}
                         <span>{winner.name}</span>
                     </div>
                 </div>
