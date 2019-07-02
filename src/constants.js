@@ -15,6 +15,7 @@ export let colors = {
     pinkLight: '#EC75CB',
     pink: '#F649A7',
     pinkDark: '#e86ebf',
+    
 
     greenLighter: '#E7FFED',
     greenLight: '#ACFFC3',

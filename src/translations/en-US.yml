@@ -694,7 +694,7 @@ translations:
           With **${items[0].value}** users ${items[0].name}
           is the most used CSS feature this year.
     - key: award.feature_adoption.runner_up
-      t: ${item.name} ${item.value}
+      t: '${item.name}: ${item.value}'
 
     # tool_satisfaction
     - key: award.tool_satisfaction.title
@@ -708,7 +708,7 @@ translations:
           With **${items[0].value}%** of users willing to use it again,
           ${items[0].name} proves it’s not kidding around.
     - key: award.tool_satisfaction.runner_up
-      t: ${item.name} ${item.value}%
+      t: '${item.name}: ${item.value}%'
 
     # tool_interest
     - key: award.tool_interest.title
@@ -723,7 +723,7 @@ translations:
           about ${items[0].name} want to learn it.
           That’s some serious interest!
     - key: award.tool_interest.runner_up
-      t: ${item.name} ${item.value}%
+      t: '${item.name}: ${item.value}%'
 
     # tool_usage
     - key: award.tool_usage.title
@@ -736,20 +736,20 @@ translations:
           With **${items[0].value}** users ${items[0].name}
           is the most used technology this year.
     - key: award.tool_usage.runner_up
-      t: ${item.name} ${item.value}
+      t: '${item.name}: ${item.value}'
 
     # resource_usage
     - key: award.resource_usage.title
       t: Most Used Resource
     - key: award.resource_usage.description
       t: |
-          Awarded to resource with the largest user base.
+          Awarded to the resource with the largest user base.
     - key: award.resource_usage.comment
       t: |
           With **${items[0].value}** users ${items[0].name}
           is the most used resource this year.
     - key: award.resource_usage.runner_up
-      t: ${item.name} ${item.value}
+      t: '${item.name}: ${item.value}'
 
     # tool_mention
     - key: award.tool_mention.title
@@ -763,7 +763,7 @@ translations:
           ${items[0].name} collected **${items[0].value}** mentions,
           making it the most submitted freeform answer by far.
     - key: award.tool_mention.runner_up
-      t: ${item.name} ${item.value}
+      t: '${item.name}: ${item.value}'
 
     ###########################################################################
     # Generic

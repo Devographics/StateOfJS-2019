@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import ShareBlock from 'core/share/ShareBlock'
 import ShareBlockDebug from 'core/share/ShareBlockDebug'
 import { useI18n } from 'core/i18n/i18nContext'
+import AwardIcon from './AwardIcon'
 
 const Award = ({ type, items }) => {
     const { translate } = useI18n()
@@ -22,9 +23,11 @@ const Award = ({ type, items }) => {
             <div className="Award__Description">{translate(`award.${type}.description`)}</div>
             <div className="Award__Element__Container">
                 <div className="Award__Element" onClick={handleClick}>
-                    <div className="Award__Element__Face Award__Element__Face--front">?</div>
+                    <div className="Award__Element__Face Award__Element__Face--front">
+                        <AwardIcon />
+                    </div>
                     <div className="Award__Element__Face Award__Element__Face--back">
-                        {winner.name}
+                        <span>{winner.name}</span>
                     </div>
                 </div>
             </div>
