@@ -471,8 +471,16 @@
   path: /awards
   type: page
   blocks:
-      - id: awards
-        type: text
+      - id: feature-adoption
+        type: award
+      - id: tool-usage
+        type: award
+      - id: tool-satisfaction
+        type: award
+      - id: tool-interest
+        type: award
+      - id: resource-usage
+        type: award
 
 - id: conclusion
   path: /conclusion

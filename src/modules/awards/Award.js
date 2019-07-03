@@ -54,7 +54,7 @@ const Award = ({ type, items }) => {
                 />
                 <ShareBlock
                     title={`${translate(`award.${type}.title`)} Award`}
-                    id={''}
+                    id={type}
                     className="Award__Share"
                 />
             </div>
@@ -66,7 +66,7 @@ const Award = ({ type, items }) => {
                         className={`Awards__RunnerUps__Item Awards__RunnerUps__Item--${i}`}
                     >
                         {i + 2}.{' '}
-                        {translate(`award.${type}.runner_up`, {
+                        {translate(`award.runner_up`, {
                             values: { item: runnerUp }
                         })}
                     </div>

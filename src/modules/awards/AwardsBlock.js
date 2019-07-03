@@ -112,23 +112,23 @@ const getBlockData = (data, getName) => {
 
     return [
         {
-            type: 'feature_adoption',
+            type: 'feature-adoption',
             items: featureAdoption,
         },
         {
-            type: 'tool_usage',
+            type: 'tool-usage',
             items: toolUsage
         },
         {
-            type: 'tool_satisfaction',
+            type: 'tool-satisfaction',
             items: toolSatisfaction
         },
         {
-            type: 'tool_interest',
+            type: 'tool-interest',
             items: toolInterest
         },
         {
-            type: 'resource_usage',
+            type: 'resource-usage',
             items: resourceUsage
         }
     ]
