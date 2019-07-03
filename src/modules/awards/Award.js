@@ -2,7 +2,6 @@ import React, { memo, useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import ShareBlock from 'core/share/ShareBlock'
-import ShareBlockDebug from 'core/share/ShareBlockDebug'
 import { useI18n } from 'core/i18n/i18nContext'
 import AwardIcon from './AwardIcon'
 import Confetti from 'react-confetti'
@@ -54,11 +53,10 @@ const Award = ({ type, items }) => {
                     })}
                 />
                 <ShareBlock
-                    title={`${translate(`award.${type}.heading`)} Award`}
-                    id={type}
+                    title={`${translate(`award.${type}.title`)} Award`}
+                    id={''}
                     className="Award__Share"
                 />
-                <ShareBlockDebug id={type} />
             </div>
             <div className="Awards__RunnerUps">
                 <h4 className="Awards__RunnerUps__Heading">{translate(`awards.runner_ups`)}</h4>
