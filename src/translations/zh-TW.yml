@@ -13,7 +13,6 @@ translations:
 
 
           我們使用高品質、超柔軟的 Tri-blend 合身剪裁。尺寸比較小一些，所以如果習慣較為寬鬆，**我們建議訂購比你平常穿著還要大一號的**（在照片裡，我穿的是 M 號。）
-
     - key: tshirt.getit
       t: 入手
     - key: tshirt.price
@@ -207,7 +206,7 @@ translations:
     - key: backend-proficiency.able_to_use_existing_frameworks.long
       t: 我有能力以現有的框架開發應用程式（Rails、Laravel⋯等。）
     - key: backend-proficiency.able_to_setup_from_scratch.short
-      t: 進階Advanced
+      t: 進階
     - key: backend-proficiency.able_to_setup_from_scratch.long
       t: 我有能力從無到有安裝整組後端 (Go、Node⋯等。)
 
@@ -237,7 +236,7 @@ translations:
     - key: job-title.back_end_dev.long
       t: 後端開發者/工程師
 
-    # other
+    # 其他
     - key: block.title.participation-by-country
       t: 以國家分類
     - key: block.description.participation-by-country
@@ -282,7 +281,7 @@ translations:
       t: 你在聚會中如何介紹自己？
 
     ###########################################################################
-    # Features
+    # 功能
     ###########################################################################
 
     - key: feature.learn_more
@@ -325,20 +324,20 @@ translations:
     - key: block.description.css-exclusions
       t: >
           Exclusion 是 block 等級元素，功能是產生排除區塊 (exclusion box)，而且不是 float。
-
           Exclusion 元素提供全新的 block 格式情境（來源：<a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>。）
+
+    - key: block.title.features_experience_heatmap
       t: Usage by Years Of Experience
     - key: block.description.features_experience_heatmap
       t: |
-        The “overall” column shows overall usage for each feature (respondents who selected “have used it”), 
-        while the following columns show the usage ratio for each “years of experience” bracket. 
+        「全體」這欄顯示每一項技術的整體使用情況（也就是答題者選取了「會再使用」或「不會再使用」）， 
+        而接下來的幾欄是依照「資歷年數」分組的使用比例。
 
-        A brighter <span class="text-pink text-bold">pink</span> background indicates 
-        a higher-than-overall-average ratio for a given bracket.
+        比較亮的<span class="text-pink text-bold">粉紅色</span>背景，代表該分組比全體平均比例還要高。
 
 
     ###########################################################################
-    # Units & Selectors
+    # 單位 & 選擇器
     ###########################################################################
 
     - key: block.title.units
@@ -356,7 +355,7 @@ translations:
     - key: block.title.interaction
       t: 互動
     - key: block.title.form-controls
-      t: 表單控制 (Form Controls)
+      t: 表單操作元件 (Form Controls)
 
     - key: block.description.units
       t: 開發者們在用哪些 CSS 單位？
@@ -376,10 +375,10 @@ translations:
       t: 開發者們在用哪些表單相關的選擇器？
 
     ###########################################################################
-    # Tools & Methodologies
+    # 工具 & 方法論
     ###########################################################################
 
-    # general
+    # 一般
     - key: block.title.tools-overview
       t: 看法概觀
     - key: block.description.tools-overview
@@ -405,25 +404,23 @@ translations:
       t: 其他方法
 
     - key: block.title.tools_experience_heatmap
-      t: Usage by Years Of Experience
+      t: 以資歷年數區分使用情況
     - key: block.description.tools_experience_heatmap
       t: |
 
-        The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
-        while the following columns show the usage ratio for each “years of experience” bracket. 
+        「全體」這一欄顯示每一項技術的整體使用情況（也就是答題者選取了「會再使用」或「不會再使用」）， 
+        而接下來的幾欄是依照「資歷年數」分組的使用比例。
 
-        A brighter <span class="text-pink text-bold">pink</span> background indicates 
-        a higher-than-overall-average ratio for a given bracket.
+        比較亮的<span class="text-pink text-bold">粉紅色</span>背景，代表該分組比全體平均比例還要高。
 
     - key: block.title.tools_salary_heatmap
-      t: Usage by Salary Range
+      t: 以薪資範圍區分使用情況
     - key: block.description.tools_salary_heatmap
       t: |
-        The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
-        while the following columns show the usage ratio for each “yearly salary” bracket. 
+        「全體」這欄顯示每一項技術的整體使用情況（也就是答題者選取了「會再使用」或「不會再使用」）， 
+        而接下來的幾欄是依照「年收入」分組的使用比例。
 
-        A brighter <span class="text-pink text-bold">pink</span> background indicates 
-        a higher-than-overall-average ratio for a given bracket.
+        比較亮的<span class="text-pink text-bold">粉紅色</span>背景，代表該分組比全體平均比例還要高。
 
       # rankings/bump chart
     - key: block.title.tools-section-overview
@@ -431,7 +428,7 @@ translations:
     - key: block.description.tools-section-overview
       t: >
         知道、有興趣與滿意度比例的排名。
-        Note that these three ratios all correspond to the same point in time.
+        請注意這三個百分比項目各自對應同個時間點。
     - key: opinions.legends.awareness_ratio
       t: 有注意到
     - key: opinions.legends.interest_ratio
@@ -464,7 +461,7 @@ translations:
     - key: quadrants.analyze
       t: 分析
 
-    # opinions
+    # 意見
     - key: opinions.legends.never_heard
       t: 從來沒有聽過
     - key: opinions.legends_short.never_heard
@@ -508,7 +505,7 @@ translations:
       t: 所有回應
 
     ###########################################################################
-    # Other Tools
+    # 其他工具
     ###########################################################################
 
     - key: block.title.text-editors
@@ -529,10 +526,10 @@ translations:
       t: 其他回答（自由填寫表單）
 
     ###########################################################################
-    # Environments
+    # 環境
     ###########################################################################
 
-    # general
+    # 一般
     - key: block.title.form-factors
       t: 裝置
     - key: block.description.form-factors
@@ -672,80 +669,70 @@ translations:
     ###########################################################################
 
     - key: awards.runner_ups
-      t: Runner Ups
+      t: 緊追在後
     - key: award.runner_up
       t: '${item.name}: ${item.value}'
 
     # feature_adoption
     - key: award.feature-adoption.title
-      t: Most Adopted Feature
+      t: 最多實際使用的功能
     - key: award.feature-adoption.description
       t: |
-          Awarded to the most adopted CSS feature.
+          頒發給最多實際使用的 CSS 功能。
     - key: award.feature-adoption.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used CSS feature this year.
+          本年度最廣泛實際使用的 CSS 功能是 ${items[0].name}，有 **${items[0].value}** 位使用者。
 
     # tool_satisfaction
     - key: award.tool-satisfaction.title
-      t: Highest Satisfaction
+      t: 最高滿意度
     - key: award.tool-satisfaction.description
       t: |
-          Awarded to the technology with the highest
-          percentage of satisfied users.
+          頒發給滿意比例最高的技術。
     - key: award.tool-satisfaction.comment
       t: |
-          With **${items[0].value}%** of users willing to use it again,
-          ${items[0].name} proves it’s not kidding around.
+          因為有 **${items[0].value}%** 位使用者願意再次使用，${items[0].name} 證明它不是隨便玩玩的。
 
     # tool_interest
     - key: award.tool-interest.title
-      t: Highest Interest
+      t: 最有興趣
     - key: award.tool-interest.description
       t: |
-          Awarded to the technology developers
-          are most interested in learning.
+          頒發給開發者最有興趣想學的技術。
     - key: award.tool-interest.comment
       t: |
-          **${items[0].value}%** of developers who have heard
-          about ${items[0].name} want to learn it.
-          That’s some serious interest!
+          **${items[0].value}%** 位聽過 ${items[0].name} 的開發者想要學起來，興致非常濃厚！
 
     # tool_usage
     - key: award.tool-usage.title
-      t: Most Used Technology
+      t: 最廣泛使用的技術
     - key: award.tool-usage.description
       t: |
-          Awarded to technology with the largest user base.
+          頒發給使用者總數最多的技術。
     - key: award.tool-usage.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used technology this year.
+          本年度最廣泛的技術是 ${items[0].name}，有 **${items[0].value}** 位使用者。
 
 
     # resource_usage
     - key: award.resource-usage.title
-      t: Most Used Resource
+      t: 最廣泛使用的資源
     - key: award.resource-usage.description
       t: |
-          Awarded to the resource with the largest user base.
+          頒發給使者總數最多的資源。
     - key: award.resource-usage.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used resource this year.
+          本年度最廣泛使用的資源是 ${items[0].name}，有 **${items[0].value}** 位使用者。
 
     # tool_mention
     - key: award.tool-mention.title
-      t: Most Mentioned
+      t: 最多提及
     - key: award.tool-mention.description
       t: |
-          Awarded to the library mentioned
-          the most in the “other libraries” answer.
+          頒發給在「其他函式庫」回答裡，被提到最多次的函式庫。
     - key: award.tool-mention.comment
       t: |
-          ${items[0].name} collected **${items[0].value}** mentions,
-          making it the most submitted freeform answer by far.
+          被提到 **${items[0].value}** 次，${items[0].name} 是目前收到最多次的自訂答案。
 
     ###########################################################################
     # Generic
@@ -777,11 +764,11 @@ translations:
     - key: page.technologies
       t: 技術
     - key: page.pre-post-processors
-      t: Pre & Post Processors
+      t: 預 & 後處理器
     - key: page.css-frameworks
-      t: CSS Frameworks
+      t: CSS 框架
     - key: page.methodologies
-      t: Methodologies
+      t: 方法論
     - key: page.css-in-js
       t: CSS-in-JS
     - key: page.other-tools
@@ -853,7 +840,7 @@ translations:
     - key: general.notify_me
       t: 到時候通知我
     - key: general.help_us_translate
-      t: 幫忙翻譯這次調查 →
+      t: 幫忙改進這次調查的翻譯 →
     - key: general.not_found
       t: >
       
@@ -913,6 +900,6 @@ translations:
     - key: percent_satisfaction
       t: '% 滿意度'
     - key: heatmap.average
-      t: overall
+      t: 全體
     - key: difference_from_average_usage
-      t: 'Difference from overall usage:'
+      t: '與全體使用情況的差距：'
