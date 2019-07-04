@@ -13,7 +13,6 @@ translations:
 
 
           我們使用高品質、超柔軟的 Tri-blend 合身剪裁。尺寸比較小一些，所以如果習慣較為寬鬆，**我們建議訂購比你平常穿著還要大一號的**（在照片裡，我穿的是 M 號。）
-
     - key: tshirt.getit
       t: 入手
     - key: tshirt.price
@@ -28,30 +27,44 @@ translations:
       t: 我免費做功德
     - key: salary.none.short
       t: 做功德
+    - key: salary.none.shorter
+      t: '0'
     - key: salary.0_10.long
       t: 美金 0-10k
     - key: salary.0_10.short
       t: 美金 0-10k
+    - key: salary.0_10.shorter
+      t: 0~10k
     - key: salary.10_30.long
       t: 美金 10-30k
     - key: salary.10_30.short
       t: 美金 10-30k
+    - key: salary.10_30.shorter
+      t: 10~30k
     - key: salary.30_50.long
       t: 美金 30-50k
     - key: salary.30_50.short
       t: 美金 30-50k
+    - key: salary.30_50.shorter
+      t: 30~50k
     - key: salary.50_100.long
       t: 美金 50-100k
     - key: salary.50_100.short
       t: 美金 50-100k
+    - key: salary.50_100.shorter
+      t: 50~100k
     - key: salary.100_200.long
       t: 美金 100-200k
     - key: salary.100_200.short
       t: 美金 100-200k
+    - key: salary.100_200.shorter
+      t: 100~200k
     - key: salary.200_more.long
       t: 美金 200k 以上
     - key: salary.200_more.short
       t: 美金 200k+
+    - key: salary.200_more.shorter
+      t: '>200k'
     - key: salary.axis_legend
       t: 薪資範圍
 
@@ -60,26 +73,38 @@ translations:
       t: 不到一年
     - key: years-of-experience.less_than_1.short
       t: '<1 年'
+    - key: years-of-experience.less_than_1.shorter
+      t: '<1'
     - key: years-of-experience.1_2.long
       t: 1 到 2 年
     - key: years-of-experience.1_2.short
       t: 1~2 年
+    - key: years-of-experience.1_2.shorter
+      t: 1~2
     - key: years-of-experience.2_5.long
       t: 2 到 5 年
     - key: years-of-experience.2_5.short
       t: 2~5 年
+    - key: years-of-experience.2_5.shorter
+      t: 2~5
     - key: years-of-experience.5_10.long
       t: 5 到 10 年
     - key: years-of-experience.5_10.short
       t: 5~10 年
+    - key: years-of-experience.5_10.shorter
+      t: 5~10
     - key: years-of-experience.10_20.long
       t: 10 到 20 年
     - key: years-of-experience.10_20.short
       t: 10~20 年
+    - key: years-of-experience.10_20.shorter
+      t: 10~20
     - key: years-of-experience.more_than_20.long
       t: 20 年以上
     - key: years-of-experience.more_than_20.short
       t: '>20 年'
+    - key: years-of-experience.more_than_20.shorter
+      t: '>20'
     - key: years-of-experience.axis_legend
       t: 資歷年數
 
@@ -133,13 +158,13 @@ translations:
     - key: sources.other_unknown
       t: 其他/未知
 
-    # javascript 理解程度
+    # javascript 熟悉程度
     - key: block.title.javascript-proficiency
-      t: JavaScript 理解程度
+      t: JavaScript 熟悉程度
     - key: block.description.javascript-proficiency
-      t: 你的 JavaScript 開發理解程度如何？
+      t: 你的 JavaScript 開發熟悉程度如何？
     - key: javascript-proficiency.axis_legend
-      t: JavaScript 理解程度
+      t: JavaScript 熟悉程度
     - key: javascript-proficiency.none.short
       t: 無
     - key: javascript-proficiency.none.long
@@ -161,13 +186,13 @@ translations:
     - key: javascript-proficiency.entire_codebases_from_scratch.long
       t: 有能力從無到有建構整組前端程式庫
 
-    # 後端理解程度
+    # 後端熟悉程度
     - key: block.title.backend-proficiency
-      t: 後端理解程度
+      t: 後端熟悉程度
     - key: block.description.backend-proficiency
-      t: 你的後端開發理解程度如何？
+      t: 你的後端開發熟悉程度如何？
     - key: backend-proficiency.axis_legend
-      t: 後端理解程度
+      t: 後端熟悉程度
     - key: backend-proficiency.none.short
       t: 無
     - key: backend-proficiency.none.long
@@ -181,7 +206,7 @@ translations:
     - key: backend-proficiency.able_to_use_existing_frameworks.long
       t: 我有能力以現有的框架開發應用程式（Rails、Laravel⋯等。）
     - key: backend-proficiency.able_to_setup_from_scratch.short
-      t: 進階Advanced
+      t: 進階
     - key: backend-proficiency.able_to_setup_from_scratch.long
       t: 我有能力從無到有安裝整組後端 (Go、Node⋯等。)
 
@@ -211,7 +236,7 @@ translations:
     - key: job-title.back_end_dev.long
       t: 後端開發者/工程師
 
-    # other
+    # 其他
     - key: block.title.participation-by-country
       t: 以國家分類
     - key: block.description.participation-by-country
@@ -243,7 +268,10 @@ translations:
           參與者找到這次調查的來源（綜合自行答題和來源網址追蹤。）
 
 
-          **JS 現況**代表先前我們的 JavaScript 調查訂閱者；**公告**是我們貼在 [FreeCodeCamp](https://www.freecodecamp.org) 的正式公告，還有**口耳相傳**是綜合來自 Slack、朋友、同事⋯等來源。
+          
+          **JS 現況**代表先前我們的 JavaScript 調查訂閱者；
+          **公告**是我們貼在 [FreeCodeCamp](https://www.freecodecamp.org) 的正式公告，
+          還有**口耳相傳**是綜合來自 Slack、朋友、同事⋯等來源。
 
     - key: block.description.gender
       t: 性別細節。
@@ -253,7 +281,7 @@ translations:
       t: 你在聚會中如何介紹自己？
 
     ###########################################################################
-    # Features
+    # 功能
     ###########################################################################
 
     - key: feature.learn_more
@@ -296,11 +324,20 @@ translations:
     - key: block.description.css-exclusions
       t: >
           Exclusion 是 block 等級元素，功能是產生排除區塊 (exclusion box)，而且不是 float。
-
           Exclusion 元素提供全新的 block 格式情境（來源：<a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>。）
 
+    - key: block.title.features_experience_heatmap
+      t: Usage by Years Of Experience
+    - key: block.description.features_experience_heatmap
+      t: |
+        「全體」這欄顯示每一項技術的整體使用情況（也就是答題者選取了「會再使用」或「不會再使用」）， 
+        而接下來的幾欄是依照「資歷年數」分組的使用比例。
+
+        比較亮的<span class="text-pink text-bold">粉紅色</span>背景，代表該分組比全體平均比例還要高。
+
+
     ###########################################################################
-    # Units & Selectors
+    # 單位 & 選擇器
     ###########################################################################
 
     - key: block.title.units
@@ -318,7 +355,7 @@ translations:
     - key: block.title.interaction
       t: 互動
     - key: block.title.form-controls
-      t: 表單控制 (Form Controls)
+      t: 表單操作元件 (Form Controls)
 
     - key: block.description.units
       t: 開發者們在用哪些 CSS 單位？
@@ -338,9 +375,10 @@ translations:
       t: 開發者們在用哪些表單相關的選擇器？
 
     ###########################################################################
-    # Tools & Methodologies
+    # 工具 & 方法論
     ###########################################################################
 
+    # 一般
     - key: block.title.tools-overview
       t: 看法概觀
     - key: block.description.tools-overview
@@ -365,13 +403,32 @@ translations:
     - key: block.title.other-methodologies
       t: 其他方法
 
+    - key: block.title.tools_experience_heatmap
+      t: 以資歷年數區分使用情況
+    - key: block.description.tools_experience_heatmap
+      t: |
+
+        「全體」這一欄顯示每一項技術的整體使用情況（也就是答題者選取了「會再使用」或「不會再使用」）， 
+        而接下來的幾欄是依照「資歷年數」分組的使用比例。
+
+        比較亮的<span class="text-pink text-bold">粉紅色</span>背景，代表該分組比全體平均比例還要高。
+
+    - key: block.title.tools_salary_heatmap
+      t: 以薪資範圍區分使用情況
+    - key: block.description.tools_salary_heatmap
+      t: |
+        「全體」這欄顯示每一項技術的整體使用情況（也就是答題者選取了「會再使用」或「不會再使用」）， 
+        而接下來的幾欄是依照「年收入」分組的使用比例。
+
+        比較亮的<span class="text-pink text-bold">粉紅色</span>背景，代表該分組比全體平均比例還要高。
+
       # rankings/bump chart
     - key: block.title.tools-section-overview
       t: 排名
     - key: block.description.tools-section-overview
       t: >
         知道、有興趣與滿意度比例的排名。
-        Note that these three ratios all correspond to the same point in time.
+        請注意這三個百分比項目各自對應同個時間點。
     - key: opinions.legends.awareness_ratio
       t: 有注意到
     - key: opinions.legends.interest_ratio
@@ -404,7 +461,7 @@ translations:
     - key: quadrants.analyze
       t: 分析
 
-    # opinions
+    # 意見
     - key: opinions.legends.never_heard
       t: 從來沒有聽過
     - key: opinions.legends_short.never_heard
@@ -448,7 +505,7 @@ translations:
       t: 所有回應
 
     ###########################################################################
-    # Other Tools
+    # 其他工具
     ###########################################################################
 
     - key: block.title.text-editors
@@ -469,9 +526,10 @@ translations:
       t: 其他回答（自由填寫表單）
 
     ###########################################################################
-    # Environments
+    # 環境
     ###########################################################################
 
+    # 一般
     - key: block.title.form-factors
       t: 裝置
     - key: block.description.form-factors
@@ -579,7 +637,7 @@ translations:
       t: 「CSS 的演進實在太慢了」
 
     - key: block.title.utility-classes
-      t: 非情境 Class
+      t: 無語意的 Class
     - key: block.description.utility-classes
       t: 「應該要避免使用像是 `.center` 和 `.large-text` 這樣非情境的 class」
 
@@ -610,75 +668,71 @@ translations:
     # Awards
     ###########################################################################
 
-    # awards
     - key: awards.runner_ups
-      t: Runner Ups
-    - key: block.title.highest_satisfaction
+      t: 緊追在後
+    - key: award.runner_up
+      t: '${item.name}: ${item.value}'
+
+    # feature_adoption
+    - key: award.feature-adoption.title
+      t: 最多實際使用的功能
+    - key: award.feature-adoption.description
+      t: |
+          頒發給最多實際使用的 CSS 功能。
+    - key: award.feature-adoption.comment
+      t: |
+          本年度最廣泛實際使用的 CSS 功能是 ${items[0].name}，有 **${items[0].value}** 位使用者。
+
+    # tool_satisfaction
+    - key: award.tool-satisfaction.title
       t: 最高滿意度
-    - key: block.description.highest_satisfaction
+    - key: award.tool-satisfaction.description
       t: |
-          頒給擁有最高使用者滿意度的函示庫。
-    - key: award.highest_satisfaction.comment
+          頒發給滿意比例最高的技術。
+    - key: award.tool-satisfaction.comment
       t: |
-          根據 **${tools[0].percentage}%** 的使用者願意再次使用，
-          ${tools[0].label} proves it’s not kidding around.
-    - key: award.highest_satisfaction.runner_up
-      t: ${tool.label} ${tool.percentage}%
-    - key: block.title.highest_interest
+          因為有 **${items[0].value}%** 位使用者願意再次使用，${items[0].name} 證明它不是隨便玩玩的。
+
+    # tool_interest
+    - key: award.tool-interest.title
       t: 最有興趣
-    - key: block.description.highest_interest
+    - key: award.tool-interest.description
       t: |
-          Awarded to the technology developers are most interested in learning.
-    - key: award.highest_interest.comment
+          頒發給開發者最有興趣想學的技術。
+    - key: award.tool-interest.comment
       t: |
-          **${tools[0].percentage}%** of developers who have heard about
-          ${tools[0].label} want to learn it.
-          That’s some serious interest!
-    - key: award.highest_interest.runner_up
-      t: ${tool.label} ${tool.percentage}%
-    - key: block.title.highest_usage
-      t: 最多使用
-    - key: block.description.highest_usage
+          **${items[0].value}%** 位聽過 ${items[0].name} 的開發者想要學起來，興致非常濃厚！
+
+    # tool_usage
+    - key: award.tool-usage.title
+      t: 最廣泛使用的技術
+    - key: award.tool-usage.description
       t: |
-          Awarded to technology with the largest user base.
-    - key: award.highest_usage.comment
+          頒發給使用者總數最多的技術。
+    - key: award.tool-usage.comment
       t: |
-          With **${tools[0].count}** users ${tools[0].label}
-          is the most used library this year.
-    - key: award.highest_usage.runner_up
-      t: ${tool.label} ${tool.count}
-    - key: block.title.most_mentioned
-      t: Most Mentioned
-    - key: block.description.most_mentioned
+          本年度最廣泛的技術是 ${items[0].name}，有 **${items[0].value}** 位使用者。
+
+
+    # resource_usage
+    - key: award.resource-usage.title
+      t: 最廣泛使用的資源
+    - key: award.resource-usage.description
       t: |
-          Awarded to the library mentioned the most in the “other libraries” answer.
-    - key: award.most_mentioned.comment
+          頒發給使者總數最多的資源。
+    - key: award.resource-usage.comment
       t: |
-          ${tools[0].label} collected **${tools[0].count}** mentions,
-          making it the most submitted freeform answer by far.
-    - key: award.most_mentioned.runner_up
-      t: ${tool.label} ${tool.count}
-    - key: block.title.prediction
-      t: Prediction Award
-    - key: block.description.prediction
+          本年度最廣泛使用的資源是 ${items[0].name}，有 **${items[0].value}** 位使用者。
+
+    # tool_mention
+    - key: award.tool-mention.title
+      t: 最多提及
+    - key: award.tool-mention.description
       t: |
-          Awarded to an up-and-coming technology that might take over… or not?
-    - key: award.prediction.comment
+          頒發給在「其他函式庫」回答裡，被提到最多次的函式庫。
+    - key: award.tool-mention.comment
       t: |
-          The Facebook team is two for two with React and GraphQL.
-          Will Reason follow the same path?
-    - key: award.prediction.runner_up
-      t: ${tool.label}
-    - key: block.title.special
-      t: 特別獎項S
-    - key: block.description.special
-      t: |
-          Awarded to a technology that we just fell in love with this year.
-    - key: award.special.comment
-      t: |
-          ${tools[0].label} has become the leading JavaScript text editor, and we can definitely see why!
-    - key: award.special.runner_up
-      t: ${tool.label}
+          被提到 **${items[0].value}** 次，${items[0].name} 是目前收到最多次的自訂答案。
 
     ###########################################################################
     # Generic
@@ -710,11 +764,11 @@ translations:
     - key: page.technologies
       t: 技術
     - key: page.pre-post-processors
-      t: Pre & Post Processors
+      t: 預 & 後處理器
     - key: page.css-frameworks
-      t: CSS Frameworks
+      t: CSS 框架
     - key: page.methodologies
-      t: Methodologies
+      t: 方法論
     - key: page.css-in-js
       t: CSS-in-JS
     - key: page.other-tools
@@ -786,14 +840,13 @@ translations:
     - key: general.notify_me
       t: 到時候通知我
     - key: general.help_us_translate
-      t: 幫忙翻譯這次調查 →
+      t: 幫忙改進這次調查的翻譯 →
     - key: general.not_found
       t: >
       
         ## Error 404
 
         抱歉，我們找不到這一頁。如果你認為哪裡可能壞了，請[開個 issue](https://github.com/StateOfJS/state-of-css-2019/issues)。
-
     - key: general.back_to_intro
       t: 回到簡介
     - key: general.close_nav
@@ -846,3 +899,7 @@ translations:
       t: 使用者
     - key: percent_satisfaction
       t: '% 滿意度'
+    - key: heatmap.average
+      t: 全體
+    - key: difference_from_average_usage
+      t: '與全體使用情況的差距：'
