@@ -558,7 +558,7 @@ translations:
     - key: print-styles.often.short
       t: 經常
     - key: print-styles.often.long
-      t: 我在許多專案裡會把列印用的樣式當作一部份來撰寫。
+      t: 我在許多專案裡會把列印用的樣式當作一部分來撰寫。
     - key: print-styles.mainly.short
       t: 主要
     - key: print-styles.mainly.long
@@ -582,7 +582,7 @@ translations:
     - key: email-styles.often.short
       t: 經常
     - key: email-styles.often.long
-      t: 我在許多專案裡會把 Email 客戶端的 CSS 當作一部份來撰寫。
+      t: 我在許多專案裡會把 Email 客戶端的 CSS 當作一部分來撰寫。
     - key: email-styles.mainly.short
       t: 主要
     - key: email-styles.mainly.long
@@ -711,7 +711,7 @@ translations:
           頒發給使用者總數最多的技術。
     - key: award.tool-usage.comment
       t: |
-          本年度最廣泛的技術是 ${items[0].name}，有 **${items[0].value}** 位使用者。
+          本年度最廣泛使用的技術是 ${items[0].name}，有 **${items[0].value}** 位使用者。
 
 
     # resource_usage
