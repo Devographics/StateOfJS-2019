@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: other-tools
-locale: en-US
+locale: pl-PL
 ---
 
-You always need a text editor to code, but the process of writing CSS also relies on browsers and devtools to a greater extent than probably any other language. 
+Zawsze potrzebujesz edytora tekstu do kodowania, ale proces pisania CSS zależy również od przeglądarek i narzędzi devtools w większym stopniu niż prawdopodobnie od jakiegokolwiek innego języka.
