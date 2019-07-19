@@ -1,45 +1,45 @@
 ---
 type: introduction
 page: introduction
-locale: en-US
+locale: pl-PL
 ---
 
-<span class="first-letter">I</span>n the web development family, JavaScript has developed a bit of a reputation as the angry, rebellious teenager going through a new phase every year and telling you you're just too old to understand. CSS on the other hand has always been the studious, well-behaved kid who always stays polite and never makes a rash decision. 
+<span class="first-letter">W</span> rodzinie twórców stron internetowych JavaScript zyskał reputację gniewnego, zbuntowanego nastolatka, który co roku przechodzi nową fazę i mówi, że jesteś zbyt stary, by to zrozumieć. Z drugiej strony CSS zawsze był starannym, dobrze wychowanym dzieckiem, które zawsze zachowuje się uprzejmie i nigdy nie podejmuje pochopnych decyzji.
 
-But don't take things for granted: despite being over 20 years old, there's signs that CSS might be going through the same tumultuous teenage years that JavaScript just went through. Flexbox! Grid! CSS-in-JS! In 2019, CSS is finally dyeing its hair pink and getting a tattoo just like it's always secretly wanted. 
+Ale nie bierz tego za pewnik: pomimo tego, że ma ponad 20 lat, pojawiają się oznaki, że CSS może przechodzić przez te same burzliwe lata, w których JavaScript właśnie przeszedł. Flexbox! Grid! CSS-in-JS! W 2019r CSS w końcu farbuje włosy na różowo i robi sobie tatuaż, tak jak zawsze w tajemnicy tego chciał.
 
-Parenting books won't help much with this one, but that's where we come in: we've surveyed over 10,000 developers in this first ever State of CSS survey. So join us to find out which CSS features are used the most, which tools are gaining adoption, and much more.
+Książki o rodzicielstwie niewiele pomogą w tym, ale właśnie tam przychodzimy: zbadaliśmy ponad 10 000 programistów w tym pierwszej w historii ankiecie State of CSS. Dołącz do nas, aby dowiedzieć się, które funkcje CSS są używane najczęściej, jakie narzędzia zyskują popularność i wiele więcej.
 
-### Team
+### Drużyna
 
-The State of CSS Survey is created and maintained by:
+Badanie State of CSS jest tworzona i wspierana przez:
 
-- [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
-- [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
+- [Sacha Greif](https://twitter.com/sachagreif) (me!): Projektowanie, pisanie, kodowanie
+- [Raphaël Benitte](https://twitter.com/benitteraphael): Analiza danych, wizualizacje danych
 
-Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
+Upewnij się, że sprawdziłeś mój framework do JavaScript, [Vulcan.js](http://vulcanjs.org), jak również bibliotekę do wizualizacji danych w React Raphaëla [nivo](https://nivo.rocks).
 
-### Download Our Data (coming soon)
+### Pobierz nasze dane (już wkrótce)
 
-You can [download the raw JSON data for this survey](https://www.kaggle.com/sachag/state-of-css-2019). Let us know if you end up making your own data visualizations!
+Możesz [pobrać surowe dane JSON dla tej ankiety](https://www.kaggle.com/sachag/state-of-css-2019). Daj nam znać, jeśli skończysz tworzyć własne wizualizacje danych!
 
-### Completion Percentages
+### Procenty ukończenia
 
-Because all survey questions could be skipped, some questions ended up with fewer answers than others. So we've added a small pie chart indicator to each question to let you know which proportion of total respondents answered it.  
+Ponieważ wszystkie pytania ankiety można pominąć, niektóre pytania zakończyły się mniejszą liczbą odpowiedzi niż inne. Dlatego dodaliśmy mały wskaźnik wykresu kołowego do każdego pytania, aby poinformować, który odsetek wszystkich respondentów odpowiedział na to pytanie.
 
-### Other Links
+### Inne linki
 
-- [State of CSS Homepage](https://stateofcss.com)
+- [Strona główna State of CSS](https://stateofcss.com)
 - [State of JS](https://stateofjs.com)
 
-### Thanks
+### Dzięki
 
-Special thanks to [Florian Rivoal](https://twitter.com/frivoal) for his huge help coming up with survey questions, as well as [David Luhr](https://luhr.co/) for his help with accessibility, and everybody else who took part in this process on GitHub. 
+Specjalne podziękowania dla [Floriana Rivoala](https://twitter.com/frivoal) za ogromną pomoc w wypełnieniu pytań ankietowych, a także dla [Davida Luhra](https://luhr.co/) za jego pomoc w zakresie dostępności oraz wszystkich innych, którzy brali udział w tym procesie na GitHubie.
 
-### Credits & Stuff
+### Przypisy
 
-The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofcss.com)
+strona jest ustawiona w IBM Plex Mono. Pytania? Informacja zwrotna? [Skontaktuj się z nami!](mailto:hello@stateofcss.com)
 
-And now, let's see what CSS has been up to this year!
+A teraz zobaczmy, jak do tej pory wyglądał CSS!
 
-<span class="conclusion__byline">– Sacha and Raphaël</span>
+<span class="conclusion__byline">– Sacha i Raphaël</span>
