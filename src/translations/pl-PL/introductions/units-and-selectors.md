@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: units-and-selectors
-locale: en-US
+locale: pl-PL
 ---
 
-One of the reasons CSS is so tough to master is that even apparently small decisions can sometimes have big consequences. Should you size your fonts in ems or pixels? Which selector should you use? Is there a way to avoid having to use JavaScript to accomplish what you want?
+Jednym z powodów, dla których CSS jest tak trudny do opanowania, jest to, że nawet pozornie małe decyzje mogą czasami mieć duże konsekwencje. Czy powinieneś rozmiarować czcionki w em lub pikselach? Jakiego selektora należy użyć? Czy istnieje sposób na uniknięcie konieczności korzystania z JavaScript, aby osiągnąć to, czego chcesz?
 
-Having a good grasp of units and selectors makes all these decisions, if not simple, at least a little easier. 
+Dobra znajomość jednostek i selektorów sprawia, że wszystkie te decyzje, jeśli nie proste, przynajmniej będą trochę łatwiejsze.
