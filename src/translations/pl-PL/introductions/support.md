@@ -1,11 +1,11 @@
 ---
 type: introduction
 page: support
-locale: en-US
+locale: pl-PL
 ---
-The State of CSS survey is a volunteer project, but in order to make the
-project sustainable we’re always looking for partners who can help support us,
-either financially or by helping us spread the word.
+Badanie State of CSS jest projektem wolontariackim, ale w celu uczynienia tego
+zrównoważonym projektem, zawsze szukamy partnerów, którzy mogą nam pomóc,
+albo finansowo, albo pomagając nam rozpowszechniać informacje.
 
-If you think you could help in any way, please don’t hesitate to
-<a href="mailto:hello@stateofjs.com">get in touch</a>!
+Jeśli uważasz, że mógłbyś w jakikolwiek sposób pomóc, nie wahaj się
+<a href="mailto:hello@stateofjs.com">skontaktuj się z nami</a>!
