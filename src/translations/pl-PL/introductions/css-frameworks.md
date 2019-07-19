@@ -1,11 +1,11 @@
 ---
 type: introduction
 page: css-frameworks
-locale: en-US
+locale: pl-PL
 ---
 
-For years the debate has raged on: should you use UI toolkits like Bootstrap, or is that “cheating”? Will all websites end up looking the same? And will designers end up being useless?
+Przez lata debata toczyła się dalej: czy należy używać narzędzi UI, takich jak Bootstrap, czy też jest to „oszustwo”? Czy wszystkie strony internetowe będą wyglądać tak samo? Oraz czy projektanci będą bezużyteczni?
 
-In 2019, it's safe to say the debate has been settled, and the frameworks have won. Bootstrap has kept up with the times and generated a huge ecosystem of various themes and plugins, while Google's Material Design has helped popularized its own specific aesthetic. 
+W 2019 roku można śmiało powiedzieć, że debata została rozstrzygnięta, framework zwyciężyły. Bootstrap nadąża za duchem czasu i generuje ogromny ekosystem różnych motywów i wtyczek, podczas gdy Google Material Design pomógł spopularyzować własną specyficzną estetykę.
 
-And while the utility-class-focused approach of new frameworks like Tailwind CSS make you question everything you know about writing “proper” semantic CSS, its 81% satisfaction ratio means that it might be time to reconsider our old preconceived notions…
+Podczas gdy podejście zorientowane na klasę użytkową nowych frameworków, takich jak CSS Tailwind, sprawia, że kwestionujesz wszystko, co wiesz o pisaniu „właściwego” semantycznego CSS, jego wskaźnik satysfakcji wynosi aż 81% co oznacza, że nadszedł czas, aby ponownie rozważyć nasze stare z góry przyjęte pojęcia…
