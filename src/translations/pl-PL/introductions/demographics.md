@@ -1,13 +1,13 @@
 ---
 type: introduction
 section: demographics
-locale: en-US
+locale: pl-PL
 ---
 
-This first ever State of CSS survey reached 11,307 people in 135 different countries. This obviously only represents a tiny part of the overall CSS developer community, but for a first edition we think it's pretty encouraging. 
+To pierwsze w historii badanie CSS dotarło do 11 307 osób w 135 różnych krajach. To oczywiście stanowi tylko niewielką część całej społeczności programistów CSS, ale dla pierwszej edycji uważamy, że jest to całkiem zachęcające.
 
-And it's fair to assume our survey audience leans a bit towards early adopters and the more cutting-edge part of the community, since they are the ones most likely to hear about a survey in the first place. But we like to think this also means our data is a good preview of where the mainstream side of the ecosystem will be a few years from now. 
+Uczciwie jest założyć, że nasza publiczność ankietowa pochyla się nieco w stronę wczesnych użytkowników i bardziej rozwijającej się części społeczności, ponieważ to oni są najbardziej skłonni słyszeć o ankiecie w pierwszej kolejności. Ale lubimy myśleć, że to również oznacza, że ​​nasze dane są dobrym podglądem tego, gdzie główna strona ekosystemu będzie za kilka lat.
 
-It's also worth mentioning that since a sizeable share of survey respondents learned about it through having previously filled out the [State of JS](https://stateofjs.com) survey, our data may also lean toward the “[back of the front-end](http://bradfrost.com/blog/link/how-to-think-like-a-front-end-developer-with-brad-frost/)”, in other words the more JavaScript-oriented part of the front-end world.
+Warto również wspomnieć, że skoro znaczna część respondentów ankiety dowiedziała się o tym, wypełniając wcześniej ankietę [State of JS](https://stateofjs.com), nasze dane mogą również skłaniać się ku „[zapleczu fron-end](http://bradfrost.com/blog/link/how-to-think-like-a-front-end-developer-with-brad-frost/) ”, innymi słowy część bardziej zorientowana na JavaScript świata front-end.
 
-All that being said, we still think there's a lot of very valuable insights in here, and we're very excited to finally be able to share them all with you!
+Mimo wszystko nadal uważamy, że jest tu wiele cennych spostrzeżeń i jesteśmy bardzo podekscytowani, że będziemy mogli podzielić się nimi z wami!
