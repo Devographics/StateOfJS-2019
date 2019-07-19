@@ -1,11 +1,11 @@
 ---
 type: introduction
 page: pre-post-processors
-locale: en-US
+locale: pl-PL
 ---
 
-Pre-processors like Sass and Less were the vanguard of “CSS 2.0”. At a time where the language itself could seem pretty stagnant, they introduced new features like variables and nesting by introducing a compile step to the mix. 
+Pre-procesory, takie jak Sass i Less, były awangardą „CSS 2.0”. W czasie, gdy sam język może wydawać się dość stagnacyjny, wprowadzili nowe funkcje, takie jak zmienne i zagnieżdżanie przez wprowadzenie kompilacji do miksu.
 
-More than a decade later, CSS itself is catching up but the pre-processors are holding strong, with Sass being a mainstay in any front-end stack (although CSS-in-JS is looking to change that – but more on this later). 
+Ponad dziesięć lat później sam CSS nadrabia zaległości, ale pre-procesory trzymają się mocno, a Sass jest podstawą każdego projektu front-end'owego (chociaż CSS-in-JS chce to zmienić - ale więcej na ten temat później).
 
-And on the “post-processor” side, PostCSS has managed to carve out a niche of its own by being a complementary tool that makes your CSS workflow even better.
+Ale ze strony „post-procesora”, PostCSS stworzył własną niszę, będąc komplementarnym narzędziem, które jeszcze bardziej usprawnia pracę w CSS.
