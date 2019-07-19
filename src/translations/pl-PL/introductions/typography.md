@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: typography
-locale: en-US
+locale: pl-PL
 ---
 
-Typography is probably the most important building block of the web, and it's great to see CSS is still improving its already-good support for typograhical features. 
+Typografia jest prawdopodobnie najważniejszym elementem budującym sieć i wspaniale jest widzieć, że CSS wciąż ulepsza już i tak dobrą obsługę funkcji typograficznych.
 
-Variable fonts are the hot new thing here, and while we're still waiting for true responsive type, the constant progress on this front is definitely worth keeping an eye on. 
+Zmienna czcionki jest tutaj gorącą nowością, i chociaż wciąż czekamy na prawdziwie responsywny typ, ciągły postęp na tym froncie zdecydowanie jest wart uwagi.
