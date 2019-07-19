@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: environments
-locale: en-US
+locale: pl-PL
 ---
 
-One of the things that makes CSS stand out is just how versatile it can be. Not only can it handle multiple browsers, various devices, and different form factors; but it can even control what a printed page looks like!
+Jedną z rzeczy, która wyróżnia CSS, jest to, jak wszechstronny może być. Nie tylko może obsługiwać wiele przeglądarek, różnych urządzeń i różnych rozdzielczości; ale może nawet kontrolować, jak wygląda wydrukowana strona!
 
-Maybe in a distant, dystopian future our email clients will execute JavaScript code – but at least for now, CSS remains the king of multitasking. 
+Być może w odległej, dystopijnej przyszłości nasi klienci pocztowi wykonają kod JavaScript - ale przynajmniej na razie CSS pozostaje królem wielozadaniowości.
