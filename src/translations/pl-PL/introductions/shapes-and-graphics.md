@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: shapes-and-graphics
-locale: en-US
+locale: pl-PL
 ---
 
-For the longest time, creating advanced graphic effects on the web has either required a lot of upfront work in graphics editor apps, or else just plain not been possible. 
+Przez długi czas tworzenie zaawansowanych efektów graficznych w sieci wymagało albo wielu wstępnych prac w aplikacjach edytora graficznego, albo po prostu nie było to możliwe.
 
-But now, with wider support for masking, blend modes, filters, and more, effects that previously seemed impossible are just a couple lines of code away. Best of all: because they're now achievable through pure CSS, you don't have to give up on accessibility and adaptability anymore. 
+Ale teraz, dzięki szerszej obsłudze maskowania, trybów mieszania, filtrów i wielu innych, efekty, które wcześniej wydawały się niemożliwe, to tylko kilka linii kodu. Najlepsze z tego jest to: ponieważ są teraz osiągalne za pomocą czystego CSS, nie musisz już rezygnować z dostępności i zdolności adaptacyjnych.
