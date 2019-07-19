@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: other-features
-locale: en-US
+locale: pl-PL
 ---
 
-At the end of the day, the bulk of CSS is made up not of sexy, fancy features like Grid or animations; but of small, often niche properties that may at first seem useless, but then end up one day saving you dozens of hours of work. 
+Pod koniec dnia większość CSS składa się nie z seksownych, fantazyjnych funkcji, takich jak Grid czy animacje; ale z małych, często niszowych właściwości, które na pierwszy rzut oka mogą wydawać się bezużyteczne, ale potem pewnego dnia oszczędzają dziesiątki godzin pracy.
 
-CSS variables and support queries fit in that category: they'll take a little while to grow on you, but once you grasp their full potential you'll wonder how you ever managed without them.
+Zmienne CSS i kwerendy pomocnicze pasują do tej kategorii: będą rosły trochę dłużej, ale kiedy już w pełni wykorzystasz ich potencjał, będziesz się zastanawiać, jak sobie bez z nich radziłeś.
