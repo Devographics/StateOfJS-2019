@@ -1,8 +1,8 @@
 ---
 type: introduction
 page: awardspage
-locale: en-US
+locale: pl-PL
 # note: naming this file `awards.md` creates conflict with existing `awards.yml`
 ---
 
-Each year, we look across our entire dataset for the projects that really stand out. Before you click and reveal the results, can you try and guess each winner?
+Każdego roku przyglądamy się całemu zestawowi danych dotyczących projektów, które naprawdę się wyróżniają. Zanim klikniesz i ujawnisz wyniki, może spróbujesz odgadnąć zwycięzców?
