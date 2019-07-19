@@ -1,15 +1,15 @@
 ---
 type: conclusion
 page: conclusion
-locale: en-US
+locale: pl-PL
 ---
 
-If we had to pick one theme for this year's survey, it would be new beginnings. A new survey in a brand new domain for us; new features for CSS; and a newfound respect for CSS's ever-improving capabilities from the community. 
+Gdybyśmy musieli wybrać jeden temat na tegoroczną ankietę, byłyby to nowe początki. Nowa ankieta w zupełnie nowej domenie dla nas; nowe funkcje dla CSS; i nowy szacunek dla stale rosnących możliwości społeczności CSS.
 
-To be fair, CSS has seen its share of doubters as well. The growing importance given to JavaScript over the past few years can sometimes leave some feeling like HTML & CSS are becoming second-tier players, and like their own skills in these fields aren't as valued anymore.  
+Aby być uczciwym, CSS miał też chwile słabości. Rosnące znaczenie JavaScript w ciągu ostatnich kilku lat może czasem pozostawić pewne wrażenie, że HTML i CSS stają się graczami drugiego poziomu, a ich własne umiejętności w tych dziedzinach nie są już tak cenione.
 
-But the data tells another story. While JavaScript isn't going anywhere, it also seems certain that CSS is not going to be replaced anytime soon. And the more powerful CSS becomes, the more valuable mastering it will be. 
+Dane jednak mówią coś innego. Chociaż JavaScript nigdzie nie idzie, wydaje się również pewne, że CSS nie zostanie wkrótce zastąpiony. A im silniejszy staje się CSS, tym bardziej wartościowy będzie jego mastering.
 
-And make no mistake, CSS is definitely evolving. Most of the features covered in the survey are far from mainstream yet, and upcoming features such as subgrids and aspect ratios are also sure to keep us busy. All this to say that we can't wait for the State of CSS 2020!
+I nie popełnij błędu, CSS zdecydowanie ewoluuje. Większość funkcjonalności uwzględnionych w ankiecie jest jeszcze daleka od głównego nurtu, a nadchodzące funkcjonalności, takie jak podkategorie i współczynniki proporcji, nie pozwolą nam się nudzić. Wszystko po to, żeby powiedzieć, że nie możemy doczekać się State of CSS 2020!
 
-<span class="conclusion__byline">– Sacha and Raphaël</span>
+<span class="conclusion__byline">– Sacha i Raphaël</span>
