@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: features
-locale: en-US
+locale: pl-PL
 ---
 
-The story of CSS over the past couple years is one of tremendous flexibility and adaptability. CSS may not be perfect, but it's still managed to negotiate a smooth transition to a multitude of new devices, contexts, interaction modes, and accessibility requirements. 
+Historia CSS w ciągu ostatnich kilku lat jest o ogromnej elastyczność i zdolności adaptacyjnej. CSS może nie być doskonały, ale wciąż udaje mu się wynegocjować płynne przejście na wiele nowych urządzeń, kontekstów, trybów interakcji i wymagań dostępności.
 
-With features like Grid, we finally have the tools needed to specify complex layouts without requiring hacks and workarounds; while blend modes, masks, and shapes (among others) let us implement designs that are richer and more creative than ever.
+Dzięki takim funkcjonalnościom jak Grid mamy wreszcie narzędzia potrzebne do określania złożonych układów bez konieczności stosowania hacków i obejść; podczas gdy tryby mieszania, maski i kształty (między innymi) pozwalają nam realizować projekty, które są bogatsze i bardziej kreatywne niż kiedykolwiek.
