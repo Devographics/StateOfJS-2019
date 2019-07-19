@@ -1,11 +1,11 @@
 ---
 type: introduction
 page: css-in-js
-locale: en-US
+locale: pl-PL
 ---
 
-CSS-in-JS has been one of the biggest developments of the past few years in the CSS world. Just like preprocessors bypassed CSS to introduce their own set of new features over a decade ago, CSS-in-JS libraries piggyback on JavaScript's power to make their own path without waiting for CSS to catch up. 
+CSS-in-JS jest jednym z największych wydarzeń ostatnich kilku lat w świecie CSS. Podobnie jak preprocesory ominęły CSS, aby wprowadzić własny zestaw nowych funkcji ponad dziesięć lat temu, biblioteki CSS-in-JS nakładają się na moc JavaScript, aby stworzyć własną ścieżkę, nie czekając na pozostający w tyle CSS.
 
-But while some libraries like Styled Components and Emotion have established themselves as solid options, the overall ecosystem is still very fragmented and in constant movement. So it remains to be seen what place CSS-in-JS will occupy in the overall ecosystem in the long run. 
+Jednak podczas gdy niektóre biblioteki, takie jak Styled Components i Emotion, stały się solidnymi opcjami, cały ekosystem jest nadal bardzo rozdrobniony i nieustannie się przemieszcza. Więc dopiero okaże się, jakie miejsce CSS-in-JS zajmie w całym ekosystemie.
 
-One thing is sure though: more competition is always good, and if CSS can steal some of its JavaScript cousin's freshest ideas then we'll all be better off for it!
+Jedno jest pewne: większa konkurencja jest zawsze dobra, a jeśli CSS może ukraść niektóre z najświeższych pomysłów kuzyna JavaScript, to wszyscy na tym skorzystamy!
