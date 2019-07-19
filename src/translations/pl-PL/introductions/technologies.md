@@ -1,11 +1,11 @@
 ---
 type: introduction
 page: technologies
-locale: en-US
+locale: pl-PL
 ---
 
-For a long time, writing CSS was straightforward enough: add a `.css` extension to your file, open up a text editor, and start typing. 
+Przez długi czas pisanie CSS było dość proste: dodaj rozszerzenie `.css` do pliku, otwórz edytor tekstu i zacznij pisać.
 
-But over the years, CSS has developed its own ecosystem of technologies, from preprocessors like Sass and Less to methodologies like BEM and Atomic CSS, to more recent developments like CSS-in-JS. 
+Ale z biegiem lat, CSS opracował własny ekosystem technologii, od pre-procesorów, takich jak Sass i Less, po metodologie takie jak BEM i Atomic CSS, po nowsze rozwiązania, takie jak CSS-in-JS.
 
-These days, front-end mastery involves not only knowing how to write good CSS, but also which of these technologies to use, and when. 
+W dzisiejszych czasach mistrzostwo front-end polega nie tylko na tym, jak pisać dobry CSS, ale także na tym, które z tych technologii użyć i kiedy.
