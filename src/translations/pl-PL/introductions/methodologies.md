@@ -1,11 +1,11 @@
 ---
 type: introduction
 page: methodologies
-locale: en-US
+locale: pl-PL
 ---
 
-CSS stands out among programming languages (if it even is one… but that's a whole other debate!) as one of the few that has given birth to methodologies that aim to codify the “right” way to write it. 
+CSS wyróżnia się wśród języków programowania (jeśli nawet jest jednym… ale to zupełnie inna debata!) Jako jeden z niewielu, który zrodził metodologię, która ma na celu skodyfikowanie „właściwego” sposobu pisania.
 
-While BEM is ahead of the pack here, Atomic CSS is also starting to gain ground with its completely new utility-class-driven philosophy. 
+Podczas gdy BEM wyprzedza paczkę, tutaj, Atomic CSS zaczyna również zyskiwać na popularności dzięki całkowicie nowej filozofii opartej na klasie użytkowej.
 
-In the end, we might never find the one true way to write CSS, but that's not going to stop us from looking!
+W końcu możemy nigdy nie znaleźć jedynego prawdziwego sposobu na napisanie CSS, ale to nie powstrzyma nas od patrzenia!
