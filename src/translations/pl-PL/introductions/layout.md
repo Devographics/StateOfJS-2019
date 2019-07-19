@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: layout
-locale: en-US
+locale: pl-PL
 ---
 
-Layout tools are one of the areas that have seen the most changes in recent years. First Flexbox came onto the scene, and then CSS Grid emerged as the most polyvalent and expressive way of handling CSS layouts.
+Narzędzia układów są jednym z obszarów, w których w ostatnich latach nastąpiły największe zmiany. Pierwszy Flexbox pojawił się na scenie, a następnie CSS Grid wyłonił się jako najbardziej wielowartościowy i ekspresyjny sposób obsługi układów CSS.
 
-It may take a little longer to master, which explains why a lot of users haven't actually used it, but it's certainly worth the effort!
+Opanowanie może zająć trochę więcej czasu, co wyjaśnia, dlaczego wielu użytkowników w rzeczywistości z niego nie korzystało, ale z pewnością wart jest wysiłku!
