@@ -1,13 +1,13 @@
 ---
 type: introduction
 page: tshirt
-locale: en-US
+locale: pl-PL
 ---
 
-## Support the survey and look good in the process!
+## Wspieraj badanie i dobrze wyglądaj!
 
-A quick announcement before the survey results. This year we're trying something new to finance our efforts: we're releasing our very own **🎈🎉👕 State of CSS T-shirt 👕🎉🎈**!
+Szybkie ogłoszenie przed wynikami ankiety. W tym roku próbujemy czegoś nowego, aby sfinansować nasze wysiłki: wydajemy naszą własną **🎈🎉👕 Koszulkę State of CSS 👕🎉🎈**!
 
-What makes this shirt truly special is that it's the only piece of clothing that also **teaches you practical, real-world CSS techniques**.
+To, co sprawia, że ta koszula jest naprawdę wyjątkowa, to jedyne ubranie, które **uczy praktycznych technik CSS w świecie rzeczywistym**.
 
-So whether you're going to a conference, a job interview, or just work, this shirt will demonstrate your CSS mastery like no other garment can!
+Bez względu na to, czy wybierasz się na konferencję, rozmowę o pracę, czy po prostu pracujesz, ta koszulka zademonstruje mistrzostwo CSS, jak żadna inna odzież!
