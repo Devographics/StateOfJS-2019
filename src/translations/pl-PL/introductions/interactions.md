@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: interactions
-locale: en-US
+locale: pl-PL
 ---
 
-JavaScript is a handy instrument, but writing hundreds of lines of code just to emulate something that should be handled by the browser can sometimes feel like trying to swat flies with a sledgehammer. 
+JavaScript jest poręcznym instrumentem, ale pisanie setek wierszy kodu tylko po to, by emulować coś, co powinno być obsługiwane przez przeglądarkę, może czasami oznaczać próbę pacnięcia muchy za pomocą młota kowalskiego.
 
-Thanfully CSS is catching up, and properties like CSS Scroll Snap give you more control over the browser's behavior, without having to write a single line of JavaScript.  
+CSS nadrabia zaległości, a właściwości takie jak CSS Scroll Snap dają większą kontrolę nad zachowaniem przeglądarki, bez konieczności pisania JavaScript.
