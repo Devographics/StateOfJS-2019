@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: opinions
-locale: en-US
+locale: pl-PL
 ---
 
-Sometimes the best way to take the pulse of a community is to just go ahead and ask. From your opinion about CSS's rate of change, to more thorny questions like whether CSS should be considered a programming language, you finally had a chance to tell us exactly what's on your mind!
+Czasami najlepszym sposobem na wykorzystanie pulsu społeczności jest po prostu iść naprzód i pytać. Od twojej opinii na temat tempa zmian CSS, po bardziej drażliwe pytania, takie jak to, czy CSS powinien być uważany za język programowania, w końcu miałeś okazję powiedzieć nam dokładnie, co masz na myśli!
 
-For each of the following statements, we asked you how much you agreed on a 5-point scale. 
+Dla każdego z poniższych stwierdzeń zapytaliśmy cię, na ile się z nimi zgadzasz w 5-punktowej skali.
