@@ -203,15 +203,15 @@ translations:
     - key: backend-proficiency.able_to_setup_cms_or_site_generator.short
       t: Początkujący
     - key: backend-proficiency.able_to_setup_cms_or_site_generator.long
-      t: I can set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)
+      t: Mogę skonfigurować uniwersalne systemy CMS (WordPress itp.) Lub generatory witryn statycznych (Jekyll itp.)
     - key: backend-proficiency.able_to_use_existing_frameworks.short
-      t: Intermediate
+      t: Średnio-zaawansowany
     - key: backend-proficiency.able_to_use_existing_frameworks.long
-      t: I can develop apps using pre-existing frameworks (Rails, Laravel, etc.)
+      t: Mogę tworzyć aplikacje za pomocą wcześniej istniejących frameworków (Rails, Laravel itp.)
     - key: backend-proficiency.able_to_setup_from_scratch.short
-      t: Advanced
+      t: Zaawansowany
     - key: backend-proficiency.able_to_setup_from_scratch.long
-      t: I can set up an entire back-end from scratch (Go, Node, etc.)
+      t: Mogę skonfigurować cały back-end od podstaw (Go, Node itd.)
 
     # job title
     - key: job-title.front_end_dev.short
@@ -249,9 +249,9 @@ translations:
     - key: block.description.salary
       t: Roczna wypłata w USD.
     # - key: block.title.salary-per-country
-    #   t: Average Salary per Country
+    #   t: Średnia wypłata według państw
     # - key: block.description.salary-per-country
-    #   t: Average Salary per Country.
+    #   t: Średnia wypłata według państw.
     - key: block.title.years-of-experience
       t: Lat Doświadczenie
     - key: block.description.years-of-experience
@@ -259,7 +259,7 @@ translations:
     - key: block.title.company-size
       t: Wielkość firmy
     # - key: block.description.company-size
-    #   t: Company size breakdown.
+    #   t: Podział według wielkości firmy.
     - key: block.title.gender
       t: Płeć
     - key: block.description.gender
