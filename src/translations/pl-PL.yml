@@ -10,12 +10,12 @@ translations:
     - key: tshirt.description
       t: >
           Koszula ma logo State of CSS wraz z fragmentami aktualnego kodu
-           CSS używanego do tworzenia każdego kształtu. Kto wie, możesz się czegoś nauczyć!
+          CSS używanego do tworzenia każdego kształtu. Kto wie, możesz się czegoś nauczyć!
 
 
           Używamy wysokiej jakości, super miękkiej koszuli z trzema mieszankami o dopasowanym kroju.
-          Ta koszulka ma małe rozmiary, więc jeśli wolisz luźniejszy krój **, zalecamy zamówienie
-          jednego rozmiaru większego w stosunku do tego, który zwykle nosisz ** (na zdjęciach mam M).
+          Ta koszulka ma małe rozmiary, więc jeśli wolisz luźniejszy krój, zalecamy zamówienie
+          jednego rozmiaru większego w stosunku do tego, który zwykle nosisz (na zdjęciach mam M).
     - key: tshirt.getit
       t: Zdobądź to
     - key: tshirt.price
