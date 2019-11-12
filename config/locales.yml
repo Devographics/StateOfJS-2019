@@ -7,3 +7,6 @@
 - locale: zh-TW
   path: tw
   label: 中文
+- locale: pl-PL
+  path: pl
+  label: Polish
