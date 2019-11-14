@@ -49,7 +49,8 @@ const Sidebar = ({ showSidebar, sidebarClassName, closeSidebar, rest }) => {
                     </span>
                     <div className="Sidebar__Logo--desktop Logo--desktop">
                         <Link className="Sidebar__Logo__Link" to="/">
-                            <LogoSidebar2 />
+                            {/* <LogoSidebar2 /> */}
+                            State of JS 2019
                             <span className="sr-only">{translate('general.back_to_intro')}</span>
                         </Link>
                     </div>

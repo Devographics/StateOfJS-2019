@@ -1,12 +1,3 @@
 - locale: en-US
   path: default
   label: English
-# - locale: fr-FR
-#   path: fr
-#   label: Français
-- locale: zh-TW
-  path: tw
-  label: 中文
-- locale: pl-PL
-  path: pl
-  label: Polish
