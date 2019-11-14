@@ -166,25 +166,26 @@ const OpinionScaleBlock = ({ block, data }) => {
 
     const getScaleTickLabel = formatTick(translate)
 
-    if (!data || !data.data) {
-        return (
-            <div>OpinionScaleBlock: Missing data for block {block.id}, page data is undefined</div>
-        )
-    }
-
     const dataKey = block.dataKey || 'opinion'
     const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
         block,
         data.data
     ])
 
+    const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [
+        blockData,
+        dataKey,
+    ])
+
+    if (!data || !data.data) {
+        return (
+            <div>OpinionScaleBlock: Missing data for block {block.id}, page data is undefined</div>
+        )
+    }
+
     if (!blockData || !blockData[dataKey]) {
         return <div>OpinionScaleBlock: Missing data for block {block.id}</div>
     }
-
-    const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [
-        blockData[dataKey].buckets
-    ])
 
     return (
         <Block

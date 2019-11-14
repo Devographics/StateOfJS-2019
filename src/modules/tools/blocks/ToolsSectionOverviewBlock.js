@@ -13,7 +13,7 @@ const ToolsSectionOverviewBlock = ({ data, block }) => {
             context.blocks
                 .filter(block => block.type === 'tool')
                 .map(block => data.data.aggregations.find(agg => agg.id === block.id)),
-        [context.blocks]
+        [data, context.blocks]
     )
 
     return (

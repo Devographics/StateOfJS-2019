@@ -7,14 +7,16 @@ import { keys } from '../../../constants'
 const GenderLegends = ({ data, units }) => {
     const { translate } = useI18n()
 
+    const keysGender = keys.gender
+    const { genderColors } = theme
     const legends = useMemo(
         () =>
-            keys.gender.map(gender => ({
+            keysGender.map(gender => ({
                 id: gender,
                 label: translate(`gender.${gender}`),
-                color: theme.genderColors[gender]
+                color: genderColors[gender]
             })),
-        [keys.gender, theme.genderColors]
+        [translate, keysGender, genderColors]
     )
 
     return <Legends legends={legends} modifier="horizontal" data={data} units={units} />

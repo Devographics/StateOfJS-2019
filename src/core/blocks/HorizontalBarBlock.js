@@ -51,7 +51,7 @@ const HorizontalBarBlock = ({ block, data }) => {
 
     const [units, setUnits] = useState(defaultUnits)
 
-    const blockData = useMemo(() => getChartData(data, block, getUrl), [data, block])
+    const blockData = useMemo(() => getChartData(data, block, getUrl), [data, block, getUrl])
 
     return (
         <Block

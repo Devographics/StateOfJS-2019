@@ -11,6 +11,7 @@ import get from 'lodash/get'
 
 const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
+    const { translate } = useI18n()
 
     const blockData = data.data.aggregations.find(a => a.id === block.id)
     const resources = data.data.fields
@@ -20,8 +21,6 @@ const ToolOpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) =
     if (!blockData || !blockData.opinion) {
         return <div key={block.id}>No data available for tool: {block.id}</div>
     }
-
-    const { translate } = useI18n()
 
     let githubName = get(resources, 'github.name')
     githubName = githubName && githubName.charAt(0).toUpperCase() + githubName.slice(1)

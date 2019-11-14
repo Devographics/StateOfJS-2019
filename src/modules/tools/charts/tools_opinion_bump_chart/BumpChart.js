@@ -71,7 +71,7 @@ const BumpChart = ({ margin: partialMargin, width, height, tools }) => {
                     linePoints
                 }
             }),
-        [tools, xScale, yScale, linePadding]
+        [tools, xScale, yScale, linePadding, innerWidth]
     )
 
     const [currentTool, setCurrentTool] = useState(null)
