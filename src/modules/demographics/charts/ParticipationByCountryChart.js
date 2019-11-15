@@ -2,11 +2,11 @@ import React, { memo } from 'react'
 import { ResponsiveChoropleth } from '@nivo/geo'
 import countries from 'data/geo/world_countries'
 import baseTheme from 'nivoTheme'
-import { colors } from '../../../constants'
+import { colors, getColor } from '../../../constants'
 
 const theme = {
     ...baseTheme,
-    background: colors.navyDark
+    background: getColor('stripe')
 }
 
 const features = countries.features.map(feature => {
@@ -17,13 +17,13 @@ const features = countries.features.map(feature => {
 })
 
 const colorRange = [
-    colors.blue,
-    colors.blueLight,
-    colors.blueLighter,
-    colors.pinkLightest,
-    colors.pinkLighter,
-    colors.pinkLight,
-    colors.pink
+    colors.teal,
+    colors.tealLight,
+    colors.tealLighter,
+    colors.redLighter,
+    colors.red,
+    colors.redDark,
+    colors.redDarker
 ]
 
 const ParticipationByCountryChart = ({ data, units }) => {
@@ -35,7 +35,7 @@ const ParticipationByCountryChart = ({ data, units }) => {
             valueFormat={v => (units === 'percentage' ? `${v.toFixed(1)}%` : Math.round(v))}
             domain={units === 'percentage' ? [0, 8] : [0, 700]}
             colors={colorRange}
-            unknownColor={colors.navyLight}
+            unknownColor={colors.greyMediumer}
             projectionScale={118}
             projectionTranslation={[0.5, 0.7]}
             projectionRotation={[-11, 0, 0]}

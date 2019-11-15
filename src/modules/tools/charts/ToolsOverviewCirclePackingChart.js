@@ -2,7 +2,7 @@ import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
-import { colors, totalCount } from '../../../constants'
+import { colors, totalCount, getColor } from '../../../constants'
 import ChartLabel from 'core/components/ChartLabel'
 import { useI18n } from 'core/i18n/i18nContext'
 import { TotalCircle } from '../../features/charts/FeaturesCirclePackingChart'
@@ -54,7 +54,7 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
                 <text className="CirclePackingNode__SectionLabel" dy={30}>
                     <textPath
                         xlinkHref={`#textcircle-${node.data.id}`}
-                        fill={colors.teal}
+                        fill={getColor('total_respondents')}
                         side="right"
                         startOffset={sectionLabelOffsets[node.data.id]}
                     >
@@ -65,7 +65,7 @@ const Node = ({ node, handlers, activeId, setActiveId, setNull }) => {
                 <circle
                     r={node.r}
                     fill="rgba(255,255,255,0.1)"
-                    stroke={colors.teal}
+                    stroke={getColor('total_respondents')}
                     strokeWidth={1}
                     strokeLinecap="round"
                     strokeDasharray="2 3"

@@ -3,7 +3,7 @@ import Block from 'core/components/Block'
 import FeaturesOverviewCirclePackingChart from '../charts/FeaturesOverviewCirclePackingChart'
 import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
-import { colors } from '../../../constants'
+import { colors, getColor } from '../../../constants'
 import { useEntities } from 'core/entities/entitiesContext'
 import ChartContainer from 'core/charts/ChartContainer'
 
@@ -51,12 +51,12 @@ const FeaturesOverviewBlock = ({ data }) => {
     const legends = [
         {
             id: 'know_it',
-            color: colors.teal,
+            color: getColor('know_not_used'),
             label: translate(`features.usage.know_it`)
         },
         {
             id: 'used_it',
-            color: colors.blue,
+            color: getColor('used_it'),
             label: translate(`features.usage.used_it`)
         }
     ]

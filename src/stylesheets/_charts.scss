@@ -470,18 +470,26 @@ Bump Chart
 .text-pink-lighter {
     @include coloredText($pinkLighter);
 }
-
+.text-red {
+    @include coloredText($red);
+}
 .text-teal {
     @include coloredText($teal);
+}
+.text-teal-dark {
+    @include coloredText($tealDark);
+}
+.text-teal-darker {
+    @include coloredText($tealDarker);
 }
 
 .text-blue {
     @include coloredText($blue);
 }
-.text-blackpink {
+.text-blackred {
     @include coloredText(black(0.3));
     color: $teal;
-    border: 1px solid $pink;
+    border: 1px solid $red;
 }
 
 .text-bold {

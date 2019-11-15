@@ -2,39 +2,14 @@ import React from 'react'
 import Block from 'core/components/Block'
 import ToolsCirclePackingChart from '../charts/ToolsOverviewCirclePackingChart'
 import compact from 'lodash/compact'
-import { colors } from '../../../constants'
+import { colors, opinions } from '../../../constants'
 import round from 'lodash/round'
 import ToolLegend from '../charts/ToolLegend'
 import { useEntities } from 'core/entities/entitiesContext'
 import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
 
-export const opinions = [
-    {
-        id: 'would_use',
-        color: colors.greenDark
-    },
-    // {
-    //     id: 'separator',
-    //     color: 'transparent'
-    // },
-    {
-        id: 'interested',
-        color: colors.greenLight
-    },
-    {
-        id: 'not_interested',
-        color: colors.pinkLight
-    },
-    // {
-    //     id: 'separator',
-    //     color: 'transparent'
-    // },
-    {
-        id: 'would_not_use',
-        color: colors.pink
-    }
-]
+export const chartSegments = ['would_use', 'interested', 'not_interested', 'would_not_use'];
 
 /*
 
@@ -42,7 +17,7 @@ Parse data and convert it into a format compatible with the Circle Packing chart
 
 */
 const getChartData = (data, translate, getName) => {
-    const buckets = opinions.filter(o => o.id !== 'never_heard')
+    const buckets = chartSegments.map(id => opinions.find(o => o.id === id))
 
     const sections = data.tools.nodes.map(section => {
         const { section_id, aggregations } = section

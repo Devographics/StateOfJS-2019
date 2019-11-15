@@ -313,8 +313,8 @@ translations:
           This chart presents the various adoption rates for all features, grouped by category. 
 
 
-          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
+          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it. 
 
 
           Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
@@ -323,11 +323,11 @@ translations:
       t: Usage Overview
     - key: block.description.features-section-overview
       t: >
-          The size of the <span class="text-teal text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-blue text-bold">inner one</span> represents those who have actually used it. 
+          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it. 
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+          Hover on each node to view detailed data along with an <span class="text-blackred text-bold">overlay</span> representing the total number of survey respondents. 
 
     - key: block.description.css-exclusions
       t: >
@@ -341,7 +341,7 @@ translations:
         The “overall” column shows overall usage for each feature (respondents who selected “have used it”), 
         while the following columns show the usage ratio for each “years of experience” bracket. 
 
-        A brighter <span class="text-pink text-bold">pink</span> background indicates 
+        A brighter <span class="text-teal text-bold">teal</span> background indicates 
         a higher-than-overall-average ratio for a given bracket.
 
 
@@ -392,8 +392,8 @@ translations:
       t: Sentiment Overview
     - key: block.description.tools-overview
       t: >
-          Overview of opinions on the tools and methodologies surveyed. <span class="text-green text-bold">Green segments</span> represent positive opinions, 
-          while <span class="text-pink text-bold">pink segments</span> correspond to negative sentiment. 
+          Overview of opinions on the tools and methodologies surveyed. <span class="text-teal text-bold">Teal segments</span> represent positive opinions, 
+          while <span class="text-red text-bold">red segments</span> correspond to negative sentiment. 
           
           
           The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
@@ -421,7 +421,7 @@ translations:
         The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
         while the following columns show the usage ratio for each “years of experience” bracket. 
 
-        A brighter <span class="text-pink text-bold">pink</span> background indicates 
+        A brighter <span class="text-teal text-bold">teal</span> background indicates 
         a higher-than-overall-average ratio for a given bracket.
 
     - key: block.title.tools_salary_heatmap
@@ -431,7 +431,7 @@ translations:
         The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
         while the following columns show the usage ratio for each “yearly salary” bracket. 
 
-        A brighter <span class="text-pink text-bold">pink</span> background indicates 
+        A brighter <span class="text-teal text-bold">teal</span> background indicates 
         a higher-than-overall-average ratio for a given bracket.
 
     # rankings/bump chart

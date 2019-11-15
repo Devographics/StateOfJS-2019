@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
-import { colors, fontFamily } from '../../constants'
+import { colors, fontFamily, getColor } from '../../constants'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 import HorizontalBarStripes from './HorizontalBarStripes'
@@ -26,7 +26,7 @@ const Text = ({ hasLink = false, label }) => (
         textAnchor="end"
         transform="translate(-10,0) rotate(0)"
         style={{
-            fill: hasLink ? colors.pink : colors.teal,
+            fill: hasLink ? getColor('legendWithLink') : getColor('legend'),
             fontSize: 14,
             fontFamily
         }}
@@ -53,7 +53,7 @@ const TickItem = tick => {
                 y1="0"
                 y2="0"
                 style={{
-                    stroke: colors.teal,
+                    stroke: getColor('tick'),
                     strokeWidth: 1
                 }}
             />
@@ -105,7 +105,7 @@ const HorizontalBarChart = ({
                 label={d => (units === 'percentage' ? `${round(d.value, 1)}%` : d.value)}
                 labelTextColor={{ theme: 'labels.text.fill' }}
                 labelSkipWidth={40}
-                colors={[colors.blue]}
+                colors={[getColor('bar')]}
                 padding={0.4}
                 borderRadius={1}
                 axisTop={{

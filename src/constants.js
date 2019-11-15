@@ -2,8 +2,10 @@ export let colors = {
     greyLight: '#e0e4e4',
     grey: '#d9dedf',
     greyMedium: '#cecdcc',
-    greyDark: '#AEAFB5',
-    greyDarker: '#343539',
+    greyMediumer: '#616868',
+    greyDark: '#363a3a',
+    greyDarkish: '#2c3030',
+    greyDarker: '#212424',
 
     blueLighter: '#B2BBEE',
     blueLight: '#808EE1',
@@ -15,23 +17,28 @@ export let colors = {
     pinkLight: '#EC75CB',
     pink: '#F649A7',
     pinkDark: '#e86ebf',
-    
 
     greenLighter: '#E7FFED',
     greenLight: '#ACFFC3',
     green: '#85EBA2',
     greenDark: '#59DF7F',
 
-    tealLight: '#bad9db',
-    teal: '#9ac6c9',
-    tealDark: '#6a8f92',
-    tealDarker: '#445a5a',
+    tealLighter: '#94eeee',
+    tealLight: '#65e0e0',
+    teal: '#41c7c7',
+    tealDark: '#2ba7a7',
+    tealDarker: '#1d7e7e',
 
     purpleLight: '#B096E7',
     purple: '#7854C3',
     purpleDark: '#57457C',
 
+    redLighter: '#f8a8a8',
+    redLight: '#fc8f8f',
     red: '#FE6A6A',
+    redDark: '#ec5555',
+    redDarker: '#be3737',
+
     yellow: '#fbf34c',
     skyblue: '#1ea0f2',
     orange: '#EF8D33',
@@ -135,47 +142,76 @@ export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 
 export const usage = [
     {
         id: 'used_it',
-        color: colors.blue
-    },
-    {
-        id: 'know_not_used',
         color: colors.teal
     },
     {
+        id: 'know_not_used',
+        color: colors.tealDarker
+    },
+    {
         id: 'never_heard_not_sure',
-        color: colors.navyLighter
+        color: colors.greyMedium
     }
 ]
 
 export const opinions = [
     {
         id: 'would_use',
-        color: colors.greenDark
+        color: colors.teal
     },
     {
         id: 'would_not_use',
-        color: colors.pink
+        color: colors.red
     },
     {
         id: 'interested',
-        color: colors.greenLight
+        color: colors.tealLight
     },
     {
         id: 'not_interested',
-        color: colors.pinkLight
+        color: colors.redLight
     },
     {
         id: 'never_heard',
-        color: colors.navyLighter
+        color: colors.greyMedium
+    }
+]
+
+export const otherColors = [
+    {
+        id: 'legendWithLink',
+        color: colors.red,
+    },
+    {
+        id: 'legend',
+        color: colors.teal,
+    },
+    {
+        id: 'tick',
+        color: colors.teal,
+    },
+    {
+        id: 'bar',
+        color: colors.teal,
+    },
+    {
+        id: 'total_respondents',
+        color: colors.red,
+    },
+    {
+        id: 'stripe',
+        color: colors.greyDarkish
     }
 ]
 
 export const gender = [
     { id: 'male', color: colors.blue },
     { id: 'female', color: colors.teal },
-    { id: 'non_binary', color: colors.purple },
-    { id: 'prefer_not_to_say', color: colors.greyMedium }
+    { id: 'non_binary', color: colors.red },
+    { id: 'prefer_not_to_say', color: colors.greyMediumer }
 ]
+
+export const getColor = id => [...usage, ...opinions, ...otherColors, ...gender].find(color => color.id === id).color;
 
 export const fontFamily = `'IBM Plex Mono', monospace`
 

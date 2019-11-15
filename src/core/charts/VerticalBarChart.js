@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import { useI18n } from 'core/i18n/i18nContext'
 import theme from 'nivoTheme'
-import { colors } from '../../constants'
+import { getColor } from '../../constants'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 
@@ -49,7 +49,7 @@ const VerticalBarChart = ({
                 margin={getMargins(viewportWidth)}
                 padding={0.4}
                 theme={theme}
-                colors={[colors.blue]}
+                colors={[getColor('bar')]}
                 labelFormat={formatValue}
                 labelSkipHeight={16}
                 borderRadius={1}

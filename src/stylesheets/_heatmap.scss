@@ -41,7 +41,7 @@
 
 .Heatmap__Subject--even,
 .Heatmap__Average--even {
-    background: $navyDark;
+    background: $bg-color-light;
 }
 
 .Heatmap__Cell {
@@ -60,10 +60,15 @@
     transition: opacity 200ms;
 }
 
+.Heatmap__Subject--active,
+.Heatmap__Average--active,
+.Heatmap__Cell--active {
+    background: $bg-color-lighter;
+}
 .Heatmap__Subject--inactive,
 .Heatmap__Average--inactive,
 .Heatmap__Cell--inactive {
-    opacity: .1;
+    opacity: .3;
 }
 
 .Heatmap__ColorLegend__Label,

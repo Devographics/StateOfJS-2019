@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
 import theme from 'nivoTheme'
-import { colors, totalCount } from '../../../constants'
+import { colors, totalCount, getColor } from '../../../constants'
 import ChartLabel from 'core/components/ChartLabel'
 import { useTheme } from '@nivo/core'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -42,17 +42,17 @@ const Tooltip = props => {
             <div>
                 <h4 className="Tooltip__Heading">{name}</h4>
                 <div className="Tooltip__Item">
-                    <Chip color={awarenessColor} />
+                    <Chip color={getColor('know_not_used')} />
                     {translate('features.usage.know_it')}:{' '}
                     <strong className="Tooltip__Value">{awareness}</strong>
                 </div>
                 <div className="Tooltip__Item">
-                    <Chip color={usageColor} />
+                    <Chip color={getColor('used_it')} />
                     {translate('features.usage.used_it')}:{' '}
                     <strong className="Tooltip__Value">{usage}</strong>
                 </div>
                 <div className="Tooltip__Item">
-                    <Chip color={awarenessColor} color2={usageColor} />
+                    <Chip color={getColor('know_not_used')} color2={getColor('used_it')} />
                     {translate('features.usage.ratio')}:{' '}
                     <strong className="Tooltip__Value">
                         {round((usage / awareness) * 100, 1)}%
@@ -79,12 +79,12 @@ export const TotalCircle = ({ radius, id }) => {
                 className="CirclePackingNode__TotalCircle"
                 r={radius}
                 // strokeDasharray="4,4"
-                stroke={colors.pink}
+                stroke={colors.red}
                 strokeWidth={2}
                 fill="rgba(0,0,0,0.3)"
             />
             <text className="CirclePackingNode__TotalCircleLabel" dy={20} dx={0}>
-                <textPath xlinkHref={`#textcircle-${id}`} fill={colors.pink}>
+                <textPath xlinkHref={`#textcircle-${id}`} fill={colors.red}>
                     {translate('opinions.legends.total_respondents')}: {totalCount}
                 </textPath>
             </text>
@@ -147,8 +147,8 @@ const Node = ({ node, handlers }) => {
         >
             <TotalCircle radius={totalRadius} id={node.data.id} />
 
-            <circle r={node.r} fill={colors.teal} />
-            <circle r={usageRadius} fill={colors.blue} />
+            <circle r={node.r} fill={getColor('know_not_used')} />
+            <circle r={usageRadius} fill={getColor('used_it')} />
             <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
         </g>
     )
