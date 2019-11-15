@@ -25,6 +25,7 @@ import ToolsSectionOverviewBlock from 'modules/tools/blocks/ToolsSectionOverview
 // import ToolsScaledRankingSectionOverviewBlock from 'modules/tools/blocks/ToolsScaledRankingSectionOverviewBlock'
 // import ToolsUsageRatioBlock from 'modules/tools/blocks/ToolsUsageRatioBlock'
 import ToolBlock from 'modules/tools/blocks/ToolBlock'
+import HappinessBlock from 'modules/tools/blocks/HappinessBlock'
 
 const blockRegistry = {
     // generic
@@ -53,7 +54,9 @@ const blockRegistry = {
     'tools-section-overview': ToolsSectionOverviewBlock,
     // 'tools-scaled-ranking-section-overview': ToolsScaledRankingSectionOverviewBlock,
     // 'tools-usage-ratio': ToolsUsageRatioBlock,
-    tool: ToolBlock
+    tool: ToolBlock,
+
+    happiness: HappinessBlock,
 }
 
 export default blockRegistry

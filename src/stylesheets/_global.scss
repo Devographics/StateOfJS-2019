@@ -134,3 +134,8 @@ Page-specific styles
         display: none;
     }
 }
+
+.main-logo-wrapper{
+    max-width: 500px;
+    margin: 0 auto $spacing*2 auto;
+}

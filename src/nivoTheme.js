@@ -1,4 +1,4 @@
-import { colors, colorRange, fontFamily } from './constants'
+import { getColor, colors, colorRange, fontFamily } from './constants'
 
 export default {
     name: 'state_of_css_2019',
@@ -32,17 +32,17 @@ export default {
         },
         ticks: {
             line: {
-                stroke: colors.teal
+                fill: getColor('legend'),
             },
             text: {
-                fill: colors.teal,
+                fill: getColor('legend'),
                 fontSize: 12,
                 fontFamily
             }
         },
         legend: {
             text: {
-                fill: colors.teal,
+                fill: getColor('legend'),
                 fontSize: 14,
                 fontWeight: 600,
                 fontFamily
@@ -51,7 +51,7 @@ export default {
     },
     grid: {
         line: {
-            stroke: colors.teal,
+            stroke: colors.greyMedium,
             strokeDasharray: '1 2',
             strokeOpacity: 0.4
         }

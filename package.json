@@ -24,6 +24,7 @@
     "@nivo/circle-packing": "0.59.0",
     "@nivo/core": "0.59.0",
     "@nivo/geo": "0.59.0",
+    "@nivo/line": "^0.59.3",
     "@nivo/pie": "0.59.0",
     "@nivo/sankey": "0.59.0",
     "@nivo/scatterplot": "^0.59.0",

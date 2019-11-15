@@ -179,12 +179,16 @@ export const opinions = [
 
 export const otherColors = [
     {
+        id: 'background',
+        color: colors.greyDarker,
+    },
+    {
         id: 'legendWithLink',
-        color: colors.red,
+        color: colors.teal,
     },
     {
         id: 'legend',
-        color: colors.teal,
+        color: colors.grey,
     },
     {
         id: 'tick',
@@ -192,7 +196,11 @@ export const otherColors = [
     },
     {
         id: 'bar',
-        color: colors.teal,
+        color: colors.red,
+    },
+    {
+        id: 'line',
+        color: colors.red,
     },
     {
         id: 'total_respondents',

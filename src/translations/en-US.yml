@@ -434,6 +434,12 @@ translations:
         A brighter <span class="text-teal text-bold">teal</span> background indicates 
         a higher-than-overall-average ratio for a given bracket.
 
+    - key: block.title.tools_happiness
+      t: Overall Happiness
+    - key: block.description.tools_happiness
+      t: |
+        On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
+
     # rankings/bump chart
     - key: block.title.tools-section-overview
       t: Rankings

@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
-import LogoSidebar2 from './LogoSidebar2'
+import LogoCompact from './LogoCompact'
 import { Link } from 'gatsby'
 import ShareSite from '../share/ShareSite'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -34,7 +34,7 @@ const Sidebar = ({ showSidebar, sidebarClassName, closeSidebar, rest }) => {
                         <div />
                         <div className="Sidebar__Logo__Inner">
                             <Link to="/">
-                                <LogoSidebar2 />
+                                <LogoCompact />
                                 <span className="sr-only">
                                     {translate('general.back_to_intro')}
                                 </span>
@@ -49,8 +49,7 @@ const Sidebar = ({ showSidebar, sidebarClassName, closeSidebar, rest }) => {
                     </span>
                     <div className="Sidebar__Logo--desktop Logo--desktop">
                         <Link className="Sidebar__Logo__Link" to="/">
-                            {/* <LogoSidebar2 /> */}
-                            State of JS 2019
+                            <LogoCompact />
                             <span className="sr-only">{translate('general.back_to_intro')}</span>
                         </Link>
                     </div>
