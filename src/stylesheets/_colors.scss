@@ -3,10 +3,10 @@
 \*****************************************************************************/
 
 $greyLight: #e0e4e4;
-$grey: #d9dedf;
+$grey: #e1e1e1;
 $greyMedium: #cecdcc;
-$greyDark: #AEAFB5;
-$greyDarker: #343539;
+$greyDark: #4d4f4f;
+$greyDarker: #212424;
 
 $blueLighter: #B2BBEE;
 $blueLight: #808EE1;
@@ -26,7 +26,7 @@ $green: #85EBA2;
 $greenDark: #59DF7F;
 
 $tealLight: #bad9db;
-$teal: #9ac6c9;
+$teal: #41c7c7;
 $tealDark: #6a8f92;
 $tealDarker: #445a5a;
 
@@ -34,7 +34,7 @@ $purpleLight: #B096E7;
 $purple: #7854C3;
 $purpleDark: #57457C;
 
-$red: #FE6A6A;
+$red: #fe6a6a;
 $yellow: #fbf34c;
 $aqua: #1ea0f2;
 
@@ -50,15 +50,15 @@ $navyDark: #1a1f35;
   "functional" colors
 \*****************************************************************************/
 
-$bg-color: $navy;
+$bg-color: $greyDarker;
 $bg-color-light: $greyLight;
 
-$border-color: $teal;
-$dark-border-color: $tealDark;
-$hover-color: $pink;
+$border-color: $greyMedium;
+$dark-border-color: $greyDark;
+$hover-color: $red;
 
-$text-color: $teal;
+$text-color: $grey;
 $text-color-inverted: $blueDark;
-$link-color: $pink;
+$link-color: $teal;
 
-$active-color: $pink;
+$active-color: $red;

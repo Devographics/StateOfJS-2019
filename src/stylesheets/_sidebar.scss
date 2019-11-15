@@ -134,7 +134,7 @@
 }
 
 .Nav__Page__Link--active {
-    color: $greenDark !important;
+    color: $active-color !important;
     @include font-bold;
     span::before {
         content: '> ';
