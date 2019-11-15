@@ -57,8 +57,6 @@
 
 .Sidebar__Logo--desktop {
     margin: 0;
-    border-top: $border;
-    border-bottom: $border;
     @include flex-center;
     svg {
         display: block;

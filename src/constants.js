@@ -3,7 +3,7 @@ export let colors = {
     grey: '#d9dedf',
     greyMedium: '#cecdcc',
     greyMediumer: '#616868',
-    greyDark: '#363a3a',
+    greyDark: '#4d4f4f',
     greyDarkish: '#2c3030',
     greyDarker: '#212424',
 
@@ -139,6 +139,12 @@ export const keys = {
 
 export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']
 
+export const mainColors = {
+    textColor: colors.grey,
+    activeColor: colors.teal,
+    contrastColor: colors.red
+}
+
 export const usage = [
     {
         id: 'used_it',
@@ -177,34 +183,47 @@ export const opinions = [
     }
 ]
 
+
 export const otherColors = [
     {
+        id: 'textColor',
+        color: mainColors.textColor
+    },
+    {
+        id: 'activeColor',
+        color: mainColors.activeColor
+    },
+    {
+        id: 'contrastColor',
+        color: mainColors.contrastColor
+    },
+    {
         id: 'background',
-        color: colors.greyDarker,
+        color: colors.greyDarker
     },
     {
         id: 'legendWithLink',
-        color: colors.teal,
+        color: mainColors.activeColor
     },
     {
         id: 'legend',
-        color: colors.grey,
+        color: colors.grey
     },
     {
         id: 'tick',
-        color: colors.teal,
+        color: mainColors.activeColor
     },
     {
         id: 'bar',
-        color: colors.red,
+        color: mainColors.contrastColor
     },
     {
         id: 'line',
-        color: colors.red,
+        color: mainColors.contrastColor
     },
     {
         id: 'total_respondents',
-        color: colors.red,
+        color: mainColors.contrastColor
     },
     {
         id: 'stripe',
@@ -212,14 +231,15 @@ export const otherColors = [
     }
 ]
 
+export const getColor = id =>
+    [...usage, ...opinions, ...otherColors, ...gender].find(color => color.id === id).color
+
 export const gender = [
     { id: 'male', color: colors.blue },
     { id: 'female', color: colors.teal },
     { id: 'non_binary', color: colors.red },
     { id: 'prefer_not_to_say', color: colors.greyMediumer }
 ]
-
-export const getColor = id => [...usage, ...opinions, ...otherColors, ...gender].find(color => color.id === id).color;
 
 export const fontFamily = `'IBM Plex Mono', monospace`
 

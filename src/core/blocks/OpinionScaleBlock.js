@@ -4,7 +4,7 @@ import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
-import { colors } from '../../constants'
+import { getColor } from '../../constants'
 import { usePageContext } from '../helpers/pageContext'
 
 const SuperSad = ({ width, height }) => (
@@ -15,17 +15,17 @@ const SuperSad = ({ width, height }) => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke="#9AC6C9" strokeWidth="4" />
-        <circle cx="35.5" cy="45.5" r="3.5" fill="#9AC6C9" />
-        <circle cx="64.5" cy="45.5" r="3.5" fill="#9AC6C9" />
+        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
+        <circle cx="35.5" cy="45.5" r="3.5" fill={getColor('activeColor')} />
+        <circle cx="64.5" cy="45.5" r="3.5" fill={getColor('activeColor')} />
         <path
             d="M64 75C61.2 72 57.732 69 50 69C42.268 69 38.8 72 36 75"
-            stroke="#9AC6C9"
+            stroke={getColor('activeColor')}
             strokeWidth="4"
             strokeLinecap="round"
         />
-        <path d="M28 32L41 36" stroke="#9AC6C9" strokeWidth="4" strokeLinecap="round" />
-        <path d="M73 32L59 36" stroke="#9AC6C9" strokeWidth="4" strokeLinecap="round" />
+        <path d="M28 32L41 36" stroke={getColor('activeColor')} strokeWidth="4" strokeLinecap="round" />
+        <path d="M73 32L59 36" stroke={getColor('activeColor')} strokeWidth="4" strokeLinecap="round" />
     </svg>
 )
 
@@ -37,12 +37,12 @@ const Sad = ({ width, height }) => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={colors.teal} strokeWidth="4" />
-        <circle cx="35.5" cy="40.5" r="3.5" fill={colors.teal} />
-        <circle cx="64.5" cy="40.5" r="3.5" fill={colors.teal} />
+        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
+        <circle cx="35.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
+        <circle cx="64.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
         <path
             d="M65 68C62 65 58.2843 62 50 62C41.7157 62 38 65 35 68"
-            stroke={colors.teal}
+            stroke={getColor('activeColor')}
             strokeWidth="4"
             strokeLinecap="round"
         />
@@ -57,10 +57,10 @@ const Neutral = ({ width, height }) => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={colors.teal} strokeWidth="4" />
-        <circle cx="35.5" cy="40.5" r="3.5" fill={colors.teal} />
-        <circle cx="64.5" cy="40.5" r="3.5" fill={colors.teal} />
-        <path d="M65 65.25H50H35" stroke={colors.teal} strokeWidth="4" strokeLinecap="round" />
+        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
+        <circle cx="35.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
+        <circle cx="64.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
+        <path d="M65 65.25H50H35" stroke={getColor('activeColor')} strokeWidth="4" strokeLinecap="round" />
     </svg>
 )
 
@@ -72,12 +72,12 @@ const Happy = ({ width, height }) => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={colors.teal} strokeWidth="4" />
-        <circle cx="35.5" cy="40.5" r="3.5" fill={colors.teal} />
-        <circle cx="64.5" cy="40.5" r="3.5" fill={colors.teal} />
+        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
+        <circle cx="35.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
+        <circle cx="64.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
         <path
             d="M35 65C38 68 41.7157 71 50 71C58.2843 71 62 68 65 65"
-            stroke={colors.teal}
+            stroke={getColor('activeColor')}
             strokeWidth="4"
             strokeLinecap="round"
         />
@@ -92,22 +92,22 @@ const SuperHappy = ({ width, height }) => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={colors.teal} strokeWidth="4" />
+        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
         <path
             d="M35 65C38 68 41.7157 71 50 71C58.2843 71 62 68 65 65"
-            stroke={colors.teal}
+            stroke={getColor('activeColor')}
             strokeWidth="4"
             strokeLinecap="round"
         />
         <path
             d="M41 43C40.25 40.1429 37.8995 38 35 38C32.1005 38 29.75 40.1429 29 43"
-            stroke={colors.teal}
+            stroke={getColor('activeColor')}
             strokeWidth="4"
             strokeLinecap="round"
         />
         <path
             d="M70 43C69.25 40.1429 66.8995 38 64 38C61.1005 38 58.75 40.1429 58 43"
-            stroke={colors.teal}
+            stroke={getColor('activeColor')}
             strokeWidth="4"
             strokeLinecap="round"
         />

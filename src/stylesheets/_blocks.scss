@@ -113,7 +113,7 @@
 .CompletionIndicator__Tooltip {
     left: 50%;
     position: absolute;
-    background: $teal;
+    background: $active-color;
     color: $navy;
     font-size: $small-font;
     padding: 4px 8px;
@@ -134,7 +134,7 @@
         position: absolute;
         pointer-events: none;
         border-color: rgba(136, 183, 213, 0);
-        border-top-color: $teal;
+        border-top-color: $active-color;
         border-width: 8px;
         margin-left: -8px;
     }
@@ -151,13 +151,13 @@
     display: block;
 }
 .CompletionIndicator__Chart__Bg {
-    fill: $tealDarker;
+    fill: $active-color-dark;
     .CompletionIndicator:hover & {
         // fill: $blueDark;
     }
 }
 .CompletionIndicator__Chart__Fg {
-    stroke: $teal;
+    stroke: $active-color;
     .CompletionIndicator:hover & {
         // stroke: $blue;
     }

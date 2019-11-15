@@ -44,6 +44,7 @@ $redDark: #ec5555;
 $redDarker: #be3737;
 
 $yellow: #fbf34c;
+$yellowDark: #d4cc33;
 $aqua: #1ea0f2;
 
 $white: #ffffff;
@@ -58,16 +59,22 @@ $navyDark: #1a1f35;
   "functional" colors
 \*****************************************************************************/
 
+
+$active-color: $teal;
+$active-color-dark: $tealDark;
+
+$contrast-color: $red;
+$contrast-color-dark: $redDark;
+
 $bg-color: $greyDarker;
 $bg-color-light: $greyDarkish;
 $bg-color-lighter: $greyMediumer;
 
 $border-color: $greyMedium;
 $dark-border-color: $greyDark;
-$hover-color: $red;
 
 $text-color: $grey;
 $text-color-inverted: $blueDark;
-$link-color: $teal;
 
-$active-color: $red;
+$link-color: $active-color;
+$hover-color: $contrast-color;

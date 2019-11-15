@@ -34,7 +34,7 @@ const sectionLabelOffsets = {
 const Tooltip = props => {
     const { translate } = useI18n()
     const { data } = props
-    const { name, awareness, awarenessColor, usage, usageColor } = data
+    const { name, awareness, usage } = data
     const theme = useTheme()
 
     return (
