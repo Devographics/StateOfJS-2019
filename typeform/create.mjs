@@ -1,4 +1,4 @@
-const surveyName = 'StateOfJS2019';
+const surveyName = 'StateOfJS2019'
 
 /*
 
@@ -59,11 +59,15 @@ String.prototype.replaceAll = function(search, replacement) {
 Take a string ("Front-end") and make it usable as an ID ("frontend")
 
 */
-const makeId = s =>
-    s
-        .replaceAll(' ', '')
-        .replaceAll('-', '')
-        .toLowerCase()
+const disallowedCharacters = '?.(){}[]=>&,/- ';
+const makeId = str => {
+    let s = str.toLowerCase()
+    const charArray = [...disallowedCharacters]
+    charArray.forEach(c => {
+        s = s.replaceAll(`\\${c}`, '');
+    })
+    return s
+}
 
 /*
 
@@ -264,11 +268,7 @@ outline.forEach(section => {
 2. Save it to file for easier debugging
 
 */
-fs.writeFile(
-    `./${surveyName}-survey-output.json`,
-    JSON.stringify(survey, null, 2),
-    () => {}
-)
+fs.writeFile(`./${surveyName}-survey-output.json`, JSON.stringify(survey, null, 2), () => {})
 
 /*
 

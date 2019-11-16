@@ -71,7 +71,7 @@
         "fields": [
           {
             "title": "Destructuring (const { foo } = bar)",
-            "ref": "syntax_destructuring(const{foo}=bar)",
+            "ref": "syntax_destructuringconstfoobar",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -79,15 +79,15 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "syntax_destructuring(const{foo}=bar)_neverheard",
+                  "ref": "syntax_destructuringconstfoobar_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "syntax_destructuring(const{foo}=bar)_heard",
+                  "ref": "syntax_destructuringconstfoobar_heard",
                   "label": "✅ Know what it is, but haven't used it"
                 },
                 {
-                  "ref": "syntax_destructuring(const{foo}=bar)_used",
+                  "ref": "syntax_destructuringconstfoobar_used",
                   "label": "👍 I've used it"
                 }
               ]
@@ -99,7 +99,7 @@
           },
           {
             "title": "Spread operator ([...array1, ...array2])",
-            "ref": "syntax_spreadoperator([...array1,...array2])",
+            "ref": "syntax_spreadoperatorarray1array2",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -107,15 +107,15 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "syntax_spreadoperator([...array1,...array2])_neverheard",
+                  "ref": "syntax_spreadoperatorarray1array2_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "syntax_spreadoperator([...array1,...array2])_heard",
+                  "ref": "syntax_spreadoperatorarray1array2_heard",
                   "label": "✅ Know what it is, but haven't used it"
                 },
                 {
-                  "ref": "syntax_spreadoperator([...array1,...array2])_used",
+                  "ref": "syntax_spreadoperatorarray1array2_used",
                   "label": "👍 I've used it"
                 }
               ]
@@ -127,7 +127,7 @@
           },
           {
             "title": "Arrow Functions (const foo = () => {})",
-            "ref": "syntax_arrowfunctions(constfoo=()=>{})",
+            "ref": "syntax_arrowfunctionsconstfoo",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -135,15 +135,15 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "syntax_arrowfunctions(constfoo=()=>{})_neverheard",
+                  "ref": "syntax_arrowfunctionsconstfoo_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "syntax_arrowfunctions(constfoo=()=>{})_heard",
+                  "ref": "syntax_arrowfunctionsconstfoo_heard",
                   "label": "✅ Know what it is, but haven't used it"
                 },
                 {
-                  "ref": "syntax_arrowfunctions(constfoo=()=>{})_used",
+                  "ref": "syntax_arrowfunctionsconstfoo_used",
                   "label": "👍 I've used it"
                 }
               ]
@@ -193,7 +193,7 @@
           },
           {
             "title": "Async/Await",
-            "ref": "language_async/await",
+            "ref": "language_asyncawait",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -201,15 +201,15 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "language_async/await_neverheard",
+                  "ref": "language_asyncawait_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "language_async/await_heard",
+                  "ref": "language_asyncawait_heard",
                   "label": "✅ Know what it is, but haven't used it"
                 },
                 {
-                  "ref": "language_async/await_used",
+                  "ref": "language_asyncawait_used",
                   "label": "👍 I've used it"
                 }
               ]
@@ -727,7 +727,7 @@
         "fields": [
           {
             "title": "Progressive Web Apps (PWA)",
-            "ref": "other_progressivewebapps(pwa)",
+            "ref": "other_progressivewebappspwa",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -735,15 +735,15 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "other_progressivewebapps(pwa)_neverheard",
+                  "ref": "other_progressivewebappspwa_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "other_progressivewebapps(pwa)_heard",
+                  "ref": "other_progressivewebappspwa_heard",
                   "label": "✅ Know what it is, but haven't used it"
                 },
                 {
-                  "ref": "other_progressivewebapps(pwa)_used",
+                  "ref": "other_progressivewebappspwa_used",
                   "label": "👍 I've used it"
                 }
               ]
@@ -755,7 +755,7 @@
           },
           {
             "title": "WebAssembly (WASM)",
-            "ref": "other_webassembly(wasm)",
+            "ref": "other_webassemblywasm",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -763,15 +763,15 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "other_webassembly(wasm)_neverheard",
+                  "ref": "other_webassemblywasm_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "other_webassembly(wasm)_heard",
+                  "ref": "other_webassemblywasm_heard",
                   "label": "✅ Know what it is, but haven't used it"
                 },
                 {
-                  "ref": "other_webassembly(wasm)_used",
+                  "ref": "other_webassemblywasm_used",
                   "label": "👍 I've used it"
                 }
               ]
@@ -1627,7 +1627,7 @@
           },
           {
             "title": "Next.js",
-            "ref": "backendframeworks_next.js",
+            "ref": "backendframeworks_nextjs",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -1635,23 +1635,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "backendframeworks_next.js_neverheard",
+                  "ref": "backendframeworks_nextjs_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "backendframeworks_next.js_interested",
+                  "ref": "backendframeworks_nextjs_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "backendframeworks_next.js_not_interested",
+                  "ref": "backendframeworks_nextjs_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "backendframeworks_next.js_would_use_again",
+                  "ref": "backendframeworks_nextjs_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "backendframeworks_next.js_would_not_use_again",
+                  "ref": "backendframeworks_nextjs_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -1807,7 +1807,7 @@
           },
           {
             "title": "Nuxt.js",
-            "ref": "backendframeworks_nuxt.js",
+            "ref": "backendframeworks_nuxtjs",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -1815,23 +1815,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "backendframeworks_nuxt.js_neverheard",
+                  "ref": "backendframeworks_nuxtjs_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "backendframeworks_nuxt.js_interested",
+                  "ref": "backendframeworks_nuxtjs_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "backendframeworks_nuxt.js_not_interested",
+                  "ref": "backendframeworks_nuxtjs_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "backendframeworks_nuxt.js_would_use_again",
+                  "ref": "backendframeworks_nuxtjs_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "backendframeworks_nuxt.js_would_not_use_again",
+                  "ref": "backendframeworks_nuxtjs_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -1843,7 +1843,7 @@
           },
           {
             "title": "Gatsby.js",
-            "ref": "backendframeworks_gatsby.js",
+            "ref": "backendframeworks_gatsbyjs",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -1851,23 +1851,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "backendframeworks_gatsby.js_neverheard",
+                  "ref": "backendframeworks_gatsbyjs_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "backendframeworks_gatsby.js_interested",
+                  "ref": "backendframeworks_gatsbyjs_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "backendframeworks_gatsby.js_not_interested",
+                  "ref": "backendframeworks_gatsbyjs_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "backendframeworks_gatsby.js_would_use_again",
+                  "ref": "backendframeworks_gatsbyjs_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "backendframeworks_gatsby.js_would_not_use_again",
+                  "ref": "backendframeworks_gatsbyjs_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2239,7 +2239,7 @@
         "fields": [
           {
             "title": "Electron",
-            "ref": "mobile&desktop_electron",
+            "ref": "mobiledesktop_electron",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -2247,23 +2247,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "mobile&desktop_electron_neverheard",
+                  "ref": "mobiledesktop_electron_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "mobile&desktop_electron_interested",
+                  "ref": "mobiledesktop_electron_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "mobile&desktop_electron_not_interested",
+                  "ref": "mobiledesktop_electron_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "mobile&desktop_electron_would_use_again",
+                  "ref": "mobiledesktop_electron_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "mobile&desktop_electron_would_not_use_again",
+                  "ref": "mobiledesktop_electron_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2275,7 +2275,7 @@
           },
           {
             "title": "React Native",
-            "ref": "mobile&desktop_reactnative",
+            "ref": "mobiledesktop_reactnative",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -2283,23 +2283,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "mobile&desktop_reactnative_neverheard",
+                  "ref": "mobiledesktop_reactnative_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "mobile&desktop_reactnative_interested",
+                  "ref": "mobiledesktop_reactnative_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "mobile&desktop_reactnative_not_interested",
+                  "ref": "mobiledesktop_reactnative_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "mobile&desktop_reactnative_would_use_again",
+                  "ref": "mobiledesktop_reactnative_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "mobile&desktop_reactnative_would_not_use_again",
+                  "ref": "mobiledesktop_reactnative_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2311,7 +2311,7 @@
           },
           {
             "title": "Native Apps",
-            "ref": "mobile&desktop_nativeapps",
+            "ref": "mobiledesktop_nativeapps",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -2319,23 +2319,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "mobile&desktop_nativeapps_neverheard",
+                  "ref": "mobiledesktop_nativeapps_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "mobile&desktop_nativeapps_interested",
+                  "ref": "mobiledesktop_nativeapps_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "mobile&desktop_nativeapps_not_interested",
+                  "ref": "mobiledesktop_nativeapps_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "mobile&desktop_nativeapps_would_use_again",
+                  "ref": "mobiledesktop_nativeapps_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "mobile&desktop_nativeapps_would_not_use_again",
+                  "ref": "mobiledesktop_nativeapps_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2347,7 +2347,7 @@
           },
           {
             "title": "Cordova",
-            "ref": "mobile&desktop_cordova",
+            "ref": "mobiledesktop_cordova",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -2355,23 +2355,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "mobile&desktop_cordova_neverheard",
+                  "ref": "mobiledesktop_cordova_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "mobile&desktop_cordova_interested",
+                  "ref": "mobiledesktop_cordova_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "mobile&desktop_cordova_not_interested",
+                  "ref": "mobiledesktop_cordova_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "mobile&desktop_cordova_would_use_again",
+                  "ref": "mobiledesktop_cordova_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "mobile&desktop_cordova_would_not_use_again",
+                  "ref": "mobiledesktop_cordova_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2383,7 +2383,7 @@
           },
           {
             "title": "Ionic",
-            "ref": "mobile&desktop_ionic",
+            "ref": "mobiledesktop_ionic",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -2391,23 +2391,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "mobile&desktop_ionic_neverheard",
+                  "ref": "mobiledesktop_ionic_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "mobile&desktop_ionic_interested",
+                  "ref": "mobiledesktop_ionic_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "mobile&desktop_ionic_not_interested",
+                  "ref": "mobiledesktop_ionic_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "mobile&desktop_ionic_would_use_again",
+                  "ref": "mobiledesktop_ionic_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "mobile&desktop_ionic_would_not_use_again",
+                  "ref": "mobiledesktop_ionic_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2419,7 +2419,7 @@
           },
           {
             "title": "NW.js",
-            "ref": "mobile&desktop_nw.js",
+            "ref": "mobiledesktop_nwjs",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -2427,23 +2427,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "mobile&desktop_nw.js_neverheard",
+                  "ref": "mobiledesktop_nwjs_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "mobile&desktop_nw.js_interested",
+                  "ref": "mobiledesktop_nwjs_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "mobile&desktop_nw.js_not_interested",
+                  "ref": "mobiledesktop_nwjs_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "mobile&desktop_nw.js_would_use_again",
+                  "ref": "mobiledesktop_nwjs_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "mobile&desktop_nw.js_would_not_use_again",
+                  "ref": "mobiledesktop_nwjs_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2455,7 +2455,7 @@
           },
           {
             "title": "Expo",
-            "ref": "mobile&desktop_expo",
+            "ref": "mobiledesktop_expo",
             "properties": {
               "randomize": false,
               "allow_multiple_selection": false,
@@ -2463,23 +2463,23 @@
               "vertical_alignment": true,
               "choices": [
                 {
-                  "ref": "mobile&desktop_expo_neverheard",
+                  "ref": "mobiledesktop_expo_neverheard",
                   "label": "🤷 Never heard of it/Not sure what it is"
                 },
                 {
-                  "ref": "mobile&desktop_expo_interested",
+                  "ref": "mobiledesktop_expo_interested",
                   "label": "✅ Heard of it > Would like to learn"
                 },
                 {
-                  "ref": "mobile&desktop_expo_not_interested",
+                  "ref": "mobiledesktop_expo_not_interested",
                   "label": "🚫 Heard of it > Not interested"
                 },
                 {
-                  "ref": "mobile&desktop_expo_would_use_again",
+                  "ref": "mobiledesktop_expo_would_use_again",
                   "label": "👍 Used it > Would use again"
                 },
                 {
-                  "ref": "mobile&desktop_expo_would_not_use_again",
+                  "ref": "mobiledesktop_expo_would_not_use_again",
                   "label": "👎 Used it > Would avoid"
                 }
               ]
@@ -2491,7 +2491,7 @@
           },
           {
             "title": "Other Mobile & Desktop options",
-            "ref": "mobile&desktop_other_other",
+            "ref": "mobiledesktop_other_other",
             "validations": {
               "required": false
             },
@@ -2499,7 +2499,7 @@
           },
           {
             "title": "Overall Happiness",
-            "ref": "mobile&desktop_overallhappiness",
+            "ref": "mobiledesktop_overallhappiness",
             "properties": {
               "steps": 5,
               "start_at_one": false,
@@ -2721,7 +2721,7 @@
         "fields": [
           {
             "title": "Blogs & Magazines",
-            "ref": "resources_blogs&magazines",
+            "ref": "resources_blogsmagazines",
             "properties": {
               "randomize": true,
               "allow_multiple_selection": true,
@@ -2747,7 +2747,7 @@
           },
           {
             "title": "Sites & Courses",
-            "ref": "resources_sites&courses",
+            "ref": "resources_sitescourses",
             "properties": {
               "randomize": true,
               "allow_multiple_selection": true,
@@ -2950,7 +2950,7 @@
           },
           {
             "title": "What do you feel is currently missing from JavaScript?",
-            "ref": "opinionquestions_whatdoyoufeeliscurrentlymissingfromjavascript?",
+            "ref": "opinionquestions_whatdoyoufeeliscurrentlymissingfromjavascript",
             "properties": {
               "description": "Features you'd like to see in JavaScript one day."
             },
@@ -3159,7 +3159,7 @@
           },
           {
             "title": "How did you find out about this survey?",
-            "ref": "aboutyou_howdidyoufindoutaboutthissurvey?",
+            "ref": "aboutyou_howdidyoufindoutaboutthissurvey",
             "properties": {},
             "validations": {
               "required": false
