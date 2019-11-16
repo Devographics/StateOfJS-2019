@@ -52,7 +52,7 @@ ol {
 a {
     text-decoration: none;
     @include font-bold;
-    transition: all ease-in 300ms;
+    // transition: all ease-in 300ms;
     &,
     &:link,
     &:visited,
@@ -66,7 +66,9 @@ a {
         }
     }
     &:hover {
+        text-decoration: underline;
         position: relative;
+        color: $hover-color;
     }
     &.button,
     &.resp-sharing-button__link {
@@ -94,9 +96,6 @@ a {
     //     transform-origin: bottom left;
     //     transform: scaleX(1);
     // }
-    &:hover{
-        text-decoration: underline;
-    }
 }
 
 .conclusion__byline {

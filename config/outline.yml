@@ -1,0 +1,458 @@
+# the survey outline
+
+# First level: blocks
+# Second level: questions (will use the block's question template if no template is specified)
+
+---
+### FEATURES ###
+
+- template: statictext
+  id: features_intro
+  title: >
+      "For each of the following JavaScript feature, please pick one of the following options:
+
+      \n- 🤷 You've never heard about it, or are not sure what it is
+      \n- ✅ You've heard about it but *haven't* used it
+      \n- 👍 You've used it in a project"
+
+- title: Syntax
+  description: The grammar of JavaScript
+  template: feature
+  questions:
+      - Destructuring (const { foo } = bar)
+      - Spread operator ([...array1, ...array2])
+      - Arrow Functions (const foo = () => {})
+
+- title: Language
+  description: The vocabulary of JavaScript
+  template: feature
+  questions:
+    - Proxies
+    - Async/Await
+    - Promises
+    - Decorators
+
+- title: Data Structures
+  description: How you store and manipulate data.
+  template: feature
+  questions:
+      - Maps
+      - Sets
+      - Typed Arrays
+
+- title: Browser APIs
+  description: The features provided by the browser.
+  template: feature
+  questions:
+      - Service Workers
+      - LocalStorage
+      - i18n
+      - Web Components
+      - Web Audio API
+      - WebGL
+      - Web Animations API
+      - WebRTC
+      - Web Speech API
+      - WebVR
+      - Websocket
+      - Fetch API
+
+- title: Other
+  description: Other technologies and patterns
+  template: feature
+  questions:
+      - Progressive Web Apps (PWA)
+      - WebAssembly (WASM)
+
+- title: Patterns
+  description: How you prefer writing code
+  template: pattern
+  questions:
+      - Object-Oriented Programming
+      - Functional Programming
+      - Reactive Programming
+
+### TOOLS ###
+
+- template: statictext
+  id: tools_intro
+  title: >
+      "For each of the following technology, framework, or library mentioned, please pick one of the following options:
+
+      \n- 🤷 You've never heard about it, or are not sure what it is
+      \n- ✅ You've heard about it and you *want* to learn it
+      \n- 🚫 You've heard about it, but *don't want* to learn it (or are *unsure*)
+      \n- 👍 You've used it and *want* to use it again
+      \n- 👎 You've used it but *don't* *want* to use it again"
+
+- title: JavaScript Flavors
+  description: Languages that compile to JavaScript
+  template: tool
+  id: flavors
+  # condition: Have you ever heard of or used CSS pre- or post-processors such as SASS, LESS, etc.?
+  questions:
+      - TypeScript
+      - Reason
+      - Elm
+      - ClojureScript
+      - PureScript
+      - other
+      - title: Overall Happiness
+        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of JavaScript flavors?
+        template: happiness
+
+- title: Front-end Frameworks
+  description: Front-end frameworks and libraries
+  template: tool
+  id: frontend
+  # condition: Have you ever heard of or used CSS pre- or post-processors such as SASS, LESS, etc.?
+  questions:
+      - React
+      - Vue
+      - Angular
+      - Preact
+      - Ember
+      - Svelte
+      - other
+      - title: Overall Happiness
+        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of front-end frameworks?
+        template: happiness
+
+- title: Data Layer
+  description: Loading and managing data in your app
+  template: tool
+  id: datalayer
+  # condition: Have you ever heard of or used CSS pre- or post-processors such as SASS, LESS, etc.?
+  questions:
+      - Redux
+      - Apollo
+      - GraphQL
+      - MobX
+      - Relay
+      - other
+      - title: Overall Happiness
+        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of data layer technologies?
+        template: happiness
+
+- title: Back-end Frameworks
+  description: JavaScript on the server
+  template: tool
+  id: backend
+  # condition: Have you ever heard of or used CSS pre- or post-processors such as SASS, LESS, etc.?
+  questions:
+      - Express
+      - Next.js
+      - Koa
+      - Meteor
+      - Sails
+      - FeathersJS
+      - Nuxt.js
+      - Gatsby.js
+      - other
+      - title: Overall Happiness
+        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of back-end frameworks?
+        template: happiness
+
+- title: Testing
+  description: Tools for testing your code
+  template: tool
+  id: testing
+  # condition: Have you ever heard of or used CSS pre- or post-processors such as SASS, LESS, etc.?
+  questions:
+      - Jest
+      - Mocha
+      - Storybook
+      - Cypress
+      - Enzyme
+      - Ava
+      - Jasmine
+      - Puppeteer
+      - other
+      - title: Overall Happiness
+        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of testing tools?
+        template: happiness
+
+- title: Mobile & Desktop
+  description: JavaScript for mobile devices and desktop apps
+  template: tool
+  id: mobiledesktop
+  # condition: Have you ever heard of or used CSS pre- or post-processors such as SASS, LESS, etc.?
+  questions:
+      - Electron
+      - React Native
+      - Native Apps
+      - Cordova
+      - Ionic
+      - NW.js
+      - Expo
+      - other
+      - title: Overall Happiness
+        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of testing tools?
+        template: happiness
+
+### OTHER TOOLS ###
+
+- title: Other Tools
+  description: For these tools & technologies, just check the ones that you use regularly.
+  questions:
+      - title: Utilities
+        description: Which JavaScript utilities do you regularly use?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: true
+        options:
+            - Immer
+            - Lodash
+            - Underscore
+            - Moment
+            - Date Fns
+            - Ramda
+            - jQuery
+            - RxJS
+      - title: Text Editors
+        description: Which text editor(s) do you regularly use?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: true
+        options:
+            - VS Code
+            - Sublime Text
+            - Atom
+            - Vim
+            - Emacs
+            - Webstorm
+      - title: Browsers
+        description: Which browser(s) do you work in primarily during initial development?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: false
+        options:
+            - Edge
+            - Chrome
+            - Safari
+            - Firefox
+      - title: Build Tools
+        description: Which build tools do you use to compile and bundle your code?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: false
+        options:
+            - Webpack
+            - Parcel
+            - Gulp
+            - RollUp
+            - FuseBox
+      - title: Other Languages
+        description: Which other languages do you code in besides JavaScript and its flavors?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: false
+        options:
+            - PHP
+            - Ruby
+            - Python
+            - Go
+            - Rust
+            - Java
+            - C/C++
+            - Objective-C
+            - Scala
+            - Swift
+            - C#
+            - .NET
+            - Haskell
+            - OCaml
+            - Dart
+
+### RESOURCES ###
+
+- title: Resources
+  description: What JavaScript resources do you consult?
+  questions:
+
+      - title: Blogs & Magazines
+        description: Which CSS-related blogs/magazines/etc. do you read?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: true
+        options:
+            - CSS Tricks
+            - Smashing Magazine
+            - CoDrops
+            - SitePoint
+
+      - title: Sites & Courses
+        description: Which CSS-related sites/courses/etc. do you consult?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: true
+        options:
+            - Stack Overflow
+            - MDN
+            - W3Schools
+            - The CSS Specs
+            - FreeCodeCamp
+            - Codecademy
+            - LevelUp Tutorials
+            - Wes Bos Courses (GSSGrid.io, Flexbox.io, etc.)
+            - Pluralsight
+            - DesignCode
+
+      - title: Podcasts
+        description: Which CSS or programming-related podcasts do you listen to?
+        template: multiple
+        allowmultiple: true
+        allowother: true
+        randomize: true
+        options:
+            - Shop Talk Show
+            - The Changelog
+            - Syntax
+            - JS Party
+            - JavaScript Jabber
+            - Full Stack Radio
+            - Front End Happy Hour
+            - JAMstack Radio
+            - The Web Platform Podcast
+            - Modern Web
+            - CodePen Radio
+
+### OPINIONS ###
+
+- title: Opinion Questions
+  description: How do you feel about the state of CSS?
+  questions:
+      - title: JavaScript is moving in the right direction
+        template: opinion
+      - title: Building JavaScript apps is overly complex right now
+        template: opinion
+      - title: JavaScript is over-used online
+        template: opinion
+      - title: I enjoy building JavaScript apps
+        template: opinion
+      - title: I would like JavaScript to be my main programming language
+        template: opinion
+      - title: The JavaScript ecosystem is changing too fast
+        template: opinion
+      - title: What do you feel is currently missing from JavaScript?
+        description: Features you'd like to see in JavaScript one day.
+        template: longtext
+
+### DEMOGRAPHICS ###
+
+- title: About You
+  description: Let's get to know the real you.
+  questions:
+      - title: Years of Experience
+        description: How long you've been writing JavaScript.
+        template: multiple
+        allowmultiple: false
+        allowother: false
+        randomize: false
+        options:
+            - Less than one year
+            - 1-2 years
+            - 2-5 years
+            - 5-10 years
+            - 10-20 years
+            - 20+ years
+      - title: Job Title
+        description: How do you introduce yourself at parties?
+        template: multiple
+        allowmultiple: false
+        allowother: true
+        randomize: false
+        options:
+            - Front-end Developer/Engineer
+            - Full-stack Developer/Engineer
+            - Back-end Developer/Engineer
+            - Web Developer
+      # - title: HTML Proficiency
+      #   description: How proficient are you at writing HTML? (pick the most advanced option corresponding to your skills)
+      #   template: multiple
+      #   allowmultiple: false
+      #   allowother: false
+      #   randomize: false
+      #   options:
+      #       - "Level 1: simple div-based HTML"
+      #       - "Level 2: using the proper semantic elements"
+      #       - "Level 3: accessibility and performance best practices"
+      #       - "Level 4: mastering accessibility and performance best practices"
+      #       - "Level 5: mastering accessibility and performance best practices"
+      - title: CSS Proficiency
+        description: How proficient are you at writing CSS? (pick the most advanced option corresponding to your skills)
+        template: multiple
+        allowmultiple: false
+        allowother: false
+        randomize: false
+        options:
+            - "Level 1: virtually no knowledge of CSS"
+            - "Level 2: using CSS frameworks and tweaking existing styles"
+            - "Level 3: knowing specificity rules, being able to create layouts"
+            - "Level 4: mastering animations, interactions, transitions, etc."
+            - "Level 5: being able to style an entire front-end from scratch following a consistent methodology"
+      - title: Back-end Proficiency
+        description: How proficient are you at back-end development? (pick the most advanced option corresponding to your skills)
+        template: multiple
+        allowmultiple: false
+        allowother: false
+        randomize: false
+        options:
+            - "Level 1: not able to handle any back-end work"
+            - "Level 2: able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)"
+            - "Level 3: able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)"
+            - "Level 4: setting up an entire back-end from scratch (Go, Node, etc.)"
+            - "Level 5: able to handle complex multi-server or microservices architectures"
+      - title: Company Size
+        template: multiple
+        allowmultiple: false
+        allowother: false
+        randomize: false
+        options:
+            - Just me
+            - 1-5 people
+            - 5-10 people
+            - 10-20 people
+            - 20-50 people
+            - 50-100 people
+            - 100-1000 people
+            - 1000+ people
+      - title: Yearly Salary
+        description: In USD
+        template: multiple
+        allowmultiple: false
+        allowother: false
+        randomize: false
+        options:
+            - I work for free :(
+            - $0-$10k
+            - $10k-$30k
+            - $30k-$50k
+            - $50k-$100k
+            - $100k-$200k
+            - $200k+
+      - title: How did you find out about this survey?
+        template: text
+      - title: Your Gender
+        template: multiple
+        allowmultiple: false
+        allowother: true
+        options:
+            - Female
+            - Male
+            - Non-binary/ third gender
+            - Prefer not to say
+      - title: Your Email
+        description: If you'd like to be notified when survey results are available. Your email won't be used for any other purpose.
+        template: email
+      - title: Your Country
+        template: text
+      - title: Your City
+        template: text

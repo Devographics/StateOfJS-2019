@@ -135,9 +135,9 @@ $smallShareItemOffset: 150%;
         flex-grow: 1;
         text-align: center;
         padding: 22px $spacing/3;
-
+        transition: none;
         &:hover {
-            background: black(0.05);
+            background: $bg-color-light;
         }
         svg {
             display: block;

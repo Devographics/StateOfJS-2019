@@ -1,0 +1,20 @@
+---
+title: TITLE
+ref: ID
+properties:
+  randomize: false
+  allow_multiple_selection: false
+  allow_other_choice: false
+  vertical_alignment: true
+  choices:
+    - ref: use_never
+      label: Almost always avoid
+    - ref: use_sparingly
+      label: Use sparingly
+    - ref: use_neutral
+      label: Neutral
+    - ref: use_frequently
+      label: Use frequently
+    - ref: use_always
+      label: Use as much as I can
+type: multiple_choice

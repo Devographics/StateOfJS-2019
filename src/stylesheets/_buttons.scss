@@ -16,7 +16,7 @@
         font-size: $medium-font;
     }
     white-space: nowrap;
-    transition: color 400ms, border-color 400ms;
+    // transition: color 400ms, border-color 400ms;
 
     &,
     &:link,
@@ -30,6 +30,7 @@
         border-color: $hover-color;
         border-style: solid;
         text-decoration: none;
+        background: $bg-color-light;
     }
 
     &--small {
