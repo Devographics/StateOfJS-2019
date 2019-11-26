@@ -98,7 +98,7 @@
       - PureScript
       - other
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of JavaScript flavors?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of JavaScript flavors?
         template: happiness
 
 - title: Front-end Frameworks
@@ -115,7 +115,7 @@
       - Svelte
       - other
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of front-end frameworks?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of front-end frameworks?
         template: happiness
 
 - title: Data Layer
@@ -131,7 +131,7 @@
       - Relay
       - other
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of data layer technologies?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of data layer technologies?
         template: happiness
 
 - title: Back-end Frameworks
@@ -150,7 +150,7 @@
       - Gatsby.js
       - other
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of back-end frameworks?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of back-end frameworks?
         template: happiness
 
 - title: Testing
@@ -169,7 +169,7 @@
       - Puppeteer
       - other
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of testing tools?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of testing tools?
         template: happiness
 
 - title: Mobile & Desktop
@@ -187,7 +187,7 @@
       - Expo
       - other
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of testing tools?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of testing tools?
         template: happiness
 
 ### OTHER TOOLS ###
