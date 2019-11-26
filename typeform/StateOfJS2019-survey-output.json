@@ -1104,7 +1104,7 @@
                 "center": "Neutral",
                 "right": "Very Happy"
               },
-              "description": "On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of JavaScript flavors?"
+              "description": "On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of JavaScript flavors?"
             },
             "validations": {
               "required": false
