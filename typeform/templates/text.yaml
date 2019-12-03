@@ -1,7 +1,0 @@
----
-title: TITLE
-ref: ID
-properties: {}
-validations:
-  required: false
-type: short_text
