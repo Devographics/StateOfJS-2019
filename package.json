@@ -19,7 +19,7 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "@nivo/bar": "0.59.0",
+    "@nivo/bar": "0.59.2",
     "@nivo/bump": "0.59.0",
     "@nivo/circle-packing": "0.59.0",
     "@nivo/core": "0.59.0",
@@ -41,6 +41,7 @@
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-sass": "^2.1.22",
     "gatsby-source-filesystem": "^2.1.36",
+    "gatsby-source-graphql": "^2.1.25",
     "gatsby-transformer-remark": "^2.6.34",
     "gatsby-transformer-yaml": "^2.2.16",
     "html-loader": "^0.5.5",

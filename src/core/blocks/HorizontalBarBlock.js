@@ -22,18 +22,17 @@ const getChartData = (data, block, getUrl) => {
     const blockAgg = blockData[block.dataKey]
     if (blockAgg === undefined || !Array.isArray(blockAgg.buckets)) {
         throw new Error(
-            `HorizontalBarBlock: Non existing or invalid data key ${block.data.key} for block ${
-                block.id
-            }`
+            `HorizontalBarBlock: Non existing or invalid data key ${block.data.key} for block ${block.id}`
         )
     }
 
-    blockAgg.buckets = sortBy(blockAgg.buckets.map(bucket => ({ ...bucket })), 'count').map(
-        bucket => ({
-            ...bucket,
-            homepage: getUrl(bucket.id)
-        })
-    )
+    blockAgg.buckets = sortBy(
+        blockAgg.buckets.map(bucket => ({ ...bucket })),
+        'count'
+    ).map(bucket => ({
+        ...bucket,
+        homepage: getUrl(bucket.id)
+    }))
 
     return blockAgg
 }

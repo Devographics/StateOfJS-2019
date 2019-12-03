@@ -87,7 +87,14 @@ const HorizontalBarChart = ({
         mode,
         units
     })
-    const data = useMemo(() => sortBy(buckets.map(bucket => ({ ...bucket })), 'count'), [buckets])
+    const data = useMemo(
+        () =>
+            sortBy(
+                buckets.map(bucket => ({ ...bucket })),
+                'count'
+            ),
+        [buckets]
+    )
 
     return (
         <div style={{ height: buckets.length * 36 + 80 }}>

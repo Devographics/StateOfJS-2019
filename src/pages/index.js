@@ -8,7 +8,9 @@ import IntroductionFooter from 'core/pages/IntroductionFooter'
 
 const Introduction = ({ data }) => (
     <>
-        <div className="main-logo-wrapper"><LogoFull size="l" /></div>
+        <div className="main-logo-wrapper">
+            <LogoFull size="l" />
+        </div>
         <TextBlock text={data.introduction.html} />
         <IntroductionFooter />
         <NewsletterBlock />

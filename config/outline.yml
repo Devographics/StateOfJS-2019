@@ -27,10 +27,10 @@
   description: The vocabulary of JavaScript
   template: feature
   questions:
-    - Proxies
-    - Async/Await
-    - Promises
-    - Decorators
+      - Proxies
+      - Async/Await
+      - Promises
+      - Decorators
 
 - title: Data Structures
   description: How you store and manipulate data.
@@ -274,7 +274,6 @@
 - title: Resources
   description: What JavaScript resources do you consult?
   questions:
-
       - title: Blogs & Magazines
         description: Which CSS-related blogs/magazines/etc. do you read?
         template: multiple
@@ -393,11 +392,11 @@
         allowother: false
         randomize: false
         options:
-            - "Level 1: virtually no knowledge of CSS"
-            - "Level 2: using CSS frameworks and tweaking existing styles"
-            - "Level 3: knowing specificity rules, being able to create layouts"
-            - "Level 4: mastering animations, interactions, transitions, etc."
-            - "Level 5: being able to style an entire front-end from scratch following a consistent methodology"
+            - 'Level 1: virtually no knowledge of CSS'
+            - 'Level 2: using CSS frameworks and tweaking existing styles'
+            - 'Level 3: knowing specificity rules, being able to create layouts'
+            - 'Level 4: mastering animations, interactions, transitions, etc.'
+            - 'Level 5: being able to style an entire front-end from scratch following a consistent methodology'
       - title: Back-end Proficiency
         description: How proficient are you at back-end development? (pick the most advanced option corresponding to your skills)
         template: multiple
@@ -405,11 +404,11 @@
         allowother: false
         randomize: false
         options:
-            - "Level 1: not able to handle any back-end work"
-            - "Level 2: able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)"
-            - "Level 3: able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)"
-            - "Level 4: setting up an entire back-end from scratch (Go, Node, etc.)"
-            - "Level 5: able to handle complex multi-server or microservices architectures"
+            - 'Level 1: not able to handle any back-end work'
+            - 'Level 2: able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+            - 'Level 3: able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)'
+            - 'Level 4: setting up an entire back-end from scratch (Go, Node, etc.)'
+            - 'Level 5: able to handle complex multi-server or microservices architectures'
       - title: Company Size
         template: multiple
         allowmultiple: false

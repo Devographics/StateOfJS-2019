@@ -32,7 +32,7 @@ export default {
         },
         ticks: {
             line: {
-                fill: getColor('legend'),
+                fill: getColor('legend')
             },
             text: {
                 fill: getColor('legend'),

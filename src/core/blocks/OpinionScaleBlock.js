@@ -24,8 +24,18 @@ const SuperSad = ({ width, height }) => (
             strokeWidth="4"
             strokeLinecap="round"
         />
-        <path d="M28 32L41 36" stroke={getColor('activeColor')} strokeWidth="4" strokeLinecap="round" />
-        <path d="M73 32L59 36" stroke={getColor('activeColor')} strokeWidth="4" strokeLinecap="round" />
+        <path
+            d="M28 32L41 36"
+            stroke={getColor('activeColor')}
+            strokeWidth="4"
+            strokeLinecap="round"
+        />
+        <path
+            d="M73 32L59 36"
+            stroke={getColor('activeColor')}
+            strokeWidth="4"
+            strokeLinecap="round"
+        />
     </svg>
 )
 
@@ -60,7 +70,12 @@ const Neutral = ({ width, height }) => (
         <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
         <circle cx="35.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
         <circle cx="64.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
-        <path d="M65 65.25H50H35" stroke={getColor('activeColor')} strokeWidth="4" strokeLinecap="round" />
+        <path
+            d="M65 65.25H50H35"
+            stroke={getColor('activeColor')}
+            strokeWidth="4"
+            strokeLinecap="round"
+        />
     </svg>
 )
 
@@ -172,10 +187,7 @@ const OpinionScaleBlock = ({ block, data }) => {
         data.data
     ])
 
-    const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [
-        blockData,
-        dataKey,
-    ])
+    const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [blockData, dataKey])
 
     if (!data || !data.data) {
         return (

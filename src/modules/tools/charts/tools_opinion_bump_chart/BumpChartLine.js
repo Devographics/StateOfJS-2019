@@ -12,7 +12,7 @@ const BumpChartLine = ({
     yScale
 }) => {
     // const { showTooltipFromEvent, hideTooltip} = useTooltip()
-    const toolId = tool.id;
+    const toolId = tool.id
     const onMouseEnter = useCallback(
         event => {
             // showTooltipFromEvent(<BumpChartTooltip tool={tool} />, event)
@@ -24,7 +24,9 @@ const BumpChartLine = ({
         event => {
             // showTooltipFromEvent(<BumpChartTooltip tool={tool} />, event)
         },
-        [/* tool, showTooltipFromEvent*/]
+        [
+            /* tool, showTooltipFromEvent*/
+        ]
     )
     const onMouseLeave = useCallback(() => {
         // hideTooltip()

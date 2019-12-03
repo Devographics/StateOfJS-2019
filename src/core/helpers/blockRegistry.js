@@ -56,7 +56,7 @@ const blockRegistry = {
     // 'tools-usage-ratio': ToolsUsageRatioBlock,
     tool: ToolBlock,
 
-    happiness: HappinessBlock,
+    happiness: HappinessBlock
 }
 
 export default blockRegistry
