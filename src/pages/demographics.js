@@ -3,6 +3,7 @@ import PageTemplate from 'core/pages/PageTemplate'
 import { graphql } from 'gatsby'
 
 export default props => {
+    console.log(props.data.data)
     const companySize = props.data.demographics.demographics.companySize.find(d => d.year === 2018)
     const yearsOfExperience = props.data.demographics.demographics.yearsOfExperience.find(
         d => d.year === 2018
@@ -18,25 +19,41 @@ export default props => {
                 {
                     id: 'company-size',
                     breakdown: {
-                        ...companySize
+                        ...companySize,
+                        completion: {
+                            count: companySize.total,
+                            percentage: companySize.completion
+                        }
                     }
                 },
                 {
                     id: 'years-of-experience',
                     breakdown: {
-                        ...yearsOfExperience
+                        ...yearsOfExperience,
+                        completion: {
+                            count: yearsOfExperience.total,
+                            percentage: yearsOfExperience.completion
+                        }
                     }
                 },
                 {
                     id: 'salary',
                     breakdown: {
-                        ...salary
+                        ...salary,
+                        completion: {
+                            count: salary.total,
+                            percentage: salary.completion
+                        }
                     }
                 },
                 {
                     id: 'gender',
                     breakdown: {
-                        ...gender
+                        ...gender,
+                        completion: {
+                            count: gender.total,
+                            percentage: gender.completion
+                        }
                     }
                 }
             ]
