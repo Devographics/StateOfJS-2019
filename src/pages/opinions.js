@@ -16,7 +16,7 @@ export default props => {
             opinion: {
                 completion: {
                     count: year.total,
-                    completion: year.completion,
+                    percentage: year.completion,
                 },
                 buckets: year.buckets.map(b => ({
                     ...b,
