@@ -3,7 +3,6 @@ import PageTemplate from 'core/pages/PageTemplate'
 import { graphql } from 'gatsby'
 
 export default props => {
-    console.log(props.data)
     const companySize = props.data.demographics.demographics.companySize.find(d => d.year === 2018)
     const yearsOfExperience = props.data.demographics.demographics.yearsOfExperience.find(
         d => d.year === 2018
@@ -15,14 +14,7 @@ export default props => {
         ...props.data,
         data: {
             aggregations: [
-                ...props.data.data.aggregations.filter(agg => {
-                    return (
-                        agg.id !== 'company-size' &&
-                        agg.id !== 'years-of-experience' &&
-                        agg.id !== 'salary' &&
-                        agg.id !== 'gender'
-                    )
-                }),
+                ...props.data.data.aggregations,
                 {
                     id: 'company-size',
                     breakdown: {
@@ -50,7 +42,6 @@ export default props => {
             ]
         }
     }
-    console.log(data)
 
     return <PageTemplate {...props} data={data} />
 }
