@@ -6,6 +6,30 @@
   path: /tshirt
   type: page
 
+- id: features-reloaded
+  path: /features-reloaded
+  type: page
+  children:
+      - id: syntax
+        path: /syntax
+        type: page
+
+      - id: language
+        path: /language
+        type: page
+
+      - id: data-structures
+        path: /data-structures
+        type: page
+
+      - id: browser-apis
+        path: /browser-apis
+        type: page
+
+      - id: other-features
+        path: /other-features
+        type: page
+
 - id: demographics
   path: /demographics
   type: page

@@ -4,36 +4,35 @@ import React from 'react'
 
 export default props => {
     let opinionsByYear = props.data.opinions.opinions
-    opinionsByYear = opinionsByYear.filter(opinionByYear => {
-        const year = opinionByYear.byYear.find(d => d.year === 2018)
+    opinionsByYear = opinionsByYear
+        .filter(opinionByYear => {
+            const year = opinionByYear.byYear.find(d => d.year === 2018)
 
-        return year !== undefined
-    }).map(opinionByYear => {
-        const year = opinionByYear.byYear.find(d => d.year === 2018)
+            return year !== undefined
+        })
+        .map(opinionByYear => {
+            const year = opinionByYear.byYear.find(d => d.year === 2018)
 
-        return {
-            id: opinionByYear.id,
-            opinion: {
-                completion: {
-                    count: year.total,
-                    percentage: year.completion,
-                },
-                buckets: year.buckets.map(b => ({
-                    ...b,
-                    id: `${b.id}`
-                }))
+            return {
+                id: opinionByYear.id,
+                opinion: {
+                    completion: {
+                        count: year.total,
+                        percentage: year.completion
+                    },
+                    buckets: year.buckets.map(b => ({
+                        ...b,
+                        id: `${b.id}`
+                    }))
+                }
             }
-        }
-    })
+        })
 
     const data = {
         ...props.data,
         data: {
             ...props.data.data,
-            aggregations: [
-                ...opinionsByYear,
-                ...props.data.data.aggregations,
-            ]
+            aggregations: [...opinionsByYear, ...props.data.data.aggregations]
         }
     }
 
@@ -54,14 +53,16 @@ export const query = graphql`
             html
         }
         opinions: stateOfApi {
-            opinions(ids: [
-                "would_like_js_to_be_main_lang",
-                "enjoy_building_js_apps",
-                "js_ecosystem_changing_to_fast",
-                "js_over_used_online",
-                "building_js_apps_overly_complex",
-                "js_moving_in_right_direction"
-            ]) {
+            opinions(
+                ids: [
+                    "would_like_js_to_be_main_lang"
+                    "enjoy_building_js_apps"
+                    "js_ecosystem_changing_to_fast"
+                    "js_over_used_online"
+                    "building_js_apps_overly_complex"
+                    "js_moving_in_right_direction"
+                ]
+            ) {
                 id
                 byYear {
                     year
