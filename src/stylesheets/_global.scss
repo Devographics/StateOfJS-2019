@@ -138,3 +138,13 @@ Page-specific styles
     max-width: 500px;
     margin: 0 auto $spacing*2 auto;
 }
+
+.error{
+    color: $red;
+    border: 3px solid $redLighter;
+    padding: $spacing;
+}
+
+iframe{
+    display: none;
+}

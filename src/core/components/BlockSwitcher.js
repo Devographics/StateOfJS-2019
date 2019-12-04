@@ -2,26 +2,41 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import blockRegistry from '../helpers/blockRegistry'
 import { keys } from '../../constants'
-
-const DefaultComponent = ({ block }) => (
-    <p>
-        Missing Block Component! Block ID: {block.id} | type: {block.type}
-    </p>
-)
+import isEmpty from 'lodash/isEmpty'
+import Block from 'core/components/Block'
 
 const BlockSwitcher = ({ data, block, index }) => {
-    if (!data) {
-        return (
-            <div>
-                No available data for block {block.id} | type: {block.type}
-            </div>
-        )
+    const { id, type } = block
+    if (!data || data === null || isEmpty(data) || isEmpty(data.data)) {
+        throw new Error(`No available data for block ${id} | type: ${type}`)
     }
-    const { type } = block
-    const BlockComponent = blockRegistry[type] ? blockRegistry[type] : DefaultComponent
-
+    if (!blockRegistry[type]) {
+        throw new Error(`Missing Block Component! Block ID: ${id} | type: ${type}`)
+    }
+    const BlockComponent = blockRegistry[type]
     return <BlockComponent block={block} data={data} index={index} />
 }
+
+class ErrorBoundary extends React.Component {
+    state = {}
+    static getDerivedStateFromError(error) {
+        return { error }
+    }
+    render() {
+        const { error } = this.state
+        const { id } = this.props.block
+        if (error) {
+            return <Block id={id} error={error.message} />
+        }
+        return this.props.children
+    }
+}
+
+const BlockSwitcherWithBoundary = props => (
+    <ErrorBoundary block={props.block}>
+        <BlockSwitcher {...props} />
+    </ErrorBoundary>
+)
 
 BlockSwitcher.propTypes = {
     block: PropTypes.shape({
@@ -41,4 +56,4 @@ BlockSwitcher.propTypes = {
     data: PropTypes.any.isRequired
 }
 
-export default BlockSwitcher
+export default BlockSwitcherWithBoundary

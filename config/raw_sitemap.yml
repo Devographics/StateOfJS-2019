@@ -18,18 +18,49 @@
         dataKey: breakdown
         bucketKeys: salary
         showDescription: true
-      # - id: salary-per-country
-      #   type: countries
+        query: >
+            salary {
+                year
+                total
+                completion
+                buckets {
+                    id
+                    count
+                    percentage
+                }
+            }
       - id: years-of-experience
         dataKey: breakdown
         type: vertical-bar
         bucketKeys: yearsOfExperience
         showDescription: true
+        query: > 
+          yearsOfExperience {
+              year
+              total
+              completion
+              buckets {
+                  id
+                  count
+                  percentage
+              }
+          }
       - id: company-size
         type: vertical-bar
         dataKey: breakdown
-        bucketKeys: companySize
         showDescription: false
+        bucketKeys: companySize
+        query: >
+          companySize {
+            year
+            total
+            completion
+            buckets {
+              id
+              count
+              percentage
+            }
+          }
       - id: source
         type: horizontal-bar
         dataKey: breakdown
@@ -42,7 +73,7 @@
         dataKey: breakdown
         showDescription: true
         translateData: true
-      - id: javascript-proficiency
+      - id: css-proficiency
         type: vertical-bar
         dataKey: breakdown
         bucketKeys: javascriptProficiency
@@ -218,54 +249,118 @@
               items:
                   - designcode2
 
-- id: units-and-selectors
-  path: /units-and-selectors
-  type: page
+- id: frontend
+  path: /front-end-frameworks
+  type: tools
+  defaultBlockType: tool
   blocks:
-      - id: units
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: pseudo-elements
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: combinators
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: tree-document-structure
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: attributes
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: links-urls
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: interaction
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: form-controls
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: resources-sponsors
-        type: resources
-        items:
-            - frontendmasters-code
+    - id: frontend-section-overview
+      type: tools-section-overview
+    - id: frontend-experience-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: experience
+    - id: frontend-salary-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: salary
+    - id: frontend-company-size-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: company-size
+    - id: happiness-frontend
+      type: happiness
+    - id: resources-sponsors
+      type: resources
+      items:
+          - frontendmasters-sass
+  children: 
+      - react
+      - vue
+      - angular
+      - preact
+      - ember
+      - svelte
+      - id: frontend-other
+        type: other
+      - id: frontend-conclusion
+        type: conclusion
+
+- id: datalayer
+  path: /data-layer
+  type: tools
+  defaultBlockType: tool
+  blocks:
+    - id: datalayer-section-overview
+      type: tools-section-overview
+    - id: datalayer-experience-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: experience
+    - id: datalayer-salary-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: salary
+    - id: datalayer-company-size-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: company-size
+    - id: datalayer-frontend
+      type: happiness
+    - id: resources-sponsors
+      type: resources
+      items:
+          - frontendmasters-sass
+  children: 
+      - redux
+      - apollo
+      - graphql
+      - relay
+      - mobx
+      - id: datalayer-other
+        type: other
+      - id: datalayer-conclusion
+        type: conclusion
+
+
+- id: backend
+  path: /back-end
+  type: tools
+  defaultBlockType: tool
+  blocks:
+    - id: backend-section-overview
+      type: tools-section-overview
+    - id: backend-experience-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: experience
+    - id: backend-salary-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: salary
+    - id: backend-company-size-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: company-size
+    - id: backend-frontend
+      type: happiness
+    - id: resources-sponsors
+      type: resources
+      items:
+          - frontendmasters-sass
+  children: 
+      - express
+      - nextjs
+      - koa
+      - meteor
+      - sails
+      - feathers
+      - nuxt
+      - gatsby
+      - id: datalayer-other
+        type: other
+      - id: datalayer-conclusion
+        type: conclusion
 
 - id: technologies
   path: /technologies
@@ -277,77 +372,62 @@
       - id: tools-scatterplot
         type: tools-scatterplot
   children:
-      - id: pre-post-processors
-        path: /pre-post-processors
+      - id: frontend
+        path: /front-end
         type: tools
         blocks:
-            - id: tools-section-overview
+            - id: frontend-section-overview
               type: tools-section-overview
-            - id: pre-post-processors-experience-heatmap
+            - id: frontend-experience-heatmap
               type: heatmap
               subject: tools
               heatmapType: experience
-            - id: pre-post-processors-salary-heatmap
+            - id: frontend-salary-heatmap
               type: heatmap
               subject: tools
               heatmapType: salary
-            - sass
-            - less
-            - postcss
-            - stylus
-            - id: happiness-test
+            - react
+            - vue
+            - angular
+            - preact
+            - ember
+            - svelte
+            - id: other-frontend
+              type: other
+            - id: happiness-frontend
               type: happiness
             - id: resources-sponsors
               type: resources
               items:
                   - frontendmasters-sass
-
-      - id: css-frameworks
-        path: /css-frameworks
+      - id: datalayer
+        path: /data-layer
         type: tools
         blocks:
-            - id: tools-section-overview
+            - id: datalayer-section-overview
               type: tools-section-overview
-            - id: css-frameworks-experience-heatmap
+            - id: datalayer-experience-heatmap
               type: heatmap
               subject: tools
               heatmapType: experience
-            - id: css-frameworks-salary-heatmap
+            - id: datalayer-salary-heatmap
               type: heatmap
               subject: tools
               heatmapType: salary
-            - bootstrap
-            - materialize-css
-            - ant-design
-            - semantic-ui
-            - bulma
-            - foundation
-            - uikit
-            - tachyons
-            - primer
-            - tailwind
-            - purecss
-
-      - id: methodologies
-        path: /methodologies
-        type: tools
-        blocks:
-            - id: tools-section-overview
-              type: tools-section-overview
-            - id: methodologies-experience-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: experience
-            - id: methodologies-salary-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: salary
-            - bem
-            - atomic-css
-            - oocss
-            - smacss
-            - it-css
-
+            - redux
+            - apollo
+            - graphql
+            - mobx
+            - relay
+            - id: other-datalayer
+              type: other
+            - id: happiness-datalayer
+              type: happiness
+            - id: resources-sponsors
+              type: resources
+              items:
+                  - frontendmasters-sass
+      
       - id: css-in-js
         path: /css-in-js
         type: tools
@@ -379,6 +459,17 @@
   path: /other-tools
   type: page
   blocks:
+      - id: utilities
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+      - id: utilities-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
       - id: text-editors
         type: horizontal-bar
         dataKey: usage
@@ -401,33 +492,28 @@
         showDescription: true
         mode: relative
         units: count
-
-- id: environments
-  path: /environments
-  type: page
-  blocks:
-      - id: env-browsers
+      - id: build-tools
         type: horizontal-bar
-        dataKey: environments
+        dataKey: usage
         showDescription: true
         mode: absolute
-      - id: form-factors
+      - id: build-tools-others
         type: horizontal-bar
-        dataKey: environments
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: non-js-languages
+        type: horizontal-bar
+        dataKey: usage
         showDescription: true
         mode: absolute
-      - id: print-styles
-        type: vertical-bar
-        dataKey: usage
-        bucketKeys: environmentUsage
+      - id: non-js-languages-others
+        type: horizontal-bar
+        dataKey: others
         showDescription: true
-        showLegend: true
-      - id: email-styles
-        type: vertical-bar
-        dataKey: usage
-        bucketKeys: environmentUsage
-        showDescription: true
-        showLegend: true
+        mode: relative
+        units: count
 
 - id: resources
   path: /resources

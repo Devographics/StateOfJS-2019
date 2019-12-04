@@ -24,18 +24,31 @@ const guessPageTemplate = type => {
     let template
     switch (type) {
         case 'features':
-            template = 'modules/features/Features'
+            template = 'modules/features/FeaturesTemplate.js'
             break
 
         case 'tools':
-            template = 'modules/tools/Tools'
+            template = 'modules/tools/ToolsTemplate.js'
             break
+
+        case 'tool':
+            template = 'modules/tools/ToolTemplate.js'
+            break
+
+        case 'other':
+            template = 'modules/tools/OtherTemplate.js'
+            break
+
+        case 'conclusion':
+            template = 'modules/tools/ConclusionTemplate.js'
+            break
+    
 
         default:
             throw new Error(`no template defined for page type: ${type}`)
     }
 
-    return path.resolve(`./src/${template}Template.js`)
+    return path.resolve(`./src/${template}`)
 }
 
 const localizedPath = (path, locale) =>
@@ -80,7 +93,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
     flat.forEach(page => {
         const context = getPageContext(page)
         if (page.type !== 'page') {
-            const template = guessPageTemplate(page.type)
+            const template = guessPageTemplate(page.type || page.defaultBlockType)
 
             locales.forEach(locale => {
                 createPage({

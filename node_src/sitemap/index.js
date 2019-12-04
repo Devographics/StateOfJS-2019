@@ -1,13 +1,17 @@
 const fs = require('fs')
 const { findIndex, findLastIndex, omit } = require('lodash')
 const yaml = require('js-yaml')
+pick = require('lodash/pick')
 
 exports.pageFromConfig = (stack, config, parent) => {
+    // if config is a string, use that as the id
+    const configObject = typeof config === 'string' ? { id: config } : config;
+    const pagePath = configObject.path || `/${configObject.id}`
     const page = {
-        ...config,
+        ...configObject,
         path:
-            parent === undefined ? config.path : `${parent.path.replace(/\/$/, '')}${config.path}`,
-        is_hidden: !!config.is_hidden,
+            parent === undefined ? pagePath : `${parent.path.replace(/\/$/, '')}${pagePath}`,
+        is_hidden: !!configObject.is_hidden,
         children: []
     }
     // if page has no defaultBlockType, get it from parent
@@ -41,8 +45,8 @@ exports.pageFromConfig = (stack, config, parent) => {
     }
     stack.flat.push(page)
 
-    if (Array.isArray(config.children)) {
-        config.children.forEach(child => {
+    if (Array.isArray(configObject.children)) {
+        configObject.children.forEach(child => {
             page.children.push(exports.pageFromConfig(stack, child, page))
         })
     }
@@ -69,13 +73,13 @@ exports.computeSitemap = async rawSitemap => {
     // assign prev/next page using flat pages
     stack.flat.forEach(page => {
         const index = findIndex(stack.flat, p => p.path === page.path)
-        const previous = stack.flat[index - 1]
+        const previous = pick(stack.flat[index - 1], ['id', 'path'])
         if (previous !== undefined && previous.is_hidden !== true) {
             page.previous = omit(previous, ['is_hidden', 'previous', 'next', 'children', 'blocks'])
         }
 
         const lastIndex = findLastIndex(stack.flat, p => p.path === page.path)
-        const next = stack.flat[lastIndex + 1]
+        const next = pick(stack.flat[lastIndex + 1], ['id', 'path'])
         if (next !== undefined && next.is_hidden !== true) {
             page.next = omit(next, ['is_hidden', 'previous', 'next', 'children', 'blocks'])
         }

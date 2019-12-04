@@ -8,7 +8,7 @@ import LanguageSwitcher from '../i18n/LanguageSwitcher'
 const filteredNav = sitemap.filter(page => !page.is_hidden)
 
 const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
-    const isActive = currentPath.indexOf(page.id) !== -1
+    const isActive = currentPath.indexOf(page.path) !== -1
     const hasChildren = page.children.length > 0
     const displayChildren = hasChildren > 0 && isActive
 

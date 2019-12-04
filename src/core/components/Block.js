@@ -14,7 +14,8 @@ const Block = ({
     children,
     units,
     setUnits,
-    completion
+    completion,
+    error
 }) => {
     return (
         <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
@@ -30,7 +31,9 @@ const Block = ({
                 completion={completion}
             />
             {isShareable && <ShareBlockDebug id={id} />}
-            <div className="Block__Contents">{children}</div>
+            <div className="Block__Contents">
+                {error ? <div className="error">{error}</div> : children}
+            </div>
         </div>
     )
 }
