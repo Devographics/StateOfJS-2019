@@ -32,9 +32,7 @@ const getChartData = (data, block) => {
     const blockAgg = blockData[block.dataKey]
     if (blockAgg === undefined || !Array.isArray(blockAgg.buckets)) {
         throw new Error(
-            `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${
-                block.id
-            }`
+            `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${block.id}`
         )
     }
 

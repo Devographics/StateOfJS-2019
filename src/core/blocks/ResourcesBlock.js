@@ -35,9 +35,7 @@ const ResourcesBlock = ({ block }) => {
                     {sectionResources.map(resource => {
                         const url = resource.url.includes('utm_source')
                             ? resource.url
-                            : `${
-                                  resource.url
-                              }?utm_source=stateofjs&utm_medium=sponsor&utm_campaign=${id}`
+                            : `${resource.url}?utm_source=stateofjs&utm_medium=sponsor&utm_campaign=${id}`
 
                         return (
                             <div key={resource.name} className="resource">
@@ -48,9 +46,7 @@ const ResourcesBlock = ({ block }) => {
                                             onClick={() => trackClick(id, resource, 'text')}
                                             href={`${url}&utm_content=textlink`}
                                             style={{
-                                                backgroundImage: `url(/images/resources/${
-                                                    resource.image
-                                                })`
+                                                backgroundImage: `url(/images/resources/${resource.image})`
                                             }}
                                             title={resource.name}
                                         />

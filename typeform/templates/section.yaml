@@ -1,8 +1,0 @@
-# Template for a survey section
----
-title: TITLE
-ref: ID_section
-properties:
-  description: DESCRIPTION
-  fields: []
-type: group

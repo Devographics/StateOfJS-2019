@@ -9,7 +9,7 @@ import { useEntities } from 'core/entities/entitiesContext'
 import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
 
-export const chartSegments = ['would_use', 'interested', 'not_interested', 'would_not_use'];
+export const chartSegments = ['would_use', 'interested', 'not_interested', 'would_not_use']
 
 /*
 

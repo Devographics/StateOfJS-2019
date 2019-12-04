@@ -59,6 +59,30 @@
         items:
             - frontendmasters-design
 
+- id: features-reloaded
+  path: /features-reloaded
+  type: page
+  children:
+      - id: syntax
+        path: /syntax
+        type: page
+
+      - id: language
+        path: /language
+        type: page
+
+      - id: data-structures
+        path: /data-structures
+        type: page
+
+      - id: browser-apis
+        path: /browser-apis
+        type: page
+
+      - id: other-features
+        path: /other-features
+        type: page
+
 - id: features
   path: /features
   type: page
@@ -451,19 +475,19 @@
   path: /opinions
   type: page
   blocks:
-      - id: easy-to-learn
+      - id: js_moving_in_right_direction
         type: opinion-scale
-      - id: evolving-too-slowly
+      - id: building_js_apps_overly_complex
         type: opinion-scale
-      - id: utility-classes
-        type: opinion-scale
-        showDescription: true
-      - id: selector-nesting
+      - id: js_over_used_online
         type: opinion-scale
         showDescription: true
-      - id: programming-language
+      - id: enjoy_building_js_apps
         type: opinion-scale
-      - id: enjoy-css
+        showDescription: true
+      - id: would_like_js_to_be_main_lang
+        type: opinion-scale
+      - id: js_ecosystem_changing_to_fast
         type: opinion-scale
       - id: missing-features
         type: horizontal-bar

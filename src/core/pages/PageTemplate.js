@@ -5,8 +5,7 @@ import PageFooter from 'core/pages/PageFooter'
 import { usePageContext } from 'core/helpers/pageContext'
 import BlockSwitcher from 'core/components/BlockSwitcher'
 
-const PageTemplate = props => {
-    const { data = {} } = props
+const PageTemplate = ({ data }) => {
     const context = usePageContext()
 
     return (

@@ -37,9 +37,9 @@ const Award = ({ type, items }) => {
                                     numberOfPieces={80}
                                     initialVelocityX={5}
                                     initialVelocityY={20}
-                                    confettiSource={{x: 200, y: 100, w: 100, h:100}}
+                                    confettiSource={{ x: 200, y: 100, w: 100, h: 100 }}
                                     colors={distinctColors}
-                                    />
+                                />
                             </div>
                         )}
                         <span>{winner.name}</span>

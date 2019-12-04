@@ -45,7 +45,11 @@ const FeaturesOverviewBlock = ({ data }) => {
     const { getName } = useEntities()
     const { translate } = useI18n()
 
-    const chartData = useMemo(() => getChartData(data, getName, translate), [data, getName, translate])
+    const chartData = useMemo(() => getChartData(data, getName, translate), [
+        data,
+        getName,
+        translate
+    ])
 
     // note: slightly different from Usage legend
     const legends = [

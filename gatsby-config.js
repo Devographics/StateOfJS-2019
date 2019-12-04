@@ -30,6 +30,14 @@ module.exports = {
                 ignore: ignoreFiles
             }
         },
+        {
+          resolve: 'gatsby-source-graphql',
+          options: {
+              typeName: 'StateOfApi',
+              fieldName: "stateOfApi",
+              url: 'http://localhost:4000',
+          },
+        },
         `gatsby-transformer-remark`,
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',

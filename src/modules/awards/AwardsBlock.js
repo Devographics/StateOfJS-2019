@@ -113,7 +113,7 @@ const getBlockData = (data, getName) => {
     return [
         {
             type: 'feature-adoption',
-            items: featureAdoption,
+            items: featureAdoption
         },
         {
             type: 'tool-usage',

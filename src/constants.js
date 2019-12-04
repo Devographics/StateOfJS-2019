@@ -93,7 +93,15 @@ export const colorScale = [
     '#ca4040'
 ]
 
-export const salaryKeys = ['none', '0_10', '10_30', '30_50', '50_100', '100_200', '200_more']
+export const salaryKeys = [
+    'work_for_free',
+    '0_10',
+    '10_30',
+    '30_50',
+    '50_100',
+    '100_200',
+    'more_than_200'
+]
 
 const companySizeKeys = [
     '1',
@@ -182,7 +190,6 @@ export const opinions = [
         color: colors.greyMedium
     }
 ]
-
 
 export const otherColors = [
     {
