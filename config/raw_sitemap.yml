@@ -34,33 +34,33 @@
         type: vertical-bar
         bucketKeys: yearsOfExperience
         showDescription: true
-        query: > 
-          yearsOfExperience {
-              year
-              total
-              completion
-              buckets {
-                  id
-                  count
-                  percentage
-              }
-          }
+        query: >
+            yearsOfExperience {
+                year
+                total
+                completion
+                buckets {
+                    id
+                    count
+                    percentage
+                }
+            }
       - id: company-size
         type: vertical-bar
         dataKey: breakdown
         showDescription: false
         bucketKeys: companySize
         query: >
-          companySize {
-            year
-            total
-            completion
-            buckets {
-              id
-              count
-              percentage
+            companySize {
+              year
+              total
+              completion
+              buckets {
+                id
+                count
+                percentage
+              }
             }
-          }
       - id: source
         type: horizontal-bar
         dataKey: breakdown
@@ -254,27 +254,27 @@
   type: tools
   defaultBlockType: tool
   blocks:
-    - id: frontend-section-overview
-      type: tools-section-overview
-    - id: frontend-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-    - id: frontend-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-    - id: frontend-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-    - id: happiness-frontend
-      type: happiness
-    - id: resources-sponsors
-      type: resources
-      items:
-          - frontendmasters-sass
-  children: 
+      - id: frontend-section-overview
+        type: tools-section-overview
+      - id: frontend-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+      - id: frontend-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+      - id: frontend-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+      - id: happiness-frontend
+        type: happiness
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+  children:
       - react
       - vue
       - angular
@@ -291,27 +291,27 @@
   type: tools
   defaultBlockType: tool
   blocks:
-    - id: datalayer-section-overview
-      type: tools-section-overview
-    - id: datalayer-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-    - id: datalayer-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-    - id: datalayer-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-    - id: datalayer-frontend
-      type: happiness
-    - id: resources-sponsors
-      type: resources
-      items:
-          - frontendmasters-sass
-  children: 
+      - id: datalayer-section-overview
+        type: tools-section-overview
+      - id: datalayer-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+      - id: datalayer-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+      - id: datalayer-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+      - id: datalayer-frontend
+        type: happiness
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+  children:
       - redux
       - apollo
       - graphql
@@ -322,33 +322,32 @@
       - id: datalayer-conclusion
         type: conclusion
 
-
 - id: backend
   path: /back-end
   type: tools
   defaultBlockType: tool
   blocks:
-    - id: backend-section-overview
-      type: tools-section-overview
-    - id: backend-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-    - id: backend-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-    - id: backend-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-    - id: backend-frontend
-      type: happiness
-    - id: resources-sponsors
-      type: resources
-      items:
-          - frontendmasters-sass
-  children: 
+      - id: backend-section-overview
+        type: tools-section-overview
+      - id: backend-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+      - id: backend-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+      - id: backend-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+      - id: backend-frontend
+        type: happiness
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+  children:
       - express
       - nextjs
       - koa
@@ -427,7 +426,7 @@
               type: resources
               items:
                   - frontendmasters-sass
-      
+
       - id: css-in-js
         path: /css-in-js
         type: tools
