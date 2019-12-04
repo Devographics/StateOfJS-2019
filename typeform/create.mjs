@@ -37,6 +37,7 @@ const templates = {
     statictext: fs.readFileSync('./templates/statictext.yaml', 'utf8'),
     pattern: fs.readFileSync('./templates/pattern.yaml', 'utf8'),
     happiness: fs.readFileSync('./templates/happiness.yaml', 'utf8'),
+    country: fs.readFileSync('./templates/country.yaml', 'utf8'),
 
     // logic templates
     logic: fs.readFileSync('./templates/logic.yaml', 'utf8'),
