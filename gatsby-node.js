@@ -76,13 +76,11 @@ const getPageQuery = page => {
         return
     }
     const variables = _.compact(blocks.map(b => b.queryVariables))
-    return `
-        query page${cleanIdString(id)}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''}{
-            stateOfApi{
-                ${queries.join('\n')}
-            }
-        }
-    `
+    return `query page${cleanIdString(id)}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''}{
+  stateOfApi{
+    ${queries.join('\n')}
+  }
+}`
 }
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {

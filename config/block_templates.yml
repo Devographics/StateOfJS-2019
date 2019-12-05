@@ -1,3 +1,27 @@
+# Used for salaries, company size, experience, etc. blocks
+demographics-block: 
+  type: vertical-bar
+  dataPath: demographics.{id}.2 # select the 4th array item to select the 4th year
+  bucketKeys: {id}
+  showDescription: true
+  query: >
+      demographics {
+        {id} {
+          year
+          total
+          completion{
+              percentage
+              count
+          }
+          buckets {
+            count
+            id
+            percentage
+          }
+        }
+      }
+
+# Used for "I think JavaScript is moving in the right direction", etc. blocks
 opinion-scale: 
   type: opinion-scale
   dataPath: {id}.byYear

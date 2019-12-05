@@ -14,68 +14,11 @@
         type: participation-by-country
         showDescription: true
       - id: salary
-        type: vertical-bar
-        dataPath: demographics.salary.2 # select the 4th array item to select the 4th year
-        bucketKeys: salary
-        showDescription: true
-        query: >
-            demographics {
-              salary {
-                year
-                total
-                completion{
-                    percentage
-                    count
-                }
-                buckets {
-                  count
-                  id
-                  percentage
-                }
-              }
-            }
-      - id: years-of-experience
-        dataPath: demographics.yearsOfExperience.2
-        type: vertical-bar
-        bucketKeys: yearsOfExperience
-        showDescription: true
-        query: > 
-          demographics {
-            yearsOfExperience {
-                year
-                total
-                completion{
-                    percentage
-                    count
-                }
-                buckets {
-                    id
-                    count
-                    percentage
-                }
-            }
-          }
-      - id: company-size
-        type: vertical-bar
-        dataPath: demographics.companySize.2
-        showDescription: false
-        bucketKeys: companySize
-        query: >
-          demographics {
-            companySize {
-              year
-              total
-              completion{
-                  percentage
-                  count
-              }
-              buckets {
-                id
-                count
-                percentage
-              }
-            }
-          }
+        template: demographics-block
+      - id: yearsOfExperience
+        template: demographics-block
+      - id: companySize
+        template: demographics-block
       - id: source
         type: horizontal-bar
         dataKey: breakdown
@@ -470,107 +413,107 @@
 #               items:
 #                   - frontendmasters-react
 
-# - id: other-tools
-#   path: /other-tools
-#   type: page
-#   blocks:
-#       - id: utilities
-#         type: horizontal-bar
-#         dataKey: usage
-#         showDescription: true
-#         mode: absolute
-#       - id: utilities-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
-#       - id: text-editors
-#         type: horizontal-bar
-#         dataKey: usage
-#         showDescription: true
-#         mode: absolute
-#       - id: text-editors-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
-#       - id: browsers
-#         type: horizontal-bar
-#         dataKey: usage
-#         showDescription: true
-#         mode: absolute
-#       - id: browsers-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
-#       - id: build-tools
-#         type: horizontal-bar
-#         dataKey: usage
-#         showDescription: true
-#         mode: absolute
-#       - id: build-tools-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
-#       - id: non-js-languages
-#         type: horizontal-bar
-#         dataKey: usage
-#         showDescription: true
-#         mode: absolute
-#       - id: non-js-languages-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
+- id: other-tools
+  path: /other-tools
+  type: page
+  blocks:
+      - id: utilities
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+      - id: utilities-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: text-editors
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+      - id: text-editors-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: browsers
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+      - id: browsers-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: build-tools
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+      - id: build-tools-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: non-js-languages
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+      - id: non-js-languages-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
 
-# - id: resources
-#   path: /resources
-#   type: page
-#   blocks:
-#       - id: blogs-magazines
-#         type: horizontal-bar
-#         dataKey: resources
-#         showDescription: true
-#         mode: absolute
-#       - id: blogs-magazines-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
-#       - id: sites-courses
-#         type: horizontal-bar
-#         dataKey: resources
-#         showDescription: true
-#         mode: absolute
-#       - id: sites-courses-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
-#       - id: podcasts
-#         type: horizontal-bar
-#         dataKey: resources
-#         showDescription: true
-#         mode: absolute
-#       - id: podcasts-others
-#         type: horizontal-bar
-#         dataKey: others
-#         showDescription: true
-#         mode: relative
-#         units: count
-#       - id: resources-sponsors
-#         type: resources
-#         items:
-#             - storybook1
+- id: resources
+  path: /resources
+  type: page
+  blocks:
+      - id: blogs-magazines
+        type: horizontal-bar
+        dataKey: resources
+        showDescription: true
+        mode: absolute
+      - id: blogs-magazines-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: sites-courses
+        type: horizontal-bar
+        dataKey: resources
+        showDescription: true
+        mode: absolute
+      - id: sites-courses-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: podcasts
+        type: horizontal-bar
+        dataKey: resources
+        showDescription: true
+        mode: absolute
+      - id: podcasts-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+      - id: resources-sponsors
+        type: resources
+        items:
+            - storybook1
 
 - id: opinions
   path: /opinions
@@ -594,27 +537,27 @@
         type: horizontal-bar
         dataKey: features
 
-# - id: awards
-#   path: /awards
-#   type: page
-#   blocks:
-#       - id: feature-adoption
-#         type: award
-#       - id: tool-usage
-#         type: award
-#       - id: tool-satisfaction
-#         type: award
-#       - id: tool-interest
-#         type: award
-#       - id: resource-usage
-#         type: award
+- id: awards
+  path: /awards
+  type: page
+  blocks:
+      - id: feature-adoption
+        type: award
+      - id: tool-usage
+        type: award
+      - id: tool-satisfaction
+        type: award
+      - id: tool-interest
+        type: award
+      - id: resource-usage
+        type: award
 
-# - id: conclusion
-#   path: /conclusion
-#   type: page
-#   blocks:
-#       - id: conclusion
-#         type: text
+- id: conclusion
+  path: /conclusion
+  type: page
+  blocks:
+      - id: conclusion
+        type: text
 
 # - id: support
 #   path: /support
