@@ -4,13 +4,14 @@ import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
-import { getColor } from '../../constants'
-import { usePageContext } from '../helpers/pageContext'
-import StronglyDisagreeIcon from '../../modules/opinions/components/icons/StronglyDisagreeIcon'
-import DisagreeIcon from '../../modules/opinions/components/icons/DisagreeIcon'
-import NeutralIcon from '../../modules/opinions/components/icons/NeutralIcon'
-import AgreeIcon from '../../modules/opinions/components/icons/AgreeIcon'
-import StronglyAgreeIcon from '../../modules/opinions/components/icons/StronglyAgreeIcon'
+import { usePageContext } from 'core/helpers/pageContext'
+import {
+    StronglyDisagreeIcon,
+    DisagreeIcon,
+    NeutralIcon,
+    AgreeIcon,
+    StronglyAgreeIcon
+} from '../components/icons'
 
 const emojiIcons = [StronglyDisagreeIcon, DisagreeIcon, NeutralIcon, AgreeIcon, StronglyAgreeIcon]
 
@@ -53,9 +54,11 @@ const formatTick = translate => value => {
     return translate(`opinion_scale.${value}.long`)
 }
 
-const OpinionScaleBlock = ({ block, data }) => {
+const OpinionBlock = ({ block, data }) => {
     const context = usePageContext()
     const { width } = context
+
+    console.log({ block, data, context })
 
     const { translate } = useI18n()
 
@@ -111,7 +114,7 @@ const OpinionScaleBlock = ({ block, data }) => {
     )
 }
 
-OpinionScaleBlock.propTypes = {
+OpinionBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         dataKey: PropTypes.string,
@@ -136,4 +139,4 @@ OpinionScaleBlock.propTypes = {
     }).isRequired
 }
 
-export default memo(OpinionScaleBlock)
+export default memo(OpinionBlock)

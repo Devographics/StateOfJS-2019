@@ -1,10 +1,10 @@
 // generic
 import HorizontalBarBlock from 'core/blocks/HorizontalBarBlock'
 import VerticalBarBlock from 'core/blocks/VerticalBarBlock'
-import OpinionScaleBlock from 'core/blocks/OpinionScaleBlock'
 import TextBlock from 'core/blocks/TextBlock'
 import ResourcesBlock from 'core/blocks/ResourcesBlock'
 import HeatmapBlock from 'core/blocks/HeatmapBlock'
+import { OpinionBlock } from 'modules/opinions/blocks'
 
 // demographics
 // import SourceBlock from 'modules/demographics/blocks/SourceBlock'
@@ -32,7 +32,7 @@ const blockRegistry = {
     // generic
     'horizontal-bar': HorizontalBarBlock,
     'vertical-bar': VerticalBarBlock,
-    'opinion-scale': OpinionScaleBlock,
+    'opinion-scale': OpinionBlock,
     text: TextBlock,
     resources: ResourcesBlock,
     heatmap: HeatmapBlock,

@@ -11,6 +11,7 @@ const applyTemplate = (config, templateName, rawTemplates) => {
     const replacedTemplates = rawTemplates.replace(new RegExp('{id}', 'g'), id)
     const templates = yaml.safeLoad(replacedTemplates)
     const templateObject = templates[templateName] || {}
+
     return { ...templateObject, ...config }
 }
 

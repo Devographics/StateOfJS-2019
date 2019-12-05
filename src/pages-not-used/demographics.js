@@ -79,7 +79,7 @@ export const query = graphql`
                 companySize {
                     year
                     total
-                    completion{
+                    completion {
                         percentage
                         count
                     }
@@ -92,7 +92,7 @@ export const query = graphql`
                 yearsOfExperience {
                     year
                     total
-                    completion{
+                    completion {
                         percentage
                         count
                     }
@@ -105,7 +105,7 @@ export const query = graphql`
                 salary {
                     year
                     total
-                    completion{
+                    completion {
                         percentage
                         count
                     }
@@ -118,7 +118,7 @@ export const query = graphql`
                 gender {
                     year
                     total
-                    completion{
+                    completion {
                         percentage
                         count
                     }
