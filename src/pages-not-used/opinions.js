@@ -67,7 +67,10 @@ export const query = graphql`
                 byYear {
                     year
                     total
-                    completion
+                    completion{
+                        percentage
+                        count
+                    }
                     buckets {
                         id
                         count

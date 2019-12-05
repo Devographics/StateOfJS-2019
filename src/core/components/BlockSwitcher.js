@@ -4,17 +4,19 @@ import blockRegistry from '../helpers/blockRegistry'
 import { keys } from '../../constants'
 import isEmpty from 'lodash/isEmpty'
 import Block from 'core/components/Block'
+import get from 'lodash/get'
 
-const BlockSwitcher = ({ data, block, index }) => {
+const BlockSwitcher = ({ pageData, block, index }) => {
     const { id, type } = block
-    if (!data || data === null || isEmpty(data) || isEmpty(data.data)) {
-        throw new Error(`No available data for block ${id} | type: ${type}`)
+    if (!pageData || pageData === null || isEmpty(pageData)) {
+        throw new Error(`No available page data for block ${id} | type: ${type}`)
     }
     if (!blockRegistry[type]) {
         throw new Error(`Missing Block Component! Block ID: ${id} | type: ${type}`)
     }
     const BlockComponent = blockRegistry[type]
-    return <BlockComponent block={block} data={data} index={index} />
+    const blockData = get(pageData, block.dataPath)
+    return <BlockComponent block={block} data={blockData} index={index} />
 }
 
 class ErrorBoundary extends React.Component {

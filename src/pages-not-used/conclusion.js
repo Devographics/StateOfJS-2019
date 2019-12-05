@@ -17,7 +17,7 @@ const Conclusion = ({ data }) => (
 export default Conclusion
 
 export const query = graphql`
-    query conclusionByLocale($locale: String!) {
+    query conclusionByLocale($locale: String) {
         conclusion: markdownRemark(
             frontmatter: {
                 type: { eq: "conclusion" }

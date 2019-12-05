@@ -4,22 +4,22 @@ import PageTemplate from 'core/pages/PageTemplate'
 export default PageTemplate
 
 export const query = graphql`
-    query featuresOverview($locale: String!) {
+    query toolsOverview($locale: String) {
         introduction: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }
-                page: { eq: "features" }
+                page: { eq: "technologies" }
                 locale: { eq: $locale }
             }
         ) {
             html
         }
-        features: allFeaturesUsageYaml {
+        tools: allToolsYaml {
             nodes {
                 section_id
                 aggregations {
                     id
-                    usage {
+                    opinion {
                         total
                         buckets {
                             id

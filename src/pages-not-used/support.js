@@ -13,7 +13,7 @@ const Support = ({ data }) => (
 export default Support
 
 export const query = graphql`
-    query supportByLocale($locale: String!) {
+    query supportByLocale($locale: String) {
         content: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }

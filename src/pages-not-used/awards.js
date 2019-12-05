@@ -19,7 +19,7 @@ const Awards = ({ data }) => {
 export default Awards
 
 export const query = graphql`
-    query awardsByLocale($locale: String!) {
+    query awardsByLocale($locale: String) {
         introduction: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }

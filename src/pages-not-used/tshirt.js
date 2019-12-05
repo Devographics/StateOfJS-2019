@@ -15,7 +15,7 @@ const Tshirt = ({ data }) => (
 export default Tshirt
 
 export const query = graphql`
-    query tshirtIntro($locale: String!) {
+    query tshirtIntro($locale: String) {
         introduction: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }

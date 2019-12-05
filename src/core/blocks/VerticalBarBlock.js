@@ -8,59 +8,65 @@ import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { usePageContext } from '../helpers/pageContext'
 
-const getChartData = (data, block) => {
-    if (!data || !data.data) {
+// const getChartData = (data, block) => {
+//     if (!data || !data.data) {
+//         throw new Error(
+//             `VerticalBarBlock: Missing data for block ${block.id}, page data is undefined`
+//         )
+//     }
+
+//     const bucketKeys = keys[block.bucketKeys]
+//     if (!Array.isArray(bucketKeys)) {
+//         throw new Error(
+//             `VerticalBarBlock: Missing bucket keys for block ${
+//                 block.id
+//             }, bucketKeys: ${block.bucketKeys || 'undefined'}`
+//         )
+//     }
+
+//     const blockData = data.data.aggregations.find(agg => agg.id === block.id)
+//     if (!blockData) {
+//         throw new Error(`VerticalBarBlock: Missing data for block ${block.id}`)
+//     }
+
+//     const blockAgg = blockData[block.dataKey]
+//     if (blockAgg === undefined || !Array.isArray(blockAgg.buckets)) {
+//         throw new Error(
+//             `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${block.id}`
+//         )
+//     }
+
+//     const sortedBuckets = bucketKeys.map(bucketKey => {
+//         const bucket = blockAgg.buckets.find(b => b.id === bucketKey)
+//         if (bucket === undefined) {
+//             throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
+//         }
+
+//         return bucket
+//     })
+
+//     return {
+//         sortedBuckets,
+//         bucketKeys,
+//         completion: blockAgg.completion,
+//         total: blockAgg.total
+//     }
+// }
+
+const VerticalBarBlock = ({ block, data }) => {
+    if (!data) {
         throw new Error(
             `VerticalBarBlock: Missing data for block ${block.id}, page data is undefined`
         )
     }
-
-    const bucketKeys = keys[block.bucketKeys]
-    if (!Array.isArray(bucketKeys)) {
-        throw new Error(
-            `VerticalBarBlock: Missing bucket keys for block ${
-                block.id
-            }, bucketKeys: ${block.bucketKeys || 'undefined'}`
-        )
-    }
-
-    const blockData = data.data.aggregations.find(agg => agg.id === block.id)
-    if (!blockData) {
-        throw new Error(`VerticalBarBlock: Missing data for block ${block.id}`)
-    }
-
-    const blockAgg = blockData[block.dataKey]
-    if (blockAgg === undefined || !Array.isArray(blockAgg.buckets)) {
-        throw new Error(
-            `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${block.id}`
-        )
-    }
-
-    const sortedBuckets = bucketKeys.map(bucketKey => {
-        const bucket = blockAgg.buckets.find(b => b.id === bucketKey)
-        if (bucket === undefined) {
-            throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
-        }
-
-        return bucket
-    })
-
-    return {
-        sortedBuckets,
-        bucketKeys,
-        completion: blockAgg.completion,
-        total: blockAgg.total
-    }
-}
-
-const VerticalBarBlock = ({ block, data }) => {
     const {
         id,
         showDescription,
         showLegend,
         mode = 'relative',
         units: defaultUnits = 'percentage',
-        translateData
+        translateData,
+        bucketKeys: bucketKeysName
     } = block
 
     const context = usePageContext()
@@ -70,10 +76,17 @@ const VerticalBarBlock = ({ block, data }) => {
 
     const [units, setUnits] = useState(defaultUnits)
 
-    const { bucketKeys, sortedBuckets, total, completion } = useMemo(
-        () => getChartData(data, block),
-        [data, block]
-    )
+    const bucketKeys = keys[bucketKeysName]
+
+    const { buckets, total, completion } = data
+
+    const sortedBuckets = bucketKeys.map(bucketKey => {
+        const bucket = buckets.find(b => b.id === bucketKey)
+        if (bucket === undefined) {
+            throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
+        }
+        return bucket
+    })
 
     const legends = bucketKeys.map(key => ({
         id: `${block.id}.${key}`,
