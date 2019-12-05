@@ -4,11 +4,11 @@ import { graphql } from 'gatsby'
 export default PageTemplate
 
 export const query = graphql`
-    query featuresReloadedDataStructures($locale: String) {
+    query featuresDataStructures($locale: String) {
         introduction: markdownRemark(
             frontmatter: {
                 type: { eq: "introduction" }
-                page: { eq: "other-tools" }
+                page: { eq: "features-data-structures" }
                 locale: { eq: $locale }
             }
         ) {

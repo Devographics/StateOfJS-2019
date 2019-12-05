@@ -6,130 +6,13 @@ import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { getColor } from '../../constants'
 import { usePageContext } from '../helpers/pageContext'
+import StronglyDisagreeIcon from '../../modules/opinions/components/icons/StronglyDisagreeIcon'
+import DisagreeIcon from '../../modules/opinions/components/icons/DisagreeIcon'
+import NeutralIcon from '../../modules/opinions/components/icons/NeutralIcon'
+import AgreeIcon from '../../modules/opinions/components/icons/AgreeIcon'
+import StronglyAgreeIcon from '../../modules/opinions/components/icons/StronglyAgreeIcon'
 
-const SuperSad = ({ width, height }) => (
-    <svg
-        width={width}
-        height={height}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
-        <circle cx="35.5" cy="45.5" r="3.5" fill={getColor('activeColor')} />
-        <circle cx="64.5" cy="45.5" r="3.5" fill={getColor('activeColor')} />
-        <path
-            d="M64 75C61.2 72 57.732 69 50 69C42.268 69 38.8 72 36 75"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-        <path
-            d="M28 32L41 36"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-        <path
-            d="M73 32L59 36"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-    </svg>
-)
-
-const Sad = ({ width, height }) => (
-    <svg
-        width={width}
-        height={height}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
-        <circle cx="35.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
-        <circle cx="64.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
-        <path
-            d="M65 68C62 65 58.2843 62 50 62C41.7157 62 38 65 35 68"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-    </svg>
-)
-
-const Neutral = ({ width, height }) => (
-    <svg
-        width={width}
-        height={height}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
-        <circle cx="35.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
-        <circle cx="64.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
-        <path
-            d="M65 65.25H50H35"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-    </svg>
-)
-
-const Happy = ({ width, height }) => (
-    <svg
-        width={width}
-        height={height}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
-        <circle cx="35.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
-        <circle cx="64.5" cy="40.5" r="3.5" fill={getColor('activeColor')} />
-        <path
-            d="M35 65C38 68 41.7157 71 50 71C58.2843 71 62 68 65 65"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-    </svg>
-)
-
-const SuperHappy = ({ width, height }) => (
-    <svg
-        width={width}
-        height={height}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <circle cx="50.5" cy="50.5" r="41.5" stroke={getColor('activeColor')} strokeWidth="4" />
-        <path
-            d="M35 65C38 68 41.7157 71 50 71C58.2843 71 62 68 65 65"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-        <path
-            d="M41 43C40.25 40.1429 37.8995 38 35 38C32.1005 38 29.75 40.1429 29 43"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-        <path
-            d="M70 43C69.25 40.1429 66.8995 38 64 38C61.1005 38 58.75 40.1429 58 43"
-            stroke={getColor('activeColor')}
-            strokeWidth="4"
-            strokeLinecap="round"
-        />
-    </svg>
-)
-
-const emojiIcons = [SuperSad, Sad, Neutral, Happy, SuperHappy]
+const emojiIcons = [StronglyDisagreeIcon, DisagreeIcon, NeutralIcon, AgreeIcon, StronglyAgreeIcon]
 
 /* eslint-disable jsx-a11y/accessible-emoji */
 const Emojis = ({ bars, size = 24 }) => (
@@ -141,7 +24,7 @@ const Emojis = ({ bars, size = 24 }) => (
             } else {
                 return (
                     <g transform={`translate(${bar.x + bar.width / 2 - size / 2}, ${bar.y - 35})`}>
-                        <Emoji height={size} width={size} />
+                        <Emoji size={size} />
                     </g>
                 )
             }

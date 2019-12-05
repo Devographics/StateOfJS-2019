@@ -287,6 +287,15 @@ translations:
     # Features
     ###########################################################################
 
+    - key: page.syntax
+      t: Syntax
+    - key: page.language
+      t: Language
+    - key: page.data-structures
+      t: Data Structures
+    - key: page.browser-apis
+      t: Browser APIs
+
     - key: feature.learn_more
       t: Learn More
     - key: feature.mdn_link
