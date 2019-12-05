@@ -13,8 +13,8 @@
   defaultBlockType: default
   previous: {}
   next:
-    id: tshirt
-    path: /tshirt/
+      id: tshirt
+      path: /tshirt/
 - id: tshirt
   path: /tshirt/
   type: page
@@ -22,2821 +22,2821 @@
   children: []
   defaultBlockType: default
   previous:
-    id: introduction
-    path: /
+      id: introduction
+      path: /
   next:
-    id: demographics
-    path: /demographics/
+      id: demographics
+      path: /demographics/
 - id: demographics
   path: /demographics/
   type: page
   blocks:
-    - id: participation-by-country
-      type: participation-by-country
-      showDescription: true
-      path: /demographics/participation-by-country/
-    - type: vertical-bar
-      dataPath: demographics.salary.2
-      bucketKeys:
-        id: null
-      showDescription: true
-      query: |
-        demographics {
-            salary {
-                year
-                total
-                completion {
-                    percentage
-                    count
-                }
-                buckets {
-                    id
-                    count
-                    percentage
-                }
-            }
-        }
-      id: salary
-      template: demographics-block
-      path: /demographics/salary/
-    - type: vertical-bar
-      dataPath: demographics.yearsOfExperience.2
-      bucketKeys:
-        id: null
-      showDescription: true
-      query: |
-        demographics {
-            yearsOfExperience {
-                year
-                total
-                completion {
-                    percentage
-                    count
-                }
-                buckets {
-                    id
-                    count
-                    percentage
+      - id: participation-by-country
+        type: participation-by-country
+        showDescription: true
+        path: /demographics/participation-by-country/
+      - type: vertical-bar
+        dataPath: demographics.salary.2
+        bucketKeys:
+            id: null
+        showDescription: true
+        query: |
+            demographics {
+                salary {
+                    year
+                    total
+                    completion {
+                        percentage
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
-        }
-      id: yearsOfExperience
-      template: demographics-block
-      path: /demographics/yearsOfExperience/
-    - type: vertical-bar
-      dataPath: demographics.companySize.2
-      bucketKeys:
-        id: null
-      showDescription: true
-      query: |
-        demographics {
-            companySize {
-                year
-                total
-                completion {
-                    percentage
-                    count
-                }
-                buckets {
-                    id
-                    count
-                    percentage
+        id: salary
+        template: demographics-block
+        path: /demographics/salary/
+      - type: vertical-bar
+        dataPath: demographics.yearsOfExperience.2
+        bucketKeys:
+            id: null
+        showDescription: true
+        query: |
+            demographics {
+                yearsOfExperience {
+                    year
+                    total
+                    completion {
+                        percentage
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
-        }
-      id: companySize
-      template: demographics-block
-      path: /demographics/companySize/
-    - id: source
-      type: horizontal-bar
-      dataKey: breakdown
-      showDescription: true
-      path: /demographics/source/
-    - id: gender
-      type: gender
-      showDescription: true
-      path: /demographics/gender/
-    - id: job-title
-      type: horizontal-bar
-      dataKey: breakdown
-      showDescription: true
-      translateData: true
-      path: /demographics/job-title/
-    - id: css-proficiency
-      type: vertical-bar
-      dataKey: breakdown
-      bucketKeys: javascriptProficiency
-      showDescription: true
-      showLegend: true
-      path: /demographics/css-proficiency/
-    - id: backend-proficiency
-      type: vertical-bar
-      dataKey: breakdown
-      bucketKeys: backendProficiency
-      showDescription: true
-      showLegend: true
-      path: /demographics/backend-proficiency/
-    - id: resources-sponsors
-      type: resources
-      items:
-        - frontendmasters-design
-      path: /demographics/resources-sponsors/
+        id: yearsOfExperience
+        template: demographics-block
+        path: /demographics/yearsOfExperience/
+      - type: vertical-bar
+        dataPath: demographics.companySize.2
+        bucketKeys:
+            id: null
+        showDescription: true
+        query: |
+            demographics {
+                companySize {
+                    year
+                    total
+                    completion {
+                        percentage
+                        count
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
+                }
+            }
+        id: companySize
+        template: demographics-block
+        path: /demographics/companySize/
+      - id: source
+        type: horizontal-bar
+        dataKey: breakdown
+        showDescription: true
+        path: /demographics/source/
+      - id: gender
+        type: gender
+        showDescription: true
+        path: /demographics/gender/
+      - id: job-title
+        type: horizontal-bar
+        dataKey: breakdown
+        showDescription: true
+        translateData: true
+        path: /demographics/job-title/
+      - id: css-proficiency
+        type: vertical-bar
+        dataKey: breakdown
+        bucketKeys: javascriptProficiency
+        showDescription: true
+        showLegend: true
+        path: /demographics/css-proficiency/
+      - id: backend-proficiency
+        type: vertical-bar
+        dataKey: breakdown
+        bucketKeys: backendProficiency
+        showDescription: true
+        showLegend: true
+        path: /demographics/backend-proficiency/
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-design
+        path: /demographics/resources-sponsors/
   is_hidden: false
   children: []
   defaultBlockType: default
   previous:
-    id: tshirt
-    path: /tshirt/
+      id: tshirt
+      path: /tshirt/
   next:
-    id: features
-    path: /features/
+      id: features
+      path: /features/
 - id: features
   path: /features/
   type: page
   children:
-    - id: syntax
-      path: /features/syntax/
-      blocks:
-        - type: feature
-          dataPath: destructuring.usageByYear.0
-          showDescription: true
-          query: |
-            destructuring: feature(section: "syntax", id: "destructuring") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: destructuring
-          template: feature
-          path: /features/syntax/destructuring/
-        - type: feature
-          dataPath: spread_operator.usageByYear.0
-          showDescription: true
-          query: |
-            spread_operator: feature(section: "syntax", id: "spread_operator") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: spread_operator
-          template: feature
-          path: /features/syntax/spread_operator/
-        - type: feature
-          dataPath: arrow_functions.usageByYear.0
-          showDescription: true
-          query: |
-            arrow_functions: feature(section: "syntax", id: "arrow_functions") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: arrow_functions
-          template: feature
-          path: /features/syntax/arrow_functions/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: features
-        path: /features/
-      next:
-        id: language
-        path: /features/language/
-    - id: language
-      path: /features/language/
-      blocks:
-        - type: feature
-          dataPath: proxies.usageByYear.0
-          showDescription: true
-          query: |
-            proxies: feature(section: "language", id: "proxies") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: proxies
-          template: feature
-          path: /features/language/proxies/
-        - type: feature
-          dataPath: async_await.usageByYear.0
-          showDescription: true
-          query: |
-            async_await: feature(section: "language", id: "async_await") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: async_await
-          template: feature
-          path: /features/language/async_await/
-        - type: feature
-          dataPath: promises.usageByYear.0
-          showDescription: true
-          query: |
-            promises: feature(section: "language", id: "promises") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: promises
-          template: feature
-          path: /features/language/promises/
-        - type: feature
-          dataPath: decorators.usageByYear.0
-          showDescription: true
-          query: |
-            decorators: feature(section: "language", id: "decorators") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: decorators
-          template: feature
-          path: /features/language/decorators/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: syntax
+      - id: syntax
         path: /features/syntax/
-      next:
-        id: data-structures
-        path: /features/data-structures/
-    - id: data-structures
-      path: /features/data-structures/
-      blocks:
-        - type: feature
-          dataPath: maps.usageByYear.0
-          showDescription: true
-          query: |
-            maps: feature(section: "data-structures", id: "maps") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: maps
-          template: feature
-          path: /features/data-structures/maps/
-        - type: feature
-          dataPath: sets.usageByYear.0
-          showDescription: true
-          query: |
-            sets: feature(section: "data-structures", id: "sets") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: sets
-          template: feature
-          path: /features/data-structures/sets/
-        - type: feature
-          dataPath: typed_arrays.usageByYear.0
-          showDescription: true
-          query: >
-            typed_arrays: feature(section: "data-structures", id:
-            "typed_arrays") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: typed_arrays
-          template: feature
-          path: /features/data-structures/typed_arrays/
-        - type: feature
-          dataPath: array_prototype_flat.usageByYear.0
-          showDescription: true
-          query: >
-            array_prototype_flat: feature(section: "data-structures", id:
-            "array_prototype_flat") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: array_prototype_flat
-          template: feature
-          path: /features/data-structures/array_prototype_flat/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: language
+        blocks:
+            - type: feature
+              dataPath: destructuring.usageByYear.0
+              showDescription: true
+              query: |
+                  destructuring: feature(section: "syntax", id: "destructuring") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: destructuring
+              template: feature
+              path: /features/syntax/destructuring/
+            - type: feature
+              dataPath: spread_operator.usageByYear.0
+              showDescription: true
+              query: |
+                  spread_operator: feature(section: "syntax", id: "spread_operator") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: spread_operator
+              template: feature
+              path: /features/syntax/spread_operator/
+            - type: feature
+              dataPath: arrow_functions.usageByYear.0
+              showDescription: true
+              query: |
+                  arrow_functions: feature(section: "syntax", id: "arrow_functions") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: arrow_functions
+              template: feature
+              path: /features/syntax/arrow_functions/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: features
+            path: /features/
+        next:
+            id: language
+            path: /features/language/
+      - id: language
         path: /features/language/
-      next:
-        id: browser-apis
-        path: /features/browser-apis/
-    - id: browser-apis
-      path: /features/browser-apis/
-      blocks:
-        - type: feature
-          dataPath: fetch.usageByYear.0
-          showDescription: true
-          query: |
-            fetch: feature(section: "browser-apis", id: "fetch") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: fetch
-          template: feature
-          path: /features/browser-apis/fetch/
-        - type: feature
-          dataPath: i18n.usageByYear.0
-          showDescription: true
-          query: |
-            i18n: feature(section: "browser-apis", id: "i18n") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: i18n
-          template: feature
-          path: /features/browser-apis/i18n/
-        - type: feature
-          dataPath: local_storage.usageByYear.0
-          showDescription: true
-          query: >
-            local_storage: feature(section: "browser-apis", id: "local_storage")
-            {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: local_storage
-          template: feature
-          path: /features/browser-apis/local_storage/
-        - type: feature
-          dataPath: service_workers.usageByYear.0
-          showDescription: true
-          query: >
-            service_workers: feature(section: "browser-apis", id:
-            "service_workers") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: service_workers
-          template: feature
-          path: /features/browser-apis/service_workers/
-        - type: feature
-          dataPath: web_animations.usageByYear.0
-          showDescription: true
-          query: >
-            web_animations: feature(section: "browser-apis", id:
-            "web_animations") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: web_animations
-          template: feature
-          path: /features/browser-apis/web_animations/
-        - type: feature
-          dataPath: web_audio.usageByYear.0
-          showDescription: true
-          query: |
-            web_audio: feature(section: "browser-apis", id: "web_audio") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: web_audio
-          template: feature
-          path: /features/browser-apis/web_audio/
-        - type: feature
-          dataPath: web_components.usageByYear.0
-          showDescription: true
-          query: >
-            web_components: feature(section: "browser-apis", id:
-            "web_components") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: web_components
-          template: feature
-          path: /features/browser-apis/web_components/
-        - type: feature
-          dataPath: webgl.usageByYear.0
-          showDescription: true
-          query: |
-            webgl: feature(section: "browser-apis", id: "webgl") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: webgl
-          template: feature
-          path: /features/browser-apis/webgl/
-        - type: feature
-          dataPath: webrtc.usageByYear.0
-          showDescription: true
-          query: |
-            webrtc: feature(section: "browser-apis", id: "webrtc") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: webrtc
-          template: feature
-          path: /features/browser-apis/webrtc/
-        - type: feature
-          dataPath: websocket.usageByYear.0
-          showDescription: true
-          query: |
-            websocket: feature(section: "browser-apis", id: "websocket") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: websocket
-          template: feature
-          path: /features/browser-apis/websocket/
-        - type: feature
-          dataPath: web_speech.usageByYear.0
-          showDescription: true
-          query: |
-            web_speech: feature(section: "browser-apis", id: "web_speech") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: web_speech
-          template: feature
-          path: /features/browser-apis/web_speech/
-        - type: feature
-          dataPath: webvr.usageByYear.0
-          showDescription: true
-          query: |
-            webvr: feature(section: "browser-apis", id: "webvr") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: webvr
-          template: feature
-          path: /features/browser-apis/webvr/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: data-structures
+        blocks:
+            - type: feature
+              dataPath: proxies.usageByYear.0
+              showDescription: true
+              query: |
+                  proxies: feature(section: "language", id: "proxies") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: proxies
+              template: feature
+              path: /features/language/proxies/
+            - type: feature
+              dataPath: async_await.usageByYear.0
+              showDescription: true
+              query: |
+                  async_await: feature(section: "language", id: "async_await") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: async_await
+              template: feature
+              path: /features/language/async_await/
+            - type: feature
+              dataPath: promises.usageByYear.0
+              showDescription: true
+              query: |
+                  promises: feature(section: "language", id: "promises") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: promises
+              template: feature
+              path: /features/language/promises/
+            - type: feature
+              dataPath: decorators.usageByYear.0
+              showDescription: true
+              query: |
+                  decorators: feature(section: "language", id: "decorators") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: decorators
+              template: feature
+              path: /features/language/decorators/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: syntax
+            path: /features/syntax/
+        next:
+            id: data-structures
+            path: /features/data-structures/
+      - id: data-structures
         path: /features/data-structures/
-      next:
-        id: other-features
-        path: /features/other-features/
-    - id: other-features
-      path: /features/other-features/
-      blocks:
-        - type: feature
-          dataPath: pwa.usageByYear.0
-          showDescription: true
-          query: |
-            pwa: feature(section: "other-features", id: "pwa") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: pwa
-          template: feature
-          path: /features/other-features/pwa/
-        - type: feature
-          dataPath: wasm.usageByYear.0
-          showDescription: true
-          query: |
-            wasm: feature(section: "other-features", id: "wasm") {
-                id
-                section
-                usageByYear {
-                    total
-                    year
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          id: wasm
-          template: feature
-          path: /features/other-features/wasm/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: browser-apis
+        blocks:
+            - type: feature
+              dataPath: maps.usageByYear.0
+              showDescription: true
+              query: |
+                  maps: feature(section: "data-structures", id: "maps") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: maps
+              template: feature
+              path: /features/data-structures/maps/
+            - type: feature
+              dataPath: sets.usageByYear.0
+              showDescription: true
+              query: |
+                  sets: feature(section: "data-structures", id: "sets") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: sets
+              template: feature
+              path: /features/data-structures/sets/
+            - type: feature
+              dataPath: typed_arrays.usageByYear.0
+              showDescription: true
+              query: >
+                  typed_arrays: feature(section: "data-structures", id:
+                  "typed_arrays") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: typed_arrays
+              template: feature
+              path: /features/data-structures/typed_arrays/
+            - type: feature
+              dataPath: array_prototype_flat.usageByYear.0
+              showDescription: true
+              query: >
+                  array_prototype_flat: feature(section: "data-structures", id:
+                  "array_prototype_flat") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: array_prototype_flat
+              template: feature
+              path: /features/data-structures/array_prototype_flat/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: language
+            path: /features/language/
+        next:
+            id: browser-apis
+            path: /features/browser-apis/
+      - id: browser-apis
         path: /features/browser-apis/
-      next:
-        id: frontend
-        path: /front-end-frameworks/
+        blocks:
+            - type: feature
+              dataPath: fetch.usageByYear.0
+              showDescription: true
+              query: |
+                  fetch: feature(section: "browser-apis", id: "fetch") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: fetch
+              template: feature
+              path: /features/browser-apis/fetch/
+            - type: feature
+              dataPath: i18n.usageByYear.0
+              showDescription: true
+              query: |
+                  i18n: feature(section: "browser-apis", id: "i18n") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: i18n
+              template: feature
+              path: /features/browser-apis/i18n/
+            - type: feature
+              dataPath: local_storage.usageByYear.0
+              showDescription: true
+              query: >
+                  local_storage: feature(section: "browser-apis", id: "local_storage")
+                  {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: local_storage
+              template: feature
+              path: /features/browser-apis/local_storage/
+            - type: feature
+              dataPath: service_workers.usageByYear.0
+              showDescription: true
+              query: >
+                  service_workers: feature(section: "browser-apis", id:
+                  "service_workers") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: service_workers
+              template: feature
+              path: /features/browser-apis/service_workers/
+            - type: feature
+              dataPath: web_animations.usageByYear.0
+              showDescription: true
+              query: >
+                  web_animations: feature(section: "browser-apis", id:
+                  "web_animations") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: web_animations
+              template: feature
+              path: /features/browser-apis/web_animations/
+            - type: feature
+              dataPath: web_audio.usageByYear.0
+              showDescription: true
+              query: |
+                  web_audio: feature(section: "browser-apis", id: "web_audio") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: web_audio
+              template: feature
+              path: /features/browser-apis/web_audio/
+            - type: feature
+              dataPath: web_components.usageByYear.0
+              showDescription: true
+              query: >
+                  web_components: feature(section: "browser-apis", id:
+                  "web_components") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: web_components
+              template: feature
+              path: /features/browser-apis/web_components/
+            - type: feature
+              dataPath: webgl.usageByYear.0
+              showDescription: true
+              query: |
+                  webgl: feature(section: "browser-apis", id: "webgl") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: webgl
+              template: feature
+              path: /features/browser-apis/webgl/
+            - type: feature
+              dataPath: webrtc.usageByYear.0
+              showDescription: true
+              query: |
+                  webrtc: feature(section: "browser-apis", id: "webrtc") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: webrtc
+              template: feature
+              path: /features/browser-apis/webrtc/
+            - type: feature
+              dataPath: websocket.usageByYear.0
+              showDescription: true
+              query: |
+                  websocket: feature(section: "browser-apis", id: "websocket") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: websocket
+              template: feature
+              path: /features/browser-apis/websocket/
+            - type: feature
+              dataPath: web_speech.usageByYear.0
+              showDescription: true
+              query: |
+                  web_speech: feature(section: "browser-apis", id: "web_speech") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: web_speech
+              template: feature
+              path: /features/browser-apis/web_speech/
+            - type: feature
+              dataPath: webvr.usageByYear.0
+              showDescription: true
+              query: |
+                  webvr: feature(section: "browser-apis", id: "webvr") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: webvr
+              template: feature
+              path: /features/browser-apis/webvr/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: data-structures
+            path: /features/data-structures/
+        next:
+            id: other-features
+            path: /features/other-features/
+      - id: other-features
+        path: /features/other-features/
+        blocks:
+            - type: feature
+              dataPath: pwa.usageByYear.0
+              showDescription: true
+              query: |
+                  pwa: feature(section: "other-features", id: "pwa") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: pwa
+              template: feature
+              path: /features/other-features/pwa/
+            - type: feature
+              dataPath: wasm.usageByYear.0
+              showDescription: true
+              query: |
+                  wasm: feature(section: "other-features", id: "wasm") {
+                      id
+                      section
+                      usageByYear {
+                          total
+                          year
+                          completion {
+                              percentage
+                              count
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              id: wasm
+              template: feature
+              path: /features/other-features/wasm/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: browser-apis
+            path: /features/browser-apis/
+        next:
+            id: frontend
+            path: /front-end-frameworks/
   is_hidden: false
   defaultBlockType: default
   previous:
-    id: demographics
-    path: /demographics/
+      id: demographics
+      path: /demographics/
   next:
-    id: syntax
-    path: /features/syntax/
+      id: syntax
+      path: /features/syntax/
 - blocks:
-    - id: frontend-section-overview
-      type: tools-section-overview
-      path: /front-end-frameworks/frontend-section-overview/
-    - id: frontend-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-      path: /front-end-frameworks/frontend-experience-heatmap/
-    - id: frontend-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-      path: /front-end-frameworks/frontend-salary-heatmap/
-    - id: frontend-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-      path: /front-end-frameworks/frontend-company-size-heatmap/
-    - id: happiness-frontend
-      type: happiness
-      path: /front-end-frameworks/happiness-frontend/
-    - id: resources-sponsors
-      type: resources
-      items:
-        - frontendmasters-sass
-      path: /front-end-frameworks/resources-sponsors/
+      - id: frontend-section-overview
+        type: tools-section-overview
+        path: /front-end-frameworks/frontend-section-overview/
+      - id: frontend-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+        path: /front-end-frameworks/frontend-experience-heatmap/
+      - id: frontend-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+        path: /front-end-frameworks/frontend-salary-heatmap/
+      - id: frontend-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+        path: /front-end-frameworks/frontend-company-size-heatmap/
+      - id: happiness-frontend
+        type: happiness
+        path: /front-end-frameworks/happiness-frontend/
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+        path: /front-end-frameworks/resources-sponsors/
   id: frontend
   path: /front-end-frameworks/
   template: toolSection
   children:
-    - blocks:
-        - id: react-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /front-end-frameworks/react/react-opinions-over-time/
-      id: react
-      template: tool
-      path: /front-end-frameworks/react/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: frontend
-        path: /front-end-frameworks/
-      next:
-        id: vue
-        path: /front-end-frameworks/vue/
-    - blocks:
-        - id: vue-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /front-end-frameworks/vue/vue-opinions-over-time/
-      id: vue
-      template: tool
-      path: /front-end-frameworks/vue/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+      - blocks:
+            - id: react-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /front-end-frameworks/react/react-opinions-over-time/
         id: react
+        template: tool
         path: /front-end-frameworks/react/
-      next:
-        id: angular
-        path: /front-end-frameworks/angular/
-    - blocks:
-        - id: angular-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /front-end-frameworks/angular/angular-opinions-over-time/
-      id: angular
-      template: tool
-      path: /front-end-frameworks/angular/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: frontend
+            path: /front-end-frameworks/
+        next:
+            id: vue
+            path: /front-end-frameworks/vue/
+      - blocks:
+            - id: vue-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /front-end-frameworks/vue/vue-opinions-over-time/
         id: vue
+        template: tool
         path: /front-end-frameworks/vue/
-      next:
-        id: preact
-        path: /front-end-frameworks/preact/
-    - blocks:
-        - id: preact-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /front-end-frameworks/preact/preact-opinions-over-time/
-      id: preact
-      template: tool
-      path: /front-end-frameworks/preact/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: react
+            path: /front-end-frameworks/react/
+        next:
+            id: angular
+            path: /front-end-frameworks/angular/
+      - blocks:
+            - id: angular-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /front-end-frameworks/angular/angular-opinions-over-time/
         id: angular
+        template: tool
         path: /front-end-frameworks/angular/
-      next:
-        id: ember
-        path: /front-end-frameworks/ember/
-    - blocks:
-        - id: ember-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /front-end-frameworks/ember/ember-opinions-over-time/
-      id: ember
-      template: tool
-      path: /front-end-frameworks/ember/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: vue
+            path: /front-end-frameworks/vue/
+        next:
+            id: preact
+            path: /front-end-frameworks/preact/
+      - blocks:
+            - id: preact-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /front-end-frameworks/preact/preact-opinions-over-time/
         id: preact
+        template: tool
         path: /front-end-frameworks/preact/
-      next:
-        id: svelte
-        path: /front-end-frameworks/svelte/
-    - blocks:
-        - id: svelte-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /front-end-frameworks/svelte/svelte-opinions-over-time/
-      id: svelte
-      template: tool
-      path: /front-end-frameworks/svelte/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: angular
+            path: /front-end-frameworks/angular/
+        next:
+            id: ember
+            path: /front-end-frameworks/ember/
+      - blocks:
+            - id: ember-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /front-end-frameworks/ember/ember-opinions-over-time/
         id: ember
+        template: tool
         path: /front-end-frameworks/ember/
-      next:
-        id: frontend-other
-        path: /front-end-frameworks/frontend-other/
-    - id: frontend-other
-      template: other
-      path: /front-end-frameworks/frontend-other/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: preact
+            path: /front-end-frameworks/preact/
+        next:
+            id: svelte
+            path: /front-end-frameworks/svelte/
+      - blocks:
+            - id: svelte-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /front-end-frameworks/svelte/svelte-opinions-over-time/
         id: svelte
+        template: tool
         path: /front-end-frameworks/svelte/
-      next:
-        id: frontend-conclusion
-        path: /front-end-frameworks/frontend-conclusion/
-    - id: frontend-conclusion
-      template: conclusion
-      path: /front-end-frameworks/frontend-conclusion/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: frontend-other
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: ember
+            path: /front-end-frameworks/ember/
+        next:
+            id: frontend-other
+            path: /front-end-frameworks/frontend-other/
+      - id: frontend-other
+        template: other
         path: /front-end-frameworks/frontend-other/
-      next:
-        id: datalayer
-        path: /data-layer/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: svelte
+            path: /front-end-frameworks/svelte/
+        next:
+            id: frontend-conclusion
+            path: /front-end-frameworks/frontend-conclusion/
+      - id: frontend-conclusion
+        template: conclusion
+        path: /front-end-frameworks/frontend-conclusion/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: frontend-other
+            path: /front-end-frameworks/frontend-other/
+        next:
+            id: datalayer
+            path: /data-layer/
   is_hidden: false
   defaultBlockType: default
   previous:
-    id: other-features
-    path: /features/other-features/
+      id: other-features
+      path: /features/other-features/
   next:
-    id: react
-    path: /front-end-frameworks/react/
+      id: react
+      path: /front-end-frameworks/react/
 - blocks:
-    - id: datalayer-section-overview
-      type: tools-section-overview
-      path: /data-layer/datalayer-section-overview/
-    - id: datalayer-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-      path: /data-layer/datalayer-experience-heatmap/
-    - id: datalayer-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-      path: /data-layer/datalayer-salary-heatmap/
-    - id: datalayer-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-      path: /data-layer/datalayer-company-size-heatmap/
-    - id: happiness-datalayer
-      type: happiness
-      path: /data-layer/happiness-datalayer/
-    - id: resources-sponsors
-      type: resources
-      items:
-        - frontendmasters-sass
-      path: /data-layer/resources-sponsors/
+      - id: datalayer-section-overview
+        type: tools-section-overview
+        path: /data-layer/datalayer-section-overview/
+      - id: datalayer-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+        path: /data-layer/datalayer-experience-heatmap/
+      - id: datalayer-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+        path: /data-layer/datalayer-salary-heatmap/
+      - id: datalayer-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+        path: /data-layer/datalayer-company-size-heatmap/
+      - id: happiness-datalayer
+        type: happiness
+        path: /data-layer/happiness-datalayer/
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+        path: /data-layer/resources-sponsors/
   id: datalayer
   path: /data-layer/
   template: toolSection
   children:
-    - blocks:
-        - id: redux-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /data-layer/redux/redux-opinions-over-time/
-      id: redux
-      template: tool
-      path: /data-layer/redux/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: datalayer
-        path: /data-layer/
-      next:
-        id: apollo
-        path: /data-layer/apollo/
-    - blocks:
-        - id: apollo-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /data-layer/apollo/apollo-opinions-over-time/
-      id: apollo
-      template: tool
-      path: /data-layer/apollo/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+      - blocks:
+            - id: redux-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /data-layer/redux/redux-opinions-over-time/
         id: redux
+        template: tool
         path: /data-layer/redux/
-      next:
-        id: graphql
-        path: /data-layer/graphql/
-    - blocks:
-        - id: graphql-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /data-layer/graphql/graphql-opinions-over-time/
-      id: graphql
-      template: tool
-      path: /data-layer/graphql/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: datalayer
+            path: /data-layer/
+        next:
+            id: apollo
+            path: /data-layer/apollo/
+      - blocks:
+            - id: apollo-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /data-layer/apollo/apollo-opinions-over-time/
         id: apollo
+        template: tool
         path: /data-layer/apollo/
-      next:
-        id: relay
-        path: /data-layer/relay/
-    - blocks:
-        - id: relay-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /data-layer/relay/relay-opinions-over-time/
-      id: relay
-      template: tool
-      path: /data-layer/relay/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: redux
+            path: /data-layer/redux/
+        next:
+            id: graphql
+            path: /data-layer/graphql/
+      - blocks:
+            - id: graphql-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /data-layer/graphql/graphql-opinions-over-time/
         id: graphql
+        template: tool
         path: /data-layer/graphql/
-      next:
-        id: mobx
-        path: /data-layer/mobx/
-    - blocks:
-        - id: mobx-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /data-layer/mobx/mobx-opinions-over-time/
-      id: mobx
-      template: tool
-      path: /data-layer/mobx/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: apollo
+            path: /data-layer/apollo/
+        next:
+            id: relay
+            path: /data-layer/relay/
+      - blocks:
+            - id: relay-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /data-layer/relay/relay-opinions-over-time/
         id: relay
+        template: tool
         path: /data-layer/relay/
-      next:
-        id: datalayer-other
-        path: /data-layer/datalayer-other/
-    - id: datalayer-other
-      template: other
-      path: /data-layer/datalayer-other/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: graphql
+            path: /data-layer/graphql/
+        next:
+            id: mobx
+            path: /data-layer/mobx/
+      - blocks:
+            - id: mobx-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /data-layer/mobx/mobx-opinions-over-time/
         id: mobx
+        template: tool
         path: /data-layer/mobx/
-      next:
-        id: datalayer-conclusion
-        path: /data-layer/datalayer-conclusion/
-    - id: datalayer-conclusion
-      template: conclusion
-      path: /data-layer/datalayer-conclusion/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: datalayer-other
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: relay
+            path: /data-layer/relay/
+        next:
+            id: datalayer-other
+            path: /data-layer/datalayer-other/
+      - id: datalayer-other
+        template: other
         path: /data-layer/datalayer-other/
-      next:
-        id: backend
-        path: /back-end/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: mobx
+            path: /data-layer/mobx/
+        next:
+            id: datalayer-conclusion
+            path: /data-layer/datalayer-conclusion/
+      - id: datalayer-conclusion
+        template: conclusion
+        path: /data-layer/datalayer-conclusion/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: datalayer-other
+            path: /data-layer/datalayer-other/
+        next:
+            id: backend
+            path: /back-end/
   is_hidden: false
   defaultBlockType: default
   previous:
-    id: frontend-conclusion
-    path: /front-end-frameworks/frontend-conclusion/
+      id: frontend-conclusion
+      path: /front-end-frameworks/frontend-conclusion/
   next:
-    id: redux
-    path: /data-layer/redux/
+      id: redux
+      path: /data-layer/redux/
 - blocks:
-    - id: backend-section-overview
-      type: tools-section-overview
-      path: /back-end/backend-section-overview/
-    - id: backend-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-      path: /back-end/backend-experience-heatmap/
-    - id: backend-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-      path: /back-end/backend-salary-heatmap/
-    - id: backend-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-      path: /back-end/backend-company-size-heatmap/
-    - id: happiness-backend
-      type: happiness
-      path: /back-end/happiness-backend/
-    - id: resources-sponsors
-      type: resources
-      items:
-        - frontendmasters-sass
-      path: /back-end/resources-sponsors/
+      - id: backend-section-overview
+        type: tools-section-overview
+        path: /back-end/backend-section-overview/
+      - id: backend-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+        path: /back-end/backend-experience-heatmap/
+      - id: backend-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+        path: /back-end/backend-salary-heatmap/
+      - id: backend-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+        path: /back-end/backend-company-size-heatmap/
+      - id: happiness-backend
+        type: happiness
+        path: /back-end/happiness-backend/
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+        path: /back-end/resources-sponsors/
   id: backend
   path: /back-end/
   template: toolSection
   children:
-    - blocks:
-        - id: express-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/express/express-opinions-over-time/
-      id: express
-      template: tool
-      path: /back-end/express/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: backend
-        path: /back-end/
-      next:
-        id: nextjs
-        path: /back-end/nextjs/
-    - blocks:
-        - id: nextjs-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/nextjs/nextjs-opinions-over-time/
-      id: nextjs
-      template: tool
-      path: /back-end/nextjs/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+      - blocks:
+            - id: express-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/express/express-opinions-over-time/
         id: express
+        template: tool
         path: /back-end/express/
-      next:
-        id: koa
-        path: /back-end/koa/
-    - blocks:
-        - id: koa-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/koa/koa-opinions-over-time/
-      id: koa
-      template: tool
-      path: /back-end/koa/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: backend
+            path: /back-end/
+        next:
+            id: nextjs
+            path: /back-end/nextjs/
+      - blocks:
+            - id: nextjs-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/nextjs/nextjs-opinions-over-time/
         id: nextjs
+        template: tool
         path: /back-end/nextjs/
-      next:
-        id: meteor
-        path: /back-end/meteor/
-    - blocks:
-        - id: meteor-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/meteor/meteor-opinions-over-time/
-      id: meteor
-      template: tool
-      path: /back-end/meteor/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: express
+            path: /back-end/express/
+        next:
+            id: koa
+            path: /back-end/koa/
+      - blocks:
+            - id: koa-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/koa/koa-opinions-over-time/
         id: koa
+        template: tool
         path: /back-end/koa/
-      next:
-        id: sails
-        path: /back-end/sails/
-    - blocks:
-        - id: sails-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/sails/sails-opinions-over-time/
-      id: sails
-      template: tool
-      path: /back-end/sails/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: nextjs
+            path: /back-end/nextjs/
+        next:
+            id: meteor
+            path: /back-end/meteor/
+      - blocks:
+            - id: meteor-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/meteor/meteor-opinions-over-time/
         id: meteor
+        template: tool
         path: /back-end/meteor/
-      next:
-        id: feathers
-        path: /back-end/feathers/
-    - blocks:
-        - id: feathers-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/feathers/feathers-opinions-over-time/
-      id: feathers
-      template: tool
-      path: /back-end/feathers/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: koa
+            path: /back-end/koa/
+        next:
+            id: sails
+            path: /back-end/sails/
+      - blocks:
+            - id: sails-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/sails/sails-opinions-over-time/
         id: sails
+        template: tool
         path: /back-end/sails/
-      next:
-        id: nuxt
-        path: /back-end/nuxt/
-    - blocks:
-        - id: nuxt-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/nuxt/nuxt-opinions-over-time/
-      id: nuxt
-      template: tool
-      path: /back-end/nuxt/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: meteor
+            path: /back-end/meteor/
+        next:
+            id: feathers
+            path: /back-end/feathers/
+      - blocks:
+            - id: feathers-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/feathers/feathers-opinions-over-time/
         id: feathers
+        template: tool
         path: /back-end/feathers/
-      next:
-        id: gatsby
-        path: /back-end/gatsby/
-    - blocks:
-        - id: gatsby-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /back-end/gatsby/gatsby-opinions-over-time/
-      id: gatsby
-      template: tool
-      path: /back-end/gatsby/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: sails
+            path: /back-end/sails/
+        next:
+            id: nuxt
+            path: /back-end/nuxt/
+      - blocks:
+            - id: nuxt-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/nuxt/nuxt-opinions-over-time/
         id: nuxt
+        template: tool
         path: /back-end/nuxt/
-      next:
-        id: backend-other
-        path: /back-end/backend-other/
-    - id: backend-other
-      template: other
-      path: /back-end/backend-other/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: feathers
+            path: /back-end/feathers/
+        next:
+            id: gatsby
+            path: /back-end/gatsby/
+      - blocks:
+            - id: gatsby-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /back-end/gatsby/gatsby-opinions-over-time/
         id: gatsby
+        template: tool
         path: /back-end/gatsby/
-      next:
-        id: backend-conclusion
-        path: /back-end/backend-conclusion/
-    - id: backend-conclusion
-      template: conclusion
-      path: /back-end/backend-conclusion/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: backend-other
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: nuxt
+            path: /back-end/nuxt/
+        next:
+            id: backend-other
+            path: /back-end/backend-other/
+      - id: backend-other
+        template: other
         path: /back-end/backend-other/
-      next:
-        id: testing
-        path: /testing/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: gatsby
+            path: /back-end/gatsby/
+        next:
+            id: backend-conclusion
+            path: /back-end/backend-conclusion/
+      - id: backend-conclusion
+        template: conclusion
+        path: /back-end/backend-conclusion/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: backend-other
+            path: /back-end/backend-other/
+        next:
+            id: testing
+            path: /testing/
   is_hidden: false
   defaultBlockType: default
   previous:
-    id: datalayer-conclusion
-    path: /data-layer/datalayer-conclusion/
+      id: datalayer-conclusion
+      path: /data-layer/datalayer-conclusion/
   next:
-    id: express
-    path: /back-end/express/
+      id: express
+      path: /back-end/express/
 - blocks:
-    - id: testing-section-overview
-      type: tools-section-overview
-      path: /testing/testing-section-overview/
-    - id: testing-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-      path: /testing/testing-experience-heatmap/
-    - id: testing-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-      path: /testing/testing-salary-heatmap/
-    - id: testing-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-      path: /testing/testing-company-size-heatmap/
-    - id: happiness-testing
-      type: happiness
-      path: /testing/happiness-testing/
-    - id: resources-sponsors
-      type: resources
-      items:
-        - frontendmasters-sass
-      path: /testing/resources-sponsors/
+      - id: testing-section-overview
+        type: tools-section-overview
+        path: /testing/testing-section-overview/
+      - id: testing-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+        path: /testing/testing-experience-heatmap/
+      - id: testing-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+        path: /testing/testing-salary-heatmap/
+      - id: testing-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+        path: /testing/testing-company-size-heatmap/
+      - id: happiness-testing
+        type: happiness
+        path: /testing/happiness-testing/
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+        path: /testing/resources-sponsors/
   id: testing
   path: /testing/
   template: toolSection
   children:
-    - blocks:
-        - id: jest-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/jest/jest-opinions-over-time/
-      id: jest
-      template: tool
-      path: /testing/jest/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: testing
-        path: /testing/
-      next:
-        id: mocha
-        path: /testing/mocha/
-    - blocks:
-        - id: mocha-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/mocha/mocha-opinions-over-time/
-      id: mocha
-      template: tool
-      path: /testing/mocha/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+      - blocks:
+            - id: jest-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/jest/jest-opinions-over-time/
         id: jest
+        template: tool
         path: /testing/jest/
-      next:
-        id: storybook
-        path: /testing/storybook/
-    - blocks:
-        - id: storybook-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/storybook/storybook-opinions-over-time/
-      id: storybook
-      template: tool
-      path: /testing/storybook/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: testing
+            path: /testing/
+        next:
+            id: mocha
+            path: /testing/mocha/
+      - blocks:
+            - id: mocha-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/mocha/mocha-opinions-over-time/
         id: mocha
+        template: tool
         path: /testing/mocha/
-      next:
-        id: cypress
-        path: /testing/cypress/
-    - blocks:
-        - id: cypress-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/cypress/cypress-opinions-over-time/
-      id: cypress
-      template: tool
-      path: /testing/cypress/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: jest
+            path: /testing/jest/
+        next:
+            id: storybook
+            path: /testing/storybook/
+      - blocks:
+            - id: storybook-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/storybook/storybook-opinions-over-time/
         id: storybook
+        template: tool
         path: /testing/storybook/
-      next:
-        id: enzyme
-        path: /testing/enzyme/
-    - blocks:
-        - id: enzyme-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/enzyme/enzyme-opinions-over-time/
-      id: enzyme
-      template: tool
-      path: /testing/enzyme/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: mocha
+            path: /testing/mocha/
+        next:
+            id: cypress
+            path: /testing/cypress/
+      - blocks:
+            - id: cypress-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/cypress/cypress-opinions-over-time/
         id: cypress
+        template: tool
         path: /testing/cypress/
-      next:
-        id: ava
-        path: /testing/ava/
-    - blocks:
-        - id: ava-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/ava/ava-opinions-over-time/
-      id: ava
-      template: tool
-      path: /testing/ava/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: storybook
+            path: /testing/storybook/
+        next:
+            id: enzyme
+            path: /testing/enzyme/
+      - blocks:
+            - id: enzyme-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/enzyme/enzyme-opinions-over-time/
         id: enzyme
+        template: tool
         path: /testing/enzyme/
-      next:
-        id: jasmine
-        path: /testing/jasmine/
-    - blocks:
-        - id: jasmine-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/jasmine/jasmine-opinions-over-time/
-      id: jasmine
-      template: tool
-      path: /testing/jasmine/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: cypress
+            path: /testing/cypress/
+        next:
+            id: ava
+            path: /testing/ava/
+      - blocks:
+            - id: ava-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/ava/ava-opinions-over-time/
         id: ava
+        template: tool
         path: /testing/ava/
-      next:
-        id: puppeteer
-        path: /testing/puppeteer/
-    - blocks:
-        - id: puppeteer-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /testing/puppeteer/puppeteer-opinions-over-time/
-      id: puppeteer
-      template: tool
-      path: /testing/puppeteer/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: enzyme
+            path: /testing/enzyme/
+        next:
+            id: jasmine
+            path: /testing/jasmine/
+      - blocks:
+            - id: jasmine-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/jasmine/jasmine-opinions-over-time/
         id: jasmine
+        template: tool
         path: /testing/jasmine/
-      next:
-        id: testing-other
-        path: /testing/testing-other/
-    - id: testing-other
-      template: other
-      path: /testing/testing-other/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: ava
+            path: /testing/ava/
+        next:
+            id: puppeteer
+            path: /testing/puppeteer/
+      - blocks:
+            - id: puppeteer-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /testing/puppeteer/puppeteer-opinions-over-time/
         id: puppeteer
+        template: tool
         path: /testing/puppeteer/
-      next:
-        id: testing-conclusion
-        path: /testing/testing-conclusion/
-    - id: testing-conclusion
-      template: conclusion
-      path: /testing/testing-conclusion/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: testing-other
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: jasmine
+            path: /testing/jasmine/
+        next:
+            id: testing-other
+            path: /testing/testing-other/
+      - id: testing-other
+        template: other
         path: /testing/testing-other/
-      next:
-        id: mobiledesktop
-        path: /mobile-desktop/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: puppeteer
+            path: /testing/puppeteer/
+        next:
+            id: testing-conclusion
+            path: /testing/testing-conclusion/
+      - id: testing-conclusion
+        template: conclusion
+        path: /testing/testing-conclusion/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: testing-other
+            path: /testing/testing-other/
+        next:
+            id: mobiledesktop
+            path: /mobile-desktop/
   is_hidden: false
   defaultBlockType: default
   previous:
-    id: backend-conclusion
-    path: /back-end/backend-conclusion/
+      id: backend-conclusion
+      path: /back-end/backend-conclusion/
   next:
-    id: jest
-    path: /testing/jest/
+      id: jest
+      path: /testing/jest/
 - blocks:
-    - id: mobiledesktop-section-overview
-      type: tools-section-overview
-      path: /mobile-desktop/mobiledesktop-section-overview/
-    - id: mobiledesktop-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-      path: /mobile-desktop/mobiledesktop-experience-heatmap/
-    - id: mobiledesktop-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-      path: /mobile-desktop/mobiledesktop-salary-heatmap/
-    - id: mobiledesktop-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-      path: /mobile-desktop/mobiledesktop-company-size-heatmap/
-    - id: happiness-mobiledesktop
-      type: happiness
-      path: /mobile-desktop/happiness-mobiledesktop/
-    - id: resources-sponsors
-      type: resources
-      items:
-        - frontendmasters-sass
-      path: /mobile-desktop/resources-sponsors/
+      - id: mobiledesktop-section-overview
+        type: tools-section-overview
+        path: /mobile-desktop/mobiledesktop-section-overview/
+      - id: mobiledesktop-experience-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: experience
+        path: /mobile-desktop/mobiledesktop-experience-heatmap/
+      - id: mobiledesktop-salary-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: salary
+        path: /mobile-desktop/mobiledesktop-salary-heatmap/
+      - id: mobiledesktop-company-size-heatmap
+        type: heatmap
+        subject: tools
+        heatmapType: company-size
+        path: /mobile-desktop/mobiledesktop-company-size-heatmap/
+      - id: happiness-mobiledesktop
+        type: happiness
+        path: /mobile-desktop/happiness-mobiledesktop/
+      - id: resources-sponsors
+        type: resources
+        items:
+            - frontendmasters-sass
+        path: /mobile-desktop/resources-sponsors/
   id: mobiledesktop
   path: /mobile-desktop/
   template: toolSection
   children:
-    - blocks:
-        - id: electron-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /mobile-desktop/electron/electron-opinions-over-time/
-      id: electron
-      template: tool
-      path: /mobile-desktop/electron/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: mobiledesktop
-        path: /mobile-desktop/
-      next:
-        id: react-native
-        path: /mobile-desktop/react-native/
-    - blocks:
-        - id: react-native-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /mobile-desktop/react-native/react-native-opinions-over-time/
-      id: react-native
-      template: tool
-      path: /mobile-desktop/react-native/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+      - blocks:
+            - id: electron-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /mobile-desktop/electron/electron-opinions-over-time/
         id: electron
+        template: tool
         path: /mobile-desktop/electron/
-      next:
-        id: native-apps
-        path: /mobile-desktop/native-apps/
-    - blocks:
-        - id: native-apps-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /mobile-desktop/native-apps/native-apps-opinions-over-time/
-      id: native-apps
-      template: tool
-      path: /mobile-desktop/native-apps/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: mobiledesktop
+            path: /mobile-desktop/
+        next:
+            id: react-native
+            path: /mobile-desktop/react-native/
+      - blocks:
+            - id: react-native-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /mobile-desktop/react-native/react-native-opinions-over-time/
         id: react-native
+        template: tool
         path: /mobile-desktop/react-native/
-      next:
-        id: cordova
-        path: /mobile-desktop/cordova/
-    - blocks:
-        - id: cordova-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /mobile-desktop/cordova/cordova-opinions-over-time/
-      id: cordova
-      template: tool
-      path: /mobile-desktop/cordova/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: electron
+            path: /mobile-desktop/electron/
+        next:
+            id: native-apps
+            path: /mobile-desktop/native-apps/
+      - blocks:
+            - id: native-apps-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /mobile-desktop/native-apps/native-apps-opinions-over-time/
         id: native-apps
+        template: tool
         path: /mobile-desktop/native-apps/
-      next:
-        id: ionic
-        path: /mobile-desktop/ionic/
-    - blocks:
-        - id: ionic-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /mobile-desktop/ionic/ionic-opinions-over-time/
-      id: ionic
-      template: tool
-      path: /mobile-desktop/ionic/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: react-native
+            path: /mobile-desktop/react-native/
+        next:
+            id: cordova
+            path: /mobile-desktop/cordova/
+      - blocks:
+            - id: cordova-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /mobile-desktop/cordova/cordova-opinions-over-time/
         id: cordova
+        template: tool
         path: /mobile-desktop/cordova/
-      next:
-        id: nwjs
-        path: /mobile-desktop/nwjs/
-    - blocks:
-        - id: nwjs-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /mobile-desktop/nwjs/nwjs-opinions-over-time/
-      id: nwjs
-      template: tool
-      path: /mobile-desktop/nwjs/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: native-apps
+            path: /mobile-desktop/native-apps/
+        next:
+            id: ionic
+            path: /mobile-desktop/ionic/
+      - blocks:
+            - id: ionic-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /mobile-desktop/ionic/ionic-opinions-over-time/
         id: ionic
+        template: tool
         path: /mobile-desktop/ionic/
-      next:
-        id: expo
-        path: /mobile-desktop/expo/
-    - blocks:
-        - id: expo-opinions-over-time
-          type: opinions-over-time
-          dataPath: tool.experience
-          queryVariables: '$id: ID!'
-          query: |
-            tool(id: $id) {
-                id
-                experience {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-          path: /mobile-desktop/expo/expo-opinions-over-time/
-      id: expo
-      template: tool
-      path: /mobile-desktop/expo/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: cordova
+            path: /mobile-desktop/cordova/
+        next:
+            id: nwjs
+            path: /mobile-desktop/nwjs/
+      - blocks:
+            - id: nwjs-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /mobile-desktop/nwjs/nwjs-opinions-over-time/
         id: nwjs
+        template: tool
         path: /mobile-desktop/nwjs/
-      next:
-        id: mobiledesktop-other
-        path: /mobile-desktop/mobiledesktop-other/
-    - id: mobiledesktop-other
-      template: other
-      path: /mobile-desktop/mobiledesktop-other/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: ionic
+            path: /mobile-desktop/ionic/
+        next:
+            id: expo
+            path: /mobile-desktop/expo/
+      - blocks:
+            - id: expo-opinions-over-time
+              type: opinions-over-time
+              dataPath: tool.experience
+              queryVariables: '$id: ID!'
+              query: |
+                  tool(id: $id) {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
+                      }
+                  }
+              path: /mobile-desktop/expo/expo-opinions-over-time/
         id: expo
+        template: tool
         path: /mobile-desktop/expo/
-      next:
-        id: mobiledesktop-conclusion
-        path: /mobile-desktop/mobiledesktop-conclusion/
-    - id: mobiledesktop-conclusion
-      template: conclusion
-      path: /mobile-desktop/mobiledesktop-conclusion/
-      is_hidden: false
-      children: []
-      defaultBlockType: default
-      previous:
-        id: mobiledesktop-other
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: nwjs
+            path: /mobile-desktop/nwjs/
+        next:
+            id: mobiledesktop-other
+            path: /mobile-desktop/mobiledesktop-other/
+      - id: mobiledesktop-other
+        template: other
         path: /mobile-desktop/mobiledesktop-other/
-      next:
-        id: other-tools
-        path: /other-tools/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: expo
+            path: /mobile-desktop/expo/
+        next:
+            id: mobiledesktop-conclusion
+            path: /mobile-desktop/mobiledesktop-conclusion/
+      - id: mobiledesktop-conclusion
+        template: conclusion
+        path: /mobile-desktop/mobiledesktop-conclusion/
+        is_hidden: false
+        children: []
+        defaultBlockType: default
+        previous:
+            id: mobiledesktop-other
+            path: /mobile-desktop/mobiledesktop-other/
+        next:
+            id: other-tools
+            path: /other-tools/
   is_hidden: false
   defaultBlockType: default
   previous:
-    id: testing-conclusion
-    path: /testing/testing-conclusion/
+      id: testing-conclusion
+      path: /testing/testing-conclusion/
   next:
-    id: electron
-    path: /mobile-desktop/electron/
+      id: electron
+      path: /mobile-desktop/electron/
 - id: other-tools
   path: /other-tools/
   type: page
   blocks:
-    - id: utilities
-      type: horizontal-bar
-      dataKey: usage
-      showDescription: true
-      mode: absolute
-      path: /other-tools/utilities/
-    - id: utilities-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /other-tools/utilities-others/
-    - id: text-editors
-      type: horizontal-bar
-      dataKey: usage
-      showDescription: true
-      mode: absolute
-      path: /other-tools/text-editors/
-    - id: text-editors-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /other-tools/text-editors-others/
-    - id: browsers
-      type: horizontal-bar
-      dataKey: usage
-      showDescription: true
-      mode: absolute
-      path: /other-tools/browsers/
-    - id: browsers-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /other-tools/browsers-others/
-    - id: build-tools
-      type: horizontal-bar
-      dataKey: usage
-      showDescription: true
-      mode: absolute
-      path: /other-tools/build-tools/
-    - id: build-tools-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /other-tools/build-tools-others/
-    - id: non-js-languages
-      type: horizontal-bar
-      dataKey: usage
-      showDescription: true
-      mode: absolute
-      path: /other-tools/non-js-languages/
-    - id: non-js-languages-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /other-tools/non-js-languages-others/
+      - id: utilities
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+        path: /other-tools/utilities/
+      - id: utilities-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /other-tools/utilities-others/
+      - id: text-editors
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+        path: /other-tools/text-editors/
+      - id: text-editors-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /other-tools/text-editors-others/
+      - id: browsers
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+        path: /other-tools/browsers/
+      - id: browsers-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /other-tools/browsers-others/
+      - id: build-tools
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+        path: /other-tools/build-tools/
+      - id: build-tools-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /other-tools/build-tools-others/
+      - id: non-js-languages
+        type: horizontal-bar
+        dataKey: usage
+        showDescription: true
+        mode: absolute
+        path: /other-tools/non-js-languages/
+      - id: non-js-languages-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /other-tools/non-js-languages-others/
   is_hidden: false
   children: []
   defaultBlockType: default
   previous:
-    id: mobiledesktop-conclusion
-    path: /mobile-desktop/mobiledesktop-conclusion/
+      id: mobiledesktop-conclusion
+      path: /mobile-desktop/mobiledesktop-conclusion/
   next:
-    id: resources
-    path: /resources/
+      id: resources
+      path: /resources/
 - id: resources
   path: /resources/
   type: page
   blocks:
-    - id: blogs-magazines
-      type: horizontal-bar
-      dataKey: resources
-      showDescription: true
-      mode: absolute
-      path: /resources/blogs-magazines/
-    - id: blogs-magazines-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /resources/blogs-magazines-others/
-    - id: sites-courses
-      type: horizontal-bar
-      dataKey: resources
-      showDescription: true
-      mode: absolute
-      path: /resources/sites-courses/
-    - id: sites-courses-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /resources/sites-courses-others/
-    - id: podcasts
-      type: horizontal-bar
-      dataKey: resources
-      showDescription: true
-      mode: absolute
-      path: /resources/podcasts/
-    - id: podcasts-others
-      type: horizontal-bar
-      dataKey: others
-      showDescription: true
-      mode: relative
-      units: count
-      path: /resources/podcasts-others/
-    - id: resources-sponsors
-      type: resources
-      items:
-        - storybook1
-      path: /resources/resources-sponsors/
+      - id: blogs-magazines
+        type: horizontal-bar
+        dataKey: resources
+        showDescription: true
+        mode: absolute
+        path: /resources/blogs-magazines/
+      - id: blogs-magazines-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /resources/blogs-magazines-others/
+      - id: sites-courses
+        type: horizontal-bar
+        dataKey: resources
+        showDescription: true
+        mode: absolute
+        path: /resources/sites-courses/
+      - id: sites-courses-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /resources/sites-courses-others/
+      - id: podcasts
+        type: horizontal-bar
+        dataKey: resources
+        showDescription: true
+        mode: absolute
+        path: /resources/podcasts/
+      - id: podcasts-others
+        type: horizontal-bar
+        dataKey: others
+        showDescription: true
+        mode: relative
+        units: count
+        path: /resources/podcasts-others/
+      - id: resources-sponsors
+        type: resources
+        items:
+            - storybook1
+        path: /resources/resources-sponsors/
   is_hidden: false
   children: []
   defaultBlockType: default
   previous:
-    id: other-tools
-    path: /other-tools/
+      id: other-tools
+      path: /other-tools/
   next:
-    id: opinions
-    path: /opinions/
+      id: opinions
+      path: /opinions/
 - id: opinions
   path: /opinions/
   type: page
   blocks:
-    - type: opinion-scale
-      dataPath: js_moving_in_right_direction.year
-      query: >
-        js_moving_in_right_direction: opinion(id:
-        "js_moving_in_right_direction") {
-            id
-            year(year: 2019) {
-                completion {
-                    count
-                    percentage
-                }
-                buckets {
-                    id
-                    count
-                    percentage
-                }
-            }
-        }
-      id: js_moving_in_right_direction
-      template: opinion-scale
-      variables:
-        year: 2019
-      path: /opinions/js_moving_in_right_direction/
-    - type: opinion-scale
-      dataPath: building_js_apps_overly_complex.year
-      query: >
-        building_js_apps_overly_complex: opinion(id:
-        "building_js_apps_overly_complex") {
-            id
-            year(year: 2019) {
-                completion {
-                    count
-                    percentage
-                }
-                buckets {
-                    id
-                    count
-                    percentage
+      - type: opinion-scale
+        dataPath: js_moving_in_right_direction.year
+        query: >
+            js_moving_in_right_direction: opinion(id:
+            "js_moving_in_right_direction") {
+                id
+                year(year: 2019) {
+                    completion {
+                        count
+                        percentage
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
-        }
-      id: building_js_apps_overly_complex
-      template: opinion-scale
-      variables:
-        year: 2019
-      path: /opinions/building_js_apps_overly_complex/
-    - type: opinion-scale
-      dataPath: js_over_used_online.year
-      query: |
-        js_over_used_online: opinion(id: "js_over_used_online") {
-            id
-            year(year: 2019) {
-                completion {
-                    count
-                    percentage
-                }
-                buckets {
-                    id
-                    count
-                    percentage
-                }
-            }
-        }
-      id: js_over_used_online
-      template: opinion-scale
-      showDescription: true
-      variables:
-        year: 2019
-      path: /opinions/js_over_used_online/
-    - type: opinion-scale
-      dataPath: enjoy_building_js_apps.year
-      query: |
-        enjoy_building_js_apps: opinion(id: "enjoy_building_js_apps") {
-            id
-            year(year: 2019) {
-                completion {
-                    count
-                    percentage
-                }
-                buckets {
-                    id
-                    count
-                    percentage
+        id: js_moving_in_right_direction
+        template: opinion-scale
+        variables:
+            year: 2019
+        path: /opinions/js_moving_in_right_direction/
+      - type: opinion-scale
+        dataPath: building_js_apps_overly_complex.year
+        query: >
+            building_js_apps_overly_complex: opinion(id:
+            "building_js_apps_overly_complex") {
+                id
+                year(year: 2019) {
+                    completion {
+                        count
+                        percentage
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
-        }
-      id: enjoy_building_js_apps
-      template: opinion-scale
-      showDescription: true
-      variables:
-        year: 2019
-      path: /opinions/enjoy_building_js_apps/
-    - type: opinion-scale
-      dataPath: would_like_js_to_be_main_lang.year
-      query: >
-        would_like_js_to_be_main_lang: opinion(id:
-        "would_like_js_to_be_main_lang") {
-            id
-            year(year: 2019) {
-                completion {
-                    count
-                    percentage
-                }
-                buckets {
-                    id
-                    count
-                    percentage
+        id: building_js_apps_overly_complex
+        template: opinion-scale
+        variables:
+            year: 2019
+        path: /opinions/building_js_apps_overly_complex/
+      - type: opinion-scale
+        dataPath: js_over_used_online.year
+        query: |
+            js_over_used_online: opinion(id: "js_over_used_online") {
+                id
+                year(year: 2019) {
+                    completion {
+                        count
+                        percentage
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
-        }
-      id: would_like_js_to_be_main_lang
-      template: opinion-scale
-      variables:
-        year: 2019
-      path: /opinions/would_like_js_to_be_main_lang/
-    - type: opinion-scale
-      dataPath: js_ecosystem_changing_to_fast.year
-      query: >
-        js_ecosystem_changing_to_fast: opinion(id:
-        "js_ecosystem_changing_to_fast") {
-            id
-            year(year: 2019) {
-                completion {
-                    count
-                    percentage
-                }
-                buckets {
-                    id
-                    count
-                    percentage
+        id: js_over_used_online
+        template: opinion-scale
+        showDescription: true
+        variables:
+            year: 2019
+        path: /opinions/js_over_used_online/
+      - type: opinion-scale
+        dataPath: enjoy_building_js_apps.year
+        query: |
+            enjoy_building_js_apps: opinion(id: "enjoy_building_js_apps") {
+                id
+                year(year: 2019) {
+                    completion {
+                        count
+                        percentage
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
                 }
             }
-        }
-      id: js_ecosystem_changing_to_fast
-      template: opinion-scale
-      variables:
-        year: 2019
-      path: /opinions/js_ecosystem_changing_to_fast/
-    - id: missing-features
-      type: horizontal-bar
-      dataKey: features
-      path: /opinions/missing-features/
+        id: enjoy_building_js_apps
+        template: opinion-scale
+        showDescription: true
+        variables:
+            year: 2019
+        path: /opinions/enjoy_building_js_apps/
+      - type: opinion-scale
+        dataPath: would_like_js_to_be_main_lang.year
+        query: >
+            would_like_js_to_be_main_lang: opinion(id:
+            "would_like_js_to_be_main_lang") {
+                id
+                year(year: 2019) {
+                    completion {
+                        count
+                        percentage
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
+                }
+            }
+        id: would_like_js_to_be_main_lang
+        template: opinion-scale
+        variables:
+            year: 2019
+        path: /opinions/would_like_js_to_be_main_lang/
+      - type: opinion-scale
+        dataPath: js_ecosystem_changing_to_fast.year
+        query: >
+            js_ecosystem_changing_to_fast: opinion(id:
+            "js_ecosystem_changing_to_fast") {
+                id
+                year(year: 2019) {
+                    completion {
+                        count
+                        percentage
+                    }
+                    buckets {
+                        id
+                        count
+                        percentage
+                    }
+                }
+            }
+        id: js_ecosystem_changing_to_fast
+        template: opinion-scale
+        variables:
+            year: 2019
+        path: /opinions/js_ecosystem_changing_to_fast/
+      - id: missing-features
+        type: horizontal-bar
+        dataKey: features
+        path: /opinions/missing-features/
   is_hidden: false
   children: []
   defaultBlockType: default
   previous:
-    id: resources
-    path: /resources/
+      id: resources
+      path: /resources/
   next:
-    id: awards
-    path: /awards/
+      id: awards
+      path: /awards/
 - id: awards
   path: /awards/
   type: page
   blocks:
-    - id: feature-adoption
-      type: award
-      path: /awards/feature-adoption/
-    - id: tool-usage
-      type: award
-      path: /awards/tool-usage/
-    - id: tool-satisfaction
-      type: award
-      path: /awards/tool-satisfaction/
-    - id: tool-interest
-      type: award
-      path: /awards/tool-interest/
-    - id: resource-usage
-      type: award
-      path: /awards/resource-usage/
+      - id: feature-adoption
+        type: award
+        path: /awards/feature-adoption/
+      - id: tool-usage
+        type: award
+        path: /awards/tool-usage/
+      - id: tool-satisfaction
+        type: award
+        path: /awards/tool-satisfaction/
+      - id: tool-interest
+        type: award
+        path: /awards/tool-interest/
+      - id: resource-usage
+        type: award
+        path: /awards/resource-usage/
   is_hidden: false
   children: []
   defaultBlockType: default
   previous:
-    id: opinions
-    path: /opinions/
+      id: opinions
+      path: /opinions/
   next:
-    id: conclusion
-    path: /conclusion/
+      id: conclusion
+      path: /conclusion/
 - id: conclusion
   path: /conclusion/
   type: page
   blocks:
-    - id: conclusion
-      type: text
-      path: /conclusion/conclusion/
+      - id: conclusion
+        type: text
+        path: /conclusion/conclusion/
   is_hidden: false
   children: []
   defaultBlockType: default
   previous:
-    id: awards
-    path: /awards/
+      id: awards
+      path: /awards/
   next:
-    id: notfound
-    path: /404/
+      id: notfound
+      path: /404/
 - id: notfound
   path: /404/
   type: page
@@ -2844,6 +2844,6 @@
   children: []
   defaultBlockType: default
   previous:
-    id: conclusion
-    path: /conclusion/
+      id: conclusion
+      path: /conclusion/
   next: {}

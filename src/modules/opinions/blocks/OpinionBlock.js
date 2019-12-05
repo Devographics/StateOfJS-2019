@@ -35,10 +35,10 @@ const Emojis = ({ bars, size = 24 }) => (
 
 const getChartData = buckets => {
     const sortedBuckets = [0, 1, 2, 3, 4].map(step => {
-        const bucket = buckets.find(b => b.id === `${step}`)
+        const bucket = buckets.find(b => b.id === step)
         if (bucket === undefined) {
             return {
-                id: `${step}`,
+                id: step,
                 count: 0,
                 percentage: 0
             }
@@ -57,9 +57,6 @@ const formatTick = translate => value => {
 const OpinionBlock = ({ block, data }) => {
     const context = usePageContext()
     const { width } = context
-
-    console.log({ block, data, context })
-
     const { translate } = useI18n()
 
     const { units: defaultUnits = 'percentage', translateData } = block
@@ -67,23 +64,7 @@ const OpinionBlock = ({ block, data }) => {
 
     const getScaleTickLabel = formatTick(translate)
 
-    const dataKey = block.dataKey || 'opinion'
-    const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
-        block,
-        data.data
-    ])
-
-    const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [blockData, dataKey])
-
-    if (!data || !data.data) {
-        return (
-            <div>OpinionScaleBlock: Missing data for block {block.id}, page data is undefined</div>
-        )
-    }
-
-    if (!blockData || !blockData[dataKey]) {
-        return <div>OpinionScaleBlock: Missing data for block {block.id}</div>
-    }
+    const buckets = useMemo(() => getChartData(data.buckets), [data])
 
     return (
         <Block
@@ -91,7 +72,7 @@ const OpinionBlock = ({ block, data }) => {
             showDescription={true}
             units={units}
             setUnits={setUnits}
-            completion={blockData[dataKey].completion}
+            completion={data.completion}
         >
             <ChartContainer fit={true}>
                 <VerticalBarChart
