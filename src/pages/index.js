@@ -11,7 +11,7 @@ const Introduction = ({ data }) => (
         <div className="main-logo-wrapper">
             <LogoFull size="l" />
         </div>
-        <TextBlock text={data.introduction.html} />
+        {/* <TextBlock text={data.introduction.html} /> */}
         <IntroductionFooter />
         <NewsletterBlock />
         <SponsorsBlock />
@@ -20,16 +20,16 @@ const Introduction = ({ data }) => (
 
 export default Introduction
 
-export const query = graphql`
-    query introByLocale($locale: String!) {
-        introduction: markdownRemark(
-            frontmatter: {
-                type: { eq: "introduction" }
-                page: { eq: "introduction" }
-                locale: { eq: $locale }
-            }
-        ) {
-            html
-        }
-    }
-`
+// export const query = graphql`
+//     query introByLocale($locale: String!) {
+//         introduction: markdownRemark(
+//             frontmatter: {
+//                 type: { eq: "introduction" }
+//                 page: { eq: "introduction" }
+//                 locale: { eq: $locale }
+//             }
+//         ) {
+//             html
+//         }
+//     }
+// `

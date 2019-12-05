@@ -1007,6 +1007,23 @@
     lodash "^4.17.11"
     react-motion "^0.5.2"
 
+"@nivo/stream@^0.59.3":
+  version "0.59.3"
+  resolved "https://registry.yarnpkg.com/@nivo/stream/-/stream-0.59.3.tgz#560def98fa30136455b3e3e5f228272f73627178"
+  integrity sha512-bp6rs/Y5qMm813LCvaJfXuXZmsdGgAxs1IYy5UAPOGCYOE8DoBBU4zMPpohlndjlkmBYO2PIB8otKG+3sgpnQw==
+  dependencies:
+    "@nivo/axes" "0.59.2"
+    "@nivo/colors" "0.59.0"
+    "@nivo/core" "0.59.1"
+    "@nivo/legends" "0.59.1"
+    "@nivo/scales" "0.59.3"
+    "@nivo/tooltip" "0.59.1"
+    d3-format "^1.3.2"
+    d3-scale "^3.0.0"
+    d3-shape "^1.3.5"
+    lodash "^4.17.11"
+    recompose "^0.30.0"
+
 "@nivo/sunburst@0.59.1":
   version "0.59.1"
   resolved "https://registry.yarnpkg.com/@nivo/sunburst/-/sunburst-0.59.1.tgz#ef86d3178b729341cd31ce6946f73a5dc6074f03"

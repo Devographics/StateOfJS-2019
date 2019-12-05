@@ -57,6 +57,8 @@ const createBlockPages = (page, context, createPage) => {
     })
 }
 
+const cleanIdString = id => id.replace(new RegExp('-', 'g'), '_')
+
 /*
 
 Loop over a page's blocks to assemble its page query
@@ -65,7 +67,7 @@ Arguments: the page's $id
 
 */
 const getPageQuery = page => {
-    const { id, blocks } = page
+    const { id, blocks, queryVariables } = page
     if (!blocks) {
         return
     }
@@ -73,8 +75,9 @@ const getPageQuery = page => {
     if (queries.length === 0) {
         return
     }
+    const variables = _.compact(blocks.map(b => b.queryVariables))
     return `
-        query page${id}Query($id: ID!){
+        query page${cleanIdString(id)}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''}{
             stateOfApi{
                 ${queries.join('\n')}
             }
@@ -90,13 +93,18 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
         const pageQuery = getPageQuery(page)
         // console.log('// pageQuery')
-        // console.log(pageQuery)
 
-        if (pageQuery) {
-            const queryResults = await graphql(`${pageQuery}`, { id: page.id })
-            // console.log('// queryResults')
-            // console.log(JSON.stringify(queryResults.data.stateOfApi, '', 2))
-            pageData = queryResults.data.stateOfApi
+        try {
+            if (pageQuery) {
+                const queryResults = await graphql(`${pageQuery}`, { id: page.id })
+                // console.log('// queryResults')
+                // console.log(JSON.stringify(queryResults.data.stateOfApi, '', 2))
+                pageData = queryResults.data.stateOfApi
+            }
+        } catch (error) {
+            console.log(`// Error while loading data for page ${page.id}`)
+            console.log(pageQuery)
+            console.log(error)
         }
 
         locales.forEach(locale => {
@@ -108,7 +116,8 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
                     locale: locale.locale,
                     localeLabel: locale.label,
                     localePath: locale.path === 'default' ? '' : `/${locale.path}`,
-                    pageData
+                    pageData,
+                    pageQuery, // passed for debugging purposes
                 }
             })
         })

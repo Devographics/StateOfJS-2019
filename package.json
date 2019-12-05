@@ -28,6 +28,7 @@
     "@nivo/pie": "0.59.1",
     "@nivo/sankey": "0.59.1",
     "@nivo/scatterplot": "0.59.3",
+    "@nivo/stream": "^0.59.3",
     "@nivo/sunburst": "0.59.1",
     "@nivo/treemap": "0.59.0",
     "@nivo/waffle": "0.59.1",
