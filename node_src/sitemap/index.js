@@ -14,6 +14,7 @@ const applyTemplate = (config, templateName, rawTemplates, parent) => {
     }
     const templates = yaml.safeLoad(replacedTemplates)
     const templateObject = templates[templateName] || {}
+
     return { ...templateObject, ...config }
 }
 

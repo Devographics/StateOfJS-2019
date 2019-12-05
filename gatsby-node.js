@@ -1,7 +1,8 @@
+const fs = require('fs')
+const path = require('path')
 const yaml = require('js-yaml')
 const _ = require('lodash')
-const fs = require('fs')
-const path = require(`path`)
+const indentString = require('indent-string')
 const { computeSitemap } = require('./node_src/sitemap/index.js')
 const {
     fetchMdnResource,
@@ -59,15 +60,13 @@ const createBlockPages = (page, context, createPage) => {
 
 const cleanIdString = id => id.replace(new RegExp('-', 'g'), '_')
 
-/*
-
-Loop over a page's blocks to assemble its page query
-
-Arguments: the page's $id
-
-*/
+/**
+ * Loop over a page's blocks to assemble its page query
+ *
+ * Arguments: the page's $id
+ */
 const getPageQuery = page => {
-    const { id, blocks, queryVariables } = page
+    const { id, blocks } = page
     if (!blocks) {
         return
     }
@@ -76,10 +75,10 @@ const getPageQuery = page => {
         return
     }
     const variables = _.compact(blocks.map(b => b.queryVariables))
-    return `query page${cleanIdString(id)}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''}{
-  stateOfApi{
-    ${queries.join('\n')}
-  }
+    return `query page${_.upperFirst(cleanIdString(id))}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''} {
+    stateOfApi {
+${indentString(queries.join('\n'), '        ')}
+    }
 }`
 }
 

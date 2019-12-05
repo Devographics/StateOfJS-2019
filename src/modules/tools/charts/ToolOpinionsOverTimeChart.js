@@ -61,7 +61,7 @@ const getChartData = data => {
     const chartData = data.map(yearData => {
         const { year, buckets } = yearData
         const yearObject = {
-            id: year,
+            id: year
         }
         opinions.forEach(opinion => {
             const opinionBucket = buckets.find(b => b.id === opinion.id)
@@ -105,7 +105,6 @@ export default class ToolOpinionsOverTimeChart extends Component {
     render() {
         let { data } = this.props
         const { current, displayMode } = this.state
-
 
         data = getChartData(data)
 

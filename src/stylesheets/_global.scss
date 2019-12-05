@@ -147,10 +147,15 @@ Page-specific styles
 .error-data{
     font-size: $small-font;
 }
-.page-query{
+.page-query {
     width: 100%;
     font-size: $small-font;
+    background-color: black;
+    color: #94eeee;
+    padding: 12px 24px;
     height: 300px;
+    overflow: auto;
+    margin: 24px 0;
 }
 iframe{
     display: none;
