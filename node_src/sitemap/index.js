@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { findIndex, findLastIndex, omit } = require('lodash')
+const { findIndex, findLastIndex, omit, template } = require('lodash')
 const yaml = require('js-yaml')
 pick = require('lodash/pick')
 
@@ -7,12 +7,20 @@ const rawPageTemplates = fs.readFileSync('./config/page_templates.yml', 'utf8')
 const rawBlockTemplates = fs.readFileSync('./config/block_templates.yml', 'utf8')
 
 const applyTemplate = (config, templateName, rawTemplates, parent) => {
-    const { id } = config
-    let replacedTemplates = rawTemplates.replace(new RegExp('{id}', 'g'), id)
-    if (parent) {
-        replacedTemplates = replacedTemplates.replace(new RegExp('{parentId}', 'g'), parent.id)
+    // defines all available variables to be injected
+    // at build time in the GraphQL queries
+    const variables = {
+        id: config.id,
+        ...(config.variables || {})
     }
-    const templates = yaml.safeLoad(replacedTemplates)
+    if (parent) {
+        variables.parentId = parent.id
+    }
+    // Inject variables in raw yaml templates
+    const interpolatedTemplates = template(rawTemplates)(variables)
+    // Parse interpolated templates, meaning with built time variables replaced
+    const templates = yaml.safeLoad(interpolatedTemplates)
+    // pick the corresponding template
     const templateObject = templates[templateName] || {}
 
     return { ...templateObject, ...config }
