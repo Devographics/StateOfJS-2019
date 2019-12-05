@@ -48,169 +48,219 @@
         items:
             - frontendmasters-design
 
-- id: features-reloaded
-  path: /features-reloaded
+- id: features
+  path: /features
   type: page
   children:
       - id: syntax
         path: /syntax
-        type: page
+        blocks:
+            - id: destructuring
+              template: feature
+            - id: spread_operator
+              template: feature
+            - id: arrow_functions
+              template: feature
 
       - id: language
         path: /language
-        type: page
+        blocks:
+            - id: proxies
+              template: feature
+            - id: async_await
+              template: feature
+            - id: promises
+              template: feature
+            - id: decorators
+              template: feature
 
       - id: data-structures
         path: /data-structures
-        type: page
+        blocks:
+            - id: maps
+              template: feature
+            - id: sets
+              template: feature
+            - id: typed_arrays
+              template: feature
+            - id: array_prototype_flat
+              template: feature
 
       - id: browser-apis
         path: /browser-apis
-        type: page
+        blocks:
+            - id: fetch
+              template: feature
+            - id: i18n
+              template: feature
+            - id: local_storage
+              template: feature
+            - id: service_workers
+              template: feature
+            - id: web_animations
+              template: feature
+            - id: web_audio
+              template: feature
+            - id: web_components
+              template: feature
+            - id: webgl
+              template: feature
+            - id: webrtc
+              template: feature
+            - id: websocket
+              template: feature
+            - id: web_speech
+              template: feature
+            - id: webvr
+              template: feature
 
       - id: other-features
         path: /other-features
-        type: page
-
-- id: features
-  path: /features
-  type: page
-  defaultBlockType: feature
-  blocks:
-      - id: features-overview
-        type: features-overview
-  children:
-      - id: layout
-        path: /layout
-        type: features
-        data:
-            section: layout
         blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: layout-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-grid
-            - flexbox
-            - css-multi-column
-            - css-writing-modes
-            - css-exclusions
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - designcode1
-                  - frontendmasters-grid
+            - id: pwa
+              template: feature
+            - id: wasm
+              template: feature
 
-      - id: shapes-and-graphics
-        path: /shapes-and-graphics
-        type: features
-        data:
-            section: shapes-and-graphics
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: shapes-and-graphics-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-shapes
-            - object-fit
-            - clip-path
-            - css-masks
-            - blend-modes
-            - css-filter-effects
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-svg
+# - id: features
+#   path: /features
+#   type: page
+#   defaultBlockType: feature
+#   blocks:
+#       - id: features-overview
+#         type: features-overview
+#   children:
+#       - id: layout
+#         path: /layout
+#         type: features
+#         data:
+#             section: layout
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: layout-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-grid
+#             - flexbox
+#             - css-multi-column
+#             - css-writing-modes
+#             - css-exclusions
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - designcode1
+#                   - frontendmasters-grid
 
-      - id: interactions
-        path: /interactions
-        type: features
-        data:
-            section: interactions
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: interactions-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-scroll-snap
-            - overscroll-behavior
-            - overflow-anchor
+#       - id: shapes-and-graphics
+#         path: /shapes-and-graphics
+#         type: features
+#         data:
+#             section: shapes-and-graphics
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: shapes-and-graphics-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-shapes
+#             - object-fit
+#             - clip-path
+#             - css-masks
+#             - blend-modes
+#             - css-filter-effects
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-svg
 
-      - id: typography
-        path: /typography
-        type: features
-        data:
-            section: typography
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: typography-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - web-fonts-font-face
-            - variable-fonts
-            - line-breaking-properties
-            - font-variant
-            - initial-letter
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-typography
+#       - id: interactions
+#         path: /interactions
+#         type: features
+#         data:
+#             section: interactions
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: interactions-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-scroll-snap
+#             - overscroll-behavior
+#             - overflow-anchor
 
-      - id: animations-and-transforms
-        path: /animations-and-transforms
-        type: features
-        data:
-            section: animations-and-transforms
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: animations-and-transforms-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-transitions
-            - css-transforms
-            - css-animations
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-css
+#       - id: typography
+#         path: /typography
+#         type: features
+#         data:
+#             section: typography
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: typography-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - web-fonts-font-face
+#             - variable-fonts
+#             - line-breaking-properties
+#             - font-variant
+#             - initial-letter
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-typography
 
-      - id: other-features
-        path: /other-features
-        type: features
-        data:
-            section: other-features
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-              showDescription: true
-            - id: other-features-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-variables
-            - support-queries
-            - css-containment
-            - will-change
-            - calc
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - designcode2
+#       - id: animations-and-transforms
+#         path: /animations-and-transforms
+#         type: features
+#         data:
+#             section: animations-and-transforms
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: animations-and-transforms-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-transitions
+#             - css-transforms
+#             - css-animations
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-css
+
+#       - id: other-features
+#         path: /other-features
+#         type: features
+#         data:
+#             section: other-features
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#               showDescription: true
+#             - id: other-features-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-variables
+#             - support-queries
+#             - css-containment
+#             - will-change
+#             - calc
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - designcode2
 
 - id: frontend
   path: /front-end-frameworks
   template: toolSection
-  children: 
+  children:
       - id: react
         template: tool
       - id: vue
@@ -231,7 +281,7 @@
 - id: datalayer
   path: /data-layer
   template: toolSection
-  children: 
+  children:
       - id: redux
         template: tool
       - id: apollo
@@ -250,7 +300,7 @@
 - id: backend
   path: /back-end
   template: toolSection
-  children: 
+  children:
       - id: express
         template: tool
       - id: nextjs
@@ -275,7 +325,7 @@
 - id: testing
   path: /testing
   template: toolSection
-  children: 
+  children:
       - id: jest
         template: tool
       - id: mocha
@@ -300,7 +350,7 @@
 - id: mobiledesktop
   path: /mobile-desktop
   template: toolSection
-  children: 
+  children:
       - id: electron
         template: tool
       - id: react-native
@@ -385,7 +435,7 @@
 #               type: resources
 #               items:
 #                   - frontendmasters-sass
-      
+
 #       - id: css-in-js
 #         path: /css-in-js
 #         type: tools

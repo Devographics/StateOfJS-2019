@@ -6,9 +6,12 @@ pick = require('lodash/pick')
 const rawPageTemplates = fs.readFileSync('./config/page_templates.yml', 'utf8')
 const rawBlockTemplates = fs.readFileSync('./config/block_templates.yml', 'utf8')
 
-const applyTemplate = (config, templateName, rawTemplates) => {
+const applyTemplate = (config, templateName, rawTemplates, parent) => {
     const { id } = config
-    const replacedTemplates = rawTemplates.replace(new RegExp('{id}', 'g'), id)
+    let replacedTemplates = rawTemplates.replace(new RegExp('{id}', 'g'), id)
+    if (parent) {
+        replacedTemplates = replacedTemplates.replace(new RegExp('{parentId}', 'g'), parent.id)
+    }
     const templates = yaml.safeLoad(replacedTemplates)
     const templateObject = templates[templateName] || {}
     return { ...templateObject, ...config }
@@ -18,7 +21,7 @@ exports.pageFromConfig = (stack, config, parent) => {
 
     // if template has been provided, apply it
     if (config.template) {
-        config = applyTemplate(config, config.template, rawPageTemplates)
+        config = applyTemplate(config, config.template, rawPageTemplates, parent)
     }
 
     const pagePath = config.path || `/${config.id}`
@@ -42,7 +45,7 @@ exports.pageFromConfig = (stack, config, parent) => {
             // if template has been provided, apply it
 
             if (block.template) {
-                block = applyTemplate(block, block.template, rawBlockTemplates)
+                block = applyTemplate(block, block.template, rawBlockTemplates, page)
             }
 
             // if block type is missing, get it from parent
