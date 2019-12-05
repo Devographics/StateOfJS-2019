@@ -37,11 +37,10 @@ feature:
             id
             section
             usageByYear {
-                total
                 year
                 completion {
-                    percentage
                     count
+                    percentage
                 }
                 buckets {
                     id

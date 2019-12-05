@@ -20,11 +20,13 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
 
     const [units, setUnits] = useState(defaultUnits)
 
-    const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
-    const feature = features.find(a => a.id === block.id)
-
     const context = usePageContext()
     const { translate } = useI18n()
+
+    // @todo: restore the resources logic
+    /*
+    const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
+    const feature = features.find(a => a.id === block.id)
 
     let mdnInfo
     if (feature.resources.mdn !== null && feature.resources.mdn.length > 0) {
@@ -35,6 +37,34 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     }
 
     const caniuseInfo = feature.resources.caniuse
+    */
+
+    const feature = {
+        resources: {
+            id: block.id
+        }
+    }
+    const mdnInfo = undefined
+    const caniuseInfo = undefined
+
+    // @todo: handle normalization directly in the survey
+    const buckets = data.buckets.map(bucket => {
+        let id
+        if (bucket.id === 'heard') {
+            id = 'know_not_used'
+        }
+        if (bucket.id === 'neverheard') {
+            id = 'never_heard_not_sure'
+        }
+        if (bucket.id === 'used') {
+            id = 'used_it'
+        }
+
+        return {
+            ...bucket,
+            id
+        }
+    })
 
     return (
         <Block
@@ -43,20 +73,20 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
             showDescription={false}
             units={units}
             setUnits={setUnits}
-            completion={feature.usage.completion}
+            completion={data.completion}
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
                     <ChartContainer height={40} fit={true} className="FeatureChart">
                         <GaugeBarChart
-                            buckets={feature.usage.buckets}
+                            buckets={buckets}
                             mapping={usage}
                             units={units}
                             applyEmptyPatternTo="never_heard_not_sure"
                             i18nNamespace="features.usage"
                         />
                     </ChartContainer>
-                    <FeatureUsageLegends data={feature.usage.buckets} units={units} />
+                    <FeatureUsageLegends data={data.buckets} units={units} />
                 </div>
                 {!context.isCapturing && (
                     <>
