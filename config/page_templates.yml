@@ -1,0 +1,50 @@
+# Tool section (/front-end, /data-layer, etc.)
+toolSection:
+  blocks:
+    - id: {id}-section-overview
+      type: tools-section-overview
+    - id: {id}-experience-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: experience
+    - id: {id}-salary-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: salary
+    - id: {id}-company-size-heatmap
+      type: heatmap
+      subject: tools
+      heatmapType: company-size
+    - id: happiness-{id}
+      type: happiness
+    - id: resources-sponsors
+      type: resources
+      items:
+          - frontendmasters-sass
+
+# Tool (/front-end/react, /front-end/angular, etc.)
+tool:
+  blocks: 
+  - id: {id}-popularity-over-time
+    type: popularity-over-time
+    query: >
+      tool(id: $id) {
+        experience {
+          awarenessInterestSatisfaction {
+            awareness
+            interest
+            satisfaction
+          }
+          buckets {
+            count
+            id
+            percentage
+          }
+          completion {
+            count
+            percentage
+          }
+          total
+          year
+        }
+      }

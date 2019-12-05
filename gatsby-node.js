@@ -2,7 +2,7 @@ const yaml = require('js-yaml')
 const _ = require('lodash')
 const fs = require('fs')
 const path = require(`path`)
-const { computeSitemap } = require('./node_src/sitemap')
+const { computeSitemap } = require('./node_src/sitemap/index.js')
 const {
     fetchMdnResource,
     fetchCaniuseResource,
@@ -19,37 +19,6 @@ const rawSitemap = yaml.safeLoad(fs.readFileSync('./config/raw_sitemap.yml', 'ut
 const locales = yaml.safeLoad(fs.readFileSync('./config/locales.yml', 'utf8'))
 const features = yaml.safeLoad(fs.readFileSync('./src/data/features.yml', 'utf8'))
 const entities = yaml.safeLoad(fs.readFileSync('./src/data/entities.yml', 'utf8'))
-
-const guessPageTemplate = type => {
-    let template
-    switch (type) {
-        case 'features':
-            template = 'modules/features/FeaturesTemplate.js'
-            break
-
-        case 'tools':
-            template = 'modules/tools/ToolsTemplate.js'
-            break
-
-        case 'tool':
-            template = 'modules/tools/ToolTemplate.js'
-            break
-
-        case 'other':
-            template = 'modules/tools/OtherTemplate.js'
-            break
-
-        case 'conclusion':
-            template = 'modules/tools/ConclusionTemplate.js'
-            break
-    
-
-        default:
-            throw new Error(`no template defined for page type: ${type}`)
-    }
-
-    return path.resolve(`./src/${template}`)
-}
 
 const localizedPath = (path, locale) =>
     locale.path === 'default' ? path : `/${locale.path}${path}`
@@ -88,29 +57,64 @@ const createBlockPages = (page, context, createPage) => {
     })
 }
 
-exports.createPages = async ({ actions: { createPage } }) => {
-    const { flat } = await computeSitemap(rawSitemap)
-    flat.forEach(page => {
-        const context = getPageContext(page)
-        if (page.type !== 'page') {
-            const template = guessPageTemplate(page.type || page.defaultBlockType)
+/*
 
-            locales.forEach(locale => {
-                createPage({
-                    path: localizedPath(page.path, locale),
-                    component: template,
-                    context: {
-                        ...context,
-                        locale: locale.locale,
-                        localeLabel: locale.label,
-                        localePath: locale.path === 'default' ? '' : `/${locale.path}`
-                    }
-                })
-            })
+Loop over a page's blocks to assemble its page query
+
+Arguments: the page's $id
+
+*/
+const getPageQuery = page => {
+    const { id, blocks } = page
+    if (!blocks) {
+        return
+    }
+    const queries = _.compact(blocks.map(b => b.query))
+    if (queries.length === 0) {
+        return
+    }
+    return `
+        query page${id}Query($id: ID!){
+            stateOfApi{
+                ${queries.join('\n')}
+            }
+        }
+    `
+}
+
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
+    const { flat } = await computeSitemap(rawSitemap)
+    for (const page of flat) {
+        let pageData = {}
+        const context = getPageContext(page)
+
+        const pageQuery = getPageQuery(page)
+        // console.log('// pageQuery')
+        // console.log(pageQuery)
+
+        if (pageQuery) {
+            const queryResults = await graphql(`${pageQuery}`, { id: page.id })
+            // console.log('// queryResults')
+            // console.log(JSON.stringify(queryResults.data.stateOfApi, '', 2))
+            pageData = queryResults.data.stateOfApi
         }
 
+        locales.forEach(locale => {
+            createPage({
+                path: localizedPath(page.path, locale),
+                component: path.resolve(`./src/core/pages/PageTemplate.js`),
+                context: {
+                    ...context,
+                    locale: locale.locale,
+                    localeLabel: locale.label,
+                    localePath: locale.path === 'default' ? '' : `/${locale.path}`,
+                    pageData
+                }
+            })
+        })
+
         createBlockPages(page, context, createPage)
-    })
+    }
 }
 
 /**

@@ -6,605 +6,663 @@
   path: /tshirt
   type: page
 
-- id: demographics
-  path: /demographics
-  type: page
-  blocks:
-      - id: participation-by-country
-        type: participation-by-country
-        showDescription: true
-      - id: salary
-        type: vertical-bar
-        dataKey: breakdown
-        bucketKeys: salary
-        showDescription: true
-        query: >
-            salary {
-                year
-                total
-                completion
-                buckets {
-                    id
-                    count
-                    percentage
-                }
-            }
-      - id: years-of-experience
-        dataKey: breakdown
-        type: vertical-bar
-        bucketKeys: yearsOfExperience
-        showDescription: true
-        query: > 
-          yearsOfExperience {
-              year
-              total
-              completion
-              buckets {
-                  id
-                  count
-                  percentage
-              }
-          }
-      - id: company-size
-        type: vertical-bar
-        dataKey: breakdown
-        showDescription: false
-        bucketKeys: companySize
-        query: >
-          companySize {
-            year
-            total
-            completion
-            buckets {
-              id
-              count
-              percentage
-            }
-          }
-      - id: source
-        type: horizontal-bar
-        dataKey: breakdown
-        showDescription: true
-      - id: gender
-        type: gender
-        showDescription: true
-      - id: job-title
-        type: horizontal-bar
-        dataKey: breakdown
-        showDescription: true
-        translateData: true
-      - id: css-proficiency
-        type: vertical-bar
-        dataKey: breakdown
-        bucketKeys: javascriptProficiency
-        showDescription: true
-        showLegend: true
-      - id: backend-proficiency
-        type: vertical-bar
-        dataKey: breakdown
-        bucketKeys: backendProficiency
-        showDescription: true
-        showLegend: true
-      - id: resources-sponsors
-        type: resources
-        items:
-            - frontendmasters-design
+# - id: demographics
+#   path: /demographics
+#   type: page
+#   blocks:
+#       - id: participation-by-country
+#         type: participation-by-country
+#         showDescription: true
+#       - id: salary
+#         type: vertical-bar
+#         dataPath: demographics.salary.2 # select the 4th array item to select the 4th year
+#         bucketKeys: salary
+#         showDescription: true
+#         query: >
+#             demographics {
+#               salary {
+#                 year
+#                 total
+#                 completion{
+#                     percentage
+#                     count
+#                 }
+#                 buckets {
+#                   count
+#                   id
+#                   percentage
+#                 }
+#               }
+#             }
+#       - id: years-of-experience
+#         dataPath: demographics.yearsOfExperience.2
+#         type: vertical-bar
+#         bucketKeys: yearsOfExperience
+#         showDescription: true
+#         query: > 
+#           demographics {
+#             yearsOfExperience {
+#                 year
+#                 total
+#                 completion{
+#                     percentage
+#                     count
+#                 }
+#                 buckets {
+#                     id
+#                     count
+#                     percentage
+#                 }
+#             }
+#           }
+#       - id: company-size
+#         type: vertical-bar
+#         dataPath: demographics.companySize.2
+#         showDescription: false
+#         bucketKeys: companySize
+#         query: >
+#           demographics {
+#             companySize {
+#               year
+#               total
+#               completion{
+#                   percentage
+#                   count
+#               }
+#               buckets {
+#                 id
+#                 count
+#                 percentage
+#               }
+#             }
+#           }
+#       - id: source
+#         type: horizontal-bar
+#         dataKey: breakdown
+#         showDescription: true
+#       - id: gender
+#         type: gender
+#         showDescription: true
+#       - id: job-title
+#         type: horizontal-bar
+#         dataKey: breakdown
+#         showDescription: true
+#         translateData: true
+#       - id: css-proficiency
+#         type: vertical-bar
+#         dataKey: breakdown
+#         bucketKeys: javascriptProficiency
+#         showDescription: true
+#         showLegend: true
+#       - id: backend-proficiency
+#         type: vertical-bar
+#         dataKey: breakdown
+#         bucketKeys: backendProficiency
+#         showDescription: true
+#         showLegend: true
+#       - id: resources-sponsors
+#         type: resources
+#         items:
+#             - frontendmasters-design
 
-- id: features-reloaded
-  path: /features-reloaded
-  type: page
-  children:
-      - id: syntax
-        path: /syntax
-        type: page
+# - id: features-reloaded
+#   path: /features-reloaded
+#   type: page
+#   children:
+#       - id: syntax
+#         path: /syntax
+#         type: page
 
-      - id: language
-        path: /language
-        type: page
+#       - id: language
+#         path: /language
+#         type: page
 
-      - id: data-structures
-        path: /data-structures
-        type: page
+#       - id: data-structures
+#         path: /data-structures
+#         type: page
 
-      - id: browser-apis
-        path: /browser-apis
-        type: page
+#       - id: browser-apis
+#         path: /browser-apis
+#         type: page
 
-      - id: other-features
-        path: /other-features
-        type: page
+#       - id: other-features
+#         path: /other-features
+#         type: page
 
-- id: features
-  path: /features
-  type: page
-  defaultBlockType: feature
-  blocks:
-      - id: features-overview
-        type: features-overview
-  children:
-      - id: layout
-        path: /layout
-        type: features
-        data:
-            section: layout
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: layout-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-grid
-            - flexbox
-            - css-multi-column
-            - css-writing-modes
-            - css-exclusions
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - designcode1
-                  - frontendmasters-grid
+# - id: features
+#   path: /features
+#   type: page
+#   defaultBlockType: feature
+#   blocks:
+#       - id: features-overview
+#         type: features-overview
+#   children:
+#       - id: layout
+#         path: /layout
+#         type: features
+#         data:
+#             section: layout
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: layout-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-grid
+#             - flexbox
+#             - css-multi-column
+#             - css-writing-modes
+#             - css-exclusions
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - designcode1
+#                   - frontendmasters-grid
 
-      - id: shapes-and-graphics
-        path: /shapes-and-graphics
-        type: features
-        data:
-            section: shapes-and-graphics
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: shapes-and-graphics-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-shapes
-            - object-fit
-            - clip-path
-            - css-masks
-            - blend-modes
-            - css-filter-effects
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-svg
+#       - id: shapes-and-graphics
+#         path: /shapes-and-graphics
+#         type: features
+#         data:
+#             section: shapes-and-graphics
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: shapes-and-graphics-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-shapes
+#             - object-fit
+#             - clip-path
+#             - css-masks
+#             - blend-modes
+#             - css-filter-effects
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-svg
 
-      - id: interactions
-        path: /interactions
-        type: features
-        data:
-            section: interactions
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: interactions-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-scroll-snap
-            - overscroll-behavior
-            - overflow-anchor
+#       - id: interactions
+#         path: /interactions
+#         type: features
+#         data:
+#             section: interactions
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: interactions-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-scroll-snap
+#             - overscroll-behavior
+#             - overflow-anchor
 
-      - id: typography
-        path: /typography
-        type: features
-        data:
-            section: typography
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: typography-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - web-fonts-font-face
-            - variable-fonts
-            - line-breaking-properties
-            - font-variant
-            - initial-letter
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-typography
+#       - id: typography
+#         path: /typography
+#         type: features
+#         data:
+#             section: typography
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: typography-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - web-fonts-font-face
+#             - variable-fonts
+#             - line-breaking-properties
+#             - font-variant
+#             - initial-letter
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-typography
 
-      - id: animations-and-transforms
-        path: /animations-and-transforms
-        type: features
-        data:
-            section: animations-and-transforms
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-            - id: animations-and-transforms-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-transitions
-            - css-transforms
-            - css-animations
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-css
+#       - id: animations-and-transforms
+#         path: /animations-and-transforms
+#         type: features
+#         data:
+#             section: animations-and-transforms
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#             - id: animations-and-transforms-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-transitions
+#             - css-transforms
+#             - css-animations
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-css
 
-      - id: other-features
-        path: /other-features
-        type: features
-        data:
-            section: other-features
-        blocks:
-            - id: features-section-overview
-              type: features-section-overview
-              showDescription: true
-            - id: other-features-experience-heatmap
-              type: heatmap
-              subject: features
-              heatmapType: experience
-            - css-variables
-            - support-queries
-            - css-containment
-            - will-change
-            - calc
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - designcode2
+#       - id: other-features
+#         path: /other-features
+#         type: features
+#         data:
+#             section: other-features
+#         blocks:
+#             - id: features-section-overview
+#               type: features-section-overview
+#               showDescription: true
+#             - id: other-features-experience-heatmap
+#               type: heatmap
+#               subject: features
+#               heatmapType: experience
+#             - css-variables
+#             - support-queries
+#             - css-containment
+#             - will-change
+#             - calc
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - designcode2
 
 - id: frontend
   path: /front-end-frameworks
-  type: tools
-  defaultBlockType: tool
-  blocks:
-    - id: frontend-section-overview
-      type: tools-section-overview
-    - id: frontend-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-    - id: frontend-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-    - id: frontend-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-    - id: happiness-frontend
-      type: happiness
-    - id: resources-sponsors
-      type: resources
-      items:
-          - frontendmasters-sass
+  template: toolSection
   children: 
-      - react
-      - vue
-      - angular
-      - preact
-      - ember
-      - svelte
+      - id: react
+        template: tool
+      - id: vue
+        template: tool
+      - id: angular
+        template: tool
+      - id: preact
+        template: tool
+      - id: ember
+        template: tool
+      - id: svelte
+        template: tool
       - id: frontend-other
-        type: other
+        template: other
       - id: frontend-conclusion
-        type: conclusion
+        template: conclusion
 
 - id: datalayer
   path: /data-layer
-  type: tools
-  defaultBlockType: tool
-  blocks:
-    - id: datalayer-section-overview
-      type: tools-section-overview
-    - id: datalayer-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-    - id: datalayer-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-    - id: datalayer-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-    - id: datalayer-frontend
-      type: happiness
-    - id: resources-sponsors
-      type: resources
-      items:
-          - frontendmasters-sass
+  template: toolSection
   children: 
-      - redux
-      - apollo
-      - graphql
-      - relay
-      - mobx
+      - id: redux
+        template: tool
+      - id: apollo
+        template: tool
+      - id: graphql
+        template: tool
+      - id: relay
+        template: tool
+      - id: mobx
+        template: tool
       - id: datalayer-other
-        type: other
+        template: other
       - id: datalayer-conclusion
-        type: conclusion
+        template: conclusion
 
+# - id: backend
+#   path: /back-end
+#   type: tools
+#   defaultBlockType: tool
+#   blocks:
+#     - id: backend-section-overview
+#       type: tools-section-overview
+#     - id: backend-experience-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: experience
+#     - id: backend-salary-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: salary
+#     - id: backend-company-size-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: company-size
+#     - id: backend-frontend
+#       type: happiness
+#     - id: resources-sponsors
+#       type: resources
+#       items:
+#           - frontendmasters-sass
+#   children: 
+#       - express
+#       - nextjs
+#       - koa
+#       - meteor
+#       - sails
+#       - feathers
+#       - nuxt
+#       - gatsby
+#       - id: backend-other
+#         type: other
+#       - id: backend-conclusion
+#         type: conclusion
 
-- id: backend
-  path: /back-end
-  type: tools
-  defaultBlockType: tool
-  blocks:
-    - id: backend-section-overview
-      type: tools-section-overview
-    - id: backend-experience-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: experience
-    - id: backend-salary-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: salary
-    - id: backend-company-size-heatmap
-      type: heatmap
-      subject: tools
-      heatmapType: company-size
-    - id: backend-frontend
-      type: happiness
-    - id: resources-sponsors
-      type: resources
-      items:
-          - frontendmasters-sass
-  children: 
-      - express
-      - nextjs
-      - koa
-      - meteor
-      - sails
-      - feathers
-      - nuxt
-      - gatsby
-      - id: datalayer-other
-        type: other
-      - id: datalayer-conclusion
-        type: conclusion
+# - id: testing
+#   path: /testing
+#   type: tools
+#   defaultBlockType: tool
+#   blocks:
+#     - id: testing-section-overview
+#       type: tools-section-overview
+#     - id: testing-experience-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: experience
+#     - id: testing-salary-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: salary
+#     - id: testing-company-size-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: company-size
+#     - id: testing-frontend
+#       type: happiness
+#     - id: resources-sponsors
+#       type: resources
+#       items:
+#           - frontendmasters-sass
+#   children: 
+#       - jest
+#       - mocha
+#       - storybook
+#       - cypress
+#       - enzyme
+#       - ava
+#       - jasmine
+#       - puppeteer
+#       - id: testing-other
+#         type: other
+#       - id: testing-conclusion
+#         type: conclusion
 
-- id: technologies
-  path: /technologies
-  type: page
-  defaultBlockType: tool
-  blocks:
-      - id: tools-overview
-        type: tools-overview
-      - id: tools-scatterplot
-        type: tools-scatterplot
-  children:
-      - id: frontend
-        path: /front-end
-        type: tools
-        blocks:
-            - id: frontend-section-overview
-              type: tools-section-overview
-            - id: frontend-experience-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: experience
-            - id: frontend-salary-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: salary
-            - react
-            - vue
-            - angular
-            - preact
-            - ember
-            - svelte
-            - id: other-frontend
-              type: other
-            - id: happiness-frontend
-              type: happiness
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-sass
-      - id: datalayer
-        path: /data-layer
-        type: tools
-        blocks:
-            - id: datalayer-section-overview
-              type: tools-section-overview
-            - id: datalayer-experience-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: experience
-            - id: datalayer-salary-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: salary
-            - redux
-            - apollo
-            - graphql
-            - mobx
-            - relay
-            - id: other-datalayer
-              type: other
-            - id: happiness-datalayer
-              type: happiness
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-sass
+# - id: mobiledesktop
+#   path: /mobile-desktop
+#   type: tools
+#   defaultBlockType: tool
+#   blocks:
+#     - id: mobiledesktop-section-overview
+#       type: tools-section-overview
+#     - id: mobiledesktop-experience-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: experience
+#     - id: mobiledesktop-salary-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: salary
+#     - id: mobiledesktop-company-size-heatmap
+#       type: heatmap
+#       subject: tools
+#       heatmapType: company-size
+#     - id: mobiledesktop-frontend
+#       type: happiness
+#     - id: resources-sponsors
+#       type: resources
+#       items:
+#           - frontendmasters-sass
+#   children: 
+#       - electron
+#       - react-native
+#       - native-apps
+#       - cordova
+#       - ionic
+#       - nwjs
+#       - expo
+#       - id: mobiledesktop-other
+#         type: other
+#       - id: mobiledesktop-conclusion
+#         type: conclusion
+
+# - id: technologies
+#   path: /technologies
+#   type: page
+#   defaultBlockType: tool
+#   blocks:
+#       - id: tools-overview
+#         type: tools-overview
+#       - id: tools-scatterplot
+#         type: tools-scatterplot
+#   children:
+#       - id: frontend
+#         path: /front-end
+#         type: tools
+#         blocks:
+#             - id: frontend-section-overview
+#               type: tools-section-overview
+#             - id: frontend-experience-heatmap
+#               type: heatmap
+#               subject: tools
+#               heatmapType: experience
+#             - id: frontend-salary-heatmap
+#               type: heatmap
+#               subject: tools
+#               heatmapType: salary
+#             - react
+#             - vue
+#             - angular
+#             - preact
+#             - ember
+#             - svelte
+#             - id: other-frontend
+#               type: other
+#             - id: happiness-frontend
+#               type: happiness
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-sass
+#       - id: datalayer
+#         path: /data-layer
+#         type: tools
+#         blocks:
+#             - id: datalayer-section-overview
+#               type: tools-section-overview
+#             - id: datalayer-experience-heatmap
+#               type: heatmap
+#               subject: tools
+#               heatmapType: experience
+#             - id: datalayer-salary-heatmap
+#               type: heatmap
+#               subject: tools
+#               heatmapType: salary
+#             - redux
+#             - apollo
+#             - graphql
+#             - mobx
+#             - relay
+#             - id: other-datalayer
+#               type: other
+#             - id: happiness-datalayer
+#               type: happiness
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-sass
       
-      - id: css-in-js
-        path: /css-in-js
-        type: tools
-        blocks:
-            - id: tools-section-overview
-              type: tools-section-overview
-            - id: css-in-js-experience-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: experience
-            - id: css-in-js-salary-heatmap
-              type: heatmap
-              subject: tools
-              heatmapType: salary
-            - styled-components
-            - glamor
-            - aphrodite
-            - jss
-            - styled-jsx
-            - radium
-            - emotion
-            - css-modules
-            - id: resources-sponsors
-              type: resources
-              items:
-                  - frontendmasters-react
+#       - id: css-in-js
+#         path: /css-in-js
+#         type: tools
+#         blocks:
+#             - id: tools-section-overview
+#               type: tools-section-overview
+#             - id: css-in-js-experience-heatmap
+#               type: heatmap
+#               subject: tools
+#               heatmapType: experience
+#             - id: css-in-js-salary-heatmap
+#               type: heatmap
+#               subject: tools
+#               heatmapType: salary
+#             - styled-components
+#             - glamor
+#             - aphrodite
+#             - jss
+#             - styled-jsx
+#             - radium
+#             - emotion
+#             - css-modules
+#             - id: resources-sponsors
+#               type: resources
+#               items:
+#                   - frontendmasters-react
 
-- id: other-tools
-  path: /other-tools
-  type: page
-  blocks:
-      - id: utilities
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: utilities-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
-      - id: text-editors
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: text-editors-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
-      - id: browsers
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: browsers-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
-      - id: build-tools
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: build-tools-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
-      - id: non-js-languages
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: non-js-languages-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
+# - id: other-tools
+#   path: /other-tools
+#   type: page
+#   blocks:
+#       - id: utilities
+#         type: horizontal-bar
+#         dataKey: usage
+#         showDescription: true
+#         mode: absolute
+#       - id: utilities-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
+#       - id: text-editors
+#         type: horizontal-bar
+#         dataKey: usage
+#         showDescription: true
+#         mode: absolute
+#       - id: text-editors-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
+#       - id: browsers
+#         type: horizontal-bar
+#         dataKey: usage
+#         showDescription: true
+#         mode: absolute
+#       - id: browsers-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
+#       - id: build-tools
+#         type: horizontal-bar
+#         dataKey: usage
+#         showDescription: true
+#         mode: absolute
+#       - id: build-tools-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
+#       - id: non-js-languages
+#         type: horizontal-bar
+#         dataKey: usage
+#         showDescription: true
+#         mode: absolute
+#       - id: non-js-languages-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
 
-- id: resources
-  path: /resources
-  type: page
-  blocks:
-      - id: blogs-magazines
-        type: horizontal-bar
-        dataKey: resources
-        showDescription: true
-        mode: absolute
-      - id: blogs-magazines-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
-      - id: sites-courses
-        type: horizontal-bar
-        dataKey: resources
-        showDescription: true
-        mode: absolute
-      - id: sites-courses-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
-      - id: podcasts
-        type: horizontal-bar
-        dataKey: resources
-        showDescription: true
-        mode: absolute
-      - id: podcasts-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
-        mode: relative
-        units: count
-      - id: resources-sponsors
-        type: resources
-        items:
-            - storybook1
+# - id: resources
+#   path: /resources
+#   type: page
+#   blocks:
+#       - id: blogs-magazines
+#         type: horizontal-bar
+#         dataKey: resources
+#         showDescription: true
+#         mode: absolute
+#       - id: blogs-magazines-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
+#       - id: sites-courses
+#         type: horizontal-bar
+#         dataKey: resources
+#         showDescription: true
+#         mode: absolute
+#       - id: sites-courses-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
+#       - id: podcasts
+#         type: horizontal-bar
+#         dataKey: resources
+#         showDescription: true
+#         mode: absolute
+#       - id: podcasts-others
+#         type: horizontal-bar
+#         dataKey: others
+#         showDescription: true
+#         mode: relative
+#         units: count
+#       - id: resources-sponsors
+#         type: resources
+#         items:
+#             - storybook1
 
-- id: opinions
-  path: /opinions
-  type: page
-  blocks:
-      - id: js_moving_in_right_direction
-        type: opinion-scale
-      - id: building_js_apps_overly_complex
-        type: opinion-scale
-      - id: js_over_used_online
-        type: opinion-scale
-        showDescription: true
-      - id: enjoy_building_js_apps
-        type: opinion-scale
-        showDescription: true
-      - id: would_like_js_to_be_main_lang
-        type: opinion-scale
-      - id: js_ecosystem_changing_to_fast
-        type: opinion-scale
-      - id: missing-features
-        type: horizontal-bar
-        dataKey: features
+# - id: opinions
+#   path: /opinions
+#   type: page
+#   blocks:
+#       - id: js_moving_in_right_direction
+#         type: opinion-scale
+#       - id: building_js_apps_overly_complex
+#         type: opinion-scale
+#       - id: js_over_used_online
+#         type: opinion-scale
+#         showDescription: true
+#       - id: enjoy_building_js_apps
+#         type: opinion-scale
+#         showDescription: true
+#       - id: would_like_js_to_be_main_lang
+#         type: opinion-scale
+#       - id: js_ecosystem_changing_to_fast
+#         type: opinion-scale
+#       - id: missing-features
+#         type: horizontal-bar
+#         dataKey: features
 
-- id: awards
-  path: /awards
-  type: page
-  blocks:
-      - id: feature-adoption
-        type: award
-      - id: tool-usage
-        type: award
-      - id: tool-satisfaction
-        type: award
-      - id: tool-interest
-        type: award
-      - id: resource-usage
-        type: award
+# - id: awards
+#   path: /awards
+#   type: page
+#   blocks:
+#       - id: feature-adoption
+#         type: award
+#       - id: tool-usage
+#         type: award
+#       - id: tool-satisfaction
+#         type: award
+#       - id: tool-interest
+#         type: award
+#       - id: resource-usage
+#         type: award
 
-- id: conclusion
-  path: /conclusion
-  type: page
-  blocks:
-      - id: conclusion
-        type: text
+# - id: conclusion
+#   path: /conclusion
+#   type: page
+#   blocks:
+#       - id: conclusion
+#         type: text
 
-- id: support
-  path: /support
-  type: page
-  is_hidden: true
+# - id: support
+#   path: /support
+#   type: page
+#   is_hidden: true
 
 - id: notfound
   path: /404

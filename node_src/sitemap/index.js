@@ -3,15 +3,28 @@ const { findIndex, findLastIndex, omit } = require('lodash')
 const yaml = require('js-yaml')
 pick = require('lodash/pick')
 
+const rawPageTemplates = fs.readFileSync('./config/page_templates.yml', 'utf8')
+
+const applyPageTemplate = (config, template) => {
+    const { id } = config
+    const replacedPageTemplates = rawPageTemplates.replace(new RegExp('{id}', 'g'), id)
+    const pageTemplates = yaml.safeLoad(replacedPageTemplates)
+    const pageTemplate = pageTemplates[template] || {}
+    return { ...pageTemplate, ...config }
+}
+
 exports.pageFromConfig = (stack, config, parent) => {
-    // if config is a string, use that as the id
-    const configObject = typeof config === 'string' ? { id: config } : config;
-    const pagePath = configObject.path || `/${configObject.id}`
+
+    // if template has been provided, apply it
+    if (config.template) {
+        config = applyPageTemplate(config, config.template)
+    }
+
+    const pagePath = config.path || `/${config.id}`
     const page = {
-        ...configObject,
-        path:
-            parent === undefined ? pagePath : `${parent.path.replace(/\/$/, '')}${pagePath}`,
-        is_hidden: !!configObject.is_hidden,
+        ...config,
+        path: parent === undefined ? pagePath : `${parent.path.replace(/\/$/, '')}${pagePath}`,
+        is_hidden: !!config.is_hidden,
         children: []
     }
     // if page has no defaultBlockType, get it from parent
@@ -45,8 +58,8 @@ exports.pageFromConfig = (stack, config, parent) => {
     }
     stack.flat.push(page)
 
-    if (Array.isArray(configObject.children)) {
-        configObject.children.forEach(child => {
+    if (Array.isArray(config.children)) {
+        config.children.forEach(child => {
             page.children.push(exports.pageFromConfig(stack, child, page))
         })
     }
