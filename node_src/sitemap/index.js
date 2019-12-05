@@ -7,6 +7,18 @@ const rawPageTemplates = fs.readFileSync('./config/page_templates.yml', 'utf8')
 const rawBlockTemplates = fs.readFileSync('./config/block_templates.yml', 'utf8')
 
 const applyTemplate = (config, templateName, rawTemplates, parent) => {
+    // load raw templates
+    const templates = yaml.safeLoad(rawTemplates)
+
+    // pick the corresponding template
+    const templateObject = templates[templateName]
+    if (!templateObject) {
+        return { ...config }
+    }
+
+    // convert template object back to string for variables injection
+    const templateString = yaml.dump(templateObject)
+
     // defines all available variables to be injected
     // at build time in the GraphQL queries
     const variables = {
@@ -16,14 +28,17 @@ const applyTemplate = (config, templateName, rawTemplates, parent) => {
     if (parent) {
         variables.parentId = parent.id
     }
-    // Inject variables in raw yaml templates
-    const interpolatedTemplates = template(rawTemplates)(variables)
-    // Parse interpolated templates, meaning with built time variables replaced
-    const templates = yaml.safeLoad(interpolatedTemplates)
-    // pick the corresponding template
-    const templateObject = templates[templateName] || {}
 
-    return { ...templateObject, ...config }
+    // Inject variables in raw yaml templates
+    const interpolatedTemplate = template(templateString)(variables)
+
+    // convert raw populated template to object
+    const populatedTemplate = yaml.safeLoad(interpolatedTemplate)
+
+    return {
+        ...populatedTemplate,
+        ...config,
+    }
 }
 
 exports.pageFromConfig = (stack, config, parent) => {

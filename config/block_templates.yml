@@ -53,20 +53,21 @@ feature:
 
 # Used for "I think JavaScript is moving in the right direction", etc. blocks
 # {id} refers to the current subject
-#
 opinion-scale:
     type: opinion-scale
-    dataPath: '${id}.byYear'
-    # queryVariables: '$id: ID!'
+    dataPath: '${id}.year'
     query: >
         ${id}: opinion(id: "${id}") {
             id
-            byYear {
-                total
-                year
+            year(year: ${year}) {
                 completion {
-                    percentage
                     count
+                    percentage
+                }
+                buckets {
+                    id
+                    count
+                    percentage
                 }
             }
         }

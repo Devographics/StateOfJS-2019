@@ -571,18 +571,30 @@
   blocks:
       - id: js_moving_in_right_direction
         template: opinion-scale
+        variables:
+            year: 2019
       - id: building_js_apps_overly_complex
         template: opinion-scale
+        variables:
+            year: 2019
       - id: js_over_used_online
         template: opinion-scale
         showDescription: true
+        variables:
+            year: 2019
       - id: enjoy_building_js_apps
         template: opinion-scale
         showDescription: true
+        variables:
+            year: 2019
       - id: would_like_js_to_be_main_lang
         template: opinion-scale
+        variables:
+            year: 2019
       - id: js_ecosystem_changing_to_fast
         template: opinion-scale
+        variables:
+            year: 2019
       - id: missing-features
         type: horizontal-bar
         dataKey: features
