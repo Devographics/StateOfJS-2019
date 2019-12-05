@@ -4,20 +4,21 @@ const yaml = require('js-yaml')
 pick = require('lodash/pick')
 
 const rawPageTemplates = fs.readFileSync('./config/page_templates.yml', 'utf8')
+const rawBlockTemplates = fs.readFileSync('./config/block_templates.yml', 'utf8')
 
-const applyPageTemplate = (config, template) => {
+const applyTemplate = (config, templateName, rawTemplates) => {
     const { id } = config
-    const replacedPageTemplates = rawPageTemplates.replace(new RegExp('{id}', 'g'), id)
-    const pageTemplates = yaml.safeLoad(replacedPageTemplates)
-    const pageTemplate = pageTemplates[template] || {}
-    return { ...pageTemplate, ...config }
+    const replacedTemplates = rawTemplates.replace(new RegExp('{id}', 'g'), id)
+    const templates = yaml.safeLoad(replacedTemplates)
+    const templateObject = templates[templateName] || {}
+    return { ...templateObject, ...config }
 }
 
 exports.pageFromConfig = (stack, config, parent) => {
 
     // if template has been provided, apply it
     if (config.template) {
-        config = applyPageTemplate(config, config.template)
+        config = applyTemplate(config, config.template, rawPageTemplates)
     }
 
     const pagePath = config.path || `/${config.id}`
@@ -38,17 +39,20 @@ exports.pageFromConfig = (stack, config, parent) => {
 
     if (Array.isArray(page.blocks)) {
         page.blocks = page.blocks.map(block => {
-            // block can either be a string (used as `id`); or an object with an `id` property
-            const blockObject = typeof block === 'string' ? { id: block } : block
-            const blockId = typeof block === 'string' ? block : block.id
+            // if template has been provided, apply it
+
+            if (block.template) {
+                block = applyTemplate(block, block.template, rawBlockTemplates)
+            }
+
             // if block type is missing, get it from parent
-            if (!blockObject.type) {
-                blockObject.type = page.defaultBlockType
+            if (!block.type) {
+                block.type = page.defaultBlockType
             }
 
             return {
-                ...blockObject,
-                path: `${page.path}${blockId}/`
+                ...block,
+                path: `${page.path}${block.id}/`
             }
         })
     }

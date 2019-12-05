@@ -144,7 +144,14 @@ Page-specific styles
     border: 3px solid $redLighter;
     padding: $spacing;
 }
-
+.error-data{
+    font-size: $small-font;
+}
+.page-query{
+    width: 100%;
+    font-size: $small-font;
+    height: 300px;
+}
 iframe{
     display: none;
 }

@@ -572,27 +572,27 @@
 #         items:
 #             - storybook1
 
-# - id: opinions
-#   path: /opinions
-#   type: page
-#   blocks:
-#       - id: js_moving_in_right_direction
-#         type: opinion-scale
-#       - id: building_js_apps_overly_complex
-#         type: opinion-scale
-#       - id: js_over_used_online
-#         type: opinion-scale
-#         showDescription: true
-#       - id: enjoy_building_js_apps
-#         type: opinion-scale
-#         showDescription: true
-#       - id: would_like_js_to_be_main_lang
-#         type: opinion-scale
-#       - id: js_ecosystem_changing_to_fast
-#         type: opinion-scale
-#       - id: missing-features
-#         type: horizontal-bar
-#         dataKey: features
+- id: opinions
+  path: /opinions
+  type: page
+  blocks:
+      - id: js_moving_in_right_direction
+        template: opinion-scale
+      - id: building_js_apps_overly_complex
+        template: opinion-scale
+      - id: js_over_used_online
+        template: opinion-scale
+        showDescription: true
+      - id: enjoy_building_js_apps
+        template: opinion-scale
+        showDescription: true
+      - id: would_like_js_to_be_main_lang
+        template: opinion-scale
+      - id: js_ecosystem_changing_to_fast
+        template: opinion-scale
+      - id: missing-features
+        type: horizontal-bar
+        dataKey: features
 
 # - id: awards
 #   path: /awards

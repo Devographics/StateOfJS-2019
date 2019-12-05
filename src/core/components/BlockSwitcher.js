@@ -25,17 +25,25 @@ class ErrorBoundary extends React.Component {
         return { error }
     }
     render() {
+        const { block, pageData } = this.props
         const { error } = this.state
-        const { id } = this.props.block
+        const { id } = block
         if (error) {
-            return <Block id={id} error={error.message} />
+            return (
+                <Block id={id}>
+                    <div className="error">{error.message}</div>
+                    <pre className="error error-data">
+                        <code>{JSON.stringify(get(pageData, block.dataPath), '', 2)}</code>
+                    </pre>
+                </Block>
+            )
         }
         return this.props.children
     }
 }
 
 const BlockSwitcherWithBoundary = props => (
-    <ErrorBoundary block={props.block}>
+    <ErrorBoundary {...props}>
         <BlockSwitcher {...props} />
     </ErrorBoundary>
 )

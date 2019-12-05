@@ -11,6 +11,7 @@ const PageTemplate = ({ data = {}, pageContext = {} }) => {
     return (
         <>
             <PageHeader />
+            <textarea className="page-query">{pageContext.pageQuery}</textarea>
             {data.introduction && <TextBlock text={data.introduction.html} />}
             {context.blocks &&
                 context.blocks.map((block, i) => (

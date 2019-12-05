@@ -1,0 +1,16 @@
+opinion-scale: 
+  type: opinion-scale
+  dataPath: {id}.byYear
+  # queryVariables: '$id: ID!'
+  query: >
+    {id}: opinion(id: "{id}") {
+      id
+      byYear {
+        total
+        year
+        completion {
+          percentage
+          count
+        }
+      }
+    }
