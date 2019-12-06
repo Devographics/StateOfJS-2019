@@ -125,7 +125,9 @@ other-tools:
                         id
                         count
                         percentage
-                        homepage
+                        entity {
+                          homepage
+                        }
                     }
                 }
             }
@@ -146,7 +148,9 @@ resources:
                         id
                         count
                         percentage
-                        homepage
+                        entity {
+                          homepage
+                        }
                     }
                 }
             }
