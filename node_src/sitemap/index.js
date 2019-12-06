@@ -5,6 +5,7 @@ pick = require('lodash/pick')
 
 const rawPageTemplates = fs.readFileSync('./config/page_templates.yml', 'utf8')
 const rawBlockTemplates = fs.readFileSync('./config/block_templates.yml', 'utf8')
+const globalVariables = yaml.safeLoad(fs.readFileSync('./config/variables.yml', 'utf8'))
 
 const applyTemplate = (config, templateName, rawTemplates, parent) => {
     // load raw templates
@@ -22,6 +23,7 @@ const applyTemplate = (config, templateName, rawTemplates, parent) => {
     // defines all available variables to be injected
     // at build time in the GraphQL queries
     const variables = {
+        ...globalVariables,
         id: config.id,
         ...(config.variables || {})
     }

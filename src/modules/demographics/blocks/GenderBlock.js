@@ -6,17 +6,9 @@ import GaugeBarChart from 'core/charts/GaugeBarChart'
 import ChartContainer from 'core/charts/ChartContainer'
 import GenderLegends from 'modules/demographics/charts/GendersLegends'
 
-const getChartData = (data, block) => {
-    const blockData = data.data.aggregations.find(agg => agg.id === block.id)
-
-    return blockData.breakdown
-}
-
 const GenderBreakdownBlock = ({ block, data }) => {
     const { units: defaultUnits = 'percentage' } = block
     const [units, setUnits] = useState(defaultUnits)
-
-    const chartData = useMemo(() => getChartData(data, block), [data, block])
 
     return (
         <Block
@@ -25,17 +17,17 @@ const GenderBreakdownBlock = ({ block, data }) => {
             className="Block--gender Gender__Block"
             units={units}
             setUnits={setUnits}
-            completion={chartData.completion}
+            completion={data.completion}
         >
             <ChartContainer height={200} fit={true}>
                 <GaugeBarChart
                     units={units}
-                    buckets={chartData.buckets}
+                    buckets={data.buckets}
                     mapping={gender}
                     i18nNamespace={block.id}
                 />
             </ChartContainer>
-            <GenderLegends data={chartData.buckets} units={units} />
+            <GenderLegends data={data.buckets} units={units} />
         </Block>
     )
 }

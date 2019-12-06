@@ -8,7 +8,6 @@
 demographics-block:
     type: vertical-bar
     dataPath: 'demographics.${id}.2' # select the 4th array item to select the 4th year
-    bucketKeys: { id }
     showDescription: true
     query: >
         demographics {
@@ -55,10 +54,11 @@ feature:
 opinion-scale:
     type: opinion-scale
     dataPath: '${id}.year'
+    showDescription: true
     query: >
         ${id}: opinion(id: "${id}") {
             id
-            year(year: ${year}) {
+            year(year: ${currentYear}) {
                 completion {
                     count
                     percentage

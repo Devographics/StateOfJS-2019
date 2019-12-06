@@ -34,9 +34,8 @@ tool:
         - id: '${id}-opinions-over-time'
           type: opinions-over-time
           dataPath: tool.experience
-          queryVariables: '$id: ID!'
           query: >
-              tool(id: $id) {
+              tool(id: "${id}") {
                   id
                   experience {
                       year
