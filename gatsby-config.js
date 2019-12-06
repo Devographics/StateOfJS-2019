@@ -33,8 +33,8 @@ module.exports = {
         {
           resolve: 'gatsby-source-graphql',
           options: {
-              typeName: 'StateOfApi',
-              fieldName: "stateOfApi",
+              typeName: 'SurveyApi',
+              fieldName: "surveyApi",
               url: 'http://localhost:4000',
           },
         },

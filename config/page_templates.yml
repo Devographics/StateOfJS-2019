@@ -33,26 +33,28 @@ tool:
     blocks:
         - id: '${id}-opinions-over-time'
           type: opinions-over-time
-          dataPath: tool.experience
+          dataPath: surveyApi.tool.experience
           query: >
-              tool(id: "${id}") {
-                  id
-                  experience {
-                      year
-                      total
-                      completion {
-                          count
-                          percentage
-                      }
-                      awarenessInterestSatisfaction {
-                          awareness
-                          interest
-                          satisfaction
-                      }
-                      buckets {
-                          id
-                          count
-                          percentage
+              surveyApi {
+                  tool(id: "${id}") {
+                      id
+                      experience {
+                          year
+                          total
+                          completion {
+                              count
+                              percentage
+                          }
+                          awarenessInterestSatisfaction {
+                              awareness
+                              interest
+                              satisfaction
+                          }
+                          buckets {
+                              id
+                              count
+                              percentage
+                          }
                       }
                   }
               }

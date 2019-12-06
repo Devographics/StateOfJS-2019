@@ -74,7 +74,7 @@ export const query = graphql`
         ) {
             html
         }
-        demographics: stateOfApi {
+        demographics: surveyApi {
             demographics {
                 companySize {
                     year

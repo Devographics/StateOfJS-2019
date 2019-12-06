@@ -76,9 +76,7 @@ const getPageQuery = page => {
     }
     const variables = _.compact(blocks.map(b => b.queryVariables))
     return `query page${_.upperFirst(cleanIdString(id))}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''} {
-    stateOfApi {
-${indentString(queries.join('\n'), '        ')}
-    }
+${indentString(queries.join('\n'), '    ')}
 }`
 }
 
@@ -95,8 +93,8 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             if (pageQuery) {
                 const queryResults = await graphql(`${pageQuery}`, { id: page.id })
                 // console.log('// queryResults')
-                // console.log(JSON.stringify(queryResults.data.stateOfApi, '', 2))
-                pageData = queryResults.data.stateOfApi
+                // console.log(JSON.stringify(queryResults.data, '', 2))
+                pageData = queryResults.data
             }
         } catch (error) {
             console.log(`// Error while loading data for page ${page.id}`)

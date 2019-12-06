@@ -28,21 +28,21 @@
         showDescription: true
         dataPath: 'demographics.gender.1'
         query: >
-          demographics {
-            gender {
-              year
-              total
-              completion {
-                percentage
-                count
-              }
-              buckets {
-                count
-                id
-                percentage
+            demographics {
+              gender {
+                year
+                total
+                completion {
+                  percentage
+                  count
+                }
+                buckets {
+                  count
+                  id
+                  percentage
+                }
               }
             }
-          }
       - id: job-title
         type: horizontal-bar
         dataKey: breakdown
@@ -72,22 +72,33 @@
       - id: syntax
         path: /syntax
         blocks:
+            - id: syntax
+              template: page-introduction
+
             - id: destructuring
               template: feature
+
             - id: spread_operator
               template: feature
+
             - id: arrow_functions
               template: feature
 
       - id: language
         path: /language
         blocks:
+            - id: language
+              template: page-introduction
+
             - id: proxies
               template: feature
+
             - id: async_await
               template: feature
+
             - id: promises
               template: feature
+
             - id: decorators
               template: feature
 
@@ -546,6 +557,9 @@
   path: /opinions
   type: page
   blocks:
+      - id: opinions
+        template: page-introduction
+
       - id: js_moving_in_right_direction
         template: opinion-scale
       - id: building_js_apps_overly_complex

@@ -4,6 +4,7 @@ import VerticalBarBlock from 'core/blocks/VerticalBarBlock'
 import TextBlock from 'core/blocks/TextBlock'
 import ResourcesBlock from 'core/blocks/ResourcesBlock'
 import HeatmapBlock from 'core/blocks/HeatmapBlock'
+import PageIntroductionBlock from 'core/blocks/PageIntroductionBlock'
 import { OpinionBlock } from 'modules/opinions/blocks'
 
 // demographics
@@ -30,6 +31,7 @@ import ToolOpinionsOverTimeBlock from 'modules/tools/blocks/ToolOpinionsOverTime
 
 const blockRegistry = {
     // generic
+    'page-introduction': PageIntroductionBlock,
     'horizontal-bar': HorizontalBarBlock,
     'vertical-bar': VerticalBarBlock,
     'opinion-scale': OpinionBlock,

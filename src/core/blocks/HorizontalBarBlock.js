@@ -5,7 +5,6 @@ import ChartContainer from 'core/charts/ChartContainer'
 import HorizontalBarChart from 'core/charts/HorizontalBarChart'
 
 const HorizontalBarBlock = ({ block, data }) => {
-
     const {
         id,
         showDescription,
