@@ -91,7 +91,7 @@
             - id: decorators
               template: feature
 
-      - id: data-structures
+      - id: data_structures
         path: /data-structures
         blocks:
             - id: maps
@@ -103,7 +103,7 @@
             - id: array_prototype_flat
               template: feature
 
-      - id: browser-apis
+      - id: browser_apis
         path: /browser-apis
         blocks:
             - id: fetch
@@ -131,7 +131,7 @@
             - id: webvr
               template: feature
 
-      - id: other-features
+      - id: other_features
         path: /other-features
         blocks:
             - id: pwa

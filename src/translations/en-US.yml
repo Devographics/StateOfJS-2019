@@ -291,9 +291,9 @@ translations:
       t: Syntax
     - key: page.language
       t: Language
-    - key: page.data-structures
+    - key: page.data_structures
       t: Data Structures
-    - key: page.browser-apis
+    - key: page.browser_apis
       t: Browser APIs
 
     - key: feature.learn_more
