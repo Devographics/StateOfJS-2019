@@ -53,20 +53,41 @@ feature:
 # {id} refers to the current subject
 opinion-scale:
     type: opinion-scale
-    dataPath: '${id}.year'
+    dataPath: '${id}.byYear'
     showDescription: true
     query: >
-        ${id}: opinion(id: "${id}") {
+      ${id}: opinion(id: "${id}") {
+        id
+        byYear {
+          total
+          year
+          completion {
+            count
+            percentage
+          }
+          buckets {
             id
-            year(year: ${currentYear}) {
-                completion {
-                    count
-                    percentage
-                }
-                buckets {
-                    id
-                    count
-                    percentage
-                }
-            }
+            count
+            percentage
+          }
         }
+      }
+
+resources:
+  type: horizontal-bar
+  showDescription: true
+  mode: absolute
+  dataPath: '${id}.year'
+  query: >
+    ${id}: resources(id: "${id}"){
+      id
+      year(year: ${currentYear}){
+        year
+        buckets{
+          id
+          count
+          percentage
+          homepage
+        }
+      }
+    }

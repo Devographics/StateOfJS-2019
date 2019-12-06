@@ -41,59 +41,59 @@ export default props => {
     return <PageTemplate {...props} data={data} />
 }
 
-export const query = graphql`
-    query opinions($locale: String) {
-        introduction: markdownRemark(
-            frontmatter: {
-                type: { eq: "introduction" }
-                page: { eq: "opinions" }
-                locale: { eq: $locale }
-            }
-        ) {
-            html
-        }
-        opinions: stateOfApi {
-            opinions(
-                ids: [
-                    "would_like_js_to_be_main_lang"
-                    "enjoy_building_js_apps"
-                    "js_ecosystem_changing_to_fast"
-                    "js_over_used_online"
-                    "building_js_apps_overly_complex"
-                    "js_moving_in_right_direction"
-                ]
-            ) {
-                id
-                byYear {
-                    year
-                    total
-                    completion {
-                        percentage
-                        count
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-        }
-        data: opinionsYaml(section_id: { eq: "opinions" }) {
-            aggregations {
-                id
-                features {
-                    completion {
-                        count
-                        percentage
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                }
-            }
-        }
-    }
-`
+// export const query = graphql`
+//     query opinions($locale: String) {
+//         introduction: markdownRemark(
+//             frontmatter: {
+//                 type: { eq: "introduction" }
+//                 page: { eq: "opinions" }
+//                 locale: { eq: $locale }
+//             }
+//         ) {
+//             html
+//         }
+//         opinions: stateOfApi {
+//             opinions(
+//                 ids: [
+//                     "would_like_js_to_be_main_lang"
+//                     "enjoy_building_js_apps"
+//                     "js_ecosystem_changing_to_fast"
+//                     "js_over_used_online"
+//                     "building_js_apps_overly_complex"
+//                     "js_moving_in_right_direction"
+//                 ]
+//             ) {
+//                 id
+//                 byYear {
+//                     year
+//                     total
+//                     completion {
+//                         percentage
+//                         count
+//                     }
+//                     buckets {
+//                         id
+//                         count
+//                         percentage
+//                     }
+//                 }
+//             }
+//         }
+//         data: opinionsYaml(section_id: { eq: "opinions" }) {
+//             aggregations {
+//                 id
+//                 features {
+//                     completion {
+//                         count
+//                         percentage
+//                     }
+//                     buckets {
+//                         id
+//                         count
+//                         percentage
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// `

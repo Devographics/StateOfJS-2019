@@ -12,7 +12,7 @@ const PageTemplate = ({ data = {}, pageContext = {} }) => {
         <>
             <PageHeader />
             <div className="page-query">
-                <pre>{pageContext.pageQuery}</pre>
+                <textarea>{pageContext.pageQuery}</textarea>
             </div>
             {data.introduction && <TextBlock text={data.introduction.html} />}
             {context.blocks &&

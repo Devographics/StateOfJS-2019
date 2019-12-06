@@ -544,37 +544,22 @@
   path: /resources
   type: page
   blocks:
-      - id: blogs-magazines
-        type: horizontal-bar
-        dataKey: resources
-        showDescription: true
-        mode: absolute
-      - id: blogs-magazines-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+      - id: blogsMagazines
+        template: resources
+      - id: blogsMagazinesOthers
+        template: resources
         mode: relative
         units: count
-      - id: sites-courses
-        type: horizontal-bar
-        dataKey: resources
-        showDescription: true
-        mode: absolute
-      - id: sites-courses-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+      - id: sitesCourses
+        template: resources
+      - id: sitesCoursesOthers
+        template: resources
         mode: relative
         units: count
       - id: podcasts
-        type: horizontal-bar
-        dataKey: resources
-        showDescription: true
-        mode: absolute
-      - id: podcasts-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+        template: resources
+      - id: podcastsOthers
+        template: resources
         mode: relative
         units: count
       - id: resources-sponsors
