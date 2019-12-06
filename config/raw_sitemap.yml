@@ -105,48 +105,72 @@
       - id: data_structures
         path: /data-structures
         blocks:
+            - id: data_structures
+              template: page-introduction
+
             - id: maps
               template: feature
+
             - id: sets
               template: feature
+
             - id: typed_arrays
               template: feature
+
             - id: array_prototype_flat
               template: feature
 
       - id: browser_apis
         path: /browser-apis
         blocks:
+            - id: browser_apis
+              template: page-introduction
+
             - id: fetch
               template: feature
+
             - id: i18n
               template: feature
+
             - id: local_storage
               template: feature
+
             - id: service_workers
               template: feature
+
             - id: web_animations
               template: feature
+
             - id: web_audio
               template: feature
+
             - id: web_components
               template: feature
+
             - id: webgl
               template: feature
+
             - id: webrtc
               template: feature
+
             - id: websocket
               template: feature
+
             - id: web_speech
               template: feature
+
             - id: webvr
               template: feature
 
       - id: other_features
         path: /other-features
         blocks:
+            - id: features_other_features
+              template: page-introduction
+
             - id: pwa
               template: feature
+
             - id: wasm
               template: feature
 
