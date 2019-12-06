@@ -485,58 +485,33 @@
   type: page
   blocks:
       - id: utilities
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: utilities-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+        template: other-tools
+      - id: utilitiesOthers
+        template: other-tools
         mode: relative
         units: count
-      - id: text-editors
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: text-editors-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+      - id: textEditors
+        template: other-tools
+      - id: textEditorsOthers
+        template: other-tools
         mode: relative
         units: count
       - id: browsers
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: browsers-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+        template: other-tools
+      - id: browsersOthers
+        template: other-tools
         mode: relative
         units: count
-      - id: build-tools
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: build-tools-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+      - id: buildTools
+        template: other-tools
+      - id: buildToolsOthers
+        template: other-tools
         mode: relative
         units: count
-      - id: non-js-languages
-        type: horizontal-bar
-        dataKey: usage
-        showDescription: true
-        mode: absolute
-      - id: non-js-languages-others
-        type: horizontal-bar
-        dataKey: others
-        showDescription: true
+      - id: nonJSLanguages
+        template: other-tools
+      - id: nonJSLanguagesOthers
+        template: other-tools
         mode: relative
         units: count
 

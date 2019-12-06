@@ -73,6 +73,25 @@ opinion-scale:
         }
       }
 
+other-tools:
+  type: horizontal-bar
+  showDescription: true
+  mode: absolute
+  dataPath: '${id}.year'
+  query: >
+    ${id}: otherTools(id: "${id}"){
+      id
+      year(year: ${currentYear}){
+        year
+        buckets{
+          id
+          count
+          percentage
+          homepage
+        }
+      }
+    }
+
 resources:
   type: horizontal-bar
   showDescription: true
