@@ -21,11 +21,11 @@ page-introduction:
 # Used for salaries, company size, experience, etc. blocks
 happiness-trend:
     type: happiness-trend
-    dataPath: 'surveyApi.${id}.years'
+    dataPath: '${id}_happiness.happiness.years'
     showDescription: true
     query: >
-        surveyApi {
-            ${id}: happiness(id: "${id}") {
+        ${id}_happiness: surveyApi {
+            happiness(id: "${id}") {
                 years {
                     year
                     mean

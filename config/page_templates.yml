@@ -7,6 +7,10 @@
 # Tool section (/front-end, /data-layer, etc.)
 toolSection:
     blocks:
+        - id: '${id}-introduction'
+          template: page-introduction
+          variables:
+              id: '${id}'
         - id: '${id}-section-overview'
           type: tools-section-overview
         - id: '${id}-experience-heatmap'
