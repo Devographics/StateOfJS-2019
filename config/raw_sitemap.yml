@@ -521,31 +521,31 @@
   blocks:
       - id: utilities
         template: other-tools
-      - id: utilitiesOthers
+      - id: utilities_others
         template: other-tools
         mode: relative
         units: count
-      - id: textEditors
+      - id: text_editors
         template: other-tools
-      - id: textEditorsOthers
+      - id: text_editors_others
         template: other-tools
         mode: relative
         units: count
       - id: browsers
         template: other-tools
-      - id: browsersOthers
+      - id: browsers_others
         template: other-tools
         mode: relative
         units: count
-      - id: buildTools
+      - id: build_tools
         template: other-tools
-      - id: buildToolsOthers
+      - id: build_tools_others
         template: other-tools
         mode: relative
         units: count
-      - id: nonJSLanguages
+      - id: non_js_languages
         template: other-tools
-      - id: nonJSLanguagesOthers
+      - id: non_js_languages_others
         template: other-tools
         mode: relative
         units: count
@@ -554,21 +554,21 @@
   path: /resources
   type: page
   blocks:
-      - id: blogsMagazines
+      - id: blogs_magazines
         template: resources
-      - id: blogsMagazinesOthers
+      - id: blogs_magazines_others
         template: resources
         mode: relative
         units: count
-      - id: sitesCourses
+      - id: sites_courses
         template: resources
-      - id: sitesCoursesOthers
+      - id: sites_courses_others
         template: resources
         mode: relative
         units: count
       - id: podcasts
         template: resources
-      - id: podcastsOthers
+      - id: podcasts_others
         template: resources
         mode: relative
         units: count
@@ -583,7 +583,6 @@
   blocks:
       - id: opinions
         template: page-introduction
-
       - id: js_moving_in_right_direction
         template: opinion-scale
       - id: building_js_apps_overly_complex
@@ -604,15 +603,15 @@
   path: /awards
   type: page
   blocks:
-      - id: feature-adoption
+      - id: feature_adoption
         type: award
-      - id: tool-usage
+      - id: tool_usage
         type: award
-      - id: tool-satisfaction
+      - id: tool_satisfaction
         type: award
-      - id: tool-interest
+      - id: tool_interest
         type: award
-      - id: resource-usage
+      - id: resource_usage
         type: award
 
 - id: conclusion
