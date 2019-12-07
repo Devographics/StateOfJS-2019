@@ -18,6 +18,21 @@ page-introduction:
             html
         }
 
+# Used for salaries, company size, experience, etc. blocks
+happiness-trend:
+    type: happiness-trend
+    dataPath: 'surveyApi.${id}.years'
+    showDescription: true
+    query: >
+        surveyApi {
+            ${id}: happiness(id: "${id}") {
+                years {
+                    year
+                    mean
+                }
+            }
+        }
+
 ###############################################################################
 #
 # DEMOGRAPHICS

@@ -309,7 +309,7 @@
 #               items:
 #                   - designcode2
 
-- id: frontend
+- id: front_end_frameworks
   path: /front-end-frameworks
   template: toolSection
   children:
@@ -330,7 +330,7 @@
       - id: frontend-conclusion
         template: conclusion
 
-- id: datalayer
+- id: data_layer
   path: /data-layer
   template: toolSection
   children:
@@ -349,7 +349,7 @@
       - id: datalayer-conclusion
         template: conclusion
 
-- id: backend
+- id: back_end_frameworks
   path: /back-end
   template: toolSection
   children:

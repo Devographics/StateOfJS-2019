@@ -22,7 +22,9 @@ toolSection:
           subject: tools
           heatmapType: company-size
         - id: 'happiness-${id}'
-          type: happiness
+          template: happiness-trend
+          variables:
+              id: '${id}'
         - id: resources-sponsors
           type: resources
           items:

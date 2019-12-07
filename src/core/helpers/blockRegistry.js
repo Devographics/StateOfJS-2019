@@ -6,6 +6,7 @@ import ResourcesBlock from 'core/blocks/ResourcesBlock'
 import HeatmapBlock from 'core/blocks/HeatmapBlock'
 import PageIntroductionBlock from 'core/blocks/PageIntroductionBlock'
 import { OpinionBlock } from 'modules/opinions/blocks'
+import { HappinessTrendBlock } from 'modules/happiness'
 
 // demographics
 // import SourceBlock from 'modules/demographics/blocks/SourceBlock'
@@ -26,7 +27,6 @@ import ToolsSectionOverviewBlock from 'modules/tools/blocks/ToolsSectionOverview
 // import ToolsScaledRankingSectionOverviewBlock from 'modules/tools/blocks/ToolsScaledRankingSectionOverviewBlock'
 // import ToolsUsageRatioBlock from 'modules/tools/blocks/ToolsUsageRatioBlock'
 import ToolBlock from 'modules/tools/blocks/ToolBlock'
-import HappinessBlock from 'modules/tools/blocks/HappinessBlock'
 import ToolOpinionsOverTimeBlock from 'modules/tools/blocks/ToolOpinionsOverTimeBlock'
 
 const blockRegistry = {
@@ -60,7 +60,8 @@ const blockRegistry = {
     // 'tools-usage-ratio': ToolsUsageRatioBlock,
     tool: ToolBlock,
 
-    happiness: HappinessBlock
+    // happiness
+    'happiness-trend': HappinessTrendBlock
 }
 
 export default blockRegistry
