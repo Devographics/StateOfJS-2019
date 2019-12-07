@@ -4,9 +4,8 @@ import ToolOpinionsOverTimeChart from '../charts/ToolOpinionsOverTimeChart'
 import ChartContainer from 'core/charts/ChartContainer'
 
 const ToolOpinionsOverTimeBlock = ({ block, data }) => {
-    console.log({ block, data })
     return (
-        <Block id={block.id} showDescription={false}>
+        <Block id={block.id} showDescription={false} block={block} data={data}>
             <ChartContainer>
                 <ToolOpinionsOverTimeChart data={data} />
             </ChartContainer>

@@ -48,6 +48,7 @@
     "gatsby-transformer-yaml": "^2.2.16",
     "html-loader": "^0.5.5",
     "js-yaml": "^3.12.1",
+    "json2csv": "^4.5.4",
     "lodash": "^4.17.11",
     "markdown-it": "^8.4.2",
     "markdown-loader": "^4.0.0",
@@ -61,6 +62,8 @@
     "react-ga": "^2.5.7",
     "react-helmet": "^5.2.0",
     "react-markdown": "^4.0.8",
+    "react-modal": "^3.11.1",
+    "react-tabs": "^3.0.0",
     "remove-markdown": "^0.3.0",
     "tinycolor2": "^1.4.1",
     "topojson-client": "^3.0.0"

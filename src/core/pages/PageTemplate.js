@@ -9,7 +9,7 @@ const PageTemplate = ({ data = {}, pageContext = {} }) => {
     const context = usePageContext()
     const { pageData } = pageContext
 
-    console.log(data, pageData, context)
+    // console.log(data, pageData, context)
 
     return (
         <>

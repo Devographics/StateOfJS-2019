@@ -9,11 +9,14 @@ $smallShareItemOffset: 150%;
 .share {
     @include flex-center;
 }
-.share-button {
+.share-button, .export-button {
     padding: 3px 7px 4px 7px;
     font-size: $smaller-font;
     color: $text-color;
     border-color: $border-color;
+}
+.export-button{
+    margin-left: $spacing/2;
 }
 .share-popup {
     pointer-events: none;
@@ -203,4 +206,25 @@ $smallShareItemOffset: 150%;
     .share-popup-visible & {
         stroke: $pink;
     }
+}
+
+.Export__Modal{
+    padding: $spacing;
+    background: $bg-color-light;
+    .react-tabs__tab-list{
+        margin: 0;
+    }
+    .react-tabs__tab--selected{
+        background: $bg-color-inverted;
+    }
+    .react-tabs__tab-panel{
+        background: $bg-color-inverted;
+        padding: $spacing/2;
+    }
+}
+.Export__Textarea{
+    width: 600px;
+    height: 400px;
+    font-size: $small-font;
+    padding: $spacing/2;
 }

@@ -2,6 +2,7 @@ import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown/with-html'
 import ShareBlock from '../share/ShareBlock'
+import ExportBlock from '../export/ExportBlock'
 import { useI18n } from '../i18n/i18nContext'
 import { usePageContext } from '../helpers/pageContext'
 import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
@@ -16,10 +17,13 @@ const BlockTitle = ({
     description: descriptionOverride,
     showDescription,
     isShareable,
+    isExportable= true,
     values,
     units,
     setUnits,
-    completion
+    completion,
+    data,
+    block,
 }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
@@ -60,6 +64,16 @@ const BlockTitle = ({
                             toggleClass={() => {
                                 setShowOptions(!showOptions)
                             }}
+                        />
+                    )}
+                    {isExportable && data && block && (
+                        <ExportBlock
+                            id={id}
+                            data={data}
+                            block={block}
+                            title={title}
+                            className="Block__Title__Export"
+                            title={title}
                         />
                     )}
                 </div>

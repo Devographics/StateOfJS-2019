@@ -74,6 +74,8 @@ const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
             units={units}
             setUnits={setUnits}
             completion={data.completion}
+            data={buckets}
+            block={block}
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">

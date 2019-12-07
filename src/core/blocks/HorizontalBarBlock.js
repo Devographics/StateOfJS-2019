@@ -24,6 +24,8 @@ const HorizontalBarBlock = ({ block, data }) => {
             units={units}
             setUnits={setUnits}
             completion={completion}
+            data={buckets}
+            block={block}
         >
             <ChartContainer fit={true}>
                 <HorizontalBarChart

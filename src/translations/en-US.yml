@@ -850,8 +850,12 @@ translations:
       t: Share by email
     - key: share.image
       t: Get image
-      
-    # opinion scale
+    
+    # export
+    - key: export.export
+      t: Export
+    
+      # opinion scale
     - key: opinion_scale.0.long
       t: Strongly Disagree
     - key: opinion_scale.1.long

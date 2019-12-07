@@ -15,7 +15,9 @@ const Block = ({
     units,
     setUnits,
     completion,
-    error
+    error,
+    data,
+    block,
 }) => {
     return (
         <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
@@ -29,6 +31,8 @@ const Block = ({
                 units={units}
                 setUnits={setUnits}
                 completion={completion}
+                data={data}
+                block={block}
             />
             {isShareable && <ShareBlockDebug id={id} />}
             <div className="Block__Contents">

@@ -101,6 +101,8 @@ const VerticalBarBlock = ({ block, data }) => {
             units={units}
             setUnits={setUnits}
             completion={completion}
+            data={sortedBuckets}
+            block={block}
         >
             <ChartContainer fit={true}>
                 <VerticalBarChart
