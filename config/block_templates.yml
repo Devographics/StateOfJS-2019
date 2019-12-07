@@ -25,7 +25,7 @@ happiness-trend:
     showDescription: true
     query: >
         ${id}_happiness: surveyApi {
-            happiness(id: "${id}") {
+            happiness(id: ${id}) {
                 years {
                     year
                     mean
@@ -76,7 +76,7 @@ feature:
     showDescription: true
     query: >
         surveyApi {
-            ${id}: feature(section: "${parentId}", id: "${id}") {
+            ${id}: feature(section: "${parentId}", id: ${id}) {
                 id
                 section
                 usageByYear {
@@ -108,7 +108,7 @@ opinion-scale:
     showDescription: true
     query: >
         surveyApi {
-            ${id}: opinion(id: "${id}") {
+            ${id}: opinion(id: ${id}) {
                 id
                 byYear {
                     year
@@ -132,7 +132,7 @@ other-tools:
     dataPath: 'surveyApi.${id}.year'
     query: >
         surveyApi {
-            ${id}: otherTools(id: "${id}") {
+            ${id}: otherTools(id: ${id}) {
                 id
                 year(year: ${currentYear}) {
                     year
@@ -155,7 +155,7 @@ resources:
     dataPath: 'surveyApi.${id}.year'
     query: >
         surveyApi {
-            ${id}: resources(id: "${id}") {
+            ${id}: resources(id: ${id}) {
                 id
                 year(year: ${currentYear}) {
                     year

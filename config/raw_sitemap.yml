@@ -399,7 +399,7 @@
       - id: testing-conclusion
         template: conclusion
 
-- id: mobiledesktop
+- id: mobile_desktop
   path: /mobile-desktop
   template: toolSection
   children:

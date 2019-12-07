@@ -42,7 +42,7 @@ tool:
           dataPath: surveyApi.tool.experience
           query: >
               surveyApi {
-                  tool(id: "${id}") {
+                  tool(id: ${id}) {
                       id
                       experience {
                           year
