@@ -21,7 +21,7 @@ page-introduction:
 # Used for salaries, company size, experience, etc. blocks
 happiness-trend:
     type: happiness-trend
-    dataPath: '${id}_happiness.happiness.years'
+    dataPath: 'surveyApi.${id}_happiness.happiness.years'
     showDescription: true
     query: >
         ${id}_happiness: surveyApi {
@@ -45,7 +45,7 @@ demographics-block:
     dataPath: 'surveyApi.demographics.${id}.2' # select the 4th array item to select the 4th year
     showDescription: true
     query: >
-        surveyApi: {
+        surveyApi {
             demographics {
                 ${id} {
                     year
@@ -62,6 +62,101 @@ demographics-block:
                 }
             }
         }
+
+gender-block: 
+  type: gender
+  showDescription: true
+  dataPath: 'surveyApi.demographics.gender.1'
+  query: >
+      surveyApi {
+        demographics {
+          gender {
+            year
+            total
+            completion {
+              percentage
+              count
+            }
+            buckets {
+              count
+              id
+              percentage
+            }
+          }
+        }
+      }
+
+job-title-block: 
+  type: horizontal-bar
+  dataPath: 'surveyApi.demographics.jobTitle.0'
+  showDescription: true
+  translateData: true
+  query: >
+    surveyApi {
+      demographics{
+        jobTitle{
+          year
+          total
+          completion{
+            count
+            percentage
+          }
+          buckets{
+            id
+            count
+            percentage
+          }
+        }
+      }
+    }
+
+css-proficiency-block: 
+  type: vertical-bar
+  dataPath: 'surveyApi.demographics.cssProficiency.0'
+  showDescription: true
+  showLegend: true
+  query: >
+    surveyApi {
+      demographics{
+        cssProficiency{
+          year
+          total
+          completion{
+            count
+            percentage
+          }
+          buckets{
+            id
+            count
+            percentage
+          }
+        }
+      }
+    }
+
+backend-proficiency-block: 
+  type: vertical-bar
+  dataPath: 'surveyApi.demographics.backendProficiency.0'
+  showDescription: true
+  showLegend: true
+  query: >
+    surveyApi {
+      demographics{
+        backendProficiency{
+          year
+          total
+          completion{
+            count
+            percentage
+          }
+          buckets{
+            id
+            count
+            percentage
+          }
+        }
+      }
+    }
 
 ###############################################################################
 #

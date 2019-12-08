@@ -24,42 +24,13 @@
         dataKey: breakdown
         showDescription: true
       - id: gender
-        type: gender
-        showDescription: true
-        dataPath: 'demographics.gender.1'
-        query: >
-            demographics {
-              gender {
-                year
-                total
-                completion {
-                  percentage
-                  count
-                }
-                buckets {
-                  count
-                  id
-                  percentage
-                }
-              }
-            }
+        template: gender-block
       - id: job-title
-        type: horizontal-bar
-        dataKey: breakdown
-        showDescription: true
-        translateData: true
-      - id: css-proficiency
-        type: vertical-bar
-        dataKey: breakdown
-        bucketKeysN: cssProficiency
-        showDescription: true
-        showLegend: true
-      - id: backend-proficiency
-        type: vertical-bar
-        dataKey: breakdown
-        bucketKeys: backendProficiency
-        showDescription: true
-        showLegend: true
+        template: job-title-block
+      - id: cssProficiency
+        template: css-proficiency-block
+      - id: backendProficiency
+        template: backend-proficiency-block
       - id: resources-sponsors
         type: resources
         items:

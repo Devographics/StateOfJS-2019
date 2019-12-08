@@ -116,33 +116,44 @@ const companySizeKeys = [
 
 const yearsOfExperienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
 
-const javascriptProficiencyKeys = [
-    'none',
-    'short_simple_javascript',
-    'existing_codebases_using_modern_frameworks',
-    'advanced_front_end_patterns',
-    'entire_codebases_from_scratch'
-]
+// const javascriptProficiencyKeys = [
+//     'none',
+//     'short_simple_javascript',
+//     'existing_codebases_using_modern_frameworks',
+//     'advanced_front_end_patterns',
+//     'entire_codebases_from_scratch'
+// ]
 
-const backendProficiencyKeys = [
-    'none',
-    'able_to_setup_cms_or_site_generator',
-    'able_to_use_existing_frameworks',
-    'able_to_setup_from_scratch'
-]
+// const backendProficiencyKeys = [
+//     'none',
+//     'able_to_setup_cms_or_site_generator',
+//     'able_to_use_existing_frameworks',
+//     'able_to_setup_from_scratch'
+// ]
 
 const genderKeys = ['male', 'female', 'non_binary', 'prefer_not_to_say']
 
 const environmentUsageKeys = ['never', 'occasionally', 'often', 'mainly']
 
+const jobTitleKeys = [
+    'front_end_developer_engineer',
+    'full_stack_developer_engineer',
+    'back_end_developer_engineer',
+    'web_developer'
+]
+
+const cssProficiencyKeys = [0, 1, 2, 3, 4]
+const backendProficiencyKeys = [0, 1, 2, 3, 4]
+
 export const keys = {
     salary: salaryKeys,
     companySize: companySizeKeys,
     yearsOfExperience: yearsOfExperienceKeys,
-    javascriptProficiency: javascriptProficiencyKeys,
-    backendProficiency: backendProficiencyKeys,
     gender: genderKeys,
-    environmentUsage: environmentUsageKeys
+    environmentUsage: environmentUsageKeys,
+    jobTitle: jobTitleKeys,
+    cssProficiency: cssProficiencyKeys,
+    backendProficiency: backendProficiencyKeys
 }
 
 export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']
