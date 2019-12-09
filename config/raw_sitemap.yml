@@ -11,23 +11,27 @@
   type: page
   blocks:
       - id: country
-        template: country
+        template: demographics-block
+        type: participation-by-country
       - id: salary
         template: demographics-block
-      - id: yearsOfExperience
+      - id: experience
         template: demographics-block
       - id: companySize
         template: demographics-block
       - id: source
-        template: source
+        template: demographics-block
+        type: horizontal-bar
       - id: gender
-        template: gender-block
-      - id: job-title
-        template: job-title-block
+        template: demographics-block
+        type: gender
+      - id: jobTitle
+        template: demographics-block
+        type: horizontal-bar
       - id: cssProficiency
-        template: css-proficiency-block
+        template: demographics-block
       - id: backendProficiency
-        template: backend-proficiency-block
+        template: demographics-block
       - id: resources-sponsors
         type: resources
         items:

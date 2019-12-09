@@ -38,29 +38,4 @@ toolSection:
 tool:
     blocks:
         - id: '${id}-opinions-over-time'
-          type: opinions-over-time
-          dataPath: surveyApi.tool.experience
-          query: >
-              surveyApi {
-                  tool(id: ${id}) {
-                      id
-                      experience {
-                          year
-                          total
-                          completion {
-                              count
-                              percentage
-                          }
-                          awarenessInterestSatisfaction {
-                              awareness
-                              interest
-                              satisfaction
-                          }
-                          buckets {
-                              id
-                              count
-                              percentage
-                          }
-                      }
-                  }
-              }
+          template: tool-opinions

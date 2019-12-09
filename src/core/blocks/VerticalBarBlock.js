@@ -83,7 +83,12 @@ const VerticalBarBlock = ({ block, data }) => {
     const sortedBuckets = bucketKeys.map(bucketKey => {
         const bucket = buckets.find(b => b.id === bucketKey)
         if (bucket === undefined) {
-            throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
+            return {
+                id: bucketKey,
+                count: 0,
+                percentage: 0,
+            }
+            // throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
         }
         return bucket
     })

@@ -114,7 +114,7 @@ const companySizeKeys = [
     'more_than_1000'
 ]
 
-const yearsOfExperienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+const experienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
 
 // const javascriptProficiencyKeys = [
 //     'none',
@@ -161,15 +161,13 @@ const backendProficiencyKeys = [
 export const keys = {
     salary: salaryKeys,
     companySize: companySizeKeys,
-    yearsOfExperience: yearsOfExperienceKeys,
+    experience: experienceKeys,
     gender: genderKeys,
     environmentUsage: environmentUsageKeys,
     jobTitle: jobTitleKeys,
     cssProficiency: cssProficiencyKeys,
     backendProficiency: backendProficiencyKeys
 }
-
-export const yearsOfExperience = ['less-than-1', '1-2', '2-5', '5-10', '10-20', 'more-than-20']
 
 export const mainColors = {
     textColor: colors.grey,
