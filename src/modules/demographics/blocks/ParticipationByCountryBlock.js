@@ -7,21 +7,16 @@ import ParticipationByCountryChart from '../charts/ParticipationByCountryChart'
 const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
 
-    const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
-        block.id,
-        data.data.aggregations
-    ])
-
     return (
         <Block
             id={block.id}
             showDescription={block.showDescription}
             units={units}
             setUnits={setUnits}
-            completion={blockData.breakdown.completion}
+            completion={data.completion}
         >
             <ChartContainer height={500}>
-                <ParticipationByCountryChart units={units} data={blockData.breakdown.buckets} />
+                <ParticipationByCountryChart units={units} data={data.buckets} />
             </ChartContainer>
         </Block>
     )

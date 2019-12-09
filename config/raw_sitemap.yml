@@ -10,9 +10,8 @@
   path: /demographics
   type: page
   blocks:
-      - id: participation-by-country
-        type: participation-by-country
-        showDescription: true
+      - id: country
+        template: country
       - id: salary
         template: demographics-block
       - id: yearsOfExperience
@@ -20,9 +19,7 @@
       - id: companySize
         template: demographics-block
       - id: source
-        type: horizontal-bar
-        dataKey: breakdown
-        showDescription: true
+        template: source
       - id: gender
         template: gender-block
       - id: job-title
@@ -555,17 +552,17 @@
       - id: opinions
         template: page-introduction
       - id: js_moving_in_right_direction
-        template: opinion-scale
+        template: opinion-block
       - id: building_js_apps_overly_complex
-        template: opinion-scale
+        template: opinion-block
       - id: js_over_used_online
-        template: opinion-scale
+        template: opinion-block
       - id: enjoy_building_js_apps
-        template: opinion-scale
+        template: opinion-block
       - id: would_like_js_to_be_main_lang
-        template: opinion-scale
+        template: opinion-block
       - id: js_ecosystem_changing_to_fast
-        template: opinion-scale
+        template: opinion-block
       - id: missing-features
         type: horizontal-bar
         dataKey: features

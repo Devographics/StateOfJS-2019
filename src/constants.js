@@ -142,8 +142,21 @@ const jobTitleKeys = [
     'web_developer'
 ]
 
-const cssProficiencyKeys = [0, 1, 2, 3, 4]
-const backendProficiencyKeys = [0, 1, 2, 3, 4]
+const cssProficiencyKeys = [
+    'lvl1_no_knowledge',
+    'lvl2_css_frameworks',
+    'lvl3_specificity_rules',
+    'lvl4_animations_interactions',
+    'lvl5_entire_frontend'
+]
+
+const backendProficiencyKeys = [
+    'lvl1_no_knowledge',
+    'lvl2_cms',
+    'lvl3_frameworks',
+    'lvl4_from_scratch',
+    'lvl5_microservices'
+]
 
 export const keys = {
     salary: salaryKeys,

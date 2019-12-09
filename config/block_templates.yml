@@ -39,6 +39,51 @@ happiness-trend:
 #
 ###############################################################################
 
+country: 
+  type: participation-by-country
+  showDescription: true
+  dataPath: 'surveyApi.demographics.country.0' # select the 4th array item to select the 4th year
+  query: >
+    surveyApi {
+        demographics{
+          country{
+            year
+            completion{
+              percentage
+              count
+            }
+            buckets{
+              id
+              count
+              percentage
+            }
+          }
+        }
+    }
+
+source: 
+  type: horizontal-bar
+  showDescription: true  
+  dataPath: 'surveyApi.demographics.source.0' # select the 4th array item to select the 4th year
+  query: >
+    surveyApi {
+        demographics{
+          source{
+            year
+            completion{
+              percentage
+              count
+            }
+            buckets{
+              id
+              count
+              percentage
+            }
+          }
+        }
+    }
+    
+
 # Used for salaries, company size, experience, etc. blocks
 demographics-block:
     type: vertical-bar
@@ -197,7 +242,7 @@ feature:
 
 # Used for "I think JavaScript is moving in the right direction", etc. blocks
 # {id} refers to the current subject
-opinion-scale:
+opinion-block:
     type: opinion-scale
     dataPath: 'surveyApi.${id}.byYear'
     showDescription: true
@@ -219,6 +264,12 @@ opinion-scale:
                 }
             }
         }
+
+###############################################################################
+#
+# OTHER TOOLS
+#
+###############################################################################
 
 other-tools:
     type: horizontal-bar
@@ -242,6 +293,12 @@ other-tools:
                 }
             }
         }
+
+###############################################################################
+#
+# RESOURCES
+#
+###############################################################################
 
 resources:
     type: horizontal-bar
