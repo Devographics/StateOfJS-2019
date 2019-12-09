@@ -54,15 +54,15 @@ const VerticalBarChart = ({
                 labelSkipHeight={16}
                 borderRadius={1}
                 enableGridX={false}
-                gridYValues={tickCount}
+                gridYValues={[tickCount]}
                 enableGridY={true}
                 axisLeft={{
                     format: formatValue,
-                    tickValues: tickCount
+                    tickValues: [tickCount]
                 }}
                 axisRight={{
                     format: formatValue,
-                    tickValues: tickCount,
+                    tickValues: [tickCount],
                     legend: translate(`users_${units}`),
                     legendPosition: 'middle',
                     legendOffset: 52

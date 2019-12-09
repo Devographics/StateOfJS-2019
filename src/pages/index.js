@@ -1,6 +1,6 @@
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 import React from 'react'
-import TextBlock from 'core/blocks/TextBlock'
+// import TextBlock from 'core/blocks/TextBlock'
 import LogoFull from 'core/components/LogoFull'
 import SponsorsBlock from 'core/blocks/SponsorsBlock'
 import NewsletterBlock from 'core/blocks/NewsletterBlock'

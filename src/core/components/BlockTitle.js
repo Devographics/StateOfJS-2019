@@ -73,7 +73,6 @@ const BlockTitle = ({
                             block={block}
                             title={title}
                             className="Block__Title__Export"
-                            title={title}
                         />
                     )}
                 </div>

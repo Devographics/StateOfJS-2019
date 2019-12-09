@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useState } from 'react'
+import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
@@ -14,6 +14,8 @@ const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'perce
             units={units}
             setUnits={setUnits}
             completion={data.completion}
+            data={data.buckets}
+            block={block}
         >
             <ChartContainer height={500}>
                 <ParticipationByCountryChart units={units} data={data.buckets} />
@@ -27,13 +29,11 @@ ParticipationByCountryBlock.propTypes = {
         id: PropTypes.string.isRequired
     }).isRequired,
     data: PropTypes.shape({
-        data: PropTypes.shape({
-            aggregations: PropTypes.arrayOf(
-                PropTypes.shape({
-                    id: PropTypes.string.isRequired
-                })
-            ).isRequired
-        }).isRequired
+        buckets: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.string.isRequired
+            })
+        ).isRequired
     }).isRequired
 }
 

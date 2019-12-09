@@ -48,6 +48,7 @@ country:
         demographics{
           country{
             year
+            total
             completion{
               percentage
               count
@@ -70,6 +71,7 @@ source:
         demographics{
           source{
             year
+            total
             completion{
               percentage
               count

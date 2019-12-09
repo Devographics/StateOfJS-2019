@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import ReactGA from 'react-ga'
 import { useI18n } from '../i18n/i18nContext'
-import { usePageContext } from '../helpers/pageContext'
 import Modal from 'react-modal'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
@@ -71,7 +69,6 @@ const ExportBlock = ({ data, block, title }) => {
 ${trimmedQuery}
 }`
 
-    const context = usePageContext()
     const { translate } = useI18n()
 
     return (
@@ -104,13 +101,13 @@ ${trimmedQuery}
                         <Tab>GraphQL</Tab>
                     </TabList>
                     <TabPanel>
-                        <textarea className="Export__Textarea">{jsonExport}</textarea>
+                        <textarea className="Export__Textarea" value={jsonExport} readOnly/>
                     </TabPanel>
                     <TabPanel>
-                        <textarea className="Export__Textarea">{csvExport}</textarea>
+                        <textarea className="Export__Textarea" value={csvExport} readOnly/>
                     </TabPanel>
                     <TabPanel>
-                        <textarea className="Export__Textarea">{graphQLExport}</textarea>
+                        <textarea className="Export__Textarea" value={graphQLExport} readOnly/>
                     </TabPanel>
                 </Tabs>
                 </div>

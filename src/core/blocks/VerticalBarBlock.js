@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useState } from 'react'
+import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { keys } from '../../constants'
 import Block from 'core/components/Block'
@@ -131,20 +131,18 @@ const VerticalBarBlock = ({ block, data }) => {
 VerticalBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        dataKey: PropTypes.string.isRequired,
-        bucketKeys: PropTypes.oneOf(Object.keys(keys)).isRequired,
+        dataPath: PropTypes.string.isRequired,
+        bucketKeysName: PropTypes.oneOf(Object.keys(keys)),
         showDescription: PropTypes.bool,
         mode: PropTypes.oneOf(['absolute', 'relative']),
         units: PropTypes.oneOf(['percentage', 'count'])
     }).isRequired,
     data: PropTypes.shape({
-        data: PropTypes.shape({
-            aggregations: PropTypes.arrayOf(
-                PropTypes.shape({
-                    id: PropTypes.string.isRequired
-                })
-            ).isRequired
-        }).isRequired
+        buckets: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.string.isRequired
+            })
+        ).isRequired
     }).isRequired
 }
 

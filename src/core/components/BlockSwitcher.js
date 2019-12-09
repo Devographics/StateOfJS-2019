@@ -63,7 +63,7 @@ BlockSwitcher.propTypes = {
         // which unit to use for generic bar charts
         units: PropTypes.oneOf(['percentage', 'count'])
     }),
-    data: PropTypes.any.isRequired
+    pageData: PropTypes.any.isRequired
 }
 
 export default BlockSwitcherWithBoundary

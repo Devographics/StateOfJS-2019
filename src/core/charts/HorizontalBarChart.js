@@ -106,7 +106,7 @@ const HorizontalBarChart = ({
                 maxValue={maxValue}
                 theme={theme}
                 enableGridX={true}
-                gridXValues={tickCount}
+                gridXValues={[tickCount]}
                 enableGridY={false}
                 enableLabel={true}
                 label={d => (units === 'percentage' ? `${round(d.value, 1)}%` : d.value)}
