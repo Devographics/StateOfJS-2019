@@ -25,10 +25,10 @@ toolSection:
           type: heatmap
           subject: tools
           heatmapType: company-size
-        - id: 'happiness-${id}'
+        - id: 'happiness_${id}'
           template: happiness-trend
           variables:
-              id: '${id}'
+              pageId: '${id}'
         - id: resources-sponsors
           type: resources
           items:
