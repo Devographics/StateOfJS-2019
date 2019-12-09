@@ -17,13 +17,13 @@ const BlockTitle = ({
     description: descriptionOverride,
     showDescription,
     isShareable,
-    isExportable= true,
+    isExportable = true,
     values,
     units,
     setUnits,
     completion,
     data,
-    block,
+    block
 }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()

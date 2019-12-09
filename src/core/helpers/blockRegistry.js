@@ -5,7 +5,7 @@ import TextBlock from 'core/blocks/TextBlock'
 import ResourcesBlock from 'core/blocks/ResourcesBlock'
 import HeatmapBlock from 'core/blocks/HeatmapBlock'
 import PageIntroductionBlock from 'core/blocks/PageIntroductionBlock'
-import { OpinionBlock } from 'modules/opinions/blocks'
+import { YearOpinionBlock } from 'modules/opinions/blocks'
 import { HappinessTrendBlock } from 'modules/happiness'
 
 // demographics
@@ -34,7 +34,6 @@ const blockRegistry = {
     'page-introduction': PageIntroductionBlock,
     'horizontal-bar': HorizontalBarBlock,
     'vertical-bar': VerticalBarBlock,
-    'opinion-scale': OpinionBlock,
     text: TextBlock,
     resources: ResourcesBlock,
     heatmap: HeatmapBlock,
@@ -61,7 +60,10 @@ const blockRegistry = {
     tool: ToolBlock,
 
     // happiness
-    'happiness-trend': HappinessTrendBlock
+    'happiness-trend': HappinessTrendBlock,
+
+    // opinions
+    'year-opinion': YearOpinionBlock
 }
 
 export default blockRegistry

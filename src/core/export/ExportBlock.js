@@ -6,7 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 import { Parser } from 'json2csv'
 
-const parser = new Parser();
+const parser = new Parser()
 
 const customStyles = {
     content: {
@@ -16,7 +16,7 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        padding: 0,
+        padding: 0
     }
 }
 
@@ -57,14 +57,17 @@ const ExportBlock = ({ data, block, title }) => {
 
     // remove entities data
     const cleanedData = data.map(row => {
-      const { entity, ...rest } = row
-      return rest
+        const { entity, ...rest } = row
+        return rest
     })
 
     const jsonExport = JSON.stringify(cleanedData, '', 2)
-    const csvExport = parser.parse(cleanedData);
+    const csvExport = parser.parse(cleanedData)
 
-    const trimmedQuery = query.split('\n').slice(1, -2).join('\n')
+    const trimmedQuery = query
+        .split('\n')
+        .slice(1, -2)
+        .join('\n')
     const graphQLExport = `query ${id}Query{
 ${trimmedQuery}
 }`
@@ -92,24 +95,24 @@ ${trimmedQuery}
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-              <div className="Export__Modal">
-                <h3>Export data for {title}</h3>
-                <Tabs>
-                    <TabList>
-                        <Tab>JSON</Tab>
-                        <Tab>CSV</Tab>
-                        <Tab>GraphQL</Tab>
-                    </TabList>
-                    <TabPanel>
-                        <textarea className="Export__Textarea" value={jsonExport} readOnly/>
-                    </TabPanel>
-                    <TabPanel>
-                        <textarea className="Export__Textarea" value={csvExport} readOnly/>
-                    </TabPanel>
-                    <TabPanel>
-                        <textarea className="Export__Textarea" value={graphQLExport} readOnly/>
-                    </TabPanel>
-                </Tabs>
+                <div className="Export__Modal">
+                    <h3>Export data for {title}</h3>
+                    <Tabs>
+                        <TabList>
+                            <Tab>JSON</Tab>
+                            <Tab>CSV</Tab>
+                            <Tab>GraphQL</Tab>
+                        </TabList>
+                        <TabPanel>
+                            <textarea className="Export__Textarea" value={jsonExport} readOnly />
+                        </TabPanel>
+                        <TabPanel>
+                            <textarea className="Export__Textarea" value={csvExport} readOnly />
+                        </TabPanel>
+                        <TabPanel>
+                            <textarea className="Export__Textarea" value={graphQLExport} readOnly />
+                        </TabPanel>
+                    </Tabs>
                 </div>
             </Modal>
         </div>

@@ -17,7 +17,7 @@ const Block = ({
     completion,
     error,
     data,
-    block,
+    block
 }) => {
     return (
         <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>

@@ -1,1 +1,1 @@
-export { default as OpinionBlock } from './OpinionBlock'
+export { default as YearOpinionBlock } from './YearOpinionBlock'

@@ -18,60 +18,57 @@ page-introduction:
             html
         }
 
-
-
 ###############################################################################
 #
 # DEMOGRAPHICS
 #
 ###############################################################################
 
-country: 
-  type: participation-by-country
-  showDescription: true
-  dataPath: 'surveyApi.demographics.country.0' # select the 4th array item to select the 4th year
-  query: >
-    surveyApi {
-        demographics{
-          country{
-            year
-            total
-            completion{
-              percentage
-              count
+country:
+    type: participation-by-country
+    showDescription: true
+    dataPath: 'surveyApi.demographics.country.0' # select the 4th array item to select the 4th year
+    query: >
+        surveyApi {
+            demographics{
+              country{
+                year
+                total
+                completion{
+                  percentage
+                  count
+                }
+                buckets{
+                  id
+                  count
+                  percentage
+                }
+              }
             }
-            buckets{
-              id
-              count
-              percentage
-            }
-          }
         }
-    }
 
-source: 
-  type: horizontal-bar
-  showDescription: true  
-  dataPath: 'surveyApi.demographics.source.0' # select the 4th array item to select the 4th year
-  query: >
-    surveyApi {
-        demographics{
-          source{
-            year
-            total
-            completion{
-              percentage
-              count
+source:
+    type: horizontal-bar
+    showDescription: true
+    dataPath: 'surveyApi.demographics.source.0' # select the 4th array item to select the 4th year
+    query: >
+        surveyApi {
+            demographics{
+              source{
+                year
+                total
+                completion{
+                  percentage
+                  count
+                }
+                buckets{
+                  id
+                  count
+                  percentage
+                }
+              }
             }
-            buckets{
-              id
-              count
-              percentage
-            }
-          }
         }
-    }
-    
 
 # Used for salaries, company size, experience, etc. blocks
 demographics-block:
@@ -97,100 +94,100 @@ demographics-block:
             }
         }
 
-gender-block: 
-  type: gender
-  showDescription: true
-  dataPath: 'surveyApi.demographics.gender.1'
-  query: >
-      surveyApi {
-        demographics {
-          gender {
-            year
-            total
-            completion {
-              percentage
-              count
+gender-block:
+    type: gender
+    showDescription: true
+    dataPath: 'surveyApi.demographics.gender.1'
+    query: >
+        surveyApi {
+          demographics {
+            gender {
+              year
+              total
+              completion {
+                percentage
+                count
+              }
+              buckets {
+                count
+                id
+                percentage
+              }
             }
-            buckets {
-              count
-              id
-              percentage
+          }
+        }
+
+job-title-block:
+    type: horizontal-bar
+    dataPath: 'surveyApi.demographics.jobTitle.0'
+    showDescription: true
+    translateData: true
+    query: >
+        surveyApi {
+          demographics{
+            jobTitle{
+              year
+              total
+              completion{
+                count
+                percentage
+              }
+              buckets{
+                id
+                count
+                percentage
+              }
             }
           }
         }
-      }
 
-job-title-block: 
-  type: horizontal-bar
-  dataPath: 'surveyApi.demographics.jobTitle.0'
-  showDescription: true
-  translateData: true
-  query: >
-    surveyApi {
-      demographics{
-        jobTitle{
-          year
-          total
-          completion{
-            count
-            percentage
-          }
-          buckets{
-            id
-            count
-            percentage
+css-proficiency-block:
+    type: vertical-bar
+    dataPath: 'surveyApi.demographics.cssProficiency.0'
+    showDescription: true
+    showLegend: true
+    query: >
+        surveyApi {
+          demographics{
+            cssProficiency{
+              year
+              total
+              completion{
+                count
+                percentage
+              }
+              buckets{
+                id
+                count
+                percentage
+              }
+            }
           }
         }
-      }
-    }
 
-css-proficiency-block: 
-  type: vertical-bar
-  dataPath: 'surveyApi.demographics.cssProficiency.0'
-  showDescription: true
-  showLegend: true
-  query: >
-    surveyApi {
-      demographics{
-        cssProficiency{
-          year
-          total
-          completion{
-            count
-            percentage
-          }
-          buckets{
-            id
-            count
-            percentage
+backend-proficiency-block:
+    type: vertical-bar
+    dataPath: 'surveyApi.demographics.backendProficiency.0'
+    showDescription: true
+    showLegend: true
+    query: >
+        surveyApi {
+          demographics{
+            backendProficiency{
+              year
+              total
+              completion{
+                count
+                percentage
+              }
+              buckets{
+                id
+                count
+                percentage
+              }
+            }
           }
         }
-      }
-    }
-
-backend-proficiency-block: 
-  type: vertical-bar
-  dataPath: 'surveyApi.demographics.backendProficiency.0'
-  showDescription: true
-  showLegend: true
-  query: >
-    surveyApi {
-      demographics{
-        backendProficiency{
-          year
-          total
-          completion{
-            count
-            percentage
-          }
-          buckets{
-            id
-            count
-            percentage
-          }
-        }
-      }
-    }
 
 ###############################################################################
 #
@@ -251,15 +248,16 @@ feature:
 
 # Used for "I think JavaScript is moving in the right direction", etc. blocks
 # {id} refers to the current subject
-opinion-block:
-    type: opinion-scale
-    dataPath: 'surveyApi.${id}.byYear'
+# this block renders a single year.
+year-opinion:
+    type: year-opinion
+    dataPath: 'surveyApi.${id}.year'
     showDescription: true
     query: >
         surveyApi {
             ${id}: opinion(id: ${id}) {
                 id
-                byYear {
+                year(year: ${currentYear}) {
                     year
                     completion {
                         count

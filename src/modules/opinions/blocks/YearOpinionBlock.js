@@ -54,7 +54,7 @@ const formatTick = translate => value => {
     return translate(`opinion_scale.${value}.long`)
 }
 
-const OpinionBlock = ({ block, data }) => {
+const YearOpinionBlock = ({ block, data }) => {
     const context = usePageContext()
     const { width } = context
     const { translate } = useI18n()
@@ -95,29 +95,26 @@ const OpinionBlock = ({ block, data }) => {
     )
 }
 
-OpinionBlock.propTypes = {
+YearOpinionBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         dataKey: PropTypes.string,
         showDescription: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({
-        data: PropTypes.shape({
-            aggregations: PropTypes.arrayOf(
-                PropTypes.shape({
-                    id: PropTypes.string.isRequired,
-                    total: PropTypes.number,
-                    buckets: PropTypes.arrayOf(
-                        PropTypes.shape({
-                            id: PropTypes.string.isRequired,
-                            count: PropTypes.number.isRequired,
-                            percentage: PropTypes.number
-                        })
-                    ).isRequired
-                })
-            ).isRequired
-        }).isRequired
+        year: PropTypes.number.isRequired,
+        completion: PropTypes.shape({
+            count: PropTypes.number.isRequired,
+            percentage: PropTypes.number.isRequired
+        }).isRequired,
+        buckets: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.number.isRequired,
+                count: PropTypes.number.isRequired,
+                percentage: PropTypes.number
+            })
+        ).isRequired
     }).isRequired
 }
 
-export default memo(OpinionBlock)
+export default memo(YearOpinionBlock)

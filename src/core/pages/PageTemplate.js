@@ -15,7 +15,7 @@ const PageTemplate = ({ data = {}, pageContext = {} }) => {
         <>
             <PageHeader />
             <div className="page-query">
-                <textarea value={pageContext.pageQuery} readOnly/>
+                <textarea value={pageContext.pageQuery} readOnly />
             </div>
             {data.introduction && <TextBlock text={data.introduction.html} />}
             {context.blocks &&
