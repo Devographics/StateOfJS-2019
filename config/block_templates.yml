@@ -197,12 +197,12 @@ backend-proficiency-block:
 
 happiness-trend:
     type: happiness-trend
-    dataPath: 'surveyApi.happiness_${pageId}.years'
+    dataPath: 'surveyApi.happiness_${pageId}.allYears'
     showDescription: true
     query: >
         surveyApi {
             happiness_${pageId}: happiness(id: ${pageId}) {
-                years {
+                allYears {
                     year
                     mean
                 }
