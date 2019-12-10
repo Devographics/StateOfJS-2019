@@ -7,7 +7,7 @@ const margin = {
     bottom: 30
 }
 
-const ToolsSectionOverviewChart = ({ data }) => {
+const ToolsSectionOverviewChart = ({ data, units }) => {
     const chartData = useMemo(
         () =>
             data.map(tool => ({
@@ -15,15 +15,20 @@ const ToolsSectionOverviewChart = ({ data }) => {
                 ...tool.buckets.reduce(
                     (acc, bucket) => ({
                         ...acc,
-                        [bucket.id]: bucket.percentage
+                        [bucket.id]: bucket[units]
                     }),
                     {}
                 )
             })),
-        [data]
+        [data, units]
     )
 
-    console.log({ data, chartData })
+    console.log({ data, chartData, units })
+
+    let format = v => v
+    if (units === 'percentage') {
+        format = v => `${v}%`
+    }
 
     return (
         <ResponsiveBar
@@ -41,6 +46,8 @@ const ToolsSectionOverviewChart = ({ data }) => {
             axisLeft={null}
             enableGridY={false}
             theme={theme}
+            labelFormat={format}
+            tooltipFormat={format}
         />
     )
 }
