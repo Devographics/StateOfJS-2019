@@ -93,6 +93,14 @@ export const colorScale = [
     '#ca4040'
 ]
 
+export const opinionsColorScale = [
+    colors.blueDark,
+    colors.blue,
+    colors.blueLight,
+    colors.blueLighter,
+    colors.pinkLightest,
+]
+
 export const salaryKeys = [
     'work_for_free',
     '0_10',
@@ -158,24 +166,13 @@ const backendProficiencyKeys = [
     'lvl5_microservices'
 ]
 
-export const keys = {
-    salary: salaryKeys,
-    companySize: companySizeKeys,
-    workExperience: workExperienceKeys,
-    gender: genderKeys,
-    environmentUsage: environmentUsageKeys,
-    jobTitle: jobTitleKeys,
-    cssProficiency: cssProficiencyKeys,
-    backendProficiency: backendProficiencyKeys
-}
-
 export const mainColors = {
     textColor: colors.grey,
     activeColor: colors.teal,
     contrastColor: colors.red
 }
 
-export const usage = [
+export const featureExperience = [
     {
         id: 'used_it',
         color: colors.teal
@@ -189,8 +186,9 @@ export const usage = [
         color: colors.greyMedium
     }
 ]
+export const featureExperienceKeys = featureExperience.map(k => k.id)
 
-export const opinions = [
+export const toolExperience = [
     {
         id: 'would_use',
         color: colors.teal
@@ -212,6 +210,7 @@ export const opinions = [
         color: colors.greyMedium
     }
 ]
+export const toolExperienceKeys = toolExperience.map(k => k.id)
 
 export const otherColors = [
     {
@@ -261,7 +260,7 @@ export const otherColors = [
 ]
 
 export const getColor = id =>
-    [...usage, ...opinions, ...otherColors, ...gender].find(color => color.id === id).color
+    [...featureExperience, ...toolExperienceKeys, ...otherColors, ...gender].find(color => color.id === id).color
 
 export const gender = [
     { id: 'male', color: colors.blue },
@@ -269,6 +268,20 @@ export const gender = [
     { id: 'non_binary', color: colors.red },
     { id: 'prefer_not_to_say', color: colors.greyMediumer }
 ]
+
+export const keys = {
+    salary: salaryKeys,
+    companySize: companySizeKeys,
+    workExperience: workExperienceKeys,
+    gender: genderKeys,
+    environmentUsage: environmentUsageKeys,
+    jobTitle: jobTitleKeys,
+    cssProficiency: cssProficiencyKeys,
+    backendProficiency: backendProficiencyKeys,
+    opinions: [0, 1, 2, 3, 4],
+    toolExperience: toolExperienceKeys,
+    featureExperience: featureExperienceKeys
+}
 
 export const fontFamily = `'IBM Plex Mono', monospace`
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Legends from 'core/blocks/block/BlockLegends'
+import BlockLegends from 'core/blocks/block/BlockLegends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { opinions as defaultOpinions } from 'core/constants.js'
 
@@ -12,7 +12,7 @@ const ToolOpinionsLegend = props => {
         color: item.color
     }))
 
-    return <Legends legends={legends} {...props} />
+    return <BlockLegends legends={legends} {...props} />
 }
 
 export default ToolOpinionsLegend

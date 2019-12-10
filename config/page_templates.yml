@@ -41,7 +41,7 @@ toolSectionTemplate:
           variables:
               sectionId: '${id}'
         - id: resources-sponsors
-          blockType: ResourcesBlock
+          blockType: SponsoredResourcesBlock
           items:
               - frontendmasters-sass
 
@@ -52,3 +52,4 @@ toolPageTemplate:
           variables:
               toolId: '${id}'
           template: toolExperienceTemplate
+          bucketKeysName: toolExperience

@@ -334,19 +334,25 @@
             pageId: '${id}'
       - id: js_moving_in_right_direction
         template: opinionTemplate
+        bucketKeysName: opinions
       - id: building_js_apps_overly_complex
         template: opinionTemplate
+        bucketKeysName: opinions
       - id: js_over_used_online
         template: opinionTemplate
+        bucketKeysName: opinions
       - id: enjoy_building_js_apps
         template: opinionTemplate
+        bucketKeysName: opinions
       - id: would_like_js_to_be_main_lang
         template: opinionTemplate
+        bucketKeysName: opinions
       - id: js_ecosystem_changing_to_fast
         template: opinionTemplate
-      - id: missing-features
-        blockType: HorizontalBarBlock
-        dataKey: features
+        bucketKeysName: opinions
+      # - id: missing-features
+      #   blockType: HorizontalBarBlock
+      #   dataKey: features
 
 - id: awards
   path: /awards
@@ -366,7 +372,7 @@
   path: /conclusion
   blocks:
       - id: conclusion
-        blockType: text
+        blockType: TextBlock
 
 # - id: support
 #   path: /support
