@@ -3,7 +3,7 @@ import Legends from 'core/blocks/block/BlockLegends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { usage } from 'core/constants.js'
 
-const FeatureUsageLegends = props => {
+const FeatureExperienceLegends = props => {
     const { translate } = useI18n()
 
     const legends = usage.map(item => ({
@@ -15,4 +15,4 @@ const FeatureUsageLegends = props => {
     return <Legends legends={legends} {...props} />
 }
 
-export default FeatureUsageLegends
+export default FeatureExperienceLegends

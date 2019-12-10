@@ -4,7 +4,7 @@ import Block from 'core/blocks/block/Block'
 import { usePageContext } from 'core/helpers/pageContext'
 import { useI18n } from 'core/i18n/i18nContext'
 // import { mergeFeaturesResources } from '../featuresHelpers'
-import FeatureUsageLegends from 'core/charts/features/FeatureUsageLegends'
+import FeatureExperienceLegends from 'core/blocks/features/FeatureExperienceLegends'
 import ChartContainer from 'core/charts/ChartContainer'
 import { usage } from 'core/constants.js'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
@@ -79,7 +79,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                             i18nNamespace="features.usage"
                         />
                     </ChartContainer>
-                    <FeatureUsageLegends data={data.buckets} units={units} />
+                    <FeatureExperienceLegends data={data.buckets} units={units} />
                 </div>
                 {!context.isCapturing && (
                     <>
