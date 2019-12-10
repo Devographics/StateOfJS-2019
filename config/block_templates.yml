@@ -27,25 +27,27 @@ pageIntroductionTemplate:
 # Used for salaries, company size, experience, etc. blocks that only show the current year of data
 demographicsTemplate:
     blockType: VerticalBarBlock
-    dataPath: 'surveyApi.demographics.${id}.year' # select the 4th array item to select the 4th year
+    dataPath: 'surveyApi.survey.demographics.${id}.year' # select the 4th array item to select the 4th year
     showDescription: true
     query: >
         surveyApi {
-            demographics {
-                ${id} {
-                  year(year: ${currentYear}) {
-                    year
-                    total
-                    completion {
-                        percentage
-                        count
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                demographics {
+                    ${id} {
+                      year(year: ${currentYear}) {
+                        year
+                        total
+                        completion {
+                            percentage
+                            count
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage
+                        }
+                      }
                     }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                  }
                 }
             }
         }
@@ -58,58 +60,62 @@ demographicsTemplate:
 
 toolExperienceTemplate:
     blockType: ToolExperienceBlock
-    dataPath: surveyApi.tool.experience.allYears
+    dataPath: surveyApi.survey.tool.experience.allYears
     query: >
         surveyApi {
-            tool(id: ${toolId}) {
-                id
-                entity{
-                    name
-                    homepage
-                    npm
-                    github
-                }
-                experience {
-                  allYears{
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                tool(id: ${toolId}) {
+                    id
+                    entity{
+                        name
+                        homepage
+                        npm
+                        github
                     }
-                    awarenessInterestSatisfaction {
-                        awareness
-                        interest
-                        satisfaction
+                    experience {
+                      allYears{
+                        year
+                        total
+                        completion {
+                            count
+                            percentage
+                        }
+                        awarenessInterestSatisfaction {
+                            awareness
+                            interest
+                            satisfaction
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage
+                        }
+                      }
                     }
-                    buckets {
-                        id
-                        count
-                        percentage
-                    }
-                  }
                 }
             }
         }
 
 heatmapTemplate:
     blockType: HeatmapBlock
-    dataPath: 'surveyApi.category.${heatmapId}.year'
+    dataPath: 'surveyApi.survey.category.${heatmapId}.year'
     showDescription: true
     query: >
         surveyApi {
-            category(id: ${sectionId}) {
-                ${heatmapId} {
-                    year(year: ${currentYear}) {
-                        year
-                        buckets{
-                            id
-                            total
-                            average
-                            ranges{
-                                range
-                                count
-                                percentage
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                category(id: ${sectionId}) {
+                    ${heatmapId} {
+                        year(year: ${currentYear}) {
+                            year
+                            buckets{
+                                id
+                                total
+                                average
+                                ranges{
+                                    range
+                                    count
+                                    percentage
+                                }
                             }
                         }
                     }
@@ -119,15 +125,17 @@ heatmapTemplate:
 
 happinessTemplate:
     blockType: HappinessBlock
-    dataPath: 'surveyApi.category.happiness.allYears'
+    dataPath: 'surveyApi.survey.category.happiness.allYears'
     showDescription: true
     query: >
         surveyApi {
-            category(id: ${sectionId}) {
-                happiness {
-                    allYears {
-                        year
-                        mean
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                category(id: ${sectionId}) {
+                    happiness {
+                        allYears {
+                            year
+                            mean
+                        }
                     }
                 }
             }
@@ -142,23 +150,25 @@ happinessTemplate:
 # Used for destructuring, arrow functions, WebGL, etc.
 featureExperienceTemplate:
     blockType: FeatureExperienceBlock
-    dataPath: 'surveyApi.${id}.experience.year'
+    dataPath: 'surveyApi.survey.${id}.experience.year'
     showDescription: true
     query: >
         surveyApi {
-            ${id}: feature(id: ${id}) {
-                id
-                experience{
-                    year(year: ${currentYear}) {
-                        year
-                        completion {
-                            count
-                            percentage
-                        }
-                        buckets {
-                            id
-                            count
-                            percentage
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                ${id}: feature(id: ${id}) {
+                    id
+                    experience{
+                        year(year: ${currentYear}) {
+                            year
+                            completion {
+                                count
+                                percentage
+                            }
+                            buckets {
+                                id
+                                count
+                                percentage
+                            }
                         }
                     }
                 }
@@ -175,23 +185,25 @@ featureExperienceTemplate:
 # {id} refers to the current subject
 opinionTemplate:
     blockType: OpinionBlock
-    dataPath: 'surveyApi.${id}.allYears'
+    dataPath: 'surveyApi.survey.${id}.allYears'
     showDescription: true
     query: >
         surveyApi {
-            ${id}: opinion(id: ${id}) {
-                id
-                allYears {
-                    year
-                    total
-                    completion {
-                        count
-                        percentage
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                ${id}: opinion(id: ${id}) {
+                    id
+                    allYears {
+                        year
+                        total
+                        completion {
+                            count
+                            percentage
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage
+                        }
                     }
                 }
             }
@@ -207,19 +219,21 @@ otherToolsTemplate:
     blockType: HorizontalBarBlock
     showDescription: true
     mode: absolute
-    dataPath: 'surveyApi.${id}.year'
+    dataPath: 'surveyApi.survey.${id}.year'
     query: >
         surveyApi {
-            ${id}: otherTools(id: ${id}) {
-                id
-                year(year: ${currentYear}) {
-                    year
-                    buckets{
-                        id
-                        count
-                        percentage
-                        entity {
-                          homepage
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                ${id}: otherTools(id: ${id}) {
+                    id
+                    year(year: ${currentYear}) {
+                        year
+                        buckets{
+                            id
+                            count
+                            percentage
+                            entity {
+                              homepage
+                            }
                         }
                     }
                 }
@@ -236,19 +250,21 @@ resourcesTemplate:
     blockType: HorizontalBarBlock
     showDescription: true
     mode: absolute
-    dataPath: 'surveyApi.${id}.year'
+    dataPath: 'surveyApi.survey.${id}.year'
     query: >
         surveyApi {
-            ${id}: resources(id: ${id}) {
-                id
-                year(year: ${currentYear}) {
-                    year
-                    buckets{
-                        id
-                        count
-                        percentage
-                        entity {
-                          homepage
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                ${id}: resources(id: ${id}) {
+                    id
+                    year(year: ${currentYear}) {
+                        year
+                        buckets{
+                            id
+                            count
+                            percentage
+                            entity {
+                              homepage
+                            }
                         }
                     }
                 }
