@@ -177,7 +177,7 @@
   children:
       - id: react
         template: toolPageTemplate
-      - id: vue
+      - id: vuejs
         template: toolPageTemplate
       - id: angular
         template: toolPageTemplate
