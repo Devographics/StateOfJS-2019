@@ -16,7 +16,7 @@ const GenderBlock = ({ block, data }) => {
                 <GaugeBarChart
                     units={units}
                     buckets={data.buckets}
-                    mapping={gender}
+                    colorMapping={gender}
                     i18nNamespace={block.id}
                 />
             </ChartContainer>
