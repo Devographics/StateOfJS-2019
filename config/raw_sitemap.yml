@@ -152,6 +152,25 @@
             - id: wasm
               template: featureExperienceTemplate
 
+- id: javascript_flavors
+  path: /javascript-flavors
+  template: toolSectionTemplate
+  children:
+      - id: typescript
+        template: toolPageTemplate
+
+      - id: reason
+        template: toolPageTemplate
+
+      - id: elm
+        template: toolPageTemplate
+
+      - id: clojurescript
+        template: toolPageTemplate
+
+      - id: purescript
+        template: toolPageTemplate
+
 - id: front_end_frameworks
   path: /front-end-frameworks
   template: toolSectionTemplate
