@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Block from 'core/components/Block'
+import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import StreamChart from 'core/charts/generic/StreamChart'
 import ToolLegend from 'core/charts/tools/ToolLegend'

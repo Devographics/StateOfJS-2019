@@ -8,8 +8,8 @@ import { usePageContext } from 'core/helpers/pageContext'
 import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
 import { getBlockMeta } from 'core/helpers/blockHelpers'
 import SharePermalink from 'core/share/SharePermalink'
-import BlockUnitsSelector from 'core/components/BlockUnitsSelector'
-import CompletionIndicator from './CompletionIndicator'
+import BlockUnitsSelector from 'core/blocks/block/BlockUnitsSelector'
+import BlockCompletionIndicator from 'core/blocks/block/BlockCompletionIndicator'
 import last from 'lodash/last'
 
 const BlockTitle = ({
@@ -47,7 +47,7 @@ const BlockTitle = ({
                         <SharePermalink url={meta.link} />
                         {title}
                     </h3>
-                    {completion && <CompletionIndicator completion={completion} />}
+                    {completion && <BlockCompletionIndicator completion={completion} />}
                     {/*
                     <h3 className="Block__Title__Text Block__Title__Text--full">
                         {title || translate(`fullcharts.${id}`, { values })}

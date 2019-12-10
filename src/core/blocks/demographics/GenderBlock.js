@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { gender } from 'core/constants.js'
-import Block from 'core/components/Block'
+import Block from 'core/blocks/block/Block'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
 import ChartContainer from 'core/charts/ChartContainer'
 import GenderLegends from 'core/blocks/demographics/GendersLegends'

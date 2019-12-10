@@ -2,15 +2,18 @@ import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
-import ParticipationByCountryChart from 'core/charts/demographics/ParticipationByCountryChart'
+import ParticipationByCountryChart from '../charts/ParticipationByCountryChart'
 
 const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
 
     return (
         <Block
+            id={block.id}
+            showDescription={block.showDescription}
             units={units}
             setUnits={setUnits}
+            completion={data.completion}
             data={data.buckets}
             block={block}
         >

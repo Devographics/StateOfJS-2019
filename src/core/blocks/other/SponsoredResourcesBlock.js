@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
 import { Link } from 'gatsby'
 import resources from 'data/sponsoredlinks.yaml'
-import BlockTitle from 'core/components/BlockTitle'
+import BlockTitle from 'core/blocks/block/BlockTitle'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const trackClick = (id, resource, label) => {

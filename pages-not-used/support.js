@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import TextBlock from '../core/blocks/TextBlock'
-import PageHeader from '../core/pages/PageHeader'
+import TextBlock from 'core/blocks/other/TextBlock'
+import PageHeader from 'core/pages/PageHeader'
 
 const Support = ({ data }) => (
     <>

@@ -3,7 +3,7 @@ import TextBlock from 'core/blocks/other/TextBlock'
 import PageHeader from 'core/pages/PageHeader'
 import PageFooter from 'core/pages/PageFooter'
 import { usePageContext } from 'core/helpers/pageContext'
-import BlockSwitcher from 'core/components/BlockSwitcher'
+import BlockSwitcher from 'core/blocks/block/BlockSwitcher'
 
 const PageTemplate = ({ data = {}, pageContext = {} }) => {
     const context = usePageContext()

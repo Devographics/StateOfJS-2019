@@ -4,14 +4,13 @@ import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/generic/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
-import { usePageContext } from 'core/helpers/pageContext'
-import {
-    StronglyDisagreeIcon,
-    DisagreeIcon,
-    NeutralIcon,
-    AgreeIcon,
-    StronglyAgreeIcon
-} from '../components/icons'
+import { getColor } from 'core/constants.js'
+import { usePageContext } from '../helpers/pageContext'
+import StronglyDisagreeIcon from '../../modules/opinions/components/icons/StronglyDisagreeIcon'
+import DisagreeIcon from '../../modules/opinions/components/icons/DisagreeIcon'
+import NeutralIcon from '../../modules/opinions/components/icons/NeutralIcon'
+import AgreeIcon from '../../modules/opinions/components/icons/AgreeIcon'
+import StronglyAgreeIcon from '../../modules/opinions/components/icons/StronglyAgreeIcon'
 
 const emojiIcons = [StronglyDisagreeIcon, DisagreeIcon, NeutralIcon, AgreeIcon, StronglyAgreeIcon]
 
@@ -35,10 +34,10 @@ const Emojis = ({ bars, size = 24 }) => (
 
 const getChartData = buckets => {
     const sortedBuckets = [0, 1, 2, 3, 4].map(step => {
-        const bucket = buckets.find(b => b.id === step)
+        const bucket = buckets.find(b => b.id === `${step}`)
         if (bucket === undefined) {
             return {
-                id: step,
+                id: `${step}`,
                 count: 0,
                 percentage: 0
             }
@@ -54,9 +53,11 @@ const formatTick = translate => value => {
     return translate(`opinion_scale.${value}.long`)
 }
 
-const YearOpinionBlock = ({ block, data }) => {
+const OpinionScaleBlock = ({ block, data }) => {
+    console.log(data)
     const context = usePageContext()
     const { width } = context
+
     const { translate } = useI18n()
 
     const { units: defaultUnits = 'percentage', translateData } = block
@@ -64,7 +65,23 @@ const YearOpinionBlock = ({ block, data }) => {
 
     const getScaleTickLabel = formatTick(translate)
 
-    const buckets = data.buckets
+    const dataKey = block.dataKey || 'opinion'
+    const blockData = useMemo(() => data.data.aggregations.find(agg => agg.id === block.id), [
+        block,
+        data.data
+    ])
+
+    const buckets = useMemo(() => getChartData(blockData[dataKey].buckets), [blockData, dataKey])
+
+    if (!data || !data.data) {
+        return (
+            <div>OpinionScaleBlock: Missing data for block {block.id}, page data is undefined</div>
+        )
+    }
+
+    if (!blockData || !blockData[dataKey]) {
+        return <div>OpinionScaleBlock: Missing data for block {block.id}</div>
+    }
 
     return (
         <Block
@@ -72,7 +89,7 @@ const YearOpinionBlock = ({ block, data }) => {
             showDescription={true}
             units={units}
             setUnits={setUnits}
-            completion={data.completion}
+            completion={blockData[dataKey].completion}
         >
             <ChartContainer fit={true}>
                 <VerticalBarChart
@@ -95,26 +112,29 @@ const YearOpinionBlock = ({ block, data }) => {
     )
 }
 
-YearOpinionBlock.propTypes = {
+OpinionScaleBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        dataPath: PropTypes.string,
+        dataKey: PropTypes.string,
         showDescription: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({
-        year: PropTypes.number.isRequired,
-        completion: PropTypes.shape({
-            count: PropTypes.number.isRequired,
-            percentage: PropTypes.number.isRequired
-        }).isRequired,
-        buckets: PropTypes.arrayOf(
-            PropTypes.shape({
-                id: PropTypes.number.isRequired,
-                count: PropTypes.number.isRequired,
-                percentage: PropTypes.number
-            })
-        ).isRequired
+        data: PropTypes.shape({
+            aggregations: PropTypes.arrayOf(
+                PropTypes.shape({
+                    id: PropTypes.string.isRequired,
+                    total: PropTypes.number,
+                    buckets: PropTypes.arrayOf(
+                        PropTypes.shape({
+                            id: PropTypes.string.isRequired,
+                            count: PropTypes.number.isRequired,
+                            percentage: PropTypes.number
+                        })
+                    ).isRequired
+                })
+            ).isRequired
+        }).isRequired
     }).isRequired
 }
 
-export default memo(YearOpinionBlock)
+export default memo(OpinionScaleBlock)

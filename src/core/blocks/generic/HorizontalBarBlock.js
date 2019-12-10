@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
-import Block from 'core/components/Block'
+import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import HorizontalBarChart from 'core/charts/generic/HorizontalBarChart'
 

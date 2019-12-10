@@ -4,19 +4,19 @@ import Block from 'core/blocks/block/Block'
 import { usePageContext } from 'core/helpers/pageContext'
 import { useI18n } from 'core/i18n/i18nContext'
 // import { mergeFeaturesResources } from '../featuresHelpers'
-import FeatureUsageLegends from 'core/charts/features/FeatureUsageLegends'
+import FeatureUsageLegends from '../charts/FeatureUsageLegends'
 import ChartContainer from 'core/charts/ChartContainer'
 import { usage } from 'core/constants.js'
-import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
-// import { useEntities } from 'core/entities/entitiesContext'
-import FeatureResources from 'core/blocks/features/FeatureResources'
+import GaugeBarChart from 'core/charts/GaugeBarChart'
+import { useEntities } from 'core/entities/entitiesContext'
+import FeatureResources from 'modules/features/components/FeatureResources'
 
 // convert relative links into absolute MDN links
 const parseMDNLinks = content =>
     content.replace(new RegExp(`href="/`, 'g'), `href="https://developer.mozilla.org/`)
 
-const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
-    // const { getName } = useEntities()
+const FeatureBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
+    const { getName } = useEntities()
 
     const [units, setUnits] = useState(defaultUnits)
 
@@ -67,7 +67,16 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     })
 
     return (
-        <Block units={units} setUnits={setUnits} data={buckets} block={block}>
+        <Block
+            id={block.id}
+            title={translate(`feature.${block.id}`, {}, getName(block.id))}
+            showDescription={false}
+            units={units}
+            setUnits={setUnits}
+            completion={data.completion}
+            data={buckets}
+            block={block}
+        >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
                     <ChartContainer height={40} fit={true} className="FeatureChart">
@@ -104,28 +113,30 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     )
 }
 
-FeatureExperienceBlock.propTypes = {
+FeatureBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired
     }).isRequired,
     data: PropTypes.shape({
-        buckets: PropTypes.arrayOf(
-            PropTypes.shape({
-                id: PropTypes.string.isRequired,
-                usage: PropTypes.shape({
-                    total: PropTypes.number.isRequired,
-                    buckets: PropTypes.arrayOf(
-                        PropTypes.shape({
-                            id: PropTypes.string.isRequired,
-                            count: PropTypes.number.isRequired,
-                            percentage: PropTypes.number.isRequired
-                        })
-                    ).isRequired
+        data: PropTypes.shape({
+            aggregations: PropTypes.arrayOf(
+                PropTypes.shape({
+                    id: PropTypes.string.isRequired,
+                    usage: PropTypes.shape({
+                        total: PropTypes.number.isRequired,
+                        buckets: PropTypes.arrayOf(
+                            PropTypes.shape({
+                                id: PropTypes.string.isRequired,
+                                count: PropTypes.number.isRequired,
+                                percentage: PropTypes.number.isRequired
+                            })
+                        ).isRequired
+                    })
                 })
-            })
-        )
+            )
+        }).isRequired
     }).isRequired
 }
 
-export default FeatureExperienceBlock
+export default FeatureBlock

@@ -1,0 +1,82 @@
+import React, { useMemo } from 'react'
+import Block from 'core/blocks/block/Block'
+import FeaturesOverviewCirclePackingChart from '../charts/FeaturesOverviewCirclePackingChart'
+import Legends from 'core/blocks/block/BlockLegends'
+import { useI18n } from 'core/i18n/i18nContext'
+import { colors, getColor } from 'core/constants.js'
+import { useEntities } from 'core/entities/entitiesContext'
+import ChartContainer from 'core/charts/ChartContainer'
+
+const getChartData = (data, getName, translate) => {
+    const sections = data.features.nodes.map(section => {
+        const { section_id } = section
+        const features = section.aggregations
+            .filter(a => a.usage !== null)
+            .map(feature => {
+                const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
+                const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
+
+                return {
+                    id: feature.id,
+                    awareness: usageBucket.count + knowNotUsedBucket.count,
+                    awarenessColor: colors.teal,
+                    usage: usageBucket.count,
+                    usageColor: colors.blue,
+                    unusedCount: knowNotUsedBucket.count,
+                    name: getName(feature.id)
+                }
+            })
+
+        return {
+            id: section_id,
+            isSection: true,
+            children: features,
+            name: translate(`page.${section_id}`)
+        }
+    })
+
+    return {
+        id: 'root',
+        children: sections
+    }
+}
+
+const FeaturesOverviewBlock = ({ data }) => {
+    const { getName } = useEntities()
+    const { translate } = useI18n()
+
+    const chartData = useMemo(() => getChartData(data, getName, translate), [
+        data,
+        getName,
+        translate
+    ])
+
+    // note: slightly different from Usage legend
+    const legends = [
+        {
+            id: 'know_it',
+            color: getColor('know_not_used'),
+            label: translate(`features.usage.know_it`)
+        },
+        {
+            id: 'used_it',
+            color: getColor('used_it'),
+            label: translate(`features.usage.used_it`)
+        }
+    ]
+
+    return (
+        <Block id="features-overview" className="FeaturesOverviewBlock" showDescription={true}>
+            <ChartContainer vscroll={true}>
+                <FeaturesOverviewCirclePackingChart
+                    className="FeaturesOverviewChart"
+                    data={chartData}
+                    variant="allFeatures"
+                />
+            </ChartContainer>
+            <Legends legends={legends} />
+        </Block>
+    )
+}
+
+export default FeaturesOverviewBlock
