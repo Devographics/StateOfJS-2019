@@ -58,6 +58,30 @@ demographicsTemplate:
 #
 ###############################################################################
 
+toolsSectionOverviewTemplate:
+    blockType: ToolsSectionOverviewBlock
+    dataPath: 'surveyApi.survey.category.tools.experience.tools'
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                category(id: ${category}) {
+                    tools {
+                        experience {
+                            year
+                            tools {
+                                id
+                                buckets {
+                                    id
+                                    count
+                                    percentage
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
 toolExperienceTemplate:
     blockType: ToolExperienceBlock
     dataPath: surveyApi.survey.tool.experience.allYears

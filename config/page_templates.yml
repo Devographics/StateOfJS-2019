@@ -12,9 +12,9 @@ toolSectionTemplate:
           variables:
               pageId: '${id}'
         - id: '${id}-section-overview'
-          blockType: ToolSectionOverViewBlock
+          template: toolsSectionOverviewTemplate
           variables:
-              sectionId: '${id}'
+              category: '${id}'
         - id: '${id}-experience-heatmap'
           template: heatmapTemplate
           variables:
