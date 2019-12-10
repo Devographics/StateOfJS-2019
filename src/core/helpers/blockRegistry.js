@@ -29,6 +29,9 @@ import ToolExperienceBlock from 'core/blocks/tools/ToolExperienceBlock'
 // import ToolsUsageRatioBlock from 'core/blocks/tools/ToolsUsageRatioBlock'
 // import ToolOpinionsOverTimeBlock from 'core/blocks/tools/ToolOpinionsOverTimeBlock'
 
+// happiness
+import HappinessBlock from 'core/blocks/happiness/HappinessBlock'
+
 // opinions
 import OpinionBlock from 'core/blocks/opinions/OpinionBlock'
 
@@ -65,7 +68,7 @@ const blockRegistry = {
     // 'tools-usage-ratio': ToolsUsageRatioBlock,
 
     // happiness
-    // HappinessBlock,
+    HappinessBlock,
 
     // opinions
     OpinionBlock,

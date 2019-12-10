@@ -1,20 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
-import HappinessTrendChart from '../charts/HappinessTrendChart'
+import HappinessChart from 'core/charts/happiness/HappinessChart'
 
-const HappinessTrendBlock = ({ block, data }) => {
+const HappinessBlock = ({ block, data }) => {
     return (
         <Block
             data={data}
             block={block}
         >
-            <HappinessTrendChart data={data} />
+            <HappinessChart data={data} />
         </Block>
     )
 }
 
-HappinessTrendBlock.propTypes = {
+HappinessBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         showDescription: PropTypes.bool.isRequired
@@ -27,4 +27,4 @@ HappinessTrendBlock.propTypes = {
     ).isRequired
 }
 
-export default HappinessTrendBlock
+export default HappinessBlock

@@ -31,7 +31,7 @@ const verticalAxis = {
     }
 }
 
-const HappinessTrendChart = ({ data }) => {
+const HappinessChart = ({ data }) => {
     const xySerie = data.map(bucket => ({
         x: bucket.year,
         y: bucket.mean
@@ -90,7 +90,7 @@ const HappinessTrendChart = ({ data }) => {
     )
 }
 
-HappinessTrendChart.propTypes = {
+HappinessChart.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
             year: PropTypes.number.isRequired,
@@ -99,4 +99,4 @@ HappinessTrendChart.propTypes = {
     ).isRequired
 }
 
-export default HappinessTrendChart
+export default HappinessChart
