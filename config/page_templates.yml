@@ -12,25 +12,36 @@ toolSectionTemplate:
           variables:
               pageId: '${id}'
         - id: '${id}-section-overview'
-          blockType: tools-section-overview
+          blockType: ToolSectionOverViewBlock
+          variables:
+              sectionId: '${id}'
         - id: '${id}-experience-heatmap'
-          blockType: heatmap
-          subject: tools
-          heatmapblockType: experience
+          template: heatmapTemplate
+          variables:
+              heatmapId: 'workExperience'
+              sectionId: '${id}'
+          # subject: tools
+          # heatmapblockType: experience
         - id: '${id}-salary-heatmap'
-          blockType: heatmap
-          subject: tools
-          heatmapblockType: salary
+          template: heatmapTemplate
+          variables:
+              heatmapId: 'salary'
+              sectionId: '${id}'
+          # subject: tools
+          # heatmapblockType: salary
         - id: '${id}-company-size-heatmap'
-          blockType: heatmap
-          subject: tools
-          heatmapblockType: company-size
+          template: heatmapTemplate
+          variables:
+              heatmapId: 'companySize'
+              sectionId: '${id}'
+          # subject: tools
+          # heatmapblockType: company-size
         - id: 'happiness_${id}'
           template: happinessTemplate
           variables:
               sectionId: '${id}'
         - id: resources-sponsors
-          blockType: resources
+          blockType: ResourcesBlock
           items:
               - frontendmasters-sass
 

@@ -92,16 +92,43 @@ toolExperienceTemplate:
             }
         }
 
-happinessTemplate:
-    blockType: HappinessBlock
-    dataPath: 'surveyApi.happiness.allYears'
+heatmapTemplate:
+    blockType: HeatmapBlock
+    dataPath: 'surveyApi.category.${heatmapId}.year'
     showDescription: true
     query: >
         surveyApi {
-            happiness(id: ${sectionId}) {
-                allYears {
-                    year
-                    mean
+            category(id: ${sectionId}) {
+                ${heatmapId} {
+                    year(year: ${currentYear}) {
+                        year
+                        buckets{
+                            id
+                            total
+                            average
+                            ranges{
+                                range
+                                count
+                                percentage
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+happinessTemplate:
+    blockType: HappinessBlock
+    dataPath: 'surveyApi.category.happiness.allYears'
+    showDescription: true
+    query: >
+        surveyApi {
+            category(id: ${sectionId}) {
+                happiness {
+                    allYears {
+                        year
+                        mean
+                    }
                 }
             }
         }
