@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { scaleLinear } from 'd3-scale'
 import { colors } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
-import HeatmapChartRow from './HeatmapChartRow'
+import HeatmapChartRow from 'core/charts/generic/HeatmapChartRow'
 import tinycolor from 'tinycolor2'
 
 // accepts either a number of steps and an offset for regular steps,

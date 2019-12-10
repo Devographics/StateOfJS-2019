@@ -2,7 +2,7 @@ import React, { memo, useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
-import VerticalBarChart from 'core/charts/VerticalBarChart'
+import VerticalBarChart from 'core/charts/generic/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { usePageContext } from 'core/helpers/pageContext'
 import {

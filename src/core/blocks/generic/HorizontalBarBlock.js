@@ -2,7 +2,7 @@ import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import ChartContainer from 'core/charts/ChartContainer'
-import HorizontalBarChart from 'core/charts/HorizontalBarChart'
+import HorizontalBarChart from 'core/charts/generic/HorizontalBarChart'
 
 const HorizontalBarBlock = ({ block, data }) => {
     const {

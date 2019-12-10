@@ -4,7 +4,7 @@ import { ResponsiveBar } from '@nivo/bar'
 import { useI18n } from 'core/i18n/i18nContext'
 import theme from 'nivoTheme'
 import { getColor } from 'core/constants.js'
-import { useBarChart } from './hooks'
+import { useBarChart } from 'core/charts/hooks.js'
 import BarTooltip from './BarTooltip'
 
 const breakpoint = 600

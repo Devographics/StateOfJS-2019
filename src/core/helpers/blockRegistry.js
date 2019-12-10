@@ -30,7 +30,7 @@ import ToolExperienceBlock from 'core/blocks/tools/ToolExperienceBlock'
 // import ToolOpinionsOverTimeBlock from 'core/blocks/tools/ToolOpinionsOverTimeBlock'
 
 // opinions
-import { OpinionBlock } from 'core/blocks/opinions/OpinionBlock'
+import OpinionBlock from 'core/blocks/opinions/OpinionBlock'
 
 const blockRegistry = {
 

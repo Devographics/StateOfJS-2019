@@ -4,7 +4,7 @@ import { keys } from 'core/constants.js'
 import Block from 'core/components/Block'
 import Legends from 'core/charts/Legends'
 import ChartContainer from 'core/charts/ChartContainer'
-import VerticalBarChart from 'core/charts/VerticalBarChart'
+import VerticalBarChart from 'core/charts/generic/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { usePageContext } from 'core/helpers/pageContext'
 
