@@ -64,7 +64,7 @@ const YearOpinionBlock = ({ block, data }) => {
 
     const getScaleTickLabel = formatTick(translate)
 
-    const buckets = useMemo(() => getChartData(data.buckets), [data])
+    const buckets = data.buckets
 
     return (
         <Block
