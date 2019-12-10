@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import AwardsBlock from 'modules/awards/AwardsBlock'
 import PageHeader from 'core/pages/PageHeader'
 import PageFooter from 'core/pages/PageFooter'
-import TextBlock from 'core/blocks/TextBlock'
+import TextBlock from 'core/blocks/other/TextBlock'
 
 const Awards = ({ data }) => {
     return (

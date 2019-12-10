@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import { scaleLinear } from 'd3-scale'
-import { colors } from '../../constants'
+import { colors } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
 import HeatmapChartRow from './HeatmapChartRow'
 import tinycolor from 'tinycolor2'

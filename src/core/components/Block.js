@@ -5,36 +5,25 @@ import ShareBlockDebug from '../share/ShareBlockDebug'
 
 const Block = ({
     id,
-    title,
-    description,
-    showDescription,
     isShareable,
     className,
-    values,
     children,
     units,
     setUnits,
-    completion,
     error,
     data,
-    block
+    block = {}
 }) => {
     return (
-        <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
+        <div id={block.id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
             <BlockTitle
-                id={id}
-                title={title}
-                description={description}
-                showDescription={showDescription}
                 isShareable={isShareable}
-                values={values}
                 units={units}
                 setUnits={setUnits}
-                completion={completion}
                 data={data}
                 block={block}
             />
-            {isShareable && <ShareBlockDebug id={id} />}
+            {isShareable && <ShareBlockDebug id={block.id} />}
             <div className="Block__Contents">
                 {error ? <div className="error">{error}</div> : children}
             </div>
@@ -43,17 +32,21 @@ const Block = ({
 }
 
 Block.propTypes = {
-    id: PropTypes.string.isRequired,
-    title: PropTypes.node,
-    description: PropTypes.node,
+    block: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.node,
+        description: PropTypes.node
+    }).isRequired,
+    // data: PropTypes.shape({
+    //     completion: PropTypes.shape({
+    //         count: PropTypes.number.isRequired,
+    //         percentage: PropTypes.number.isRequired
+    //     })
+    // }),
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired,
     className: PropTypes.string,
-    values: PropTypes.object,
-    completion: PropTypes.shape({
-        count: PropTypes.number.isRequired,
-        percentage: PropTypes.number.isRequired
-    })
+    values: PropTypes.object
 }
 Block.defaultProps = {
     showDescription: true,

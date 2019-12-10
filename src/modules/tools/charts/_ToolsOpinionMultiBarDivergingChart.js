@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from 'react'
 import { sortBy } from 'lodash'
 import PropTypes from 'prop-types'
-import { colors } from '../../../constants'
+import { colors } from 'core/constants.js'
 
 const commonStyles = {
     bar: {

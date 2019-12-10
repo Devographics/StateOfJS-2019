@@ -1,7 +1,7 @@
 import React from 'react'
 import Block from 'core/components/Block'
 import compact from 'lodash/compact'
-import { colors } from '../../../constants'
+import { colors } from 'core/constants.js'
 import round from 'lodash/round'
 import ToolsScatterplotChart from '../charts/ToolsScatterplotChart'
 import { useEntities } from 'core/entities/entitiesContext'

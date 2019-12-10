@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveLine } from '@nivo/line'
 import theme from 'nivoTheme'
-import { fontFamily, getColor } from '../../../constants'
+import { fontFamily, getColor } from 'core/constants.js'
 
 const horizontalAxis = {
     tickSize: 10,

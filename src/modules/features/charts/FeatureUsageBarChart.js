@@ -1,6 +1,6 @@
 import React from 'react'
 import GaugeBarChart from 'core/charts/GaugeBarChart'
-import { usage } from '../../../constants'
+import { usage } from 'core/constants.js'
 
 const FeatureUsageBarChart = ({ buckets }) => (
     <GaugeBarChart

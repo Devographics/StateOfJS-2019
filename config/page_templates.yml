@@ -5,37 +5,39 @@
 ###############################################################################
 
 # Tool section (/front-end, /data-layer, etc.)
-toolSection:
+toolSectionTemplate:
     blocks:
         - id: '${id}-introduction'
-          template: page-introduction
-          variables:
-              id: '${id}'
-        - id: '${id}-section-overview'
-          type: tools-section-overview
-        - id: '${id}-experience-heatmap'
-          type: heatmap
-          subject: tools
-          heatmapType: experience
-        - id: '${id}-salary-heatmap'
-          type: heatmap
-          subject: tools
-          heatmapType: salary
-        - id: '${id}-company-size-heatmap'
-          type: heatmap
-          subject: tools
-          heatmapType: company-size
-        - id: 'happiness_${id}'
-          template: happiness-trend
+          template: pageIntroductionTemplate
           variables:
               pageId: '${id}'
+        - id: '${id}-section-overview'
+          blockType: tools-section-overview
+        - id: '${id}-experience-heatmap'
+          blockType: heatmap
+          subject: tools
+          heatmapblockType: experience
+        - id: '${id}-salary-heatmap'
+          blockType: heatmap
+          subject: tools
+          heatmapblockType: salary
+        - id: '${id}-company-size-heatmap'
+          blockType: heatmap
+          subject: tools
+          heatmapblockType: company-size
+        - id: 'happiness_${id}'
+          template: happinessTemplate
+          variables:
+              sectionId: '${id}'
         - id: resources-sponsors
-          type: resources
+          blockType: resources
           items:
               - frontendmasters-sass
 
 # Tool (/front-end/react, /front-end/angular, etc.)
-tool:
+toolPageTemplate:
     blocks:
-        - id: '${id}-opinions-over-time'
-          template: tool-opinions
+        - id: '${id}-experience'
+          variables:
+              toolId: '${id}'
+          template: toolExperienceTemplate

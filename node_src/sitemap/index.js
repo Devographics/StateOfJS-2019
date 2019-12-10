@@ -7,18 +7,26 @@ const rawPageTemplates = fs.readFileSync('./config/page_templates.yml', 'utf8')
 const rawBlockTemplates = fs.readFileSync('./config/block_templates.yml', 'utf8')
 const globalVariables = yaml.safeLoad(fs.readFileSync('./config/variables.yml', 'utf8'))
 
+const injectVariables = (yamlObject, variables) => {
+    // convert template object back to string for variables injection
+    const templateString = yaml.dump(yamlObject)
+    // Inject variables in raw yaml templates
+    const interpolatedTemplate = template(templateString)(variables)
+    // convert raw populated template to object
+    const populatedTemplate = yaml.safeLoad(interpolatedTemplate)
+    return populatedTemplate
+}
+
 const applyTemplate = (config, templateName, rawTemplates, parent) => {
+
     // load raw templates
     const templates = yaml.safeLoad(rawTemplates)
 
     // pick the corresponding template
     const templateObject = templates[templateName]
     if (!templateObject) {
-        return { ...config }
+        throw new Error(`No template named "${templateName}" found.`)
     }
-
-    // convert template object back to string for variables injection
-    const templateString = yaml.dump(templateObject)
 
     // defines all available variables to be injected
     // at build time in the GraphQL queries
@@ -31,11 +39,7 @@ const applyTemplate = (config, templateName, rawTemplates, parent) => {
         variables.parentId = parent.id
     }
 
-    // Inject variables in raw yaml templates
-    const interpolatedTemplate = template(templateString)(variables)
-
-    // convert raw populated template to object
-    const populatedTemplate = yaml.safeLoad(interpolatedTemplate)
+    const populatedTemplate = injectVariables(templateObject, variables)
 
     return {
         ...populatedTemplate,
@@ -70,13 +74,18 @@ exports.pageFromConfig = (stack, config, parent) => {
         page.blocks = page.blocks.map(block => {
             // if template has been provided, apply it
 
+            // if block has variables, inject them based on current page
+            if (block.variables) {
+                block.variables = injectVariables(block.variables, config)
+            }
+
             if (block.template) {
                 block = applyTemplate(block, block.template, rawBlockTemplates, page)
             }
 
             // if block type is missing, get it from parent
-            if (!block.type) {
-                block.type = page.defaultBlockType
+            if (!block.blockType) {
+                block.blockType = page.defaultBlockType
             }
 
             return {

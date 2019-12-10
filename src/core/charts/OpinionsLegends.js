@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { opinions } from '../../constants'
+import { opinions } from 'core/constants.js'
 import { useI18n } from '../i18n/i18nContext'
 import Legends from './Legends'
 

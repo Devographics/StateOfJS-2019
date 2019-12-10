@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
 import Trans from '../i18n/Trans'
-import { emailOctopusUrl, emailOctopusCode, emailOctopusSiteKey } from '../../constants'
+import { emailOctopusUrl, emailOctopusCode, emailOctopusSiteKey } from 'core/constants.js'
 const postUrl = emailOctopusUrl
 
 export default class Newsletter extends Component {

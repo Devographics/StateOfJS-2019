@@ -1,5 +1,5 @@
 import React from 'react'
-import { getColor } from '../../constants.js'
+import { getColor } from 'core/constants.js'
 import Cell from './LogoCell.js'
 
 const Logo = ({ width = '100%' }) => (

@@ -5,7 +5,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@nivo/core'
 import { Chip } from '@nivo/tooltip'
-import { colors } from '../../constants'
+import { colors } from 'core/constants.js'
 
 // Define chart patterns
 // const patterns = [

@@ -1,35 +1,33 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown/with-html'
-import ShareBlock from '../share/ShareBlock'
-import ExportBlock from '../export/ExportBlock'
-import { useI18n } from '../i18n/i18nContext'
-import { usePageContext } from '../helpers/pageContext'
+import ShareBlock from 'core/share/ShareBlock'
+import ExportBlock from 'core/export/ExportBlock'
+import { useI18n } from 'core/i18n/i18nContext'
+import { usePageContext } from 'core/helpers/pageContext'
 import { getBlockTitle, getBlockDescription } from 'core/helpers/blockHelpers'
-import { getBlockMeta } from '../helpers/blockHelpers'
-import SharePermalink from '../share/SharePermalink'
+import { getBlockMeta } from 'core/helpers/blockHelpers'
+import SharePermalink from 'core/share/SharePermalink'
 import ChartUnitsSelector from 'core/charts/ChartUnitsSelector'
 import CompletionIndicator from './CompletionIndicator'
+import last from 'lodash/last'
 
 const BlockTitle = ({
-    id,
-    title,
-    description: descriptionOverride,
-    showDescription,
     isShareable,
     isExportable = true,
     values,
     units,
     setUnits,
-    completion,
     data,
     block
 }) => {
+    const { id, title: titleOverride, description: descriptionOverride, showDescription } = block
+    const completion = data && (Array.isArray(data) ? last(data).completion : data.completion)
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
 
-    title = title || getBlockTitle(id, context, translate, { values })
+    const title = titleOverride || getBlockTitle(id, context, translate, { values })
 
     let description = ''
     if (showDescription === true) {
@@ -95,15 +93,19 @@ const BlockTitle = ({
 }
 
 BlockTitle.propTypes = {
-    id: PropTypes.string.isRequired,
-    title: PropTypes.node,
-    description: PropTypes.node,
+    block: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.node,
+        description: PropTypes.node
+    }).isRequired,
+    // data: PropTypes.shape({
+    //     completion: PropTypes.shape({
+    //         count: PropTypes.number.isRequired,
+    //         percentage: PropTypes.number.isRequired
+    //     })
+    // }),
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired,
-    completion: PropTypes.shape({
-        count: PropTypes.number.isRequired,
-        percentage: PropTypes.number.isRequired
-    })
 }
 
 BlockTitle.defaultProps = {

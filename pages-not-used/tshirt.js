@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import TextBlock from 'core/blocks/TextBlock'
+import TextBlock from 'core/blocks/other/TextBlock'
 import TshirtBlock from 'core/blocks/TshirtBlock'
 import PageFooter from 'core/pages/PageFooter'
 

@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { getColor } from '../../constants'
+import { getColor } from 'core/constants.js'
 
 const HorizontalBarStripes = ({ bars, width, yScale }) => {
     const step = yScale.step()

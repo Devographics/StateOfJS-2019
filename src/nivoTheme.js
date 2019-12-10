@@ -1,4 +1,4 @@
-import { getColor, colors, colorRange, fontFamily } from './constants'
+import { getColor, colors, colorRange, fontFamily } from 'core/constants.js'
 
 export default {
     name: 'state_of_css_2019',

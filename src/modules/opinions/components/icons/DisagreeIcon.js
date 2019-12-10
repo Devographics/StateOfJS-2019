@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { getColor } from '../../../../constants'
+import { getColor } from 'core/constants.js'
 
 const DisagreeIcon = ({ size }) => (
     <svg

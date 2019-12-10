@@ -1,8 +1,8 @@
 import React from 'react'
 import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
-import { colors } from '../../../constants'
-// import { opinions } from '../../../constants'
+import { colors } from 'core/constants.js'
+// import { opinions } from 'core/constants.js'
 
 const ToolOpinionsLegend = props => {
     const { translate } = useI18n()

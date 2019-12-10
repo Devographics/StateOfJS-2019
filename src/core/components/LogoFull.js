@@ -1,6 +1,6 @@
 import React from 'react'
 import Cell from './LogoCell.js'
-import { getColor } from '../../constants.js'
+import { getColor } from 'core/constants.js'
 
 const Logo = ({ width = '100%' }) => (
     <svg width={width} viewBox="0 0 492 296" fill="none" xmlns="http://www.w3.org/2000/svg">

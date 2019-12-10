@@ -1,5 +1,5 @@
 import React from 'react'
-import { colors } from '../../constants'
+import { colors } from 'core/constants.js'
 
 const ChartLabel = ({
     label,

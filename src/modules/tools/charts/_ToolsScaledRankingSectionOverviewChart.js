@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { ResponsiveAreaBump } from '@nivo/bump'
 import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
-import { distinctColors } from '../../../constants'
+import { distinctColors } from 'core/constants.js'
 
 const ToolsScaledRankingSectionOverviewChart = ({ data }) => {
     return (

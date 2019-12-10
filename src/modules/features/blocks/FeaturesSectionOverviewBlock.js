@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Block from 'core/components/Block'
 import FeaturesCirclePackingChart from '../charts/FeaturesCirclePackingChart'
 import { useEntities } from 'core/entities/entitiesContext'
-import { colors } from '../../../constants'
+import { colors } from 'core/constants.js'
 
 const getChartData = (data, getName) => {
     const features = data.data.aggregations

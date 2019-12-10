@@ -7,7 +7,6 @@ import HorizontalBarChart from 'core/charts/HorizontalBarChart'
 const HorizontalBarBlock = ({ block, data }) => {
     const {
         id,
-        showDescription,
         mode = 'relative',
         units: defaultUnits = 'percentage',
         translateData
@@ -15,15 +14,12 @@ const HorizontalBarBlock = ({ block, data }) => {
 
     const [units, setUnits] = useState(defaultUnits)
 
-    const { completion, total, buckets } = data
+    const { total, buckets } = data
 
     return (
         <Block
-            id={id}
-            showDescription={showDescription}
             units={units}
             setUnits={setUnits}
-            completion={completion}
             data={buckets}
             block={block}
         >

@@ -1,6 +1,6 @@
 import React from 'react'
-import Newsletter from '../components/Newsletter'
-import { useI18n } from '../i18n/i18nContext'
+import Newsletter from 'core/components/Newsletter'
+import { useI18n } from 'core/i18n/i18nContext'
 
 const NewsletterBlock = () => {
     const { translate } = useI18n()

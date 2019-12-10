@@ -3,7 +3,7 @@ import Block from 'core/components/Block'
 import FeaturesOverviewCirclePackingChart from '../charts/FeaturesOverviewCirclePackingChart'
 import Legends from 'core/charts/Legends'
 import { useI18n } from 'core/i18n/i18nContext'
-import { colors, getColor } from '../../../constants'
+import { colors, getColor } from 'core/constants.js'
 import { useEntities } from 'core/entities/entitiesContext'
 import ChartContainer from 'core/charts/ChartContainer'
 

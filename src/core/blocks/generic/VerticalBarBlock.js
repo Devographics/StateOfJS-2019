@@ -1,57 +1,12 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
-import { keys } from '../../constants'
+import { keys } from 'core/constants.js'
 import Block from 'core/components/Block'
 import Legends from 'core/charts/Legends'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/VerticalBarChart'
 import { useI18n } from 'core/i18n/i18nContext'
-import { usePageContext } from '../helpers/pageContext'
-
-// const getChartData = (data, block) => {
-//     if (!data || !data.data) {
-//         throw new Error(
-//             `VerticalBarBlock: Missing data for block ${block.id}, page data is undefined`
-//         )
-//     }
-
-//     const bucketKeys = keys[block.bucketKeys]
-//     if (!Array.isArray(bucketKeys)) {
-//         throw new Error(
-//             `VerticalBarBlock: Missing bucket keys for block ${
-//                 block.id
-//             }, bucketKeys: ${block.bucketKeys || 'undefined'}`
-//         )
-//     }
-
-//     const blockData = data.data.aggregations.find(agg => agg.id === block.id)
-//     if (!blockData) {
-//         throw new Error(`VerticalBarBlock: Missing data for block ${block.id}`)
-//     }
-
-//     const blockAgg = blockData[block.dataKey]
-//     if (blockAgg === undefined || !Array.isArray(blockAgg.buckets)) {
-//         throw new Error(
-//             `VerticalBarBlock: Non existing or invalid data key ${block.data.key} for block ${block.id}`
-//         )
-//     }
-
-//     const sortedBuckets = bucketKeys.map(bucketKey => {
-//         const bucket = blockAgg.buckets.find(b => b.id === bucketKey)
-//         if (bucket === undefined) {
-//             throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
-//         }
-
-//         return bucket
-//     })
-
-//     return {
-//         sortedBuckets,
-//         bucketKeys,
-//         completion: blockAgg.completion,
-//         total: blockAgg.total
-//     }
-// }
+import { usePageContext } from 'core/helpers/pageContext'
 
 const VerticalBarBlock = ({ block, data }) => {
     if (!data) {
@@ -78,6 +33,10 @@ const VerticalBarBlock = ({ block, data }) => {
 
     const bucketKeys = keys[bucketKeysName]
 
+    if (!bucketKeys) {
+        throw new Error(`Could not find bucket keys for "${bucketKeysName}"`)
+    }
+    
     const { buckets, total, completion } = data
 
     const sortedBuckets = bucketKeys.map(bucketKey => {
@@ -101,7 +60,6 @@ const VerticalBarBlock = ({ block, data }) => {
 
     return (
         <Block
-            id={id}
             showDescription={showDescription}
             units={units}
             setUnits={setUnits}

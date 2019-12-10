@@ -2,11 +2,11 @@ import React, { memo, useMemo, useState } from 'react'
 import { withContainer, useDimensions, SvgWrapper, useTheme } from '@nivo/core'
 import { useOrdinalColorScale } from '@nivo/colors'
 import { Grid, Axes } from '@nivo/axes'
-import { distinctColors } from '../../../../constants'
+import { distinctColors } from 'core/constants.js'
 import { useScales, useLineGenerator } from './hooks'
 import BumpChartLine from './BumpChartLine'
 import { useEntities } from 'core/entities/entitiesContext'
-import { colors, totalCount } from '../../../../constants'
+import { colors, totalCount } from 'core/constants.js'
 import round from 'lodash/round'
 
 const Node = ({ x, y, fill, label, isCurrent }) => (

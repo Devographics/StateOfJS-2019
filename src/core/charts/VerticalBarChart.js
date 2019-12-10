@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import { useI18n } from 'core/i18n/i18nContext'
 import theme from 'nivoTheme'
-import { getColor } from '../../constants'
+import { getColor } from 'core/constants.js'
 import { useBarChart } from './hooks'
 import BarTooltip from './BarTooltip'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { colors } from '../../constants.js'
+import { colors } from 'core/constants.js'
 
 const Cell = ({ px = 0, py = 0, text, color, variant = 'full' }) => (
     <g transform={`translate(${px * 98 + 1},${py * 98 + 1})`}>

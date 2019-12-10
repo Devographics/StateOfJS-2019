@@ -2,7 +2,7 @@ import React, { memo, useMemo } from 'react'
 import { hierarchy as d3Hierarchy, tree as d3Tree } from 'd3-hierarchy'
 import { scaleLinear } from 'd3-scale'
 import { positionFromAngle } from '@nivo/core'
-import { colors } from '../../../constants'
+import { colors } from 'core/constants.js'
 
 const SectionLabel = memo(({ section, index, radius }) => {
     const centerAngle = section.x - Math.PI * 0.5

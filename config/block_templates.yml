@@ -4,14 +4,14 @@
 #
 ###############################################################################
 
-page-introduction:
-    type: page-introduction
-    dataPath: '${id}_introduction.html'
+pageIntroductionTemplate:
+    blockType: PageIntroductionBlock
+    dataPath: '${pageId}_introduction.html'
     query: >
-        ${id}_introduction: markdownRemark(
+        ${pageId}_introduction: markdownRemark(
             frontmatter: {
                 type:   { eq: "introduction" }
-                page:   { eq: "${id}" }
+                page:   { eq: "${pageId}" }
                 locale: { eq: "en-US" }
             }
         ) {
@@ -25,8 +25,8 @@ page-introduction:
 ###############################################################################
 
 # Used for salaries, company size, experience, etc. blocks that only show the current year of data
-demographics-block:
-    type: vertical-bar
+demographicsTemplate:
+    blockType: VerticalBarBlock
     dataPath: 'surveyApi.demographics.${id}.year' # select the 4th array item to select the 4th year
     showDescription: true
     query: >
@@ -56,13 +56,19 @@ demographics-block:
 #
 ###############################################################################
 
-tool-opinions:
-    type: opinions-over-time
+toolExperienceTemplate:
+    blockType: ToolExperienceBlock
     dataPath: surveyApi.tool.experience.allYears
     query: >
         surveyApi {
-            tool(id: ${id}) {
+            tool(id: ${toolId}) {
                 id
+                entity{
+                    name
+                    homepage
+                    npm
+                    github
+                }
                 experience {
                   allYears{
                     year
@@ -86,13 +92,13 @@ tool-opinions:
             }
         }
 
-happiness-trend:
-    type: happiness-trend
-    dataPath: 'surveyApi.happiness_${pageId}.allYears'
+happinessTemplate:
+    blockType: HappinessBlock
+    dataPath: 'surveyApi.happiness.allYears'
     showDescription: true
     query: >
         surveyApi {
-            happiness_${pageId}: happiness(id: ${pageId}) {
+            happiness(id: ${sectionId}) {
                 allYears {
                     year
                     mean
@@ -107,25 +113,26 @@ happiness-trend:
 ###############################################################################
 
 # Used for destructuring, arrow functions, WebGL, etc.
-feature:
-    type: feature
-    dataPath: 'surveyApi.${id}.year'
+featureExperienceTemplate:
+    blockType: FeatureExperienceBlock
+    dataPath: 'surveyApi.${id}.experience.year'
     showDescription: true
     query: >
         surveyApi {
-            ${id}: feature(section: "${parentId}", id: ${id}) {
+            ${id}: feature(id: ${id}) {
                 id
-                section
-                year(year: ${currentYear}) {
-                    year
-                    completion {
-                        count
-                        percentage
-                    }
-                    buckets {
-                        id
-                        count
-                        percentage
+                experience{
+                    year(year: ${currentYear}) {
+                        year
+                        completion {
+                            count
+                            percentage
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage
+                        }
                     }
                 }
             }
@@ -139,8 +146,8 @@ feature:
 
 # Used for "I think JavaScript is moving in the right direction", etc. blocks
 # {id} refers to the current subject
-opinion-block:
-    type: opinion-scale
+opinionTemplate:
+    blockType: OpinionBlock
     dataPath: 'surveyApi.${id}.allYears'
     showDescription: true
     query: >
@@ -169,8 +176,8 @@ opinion-block:
 #
 ###############################################################################
 
-other-tools:
-    type: horizontal-bar
+otherToolsTemplate:
+    blockType: HorizontalBarBlock
     showDescription: true
     mode: absolute
     dataPath: 'surveyApi.${id}.year'
@@ -198,8 +205,8 @@ other-tools:
 #
 ###############################################################################
 
-resources:
-    type: horizontal-bar
+resourcesTemplate:
+    blockType: HorizontalBarBlock
     showDescription: true
     mode: absolute
     dataPath: 'surveyApi.${id}.year'

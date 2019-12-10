@@ -1,7 +1,7 @@
 import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
-import { keys } from '../../constants'
-import { useI18n } from 'core/i18n/i18nContext'
+import { keys } from 'core/constants.js'
+// import { useI18n } from 'core/i18n/i18nContext'
 import { useEntities } from 'core/entities/entitiesContext'
 import Block from 'core/components/Block'
 import HeatmapChart from 'core/charts/HeatmapChart'
@@ -74,7 +74,7 @@ const getChartData = (data, block, config, getName) => {
 }
 
 const HeatmapBlock = ({ block, data }) => {
-    const { translate } = useI18n()
+    // const { translate } = useI18n()
     const { getName } = useEntities()
 
     const config = useMemo(() => getConfig(block), [block])
@@ -87,12 +87,12 @@ const HeatmapBlock = ({ block, data }) => {
 
     return (
         <Block
-            id={block.id}
-            title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)}
-            description={translate(
-                `block.description.${block.subject}_${block.heatmapType}_heatmap`
-            )}
-            showDescription={true}
+            // title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)}
+            // description={translate(
+            //     `block.description.${block.subject}_${block.heatmapType}_heatmap`
+            // )}
+            data={data}
+            block={block}
         >
             <HeatmapChart keys={config.keys} items={items} i18nNamespace={config.i18nNamespace} />
         </Block>

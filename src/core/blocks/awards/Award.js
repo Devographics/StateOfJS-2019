@@ -5,7 +5,7 @@ import ShareBlock from 'core/share/ShareBlock'
 import { useI18n } from 'core/i18n/i18nContext'
 import AwardIcon from './AwardIcon'
 import Confetti from 'react-confetti'
-import { distinctColors } from '../../constants'
+import { distinctColors } from 'core/constants.js'
 
 const Award = ({ type, items }) => {
     const { translate } = useI18n()

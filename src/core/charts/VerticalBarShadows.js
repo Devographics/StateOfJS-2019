@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { colors } from '../../constants'
+import { colors } from 'core/constants.js'
 
 const VerticalBarShadows = ({ bars }) => {
     return bars.map(bar => {

@@ -2,7 +2,7 @@ import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveTreeMap } from '@nivo/treemap'
 import theme from 'nivoTheme'
-import { colors } from '../../../constants'
+import { colors } from 'core/constants.js'
 
 const patterns = [
     {

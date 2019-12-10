@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { ResponsiveChoropleth } from '@nivo/geo'
 import countries from 'data/geo/world_countries'
 import baseTheme from 'nivoTheme'
-import { colors, getColor } from '../../../constants'
+import { colors, getColor } from 'core/constants.js'
 
 const theme = {
     ...baseTheme,

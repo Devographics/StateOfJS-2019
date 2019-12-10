@@ -114,7 +114,7 @@ const companySizeKeys = [
     'more_than_1000'
 ]
 
-const experienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+const workExperienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
 
 // const javascriptProficiencyKeys = [
 //     'none',
@@ -161,7 +161,7 @@ const backendProficiencyKeys = [
 export const keys = {
     salary: salaryKeys,
     companySize: companySizeKeys,
-    experience: experienceKeys,
+    workExperience: workExperienceKeys,
     gender: genderKeys,
     environmentUsage: environmentUsageKeys,
     jobTitle: jobTitleKeys,

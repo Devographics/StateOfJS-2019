@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
-import { colors } from '../../../constants'
+import { colors } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const labelPositions = {

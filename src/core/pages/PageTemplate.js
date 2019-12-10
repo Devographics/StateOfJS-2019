@@ -1,5 +1,5 @@
 import React from 'react'
-import TextBlock from 'core/blocks/TextBlock'
+import TextBlock from 'core/blocks/other/TextBlock'
 import PageHeader from 'core/pages/PageHeader'
 import PageFooter from 'core/pages/PageFooter'
 import { usePageContext } from 'core/helpers/pageContext'

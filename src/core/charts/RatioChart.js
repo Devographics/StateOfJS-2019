@@ -2,7 +2,7 @@ import React, { memo, useMemo } from 'react'
 // import PropTypes from 'prop-types'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
-import { colors } from '../../constants'
+import { colors } from 'core/constants.js'
 
 const getLabels = mode => ({ bars }) => {
     return bars.map(bar => {

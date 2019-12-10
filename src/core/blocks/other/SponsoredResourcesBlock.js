@@ -4,7 +4,7 @@ import ReactGA from 'react-ga'
 import { Link } from 'gatsby'
 import resources from 'data/sponsoredlinks.yaml'
 import BlockTitle from 'core/components/BlockTitle'
-import { useI18n } from '../i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 
 const trackClick = (id, resource, label) => {
     ReactGA.event({
@@ -14,7 +14,7 @@ const trackClick = (id, resource, label) => {
     })
 }
 
-const ResourcesBlock = ({ block }) => {
+const SponsoredResourcesBlock = ({ block }) => {
     const { translate } = useI18n()
     const { id } = block
     const sectionResources = resources.filter(r => block.items.includes(r.id))
@@ -27,8 +27,7 @@ const ResourcesBlock = ({ block }) => {
         <div className="block block--resources">
             <div className="resources">
                 <BlockTitle
-                    id="recommended_resources"
-                    showDescription={false}
+                    block={block}
                     isShareable={false}
                 />
                 <div className="resources-list">
@@ -81,8 +80,8 @@ const ResourcesBlock = ({ block }) => {
     )
 }
 
-ResourcesBlock.propTypes = {
+SponsoredResourcesBlock.propTypes = {
     section: PropTypes.string
 }
 
-export default ResourcesBlock
+export default SponsoredResourcesBlock

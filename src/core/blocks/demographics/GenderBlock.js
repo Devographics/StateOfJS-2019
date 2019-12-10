@@ -1,10 +1,10 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
-import { gender } from '../../../constants'
+import { gender } from 'core/constants.js'
 import Block from 'core/components/Block'
-import GaugeBarChart from 'core/charts/GaugeBarChart'
+import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
 import ChartContainer from 'core/charts/ChartContainer'
-import GenderLegends from 'modules/demographics/charts/GendersLegends'
+import GenderLegends from 'core/blocks/demographics/GendersLegends'
 
 const GenderBlock = ({ block, data }) => {
     const { units: defaultUnits = 'percentage' } = block
@@ -12,12 +12,8 @@ const GenderBlock = ({ block, data }) => {
 
     return (
         <Block
-            id={block.id}
-            showDescription={false}
-            className="Block--gender Gender__Block"
             units={units}
             setUnits={setUnits}
-            completion={data.completion}
             data={data.buckets}
             block={block}
         >
