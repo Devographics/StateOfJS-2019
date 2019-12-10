@@ -18,8 +18,6 @@ const parseMDNLinks = content =>
 const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     // const { getName } = useEntities()
 
-    console.log(block, data, featureExperience)
-
     const [units, setUnits] = useState(defaultUnits)
 
     const context = usePageContext()

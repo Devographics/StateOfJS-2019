@@ -85,7 +85,6 @@ const Tooltip = memo(({ translate, i18nNamespace, bar, units }) => {
 })
 
 const GaugeBarChart = ({ buckets, colorMapping, units, applyEmptyPatternTo, i18nNamespace }) => {
-    console.log({ buckets, colorMapping })
     const { translate } = useI18n()
 
     const keys = useMemo(() => colorMapping.map(m => m.id), [colorMapping])
