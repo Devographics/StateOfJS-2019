@@ -26,10 +26,7 @@ const SponsoredResourcesBlock = ({ block }) => {
     return (
         <div className="block block--resources">
             <div className="resources">
-                <BlockTitle
-                    block={block}
-                    isShareable={false}
-                />
+                <BlockTitle block={block} isShareable={false} />
                 <div className="resources-list">
                     {sectionResources.map(resource => {
                         const url = resource.url.includes('utm_source')

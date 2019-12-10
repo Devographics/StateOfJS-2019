@@ -70,7 +70,6 @@ const getChartData = (data, units) => {
 }
 
 const StreamChart = ({ data, keys, units, className, current, colorScale }) => {
-
     const { translate } = useI18n()
 
     const horizontalAxis = {

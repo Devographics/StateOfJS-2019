@@ -36,7 +36,6 @@ import HappinessBlock from 'core/blocks/happiness/HappinessBlock'
 import OpinionBlock from 'core/blocks/opinions/OpinionBlock'
 
 const blockRegistry = {
-
     // generic chart blocks
     HorizontalBarBlock,
     VerticalBarBlock,
@@ -71,7 +70,7 @@ const blockRegistry = {
     HappinessBlock,
 
     // opinions
-    OpinionBlock,
+    OpinionBlock
 }
 
 export default blockRegistry

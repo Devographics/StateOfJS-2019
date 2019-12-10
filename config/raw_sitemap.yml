@@ -42,8 +42,8 @@
         blocks:
             - id: syntax
               template: pageIntroductionTemplate
-              variables: 
-                pageId: '${id}'
+              variables:
+                  pageId: '${id}'
 
             - id: destructuring
               template: featureExperienceTemplate
@@ -59,8 +59,8 @@
         blocks:
             - id: language
               template: pageIntroductionTemplate
-              variables: 
-                pageId: '${id}'
+              variables:
+                  pageId: '${id}'
 
             - id: proxies
               template: featureExperienceTemplate
@@ -79,8 +79,8 @@
         blocks:
             - id: data_structures
               template: pageIntroductionTemplate
-              variables: 
-                pageId: '${id}'
+              variables:
+                  pageId: '${id}'
 
             - id: maps
               template: featureExperienceTemplate
@@ -99,8 +99,8 @@
         blocks:
             - id: browser_apis
               template: pageIntroductionTemplate
-              variables: 
-                pageId: '${id}'
+              variables:
+                  pageId: '${id}'
 
             - id: fetch
               template: featureExperienceTemplate
@@ -143,8 +143,8 @@
         blocks:
             - id: features_other_features
               template: pageIntroductionTemplate
-              variables: 
-                pageId: '${id}'
+              variables:
+                  pageId: '${id}'
 
             - id: pwa
               template: featureExperienceTemplate

@@ -9,7 +9,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 import { keys, toolExperience } from 'core/constants.js'
 
 const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
-    const { id, bucketKeysName = id} = block
+    const { id, bucketKeysName = id } = block
     const [units, setUnits] = useState(defaultUnits)
     const [current, setCurrent] = useState(null)
     const { translate } = useI18n()
@@ -19,7 +19,7 @@ const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }
 
     const legends = toolExperience.map(item => ({
         ...item,
-        label: translate(`opinions.legends.${item.id}`),
+        label: translate(`opinions.legends.${item.id}`)
     }))
 
     return (
@@ -58,7 +58,7 @@ ToolExperienceBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
         dataPath: PropTypes.string.isRequired
-    }).isRequired,
+    }).isRequired
     // data: PropTypes.shape({
     //     buckets: PropTypes.arrayOf(
     //         PropTypes.shape({

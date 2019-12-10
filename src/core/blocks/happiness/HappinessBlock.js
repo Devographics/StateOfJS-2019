@@ -5,10 +5,7 @@ import HappinessChart from 'core/charts/happiness/HappinessChart'
 
 const HappinessBlock = ({ block, data }) => {
     return (
-        <Block
-            data={data}
-            block={block}
-        >
+        <Block data={data} block={block}>
             <HappinessChart data={data} />
         </Block>
     )

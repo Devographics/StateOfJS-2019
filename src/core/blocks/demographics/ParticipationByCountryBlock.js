@@ -8,12 +8,7 @@ const ParticipationByCountryBlock = ({ block, data, units: defaultUnits = 'perce
     const [units, setUnits] = useState(defaultUnits)
 
     return (
-        <Block
-            units={units}
-            setUnits={setUnits}
-            data={data.buckets}
-            block={block}
-        >
+        <Block units={units} setUnits={setUnits} data={data.buckets} block={block}>
             <ChartContainer height={500}>
                 <ParticipationByCountryChart units={units} data={data.buckets} />
             </ChartContainer>

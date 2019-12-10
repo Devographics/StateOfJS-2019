@@ -84,10 +84,11 @@ const Tooltip = memo(({ translate, i18nNamespace, bar, units }) => {
     )
 })
 
-const GaugeBarChart = ({ buckets, mapping, units, applyEmptyPatternTo, i18nNamespace }) => {
+const GaugeBarChart = ({ buckets, colorMapping, units, applyEmptyPatternTo, i18nNamespace }) => {
+    console.log({ buckets, colorMapping })
     const { translate } = useI18n()
 
-    const keys = useMemo(() => mapping.map(m => m.id), [mapping])
+    const keys = useMemo(() => colorMapping.map(m => m.id), [colorMapping])
     const data = useMemo(
         () => [
             buckets.reduce((acc, bucket) => {
@@ -103,7 +104,7 @@ const GaugeBarChart = ({ buckets, mapping, units, applyEmptyPatternTo, i18nNames
     )
 
     const colors = useMemo(() => {
-        const colorById = mapping.reduce(
+        const colorById = colorMapping.reduce(
             (acc, m) => ({
                 ...acc,
                 [m.id]: m.color
@@ -112,7 +113,7 @@ const GaugeBarChart = ({ buckets, mapping, units, applyEmptyPatternTo, i18nNames
         )
 
         return bar => colorById[bar.id]
-    }, [mapping])
+    }, [colorMapping])
     const labelsLayer = useMemo(() => getLabels(units), [units])
     const patternRules = useMemo(
         () => [
@@ -165,7 +166,7 @@ GaugeBarChart.propTypes = {
             percentage: PropTypes.number.isRequired
         }).isRequired
     ).isRequired,
-    mapping: PropTypes.arrayOf(
+    colorMapping: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             color: PropTypes.string.isRequired

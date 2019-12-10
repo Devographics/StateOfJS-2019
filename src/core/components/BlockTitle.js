@@ -12,15 +12,7 @@ import BlockUnitsSelector from 'core/components/BlockUnitsSelector'
 import CompletionIndicator from './CompletionIndicator'
 import last from 'lodash/last'
 
-const BlockTitle = ({
-    isShareable,
-    isExportable = true,
-    values,
-    units,
-    setUnits,
-    data,
-    block
-}) => {
+const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits, data, block }) => {
     const { id, title: titleOverride, description: descriptionOverride, showDescription } = block
     const completion = data && (Array.isArray(data) ? last(data).completion : data.completion)
     const [showOptions, setShowOptions] = useState(false)
@@ -105,7 +97,7 @@ BlockTitle.propTypes = {
     //     })
     // }),
     showDescription: PropTypes.bool.isRequired,
-    isShareable: PropTypes.bool.isRequired,
+    isShareable: PropTypes.bool.isRequired
 }
 
 BlockTitle.defaultProps = {

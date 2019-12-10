@@ -6,7 +6,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 // import { mergeFeaturesResources } from '../featuresHelpers'
 import FeatureExperienceLegends from 'core/blocks/features/FeatureExperienceLegends'
 import ChartContainer from 'core/charts/ChartContainer'
-import { usage } from 'core/constants.js'
+import { featureExperience } from 'core/constants'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
 // import { useEntities } from 'core/entities/entitiesContext'
 import FeatureResources from 'core/blocks/features/FeatureResources'
@@ -17,6 +17,8 @@ const parseMDNLinks = content =>
 
 const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     // const { getName } = useEntities()
+
+    console.log(block, data, featureExperience)
 
     const [units, setUnits] = useState(defaultUnits)
 
@@ -73,7 +75,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                     <ChartContainer height={40} fit={true} className="FeatureChart">
                         <GaugeBarChart
                             buckets={buckets}
-                            mapping={usage}
+                            colorMapping={featureExperience}
                             units={units}
                             applyEmptyPatternTo="never_heard_not_sure"
                             i18nNamespace="features.usage"
@@ -110,6 +112,11 @@ FeatureExperienceBlock.propTypes = {
         path: PropTypes.string.isRequired
     }).isRequired,
     data: PropTypes.shape({
+        year: PropTypes.number.isRequired,
+        completion: PropTypes.shape({
+            count: PropTypes.number.isRequired,
+            percentage: PropTypes.number.isRequired
+        }).isRequired,
         buckets: PropTypes.arrayOf(
             PropTypes.shape({
                 id: PropTypes.string.isRequired,

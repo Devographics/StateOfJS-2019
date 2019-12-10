@@ -36,7 +36,7 @@ const VerticalBarBlock = ({ block, data }) => {
     if (!bucketKeys) {
         throw new Error(`Could not find bucket keys for "${bucketKeysName}"`)
     }
-    
+
     const { buckets, total, completion } = data
 
     const sortedBuckets = bucketKeys.map(bucketKey => {
@@ -45,7 +45,7 @@ const VerticalBarBlock = ({ block, data }) => {
             return {
                 id: bucketKey,
                 count: 0,
-                percentage: 0,
+                percentage: 0
             }
             // throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
         }

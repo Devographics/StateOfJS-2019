@@ -98,7 +98,7 @@ export const opinionsColorScale = [
     colors.blue,
     colors.blueLight,
     colors.blueLighter,
-    colors.pinkLightest,
+    colors.pinkLightest
 ]
 
 export const salaryKeys = [
@@ -260,7 +260,9 @@ export const otherColors = [
 ]
 
 export const getColor = id =>
-    [...featureExperience, ...toolExperienceKeys, ...otherColors, ...gender].find(color => color.id === id).color
+    [...featureExperience, ...toolExperienceKeys, ...otherColors, ...gender].find(
+        color => color.id === id
+    ).color
 
 export const gender = [
     { id: 'male', color: colors.blue },
