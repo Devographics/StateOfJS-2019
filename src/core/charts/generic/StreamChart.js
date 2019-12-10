@@ -73,11 +73,11 @@ const StreamChart = ({ data, keys, units, className, current, colorScale }) => {
 
     const { translate } = useI18n()
 
-    // const horizontalAxis = {
-    //     tickSize: 10,
-    //     tickPadding: 6,
-    //     format: i => props.opinions[i].survey
-    // }
+    const horizontalAxis = {
+        tickSize: 10,
+        tickPadding: 6,
+        format: i => data[i].year
+    }
 
     let tooltipFormat
     if (units === 'percents') {
@@ -85,7 +85,7 @@ const StreamChart = ({ data, keys, units, className, current, colorScale }) => {
     }
 
     const getLayerColor = ({ index }) => {
-        if (current !== null && current !== index) {
+        if (current !== null && current !== keys[index]) {
             return `${colorScale[index]}33`
         }
         return colorScale[index]
@@ -107,8 +107,8 @@ const StreamChart = ({ data, keys, units, className, current, colorScale }) => {
                 enableGridX={false}
                 enableGridY={false}
                 axisLeft={undefined}
-                // axisTop={horizontalAxis}
-                // axisBottom={horizontalAxis}
+                axisTop={horizontalAxis}
+                axisBottom={horizontalAxis}
                 enableDots={true}
                 renderDot={d => <Dot {...d} current={current} units={units} />}
                 dotColor="inherit:brighter(0.6)"
