@@ -1,20 +1,27 @@
 import React, { useMemo } from 'react'
 import Block from 'core/blocks/block/Block'
-import FeaturesOverviewCirclePackingChart from '../charts/FeaturesOverviewCirclePackingChart'
+import FeaturesOverviewCirclePackingChart from 'core/charts/features/FeaturesOverviewCirclePackingChart'
 import Legends from 'core/blocks/block/BlockLegends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors, getColor } from 'core/constants.js'
 import { useEntities } from 'core/entities/entitiesContext'
 import ChartContainer from 'core/charts/ChartContainer'
+import variables from '../../../../config/variables.yml'
+import get from 'lodash/get'
+import compact from 'lodash/compact'
 
 const getChartData = (data, getName, translate) => {
-    const sections = data.features.nodes.map(section => {
-        const { section_id } = section
-        const features = section.aggregations
-            .filter(a => a.usage !== null)
+    const categories = variables.featuresCategories
+    const sectionIds = Object.keys(categories)
+    const sections = sectionIds.map(sectionId => {
+        const sectionFeatures = categories[sectionId]
+        const features = data
+            .filter(f => sectionFeatures.includes(f.id))
+            // .filter(a => a.usage !== null)
             .map(feature => {
-                const usageBucket = feature.usage.buckets.find(b => b.id === 'used_it')
-                const knowNotUsedBucket = feature.usage.buckets.find(b => b.id === 'know_not_used')
+                const buckets = get(feature, 'experience.year.buckets')
+                const usageBucket = buckets.find(b => b.id === 'used')
+                const knowNotUsedBucket = buckets.find(b => b.id === 'heard')
 
                 return {
                     id: feature.id,
@@ -27,21 +34,21 @@ const getChartData = (data, getName, translate) => {
                 }
             })
 
-        return {
-            id: section_id,
+        return features.length ? {
+            id: sectionId,
             isSection: true,
             children: features,
-            name: translate(`page.${section_id}`)
-        }
+            name: translate(`page.${sectionId}`)
+        } : null
     })
 
     return {
         id: 'root',
-        children: sections
+        children: compact(sections)
     }
 }
 
-const FeaturesOverviewBlock = ({ data }) => {
+const FeaturesOverviewBlock = ({ block, data }) => {
     const { getName } = useEntities()
     const { translate } = useI18n()
 
@@ -51,6 +58,7 @@ const FeaturesOverviewBlock = ({ data }) => {
         translate
     ])
 
+    console.log(chartData)
     // note: slightly different from Usage legend
     const legends = [
         {
@@ -66,7 +74,7 @@ const FeaturesOverviewBlock = ({ data }) => {
     ]
 
     return (
-        <Block id="features-overview" className="FeaturesOverviewBlock" showDescription={true}>
+        <Block block={block} data={chartData} className="FeaturesOverviewBlock" showDescription={true}>
             <ChartContainer vscroll={true}>
                 <FeaturesOverviewCirclePackingChart
                     className="FeaturesOverviewChart"

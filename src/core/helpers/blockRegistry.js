@@ -15,7 +15,7 @@ import GenderBlock from 'core/blocks/demographics/GenderBlock'
 
 // features
 import FeatureExperienceBlock from 'core/blocks/features/FeatureExperienceBlock'
-// import FeaturesOverviewBlock from 'core/blocks/features/FeaturesOverviewBlock'
+import FeaturesOverviewBlock from 'core/blocks/features/FeaturesOverviewBlock'
 // import FeaturesRadialClusterOverviewBlock from 'core/blocks/features/FeaturesRadialClusterOverviewBlock'
 // import FeaturesSectionOverviewBlock from 'core/blocks/features/FeaturesSectionOverviewBlock'
 // import FeaturesUsageRatioBlock from 'core/blocks/features/FeaturesUsageRatioBlock'
@@ -51,7 +51,7 @@ const blockRegistry = {
 
     // features
     FeatureExperienceBlock,
-    // 'features-overview': FeaturesOverviewBlock,
+    FeaturesOverviewBlock,
     // 'features-radial-cluster-overview': FeaturesRadialClusterOverviewBlock,
     // 'features-section-overview': FeaturesSectionOverviewBlock,
     // 'features-usage-ratio': FeaturesUsageRatioBlock,

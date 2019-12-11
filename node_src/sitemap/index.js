@@ -74,9 +74,9 @@ exports.pageFromConfig = (stack, config, parent) => {
         page.blocks = page.blocks.map(block => {
             // if template has been provided, apply it
 
-            // if block has variables, inject them based on current page
+            // if block has variables, inject them based on current page and global variables
             if (block.variables) {
-                block.variables = injectVariables(block.variables, config)
+                block.variables = injectVariables(block.variables, {...config, ...globalVariables})
             }
 
             if (block.template) {

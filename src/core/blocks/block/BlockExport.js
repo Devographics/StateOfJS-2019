@@ -55,19 +55,24 @@ const BlockExport = ({ data, block, title }) => {
         setIsOpen(false)
     }
 
-    // remove entities data
-    const cleanedData = data.map(row => {
+    const isArray = Array.isArray(data)
+    const hasCSV = isArray
+    
+    // try to remove entities data
+    const cleanedData = isArray ? data.map(row => {
         const { entity, ...rest } = row
         return rest
-    })
+    }) : data
 
     const jsonExport = JSON.stringify(cleanedData, '', 2)
-    const csvExport = parser.parse(cleanedData)
+    const csvExport = hasCSV && parser.parse(cleanedData)
 
+    // remove first and last lines of query to remove "surveyApi" field
     const trimmedQuery = query
         .split('\n')
         .slice(1, -2)
         .join('\n')
+
     const graphQLExport = `query ${id}Query{
 ${trimmedQuery}
 }`
@@ -100,15 +105,15 @@ ${trimmedQuery}
                     <Tabs>
                         <TabList>
                             <Tab>JSON</Tab>
-                            <Tab>CSV</Tab>
+                            {hasCSV && <Tab>CSV</Tab>}
                             <Tab>GraphQL</Tab>
                         </TabList>
                         <TabPanel>
                             <textarea className="Export__Textarea" value={jsonExport} readOnly />
                         </TabPanel>
-                        <TabPanel>
+                        {hasCSV && <TabPanel>
                             <textarea className="Export__Textarea" value={csvExport} readOnly />
-                        </TabPanel>
+                        </TabPanel>}
                         <TabPanel>
                             <textarea className="Export__Textarea" value={graphQLExport} readOnly />
                         </TabPanel>

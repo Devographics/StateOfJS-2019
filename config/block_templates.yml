@@ -54,6 +54,92 @@ demographicsTemplate:
 
 ###############################################################################
 #
+# FEATURES
+#
+###############################################################################
+
+featuresOverviewTemplate: 
+    blockType: FeaturesOverviewBlock
+    dataPath: 'surveyApi.survey.features'
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                features {
+                    id
+                    experience{
+                        year(year: ${currentYear}) {
+                            year
+                            completion {
+                                count
+                                percentage
+                            }
+                            buckets {
+                                id
+                                count
+                                percentage
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+featuresCategoryOverviewTemplate: 
+    blockType: FeaturesOverviewBlock
+    dataPath: 'surveyApi.survey.features'
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                features(ids: [${featureIds}]) {
+                    id
+                    experience{
+                        year(year: ${currentYear}) {
+                            year
+                            completion {
+                                count
+                                percentage
+                            }
+                            buckets {
+                                id
+                                count
+                                percentage
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+# Used for destructuring, arrow functions, WebGL, etc.
+featureExperienceTemplate:
+    blockType: FeatureExperienceBlock
+    dataPath: 'surveyApi.survey.${id}.experience.year'
+    showDescription: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                ${id}: feature(id: ${id}) {
+                    id
+                    experience{
+                        year(year: ${currentYear}) {
+                            year
+                            completion {
+                                count
+                                percentage
+                            }
+                            buckets {
+                                id
+                                count
+                                percentage
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+###############################################################################
+#
 # TOOLS
 #
 ###############################################################################
@@ -159,40 +245,6 @@ happinessTemplate:
                         allYears {
                             year
                             mean
-                        }
-                    }
-                }
-            }
-        }
-
-###############################################################################
-#
-# FEATURES
-#
-###############################################################################
-
-# Used for destructuring, arrow functions, WebGL, etc.
-featureExperienceTemplate:
-    blockType: FeatureExperienceBlock
-    dataPath: 'surveyApi.survey.${id}.experience.year'
-    showDescription: true
-    query: >
-        surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
-                ${id}: feature(id: ${id}) {
-                    id
-                    experience{
-                        year(year: ${currentYear}) {
-                            year
-                            completion {
-                                count
-                                percentage
-                            }
-                            buckets {
-                                id
-                                count
-                                percentage
-                            }
                         }
                     }
                 }

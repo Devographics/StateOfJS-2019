@@ -36,6 +36,7 @@
 
 - id: features
   path: /features
+  template: featuresPageTemplate
   children:
       - id: syntax
         path: /syntax
@@ -44,6 +45,11 @@
               template: pageIntroductionTemplate
               variables:
                   pageId: '${id}'
+
+            - id: syntax_overview
+              template: featuresCategoryOverviewTemplate
+              variables:
+                  featureIds: ${featuresCategories.syntax}
 
             - id: destructuring
               template: featureExperienceTemplate
@@ -61,6 +67,11 @@
               template: pageIntroductionTemplate
               variables:
                   pageId: '${id}'
+
+            - id: language_overview
+              template: featuresCategoryOverviewTemplate
+              variables:
+                  featureIds: ${featuresCategories.language}
 
             - id: proxies
               template: featureExperienceTemplate
@@ -82,6 +93,11 @@
               variables:
                   pageId: '${id}'
 
+            - id: data_structures_overview
+              template: featuresCategoryOverviewTemplate
+              variables:
+                  featureIds: ${featuresCategories.data_structures}
+
             - id: maps
               template: featureExperienceTemplate
 
@@ -101,6 +117,11 @@
               template: pageIntroductionTemplate
               variables:
                   pageId: '${id}'
+
+            - id: browser_apis_overview
+              template: featuresCategoryOverviewTemplate
+              variables:
+                  featureIds: ${featuresCategories.browser_apis}
 
             - id: fetch
               template: featureExperienceTemplate
@@ -145,6 +166,11 @@
               template: pageIntroductionTemplate
               variables:
                   pageId: '${id}'
+
+            - id: other_features_overview
+              template: featuresCategoryOverviewTemplate
+              variables:
+                  featureIds: ${featuresCategories.other_features}
 
             - id: pwa
               template: featureExperienceTemplate

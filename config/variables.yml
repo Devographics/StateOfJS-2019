@@ -1,2 +1,82 @@
 surveyType: js
+
 currentYear: 2019
+
+featuresCategories:
+    syntax:
+        - destructuring
+        - spread_operator
+        - arrow_functions
+    language:
+        - proxies
+        - async_await
+        - promises
+        - decorators
+    data_structures:
+        - maps
+        - sets
+        - typed_arrays
+        - array_prototype_flat
+    browser_apis:
+        - fetch
+        - i18n
+        - local_storage
+        - service_workers
+        - web_animations
+        - web_audio
+        - web_components
+        - webgl
+        - webrtc
+        - websocket
+        - web_speech
+        - webvr
+    other_features:
+        - pwa
+        - wasm
+
+toolsCategories:
+    javascript_flavors:
+        - typescript
+        - reason
+        - elm
+        - clojurescript
+        - purescript
+    front_end_frameworks:
+        - react
+        - vuejs
+        - angular
+        - preact
+        - ember
+        - svelte
+    data_layer:
+        - redux
+        - apollo
+        - graphql
+        - relay
+        - mobx
+    back_end_frameworks:
+        - express
+        - nextjs
+        - koa
+        - meteor
+        - sails
+        - feathers
+        - nuxt
+        - gatsby
+    testing:
+        - jest
+        - mocha
+        - storybook
+        - cypress
+        - enzyme
+        - ava
+        - jasmine
+        - puppeteer
+    mobile_desktop:
+        - electron
+        - react_native
+        - native_apps
+        - cordova
+        - ionic
+        - nwjs
+        - expo
