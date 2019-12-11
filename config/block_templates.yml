@@ -212,7 +212,7 @@ toolsExperienceRankingTemplate:
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
-                toolsExperienceRanking(ids: [mocha, ava, enzyme, jest]) {
+                toolsExperienceRanking(ids: [${toolsCategories[sectionId]}]) {
                     id
                     awareness {
                         year

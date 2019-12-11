@@ -25,6 +25,8 @@ toolSectionTemplate:
 
         - id: '${id}-experience-ranking'
           template: toolsExperienceRankingTemplate
+          variables:
+              sectionId: '${id}'
 
         - id: '${id}-section-overview'
           template: toolsSectionOverviewTemplate
