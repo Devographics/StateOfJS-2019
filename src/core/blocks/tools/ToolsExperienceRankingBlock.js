@@ -1,25 +1,67 @@
-import React from 'react'
+import React, { useState, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import ToolsExperienceRankingChart from 'core/charts/tools/ToolsExperienceRankingChart'
 
 const ToolsExperienceRankingBlock = ({ block, data }) => {
-    const chartData = data.map(tool => {
-        return {
-            id: tool.id,
-            data: tool.satisfaction.map(bucket => {
+    const [metric, setMetric] = useState('satisfaction')
+    const chartData = useMemo(
+        () =>
+            data.map(tool => {
                 return {
-                    x: bucket.year,
-                    y: bucket.rank,
-                    percentage: bucket.percentage
+                    id: tool.id,
+                    data: tool[metric].map(bucket => {
+                        return {
+                            x: bucket.year,
+                            y: bucket.rank,
+                            percentage: bucket.percentage
+                        }
+                    })
                 }
-            })
-        }
-    })
+            }),
+        [data, metric]
+    )
 
     return (
         <Block block={block} data={data}>
+            <div>
+                <span
+                    onClick={() => setMetric('awareness')}
+                    style={{
+                        cursor: 'pointer',
+                        fontWeight: metric === 'awareness' ? 'bold' : 'normal',
+                        opacity: metric === 'awareness' ? 1 : 0.7,
+                        textDecoration: metric === 'awareness' ? 'underline' : 'none'
+                    }}
+                >
+                    awareness
+                </span>
+                &nbsp;&nbsp;
+                <span
+                    onClick={() => setMetric('interest')}
+                    style={{
+                        cursor: 'pointer',
+                        fontWeight: metric === 'interest' ? 'bold' : 'normal',
+                        opacity: metric === 'interest' ? 1 : 0.7,
+                        textDecoration: metric === 'interest' ? 'underline' : 'none'
+                    }}
+                >
+                    interest
+                </span>
+                &nbsp;&nbsp;
+                <span
+                    onClick={() => setMetric('satisfaction')}
+                    style={{
+                        cursor: 'pointer',
+                        fontWeight: metric === 'satisfaction' ? 'bold' : 'normal',
+                        opacity: metric === 'satisfaction' ? 1 : 0.7,
+                        textDecoration: metric === 'satisfaction' ? 'underline' : 'none'
+                    }}
+                >
+                    satisfaction
+                </span>
+            </div>
             <ChartContainer height={data.length * 50 + 80} fit={true}>
                 <ToolsExperienceRankingChart data={chartData} />
             </ChartContainer>
