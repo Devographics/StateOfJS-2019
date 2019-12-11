@@ -208,26 +208,29 @@ toolExperienceTemplate:
 
 toolsExperienceRankingTemplate:
     blockType: ToolsExperienceRankingBlock
-    dataPath: 'surveyApi.survey.toolsExperienceRanking'
+    dataPath: 'surveyApi.survey.toolsRankings.experience'
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
-                toolsExperienceRanking(ids: [${toolsCategories[sectionId]}]) {
-                    id
-                    awareness {
-                        year
-                        rank
-                        percentage
-                    }
-                    interest {
-                        year
-                        rank
-                        percentage
-                    }
-                    satisfaction {
-                        year
-                        rank
-                        percentage
+                toolsRankings(ids: [${toolsCategories[sectionId]}]) {
+                    ids
+                    experience {
+                        id
+                        awareness {
+                            year
+                            rank
+                            percentage
+                        }
+                        interest {
+                            year
+                            rank
+                            percentage
+                        }
+                        satisfaction {
+                            year
+                            rank
+                            percentage
+                        }
                     }
                 }
             }
