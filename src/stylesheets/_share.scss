@@ -220,6 +220,13 @@ $smallShareItemOffset: 150%;
     .react-tabs__tab-panel{
         background: $bg-color-inverted;
         padding: $spacing/2;
+        color: $text-color-inverted;
+    }
+    p{
+        padding: $spacing/2;
+        margin: 0;
+        width: 600px;
+        height: 400px;
     }
 }
 .Export__Textarea{

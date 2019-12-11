@@ -107,17 +107,19 @@ ${trimmedQuery}
                     <Tabs>
                         <TabList>
                             <Tab>JSON</Tab>
-                            {hasCSV && <Tab>CSV</Tab>}
+                            <Tab>CSV</Tab>
                             <Tab>GraphQL</Tab>
                         </TabList>
                         <TabPanel>
                             <textarea className="Export__Textarea" value={jsonExport} readOnly />
                         </TabPanel>
-                        {hasCSV && (
-                            <TabPanel>
+                        <TabPanel>
+                            {hasCSV ? (
                                 <textarea className="Export__Textarea" value={csvExport} readOnly />
-                            </TabPanel>
-                        )}
+                            ) : (
+                                <p>Sorry, CSV export is not available for this dataset.</p>
+                            )}
+                        </TabPanel>
                         <TabPanel>
                             <textarea className="Export__Textarea" value={graphQLExport} readOnly />
                         </TabPanel>
