@@ -23,6 +23,7 @@ import FeaturesOverviewBlock from 'core/blocks/features/FeaturesOverviewBlock'
 // tools
 import ToolExperienceBlock from 'core/blocks/tools/ToolExperienceBlock'
 import ToolsSectionOverviewBlock from 'core/blocks/tools/ToolsSectionOverviewBlock'
+import ToolsExperienceRankingBlock from 'core/blocks/tools/ToolsExperienceRankingBlock'
 // import ToolsScatterplotBlock from 'core/blocks/tools/ToolsScatterplotBlock'
 // import ToolsScaledRankingSectionOverviewBlock from 'core/blocks/tools/ToolsScaledRankingSectionOverviewBlock'
 // import ToolsUsageRatioBlock from 'core/blocks/tools/ToolsUsageRatioBlock'
@@ -59,6 +60,7 @@ const blockRegistry = {
     // tools
     ToolExperienceBlock,
     ToolsSectionOverviewBlock,
+    ToolsExperienceRankingBlock,
     // 'tools-scatterplot': ToolsScatterplotBlock,
     // 'tools-section-overview': ToolsSectionOverviewBlock,
     // 'opinions-over-time': ToolOpinionsOverTimeBlock,

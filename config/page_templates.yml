@@ -4,10 +4,10 @@
 #
 ###############################################################################
 
-featuresPageTemplate: 
-  blocks: 
-    - id: features-overview
-      template: featuresOverviewTemplate
+featuresPageTemplate:
+    blocks:
+        - id: features-overview
+          template: featuresOverviewTemplate
 
 ###############################################################################
 #
@@ -22,15 +22,21 @@ toolSectionTemplate:
           template: pageIntroductionTemplate
           variables:
               pageId: '${id}'
+
+        - id: '${id}-experience-ranking'
+          template: toolsExperienceRankingTemplate
+
         - id: '${id}-section-overview'
           template: toolsSectionOverviewTemplate
           variables:
               category: '${id}'
+
         - id: '${id}-experience-heatmap'
           template: heatmapTemplate
           variables:
               heatmapId: 'workExperience'
               sectionId: '${id}'
+
           # subject: tools
           # heatmapblockType: experience
         - id: '${id}-salary-heatmap'
@@ -38,6 +44,7 @@ toolSectionTemplate:
           variables:
               heatmapId: 'salary'
               sectionId: '${id}'
+
           # subject: tools
           # heatmapblockType: salary
         - id: '${id}-company-size-heatmap'
@@ -45,12 +52,14 @@ toolSectionTemplate:
           variables:
               heatmapId: 'companySize'
               sectionId: '${id}'
+
           # subject: tools
           # heatmapblockType: company-size
         - id: 'happiness_${id}'
           template: happinessTemplate
           variables:
               sectionId: '${id}'
+
         - id: resources-sponsors
           blockType: SponsoredResourcesBlock
           items:

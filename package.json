@@ -1,10 +1,10 @@
 {
-  "name": "state-of-css-2019",
-  "description": "State of CSS 2019 survey report",
+  "name": "state-of-js-2019",
+  "description": "State of JS 2019 survey report",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/StateOfJS/state-of-css-2019"
+    "url": "git://github.com/StateOfJS/state-of-js-2019"
   },
   "contributors": [
     {

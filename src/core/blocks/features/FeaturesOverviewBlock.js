@@ -34,12 +34,14 @@ const getChartData = (data, getName, translate) => {
                 }
             })
 
-        return features.length ? {
-            id: sectionId,
-            isSection: true,
-            children: features,
-            name: translate(`page.${sectionId}`)
-        } : null
+        return features.length
+            ? {
+                  id: sectionId,
+                  isSection: true,
+                  children: features,
+                  name: translate(`page.${sectionId}`)
+              }
+            : null
     })
 
     return {
@@ -74,7 +76,12 @@ const FeaturesOverviewBlock = ({ block, data }) => {
     ]
 
     return (
-        <Block block={block} data={chartData} className="FeaturesOverviewBlock" showDescription={true}>
+        <Block
+            block={block}
+            data={chartData}
+            className="FeaturesOverviewBlock"
+            showDescription={true}
+        >
             <ChartContainer vscroll={true}>
                 <FeaturesOverviewCirclePackingChart
                     className="FeaturesOverviewChart"

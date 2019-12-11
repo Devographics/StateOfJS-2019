@@ -58,7 +58,7 @@ demographicsTemplate:
 #
 ###############################################################################
 
-featuresOverviewTemplate: 
+featuresOverviewTemplate:
     blockType: FeaturesOverviewBlock
     dataPath: 'surveyApi.survey.features'
     query: >
@@ -84,7 +84,7 @@ featuresOverviewTemplate:
             }
         }
 
-featuresCategoryOverviewTemplate: 
+featuresCategoryOverviewTemplate:
     blockType: FeaturesOverviewBlock
     dataPath: 'surveyApi.survey.features'
     query: >
@@ -201,6 +201,33 @@ toolExperienceTemplate:
                             percentage
                         }
                       }
+                    }
+                }
+            }
+        }
+
+toolsExperienceRankingTemplate:
+    blockType: ToolsExperienceRankingBlock
+    dataPath: 'surveyApi.survey.toolsExperienceRanking'
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                toolsExperienceRanking(ids: [mocha, ava, enzyme, jest]) {
+                    id
+                    awareness {
+                        year
+                        rank
+                        percentage
+                    }
+                    interest {
+                        year
+                        rank
+                        percentage
+                    }
+                    satisfaction {
+                        year
+                        rank
+                        percentage
                     }
                 }
             }

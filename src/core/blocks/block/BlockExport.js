@@ -57,12 +57,14 @@ const BlockExport = ({ data, block, title }) => {
 
     const isArray = Array.isArray(data)
     const hasCSV = isArray
-    
+
     // try to remove entities data
-    const cleanedData = isArray ? data.map(row => {
-        const { entity, ...rest } = row
-        return rest
-    }) : data
+    const cleanedData = isArray
+        ? data.map(row => {
+              const { entity, ...rest } = row
+              return rest
+          })
+        : data
 
     const jsonExport = JSON.stringify(cleanedData, '', 2)
     const csvExport = hasCSV && parser.parse(cleanedData)
@@ -111,9 +113,11 @@ ${trimmedQuery}
                         <TabPanel>
                             <textarea className="Export__Textarea" value={jsonExport} readOnly />
                         </TabPanel>
-                        {hasCSV && <TabPanel>
-                            <textarea className="Export__Textarea" value={csvExport} readOnly />
-                        </TabPanel>}
+                        {hasCSV && (
+                            <TabPanel>
+                                <textarea className="Export__Textarea" value={csvExport} readOnly />
+                            </TabPanel>
+                        )}
                         <TabPanel>
                             <textarea className="Export__Textarea" value={graphQLExport} readOnly />
                         </TabPanel>

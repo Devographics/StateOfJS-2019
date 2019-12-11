@@ -23,8 +23,6 @@ const ToolsSectionOverviewChart = ({ data, units }) => {
         [data, units]
     )
 
-    console.log({ data, chartData, units })
-
     let format = v => v
     if (units === 'percentage') {
         format = v => `${v}%`
