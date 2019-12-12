@@ -72,43 +72,43 @@ translations:
       t: Salary Range (USD)
 
     # years of experience
-    - key: years-of-experience.less_than_1.long
+    - key: workExperience.less_than_1.long
       t: Less than one year
-    - key: years-of-experience.less_than_1.short
+    - key: workExperience.less_than_1.short
       t: '<1 year'
-    - key: years-of-experience.less_than_1.shorter
+    - key: workExperience.less_than_1.shorter
       t: '<1'
-    - key: years-of-experience.1_2.long
+    - key: workExperience.1_2.long
       t: 1 to 2 years
-    - key: years-of-experience.1_2.short
+    - key: workExperience.1_2.short
       t: 1~2 years
-    - key: years-of-experience.1_2.shorter
+    - key: workExperience.1_2.shorter
       t: 1~2
-    - key: years-of-experience.2_5.long
+    - key: workExperience.2_5.long
       t: 2 to 5 years
-    - key: years-of-experience.2_5.short
+    - key: workExperience.2_5.short
       t: 2~5 years
-    - key: years-of-experience.2_5.shorter
+    - key: workExperience.2_5.shorter
       t: 2~5
-    - key: years-of-experience.5_10.long
+    - key: workExperience.5_10.long
       t: 5 to 10 years
-    - key: years-of-experience.5_10.short
+    - key: workExperience.5_10.short
       t: 5~10 years
-    - key: years-of-experience.5_10.shorter
+    - key: workExperience.5_10.shorter
       t: 5~10
-    - key: years-of-experience.10_20.long
+    - key: workExperience.10_20.long
       t: 10 to 20 years
-    - key: years-of-experience.10_20.short
+    - key: workExperience.10_20.short
       t: 10~20 years
-    - key: years-of-experience.10_20.shorter
+    - key: workExperience.10_20.shorter
       t: 10~20
-    - key: years-of-experience.more_than_20.long
+    - key: workExperience.more_than_20.long
       t: More than 20 years
-    - key: years-of-experience.more_than_20.short
+    - key: workExperience.more_than_20.short
       t: '>20 years'
-    - key: years-of-experience.more_than_20.shorter
+    - key: workExperience.more_than_20.shorter
       t: '>20'
-    - key: years-of-experience.axis_legend
+    - key: workExperience.axis_legend
       t: Years of Experience
 
     # company size
