@@ -10,6 +10,7 @@ import { featureExperience } from 'core/constants'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
 // import { useEntities } from 'core/entities/entitiesContext'
 import FeatureResources from 'core/blocks/features/FeatureResources'
+import get from 'lodash/get'
 
 // convert relative links into absolute MDN links
 const parseMDNLinks = content =>
@@ -22,7 +23,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
 
     const context = usePageContext()
     const { translate } = useI18n()
-
+    const { name, mdn } = data
     // @todo: restore the resources logic
     /*
     const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
@@ -39,16 +40,18 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     const caniuseInfo = feature.resources.caniuse
     */
 
+    let buckets = get(data, 'experience.year.buckets')
+
     const feature = {
         resources: {
             id: block.id
         }
     }
-    const mdnInfo = undefined
+
     const caniuseInfo = undefined
 
     // @todo: handle normalization directly in the survey
-    const buckets = data.buckets.map(bucket => {
+    buckets = buckets.map(bucket => {
         let id
         if (bucket.id === 'heard') {
             id = 'know_not_used'
@@ -67,7 +70,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     })
 
     return (
-        <Block units={units} setUnits={setUnits} data={buckets} block={block}>
+        <Block title={name} units={units} setUnits={setUnits} data={buckets} block={block} showDescription={false}>
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
                     <ChartContainer height={40} fit={true} className="FeatureChart">
@@ -79,22 +82,22 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                             i18nNamespace="features.usage"
                         />
                     </ChartContainer>
-                    <FeatureExperienceLegends data={data.buckets} units={units} />
+                    <FeatureExperienceLegends data={buckets} units={units} />
                 </div>
                 {!context.isCapturing && (
                     <>
                         <div className="Feature__Description FTBlock__Description">
                             <p
                                 dangerouslySetInnerHTML={{
-                                    __html: mdnInfo
-                                        ? parseMDNLinks(mdnInfo.summary)
+                                    __html: mdn
+                                        ? parseMDNLinks(mdn.summary)
                                         : translate(`block.description.${block.id}`)
                                 }}
                             />
                         </div>
                         <FeatureResources
                             id={feature.resources.id}
-                            mdnInfo={mdnInfo}
+                            mdnInfo={mdn}
                             caniuseInfo={caniuseInfo}
                         />
                     </>

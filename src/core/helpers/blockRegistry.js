@@ -21,6 +21,7 @@ import FeaturesOverviewBlock from 'core/blocks/features/FeaturesOverviewBlock'
 // import FeaturesUsageRatioBlock from 'core/blocks/features/FeaturesUsageRatioBlock'
 
 // tools
+import ToolHeaderBlock from 'core/blocks/tools/ToolHeaderBlock'
 import ToolExperienceBlock from 'core/blocks/tools/ToolExperienceBlock'
 import ToolsSectionOverviewBlock from 'core/blocks/tools/ToolsSectionOverviewBlock'
 import ToolsExperienceRankingBlock from 'core/blocks/tools/ToolsExperienceRankingBlock'
@@ -58,6 +59,7 @@ const blockRegistry = {
     // 'features-usage-ratio': FeaturesUsageRatioBlock,
 
     // tools
+    ToolHeaderBlock,
     ToolExperienceBlock,
     ToolsSectionOverviewBlock,
     ToolsExperienceRankingBlock,

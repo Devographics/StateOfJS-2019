@@ -60,7 +60,7 @@ const FeaturesOverviewBlock = ({ block, data }) => {
         translate
     ])
 
-    console.log(chartData)
+    // console.log(chartData)
     // note: slightly different from Usage legend
     const legends = [
         {

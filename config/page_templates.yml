@@ -70,6 +70,10 @@ toolSectionTemplate:
 # Tool (/front-end/react, /front-end/angular, etc.)
 toolPageTemplate:
     blocks:
+        - id: ${id}-header
+          variables:
+              toolId: '${id}'
+          template: toolHeaderTemplate
         - id: '${id}-experience'
           variables:
               toolId: '${id}'

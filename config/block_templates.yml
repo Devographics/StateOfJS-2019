@@ -113,14 +113,21 @@ featuresCategoryOverviewTemplate:
 # Used for destructuring, arrow functions, WebGL, etc.
 featureExperienceTemplate:
     blockType: FeatureExperienceBlock
-    dataPath: 'surveyApi.survey.${id}.experience.year'
+    dataPath: 'surveyApi.survey.${id}'
     showDescription: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
                 ${id}: feature(id: ${id}) {
                     id
-                    experience{
+                    name
+                    mdn {
+                        locale
+                        url
+                        title
+                        summary
+                    }
+                    experience {
                         year(year: ${currentYear}) {
                             year
                             completion {
@@ -168,6 +175,28 @@ toolsSectionOverviewTemplate:
             }
         }
 
+toolHeaderTemplate:
+    blockType: ToolHeaderBlock
+    dataPath: surveyApi.survey.headerData
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                headerData: tool(id: ${toolId}) {
+                    id
+                    entity{
+                        name
+                        description
+                        homepage
+                        npm
+                        github{
+                            stars
+                            url
+                        }
+                    }
+                }
+            }
+        }
+
 toolExperienceTemplate:
     blockType: ToolExperienceBlock
     dataPath: surveyApi.survey.tool.experience.allYears
@@ -178,9 +207,6 @@ toolExperienceTemplate:
                     id
                     entity{
                         name
-                        homepage
-                        npm
-                        github
                     }
                     experience {
                       allYears{

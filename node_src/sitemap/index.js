@@ -47,7 +47,7 @@ const applyTemplate = (config, templateName, rawTemplates, parent) => {
     }
 }
 
-exports.pageFromConfig = (stack, config, parent) => {
+exports.pageFromConfig = (stack, config, parent, pageIndex) => {
 
     // if template has been provided, apply it
     if (config.template) {
@@ -59,7 +59,8 @@ exports.pageFromConfig = (stack, config, parent) => {
         ...config,
         path: parent === undefined ? pagePath : `${parent.path.replace(/\/$/, '')}${pagePath}`,
         is_hidden: !!config.is_hidden,
-        children: []
+        children: [],
+        pageIndex,
     }
     // if page has no defaultBlockType, get it from parent
     if (!page.defaultBlockType) {
@@ -102,7 +103,7 @@ exports.pageFromConfig = (stack, config, parent) => {
 
     if (Array.isArray(config.children)) {
         config.children.forEach(child => {
-            page.children.push(exports.pageFromConfig(stack, child, page))
+            page.children.push(exports.pageFromConfig(stack, child, page, pageIndex))
         })
     }
 
@@ -121,8 +122,8 @@ exports.computeSitemap = async rawSitemap => {
         hierarchy: []
     }
 
-    rawSitemap.forEach(item => {
-        exports.pageFromConfig(stack, item)
+    rawSitemap.forEach((item, pageIndex) => {
+        exports.pageFromConfig(stack, item, undefined, pageIndex)
     })
 
     // assign prev/next page using flat pages

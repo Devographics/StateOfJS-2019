@@ -5,6 +5,8 @@ import ShareBlockDebug from 'core/share/ShareBlockDebug'
 
 const Block = ({
     id,
+    title,
+    showDescription = true,
     isShareable,
     className,
     children,
@@ -22,6 +24,8 @@ const Block = ({
                 setUnits={setUnits}
                 data={data}
                 block={block}
+                title={title}
+                showDescription={showDescription}
             />
             {isShareable && <ShareBlockDebug id={block.id} />}
             <div className="Block__Contents">

@@ -12,17 +12,18 @@ import BlockUnitsSelector from 'core/blocks/block/BlockUnitsSelector'
 import BlockCompletionIndicator from 'core/blocks/block/BlockCompletionIndicator'
 import last from 'lodash/last'
 
-const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits, data, block }) => {
-    const { id, title: titleOverride, description: descriptionOverride, showDescription } = block
+const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits, data, block, title, showDescription }) => {
+    const { id, description: descriptionOverride } = block
     const completion = data && (Array.isArray(data) ? last(data).completion : data.completion)
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
 
-    const title = titleOverride || getBlockTitle(id, context, translate, { values })
+    const blockTitle = title || block.title || getBlockTitle(id, context, translate, { values })
+    const blockShowDescription = typeof showDescription !== 'undefined' ? showDescription : block.showDescription
 
     let description = ''
-    if (showDescription === true) {
+    if (blockShowDescription) {
         description =
             descriptionOverride ||
             getBlockDescription(id, context, translate, {
@@ -37,7 +38,7 @@ const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits,
                 <div className="Block__Title__Left">
                     <h3 className="Block__Title__Text Block__Title__Text--short">
                         <SharePermalink url={meta.link} />
-                        {title}
+                        {blockTitle}
                     </h3>
                     {completion && <BlockCompletionIndicator completion={completion} />}
                     {/*
@@ -50,7 +51,7 @@ const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits,
                             id={id}
                             className="Block__Title__Share"
                             values={values}
-                            title={title}
+                            title={blockTitle}
                             toggleClass={() => {
                                 setShowOptions(!showOptions)
                             }}
@@ -61,7 +62,7 @@ const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits,
                             id={id}
                             data={data}
                             block={block}
-                            title={title}
+                            title={blockTitle}
                             className="Block__Title__Export"
                         />
                     )}
@@ -75,7 +76,7 @@ const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits,
                     )}
                 </div>
             </div>
-            {showDescription && (
+            {blockShowDescription && (
                 <div className="Block__Description">
                     <ReactMarkdown source={description} escapeHtml={false} />
                 </div>
