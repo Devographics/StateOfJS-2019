@@ -26,11 +26,11 @@ translations:
     ###########################################################################
 
     # salary ranges
-    - key: salary.none.long
+    - key: salary.work_for_free.long
       t: I work for free
-    - key: salary.none.short
+    - key: salary.work_for_free.short
       t: work for free
-    - key: salary.none.shorter
+    - key: salary.work_for_free.shorter
       t: '0'
     - key: salary.0_10.long
       t: $0k-$10k
@@ -62,11 +62,11 @@ translations:
       t: $100k-$200k
     - key: salary.100_200.shorter
       t: 100~200k
-    - key: salary.200_more.long
+    - key: salary.more_than_200.long
       t: more than $200k
-    - key: salary.200_more.short
+    - key: salary.more_than_200.short
       t: $200k+
-    - key: salary.200_more.shorter
+    - key: salary.more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
       t: Salary Range (USD)
