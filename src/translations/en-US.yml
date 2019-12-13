@@ -349,9 +349,10 @@ translations:
     - key: featureExperience.never_heard_not_sure.long
       t: Never heard of it/Not sure what it is
 
-    - key: block.title.features-overview
+    # Feature Overview
+    - key: block.title.featuresOverview
       t: Usage Overview
-    - key: block.description.features-overview
+    - key: block.description.featuresOverview
       t: >
           This chart presents the various adoption rates for all features, grouped by category. 
 
@@ -362,9 +363,10 @@ translations:
 
           Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
 
-    - key: block.title.features-section-overview
+    # Features Section Overview
+    - key: block.title.featuresSectionOverview
       t: Usage Overview
-    - key: block.description.features-section-overview
+    - key: block.description.featuresSectionOverview
       t: >
           The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
           a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it. 
@@ -372,59 +374,16 @@ translations:
 
           Hover on each node to view detailed data along with an <span class="text-blackred text-bold">overlay</span> representing the total number of survey respondents. 
 
-    - key: block.description.css-exclusions
-      t: >
-          An exclusion element is a block-level element which is not a float, and generates an exclusion box. 
-          An exclusion element establishes a new block formatting context (via <a href="https://www.chenhuijing.com/blog/css-exclusions-with-queen-bey">Chen Hui Jing</a>).
 
-    - key: block.title.features_experience_heatmap
+    - key: block.title.featuresExperienceHeatmap
       t: Usage by Years Of Experience
-    - key: block.description.features_experience_heatmap
+    - key: block.description.featuresExperienceHeatmap
       t: |
         The “overall” column shows overall usage for each feature (respondents who selected “have used it”), 
         while the following columns show the usage ratio for each “years of experience” bracket. 
 
         A brighter <span class="text-teal text-bold">teal</span> background indicates 
         a higher-than-overall-average ratio for a given bracket.
-
-
-    ###########################################################################
-    # Units & Selectors
-    ###########################################################################
-
-    - key: block.title.units
-      t: Units
-    - key: block.title.pseudo-elements
-      t: Pseudo-Elements
-    - key: block.title.combinators
-      t: Combinators
-    - key: block.title.tree-document-structure
-      t: Tree & Document Structure
-    - key: block.title.attributes
-      t: Attributes
-    - key: block.title.links-urls
-      t: Link & URLs
-    - key: block.title.interaction
-      t: Interaction
-    - key: block.title.form-controls
-      t: Form Controls
-
-    - key: block.description.units
-      t: Which CSS units do developers use?
-    - key: block.description.pseudo-elements
-      t: Which pseudo CSS selectors do developers use?
-    - key: block.description.combinators
-      t: Which combinations of CSS selectors do developers use?
-    - key: block.description.tree-document-structure
-      t: Which structure related CSS selectors do developers use?
-    - key: block.description.attributes
-      t: Which attributes CSS selectors do developers use?
-    - key: block.description.links-urls
-      t: Which links & URLs related CSS selectors do developers use?
-    - key: block.description.interaction
-      t: Which interaction CSS selectors do developers use?
-    - key: block.description.form-controls
-      t: Which form related CSS selectors do developers use?
 
     ###########################################################################
     # Tools & Methodologies
@@ -713,7 +672,7 @@ translations:
       t: Podcasts
     - key: block.description.podcasts
       t: Which CSS or programming-related podcasts do you listen to?
-    - key: block.title.podcasts-others
+    - key: block.title.podcasts_others
       t: Other Podcasts
     - key: block.description.podcasts_others
       t: Other answers (freeform field).
@@ -727,33 +686,36 @@ translations:
     - key: block.description.easy-to-learn
       t: “CSS is easy to learn”
 
-    - key: block.title.evolving-too-slowly
-      t: Rate of Change
-    - key: block.description.evolving-too-slowly
-      t: “CSS is evolving too slowly”
+    - key: block.title.js_moving_in_right_direction
+      t: Direction
+    - key: block.description.js_moving_in_right_direction
+      t: “JavaScript is moving in the right direction”
 
-    - key: block.title.utility-classes
-      t: Non-Semantic Classes
-    - key: block.description.utility-classes
-      t: “Non-semantic classes such as `.center`, `.large-text`, etc. should be avoided.”
+    - key: block.title.building_js_apps_overly_complex
+      t: Complexity
+    - key: block.description.building_js_apps_overly_complex
+      t: “Building JavaScript apps is overly complex right now”
 
-    - key: block.title.selector-nesting
-      t: Selector Nesting
-    - key: block.description.selector-nesting
-      t: “Selector nesting such as `.foo .bar ul li {...}` should be avoided.”
+    - key: block.title.js_over_used_online
+      t: Usage
+    - key: block.description.js_over_used_online
+      t: “JavaScript is over-used online”
 
-    - key: block.title.programming-language
-      t: Programming Language
-    - key: block.description.programming-language
-      t: “CSS is a programming language”
-
-    - key: block.title.enjoy-css
+    - key: block.title.enjoy_building_js_apps
       t: Enjoyment
-    - key: block.description.enjoy-css
-      t: “I enjoy writing CSS”
+    - key: block.description.enjoy_building_js_apps
+      t: “I enjoy building JavaScript apps”
 
-    # ?
-    # CSS is moving in the right direction
+    - key: block.title.would_like_js_to_be_main_lang
+      t: Main Language
+    - key: block.description.would_like_js_to_be_main_lang
+      t: “I would like JavaScript to be my main programming language”
+
+    - key: block.title.js_ecosystem_changing_to_fast
+      t: Rate of Change
+    - key: block.description.js_ecosystem_changing_to_fast
+      t: “The JavaScript ecosystem is changing too fast”
+
 
     - key: block.title.missing-features
       t: Missing Features
@@ -853,6 +815,8 @@ translations:
       t: Demographics
     - key: page.features
       t: Features
+    - key: page.other_features
+      t: Other Features
     - key: page.javascript_flavors
       t: JavaScript Flavors
     - key: page.front_end_frameworks
