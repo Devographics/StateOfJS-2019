@@ -12,24 +12,31 @@ import BlockUnitsSelector from 'core/blocks/block/BlockUnitsSelector'
 import BlockCompletionIndicator from 'core/blocks/block/BlockCompletionIndicator'
 import last from 'lodash/last'
 
-const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits, data, block, title, showDescription }) => {
-    const { id, description: descriptionOverride } = block
+const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits, data, block }) => {
+    const { id, blockName } = block
     const completion = data && (Array.isArray(data) ? last(data).completion : data.completion)
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
 
-    const blockTitle = title || block.title || getBlockTitle(id, context, translate, { values })
-    const blockShowDescription = typeof showDescription !== 'undefined' ? showDescription : block.showDescription
-
-    let description = ''
-    if (blockShowDescription) {
-        description =
-            descriptionOverride ||
-            getBlockDescription(id, context, translate, {
-                values
-            })
+    let blockTitle
+    if (block.title) {
+        blockTitle = block.title
+    } else if (blockName) {
+        blockTitle = translate(`block.title.${blockName}`)
+    } else {
+        blockTitle = getBlockTitle(id, context, translate, { values })
     }
+
+    let blockDescription
+    if (block.description) {
+        blockDescription = block.description
+    } else if (blockName) {
+        blockDescription = translate(`block.description.${blockName}`)
+    } else {
+        blockDescription = getBlockDescription(id, context, translate, { values })
+    }
+
     const meta = getBlockMeta(id, context, translate)
 
     return (
@@ -76,9 +83,9 @@ const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits,
                     )}
                 </div>
             </div>
-            {blockShowDescription && (
+            {blockDescription && (
                 <div className="Block__Description">
-                    <ReactMarkdown source={description} escapeHtml={false} />
+                    <ReactMarkdown source={blockDescription} escapeHtml={false} />
                 </div>
             )}
         </div>

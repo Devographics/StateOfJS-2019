@@ -23,9 +23,6 @@ const BlockLegends = ({
     const { translate } = useI18n()
     const blockKeys = keys[bucketKeysName]
 
-    console.log(block)
-    console.log(bucketKeysName)
-    console.log(blockKeys)
     if (!blockKeys) {
         throw new Error(`Could not find any keys defined for ${bucketKeysName}. If there are none, set "showLegend: false" on block definition.`)
     }

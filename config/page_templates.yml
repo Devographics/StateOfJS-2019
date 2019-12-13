@@ -24,16 +24,19 @@ toolSectionTemplate:
               pageId: '${id}'
 
         - id: '${id}-experience-ranking'
+          blockName: toolsExperienceRanking
           template: toolsExperienceRankingTemplate
           variables:
               sectionId: '${id}'
 
         - id: '${id}-section-overview'
+          blockName: toolsSectionOverview
           template: toolsSectionOverviewTemplate
           variables:
               category: '${id}'
 
         - id: '${id}-experience-heatmap'
+          blockName: workExperience
           template: heatmapTemplate
           variables:
               heatmapId: 'workExperience'
@@ -42,6 +45,7 @@ toolSectionTemplate:
           # subject: tools
           # heatmapblockType: experience
         - id: '${id}-salary-heatmap'
+          blockName: salary
           template: heatmapTemplate
           variables:
               heatmapId: 'salary'
@@ -50,6 +54,7 @@ toolSectionTemplate:
           # subject: tools
           # heatmapblockType: salary
         - id: '${id}-company-size-heatmap'
+          blockName: companySize
           template: heatmapTemplate
           variables:
               heatmapId: 'companySize'
@@ -58,6 +63,7 @@ toolSectionTemplate:
           # subject: tools
           # heatmapblockType: company-size
         - id: 'happiness_${id}'
+          blockName: happiness
           template: happinessTemplate
           variables:
               sectionId: '${id}'
@@ -75,6 +81,7 @@ toolPageTemplate:
               toolId: '${id}'
           template: toolHeaderTemplate
         - id: '${id}-experience'
+          blockName: toolExperience
           variables:
               toolId: '${id}'
           template: toolExperienceTemplate

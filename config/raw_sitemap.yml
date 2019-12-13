@@ -1,3 +1,23 @@
+# ------------------------------------------------------------------------------------
+# Pages Properties
+# - id: the unique (survey-wide) ID of the page
+# - path: the page's path
+# - children: the page's children pages
+# - blocks: the page's blocks
+# - pageTemplate: a template from which to inherit its properties
+
+# Block Properties
+# - id: the unique (survey-wide) ID of the block
+# - blockName: the name of the block (used for titles, descriptions, etc.)
+# - bucketKeysName: the name of the block's keys (used for legends, formatting data, etc.)
+# - blockType: the type of block (which component to use)
+# - query: the query used to populate the block's data
+# - dataPath: the path to use (from the query root) to access the block's data
+# - showLegend: whether to show the block's legend
+# - showDescription: whether to show the block's description
+# - blockTemplate: a template from which to inherit its properties
+# ------------------------------------------------------------------------------------
+
 - id: introduction
   path: /
 
@@ -313,7 +333,7 @@
       # - id: mobiledesktop-conclusion
       #   template: toolConclusionTemplate
 
-- id: other-tools
+- id: other_tools
   path: /other-tools
   blocks:
       - id: utilities

@@ -431,19 +431,6 @@ translations:
     ###########################################################################
 
     # general
-    - key: block.title.tools-overview
-      t: Sentiment Overview
-    - key: block.description.tools-overview
-      t: >
-          Overview of opinions on the tools and methodologies surveyed. <span class="text-teal text-bold">Teal segments</span> represent positive opinions, 
-          while <span class="text-red text-bold">red segments</span> correspond to negative sentiment. 
-          
-          
-          The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
-          (excluding respondents unaware of the technology). 
-
-
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
     - key: block.tool.links
       t: Links
     - key: block.tool.github_link
@@ -477,19 +464,12 @@ translations:
         A brighter <span class="text-teal text-bold">teal</span> background indicates 
         a higher-than-overall-average ratio for a given bracket.
 
-    - key: block.title.tools_happiness
-      t: Overall Happiness
-    - key: block.description.tools_happiness
-      t: |
-        On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
-
     # rankings/bump chart
-    - key: block.title.tools-section-overview
+    - key: block.title.toolExperienceRanking
       t: Rankings
-    - key: block.description.tools-section-overview
+    - key: block.description.toolExperienceRanking
       t: > 
         Awareness, interest, and satisfaction ratio rankings. 
-        Note that these three ratios all correspond to the same point in time.
     - key: opinions.legends.awareness_ratio
       t: Awareness
     - key: opinions.legends.interest_ratio
@@ -497,6 +477,21 @@ translations:
     - key: opinions.legends.satisfaction_ratio
       t: Satisfaction
 
+    # overview
+    - key: block.title.toolsSectionOverview
+      t: Sentiment Overview
+    - key: block.description.toolsSectionOverview
+      t: >
+          Overview of opinions on the tools and methodologies surveyed. <span class="text-teal text-bold">Teal segments</span> represent positive opinions, 
+          while <span class="text-red text-bold">red segments</span> correspond to negative sentiment. 
+          
+          
+          The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
+          (excluding respondents unaware of the technology). 
+
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+    
     # quadrant/scatterplot chart
     - key: block.title.tools-scatterplot
       t: Satisfaction vs Usage
@@ -522,7 +517,19 @@ translations:
     - key: quadrants.analyze
       t: Analyze
 
+    # happiness
+    - key: block.title.happiness
+      t: Overall Happiness
+    - key: block.description.happiness
+      t: |
+        On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
+
     # experience
+    - key: block.title.toolExperience
+      t: ${name} Experience Over Time 
+    - key: block.description.toolExperience
+      t: Respondent's experience with ${name}.
+
     - key: toolExperience.never_heard.long
       t: I've never heard of it
     - key: toolExperience.never_heard.short
@@ -569,21 +576,49 @@ translations:
     # Other Tools
     ###########################################################################
 
-    - key: block.title.text-editors
+    - key: block.title.utilities
+      t: Utilities
+    - key: block.description.utilities
+      t: Which utility libraries do you regularly use?
+    - key: block.title.utilities_others
+      t: Other Utilities
+    - key: block.title.utilities_others
+      t: Other utilities (freeform field).
+
+    - key: block.title.text_editors
       t: Text Editors
-    - key: block.description.text-editors
+    - key: block.description.text_editors
       t: Which text editor(s) do you regularly use?
-    - key: block.title.text-editors-others
+    - key: block.title.text_editors_others
       t: Other Text Editors
-    - key: block.description.text-editors-others
+    - key: block.description.text_editors_others
       t: Other answers (freeform field).
+
     - key: block.title.browsers
       t: Browsers
     - key: block.description.browsers
       t: Which browser(s) do you primarily work in during initial development?
-    - key: block.title.browsers-others
+    - key: block.title.browsers_others
       t: Other Browsers
-    - key: block.description.browsers-others
+    - key: block.description.browsers_others
+      t: Other answers (freeform field).
+      
+    - key: block.title.build_tools
+      t: Build Tools
+    - key: block.description.build_tools
+      t: Which build tools do you use?
+    - key: block.title.build_tools_others
+      t: Other Build Tools
+    - key: block.description.build_tools_others
+      t: Other answers (freeform field).
+
+    - key: block.title.non_js_languages
+      t: Non-JavaScript Languages
+    - key: block.description.non_js_languages
+      t: Which other programming languages do you use?
+    - key: block.title.non_js_languages_others
+      t: Other Languages
+    - key: block.description.non_js_languages_others
       t: Other answers (freeform field).
 
     ###########################################################################
@@ -654,23 +689,23 @@ translations:
     ###########################################################################
 
     # blogs & magazines
-    - key: block.title.blogs-magazines
+    - key: block.title.blogs_magazines
       t: Blogs & Magazines
-    - key: block.description.blogs-magazines
+    - key: block.description.blogs_magazines
       t: Which CSS-related blogs/magazines/etc. do you read?
-    - key: block.title.blogs-magazines-others
+    - key: block.title.blogs_magazines_others
       t: Other Blogs & Magazines
-    - key: block.description.blogs-magazines-others
+    - key: block.description.blogs_magazines_others
       t: Other answers (freeform field).
   
     # sites & courses
-    - key: block.title.sites-courses
+    - key: block.title.sites_courses
       t: Sites & Courses
-    - key: block.description.sites-courses
+    - key: block.description.sites_courses
       t: Which CSS-related sites/courses/etc. do you consult?
-    - key: block.title.sites-courses-others
+    - key: block.title.sites_courses_others
       t: Other Sites & Courses
-    - key: block.description.sites-courses-others
+    - key: block.description.sites_courses_others
       t: Other answers (freeform field).
 
     # podcasts
@@ -680,7 +715,7 @@ translations:
       t: Which CSS or programming-related podcasts do you listen to?
     - key: block.title.podcasts-others
       t: Other Podcasts
-    - key: block.description.podcasts-others
+    - key: block.description.podcasts_others
       t: Other answers (freeform field).
 
     ###########################################################################
@@ -818,31 +853,19 @@ translations:
       t: Demographics
     - key: page.features
       t: Features
-    - key: page.layout
-      t: Layout
-    - key: page.shapes-and-graphics
-      t: Shapes & Graphics
-    - key: page.interactions
-      t: Interactions
-    - key: page.typography
-      t: Typography
-    - key: page.animations-and-transforms
-      t: Animations & Transforms
-    - key: page.other-features
-      t: Other Features
-    - key: page.units-and-selectors
-      t: Units & Selectors
-    - key: page.technologies
-      t: Technologies
-    - key: page.pre-post-processors
-      t: Pre & Post Processors
-    - key: page.css-frameworks
-      t: CSS Frameworks
-    - key: page.methodologies
-      t: Methodologies
-    - key: page.css-in-js
-      t: CSS-in-JS
-    - key: page.other-tools
+    - key: page.javascript_flavors
+      t: JavaScript Flavors
+    - key: page.front_end_frameworks
+      t: Front End Frameworks
+    - key: page.data_layer
+      t: Data Layer
+    - key: page.back_end_frameworks
+      t: Back End Frameworks
+    - key: page.testing
+      t: Testing
+    - key: page.mobile_desktop
+      t: Mobile & Desktop
+    - key: page.other_tools
       t: Other Tools
     - key: page.environments
       t: Environments

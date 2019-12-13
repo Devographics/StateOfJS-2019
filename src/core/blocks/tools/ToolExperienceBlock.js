@@ -7,37 +7,42 @@ import BlockLegend from 'core/blocks/block/BlockLegends'
 // import { opinions } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
 import { keys, toolExperience } from 'core/constants.js'
+import get from 'lodash/get'
 
 const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
-    const { id, bucketKeysName = id } = block
+    const { id, bucketKeysName = id, blockName } = block
     const [units, setUnits] = useState(defaultUnits)
     const [current, setCurrent] = useState(null)
     const { translate } = useI18n()
-
-    // const { translate } = useI18n()
+    const name = get(data, 'entity.name')
     const bucketKeys = keys[bucketKeysName]
-
-    const legends = toolExperience.map(item => ({
-        ...item,
-        label: translate(`opinions.legends.${item.id}`)
-    }))
-
+    const title = translate(`block.title.${blockName}`, { name })
+    const description = translate(`block.description.${blockName}`, { name })
     return (
         <Block
-            // title={translate(`tool.${block.id}`, {}, get(data, 'entity.name'))}
             units={units}
             setUnits={setUnits}
-            block={block}
+            block={{...block, title, description}}
             data={data}
+            legendProps={{
+                onMouseEnter: ({ id }) => {
+                    setCurrent(id)
+                },
+                onMouseLeave: () => {
+                    setCurrent(null)
+                }
+            }}
+            setCurrent={setCurrent}
         >
             <ChartContainer height={260} fit={true}>
                 <StreamChart
                     colorScale={toolExperience.map(i => i.color)}
                     current={current}
                     data={data}
-                    keys={bucketKeys}
+                    keys={bucketKeys.map(k => k.id)}
                     units={units}
                     applyEmptyPatternTo="never_heard"
+                    namespace={bucketKeysName}
                     // i18nNamespace="opinions.legends"
                 />
             </ChartContainer>

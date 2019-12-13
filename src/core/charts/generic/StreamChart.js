@@ -69,7 +69,7 @@ const getChartData = (data, units) => {
     })
 }
 
-const StreamChart = ({ data, keys, units, className, current, colorScale }) => {
+const StreamChart = ({ data, keys, units, className, current, colorScale, namespace }) => {
     const { translate } = useI18n()
 
     const horizontalAxis = {
@@ -112,7 +112,7 @@ const StreamChart = ({ data, keys, units, className, current, colorScale }) => {
                 renderDot={d => <Dot {...d} current={current} units={units} />}
                 dotColor="inherit:brighter(0.6)"
                 animate={false}
-                tooltipLabel={d => translate(`opinions.legends_short.${d.id}`)}
+                tooltipLabel={d => translate(`${namespace}.${d.id}.short`)}
                 tooltipFormat={tooltipFormat}
                 defs={patterns}
                 fill={[

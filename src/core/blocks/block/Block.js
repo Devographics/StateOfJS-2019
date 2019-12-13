@@ -5,9 +5,6 @@ import ShareBlockDebug from 'core/share/ShareBlockDebug'
 import BlockLegends from 'core/blocks/block/BlockLegends'
 
 const Block = ({
-    title,
-    showDescription = true,
-    showLegend,
     isShareable,
     className,
     children,
@@ -16,9 +13,11 @@ const Block = ({
     error,
     data,
     legendLayout,
-    block = {}
+    block = {},
+    legendProps,
+    titleProps,
 }) => {
-    const { id, showLegend: blockShowLegend } = block
+    const { id, showLegend } = block
 
     return (
         <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
@@ -28,19 +27,19 @@ const Block = ({
                 setUnits={setUnits}
                 data={data}
                 block={block}
-                title={title}
-                showDescription={showDescription}
+                {...titleProps}
             />
             {isShareable && <ShareBlockDebug id={id} />}
             <div className="Block__Contents">
                 {error ? <div className="error">{error}</div> : children}
             </div>
-            {(showLegend || blockShowLegend) && (
+            {(showLegend) && (
                 <BlockLegends
                     block={block}
                     layout={legendLayout}
                     data={data}
                     units={units}
+                    {...legendProps}
                 />
             )}
         </div>
