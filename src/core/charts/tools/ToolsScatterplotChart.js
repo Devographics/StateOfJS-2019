@@ -2,24 +2,17 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
-import { colors } from 'core/constants.js'
+import { colors, getColor } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const labelPositions = {
-    Emotion: [0, -10],
-    Tailwind: [0, 10],
-    ITCSS: [0, 2],
-    SMACSS: [0, -10],
-    PureCSS: [0, -10],
-    Tachyons: [0, 10],
-    // Glamor: [0, 5],
-    UIKit: [0, 15]
-}
-const sectionColors = {
-    'CSS Frameworks': colors.purple,
-    Methodologies: colors.yellow,
-    'CSS-in-JS': colors.greenDark,
-    'Pre & Post Processors': colors.red
+    // Emotion: [0, -10],
+    // Tailwind: [0, 10],
+    // ITCSS: [0, 2],
+    // SMACSS: [0, -10],
+    // PureCSS: [0, -10],
+    // Tachyons: [0, 10],
+    // UIKit: [0, 15]
 }
 
 const margins = { top: 20, right: 90, bottom: 70, left: 90 }
@@ -101,7 +94,7 @@ const Node = props => {
                     className="Scatterplot__Node__Label__Background"
                     x={-6}
                     y={-10}
-                    width={name.length * 8 + 9}
+                    width={name && name.length * 8 + 9}
                     height={20}
                     fill={colors.white}
                     rx={3}
@@ -177,7 +170,7 @@ const ToolsScatterplotChart = ({ data }) => {
             <ResponsiveScatterPlot
                 data={data}
                 margin={margins}
-                xScale={{ type: 'linear', min: 0, max: 10000 }}
+                xScale={{ type: 'linear', min: 0, max: 20000 }}
                 yScale={{ type: 'linear', min: 0, max: 100 }}
                 symbolSize={16}
                 theme={theme}
@@ -212,7 +205,7 @@ const ToolsScatterplotChart = ({ data }) => {
                     'mesh',
                     'legends'
                 ]}
-                colors={dot => sectionColors[dot.serieId]}
+                colors={dot => getColor(dot.serieId)}
                 animate={false}
                 tooltip={({ node }) => {
                     const { data, x, y } = node

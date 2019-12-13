@@ -35,7 +35,7 @@ const textColorScale = scaleLinear()
     ])
 // .clamp(true)
 
-const HeatmapChart = ({ keys, items, i18nNamespace }) => {
+const HeatmapChart = ({ keys, data, namespace }) => {
     const { translate } = useI18n()
     const [currentIndex, setCurrentIndex] = useState(null)
 
@@ -47,19 +47,19 @@ const HeatmapChart = ({ keys, items, i18nNamespace }) => {
                     gridTemplateColumns: `auto ${'70px '.repeat(keys.length + 1)}`
                 }}
             >
-                <div className="Heatmap__Legend">{translate(`${i18nNamespace}.axis_legend`)}</div>
+                <div className="Heatmap__Legend">{translate(`${namespace}.axis_legend`)}</div>
                 <div className="Heatmap__Header">{translate(`heatmap.average`)}</div>
                 {keys.map(key => {
                     return (
                         <div key={key} className="Heatmap__Header">
-                            {translate(`${i18nNamespace}.${key}.shorter`)}
+                            {translate(`${namespace}.${key}.short`)}
                         </div>
                     )
                 })}
-                {items.map((item, i) => (
+                {data.map((bucket, i) => (
                     <HeatmapChartRow
-                        key={item.id}
-                        item={item}
+                        key={bucket.id}
+                        item={bucket}
                         keys={keys}
                         index={i}
                         backgroundColorScale={backgroundColorScale}

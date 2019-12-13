@@ -54,6 +54,37 @@ demographicsTemplate:
 
 ###############################################################################
 #
+# OVERVIEW
+#
+###############################################################################
+
+scatterplotOverviewTemplate:
+    blockType: ToolsScatterplotBlock
+    dataPath: 'surveyApi.survey.tools'
+    showDescription: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                 tools {
+                    id
+                    entity {
+                        name
+                    }
+                    experience {
+                        year(year:${currentYear}) {
+                            buckets{
+                                id
+                                count
+                                percentage
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+###############################################################################
+#
 # FEATURES
 #
 ###############################################################################
@@ -294,6 +325,31 @@ heatmapTemplate:
                                         count
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+scatterplotTemplate:
+    blockType: ToolsScatterplotBlock
+    dataPath: 'surveyApi.survey.tools'
+    showDescription: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                 tools(ids:[${toolIds}]) {
+                    id
+                    entity {
+                        name
+                    }
+                    experience {
+                        year(year:${currentYear}) {
+                            buckets{
+                                id
+                                count
+                                percentage
                             }
                         }
                     }

@@ -452,9 +452,9 @@ translations:
           Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
     
     # quadrant/scatterplot chart
-    - key: block.title.tools-scatterplot
+    - key: block.title.scatterplotOverview
       t: Satisfaction vs Usage
-    - key: block.description.tools-scatterplot
+    - key: block.description.scatterplotOverview
       t: >
           This chart shows each technology’s **satisfaction ratio** over its total **user count**. 
           It can be divided into four quadrants:
@@ -813,6 +813,8 @@ translations:
       t: T-shirt
     - key: page.demographics
       t: Demographics
+    - key: page.overview
+      t: Overview
     - key: page.features
       t: Features
     - key: page.other_features

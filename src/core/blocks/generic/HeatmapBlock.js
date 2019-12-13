@@ -74,16 +74,19 @@ const getChartData = (data, block, config, getName) => {
 }
 
 const HeatmapBlock = ({ block, data }) => {
+    const { blockName } = block
     // const { translate } = useI18n()
-    const { getName } = useEntities()
+    // const { getName } = useEntities()
 
-    const config = useMemo(() => getConfig(block), [block])
-    const items = useMemo(() => getChartData(data, block, config, getName), [
-        data,
-        block,
-        config,
-        getName
-    ])
+    // const config = useMemo(() => getConfig(block), [block])
+    // const items = useMemo(() => getChartData(data, block, config, getName), [
+    //     data,
+    //     block,
+    //     config,
+    //     getName
+    // ])
+
+    const heatmapKeys = keys[blockName]
 
     return (
         <Block
@@ -91,10 +94,12 @@ const HeatmapBlock = ({ block, data }) => {
             // description={translate(
             //     `block.description.${block.subject}_${block.heatmapType}_heatmap`
             // )}
-            data={data}
+            data={data.buckets}
             block={block}
         >
-            <HeatmapChart keys={config.keys} items={items} i18nNamespace={config.i18nNamespace} />
+            <div>TODO</div>
+            {/* <HeatmapChart keys={config.keys} data={data} i18nNamespace={config.i18nNamespace} /> */}
+            {/* <HeatmapChart keys={heatmapKeys} data={data.buckets} /> */}
         </Block>
     )
 }

@@ -57,6 +57,12 @@
         items:
             - frontendmasters-design
 
+- id: overview
+  path: /overview
+  blocks: 
+    - id: scatterplotOverview
+      template: scatterplotOverviewTemplate
+
 - id: features
   path: /features
   template: featuresPageTemplate

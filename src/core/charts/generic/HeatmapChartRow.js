@@ -16,6 +16,8 @@ const HeatmapChartRow = ({
     const onMouseEnter = useCallback(() => setCurrent(index), [setCurrent, index])
     const onMouseLeave = useCallback(() => setCurrent(null), [setCurrent])
 
+    console.log(item)
+    console.log(keys)
     return (
         <>
             <div
@@ -40,25 +42,25 @@ const HeatmapChartRow = ({
             >
                 {item.average}%
             </div>
-            {keys.map(key => {
-                const value = item[key].diff
+            {keys.map(({ keyId }) => {
+                const cell = item.ranges.find(r => r.range === keyId)
 
                 return (
                     <div
-                        key={key}
+                        key={keyId}
                         className={classNames('Heatmap__Cell', {
                             'Heatmap__Cell--even': isEven,
                             'Heatmap__Cell--active': isActive,
                             'Heatmap__Cell--inactive': isInactive
                         })}
                         style={{
-                            background: backgroundColorScale(value),
-                            color: textColorScale(value)
+                            background: backgroundColorScale(cell.count),
+                            color: textColorScale(cell.count)
                         }}
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
-                        {item[key].relative_percentage}%
+                        {cell.percentage}%
                     </div>
                 )
             })}
