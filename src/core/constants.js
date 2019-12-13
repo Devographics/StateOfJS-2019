@@ -216,7 +216,13 @@ const zeroToFiveRange = [0, 1, 2, 3, 4]
 
 const cssProficiencyArray = zeroToFiveRange
 const backendProficiencyArray = zeroToFiveRange
-const opinionsArray = zeroToFiveRange
+const opinions = [
+    { id: 0, color: colors.blueDark },
+    { id: 1, color: colors.blue },
+    { id: 2, color: colors.blueLight },
+    { id: 3, color: colors.blueLighter },
+    { id: 4, color: colors.pinkLightest }
+]
 
 export const featureExperience = [
     {
@@ -283,7 +289,7 @@ export const keys = {
     jobTitle: arrayToKeys(jobTitleArray),
     cssProficiency: arrayToKeys(cssProficiencyArray),
     backendProficiency: arrayToKeys(backendProficiencyArray),
-    opinions: arrayToKeys(opinionsArray),
+    opinions,
     toolExperience,
     featureExperience,
     featureExperienceSimplified

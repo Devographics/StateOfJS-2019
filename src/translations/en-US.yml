@@ -716,7 +716,6 @@ translations:
     - key: block.description.js_ecosystem_changing_to_fast
       t: “The JavaScript ecosystem is changing too fast”
 
-
     - key: block.title.missing-features
       t: Missing Features
     - key: block.description.missing-features
@@ -879,15 +878,15 @@ translations:
       t: Export
     
       # opinion scale
-    - key: opinion_scale.0.long
+    - key: opinions.0.long
       t: Strongly Disagree
-    - key: opinion_scale.1.long
+    - key: opinions.1.long
       t: Disagree
-    - key: opinion_scale.2.long
+    - key: opinions.2.long
       t: Neutral
-    - key: opinion_scale.3.long
+    - key: opinions.3.long
       t: Agree
-    - key: opinion_scale.4.long
+    - key: opinions.4.long
       t: Strongly Agree
 
     # general

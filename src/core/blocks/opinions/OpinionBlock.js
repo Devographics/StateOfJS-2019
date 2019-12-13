@@ -15,7 +15,7 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
         <Block
             units={units}
             setUnits={setUnits}
-            block={block}
+            block={{...block, showLegend: true}}
             data={data}
             legendProps={{
                 onMouseEnter: ({ id }) => {
@@ -31,7 +31,7 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                     colorScale={opinionsColorScale}
                     current={current}
                     data={data}
-                    keys={bucketKeys}
+                    keys={bucketKeys.map(key => key.id)}
                     units={units}
                     applyEmptyPatternTo="never_heard"
                 />
