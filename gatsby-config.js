@@ -35,7 +35,7 @@ module.exports = {
           options: {
               typeName: 'SurveyApi',
               fieldName: "surveyApi",
-              url: 'http://localhost:4000',
+              url: process.env.API_URL,
           },
         },
         `gatsby-transformer-remark`,

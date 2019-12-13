@@ -31,4 +31,4 @@ esdata
 
 .env
 
-sitemap.yml
+config/sitemap.yml
