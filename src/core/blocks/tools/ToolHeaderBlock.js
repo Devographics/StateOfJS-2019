@@ -1,31 +1,22 @@
-import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React, { Fragment } from 'react'
 import { format } from 'd3-format'
-// import bestOfJsData from 'data/bestofjs'
 import periodicTableData from '../../../../config/periodic_table.yml'
-// import ranking from 'data/results/tools_ranking.yml'
 import PeriodicElement from 'core/blocks/tools/ToolPeriodicElement'
-// import Trans from 'core/i18n/Trans'
-// import { translateOrFallback } from 'core/i18n/translator'
-// import { libraryDescriptionToTranslationKey } from 'core/i18n/translation-key-getters'
-// import { getToolName } from 'core/helpers/tools'
 import { useI18n } from 'core/i18n/i18nContext'
 import get from 'lodash/get'
 
 const starsFormatter = format('.2s')
 
 const ToolHeaderBlock = ({ block, data }) => {
-  console.log(block)
-  console.log(data)
   const { translate } = useI18n()
 
     const toolId = get(block, 'variables.toolId')
     const toolName = get(data, 'entity.name')
     const homepageLink = get(data, 'entity.homepage')
-    const description = get(data, 'entity.description')
+    // const description = get(data, 'entity.description')
     const githubLink = get(data, 'entity.github.url')
     const stars = get(data, 'entity.github.stars')
-    const npmLink = get(data, 'entity.npm')
+    // const npmLink = get(data, 'entity.npm')
 
     // const number = ranking[tool]
     const number = 9

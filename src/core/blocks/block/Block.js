@@ -12,7 +12,6 @@ const Block = ({
     setUnits,
     error,
     data,
-    legendLayout,
     block = {},
     legendProps,
     titleProps,
@@ -36,7 +35,6 @@ const Block = ({
             {(showLegend) && (
                 <BlockLegends
                     block={block}
-                    layout={legendLayout}
                     data={data}
                     units={units}
                     {...legendProps}

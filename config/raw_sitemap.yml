@@ -204,6 +204,8 @@
 - id: javascript_flavors
   path: /javascript-flavors
   template: toolSectionTemplate
+  variables:
+      toolIds: ${toolsCategories.javascript_flavors}
   children:
       - id: typescript
         template: toolPageTemplate
@@ -223,6 +225,8 @@
 - id: front_end_frameworks
   path: /front-end-frameworks
   template: toolSectionTemplate
+  variables:
+      toolIds: ${toolsCategories.front_end_frameworks}
   children:
       - id: react
         template: toolPageTemplate
@@ -244,6 +248,8 @@
 - id: data_layer
   path: /data-layer
   template: toolSectionTemplate
+  variables:
+      toolIds: ${toolsCategories.data_layer}
   children:
       - id: redux
         template: toolPageTemplate
@@ -263,6 +269,8 @@
 - id: back_end_frameworks
   path: /back-end
   template: toolSectionTemplate
+  variables:
+      toolIds: ${toolsCategories.back_end_frameworks}
   children:
       - id: express
         template: toolPageTemplate
@@ -288,6 +296,8 @@
 - id: testing
   path: /testing
   template: toolSectionTemplate
+  variables:
+      toolIds: ${toolsCategories.testing}
   children:
       - id: jest
         template: toolPageTemplate
@@ -313,6 +323,8 @@
 - id: mobile_desktop
   path: /mobile-desktop
   template: toolSectionTemplate
+  variables:
+      toolIds: ${toolsCategories.mobile_desktop}
   children:
       - id: electron
         template: toolPageTemplate

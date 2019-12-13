@@ -274,23 +274,25 @@ toolsExperienceRankingTemplate:
 
 heatmapTemplate:
     blockType: HeatmapBlock
-    dataPath: 'surveyApi.survey.category.${heatmapId}.year'
+    dataPath: 'surveyApi.survey.matrices.tools.${heatmapId}.year'
     showDescription: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
-                category(id: ${sectionId}) {
-                    ${heatmapId} {
-                        year(year: ${currentYear}) {
-                            year
-                            buckets{
-                                id
-                                total
-                                average
-                                ranges{
-                                    range
-                                    count
-                                    percentage
+                matrices{
+                    tools(ids:[${toolIds}]){
+                        ${heatmapId}{
+                            year(year:${currentYear}){
+                                year
+                                buckets{
+                                    average
+                                    total
+                                    id
+                                    ranges{
+                                        range
+                                        percentage
+                                        count
+                                    }
                                 }
                             }
                         }

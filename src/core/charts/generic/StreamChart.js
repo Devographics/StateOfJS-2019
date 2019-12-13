@@ -1,8 +1,6 @@
 import React from 'react'
 import { ResponsiveStream } from '@nivo/stream'
 import theme from 'nivoTheme'
-import { opinions } from 'core/constants.js'
-// import OpinionsLegends from 'core/charts/OpinionsLegends'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const Dot = ({ x, y, data, current, units }) => {

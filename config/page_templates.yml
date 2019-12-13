@@ -34,6 +34,7 @@ toolSectionTemplate:
           template: toolsSectionOverviewTemplate
           variables:
               category: '${id}'
+              toolIds: ${toolIds}
 
         - id: '${id}-experience-heatmap'
           blockName: workExperience
@@ -41,35 +42,34 @@ toolSectionTemplate:
           variables:
               heatmapId: 'workExperience'
               sectionId: '${id}'
+              toolIds: ${toolIds}
 
-          # subject: tools
-          # heatmapblockType: experience
         - id: '${id}-salary-heatmap'
           blockName: salary
           template: heatmapTemplate
           variables:
               heatmapId: 'salary'
               sectionId: '${id}'
+              toolIds: ${toolIds}
 
-          # subject: tools
-          # heatmapblockType: salary
         - id: '${id}-company-size-heatmap'
           blockName: companySize
           template: heatmapTemplate
           variables:
               heatmapId: 'companySize'
               sectionId: '${id}'
+              toolIds: ${toolIds}
 
-          # subject: tools
-          # heatmapblockType: company-size
-        - id: 'happiness_${id}'
+        - id: '${id}_happiness'
           blockName: happiness
           template: happinessTemplate
           variables:
               sectionId: '${id}'
 
-        - id: resources-sponsors
+        - id: '${id}_recommended_resources'
+          blockName: recommendedResources
           blockType: SponsoredResourcesBlock
+          showDescription: false
           items:
               - frontendmasters-sass
 

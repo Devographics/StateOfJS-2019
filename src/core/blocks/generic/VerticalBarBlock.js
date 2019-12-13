@@ -4,7 +4,6 @@ import { keys } from 'core/constants.js'
 import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/generic/VerticalBarChart'
-import { useI18n } from 'core/i18n/i18nContext'
 import { usePageContext } from 'core/helpers/pageContext'
 
 const VerticalBarBlock = ({ block, data }) => {
@@ -15,8 +14,6 @@ const VerticalBarBlock = ({ block, data }) => {
     }
     const {
         id,
-        showDescription,
-        showLegend,
         mode = 'relative',
         units: defaultUnits = 'percentage',
         translateData,
@@ -25,8 +22,6 @@ const VerticalBarBlock = ({ block, data }) => {
 
     const context = usePageContext()
     const { width } = context
-
-    const { translate } = useI18n()
 
     const [units, setUnits] = useState(defaultUnits)
 
@@ -53,13 +48,12 @@ const VerticalBarBlock = ({ block, data }) => {
 
     return (
         <Block
-            showDescription={showDescription}
             units={units}
             setUnits={setUnits}
             completion={completion}
             data={sortedBuckets}
             block={block}
-            legendLayout="vertical"
+            legendProps={{ layout: 'vertical' }}
         >
             <ChartContainer fit={true}>
                 <VerticalBarChart

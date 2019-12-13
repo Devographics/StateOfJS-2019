@@ -293,7 +293,7 @@ translations:
     - key: block.title.workExperience
       t: Years of Experience
     - key: block.description.workExperience
-      t: How long you've been writing CSS.
+      t: How long you've been writing JavaScript.
     - key: block.title.companySize
       t: Company Size
     - key: block.description.companySize
@@ -931,7 +931,7 @@ translations:
       t: Thanks to our partners for supporting us!
     - key: partners.learn_more
       t: Learn more.
-    - key: block.title.recommended_resources
+    - key: block.title.recommendedResources
       t: Recommended Resources
       
     # charts
