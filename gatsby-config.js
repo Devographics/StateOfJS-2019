@@ -1,3 +1,4 @@
+require('dotenv').config()
 const ignoreFiles = ['**/wording.yml']
 
 module.exports = {
