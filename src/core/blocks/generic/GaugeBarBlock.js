@@ -4,12 +4,10 @@ import { gender } from 'core/constants.js'
 import Block from 'core/blocks/block/Block'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
 import ChartContainer from 'core/charts/ChartContainer'
-import GenderLegends from 'core/blocks/demographics/GendersLegends'
 
-const GenderBlock = ({ block, data }) => {
-    const { units: defaultUnits = 'percentage' } = block
+const GaugeBarBlock = ({ block, data }) => {
+    const { id, units: defaultUnits = 'percentage' } = block
     const [units, setUnits] = useState(defaultUnits)
-
     return (
         <Block units={units} setUnits={setUnits} data={data.buckets} block={block}>
             <ChartContainer height={200} fit={true}>
@@ -17,15 +15,14 @@ const GenderBlock = ({ block, data }) => {
                     units={units}
                     buckets={data.buckets}
                     colorMapping={gender}
-                    i18nNamespace={block.id}
+                    i18nNamespace={id}
                 />
             </ChartContainer>
-            <GenderLegends data={data.buckets} units={units} />
         </Block>
     )
 }
 
-GenderBlock.propTypes = {
+GaugeBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired
     }).isRequired,
@@ -38,4 +35,4 @@ GenderBlock.propTypes = {
     }).isRequired
 }
 
-export default memo(GenderBlock)
+export default memo(GaugeBarBlock)

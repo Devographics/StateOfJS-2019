@@ -4,12 +4,13 @@ import { usePageContext } from '../helpers/pageContext'
 import PageLabel from '../pages/PageLabel'
 import PageLink from '../pages/PageLink'
 import LanguageSwitcher from '../i18n/LanguageSwitcher'
+import isEmpty from 'lodash/isEmpty'
 
 const Pagination = ({ position, toggleSidebar }) => {
     const context = usePageContext()
 
     let previous = <span />
-    if (context.previous !== undefined) {
+    if (context.previous !== undefined && !isEmpty(context.previous)) {
         previous = (
             <PageLink page={context.previous} className="pagination__link pagination__previous">
                 {/* <span className="pagination__link__symbol">&lt;&lt;&nbsp;</span> */}
@@ -24,7 +25,7 @@ const Pagination = ({ position, toggleSidebar }) => {
     }
 
     let next = <span />
-    if (context.next !== undefined) {
+    if (context.next !== undefined&& !isEmpty(context.next)) {
         next = (
             <PageLink page={context.next} className="pagination__link pagination__next">
                 {/* <span className="pagination__link__label pagination__link__label--full">

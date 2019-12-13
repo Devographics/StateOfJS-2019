@@ -1,17 +1,17 @@
 // generic charts
 import HorizontalBarBlock from 'core/blocks/generic/HorizontalBarBlock'
 import VerticalBarBlock from 'core/blocks/generic/VerticalBarBlock'
+import HeatmapBlock from 'core/blocks/generic/HeatmapBlock'
+import GaugeBarBlock from 'core/blocks/generic/GaugeBarBlock'
 
 // other
 import TextBlock from 'core/blocks/other/TextBlock'
 import SponsoredResourcesBlock from 'core/blocks/other/SponsoredResourcesBlock'
-import HeatmapBlock from 'core/blocks/generic/HeatmapBlock'
 import PageIntroductionBlock from 'core/blocks/other/PageIntroductionBlock'
 // import { HappinessTrendBlock } from 'modules/happiness'
 
 // demographics
 import ParticipationByCountryBlock from 'core/blocks/demographics/ParticipationByCountryBlock'
-import GenderBlock from 'core/blocks/demographics/GenderBlock'
 
 // features
 import FeatureExperienceBlock from 'core/blocks/features/FeatureExperienceBlock'
@@ -41,6 +41,7 @@ const blockRegistry = {
     HorizontalBarBlock,
     VerticalBarBlock,
     HeatmapBlock,
+    GaugeBarBlock,
 
     // other
     PageIntroductionBlock,
@@ -49,7 +50,6 @@ const blockRegistry = {
 
     // demographics
     ParticipationByCountryBlock,
-    GenderBlock,
 
     // features
     FeatureExperienceBlock,

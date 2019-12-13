@@ -1,3 +1,5 @@
+const arrayToKeys = a => a.map(id => ({ id }))
+
 export let colors = {
     greyLight: '#e0e4e4',
     grey: '#d9dedf',
@@ -101,7 +103,7 @@ export const opinionsColorScale = [
     colors.pinkLightest
 ]
 
-export const salaryKeys = [
+export const salaryArray = [
     'work_for_free',
     '0_10',
     '10_30',
@@ -111,7 +113,7 @@ export const salaryKeys = [
     'more_than_200'
 ]
 
-const companySizeKeys = [
+const companySizeArray = [
     '1',
     '1_5',
     '5_10',
@@ -122,7 +124,7 @@ const companySizeKeys = [
     'more_than_1000'
 ]
 
-const workExperienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+const workExperienceArray = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
 
 // const javascriptProficiencyKeys = [
 //     'none',
@@ -139,32 +141,26 @@ const workExperienceKeys = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_
 //     'able_to_setup_from_scratch'
 // ]
 
-const genderKeys = ['male', 'female', 'non_binary', 'prefer_not_to_say']
+const environmentUsageArray = ['never', 'occasionally', 'often', 'mainly']
 
-const environmentUsageKeys = ['never', 'occasionally', 'often', 'mainly']
-
-const jobTitleKeys = [
+const jobTitleArray = [
     'front_end_developer_engineer',
     'full_stack_developer_engineer',
     'back_end_developer_engineer',
     'web_developer'
 ]
 
-const cssProficiencyKeys = [
-    'lvl1_no_knowledge',
-    'lvl2_css_frameworks',
-    'lvl3_specificity_rules',
-    'lvl4_animations_interactions',
-    'lvl5_entire_frontend'
+const zeroToFiveRange = [
+    0,
+    1,
+    2,
+    3,
+    4
 ]
 
-const backendProficiencyKeys = [
-    'lvl1_no_knowledge',
-    'lvl2_cms',
-    'lvl3_frameworks',
-    'lvl4_from_scratch',
-    'lvl5_microservices'
-]
+const cssProficiencyArray = zeroToFiveRange
+const backendProficiencyArray = zeroToFiveRange
+const opinionsArray = zeroToFiveRange
 
 export const mainColors = {
     textColor: colors.grey,
@@ -186,7 +182,17 @@ export const featureExperience = [
         color: colors.greyMedium
     }
 ]
-export const featureExperienceKeys = featureExperience.map(k => k.id)
+
+const featureExperienceSimplified = [
+    {
+        id: 'know_it',
+        color: colors.tealDarker
+    },
+    {
+        id: 'used_it',
+        color: colors.teal
+    }
+]
 
 export const toolExperience = [
     {
@@ -210,7 +216,6 @@ export const toolExperience = [
         color: colors.greyMedium
     }
 ]
-export const toolExperienceKeys = toolExperience.map(k => k.id)
 
 export const otherColors = [
     {
@@ -260,7 +265,7 @@ export const otherColors = [
 ]
 
 export const getColor = id =>
-    [...featureExperience, ...toolExperienceKeys, ...otherColors, ...gender].find(
+    [...featureExperience, ...toolExperience, ...otherColors, ...gender].find(
         color => color.id === id
     ).color
 
@@ -272,17 +277,18 @@ export const gender = [
 ]
 
 export const keys = {
-    salary: salaryKeys,
-    companySize: companySizeKeys,
-    workExperience: workExperienceKeys,
-    gender: genderKeys,
-    environmentUsage: environmentUsageKeys,
-    jobTitle: jobTitleKeys,
-    cssProficiency: cssProficiencyKeys,
-    backendProficiency: backendProficiencyKeys,
-    opinions: [0, 1, 2, 3, 4],
-    toolExperience: toolExperienceKeys,
-    featureExperience: featureExperienceKeys
+    salary: arrayToKeys(salaryArray),
+    companySize: arrayToKeys(companySizeArray),
+    workExperience: arrayToKeys(workExperienceArray),
+    gender,
+    environmentUsage: arrayToKeys(environmentUsageArray),
+    jobTitle: arrayToKeys(jobTitleArray),
+    cssProficiency: arrayToKeys(cssProficiencyArray),
+    backendProficiency: arrayToKeys(backendProficiencyArray),
+    opinions: arrayToKeys(opinionsArray),
+    toolExperience,
+    featureExperience,
+    featureExperienceSimplified,
 }
 
 export const fontFamily = `'IBM Plex Mono', monospace`

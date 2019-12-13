@@ -3,12 +3,9 @@ import PropTypes from 'prop-types'
 import Block from 'core/blocks/block/Block'
 import { usePageContext } from 'core/helpers/pageContext'
 import { useI18n } from 'core/i18n/i18nContext'
-// import { mergeFeaturesResources } from '../featuresHelpers'
-import FeatureExperienceLegends from 'core/blocks/features/FeatureExperienceLegends'
 import ChartContainer from 'core/charts/ChartContainer'
 import { featureExperience } from 'core/constants'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
-// import { useEntities } from 'core/entities/entitiesContext'
 import FeatureResources from 'core/blocks/features/FeatureResources'
 import get from 'lodash/get'
 
@@ -24,21 +21,6 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     const context = usePageContext()
     const { translate } = useI18n()
     const { name, mdn } = data
-    // @todo: restore the resources logic
-    /*
-    const features = mergeFeaturesResources(data.data.aggregations, data.data.fields.resources)
-    const feature = features.find(a => a.id === block.id)
-
-    let mdnInfo
-    if (feature.resources.mdn !== null && feature.resources.mdn.length > 0) {
-        mdnInfo = feature.resources.mdn.find(i => i.locale === context.locale)
-        if (!mdnInfo) {
-            mdnInfo = feature.resources.mdn[0]
-        }
-    }
-
-    const caniuseInfo = feature.resources.caniuse
-    */
 
     let buckets = get(data, 'experience.year.buckets')
 
@@ -82,7 +64,6 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                             i18nNamespace="features.usage"
                         />
                     </ChartContainer>
-                    <FeatureExperienceLegends data={buckets} units={units} />
                 </div>
                 {!context.isCapturing && (
                     <>

@@ -61,6 +61,8 @@ demographicsTemplate:
 featuresOverviewTemplate:
     blockType: FeaturesOverviewBlock
     dataPath: 'surveyApi.survey.features'
+    bucketKeysName: featureExperienceSimplified
+    showLegend: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
@@ -87,6 +89,8 @@ featuresOverviewTemplate:
 featuresCategoryOverviewTemplate:
     blockType: FeaturesOverviewBlock
     dataPath: 'surveyApi.survey.features'
+    bucketKeysName: featureExperienceSimplified
+    showLegend: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
@@ -115,6 +119,8 @@ featureExperienceTemplate:
     blockType: FeatureExperienceBlock
     dataPath: 'surveyApi.survey.${id}'
     showDescription: true
+    bucketKeysName: featureExperience
+    showLegend: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
@@ -154,6 +160,8 @@ featureExperienceTemplate:
 toolsSectionOverviewTemplate:
     blockType: ToolsSectionOverviewBlock
     dataPath: 'surveyApi.survey.category.tools.experience.tools'
+    bucketKeysName: toolExperience
+    showLegend: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
@@ -200,6 +208,8 @@ toolHeaderTemplate:
 toolExperienceTemplate:
     blockType: ToolExperienceBlock
     dataPath: surveyApi.survey.tool.experience.allYears
+    bucketKeysName: toolExperience
+    showLegend: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {

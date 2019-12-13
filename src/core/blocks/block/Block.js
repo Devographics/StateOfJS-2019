@@ -2,11 +2,12 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import BlockTitle from 'core/blocks/block/BlockTitle'
 import ShareBlockDebug from 'core/share/ShareBlockDebug'
+import BlockLegends from 'core/blocks/block/BlockLegends'
 
 const Block = ({
-    id,
     title,
     showDescription = true,
+    showLegend,
     isShareable,
     className,
     children,
@@ -14,10 +15,13 @@ const Block = ({
     setUnits,
     error,
     data,
+    legendLayout,
     block = {}
 }) => {
+    const { id, showLegend: blockShowLegend } = block
+
     return (
-        <div id={block.id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
+        <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
             <BlockTitle
                 isShareable={isShareable}
                 units={units}
@@ -27,10 +31,18 @@ const Block = ({
                 title={title}
                 showDescription={showDescription}
             />
-            {isShareable && <ShareBlockDebug id={block.id} />}
+            {isShareable && <ShareBlockDebug id={id} />}
             <div className="Block__Contents">
                 {error ? <div className="error">{error}</div> : children}
             </div>
+            {(showLegend || blockShowLegend) && (
+                <BlockLegends
+                    block={block}
+                    layout={legendLayout}
+                    data={data}
+                    units={units}
+                />
+            )}
         </div>
     )
 }

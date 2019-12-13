@@ -6,7 +6,7 @@
 
 featuresPageTemplate:
     blocks:
-        - id: features-overview
+        - id: featuresOverview
           template: featuresOverviewTemplate
 
 ###############################################################################

@@ -42,7 +42,7 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                     // i18nNamespace="opinions.legends"
                 />
             </ChartContainer>
-            <BlockLegend
+            {/* <BlockLegend
                 legends={legends}
                 onMouseEnter={({ id }) => {
                     setCurrent(id)
@@ -50,7 +50,7 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                 onMouseLeave={() => {
                     setCurrent(null)
                 }}
-            />
+            /> */}
         </Block>
     )
 }

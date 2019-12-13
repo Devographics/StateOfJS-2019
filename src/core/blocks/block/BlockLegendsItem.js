@@ -49,7 +49,7 @@ export default class LegendsItem extends Component {
                 onMouseLeave={this.handleMouseLeave}
                 onClick={this.handleClick}
             >
-                {color && (
+                {color ? (
                     <span
                         className="Legends__Item__Chip"
                         style={{
@@ -59,8 +59,9 @@ export default class LegendsItem extends Component {
                             ...chipStyle
                         }}
                     />
-                )}
-                {keyLabel && <span className="Legends__Item__KeyLabel">{keyLabel} </span>}
+                ) : keyLabel ? (
+                    <span className="Legends__Item__KeyLabel">{keyLabel} </span>
+                ) : null}
                 <span
                     className="Legends__Item__Label"
                     dangerouslySetInnerHTML={{ __html: label }}

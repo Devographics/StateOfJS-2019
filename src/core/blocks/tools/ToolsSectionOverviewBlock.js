@@ -28,6 +28,7 @@ const ToolsSectionOverviewBlock = ({ block, data, units: defaultUnits = 'percent
             setUnits={setUnits}
             block={block}
             data={data}
+            showLegend={true}
         >
             <ChartContainer height={400} fit={true}>
                 <ToolsSectionOverviewChart data={data} units={units} />

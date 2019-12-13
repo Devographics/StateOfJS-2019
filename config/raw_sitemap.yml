@@ -21,13 +21,16 @@
         blockType: HorizontalBarBlock
       - id: gender
         template: demographicsTemplate
-        blockType: GenderBlock
+        showLegend: true
+        blockType: GaugeBarBlock
       - id: jobTitle
         template: demographicsTemplate
         blockType: HorizontalBarBlock
       - id: cssProficiency
+        showLegend: true
         template: demographicsTemplate
       - id: backendProficiency
+        showLegend: true
         template: demographicsTemplate
       - id: resources-sponsors
         blockType: SponsoredResourcesBlock

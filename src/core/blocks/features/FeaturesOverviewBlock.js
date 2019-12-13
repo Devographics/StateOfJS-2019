@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react'
 import Block from 'core/blocks/block/Block'
 import FeaturesOverviewCirclePackingChart from 'core/charts/features/FeaturesOverviewCirclePackingChart'
-import Legends from 'core/blocks/block/BlockLegends'
 import { useI18n } from 'core/i18n/i18nContext'
 import { colors, getColor } from 'core/constants.js'
 import { useEntities } from 'core/entities/entitiesContext'
@@ -62,18 +61,7 @@ const FeaturesOverviewBlock = ({ block, data }) => {
 
     // console.log(chartData)
     // note: slightly different from Usage legend
-    const legends = [
-        {
-            id: 'know_it',
-            color: getColor('know_not_used'),
-            label: translate(`features.usage.know_it`)
-        },
-        {
-            id: 'used_it',
-            color: getColor('used_it'),
-            label: translate(`features.usage.used_it`)
-        }
-    ]
+
 
     return (
         <Block
@@ -89,7 +77,6 @@ const FeaturesOverviewBlock = ({ block, data }) => {
                     variant="allFeatures"
                 />
             </ChartContainer>
-            <Legends legends={legends} />
         </Block>
     )
 }

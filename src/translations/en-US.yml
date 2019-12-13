@@ -147,16 +147,6 @@ translations:
     - key: companySize.axis_legend
       t: Number of Employees
 
-    # gender
-    - key: gender.female
-      t: Female
-    - key: gender.male
-      t: Male
-    - key: gender.non_binary
-      t: Non-Binary/Third Gender
-    - key: gender.prefer_not_to_say
-      t: Prefer not to say
-
     # sources
     - key: sources.other_unknown
       t: Other/Unknown
@@ -189,60 +179,108 @@ translations:
     - key: javascript-proficiency.entire_codebases_from_scratch.long
       t: Can architecture entire front-end codebases from scratch
 
-    # backend proficiency
-    - key: block.title.backend-proficiency
-      t: Back-end Proficiency
-    - key: block.description.backend-proficiency
-      t: How proficient are you at back-end development?
-    - key: backend-proficiency.axis_legend
-      t: Back-End Proficiency
-    - key: backend-proficiency.none.short
+    # css proficiency
+
+
+    - key: block.title.cssProficiency
+      t: CSS Proficiency
+    - key: block.description.cssProficiency
+      t: How proficient are you at CSS?
+    - key: cssProficiency.axis_legend
+      t: CSS Proficiency
+    - key: cssProficiency.0.short
       t: None
-    - key: backend-proficiency.none.long
-      t: I am not able to handle any back-end work
-    - key: backend-proficiency.able_to_setup_cms_or_site_generator.short
+    - key: cssProficiency.0.long
+      t: 'Virtually no knowledge of CSS'
+    - key: cssProficiency.1.short
       t: Beginner
-    - key: backend-proficiency.able_to_setup_cms_or_site_generator.long
-      t: I can set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)
-    - key: backend-proficiency.able_to_use_existing_frameworks.short
+    - key: cssProficiency.1.long
+      t: 'Using CSS frameworks and tweaking existing styles'
+    - key: cssProficiency.2.short
       t: Intermediate
-    - key: backend-proficiency.able_to_use_existing_frameworks.long
-      t: I can develop apps using pre-existing frameworks (Rails, Laravel, etc.)
-    - key: backend-proficiency.able_to_setup_from_scratch.short
+    - key: cssProficiency.2.long
+      t: 'Knowing specificity rules, being able to create layouts'
+    - key: cssProficiency.3.short
       t: Advanced
-    - key: backend-proficiency.able_to_setup_from_scratch.long
-      t: I can set up an entire back-end from scratch (Go, Node, etc.)
+    - key: cssProficiency.3.long
+      t: 'Mastering animations, interactions, transitions, etc.'
+    - key: cssProficiency.4.short
+      t: Expert
+    - key: cssProficiency.4.long
+      t: 'Being able to style an entire front-end from scratch following a consistent methodology'
+
+    # backend proficiency
+    - key: block.title.backendProficiency
+      t: Back-end Proficiency
+    - key: block.description.backendProficiency
+      t: How proficient are you at back-end development?
+    - key: backendProficiency.axis_legend
+      t: Back-End Proficiency
+    - key: backendProficiency.0.short
+      t: None
+    - key: backendProficiency.0.long
+      t: 'Not able to handle any back-end work'
+    - key: backendProficiency.1.short
+      t: Beginner
+    - key: backendProficiency.1.long
+      t: 'Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+    - key: backendProficiency.2.short
+      t: Intermediate
+    - key: backendProficiency.2.long
+      t: 'Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)'
+    - key: backendProficiency.3.short
+      t: Advanced
+    - key: backendProficiency.3.long
+      t: 'Setting up an entire back-end from scratch (Go, Node, etc.)'
+    - key: backendProficiency.4.short
+      t: Expert
+    - key: backendProficiency.4.long
+      t: 'Able to handle complex multi-server or microservices architectures'
 
     # job title
-    - key: job-title.front_end_dev.short
+    - key: jobTitle.front_end_dev.short
       t: Front-end Developer
-    - key: job-title.front_end_dev.long
+    - key: jobTitle.front_end_dev.long
       t: Front-end Developer/Engineer
-    - key: job-title.full_stack_dev.short
+    - key: jobTitle.full_stack_dev.short
       t: Full-stack Developer
-    - key: job-title.full_stack_dev.long
+    - key: jobTitle.full_stack_dev.long
       t: Full-stack Developer/Engineer
-    - key: job-title.web_designer.short
+    - key: jobTitle.web_designer.short
       t: Web Designer
-    - key: job-title.web_designer.long
+    - key: jobTitle.web_designer.long
       t: Web Designer
-    - key: job-title.ux_designer.short
+    - key: jobTitle.ux_designer.short
       t: UX Designer
-    - key: job-title.ux_designer.long
+    - key: jobTitle.ux_designer.long
       t: UX Designer
-    - key: job-title.ui_designer.short
+    - key: jobTitle.ui_designer.short
       t: UI Designer
-    - key: job-title.ui_designer.long
+    - key: jobTitle.ui_designer.long
       t: UI Designer
-    - key: job-title.back_end_dev.short
+    - key: jobTitle.back_end_dev.short
       t: Back-end Developer
-    - key: job-title.back_end_dev.long
+    - key: jobTitle.back_end_dev.long
       t: Back-end Developer/Engineer
 
+    # gender
+    - key: block.title.gender
+      t: Gender
+    - key: block.description.gender
+      t: Respondents gender.
+    - key: gender.female.long
+      t: Female
+    - key: gender.male.long
+      t: Male
+    - key: gender.non_binary.long
+      t: Non-Binary/Third Gender
+    - key: gender.prefer_not_to_say.long
+      t: Prefer not to say
+
     # other
-    - key: block.title.participation-by-country
+    - key: block.title.country
       t: Participation by Country
-    - key: block.description.participation-by-country
+    - key: block.description.country
       t: Which proportion of survey respondents came from each country. 
     - key: block.title.salary
       t: Salary
@@ -252,18 +290,14 @@ translations:
     #   t: Average Salary per Country
     # - key: block.description.salary-per-country
     #   t: Average Salary per Country.
-    - key: block.title.years-of-experience
+    - key: block.title.workExperience
       t: Years of Experience
-    - key: block.description.years-of-experience
+    - key: block.description.workExperience
       t: How long you've been writing CSS.
-    - key: block.title.company-size
+    - key: block.title.companySize
       t: Company Size
-    # - key: block.description.company-size
-    #   t: Company size breakdown.
-    - key: block.title.gender
-      t: Gender
-    - key: block.description.gender
-      t: Respondents gender.
+    - key: block.description.companySize
+      t: Company size breakdown.
     - key: block.title.source
       t: Source
     - key: block.description.source
@@ -276,11 +310,9 @@ translations:
           **Announcement** corresponds to our official announcement post on [FreeCodeCamp](https://www.freecodecamp.org), 
           and **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
 
-    - key: block.description.gender
-      t: Gender breakdown.
-    - key: block.title.job-title
+    - key: block.title.jobTitle
       t: Job Title
-    - key: block.description.job-title
+    - key: block.description.jobTitle
       t: How do you introduce yourself at parties?
 
     ###########################################################################
@@ -304,15 +336,17 @@ translations:
       t: CanIUse
     - key: feature.specification_link
       t: W3C Specification
-    - key: features.usage.used_it
+    - key: featureExperienceSimplified.used_it.long
       t: Have used it
-    - key: features.usage.know_it
+    - key: featureExperienceSimplified.know_it.long
       t: Know about it
     - key: features.usage.ratio
       t: Usage Ratio
-    - key: features.usage.know_not_used
+    - key: featureExperience.used_it.long
+      t: Have used it
+    - key: featureExperience.know_not_used.long
       t: Know what it is, but haven't used it
-    - key: features.usage.never_heard_not_sure
+    - key: featureExperience.never_heard_not_sure.long
       t: Never heard of it/Not sure what it is
 
     - key: block.title.features-overview
@@ -488,47 +522,47 @@ translations:
     - key: quadrants.analyze
       t: Analyze
 
-    # opinions
-    - key: opinions.legends.never_heard
+    # experience
+    - key: toolExperience.never_heard.long
       t: I've never heard of it
-    - key: opinions.legends_short.never_heard
+    - key: toolExperience.never_heard.short
       t: Never heard of it
-    - key: opinions.legends_extrashort.never_heard
+    - key: toolExperience.never_heard.extrashort
       t: Never heard
 
-    - key: opinions.legends.not_interested
+    - key: toolExperience.not_interested.long
       t: I've HEARD of it, and am NOT interested
-    - key: opinions.legends_short.not_interested
+    - key: toolExperience.not_interested.short
       t: Heard of it, not interested
-    - key: opinions.legends_extrashort.not_interested
+    - key: toolExperience.not_interested.extrashort
       t: Not interested
 
-    - key: opinions.legends.interested
+    - key: toolExperience.interested.long
       t: I've HEARD of it, and WOULD like to learn it
-    - key: opinions.legends_short.interested
+    - key: toolExperience.interested.short
       t: Heard of it, would like to learn
-    - key: opinions.legends_extrashort.interested
+    - key: toolExperience.interested.extrashort
       t: Interested
 
-    - key: opinions.legends.would_use
+    - key: toolExperience.would_use.long
       t: I've USED it before, and WOULD use it again
-    - key: opinions.legends_short.would_use
+    - key: toolExperience.would_use.short
       t: Used it, would use again
-    - key: opinions.legends_extrashort.would_use
+    - key: toolExperience.would_use.extrashort
       t: Would use again
 
-    - key: opinions.legends.would_not_use
+    - key: toolExperience.would_not_use.long
       t: I've USED it before, and would NOT use it again
-    - key: opinions.legends_short.would_not_use
+    - key: toolExperience.would_not_use.short
       t: Used it, would not use again
-    - key: opinions.legends_extrashort.would_not_use
+    - key: toolExperience.would_not_use.extrashort
       t: Would not use
 
-    - key: opinions.legends.total_respondents
+    - key: toolExperience.total_respondents.long
       t: Total Respondents
-    - key: opinions.legends_short.total_respondents
+    - key: toolExperience.total_respondents.short
       t: Total Respondents
-    - key: opinions.legends_extrashort.total_respondents
+    - key: toolExperience.total_respondents.extrashort
       t: Total Respondents
 
     ###########################################################################
