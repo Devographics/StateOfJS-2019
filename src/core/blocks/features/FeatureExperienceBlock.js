@@ -52,7 +52,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     })
 
     return (
-        <Block title={name} units={units} setUnits={setUnits} data={buckets} block={{...block, title: name, description: parseMDNLinks(mdn.summary)}} showDescription={false}>
+        <Block title={name} units={units} setUnits={setUnits} data={buckets} block={{...block, title: name, description: mdn && parseMDNLinks(mdn.summary)}} showDescription={false}>
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
                     <ChartContainer height={40} fit={true} className="FeatureChart">

@@ -8,6 +8,8 @@ import GaugeBarBlock from 'core/blocks/generic/GaugeBarBlock'
 import TextBlock from 'core/blocks/other/TextBlock'
 import SponsoredResourcesBlock from 'core/blocks/other/SponsoredResourcesBlock'
 import PageIntroductionBlock from 'core/blocks/other/PageIntroductionBlock'
+import TshirtBlock from 'core/blocks/other/TshirtBlock'
+
 // import { HappinessTrendBlock } from 'modules/happiness'
 
 // demographics
@@ -47,6 +49,7 @@ const blockRegistry = {
     PageIntroductionBlock,
     TextBlock,
     SponsoredResourcesBlock,
+    TshirtBlock,
 
     // demographics
     ParticipationByCountryBlock,

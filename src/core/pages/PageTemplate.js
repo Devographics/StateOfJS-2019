@@ -9,14 +9,12 @@ const PageTemplate = ({ data = {}, pageContext = {} }) => {
     const context = usePageContext()
     const { pageData } = pageContext
 
-    // console.log(data, pageData, context)
-
     return (
         <>
             <PageHeader />
-            <div className="page-query">
+            {/* <div className="page-query">
                 <textarea value={pageContext.pageQuery} readOnly />
-            </div>
+            </div> */}
             {data.introduction && <TextBlock text={data.introduction.html} />}
             {context.blocks &&
                 context.blocks.map((block, i) => (

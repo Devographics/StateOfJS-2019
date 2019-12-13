@@ -23,6 +23,9 @@
 
 - id: tshirt
   path: /tshirt
+  blocks: 
+    - id: tshirt
+      blockType: TshirtBlock
 
 - id: demographics
   path: /demographics

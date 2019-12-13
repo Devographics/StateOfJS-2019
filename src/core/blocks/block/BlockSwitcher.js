@@ -8,14 +8,27 @@ import get from 'lodash/get'
 
 const BlockSwitcher = ({ pageData, block, index }) => {
     const { id, blockType } = block
-    if (!pageData || pageData === null || isEmpty(pageData)) {
-        throw new Error(`No available page data for block ${id} | type: ${blockType}`)
-    }
+    let blockData
     if (!blockRegistry[blockType]) {
-        throw new Error(`Missing Block Component! Block ID: ${id} | type: ${blockType}`)
+        return (
+            <BlockError
+                block={block}
+                message={`Missing Block Component! Block ID: ${id} | type: ${blockType}`}
+            />
+        )
     }
     const BlockComponent = blockRegistry[blockType]
-    const blockData = get(pageData, block.dataPath)
+    if (block.dataPath) {
+        blockData = get(pageData, block.dataPath)
+        if (!blockData || blockData === null || isEmpty(blockData)) {
+            return (
+                <BlockError
+                    block={block}
+                    message={`No available data for block ${id} | type: ${blockType}`}
+                />
+            )
+        }
+    }
     return <BlockComponent block={block} data={blockData} index={index} />
 }
 
@@ -29,17 +42,27 @@ class ErrorBoundary extends React.Component {
         const { error } = this.state
         if (error) {
             return (
-                <Block block={block}>
-                    <div className="error">{error.message}</div>
-                    <pre className="error error-data">
-                        <code>{JSON.stringify(get(pageData, block.dataPath), '', 2)}</code>
-                    </pre>
-                </Block>
+                <BlockError
+                    block={block}
+                    message={error.message}
+                    data={get(pageData, block.dataPath)}
+                />
             )
         }
         return this.props.children
     }
 }
+
+const BlockError = ({ message, data, block }) => (
+    <Block block={block}>
+        <div className="error">{message}</div>
+        {data && !isEmpty(data) && (
+            <pre className="error error-data">
+                <code>{JSON.stringify(data, '', 2)}</code>
+            </pre>
+        )}
+    </Block>
+)
 
 const BlockSwitcherWithBoundary = props => (
     <ErrorBoundary {...props}>
