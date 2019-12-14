@@ -6,8 +6,9 @@ import GaugeBarBlock from 'core/blocks/generic/GaugeBarBlock'
 
 // other
 import TextBlock from 'core/blocks/other/TextBlock'
-import SponsoredResourcesBlock from 'core/blocks/other/SponsoredResourcesBlock'
+import RecommendedResourcesBlock from 'core/blocks/other/RecommendedResourcesBlock'
 import PageIntroductionBlock from 'core/blocks/other/PageIntroductionBlock'
+import SurveyIntroBlock from 'core/blocks/other/SurveyIntroBlock'
 import TshirtBlock from 'core/blocks/other/TshirtBlock'
 
 // import { HappinessTrendBlock } from 'modules/happiness'
@@ -48,8 +49,9 @@ const blockRegistry = {
     // other
     PageIntroductionBlock,
     TextBlock,
-    SponsoredResourcesBlock,
+    RecommendedResourcesBlock,
     TshirtBlock,
+    SurveyIntroBlock,
 
     // demographics
     ParticipationByCountryBlock,

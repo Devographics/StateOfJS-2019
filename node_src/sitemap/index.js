@@ -31,6 +31,7 @@ const applyTemplate = (config, templateName, rawTemplates, parent) => {
     // defines all available variables to be injected
     // at build time in the GraphQL queries
     const variables = {
+        ...(templateObject.defaultVariables || {}),
         ...globalVariables,
         id: config.id,
         ...(config.variables || {})

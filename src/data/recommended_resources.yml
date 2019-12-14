@@ -1,0 +1,83 @@
+- name: Learn the Fundamentals of TypeScript 3 to Add Type Checking to Your JavaScript
+  id: typescript-v2
+  description: TypeScript adds a powerful type system on top of your JavaScript to catch bugs before they happen and provides a superior developer experience for collaborative teams.
+  url: https://frontendmasters.com/courses/typescript-v2/
+  image: https://static.frontendmasters.com/assets/courses/2019-03-26-typescript-v2/thumb.jpg
+
+- name: Learn the Elm 0.19 Programming Language to Build Error-Free Apps
+  id: intro-elm
+  description: Learn how to write applications with the Elm, the functional programming language, from the ground up!
+  url: https://frontendmasters.com/courses/intro-elm/
+  image: https://static.frontendmasters.com/assets/courses/2018-10-17-intro-elm/thumb.jpg
+
+- name: Learn React Using Hooks to Build Real-World Applications with Brian Holt
+  id: complete-react-v5
+  description: Much more than an intro, you’ll build with the latest features in React, including hooks, effects, context, and portals. Learn to build real-world apps from the ground up using the latest tools in the React ecosystem, like Parcel, ESLint, Prettier, and Reach Router!
+  url: https://frontendmasters.com/courses/complete-react-v5/
+  image: https://static.frontendmasters.com/assets/courses/2019-06-04-complete-react-v5/thumb.jpg
+
+- name: Introduction to Vue.js with Sarah Drasner
+  id: vue
+  description: Vue.js brings together the best features of the javascript framework landscape elegantly. Build complex and maintainable applications faster!
+  url: https://frontendmasters.com/courses/vue/
+  image: https://static.frontendmasters.com/assets/courses/2017-09-14-vue/thumb.jpg
+
+- name: Learn Angular 7.x+ and Angular CLI to building robust web applications
+  id: angular-core
+  description: Use the Angular CLI to quickstart our app and then build components, templates, routes, forms, and use ajax in Angular.
+  url: https://frontendmasters.com/courses/angular-core/
+  image: https://static.frontendmasters.com/assets/courses/2018-12-21-angular-core/thumb.jpg
+
+- name: Learn Ember Octane for Building Performant Web Apps and PWAs Using Ember
+  id: ember-octane
+  description: Use glimmer components, tracked properties, actions, modifiers and learn everything you need to know to build performant, production-ready Ember apps and PWAs with Ember Octane!
+  url: https://frontendmasters.com/courses/ember-octane/
+  image: https://static.frontendmasters.com/assets/courses/2019-07-02-ember-octane/thumb.jpg
+
+- name: Learn Redux and MobX for Managing State in Large React Applications
+  id: redux-mobx
+  description: Learn best practices for structuring your data. You&#39;ll get your hands on multiple solutions for managing state including Redux, Redux Thunk, Redux Observables and MobX.
+  url: https://frontendmasters.com/courses/redux-mobx/
+  image: https://static.frontendmasters.com/assets/courses/2019-07-23-redux-mobx/thumb.jpg
+
+- name: ⚛️ Learn to connect GraphQL to React using Apollo Client and React hooks!
+  id: client-graphql-react
+  description: Use queries and mutations to interact with GraphQL APIs on the client using Apollo Client and React hooks. You’ll understand variables and inputs to aliases on fields.
+  url: https://frontendmasters.com/courses/client-graphql-react/
+  image: https://static.frontendmasters.com/assets/courses/2019-12-03-client-graphql-react/thumb.jpg
+
+- name: 📡 Learn to create GraphQL APIs on the server in Node.js with Apollo Server with Scott Moss.
+  id: server-graphql-nodejs
+  description: Create a GraphQL schema which includes type definitions, queries, and mutations. Then create resolvers to return the data, and move onto advanced features like interfaces and unions, and creating relationships in your resolvers.
+  url: https://frontendmasters.com/courses/server-graphql-nodejs/
+  image: https://static.frontendmasters.com/assets/courses/2019-11-25-server-graphql-nodejs/thumb.jpg
+
+- name: Learn to Build APIs in Node.js – Model data and REST APIs with Express and MongoDB
+  id: api-design-nodejs-v3
+  description: Use Express to build a REST API in Node.js – handle REST API verb methods to create, read, update and delete resources from a MongoDB database.
+  url: https://frontendmasters.com/courses/api-design-nodejs-v3/
+  image: https://static.frontendmasters.com/assets/courses/2019-01-18-api-design-nodejs-v3/thumb.jpg
+
+- name: Learn Gatsby for building blazingly fast apps and websites in React course by Jason Lengstorf
+  id: gatsby
+  description: Starting from scratch, you’ll learn to build a full blog app. Use GraphQL in Gatsby for storing and retrieving data, create pages and posts with MDX, optimize your images automatically with the gatsby-image, and load 3rd party data from instagram to display in components. Then deploy your brand new blog website to Netlify for the world to see!
+  url: https://frontendmasters.com/courses/gatsby/
+  image: https://static.frontendmasters.com/assets/courses/2019-06-13-gatsby/thumb.jpg
+
+- name: Learn to Build Scalable, Performant React Apps with TypeScript, Redux and more, with Brian Holt
+  id: intermediate-react-v2
+  description: Build scalable React applications using the tools and techniques available in the React ecosystem. You’ll learn hooks in-depth, CSS-in-JS with emotion, increase performance with code splitting and server-side rendering, add TypeScript, test your app with Jest …and more!
+  url: https://frontendmasters.com/courses/intermediate-react-v2/
+  image: https://static.frontendmasters.com/assets/courses/2019-06-11-intermediate-react-v2/thumb.jpg
+
+- name: Learn to Test React Applications with Jest, react-testing-library and Cypress
+  id: testing-react
+  description: Fix errors before your app reaches the end user by writing maintainable unit test &amp; integration tests for your React applications!
+  url: https://frontendmasters.com/courses/testing-react/
+  image: https://static.frontendmasters.com/assets/courses/2018-05-13-testing-react/thumb.jpg
+
+- name: Learn Electron for Building Native macOS, Windows &amp; Linux Desktop Applications
+  id: electron-v2
+  description: Use Electron to build native, cross-platform desktop applications using web technologies (e.g. HTML, CSS, and JavaScript).
+  url: https://frontendmasters.com/courses/electron-v2/
+  image: https://static.frontendmasters.com/assets/courses/2019-02-18-electron-v2/thumb.jpg

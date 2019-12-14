@@ -4,6 +4,7 @@
 #
 ###############################################################################
 
+
 pageIntroductionTemplate:
     blockType: PageIntroductionBlock
     dataPath: '${pageId}_introduction.html'
@@ -17,6 +18,29 @@ pageIntroductionTemplate:
         ) {
             html
         }
+
+recommendedResourcesTemplate:
+    blockName: recommendedResources
+    blockType: RecommendedResourcesBlock
+    showDescription: false
+
+    #  note: query does not currently work because sponsor values would need to be
+    #  wrapped in quotes
+
+    # dataPath: 'resources.edges'
+    # query: >
+    #     resources: allRecommendedResourcesYaml(filter: {id: {in: [${sponsors}]}}) {
+    #         edges {
+    #             node {
+    #                 name
+    #                 url
+    #                 image
+    #                 id
+    #                 description
+    #             }
+    #         }
+    #     }
+
 
 ###############################################################################
 #
@@ -238,7 +262,7 @@ toolHeaderTemplate:
 
 toolExperienceTemplate:
     blockType: ToolExperienceBlock
-    dataPath: surveyApi.survey.tool.experience.allYears
+    dataPath: surveyApi.survey.tool
     bucketKeysName: toolExperience
     showLegend: true
     query: >

@@ -5,6 +5,7 @@
 # - children: the page's children pages
 # - blocks: the page's blocks
 # - pageTemplate: a template from which to inherit its properties
+# - defaultVariables: default values for variables
 
 # Block Properties
 # - id: the unique (survey-wide) ID of the block
@@ -20,16 +21,30 @@
 
 - id: introduction
   path: /
+  blocks: 
+    - id: survey-intro
+      variables:
+        pageId: ${id}
+      template: pageIntroductionTemplate
+      blockType: SurveyIntroBlock
 
 - id: tshirt
   path: /tshirt
   blocks: 
-    - id: tshirt
+    - id: tshirt-intro
+      template: pageIntroductionTemplate
+      variables:
+        pageId: ${id}
+    - id: tshirt-block
       blockType: TshirtBlock
 
 - id: demographics
   path: /demographics
   blocks:
+      - id: demographics-intro
+        template: pageIntroductionTemplate
+        variables:
+          pageId: ${id}
       - id: country
         template: demographicsTemplate
         blockType: ParticipationByCountryBlock
@@ -56,7 +71,7 @@
         showLegend: true
         template: demographicsTemplate
       - id: resources-sponsors
-        blockType: SponsoredResourcesBlock
+        blockType: RecommendedResourcesBlock
         items:
             - frontendmasters-design
 
@@ -218,12 +233,18 @@
   children:
       - id: typescript
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - typescript-v2
 
       - id: reason
         template: toolPageTemplate
 
       - id: elm
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - intro-elm
 
       - id: clojurescript
         template: toolPageTemplate
@@ -239,14 +260,26 @@
   children:
       - id: react
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - complete-react-v5
       - id: vuejs
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - vue
       - id: angular
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - angular-core
       - id: preact
         template: toolPageTemplate
       - id: ember
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - ember-octane
       - id: svelte
         template: toolPageTemplate
       # - id: frontend-other
@@ -262,14 +295,26 @@
   children:
       - id: redux
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - intermediate-react-v2
       - id: apollo
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - client-graphql-react
       - id: graphql
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - server-graphql-nodejs
       - id: relay
         template: toolPageTemplate
       - id: mobx
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - redux-mobx
       # - id: datalayer-other
       #   template: toolOtherTemplate
       # - id: datalayer-conclusion
@@ -283,6 +328,9 @@
   children:
       - id: express
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - api-design-nodejs-v3
       - id: nextjs
         template: toolPageTemplate
       - id: koa
@@ -297,6 +345,9 @@
         template: toolPageTemplate
       - id: gatsby
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - gatsby
       # - id: backend-other
       #   template: toolOtherTemplate
       # - id: backend-conclusion
@@ -310,12 +361,18 @@
   children:
       - id: jest
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - testing-react
       - id: mocha
         template: toolPageTemplate
       - id: storybook
         template: toolPageTemplate
       - id: cypress
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - testing-react
       - id: enzyme
         template: toolPageTemplate
       - id: ava
@@ -337,6 +394,9 @@
   children:
       - id: electron
         template: toolPageTemplate
+        variables:
+          sponsors: 
+            - electron-v2
       - id: react-native
         template: toolPageTemplate
       - id: native-apps
@@ -357,6 +417,10 @@
 - id: other_tools
   path: /other-tools
   blocks:
+      - id: other-tools-intro
+        template: pageIntroductionTemplate
+        variables:
+          pageId: ${id}
       - id: utilities
         template: otherToolsTemplate
       - id: utilities_others
@@ -391,6 +455,10 @@
 - id: resources
   path: /resources
   blocks:
+      - id: resources-introduction
+        template: pageIntroductionTemplate
+        variables:
+            pageId: '${id}'
       - id: blogs_magazines
         template: resourcesTemplate
       - id: blogs_magazines_others
@@ -410,7 +478,7 @@
         mode: relative
         units: count
       - id: resources-sponsors
-        blockType: SponsoredResourcesBlock
+        blockType: RecommendedResourcesBlock
         items:
             - storybook1
 
@@ -446,6 +514,10 @@
 - id: awards
   path: /awards
   blocks:
+      - id: awards-intro
+        template: pageIntroductionTemplate
+        variables:
+          pageId: ${id}
       - id: feature_adoption
         blockType: AwardBlock
       - id: tool_usage
@@ -468,6 +540,6 @@
 #   blockType: page
 #   is_hidden: true
 
-- id: notfound
-  path: /404
-  is_hidden: true
+# - id: notfound
+#   path: /404
+#   is_hidden: true

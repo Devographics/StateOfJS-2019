@@ -9,7 +9,7 @@ const filteredNav = sitemap.filter(page => !page.is_hidden)
 
 const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
     const isActive = currentPath.indexOf(page.path) !== -1
-    const hasChildren = page.children.length > 0
+    const hasChildren = page.children && page.children.length > 0
     const displayChildren = hasChildren > 0 && isActive
 
     return (

@@ -13,7 +13,7 @@ import BlockCompletionIndicator from 'core/blocks/block/BlockCompletionIndicator
 import last from 'lodash/last'
 
 const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits, data, block }) => {
-    const { id, blockName } = block
+    const { id, blockName, showDescription = true } = block
     const completion = data && (Array.isArray(data) ? last(data).completion : data.completion)
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
@@ -83,7 +83,7 @@ const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits,
                     )}
                 </div>
             </div>
-            {blockDescription && (
+            {showDescription && blockDescription && (
                 <div className="Block__Description">
                     <ReactMarkdown source={blockDescription} escapeHtml={false} />
                 </div>

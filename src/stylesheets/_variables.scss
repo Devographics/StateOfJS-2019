@@ -1,7 +1,7 @@
 $spacing: 20px;
 
-$antsBg: $navyLight;
-$antsFg: $pink;
+$antsBg: $bg-color;
+$antsFg: $hover-color;
 
 @mixin flex-center {
     display: flex;

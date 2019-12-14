@@ -6,8 +6,13 @@
 
 featuresPageTemplate:
     blocks:
-        - id: featuresOverview
+        - id: features-introduction
+          template: pageIntroductionTemplate
+          variables:
+              pageId: '${id}'
+        - id: ${id}-featuresOverview
           template: featuresOverviewTemplate
+          blockName: featuresOverview
 
 ###############################################################################
 #
@@ -75,13 +80,15 @@ toolSectionTemplate:
 
         - id: '${id}_recommended_resources'
           blockName: recommendedResources
-          blockType: SponsoredResourcesBlock
+          blockType: RecommendedResourcesBlock
           showDescription: false
           items:
               - frontendmasters-sass
 
 # Tool (/front-end/react, /front-end/angular, etc.)
 toolPageTemplate:
+    defaultVariables:
+      sponsors: []
     blocks:
         - id: ${id}-header
           variables:
@@ -93,3 +100,7 @@ toolPageTemplate:
               toolId: '${id}'
           template: toolExperienceTemplate
           bucketKeysName: toolExperience
+        - id: '${id}_recommended_resources'
+          template: recommendedResourcesTemplate
+          variables: 
+            sponsors: ${sponsors}

@@ -15,14 +15,15 @@ const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }
     const { translate } = useI18n()
     const name = get(data, 'entity.name')
     const bucketKeys = keys[bucketKeysName]
-    const title = translate(`block.title.${blockName}`, { name })
-    const description = translate(`block.description.${blockName}`, { name })
+    const title = translate(`block.title.${blockName}`, { values: { name } })
+    const description = translate(`block.description.${blockName}`, { values: { name } })
+    const chartData = get(data, 'experience.allYears')
     return (
         <Block
             units={units}
             setUnits={setUnits}
-            block={{...block, title, description}}
-            data={data}
+            block={{ ...block, title, description }}
+            data={chartData}
             legendProps={{
                 onMouseEnter: ({ id }) => {
                     setCurrent(id)
@@ -37,7 +38,7 @@ const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }
                 <StreamChart
                     colorScale={toolExperience.map(i => i.color)}
                     current={current}
-                    data={data}
+                    data={chartData}
                     keys={bucketKeys.map(k => k.id)}
                     units={units}
                     applyEmptyPatternTo="never_heard"

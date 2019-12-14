@@ -3,6 +3,7 @@ import { usePageContext } from '../helpers/pageContext'
 import { useI18n } from '../i18n/i18nContext'
 import PageLabel from './PageLabel'
 import { Link } from 'gatsby'
+import isEmpty from 'lodash/isEmpty'
 
 const PageFooter = () => {
     const context = usePageContext()
@@ -10,7 +11,7 @@ const PageFooter = () => {
 
     return (
         <div className="PageFooter">
-            {context.previous && (
+            {context.previous && !isEmpty(context.previous) && (
                 <Link
                     className="PageFooter__Link PageFooter__Link--previous"
                     to={`${context.localePath}${context.previous.path}`}
@@ -18,7 +19,7 @@ const PageFooter = () => {
                     « {translate('general.previous')} <PageLabel page={context.previous} />
                 </Link>
             )}
-            {context.next && (
+            {context.next && !isEmpty(context.next) && (
                 <Link
                     className="PageFooter__Link PageFooter__Link--next Button"
                     to={`${context.localePath}${context.next.path}`}

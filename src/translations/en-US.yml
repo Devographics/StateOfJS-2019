@@ -876,6 +876,15 @@ translations:
     # export
     - key: export.export
       t: Export
+    - key: export.title
+      t: Export data for ${title}
+    - key: export.nocsv
+      t: Sorry, CSV export is not available for this dataset.
+    - key: export.graphql
+      t: >
+        While our internal GraphQL API is not currently public, in the future we are planning 
+        on exposing it to make querying our data easier. If you'd like to hear more, you can 
+        <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
     
       # opinion scale
     - key: opinions.0.long

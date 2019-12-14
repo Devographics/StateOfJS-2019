@@ -3,7 +3,7 @@
 }
 
 .Tshirt {
-    border: 1px solid $border-color;
+    border: 1px solid $dark-border-color;
     @include medium-large {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -13,10 +13,10 @@
 
 .Tshirt__Images {
     @include small {
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $dark-border-color;
     }
     @include medium-large {
-        border-right: 1px solid $border-color;
+        border-right: 1px solid $dark-border-color;
     }
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,12 +29,12 @@
     }
 }
 .Tshirt__Image0 {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $dark-border-color;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 .Tshirt__Image1 {
-    border-right: 1px solid $border-color;
+    border-right: 1px solid $dark-border-color;
 }
 
 .Tshirt__Description {

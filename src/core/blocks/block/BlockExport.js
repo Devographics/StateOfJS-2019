@@ -48,6 +48,7 @@ const ExportIcon = () => (
 
 const BlockExport = ({ data, block, title }) => {
     const [modalIsOpen, setIsOpen] = useState(false)
+    const { translate } = useI18n()
 
     const { id, query } = block
 
@@ -79,8 +80,6 @@ const BlockExport = ({ data, block, title }) => {
 ${trimmedQuery}
 }`
 
-    const { translate } = useI18n()
-
     return (
         <div>
             <div className="export">
@@ -103,7 +102,7 @@ ${trimmedQuery}
                 contentLabel="Example Modal"
             >
                 <div className="Export__Modal">
-                    <h3>Export data for {title}</h3>
+                    <h3>{translate('export.title', { title })}</h3>
                     <Tabs>
                         <TabList>
                             <Tab>JSON</Tab>
@@ -117,11 +116,12 @@ ${trimmedQuery}
                             {hasCSV ? (
                                 <textarea className="Export__Textarea" value={csvExport} readOnly />
                             ) : (
-                                <p>Sorry, CSV export is not available for this dataset.</p>
+                            <div className="Export__Message Export__NoCSVMessage">{translate('export.nocsv')}</div>
                             )}
                         </TabPanel>
                         <TabPanel>
                             <textarea className="Export__Textarea" value={graphQLExport} readOnly />
+                            <div className="Export__Message Export__GraphQLMessage">{translate('export.nocsv')}</div>
                         </TabPanel>
                     </Tabs>
                 </div>

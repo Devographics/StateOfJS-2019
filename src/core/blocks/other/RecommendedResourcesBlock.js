@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
 import { Link } from 'gatsby'
-import resources from 'data/sponsoredlinks.yaml'
+import resources from 'data/recommended_resources.yml'
 import BlockTitle from 'core/blocks/block/BlockTitle'
 import { useI18n } from 'core/i18n/i18nContext'
 
@@ -14,10 +14,15 @@ const trackClick = (id, resource, label) => {
     })
 }
 
-const SponsoredResourcesBlock = ({ block }) => {
+const RecommendedResourcesBlock = ({ block, data }) => {
+
+    const sponsorsIds = Array.isArray(block.variables.sponsors)
+        ? block.variables.sponsors
+        : [block.variables.sponsors]
+
     const { translate } = useI18n()
     const { id } = block
-    const sectionResources = resources.filter(r => block.items.includes(r.id))
+    const sectionResources = resources.filter(r => sponsorsIds.includes(r.id))
 
     if (!sectionResources.length) {
         return null
@@ -26,7 +31,7 @@ const SponsoredResourcesBlock = ({ block }) => {
     return (
         <div className="block block--resources">
             <div className="resources">
-                <BlockTitle block={block} isShareable={false} />
+                <BlockTitle block={{ ...block, showDescription: false }} isShareable={false} />
                 <div className="resources-list">
                     {sectionResources.map(resource => {
                         const url = resource.url.includes('utm_source')
@@ -42,7 +47,7 @@ const SponsoredResourcesBlock = ({ block }) => {
                                             onClick={() => trackClick(id, resource, 'text')}
                                             href={`${url}&utm_content=textlink`}
                                             style={{
-                                                backgroundImage: `url(/images/resources/${resource.image})`
+                                                backgroundImage: `url(${resource.image})`
                                             }}
                                             title={resource.name}
                                         />
@@ -77,8 +82,8 @@ const SponsoredResourcesBlock = ({ block }) => {
     )
 }
 
-SponsoredResourcesBlock.propTypes = {
+RecommendedResourcesBlock.propTypes = {
     section: PropTypes.string
 }
 
-export default SponsoredResourcesBlock
+export default RecommendedResourcesBlock
