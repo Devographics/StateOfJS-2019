@@ -7,6 +7,7 @@ import StreamChart from 'core/charts/generic/StreamChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { keys, toolExperience } from 'core/constants.js'
 import get from 'lodash/get'
+import isEmpty from 'lodash/isEmpty'
 
 const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const { id, bucketKeysName = id, blockName } = block
@@ -18,6 +19,9 @@ const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }
     const title = translate(`block.title.${blockName}`, { values: { name } })
     const description = translate(`block.description.${blockName}`, { values: { name } })
     const chartData = get(data, 'experience.allYears')
+    if (!chartData || isEmpty(chartData)) {
+        return <div>no data</div>
+    }
     return (
         <Block
             units={units}
