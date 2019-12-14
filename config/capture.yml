@@ -1,3 +1,3 @@
 baseUrl:    http://localhost:8000
-outputDir:  static/images/captures
-sitemap:    config/sitemap.yml
+outputDir:  ../static/images/captures
+sitemap:    sitemap.yml

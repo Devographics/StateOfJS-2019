@@ -84,15 +84,17 @@ const BlockTitle = ({
                     )}
                 </div>
                 <div className="Block__Title__Right">
-                    {switcher
-                        ? switcher
-                        : units &&
-                          setUnits && (
-                              <div className="Block__Title__ChartControls ChartControls">
-                                  {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
-                                  <BlockUnitsSelector units={units} onChange={setUnits} />
-                              </div>
-                          )}
+                    {switcher ? (
+                        <div className="Block__Title__ChartControls ChartControls">{switcher}</div>
+                    ) : (
+                        units &&
+                        setUnits && (
+                            <div className="Block__Title__ChartControls ChartControls">
+                                {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
+                                <BlockUnitsSelector units={units} onChange={setUnits} />
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
             {showDescription && blockDescription && (

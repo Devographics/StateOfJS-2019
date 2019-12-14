@@ -207,7 +207,11 @@ $smallShareItemOffset: 150%;
         stroke: $pink;
     }
 }
-
+.export{
+    .capture & {
+        display: none;
+    }
+}
 .Export__Modal{
     padding: $spacing;
     background: $bg-color-light;

@@ -206,16 +206,16 @@ When GitHub API rate limits are hit, GraphQL API will break
 unless default values are provided.
 
 */
-const defaultGitHubObject = {
-    name: '',
-    full_name: '',
-    description: '',
-    url: '',
-    stars: -99,
-    forks: -99,
-    opened_issues: -99,
-    homepage: ''
-}
+// const defaultGitHubObject = {
+//     name: '',
+//     full_name: '',
+//     description: '',
+//     url: '',
+//     stars: -99,
+//     forks: -99,
+//     opened_issues: -99,
+//     homepage: ''
+// }
 
 // exports.onCreateNode = async ({ node, actions }) => {
 //     const { createNodeField } = actions

@@ -101,6 +101,13 @@ toolPageTemplate:
               toolId: '${id}'
           template: toolExperienceTemplate
           bucketKeysName: toolExperience
+        # - id: '${id}-related-tools-heatmap'
+        #   blockName: relatedTools
+        #   template: heatmapTemplate
+        #   variables:
+        #       heatmapId: 'relatedTools'
+        #       pageId: '${id}'
+        #       toolIds: ${toolIds}
         - id: '${id}_recommended_resources'
           template: recommendedResourcesTemplate
           variables: 
