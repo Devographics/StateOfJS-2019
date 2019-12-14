@@ -13,7 +13,7 @@ const ToolHeaderBlock = ({ block, data }) => {
     const toolId = get(block, 'variables.toolId')
     const toolName = get(data, 'entity.name')
     const homepageLink = get(data, 'entity.homepage')
-    // const description = get(data, 'entity.description')
+    const description = get(data, 'entity.description')
     const githubLink = get(data, 'entity.github.url')
     const stars = get(data, 'entity.github.stars')
     // const npmLink = get(data, 'entity.npm')
@@ -35,12 +35,12 @@ const ToolHeaderBlock = ({ block, data }) => {
                     <h2 className="ToolHeader__Title">{toolName}</h2>
                     {stars && (
                         <div className="ToolHeader__Stars">
-                            {starsFormatter(stars)} {translate('github_stars')}
+                            {starsFormatter(stars)} {translate('block.tool.github_stars')}
                         </div>
                     )}
                 </div>
                 <Fragment>
-                    <div>{translate(toolName)}</div>
+                    <div>{description}</div>
                     <div className="ToolHeader__Links">
                         {homepageLink && (
                             <a
@@ -49,7 +49,7 @@ const ToolHeaderBlock = ({ block, data }) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {translate('tool_homepage')}
+                                {translate('block.tool.homepage_link')}
                             </a>
                         )}
                         {githubLink && (

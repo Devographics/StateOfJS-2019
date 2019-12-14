@@ -12,7 +12,16 @@ import BlockUnitsSelector from 'core/blocks/block/BlockUnitsSelector'
 import BlockCompletionIndicator from 'core/blocks/block/BlockCompletionIndicator'
 import last from 'lodash/last'
 
-const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits, data, block }) => {
+const BlockTitle = ({
+    isShareable,
+    isExportable = true,
+    values,
+    units,
+    setUnits,
+    data,
+    block,
+    switcher
+}) => {
     const { id, blockName, showDescription = true } = block
     const completion = data && (Array.isArray(data) ? last(data).completion : data.completion)
     const [showOptions, setShowOptions] = useState(false)
@@ -75,12 +84,15 @@ const BlockTitle = ({ isShareable, isExportable = true, values, units, setUnits,
                     )}
                 </div>
                 <div className="Block__Title__Right">
-                    {units && setUnits && (
-                        <div className="Block__Title__ChartControls ChartControls">
-                            {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
-                            <BlockUnitsSelector units={units} onChange={setUnits} />
-                        </div>
-                    )}
+                    {switcher
+                        ? switcher
+                        : units &&
+                          setUnits && (
+                              <div className="Block__Title__ChartControls ChartControls">
+                                  {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
+                                  <BlockUnitsSelector units={units} onChange={setUnits} />
+                              </div>
+                          )}
                 </div>
             </div>
             {showDescription && blockDescription && (

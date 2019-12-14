@@ -6,8 +6,8 @@ locale: en-US
 
 ## Support the survey and look good in the process!
 
-A quick announcement before the survey results. This year we're trying something new to finance our efforts: we're releasing our very own **🎈🎉👕 State of CSS T-shirt 👕🎉🎈**!
+This year we're trying something new to finance our efforts: we're releasing our very own **🎈🎉👕 State of JavaScript T-shirt 👕🎉🎈**!
 
-What makes this shirt truly special is that it's the only piece of clothing that also **teaches you practical, real-world CSS techniques**.
+The shirt features a ”periodic table of JavaScript” that lists the most popular libraries grouped by category, along with their GitHub stars counts (in thousands).
 
-So whether you're going to a conference, a job interview, or just work, this shirt will demonstrate your CSS mastery like no other garment can!
+So whether you're going to a conference, a job interview, or just work, this shirt is a great way to strike up conversation with other like-minded JavaScript developers!

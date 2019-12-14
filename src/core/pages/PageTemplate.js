@@ -7,14 +7,14 @@ import BlockSwitcher from 'core/blocks/block/BlockSwitcher'
 
 const PageTemplate = ({ data = {}, pageContext = {} }) => {
     const context = usePageContext()
-    const { pageData } = pageContext
+    const { pageData, showTitle = true } = pageContext
 
     return (
         <>
-            <PageHeader />
-            {/* <div className="page-query">
+            {showTitle && <PageHeader />}
+            <div className="page-query">
                 <textarea value={pageContext.pageQuery} readOnly />
-            </div> */}
+            </div>
             {data.introduction && <TextBlock text={data.introduction.html} />}
             {context.blocks &&
                 context.blocks.map((block, i) => (

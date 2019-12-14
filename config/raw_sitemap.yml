@@ -6,6 +6,7 @@
 # - blocks: the page's blocks
 # - pageTemplate: a template from which to inherit its properties
 # - defaultVariables: default values for variables
+# - showTitle: whether to show the page title or not
 
 # Block Properties
 # - id: the unique (survey-wide) ID of the block
@@ -21,6 +22,7 @@
 
 - id: introduction
   path: /
+  showTitle: false
   blocks: 
     - id: survey-intro
       variables:
@@ -29,6 +31,7 @@
       blockType: SurveyIntroBlock
 
 - id: tshirt
+  showTitle: false
   path: /tshirt
   blocks: 
     - id: tshirt-intro
@@ -93,10 +96,10 @@
               variables:
                   pageId: '${id}'
 
-            - id: syntax_overview
-              template: featuresCategoryOverviewTemplate
-              variables:
-                  featureIds: ${featuresCategories.syntax}
+            # - id: syntax_overview
+            #   template: featuresCategoryOverviewTemplate
+            #   variables:
+            #       featureIds: ${featuresCategories.syntax}
 
             - id: destructuring
               template: featureExperienceTemplate
@@ -115,10 +118,10 @@
               variables:
                   pageId: '${id}'
 
-            - id: language_overview
-              template: featuresCategoryOverviewTemplate
-              variables:
-                  featureIds: ${featuresCategories.language}
+            # - id: language_overview
+            #   template: featuresCategoryOverviewTemplate
+            #   variables:
+            #       featureIds: ${featuresCategories.language}
 
             - id: proxies
               template: featureExperienceTemplate
@@ -140,10 +143,10 @@
               variables:
                   pageId: '${id}'
 
-            - id: data_structures_overview
-              template: featuresCategoryOverviewTemplate
-              variables:
-                  featureIds: ${featuresCategories.data_structures}
+            # - id: data_structures_overview
+            #   template: featuresCategoryOverviewTemplate
+            #   variables:
+            #       featureIds: ${featuresCategories.data_structures}
 
             - id: maps
               template: featureExperienceTemplate
@@ -165,10 +168,10 @@
               variables:
                   pageId: '${id}'
 
-            - id: browser_apis_overview
-              template: featuresCategoryOverviewTemplate
-              variables:
-                  featureIds: ${featuresCategories.browser_apis}
+            # - id: browser_apis_overview
+            #   template: featuresCategoryOverviewTemplate
+            #   variables:
+            #       featureIds: ${featuresCategories.browser_apis}
 
             - id: fetch
               template: featureExperienceTemplate
@@ -209,15 +212,15 @@
       - id: other_features
         path: /other-features
         blocks:
-            - id: features_other_features
+            - id: other_features
               template: pageIntroductionTemplate
               variables:
                   pageId: '${id}'
 
-            - id: other_features_overview
-              template: featuresCategoryOverviewTemplate
-              variables:
-                  featureIds: ${featuresCategories.other_features}
+            # - id: other_features_overview
+            #   template: featuresCategoryOverviewTemplate
+            #   variables:
+            #       featureIds: ${featuresCategories.other_features}
 
             - id: pwa
               template: featureExperienceTemplate
@@ -455,7 +458,7 @@
 - id: resources
   path: /resources
   blocks:
-      - id: resources-introduction
+      - id: resources_introduction
         template: pageIntroductionTemplate
         variables:
             pageId: '${id}'

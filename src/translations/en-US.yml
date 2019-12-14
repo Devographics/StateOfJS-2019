@@ -9,13 +9,9 @@ translations:
       t: About the T-shirt
     - key: tshirt.description
       t: >
-          The shirt features the State of CSS logo along with snippets of the actual CSS
-          code used to create each shape. Who knows, you might learn a thing or two!
+          The shirt features a ”periodic table of JavaScript” that lists the most popular
+          libraries grouped by category, along with their GitHub stars counts (in thousands).
 
-
-          We use a high-quality, super-soft tri-blend shirt with a slim fit. This shirt
-          sizes small, so if you prefer a looser fit **we recommend ordering one size up from what you
-          usually wear** (I'm wearing an M in the photos).
     - key: tshirt.getit
       t: Get It
     - key: tshirt.price
@@ -394,6 +390,8 @@ translations:
       t: Links
     - key: block.tool.github_link
       t: GitHub
+    - key: block.tool.github_stars
+      t: stars
     - key: block.tool.homepage_link
       t: Homepage
     - key: block.tool.npm_link
@@ -541,7 +539,7 @@ translations:
       t: Which utility libraries do you regularly use?
     - key: block.title.utilities_others
       t: Other Utilities
-    - key: block.title.utilities_others
+    - key: block.description.utilities_others
       t: Other utilities (freeform field).
 
     - key: block.title.text_editors

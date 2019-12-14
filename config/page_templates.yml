@@ -87,6 +87,7 @@ toolSectionTemplate:
 
 # Tool (/front-end/react, /front-end/angular, etc.)
 toolPageTemplate:
+    showTitle: false
     defaultVariables:
       sponsors: []
     blocks:

@@ -5,6 +5,26 @@ import ChartContainer from 'core/charts/ChartContainer'
 import ToolsExperienceRankingChart from 'core/charts/tools/ToolsExperienceRankingChart'
 import { useI18n } from 'core/i18n/i18nContext'
 
+const Switcher = ({ setMetric, metric }) => {
+    const { translate } = useI18n()
+    return (
+        <div className="ChartUnitsSelector">
+            <span className="ButtonGroup">
+                {['satisfaction', 'interest', 'awareness'].map(key => (
+                    <span
+                        key={key}
+                        className={`Button Button--small Button--${
+                            metric === key ? 'active' : 'disabled'
+                        }`}
+                        onClick={() => setMetric(key)}
+                    >
+                        {translate(`opinions.legends.${key}_ratio`)}
+                    </span>
+                ))}
+            </span>
+        </div>
+    )
+}
 const ToolsExperienceRankingBlock = ({ block, data }) => {
     const { translate } = useI18n()
     const [metric, setMetric] = useState('satisfaction')
@@ -28,44 +48,15 @@ const ToolsExperienceRankingBlock = ({ block, data }) => {
     )
 
     return (
-        <Block block={{ ...block, title, description }} data={data}>
-            <div>
-                <span
-                    onClick={() => setMetric('awareness')}
-                    style={{
-                        cursor: 'pointer',
-                        fontWeight: metric === 'awareness' ? 'bold' : 'normal',
-                        opacity: metric === 'awareness' ? 1 : 0.7,
-                        textDecoration: metric === 'awareness' ? 'underline' : 'none'
-                    }}
-                >
-                    awareness
-                </span>
-                &nbsp;&nbsp;
-                <span
-                    onClick={() => setMetric('interest')}
-                    style={{
-                        cursor: 'pointer',
-                        fontWeight: metric === 'interest' ? 'bold' : 'normal',
-                        opacity: metric === 'interest' ? 1 : 0.7,
-                        textDecoration: metric === 'interest' ? 'underline' : 'none'
-                    }}
-                >
-                    interest
-                </span>
-                &nbsp;&nbsp;
-                <span
-                    onClick={() => setMetric('satisfaction')}
-                    style={{
-                        cursor: 'pointer',
-                        fontWeight: metric === 'satisfaction' ? 'bold' : 'normal',
-                        opacity: metric === 'satisfaction' ? 1 : 0.7,
-                        textDecoration: metric === 'satisfaction' ? 'underline' : 'none'
-                    }}
-                >
-                    satisfaction
-                </span>
-            </div>
+        <Block
+            block={{
+                ...block,
+                title,
+                description
+            }}
+            titleProps={{ switcher: <Switcher setMetric={setMetric} metric={metric} /> }}
+            data={data}
+        >
             <ChartContainer height={data.length * 50 + 80} fit={true}>
                 <ToolsExperienceRankingChart data={chartData} />
             </ChartContainer>

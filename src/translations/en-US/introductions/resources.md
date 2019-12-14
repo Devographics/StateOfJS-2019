@@ -1,6 +1,6 @@
 ---
 type: introduction
-page: resourcespage
+page: resources
 locale: en-US
 # note: naming this file `resources.md` creates conflict with existing `resources.yml`
 ---

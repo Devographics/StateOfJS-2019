@@ -1,6 +1,6 @@
 ---
 type:   introduction
-page:   features_other_features
+page:   other_features
 locale: en-US
 ---
 
