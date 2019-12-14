@@ -535,11 +535,14 @@
       - id: conclusion
         blockType: TextBlock
 
-# - id: support
-#   path: /support
-#   blockType: page
-#   is_hidden: true
+# note: other pages need to be included in the sitemap too so they can get the proper
+# locale passed to them
 
-# - id: notfound
-#   path: /404
-#   is_hidden: true
+- id: support
+  path: /support
+  blockType: page
+  is_hidden: true
+
+- id: notfound
+  path: /404
+  is_hidden: true

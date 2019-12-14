@@ -1,6 +1,6 @@
 ---
 type: introduction
-page: other-tools
+page: other_tools
 locale: en-US
 ---
 
