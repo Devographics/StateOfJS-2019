@@ -4,12 +4,12 @@ const yaml = require('js-yaml')
 const _ = require('lodash')
 const indentString = require('indent-string')
 const { computeSitemap } = require('./node_src/sitemap/index.js')
-const {
-    fetchMdnResource,
-    fetchCaniuseResource,
-    fetchGithubResource,
-    normalizeGithubResource
-} = require('./node_src/resources')
+// const {
+//     fetchMdnResource,
+//     fetchCaniuseResource,
+//     fetchGithubResource,
+//     normalizeGithubResource
+// } = require('./node_src/resources')
 const { omit } = require('lodash')
 
 require('dotenv').config({
@@ -217,58 +217,58 @@ const defaultGitHubObject = {
     homepage: ''
 }
 
-exports.onCreateNode = async ({ node, actions }) => {
-    const { createNodeField } = actions
+// exports.onCreateNode = async ({ node, actions }) => {
+//     const { createNodeField } = actions
 
-    if (node.internal.type === `FeaturesUsageYaml`) {
-        const nodeResources = []
-        for (const agg of node.aggregations) {
-            const aggResources = {
-                id: agg.id
-            }
-            const featureResourcesConfig = features.find(f => f.id === agg.id)
+//     if (node.internal.type === `FeaturesUsageYaml`) {
+//         const nodeResources = []
+//         for (const agg of node.aggregations) {
+//             const aggResources = {
+//                 id: agg.id
+//             }
+//             const featureResourcesConfig = features.find(f => f.id === agg.id)
 
-            if (featureResourcesConfig !== undefined) {
-                if (featureResourcesConfig.mdn !== undefined) {
-                    aggResources.mdn = await fetchMdnResource(featureResourcesConfig.mdn)
-                }
-                if (featureResourcesConfig.caniuse !== undefined) {
-                    aggResources.caniuse = await fetchCaniuseResource(
-                        featureResourcesConfig.caniuse
-                    )
-                }
-            }
-            nodeResources.push(aggResources)
-        }
+//             if (featureResourcesConfig !== undefined) {
+//                 if (featureResourcesConfig.mdn !== undefined) {
+//                     aggResources.mdn = await fetchMdnResource(featureResourcesConfig.mdn)
+//                 }
+//                 if (featureResourcesConfig.caniuse !== undefined) {
+//                     aggResources.caniuse = await fetchCaniuseResource(
+//                         featureResourcesConfig.caniuse
+//                     )
+//                 }
+//             }
+//             nodeResources.push(aggResources)
+//         }
 
-        await createNodeField({
-            name: `resources`,
-            node,
-            value: nodeResources
-        })
-    }
+//         await createNodeField({
+//             name: `resources`,
+//             node,
+//             value: nodeResources
+//         })
+//     }
 
-    if (node.internal.type === 'ToolsYaml') {
-        const nodeResources = []
-        for (const agg of node.aggregations) {
-            const aggResources = {
-                id: agg.id,
-                github: defaultGitHubObject // pass default object to avoid GraphQL errors
-            }
-            const entityResourcesConfig = entities.find(e => e.id === agg.id)
-            if (entityResourcesConfig) {
-                aggResources.entity = entityResourcesConfig
-                if (entityResourcesConfig.github) {
-                    aggResources.github = await fetchGithubResource(entityResourcesConfig.github)
-                }
-            }
-            nodeResources.push(aggResources)
-        }
+//     if (node.internal.type === 'ToolsYaml') {
+//         const nodeResources = []
+//         for (const agg of node.aggregations) {
+//             const aggResources = {
+//                 id: agg.id,
+//                 github: defaultGitHubObject // pass default object to avoid GraphQL errors
+//             }
+//             const entityResourcesConfig = entities.find(e => e.id === agg.id)
+//             if (entityResourcesConfig) {
+//                 aggResources.entity = entityResourcesConfig
+//                 if (entityResourcesConfig.github) {
+//                     aggResources.github = await fetchGithubResource(entityResourcesConfig.github)
+//                 }
+//             }
+//             nodeResources.push(aggResources)
+//         }
 
-        await createNodeField({
-            name: `resources`,
-            node,
-            value: nodeResources
-        })
-    }
-}
+//         await createNodeField({
+//             name: `resources`,
+//             node,
+//             value: nodeResources
+//         })
+//     }
+// }

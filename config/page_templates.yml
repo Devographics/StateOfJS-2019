@@ -65,12 +65,12 @@ toolSectionTemplate:
               sectionId: '${id}'
               toolIds: ${toolIds}
 
-        - id: '${id}-scatterplot'
-          blockName: scatterplot
-          template: scatterplotTemplate
-          variables:
-              sectionId: ${id}
-              toolIds: ${toolIds}
+        # - id: '${id}-scatterplot'
+        #   blockName: scatterplot
+        #   template: scatterplotTemplate
+        #   variables:
+        #       sectionId: ${id}
+        #       toolIds: ${toolIds}
 
         - id: '${id}_happiness'
           blockName: happiness
