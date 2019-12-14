@@ -143,6 +143,7 @@ featuresOverviewTemplate:
 
 featuresCategoryOverviewTemplate:
     blockType: FeaturesOverviewBlock
+    blockName: featuresCategoryOverview
     dataPath: 'surveyApi.survey.features'
     bucketKeysName: featureExperienceSimplified
     showLegend: true

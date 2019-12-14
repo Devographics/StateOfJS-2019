@@ -1,6 +1,6 @@
 ---
 type: introduction
-section: demographics
+page: demographics
 locale: en-US
 ---
 
