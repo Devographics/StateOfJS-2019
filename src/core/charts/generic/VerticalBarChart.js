@@ -30,7 +30,7 @@ const VerticalBarChart = ({
 }) => {
     const { translate } = useI18n()
 
-    const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
+    const { formatTick, formatValue, maxValue, tickCount, ticks } = useBarChart({
         buckets,
         total,
         i18nNamespace,
@@ -54,15 +54,15 @@ const VerticalBarChart = ({
                 labelSkipHeight={16}
                 borderRadius={1}
                 enableGridX={false}
-                gridYValues={[tickCount]}
+                gridYValues={ticks}
                 enableGridY={true}
                 axisLeft={{
                     format: formatValue,
-                    tickValues: [tickCount]
+                    tickValues: ticks
                 }}
                 axisRight={{
                     format: formatValue,
-                    tickValues: [tickCount],
+                    tickValues: ticks,
                     legend: translate(`users_${units}`),
                     legendPosition: 'middle',
                     legendOffset: 52

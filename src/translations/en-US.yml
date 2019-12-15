@@ -9,8 +9,8 @@ translations:
       t: About the T-shirt
     - key: tshirt.description
       t: >
-          The shirt features a ”periodic table of JavaScript” that lists the most popular
-          libraries grouped by category, along with their GitHub stars counts (in thousands).
+          The design is printed on a black heather Bella+Canvas 3001 unisex premium t-shirt
+          with a semi-slim fit. Sizing uses U.S. sizes.
 
     - key: tshirt.getit
       t: Get It
@@ -300,11 +300,8 @@ translations:
       t: >
           How participants found out about the survey (aggregation of self-reported answers and 
           referrer tracking).
-
           
-          **State of JS** indicates subscribers from our previous JavaScript surveys,
-          **Announcement** corresponds to our official announcement post on [FreeCodeCamp](https://www.freecodecamp.org), 
-          and **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
+          **State of JS** indicates subscribers from our previous surveys, while **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
 
     - key: block.title.jobTitle
       t: Job Title
