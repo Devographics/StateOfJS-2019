@@ -335,16 +335,16 @@ heatmapTemplate:
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
-                matrices{
-                    tools(ids:[${toolIds}]){
+                matrices {
+                    tools(ids:[${toolIds}]) {
                         ${heatmapId}{
-                            year(year:${currentYear}){
+                            year(year:${currentYear}) {
                                 year
                                 buckets{
                                     average
                                     total
                                     id
-                                    ranges{
+                                    ranges {
                                         range
                                         percentage
                                         count

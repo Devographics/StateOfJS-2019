@@ -74,6 +74,7 @@ const getChartData = (data, block, config, getName) => {
 }
 
 const HeatmapBlock = ({ block, data }) => {
+    console.log({ block, data })
     const { blockName } = block
     // const { translate } = useI18n()
     // const { getName } = useEntities()
@@ -109,7 +110,23 @@ HeatmapBlock.propTypes = {
         id: PropTypes.string.isRequired,
         heatmapType: PropTypes.oneOf(['experience', 'salary']).isRequired,
         subject: PropTypes.oneOf(['tools', 'features']).isRequired
-    }).isRequired
+    }).isRequired,
+    data: PropTypes.shape({
+        year: PropTypes.number.isRequired,
+        buckets: PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                total: PropTypes.number.isRequired,
+                ranges: PropTypes.arrayOf(
+                    PropTypes.shape({
+                        range: PropTypes.string.isRequired,
+                        count: PropTypes.number.isRequired,
+                        percentage: PropTypes.number.isRequired,
+                    })
+                ).isRequired,
+            })
+        ).isRequired
+    })
 }
 
 export default memo(HeatmapBlock)
