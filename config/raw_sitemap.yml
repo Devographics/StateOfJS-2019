@@ -256,6 +256,11 @@
 
       - id: purescript
         template: toolPageTemplate
+      - id: javascript_flavors
+        path: /other-tools
+        template: categoryOtherToolsPageTemplate
+        variables:
+            sectionId: ${id}
 
 - id: front_end_frameworks
   path: /front-end-frameworks
@@ -287,8 +292,11 @@
             - ember-octane
       - id: svelte
         template: toolPageTemplate
-      # - id: frontend-other
-      #   template: toolOtherTemplate
+      - id: front_end_frameworks
+        path: /other-tools
+        template: categoryOtherToolsPageTemplate
+        variables:
+            sectionId: ${id}
       # - id: frontend-conclusion
       #   template: toolConclusionTemplate
 
@@ -320,8 +328,11 @@
         variables:
           sponsors: 
             - redux-mobx
-      # - id: datalayer-other
-      #   template: toolOtherTemplate
+      - id: data_layer
+        path: /other-tools
+        template: categoryOtherToolsPageTemplate
+        variables:
+            sectionId: ${id}
       # - id: datalayer-conclusion
       #   template: toolConclusionTemplate
 
@@ -353,8 +364,11 @@
         variables:
           sponsors: 
             - gatsby
-      # - id: backend-other
-      #   template: toolOtherTemplate
+      - id: back_end_frameworks
+        path: /other-tools
+        template: categoryOtherToolsPageTemplate
+        variables:
+            sectionId: ${id}
       # - id: backend-conclusion
       #   template: toolConclusionTemplate
 
@@ -386,8 +400,11 @@
         template: toolPageTemplate
       - id: puppeteer
         template: toolPageTemplate
-      # - id: testing-other
-      #   template: toolOtherTemplate
+      - id: testing
+        path: /other-tools
+        template: categoryOtherToolsPageTemplate
+        variables:
+            sectionId: ${id}
       # - id: testing-conclusion
       #   template: toolConclusionTemplate
 
@@ -414,8 +431,11 @@
         template: toolPageTemplate
       - id: expo
         template: toolPageTemplate
-      # - id: mobiledesktop-other
-      #   template: toolOtherTemplate
+      - id: mobile_desktop
+        path: /other-tools
+        template: categoryOtherToolsPageTemplate
+        variables:
+            sectionId: ${id}
       # - id: mobiledesktop-conclusion
       #   template: toolConclusionTemplate
 

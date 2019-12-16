@@ -112,3 +112,17 @@ toolPageTemplate:
           template: recommendedResourcesTemplate
           variables: 
             sponsors: ${sponsors}
+
+# Other Tools (/front-end/others, /data-layer/others, etc.)
+categoryOtherToolsPageTemplate:
+    defaultVariables:
+      sponsors: []
+    blocks:
+        - id: ${id}-other-tools
+          template: categoryOtherToolsTemplate
+          variables:
+              sectionId: ${sectionId}
+        - id: '${id}_recommended_resources'
+          template: recommendedResourcesTemplate
+          variables: 
+            sponsors: ${sponsors}

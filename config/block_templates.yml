@@ -400,6 +400,39 @@ happinessTemplate:
             }
         }
 
+
+categoryOtherToolsTemplate:
+    blockType: HorizontalBarBlock
+    dataPath: 'surveyApi.survey.category.otherTools.year'
+    showDescription: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                category(id:${sectionId}){
+                    otherTools{
+                        year(year:2019){
+                            year
+                            total
+                            completion{
+                                count
+                                percentage
+                            }
+                            buckets{
+                                id
+                                count
+                                percentage
+                                entity{
+                                    id
+                                    homepage
+                                    name
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
 ###############################################################################
 #
 # OPINIONS
@@ -457,7 +490,9 @@ otherToolsTemplate:
                             count
                             percentage
                             entity {
-                              homepage
+                                id
+                                homepage
+                                name
                             }
                         }
                     }
