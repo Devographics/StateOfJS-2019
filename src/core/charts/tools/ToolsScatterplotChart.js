@@ -21,8 +21,8 @@ const Nodes = props => {
     const { width, height, margin, nodes } = props
     return (
         <g>
-            {nodes.map(node => (
-                <Node {...node} width={width} height={height} margin={margin} />
+            {nodes.map((node, i) => (
+                <Node key={i} {...node} width={width} height={height} margin={margin} />
             ))}
         </g>
     )

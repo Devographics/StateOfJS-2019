@@ -81,6 +81,8 @@
 - id: overview
   path: /overview
   blocks: 
+    - id: toolsArrow
+      blockType: ToolsArrowsBlock
     - id: scatterplotOverview
       template: scatterplotOverviewTemplate
 

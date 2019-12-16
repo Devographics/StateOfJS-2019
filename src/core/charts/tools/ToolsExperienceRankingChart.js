@@ -46,18 +46,18 @@ const ToolsExperienceRankingChart = ({ data }) => {
 }
 
 ToolsExperienceRankingChart.propTypes = {
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            data: PropTypes.arrayOf(
-                PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
-                })
-            ).isRequired
-        })
-    ).isRequired
+    // data: PropTypes.arrayOf(
+    //     PropTypes.shape({
+    //         id: PropTypes.string.isRequired,
+    //         data: PropTypes.arrayOf(
+    //             PropTypes.shape({
+    //                 x: PropTypes.number.isRequired,
+    //                 y: PropTypes.number.isRequired,
+    //                 percentage: PropTypes.number.isRequired
+    //             })
+    //         ).isRequired
+    //     })
+    // ).isRequired
 }
 
 export default ToolsExperienceRankingChart

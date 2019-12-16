@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from 'react'
-import { sortBy } from 'lodash'
+import sortBy from 'lodash/sortBy'
 import PropTypes from 'prop-types'
 import { useEntities } from 'core/entities/entitiesContext'
 import Award from './Award'

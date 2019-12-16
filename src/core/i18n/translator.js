@@ -1,4 +1,4 @@
-import { template } from 'lodash'
+import template from 'lodash/template'
 
 export const getTranslator = ({ locale, translations }) => (key, { values } = {}, fallback) => {
     const translation = translations.find(t => t.key === key)

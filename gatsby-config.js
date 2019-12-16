@@ -42,6 +42,7 @@ module.exports = {
         `gatsby-transformer-remark`,
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
-        'gatsby-plugin-netlify'
+        'gatsby-plugin-netlify',
+        // 'gatsby-plugin-webpack-bundle-analyzer',
     ]
 }

@@ -1,4 +1,5 @@
-import { get, template } from 'lodash'
+import get from 'lodash/get'
+import template from 'lodash/template'
 import wording from 'translations/__old/en-US.yml'
 import bestOfJsData from 'data/bestofjs'
 

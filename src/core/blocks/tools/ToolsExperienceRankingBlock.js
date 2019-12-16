@@ -68,32 +68,32 @@ ToolsExperienceRankingBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired
     }).isRequired,
-    data: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            awareness: PropTypes.arrayOf(
-                PropTypes.shape({
-                    year: PropTypes.number.isRequired,
-                    rank: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
-                })
-            ).isRequired,
-            interest: PropTypes.arrayOf(
-                PropTypes.shape({
-                    year: PropTypes.number.isRequired,
-                    rank: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
-                })
-            ).isRequired,
-            satisfaction: PropTypes.arrayOf(
-                PropTypes.shape({
-                    year: PropTypes.number.isRequired,
-                    rank: PropTypes.number.isRequired,
-                    percentage: PropTypes.number.isRequired
-                })
-            ).isRequired
-        })
-    ).isRequired
+    // data: PropTypes.arrayOf(
+    //     PropTypes.shape({
+    //         id: PropTypes.string.isRequired,
+    //         awareness: PropTypes.arrayOf(
+    //             PropTypes.shape({
+    //                 year: PropTypes.number.isRequired,
+    //                 rank: PropTypes.number.isRequired,
+    //                 percentage: PropTypes.number.isRequired
+    //             })
+    //         ).isRequired,
+    //         interest: PropTypes.arrayOf(
+    //             PropTypes.shape({
+    //                 year: PropTypes.number.isRequired,
+    //                 rank: PropTypes.number.isRequired,
+    //                 percentage: PropTypes.number.isRequired
+    //             })
+    //         ).isRequired,
+    //         satisfaction: PropTypes.arrayOf(
+    //             PropTypes.shape({
+    //                 year: PropTypes.number.isRequired,
+    //                 rank: PropTypes.number.isRequired,
+    //                 percentage: PropTypes.number.isRequired
+    //             })
+    //         ).isRequired
+    //     })
+    // ).isRequired
 }
 
 export default ToolsExperienceRankingBlock

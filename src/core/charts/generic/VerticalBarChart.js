@@ -30,7 +30,7 @@ const VerticalBarChart = ({
 }) => {
     const { translate } = useI18n()
 
-    const { formatTick, formatValue, maxValue, tickCount, ticks } = useBarChart({
+    const { formatTick, formatValue, maxValue, ticks } = useBarChart({
         buckets,
         total,
         i18nNamespace,
