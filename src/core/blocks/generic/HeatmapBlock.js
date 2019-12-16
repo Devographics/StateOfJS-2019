@@ -12,16 +12,20 @@ const configByType = {
         keys: keys.salary,
         i18nNamespace: 'salary'
     },
-    experience: {
-        keys: keys.yearsOfExperience,
+    workExperience: {
+        keys: keys.workExperience,
         i18nNamespace: 'years-of-experience'
+    },
+    companySize: {
+        keys: keys.companySize,
+        i18nNamespace: 'company-size'
     }
 }
 
-const getConfig = block => {
-    const config = configByType[block.heatmapType]
+const getConfig = heatmapId => {
+    const config = configByType[heatmapId]
     if (!config) {
-        throw new Error(`HeatmapBlock: Invalid heatmap type: ${block.heatmapType}`)
+        throw new Error(`HeatmapBlock: Invalid heatmap type: ${heatmapId}`)
     }
 
     return config
@@ -74,12 +78,11 @@ const getChartData = (data, block, config, getName) => {
 }
 
 const HeatmapBlock = ({ block, data }) => {
-    console.log({ block, data })
     const { blockName } = block
     // const { translate } = useI18n()
     // const { getName } = useEntities()
 
-    // const config = useMemo(() => getConfig(block), [block])
+    const config = useMemo(() => getConfig(block.variables.heatmapId), [block.variables.heatmapId])
     // const items = useMemo(() => getChartData(data, block, config, getName), [
     //     data,
     //     block,
@@ -87,7 +90,7 @@ const HeatmapBlock = ({ block, data }) => {
     //     getName
     // ])
 
-    const heatmapKeys = keys[blockName]
+    console.log({ block, data, config })
 
     return (
         <Block
@@ -99,7 +102,7 @@ const HeatmapBlock = ({ block, data }) => {
             block={block}
         >
             <div>TODO</div>
-            {/* <HeatmapChart keys={config.keys} data={data} i18nNamespace={config.i18nNamespace} /> */}
+            <HeatmapChart keys={config.keys} data={data.buckets} i18nNamespace={config.i18nNamespace} />
             {/* <HeatmapChart keys={heatmapKeys} data={data.buckets} /> */}
         </Block>
     )
