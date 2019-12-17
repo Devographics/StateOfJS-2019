@@ -89,7 +89,11 @@ scatterplotOverviewTemplate:
                  tools {
                     id
                     entity {
+                        homepage
                         name
+                        github {
+                                url
+                              }
                     }
                     experience {
                         year(year:${currentYear}) {
@@ -328,7 +332,11 @@ toolExperienceTemplate:
                 tool(id: ${toolId}) {
                     id
                     entity{
+                        homepage
                         name
+                        github {
+                                url
+                              }
                     }
                     experience {
                       allYears{
@@ -423,7 +431,11 @@ scatterplotTemplate:
                  tools(ids:[${toolIds}]) {
                     id
                     entity {
+                        homepage
                         name
+                        github {
+                                url
+                              }
                     }
                     experience {
                         year(year:${currentYear}) {
@@ -480,6 +492,9 @@ categoryOtherToolsTemplate:
                                     id
                                     homepage
                                     name
+                                    github {
+                                        url
+                                    }
                                 }
                             }
                         }
@@ -540,6 +555,11 @@ otherToolsTemplate:
                     id
                     year(year: ${currentYear}) {
                         year
+                        total
+                        completion {
+                            count
+                            percentage
+                        }
                         buckets{
                             id
                             count
@@ -548,6 +568,9 @@ otherToolsTemplate:
                                 id
                                 homepage
                                 name
+                                github {
+                                    url
+                                }
                             }
                         }
                     }
@@ -573,12 +596,21 @@ resourcesTemplate:
                     id
                     year(year: ${currentYear}) {
                         year
+                        total
+                        completion {
+                            count
+                            percentage
+                        }
                         buckets{
                             id
                             count
                             percentage
                             entity {
                               homepage
+                              name
+                              github {
+                                url
+                              }
                             }
                         }
                     }

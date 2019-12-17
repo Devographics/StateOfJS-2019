@@ -90,7 +90,7 @@ const HeatmapBlock = ({ block, data }) => {
     //     getName
     // ])
 
-    console.log({ block, data, config })
+    // console.log({ block, data, config })
 
     return (
         <Block
@@ -102,7 +102,7 @@ const HeatmapBlock = ({ block, data }) => {
             block={block}
         >
             <div>TODO</div>
-            <HeatmapChart keys={config.keys} data={data.buckets} i18nNamespace={config.i18nNamespace} />
+            {/* <HeatmapChart keys={config.keys} data={data.buckets} i18nNamespace={config.i18nNamespace} /> */}
             {/* <HeatmapChart keys={heatmapKeys} data={data.buckets} /> */}
         </Block>
     )

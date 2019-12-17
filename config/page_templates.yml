@@ -119,6 +119,7 @@ categoryOtherToolsPageTemplate:
       sponsors: []
     blocks:
         - id: ${id}-other-tools
+          blockName: category-other-tools
           template: categoryOtherToolsTemplate
           variables:
               sectionId: ${sectionId}

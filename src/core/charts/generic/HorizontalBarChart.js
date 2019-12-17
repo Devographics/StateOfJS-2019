@@ -9,7 +9,6 @@ import BarTooltip from 'core/charts/generic/BarTooltip'
 import HorizontalBarStripes from './HorizontalBarStripes'
 import sortBy from 'lodash/sortBy'
 import round from 'lodash/round'
-import { useEntities } from 'core/entities/entitiesContext'
 
 const labelMaxLength = 13
 
@@ -35,13 +34,21 @@ const Text = ({ hasLink = false, label }) => (
     </text>
 )
 const TickItem = tick => {
-    const { getUrl, getName } = useEntities()
     const { translate } = useI18n()
 
-    const { x, y, value, shouldTranslate, i18nNamespace } = tick
-    const link = getUrl(value)
+    const { x, y, value, shouldTranslate, i18nNamespace, entity } = tick
 
-    let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : getName(value)
+    let label, link
+
+    label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : value
+
+    if (entity) {
+        const { name, homepage, github } = entity
+        if (name) {
+            label = name
+        }
+        link = homepage || github && github.url
+    }
 
     label = label.length > labelMaxLength ? label.substr(0, labelMaxLength) + '…' : label
 
@@ -79,7 +86,7 @@ const HorizontalBarChart = ({
 }) => {
     const { translate } = useI18n()
 
-    const { formatTick, formatValue, maxValue, tickCount } = useBarChart({
+    const { formatTick, formatValue, maxValue, ticks, tickCount } = useBarChart({
         buckets,
         total,
         i18nNamespace,
@@ -106,7 +113,6 @@ const HorizontalBarChart = ({
                 maxValue={maxValue}
                 theme={theme}
                 enableGridX={true}
-                gridXValues={[tickCount]}
                 enableGridY={false}
                 enableLabel={true}
                 label={d => (units === 'percentage' ? `${round(d.value, 1)}%` : d.value)}
@@ -117,7 +123,7 @@ const HorizontalBarChart = ({
                 borderRadius={1}
                 axisTop={{
                     tickValues: 5,
-                    format: formatValue
+                    format: formatValue,
                 }}
                 axisBottom={{
                     tickValues: 5,
@@ -134,6 +140,7 @@ const HorizontalBarChart = ({
                         <TickItem
                             i18nNamespace={i18nNamespace}
                             shouldTranslate={translateData}
+                            entity={buckets.find(b => b.id === tick.value).entity}
                             {...tick}
                         />
                     )

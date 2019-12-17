@@ -95,11 +95,11 @@ const VerticalBarChart = ({
 }
 
 VerticalBarChart.propTypes = {
-    keys: PropTypes.arrayOf(PropTypes.string).isRequired,
+    // keys: PropTypes.arrayOf(PropTypes.string).isRequired,
     total: PropTypes.number.isRequired,
     buckets: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.string.isRequired,
+            id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
             count: PropTypes.number.isRequired,
             percentage: PropTypes.number
         })

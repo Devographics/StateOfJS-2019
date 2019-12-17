@@ -1,6 +1,7 @@
 # ------------------------------------------------------------------------------------
 # Pages Properties
 # - id: the unique (survey-wide) ID of the page
+# - pageName: the name of the page (used for titles, descriptions, etc.)
 # - path: the page's path
 # - children: the page's children pages
 # - blocks: the page's blocks
@@ -256,11 +257,12 @@
 
       - id: purescript
         template: toolPageTemplate
-      - id: javascript_flavors
+      - id: javascript_flavors_others
+        sectionId: javascript_flavors
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
-            sectionId: ${id}
+            sectionId: ${sectionId}
 
 - id: front_end_frameworks
   path: /front-end-frameworks
@@ -292,11 +294,12 @@
             - ember-octane
       - id: svelte
         template: toolPageTemplate
-      - id: front_end_frameworks
+      - id: front_end_frameworks_others
+        sectionId: front_end_frameworks
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
-            sectionId: ${id}
+            sectionId: ${sectionId}
       # - id: frontend-conclusion
       #   template: toolConclusionTemplate
 
@@ -328,11 +331,12 @@
         variables:
           sponsors:
             - redux-mobx
-      - id: data_layer
+      - id: data_layer_others
+        sectionId: data_layer
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
-            sectionId: ${id}
+            sectionId: ${sectionId}
       # - id: datalayer-conclusion
       #   template: toolConclusionTemplate
 
@@ -364,11 +368,12 @@
         variables:
           sponsors:
             - gatsby
-      - id: back_end_frameworks
+      - id: back_end_frameworks_others
+        sectionId: back_end_frameworks
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
-            sectionId: ${id}
+            sectionId: ${sectionId}
       # - id: backend-conclusion
       #   template: toolConclusionTemplate
 
@@ -400,11 +405,12 @@
         template: toolPageTemplate
       - id: puppeteer
         template: toolPageTemplate
-      - id: testing
+      - id: testing_others
+        sectionId: testing
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
-            sectionId: ${id}
+            sectionId: ${sectionId}
       # - id: testing-conclusion
       #   template: toolConclusionTemplate
 
@@ -431,11 +437,12 @@
         template: toolPageTemplate
       - id: expo
         template: toolPageTemplate
-      - id: mobile_desktop
+      - id: mobile_desktop_others
+        sectionId: mobile_desktop
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
-            sectionId: ${id}
+            sectionId: ${sectionId}
       # - id: mobiledesktop-conclusion
       #   template: toolConclusionTemplate
 
@@ -484,9 +491,9 @@
         template: pageIntroductionTemplate
         variables:
             pageId: '${id}'
-      - id: blogs_magazines
+      - id: blogs_news_magazines
         template: resourcesTemplate
-      - id: blogs_magazines_others
+      - id: blogs_news_magazines_others
         template: resourcesTemplate
         mode: relative
         units: count

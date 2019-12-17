@@ -11,8 +11,8 @@ export let colors = {
     greyMedium: '#cecdcc',
     greyMediumer: '#616868',
     greyDark: '#4d4f4f',
-    greyDarkish: '#2c3030',
-    greyDarker: '#212424',
+    greyDarkish: '#2a2d33',
+    greyDarker: '#222429',
 
     blueLighter: '#B2BBEE',
     blueLight: '#808EE1',
