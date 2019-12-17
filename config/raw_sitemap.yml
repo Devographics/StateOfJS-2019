@@ -59,7 +59,7 @@
       - id: companySize
         template: demographicsTemplate
       - id: source
-        template: demographicsTemplate
+        template: sourceTemplate
         blockType: HorizontalBarBlock
       - id: gender
         template: demographicsTemplate

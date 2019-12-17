@@ -73,6 +73,39 @@ demographicsTemplate:
             }
         }
 
+sourceTemplate:
+    blockType: VerticalBarBlock
+    dataPath: 'surveyApi.survey.demographics.${id}.year' # select the 4th array item to select the 4th year
+    showDescription: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                demographics {
+                    ${id} {
+                      year(year: ${currentYear}) {
+                        year
+                        total
+                        completion {
+                            percentage
+                            count
+                        }
+                        buckets {
+                            id
+                            count
+                            percentage
+                            entity{
+                                name
+                                homepage
+                                github{
+                                    url
+                                }
+                            }
+                        }
+                      }
+                    }
+                }
+            }
+        }
 ###############################################################################
 #
 # OVERVIEW
