@@ -30,27 +30,29 @@
     }
   }
 
-  &__arrow {
-    opacity: 0;
-    animation: fadeIn 0.9s ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 0.9s;
+  &__tool {
+    &--is {
+      &-hovering-other {
+        // opacity: 0.3;
+
+        text {
+          fill-opacity: 0;
+          opacity: 0;
+        }
+
+        .ToolsArrowsChart {
+          &__gradient-line {
+            stroke: $navyLightest;
+            stroke-width: 1 !important;
+          }
+        }
+      }
+    }
   }
-  @keyframes arrowIn {
+
+  @keyframes gradientLineSegmentIn {
       0% { stroke-dashoffset: -20px; }
     100% { stroke-dashoffset: 0; }
-  }
-  &__path {
-    fill: none;
-    stroke-width: 4.5px;
-    mix-blend-mode: screen;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 20px 20px;
-    stroke-dashoffset: -20px;
-    animation: arrowIn 0.9s ease-out;
-    animation-fill-mode: forwards;
-    opacity: 0.6;
   }
   &__gradient-line {
     fill: none;
@@ -60,8 +62,9 @@
     stroke-linejoin: round;
     stroke-dasharray: 20px 20px;
     stroke-dashoffset: -20px;
-    animation: arrowIn 0.2s ease-out;
+    animation: gradientLineSegmentIn 0.2s ease-out;
     animation-fill-mode: forwards;
+    // transition: all 0.1s ease-out;
 
     @for $i from 0 to 100 {
       &--nth-#{$i} {
@@ -69,10 +72,36 @@
       }
     }
   }
+  text {
+    // transition: all 0.1s ease-out;
+  }
+
+  &__now {
+    // stroke: $navy;
+    // stroke-width: 2px;
+  }
+  @keyframes fadeInSlideUp {
+      0% { fill-opacity: 0; transform: translateY(1em); }
+    100% { fill-opacity: 1; transform: translateY(0); }
+  }
+
+  &__year {
+    font-size: 0.8em;
+    font-weight: 600;
+    fill-opacity: 0; transform: translateY(1em);
+    animation: fadeInSlideUp 0.2s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &__label-background {
+    font-size: 0.8em;
+    font-weight: 600;
+    stroke: $navyDark;
+    stroke-width: 3px;
+  }
+
   &__label {
     font-size: 0.8em;
     font-weight: 600;
-    // display: none;
     opacity: 0;
     animation: fadeIn 0.9s ease-out;
     animation-fill-mode: forwards;

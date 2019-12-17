@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { scaleLinear } from 'd3-scale'
-import map from "lodash/map"
-import range from "lodash/range"
-import flatten from "lodash/flatten"
+import map from 'lodash/map'
+import range from 'lodash/range'
+import flatten from 'lodash/flatten'
 import { extent, max, sum } from 'd3-array'
 import { toolsCategories } from '../../../../../config/variables.yml'
 import offsets from './toolsArrowsLabelOffsets.json'
@@ -23,10 +23,13 @@ map(toolsCategories, (tools, category) => {
     categoryColorMap[category] = color
     categoryColorScales[category] = scaleLinear()
         .domain([0, 40])
-        .range([color, "#303652"])
+        .range([color, '#303652'])
         .clamp(true)
 })
-
+const gradientLineWidthScale = scaleLinear()
+    .domain([0, 40])
+    .range([11, 9])
+    .clamp(true)
 
 const margins = {
     marginTop: 20,
@@ -36,6 +39,7 @@ const margins = {
 }
 const ToolsArrowsChart = ({ data, activeCategory }) => {
     const [ref, dms] = useChartDimensions(margins, true)
+    const [hoveredTool, setHoveredTool] = useState(null)
 
     const tools = data.map(d => d.id)
     let toolNames = {}
@@ -43,21 +47,18 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
         toolNames[tool.id] = tool.entity.name
     })
 
-    const points = useMemo(() => (
-        data.map(tool => (
-            tool.experience.allYears.map(({ buckets }) => {
-                const points = buckets.map(({ id, percentage }) => (
-                    conditionDiffs[id].map(d => (
-                        d * percentage
-                    ))
-                ))
-                return [
-                    sum(points.map(d => d[0])),
-                    sum(points.map(d => d[1])),
-                ]
-            })
-        ))
-    ), [data])
+    const points = useMemo(
+        () =>
+            data.map(tool =>
+                tool.experience.allYears.map(({ buckets }) => {
+                    const points = buckets.map(({ id, percentage }) =>
+                        conditionDiffs[id].map(d => d * percentage)
+                    )
+                    return [sum(points.map(d => d[0])), sum(points.map(d => d[1]))]
+                })
+            ),
+        [data]
+    )
 
     const scales = useMemo(() => {
         const xExtent = extent(points.flat().map(d => d[0]))
@@ -133,7 +134,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         const toolName = toolNames[tool]
                         const category = toolToCategoryMap[tool]
                         if (!points.length) return null
-                        if (activeCategory != "all" && activeCategory != category) return null
+                        if (activeCategory != 'all' && activeCategory != category) return null
 
                         const thisYearPoint = points.slice(-1)[0]
                         const circles = flatten(
@@ -148,7 +149,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                     .range([y, nextPoint[1]])
                                 return range(0, 21).map(i => [
                                     scales.x(xScale(i)),
-                                    scales.y(yScale(i)),
+                                    scales.y(yScale(i))
                                 ])
                             })
                         )
@@ -159,31 +160,60 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         const colorScale = categoryColorScales[category]
 
                         return (
-                            <g>
-                                {circles.slice(0, -1).map(([ x, y ], i) => (
+                            <g
+                                className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
+                                    !hoveredTool
+                                        ? 'normal'
+                                        : hoveredTool == tool
+                                        ? 'hovering'
+                                        : 'hovering-other'
+                                }`}
+                                onMouseEnter={() => setHoveredTool(tool)}
+                                onMouseLeave={() => setHoveredTool(null)}
+                            >
+                                {circles.slice(0, -1).map(([x, y], i) => (
                                     <line
-                                        className={`ToolsArrowsChart__gradient-line ToolsArrowsChart__gradient-line--nth-${circles.length - i}`}
+                                        className={`ToolsArrowsChart__gradient-line ToolsArrowsChart__gradient-line--nth-${circles.length -
+                                            i}`}
                                         x1={x}
                                         y1={y}
                                         x2={(circles[i + 1] || [])[0]}
                                         y2={(circles[i + 1] || [])[1]}
                                         stroke={colorScale(circles.length - i)}
+                                        style={{
+                                            strokeWidth: gradientLineWidthScale(circles.length - i)
+                                        }}
                                     />
                                 ))}
+                                {hoveredTool == tool &&
+                                    points.slice(0, -1).map(([x, y], i) => (
+                                        <text
+                                            className="ToolsArrowsChart__year"
+                                            x={scales.x(x)}
+                                            y={scales.y(y)}
+                                        >
+                                            {2019 - (points.length - 1 - i)}
+                                        </text>
+                                    ))}
                                 <circle
+                                    className="ToolsArrowsChart__now"
                                     cx={x}
                                     cy={y}
                                     fill={color}
                                     r="6"
                                 />
                                 <text
+                                    className="ToolsArrowsChart__label-background"
+                                    x={x + ((offsets[tools[i]] || {}).x || 0)}
+                                    y={y + ((offsets[tools[i]] || {}).y || 0)}
+                                >
+                                    {toolName}
+                                </text>
+                                <text
                                     className="ToolsArrowsChart__label"
                                     fill={color}
-                                    transform={`translate(${
-                                        x + ((offsets[tools[i]] || {}).x || 0)
-                                    }, ${
-                                        y + ((offsets[tools[i]] || {}).y || 0)
-                                    })`}
+                                    x={x + ((offsets[tools[i]] || {}).x || 0)}
+                                    y={y + ((offsets[tools[i]] || {}).y || 0)}
                                 >
                                     {toolName}
                                 </text>
