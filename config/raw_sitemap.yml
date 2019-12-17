@@ -257,6 +257,7 @@
 
       - id: purescript
         template: toolPageTemplate
+
       - id: javascript_flavors_others
         sectionId: javascript_flavors
         path: /other-tools
@@ -275,31 +276,38 @@
         variables:
           sponsors:
             - complete-react-v5
+
       - id: vuejs
         template: toolPageTemplate
         variables:
           sponsors:
             - vue
+
       - id: angular
         template: toolPageTemplate
         variables:
           sponsors:
             - angular-core
+
       - id: preact
         template: toolPageTemplate
+
       - id: ember
         template: toolPageTemplate
         variables:
           sponsors:
             - ember-octane
+
       - id: svelte
         template: toolPageTemplate
+
       - id: front_end_frameworks_others
         sectionId: front_end_frameworks
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
             sectionId: ${sectionId}
+
       # - id: frontend-conclusion
       #   template: toolConclusionTemplate
 
@@ -314,29 +322,35 @@
         variables:
           sponsors:
             - intermediate-react-v2
+
       - id: apollo
         template: toolPageTemplate
         variables:
           sponsors:
             - client-graphql-react
+
       - id: graphql
         template: toolPageTemplate
         variables:
           sponsors:
             - server-graphql-nodejs
+
       - id: relay
         template: toolPageTemplate
+
       - id: mobx
         template: toolPageTemplate
         variables:
           sponsors:
             - redux-mobx
+
       - id: data_layer_others
         sectionId: data_layer
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
             sectionId: ${sectionId}
+
       # - id: datalayer-conclusion
       #   template: toolConclusionTemplate
 
@@ -351,29 +365,38 @@
         variables:
           sponsors:
             - api-design-nodejs-v3
+
       - id: nextjs
         template: toolPageTemplate
+
       - id: koa
         template: toolPageTemplate
+
       - id: meteor
         template: toolPageTemplate
+
       - id: sails
         template: toolPageTemplate
+
       - id: feathers
         template: toolPageTemplate
+
       - id: nuxt
         template: toolPageTemplate
+
       - id: gatsby
         template: toolPageTemplate
         variables:
           sponsors:
             - gatsby
+
       - id: back_end_frameworks_others
         sectionId: back_end_frameworks
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
             sectionId: ${sectionId}
+
       # - id: backend-conclusion
       #   template: toolConclusionTemplate
 
@@ -388,29 +411,38 @@
         variables:
           sponsors:
             - testing-react
+
       - id: mocha
         template: toolPageTemplate
+
       - id: storybook
         template: toolPageTemplate
+
       - id: cypress
         template: toolPageTemplate
         variables:
           sponsors:
             - testing-react
+
       - id: enzyme
         template: toolPageTemplate
+
       - id: ava
         template: toolPageTemplate
+
       - id: jasmine
         template: toolPageTemplate
+
       - id: puppeteer
         template: toolPageTemplate
+
       - id: testing_others
         sectionId: testing
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
             sectionId: ${sectionId}
+
       # - id: testing-conclusion
       #   template: toolConclusionTemplate
 
@@ -425,24 +457,32 @@
         variables:
           sponsors:
             - electron-v2
+
       - id: react-native
         template: toolPageTemplate
+
       - id: native-apps
         template: toolPageTemplate
+
       - id: cordova
         template: toolPageTemplate
+
       - id: ionic
         template: toolPageTemplate
+
       - id: nwjs
         template: toolPageTemplate
+
       - id: expo
         template: toolPageTemplate
+
       - id: mobile_desktop_others
         sectionId: mobile_desktop
         path: /other-tools
         template: categoryOtherToolsPageTemplate
         variables:
             sectionId: ${sectionId}
+
       # - id: mobiledesktop-conclusion
       #   template: toolConclusionTemplate
 
@@ -453,32 +493,42 @@
         template: pageIntroductionTemplate
         variables:
           pageId: ${id}
+
       - id: utilities
         template: otherToolsTemplate
+
       - id: utilities_others
         template: otherToolsTemplate
         mode: relative
         units: count
+
       - id: text_editors
         template: otherToolsTemplate
+
       - id: text_editors_others
         template: otherToolsTemplate
         mode: relative
         units: count
+
       - id: browsers
         template: otherToolsTemplate
+
       - id: browsers_others
         template: otherToolsTemplate
         mode: relative
         units: count
+
       - id: build_tools
         template: otherToolsTemplate
+
       - id: build_tools_others
         template: otherToolsTemplate
         mode: relative
         units: count
+
       - id: non_js_languages
         template: otherToolsTemplate
+
       - id: non_js_languages_others
         template: otherToolsTemplate
         mode: relative
@@ -491,24 +541,31 @@
         template: pageIntroductionTemplate
         variables:
             pageId: '${id}'
+
       - id: blogs_news_magazines
         template: resourcesTemplate
+
       - id: blogs_news_magazines_others
         template: resourcesTemplate
         mode: relative
         units: count
+
       - id: sites_courses
         template: resourcesTemplate
+
       - id: sites_courses_others
         template: resourcesTemplate
         mode: relative
         units: count
+
       - id: podcasts
         template: resourcesTemplate
+
       - id: podcasts_others
         template: resourcesTemplate
         mode: relative
         units: count
+
       - id: resources-sponsors
         blockType: RecommendedResourcesBlock
         items:
@@ -521,24 +578,31 @@
         template: pageIntroductionTemplate
         variables:
             pageId: '${id}'
+
       - id: js_moving_in_right_direction
         template: opinionTemplate
         bucketKeysName: opinions
+
       - id: building_js_apps_overly_complex
         template: opinionTemplate
         bucketKeysName: opinions
+
       - id: js_over_used_online
         template: opinionTemplate
         bucketKeysName: opinions
+
       - id: enjoy_building_js_apps
         template: opinionTemplate
         bucketKeysName: opinions
+
       - id: would_like_js_to_be_main_lang
         template: opinionTemplate
         bucketKeysName: opinions
+
       - id: js_ecosystem_changing_to_fast
         template: opinionTemplate
         bucketKeysName: opinions
+
       # - id: missing-features
       #   blockType: HorizontalBarBlock
       #   dataKey: features
@@ -550,14 +614,19 @@
         template: pageIntroductionTemplate
         variables:
           pageId: ${id}
+
       - id: feature_adoption
         blockType: AwardBlock
+
       - id: tool_usage
         blockType: AwardBlock
+
       - id: tool_satisfaction
         blockType: AwardBlock
+
       - id: tool_interest
         blockType: AwardBlock
+
       - id: resource_usage
         blockType: AwardBlock
 
