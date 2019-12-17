@@ -531,7 +531,7 @@ translations:
       t: Other Tools
     - key: block.description.category-other-tools
       t: Other tools in this category (freeform answers).
-      
+
     ###########################################################################
     # Other Tools
     ###########################################################################
@@ -822,11 +822,11 @@ translations:
     - key: page.javascript_flavors
       t: JavaScript Flavors
     - key: page.javascript_flavors_others
-      t: Other JavaScript Flavors
+      t: Other Flavors
     - key: page.front_end_frameworks
       t: Front End Frameworks
     - key: page.front_end_frameworks_others
-      t: Other Front End Frameworks
+      t: Other Frameworks
     - key: page.data_layer
       t: Data Layer
     - key: page.data_layer_others
@@ -834,15 +834,15 @@ translations:
     - key: page.back_end_frameworks
       t: Back End Frameworks
     - key: page.back_end_frameworks_others
-      t: Other Back End Frameworks
+      t: Other Frameworks
     - key: page.testing
       t: Testing
     - key: page.testing_others
-      t: Other Testing Tools
+      t: Other Tools
     - key: page.mobile_desktop
       t: Mobile & Desktop
     - key: page.mobile_desktop_others
-      t: Other Mobile & Desktop Tools
+      t: Other Tools
     - key: page.other_tools
       t: Other Tools
     - key: page.environments

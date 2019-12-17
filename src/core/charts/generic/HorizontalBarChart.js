@@ -37,12 +37,16 @@ const TickItem = tick => {
     const { translate } = useI18n()
 
     const { x, y, value, shouldTranslate, i18nNamespace, entity } = tick
-    const { name, homepage, github } = entity
 
-    const link = homepage || github && github.url
-    const itemName = name || value
+    let label, link
 
-    let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : itemName
+    label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : value
+
+    if (entity) {
+        const { name, homepage, github } = entity
+        label = name
+        link = homepage || github && github.url
+    }
 
     label = label.length > labelMaxLength ? label.substr(0, labelMaxLength) + '…' : label
 

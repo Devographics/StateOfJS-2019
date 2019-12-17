@@ -46,7 +46,6 @@ const VerticalBarBlock = ({ block, data }) => {
         return bucket
     })
 
-    console.log(block.id)
     return (
         <Block
             units={units}

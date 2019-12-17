@@ -65,14 +65,14 @@ const BlockLegends = ({
 }
 
 BlockLegends.propTypes = {
-    legends: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-            label: PropTypes.string.isRequired,
-            keyLabel: PropTypes.string,
-            color: PropTypes.string
-        })
-    ).isRequired,
+    // legends: PropTypes.arrayOf(
+    //     PropTypes.shape({
+    //         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    //         label: PropTypes.string.isRequired,
+    //         keyLabel: PropTypes.string,
+    //         color: PropTypes.string
+    //     })
+    // ).isRequired,
     layout: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
     withFrame: PropTypes.bool.isRequired,
     chipSize: PropTypes.number.isRequired,
