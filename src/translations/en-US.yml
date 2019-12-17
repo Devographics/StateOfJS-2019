@@ -1,6 +1,5 @@
 locale: en-US
 translations:
-
     ###########################################################################
     # Tshirt
     ###########################################################################
@@ -177,7 +176,6 @@ translations:
 
     # css proficiency
 
-
     - key: block.title.cssProficiency
       t: CSS Proficiency
     - key: block.description.cssProficiency
@@ -277,7 +275,7 @@ translations:
     - key: block.title.country
       t: Participation by Country
     - key: block.description.country
-      t: Which proportion of survey respondents came from each country. 
+      t: Which proportion of survey respondents came from each country.
     - key: block.title.salary
       t: Salary
     - key: block.description.salary
@@ -298,9 +296,9 @@ translations:
       t: Source
     - key: block.description.source
       t: >
-          How participants found out about the survey (aggregation of self-reported answers and 
+          How participants found out about the survey (aggregation of self-reported answers and
           referrer tracking).
-          
+
           **State of JS** indicates subscribers from our previous surveys, while **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
 
     - key: block.title.jobTitle
@@ -347,14 +345,14 @@ translations:
       t: Usage Overview
     - key: block.description.featuresOverview
       t: >
-          This chart presents the various adoption rates for all features, grouped by category. 
+          This chart presents the various adoption rates for all features, grouped by category.
 
 
           The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it. 
+          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents.
 
     # Features Section Overview
     - key: block.title.featuresSectionOverview
@@ -362,21 +360,20 @@ translations:
     - key: block.description.featuresSectionOverview
       t: >
           The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it. 
+          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackred text-bold">overlay</span> representing the total number of survey respondents. 
-
+          Hover on each node to view detailed data along with an <span class="text-blackred text-bold">overlay</span> representing the total number of survey respondents.
 
     - key: block.title.featuresExperienceHeatmap
       t: Usage by Years Of Experience
     - key: block.description.featuresExperienceHeatmap
       t: |
-        The “overall” column shows overall usage for each feature (respondents who selected “have used it”), 
-        while the following columns show the usage ratio for each “years of experience” bracket. 
+          The “overall” column shows overall usage for each feature (respondents who selected “have used it”),
+          while the following columns show the usage ratio for each “years of experience” bracket.
 
-        A brighter <span class="text-teal text-bold">teal</span> background indicates 
-        a higher-than-overall-average ratio for a given bracket.
+          A brighter <span class="text-teal text-bold">teal</span> background indicates
+          a higher-than-overall-average ratio for a given bracket.
 
     ###########################################################################
     # Tools & Methodologies
@@ -402,28 +399,28 @@ translations:
     - key: block.description.tools_experience_heatmap
       t: |
 
-        The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
-        while the following columns show the usage ratio for each “years of experience” bracket. 
+          The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+          while the following columns show the usage ratio for each “years of experience” bracket.
 
-        A brighter <span class="text-teal text-bold">teal</span> background indicates 
-        a higher-than-overall-average ratio for a given bracket.
+          A brighter <span class="text-teal text-bold">teal</span> background indicates
+          a higher-than-overall-average ratio for a given bracket.
 
     - key: block.title.tools_salary_heatmap
       t: Usage by Salary Range
     - key: block.description.tools_salary_heatmap
       t: |
-        The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”), 
-        while the following columns show the usage ratio for each “yearly salary” bracket. 
+          The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+          while the following columns show the usage ratio for each “yearly salary” bracket.
 
-        A brighter <span class="text-teal text-bold">teal</span> background indicates 
-        a higher-than-overall-average ratio for a given bracket.
+          A brighter <span class="text-teal text-bold">teal</span> background indicates
+          a higher-than-overall-average ratio for a given bracket.
 
     # rankings/bump chart
     - key: block.title.toolExperienceRanking
       t: Rankings
     - key: block.description.toolExperienceRanking
-      t: > 
-        Awareness, interest, and satisfaction ratio rankings. 
+      t: >
+          Awareness, interest, and satisfaction ratio rankings.
     - key: opinions.legends.awareness_ratio
       t: Awareness
     - key: opinions.legends.interest_ratio
@@ -436,22 +433,29 @@ translations:
       t: Sentiment Overview
     - key: block.description.toolsSectionOverview
       t: >
-          Overview of opinions on the tools and methodologies surveyed. <span class="text-teal text-bold">Teal segments</span> represent positive opinions, 
-          while <span class="text-red text-bold">red segments</span> correspond to negative sentiment. 
-          
-          
+          Overview of opinions on the tools and methodologies surveyed. <span class="text-teal text-bold">Teal segments</span> represent positive opinions,
+          while <span class="text-red text-bold">red segments</span> correspond to negative sentiment.
+
+
           The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
-          (excluding respondents unaware of the technology). 
+          (excluding respondents unaware of the technology).
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents. 
-    
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents.
+
+    # movement
+    - key: block.title.toolsArrow
+      t: Tools Changes this Year
+    - key: block.description.toolsArrow
+      t: >
+          How has the ecosystem changed this year? Each arrow below starts where the technology was last year, and points towards its position this year. Points that are higher in the chart have been tried by more people, and points that are further to the right are more liked than points to the left.
+
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
       t: Satisfaction vs Usage
     - key: block.description.scatterplotOverview
       t: >
-          This chart shows each technology’s **satisfaction ratio** over its total **user count**. 
+          This chart shows each technology’s **satisfaction ratio** over its total **user count**.
           It can be divided into four quadrants:
 
           - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
@@ -461,7 +465,7 @@ translations:
           - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
 
           - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
-          
+
     - key: quadrants.assess
       t: Assess
     - key: quadrants.adopt
@@ -476,11 +480,11 @@ translations:
       t: Overall Happiness
     - key: block.description.happiness
       t: |
-        On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
+          On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
 
     # experience
     - key: block.title.toolExperience
-      t: ${name} Experience Over Time 
+      t: ${name} Experience Over Time
     - key: block.description.toolExperience
       t: Respondent's experience with ${name}.
 
@@ -556,7 +560,7 @@ translations:
       t: Other Browsers
     - key: block.description.browsers_others
       t: Other answers (freeform field).
-      
+
     - key: block.title.build_tools
       t: Build Tools
     - key: block.description.build_tools
@@ -600,7 +604,7 @@ translations:
     - key: print-styles.never.short
       t: Never
     - key: print-styles.never.long
-      t:  I (almost) never write print styles
+      t: I (almost) never write print styles
     - key: print-styles.occasionally.short
       t: Occasionally
     - key: print-styles.occasionally.long
@@ -624,7 +628,7 @@ translations:
     - key: email-styles.never.short
       t: Never
     - key: email-styles.never.long
-      t:  I (almost) never write CSS for email clients
+      t: I (almost) never write CSS for email clients
     - key: email-styles.occasionally.short
       t: Occasionally
     - key: email-styles.occasionally.long
@@ -651,7 +655,7 @@ translations:
       t: Other Blogs & Magazines
     - key: block.description.blogs_magazines_others
       t: Other answers (freeform field).
-  
+
     # sites & courses
     - key: block.title.sites_courses
       t: Sites & Courses
@@ -772,7 +776,6 @@ translations:
           With **${items[0].value}** users ${items[0].name}
           is the most used technology this year.
 
-
     # resource_usage
     - key: award.resource-usage.title
       t: Most Used Resource
@@ -867,7 +870,7 @@ translations:
       t: Share by email
     - key: share.image
       t: Get image
-    
+
     # export
     - key: export.export
       t: Export
@@ -877,10 +880,10 @@ translations:
       t: Sorry, CSV export is not available for this dataset.
     - key: export.graphql
       t: >
-        While our internal GraphQL API is not currently public, in the future we are planning 
-        on exposing it to make querying our data easier. If you'd like to hear more, you can 
-        <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
-    
+          While our internal GraphQL API is not currently public, in the future we are planning
+          on exposing it to make querying our data easier. If you'd like to hear more, you can
+          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
+
       # opinion scale
     - key: opinions.0.long
       t: Strongly Disagree
@@ -910,20 +913,20 @@ translations:
       t: Help translate the survey →
     - key: general.not_found
       t: >
-      
-        ## Error 404
-        
-        Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/state-of-css-2019/issues) if you think something might be broken. 
+
+          ## Error 404
+
+          Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/state-of-css-2019/issues) if you think something might be broken.
     - key: general.back_to_intro
       t: Back to introduction
     - key: general.close_nav
       t: Close navigation menu
     - key: general.completion_percentage
-      t: "Completion Percentage:"
+      t: 'Completion Percentage:'
     - key: general.previous
-      t: "Previous:"
+      t: 'Previous:'
     - key: general.next
-      t: "Next:"
+      t: 'Next:'
     - key: general.start
       t: Start
 
@@ -938,7 +941,7 @@ translations:
       t: Learn more.
     - key: block.title.recommendedResources
       t: Recommended Resources
-      
+
     # charts
     - key: block.title.usage-ratio
       t: Usage Ratio Ranking
@@ -970,3 +973,5 @@ translations:
       t: overall
     - key: difference_from_average_usage
       t: 'Difference from overall usage:'
+    - key: all
+      t: 'All'

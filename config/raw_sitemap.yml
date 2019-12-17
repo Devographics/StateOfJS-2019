@@ -23,7 +23,7 @@
 - id: introduction
   path: /
   showTitle: false
-  blocks: 
+  blocks:
     - id: survey-intro
       variables:
         pageId: ${id}
@@ -33,7 +33,7 @@
 - id: tshirt
   showTitle: false
   path: /tshirt
-  blocks: 
+  blocks:
     - id: tshirt-intro
       template: pageIntroductionTemplate
       variables:
@@ -80,9 +80,9 @@
 
 - id: overview
   path: /overview
-  blocks: 
+  blocks:
     - id: toolsArrow
-      blockType: ToolsArrowsBlock
+      template: toolsArrowsTemplate
     - id: scatterplotOverview
       template: scatterplotOverviewTemplate
 
@@ -239,7 +239,7 @@
       - id: typescript
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - typescript-v2
 
       - id: reason
@@ -248,7 +248,7 @@
       - id: elm
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - intro-elm
 
       - id: clojurescript
@@ -271,24 +271,24 @@
       - id: react
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - complete-react-v5
       - id: vuejs
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - vue
       - id: angular
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - angular-core
       - id: preact
         template: toolPageTemplate
       - id: ember
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - ember-octane
       - id: svelte
         template: toolPageTemplate
@@ -309,24 +309,24 @@
       - id: redux
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - intermediate-react-v2
       - id: apollo
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - client-graphql-react
       - id: graphql
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - server-graphql-nodejs
       - id: relay
         template: toolPageTemplate
       - id: mobx
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - redux-mobx
       - id: data_layer
         path: /other-tools
@@ -345,7 +345,7 @@
       - id: express
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - api-design-nodejs-v3
       - id: nextjs
         template: toolPageTemplate
@@ -362,7 +362,7 @@
       - id: gatsby
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - gatsby
       - id: back_end_frameworks
         path: /other-tools
@@ -381,7 +381,7 @@
       - id: jest
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - testing-react
       - id: mocha
         template: toolPageTemplate
@@ -390,7 +390,7 @@
       - id: cypress
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - testing-react
       - id: enzyme
         template: toolPageTemplate
@@ -417,7 +417,7 @@
       - id: electron
         template: toolPageTemplate
         variables:
-          sponsors: 
+          sponsors:
             - electron-v2
       - id: react-native
         template: toolPageTemplate

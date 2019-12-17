@@ -4,7 +4,6 @@
 #
 ###############################################################################
 
-
 pageIntroductionTemplate:
     blockType: PageIntroductionBlock
     dataPath: '${pageId}_introduction.html'
@@ -26,7 +25,6 @@ recommendedResourcesTemplate:
 
     #  note: query does not currently work because sponsor values would need to be
     #  wrapped in quotes
-
     # dataPath: 'resources.edges'
     # query: >
     #     resources: allRecommendedResourcesYaml(filter: {id: {in: [${sponsors}]}}) {
@@ -40,7 +38,6 @@ recommendedResourcesTemplate:
     #             }
     #         }
     #     }
-
 
 ###############################################################################
 #
@@ -106,6 +103,41 @@ scatterplotOverviewTemplate:
                 }
             }
         }
+
+toolsArrowsTemplate:
+    blockType: ToolsArrowsBlock
+    dataPath: 'surveyApi.survey.tools'
+    showDescription: true
+    query: >
+        surveyApi {
+            survey(survey: js, year: 2019) {
+                tools {
+                    id
+                    entity {
+                        name
+                        description
+                        id
+                    }
+                    experience {
+                        thisYear: year(year: 2019) {
+                            buckets {
+                                id
+                                count
+                                percentage
+                            }
+                        }
+                        lastYear: year(year: 2018) {
+                            buckets {
+                                id
+                                count
+                                percentage
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
 
 ###############################################################################
 #
@@ -235,6 +267,30 @@ toolsSectionOverviewTemplate:
                             }
                         }
                     }
+                }
+            }
+        }
+
+toolsMovementTemplate:
+    blockType: ToolsMovementBlock
+    dataPath: 'surveyApi.survey.category.tools.experience.tools'
+    bucketKeysName: toolExperience
+    showLegend: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}, year: ${currentYear}) {
+                    tools {
+                        experience {
+                            year
+                            tools {
+                                id
+                                buckets {
+                                    id
+                                    count
+                                    percentage
+                                }
+                            }
+                        }
                 }
             }
         }
@@ -399,7 +455,6 @@ happinessTemplate:
                 }
             }
         }
-
 
 categoryOtherToolsTemplate:
     blockType: HorizontalBarBlock

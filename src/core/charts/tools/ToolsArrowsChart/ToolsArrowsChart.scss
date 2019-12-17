@@ -1,0 +1,70 @@
+@import "src/stylesheets/colors.scss";
+
+.ToolsArrowsChart {
+  width: 100%;
+  max-width: 50em;
+  margin: auto;
+  overflow: hidden;
+
+  &__svg {
+    fill: $greyLight;
+    overflow: visible;
+  }
+  @keyframes fadeIn {
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  &__axis {
+    stroke: $navyLighter;
+    stroke-width: 1px;
+
+    &__label {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.66em;
+      font-weight: 600;
+      fill-opacity: 0.5;
+      dominant-baseline: middle;
+    }
+  }
+
+  &__arrow {
+    opacity: 0;
+    animation: fadeIn 0.9s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.9s;
+  }
+  @keyframes arrowIn {
+      0% { stroke-dashoffset: -300px; }
+    100% { stroke-dashoffset: 0; }
+  }
+  &__path {
+    fill: none;
+    stroke-width: 1.5px;
+    mix-blend-mode: screen;
+    stroke-linecap: round;
+    stroke-dasharray: 300px 300px;
+    stroke-dashoffset: -300px;
+    animation: arrowIn 0.9s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &__label {
+    font-size: 0.8em;
+    font-weight: 600;
+    // display: none;
+    opacity: 0;
+    animation: fadeIn 0.9s ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.9s;
+
+    &__box {
+      cursor: default;
+
+      text {
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+  }
+}
