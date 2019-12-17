@@ -526,6 +526,12 @@ translations:
     - key: toolExperience.total_respondents.extrashort
       t: Total Respondents
 
+    # other category tools
+    - key: block.title.category-other-tools
+      t: Other Tools
+    - key: block.description.category-other-tools
+      t: Other tools in this category (freeform answers).
+      
     ###########################################################################
     # Other Tools
     ###########################################################################
@@ -643,20 +649,20 @@ translations:
     ###########################################################################
 
     # blogs & magazines
-    - key: block.title.blogs_magazines
+    - key: block.title.blogs_news_magazines
       t: Blogs & Magazines
-    - key: block.description.blogs_magazines
-      t: Which CSS-related blogs/magazines/etc. do you read?
-    - key: block.title.blogs_magazines_others
+    - key: block.description.blogs_news_magazines
+      t: Which JS-related blogs/magazines/etc. do you read?
+    - key: block.title.blogs_news_magazines_others
       t: Other Blogs & Magazines
-    - key: block.description.blogs_magazines_others
+    - key: block.description.blogs_news_magazines_others
       t: Other answers (freeform field).
   
     # sites & courses
     - key: block.title.sites_courses
       t: Sites & Courses
     - key: block.description.sites_courses
-      t: Which CSS-related sites/courses/etc. do you consult?
+      t: Which JS-related sites/courses/etc. do you consult?
     - key: block.title.sites_courses_others
       t: Other Sites & Courses
     - key: block.description.sites_courses_others
@@ -815,16 +821,28 @@ translations:
       t: Other Features
     - key: page.javascript_flavors
       t: JavaScript Flavors
+    - key: page.javascript_flavors_others
+      t: Other JavaScript Flavors
     - key: page.front_end_frameworks
       t: Front End Frameworks
+    - key: page.front_end_frameworks_others
+      t: Other Front End Frameworks
     - key: page.data_layer
       t: Data Layer
+    - key: page.data_layer_others
+      t: Other Data Layer Tools
     - key: page.back_end_frameworks
       t: Back End Frameworks
+    - key: page.back_end_frameworks_others
+      t: Other Back End Frameworks
     - key: page.testing
       t: Testing
+    - key: page.testing_others
+      t: Other Testing Tools
     - key: page.mobile_desktop
       t: Mobile & Desktop
+    - key: page.mobile_desktop_others
+      t: Other Mobile & Desktop Tools
     - key: page.other_tools
       t: Other Tools
     - key: page.environments

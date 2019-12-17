@@ -62,6 +62,15 @@ const BlockTitle = ({
                         {title || translate(`fullcharts.${id}`, { values })}
                     </h3>
                     */}
+                    {isExportable && data && block && (
+                        <BlockExport
+                            id={id}
+                            data={data}
+                            block={block}
+                            title={blockTitle}
+                            className="Block__Title__Export"
+                        />
+                    )}
                     {isShareable && (
                         <ShareBlock
                             id={id}
@@ -71,15 +80,6 @@ const BlockTitle = ({
                             toggleClass={() => {
                                 setShowOptions(!showOptions)
                             }}
-                        />
-                    )}
-                    {isExportable && data && block && (
-                        <BlockExport
-                            id={id}
-                            data={data}
-                            block={block}
-                            title={blockTitle}
-                            className="Block__Title__Export"
                         />
                     )}
                 </div>
