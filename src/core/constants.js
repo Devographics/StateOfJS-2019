@@ -75,16 +75,15 @@ export const colorRange = [
 
 export const distinctColors = [
     colors.indigo,
-    colors.teal,
     colors.pink,
     colors.red,
-    colors.green,
-    colors.yellow,
-    colors.aqua,
+    colors.purple,
     colors.orange,
     colors.olive,
     colors.skyblue,
-    colors.purple
+    colors.yellow,
+    colors.green,
+    colors.teal,
 ]
 
 export const pinkRange = [colors.pinkLightest, colors.pinkLighter, colors.pinkLight, colors.pink]
@@ -100,14 +99,6 @@ export const colorScale = [
     '#ca4040'
 ]
 
-export const opinionsColorScale = [
-    colors.blueDark,
-    colors.blue,
-    colors.blueLight,
-    colors.blueLighter,
-    colors.pinkLightest
-]
-
 export const mainColors = {
     textColor: colors.grey,
     activeColor: colors.teal,
@@ -121,6 +112,14 @@ export const categoryColors = [
     { id: 'back_end_frameworks', color: distinctColors[3] },
     { id: 'testing', color: distinctColors[4] },
     { id: 'mobile_desktop', color: distinctColors[5] }
+]
+
+export const featureCategoryColors = [
+    { id: 'syntax', color: distinctColors[0] },
+    { id: 'language', color: distinctColors[1] },
+    { id: 'data_structures', color: distinctColors[2] },
+    { id: 'browser_apis', color: distinctColors[3] },
+    { id: 'other_features', color: distinctColors[4] }
 ]
 
 export const otherColors = [
@@ -171,9 +170,14 @@ export const otherColors = [
 ]
 
 export const getColor = id =>
-    [...featureExperience, ...toolExperience, ...otherColors, ...gender, ...categoryColors].find(
-        color => color.id === id
-    ).color
+    [
+        ...featureExperience,
+        ...toolExperience,
+        ...otherColors,
+        ...gender,
+        ...categoryColors,
+        ...featureCategoryColors
+    ].find(color => color.id === id).color
 
 /*
 
@@ -190,7 +194,7 @@ export const salaryArray = [
     'more_than_200'
 ]
 
-const companySizeArray = [
+export const companySizeArray = [
     '1',
     '1_5',
     '5_10',
@@ -201,27 +205,27 @@ const companySizeArray = [
     'more_than_1000'
 ]
 
-const workExperienceArray = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+export const workExperienceArray = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
 
-const environmentUsageArray = ['never', 'occasionally', 'often', 'mainly']
+export const environmentUsageArray = ['never', 'occasionally', 'often', 'mainly']
 
-const jobTitleArray = [
+export const jobTitleArray = [
     'front_end_developer_engineer',
     'full_stack_developer_engineer',
     'back_end_developer_engineer',
     'web_developer'
 ]
 
-const zeroToFiveRange = [0, 1, 2, 3, 4]
+export const zeroToFiveRange = [0, 1, 2, 3, 4]
 
-const cssProficiencyArray = zeroToFiveRange
-const backendProficiencyArray = zeroToFiveRange
-const opinions = [
-    { id: 0, color: colors.blueDark },
-    { id: 1, color: colors.blue },
-    { id: 2, color: colors.blueLight },
-    { id: 3, color: colors.blueLighter },
-    { id: 4, color: colors.pinkLightest }
+export const cssProficiencyArray = zeroToFiveRange
+export const backendProficiencyArray = zeroToFiveRange
+export const opinions = [
+    { id: 4, color: colors.red },
+    { id: 3, color: colors.redLight },
+    { id: 2, color: colors.grey },
+    { id: 1, color: colors.tealLight },
+    { id: 0, color: colors.teal }
 ]
 
 export const featureExperience = [
@@ -253,19 +257,19 @@ const featureExperienceSimplified = [
 export const toolExperience = [
     {
         id: 'would_use',
-        color: colors.teal
-    },
-    {
-        id: 'would_not_use',
         color: colors.red
     },
     {
+        id: 'would_not_use',
+        color: colors.redLight
+    },
+    {
         id: 'interested',
-        color: colors.tealLight
+        color: colors.teal
     },
     {
         id: 'not_interested',
-        color: colors.redLight
+        color: colors.tealLight
     },
     {
         id: 'never_heard',

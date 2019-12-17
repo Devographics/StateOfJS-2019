@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import Block from 'core/blocks/block/Block'
 import FeaturesOverviewCirclePackingChart from 'core/charts/features/FeaturesOverviewCirclePackingChart'
 import { useI18n } from 'core/i18n/i18nContext'
-import { colors } from 'core/constants.js'
+import { colors, getColor } from 'core/constants.js'
 import { useEntities } from 'core/entities/entitiesContext'
 import ChartContainer from 'core/charts/ChartContainer'
 import variables from '../../../../config/variables.yml'
@@ -21,15 +21,16 @@ const getChartData = (data, getName, translate) => {
                 const buckets = get(feature, 'experience.year.buckets')
                 const usageBucket = buckets.find(b => b.id === 'used')
                 const knowNotUsedBucket = buckets.find(b => b.id === 'heard')
-
+                console.log(feature)
                 return {
                     id: feature.id,
                     awareness: usageBucket.count + knowNotUsedBucket.count,
                     awarenessColor: colors.teal,
                     usage: usageBucket.count,
-                    usageColor: colors.blue,
+                    usageColor: getColor(sectionId),
                     unusedCount: knowNotUsedBucket.count,
-                    name: getName(feature.id)
+                    name: feature.name,
+                    sectionId,
                 }
             })
 

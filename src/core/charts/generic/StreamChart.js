@@ -12,7 +12,7 @@ const Dot = ({ x, y, data, current, units }) => {
     if (availableHeight < 8 && current === null) return null
 
     let label = data.value
-    if (units === 'percents') {
+    if (units === 'percentage') {
         label = `${label}%`
     }
 
@@ -82,7 +82,7 @@ const StreamChart = ({ data, keys, units, className, current, colorScale, namesp
     }
 
     const getLayerColor = ({ index }) => {
-        if (current !== null && current !== keys[index]) {
+        if (current !== null && current !== `${namespace}.${keys[index]}`) {
             return `${colorScale[index]}33`
         }
         return colorScale[index]

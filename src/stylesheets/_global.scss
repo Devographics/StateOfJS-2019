@@ -135,10 +135,13 @@ Page-specific styles
 }
 
 .main-logo-wrapper{
-    max-width: 500px;
+    max-width: 350px;
     margin: 0 auto $spacing*2 auto;
 }
-
+.logo-image{
+    display: block;
+    width: 100%;
+}
 .error{
     color: $red;
     border: 3px solid $redLighter;

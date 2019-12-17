@@ -42,17 +42,17 @@ const Tooltip = props => {
             <div>
                 <h4 className="Tooltip__Heading">{name}</h4>
                 <div className="Tooltip__Item">
-                    <Chip color={getColor('know_not_used')} />
+                    <Chip color={`${getColor(data.sectionId)}50`} />
                     {translate('features.usage.know_it')}:{' '}
                     <strong className="Tooltip__Value">{awareness}</strong>
                 </div>
                 <div className="Tooltip__Item">
-                    <Chip color={getColor('used_it')} />
+                    <Chip color={getColor(data.sectionId)} />
                     {translate('features.usage.used_it')}:{' '}
                     <strong className="Tooltip__Value">{usage}</strong>
                 </div>
                 <div className="Tooltip__Item">
-                    <Chip color={getColor('know_not_used')} color2={getColor('used_it')} />
+                    <Chip color={`${getColor(data.sectionId)}50`} color2={getColor(data.sectionId)} />
                     {translate('features.usage.ratio')}:{' '}
                     <strong className="Tooltip__Value">
                         {round((usage / awareness) * 100, 1)}%
@@ -145,10 +145,10 @@ const Node = ({ node, handlers }) => {
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            <TotalCircle radius={totalRadius} id={node.data.id} />
+            {/* <TotalCircle radius={totalRadius} id={node.data.id} /> */}
 
-            <circle r={node.r} fill={getColor('know_not_used')} />
-            <circle r={usageRadius} fill={getColor('used_it')} />
+            <circle r={node.r} fill={`${getColor(node.data.sectionId)}50`} />
+            <circle r={usageRadius} fill={`${getColor(node.data.sectionId)}`} />
             <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
         </g>
     )

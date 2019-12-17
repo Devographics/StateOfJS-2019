@@ -192,6 +192,7 @@ featuresOverviewTemplate:
             survey(survey: ${surveyType}, year: ${currentYear}) {
                 features {
                     id
+                    name
                     experience{
                         year(year: ${currentYear}) {
                             year

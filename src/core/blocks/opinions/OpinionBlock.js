@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import StreamChart from 'core/charts/generic/StreamChart'
-import { keys, opinionsColorScale } from 'core/constants.js'
+import { keys } from 'core/constants.js'
 
 const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const { id, bucketKeysName = id } = block
@@ -28,12 +28,13 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
         >
             <ChartContainer height={300} fit={true}>
                 <StreamChart
-                    colorScale={opinionsColorScale}
+                    colorScale={bucketKeys.map(k => k.color)}
                     current={current}
                     data={data}
                     keys={bucketKeys.map(key => key.id)}
                     units={units}
                     applyEmptyPatternTo="never_heard"
+                    namespace={bucketKeysName}
                 />
             </ChartContainer>
         </Block>
