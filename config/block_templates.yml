@@ -156,18 +156,10 @@ toolsArrowsTemplate:
                         id
                     }
                     experience {
-                        thisYear: year(year: 2019) {
+                        allYears {
                             buckets {
-                                id
-                                count
                                 percentage
-                            }
-                        }
-                        lastYear: year(year: 2018) {
-                            buckets {
                                 id
-                                count
-                                percentage
                             }
                         }
                     }

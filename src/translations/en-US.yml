@@ -461,10 +461,10 @@ translations:
 
     # movement
     - key: block.title.toolsArrow
-      t: Tools Changes this Year
+      t: Changes Over Time
     - key: block.description.toolsArrow
       t: >
-          How has the ecosystem changed this year? Each arrow below starts where the technology was last year, and points towards its position this year. Points that are higher in the chart have been tried by more people, and points that are further to the right are more liked than points to the left.
+          How has the ecosystem changed since 2016? Each line below starts in its position this year, and extends back through the years until the first year we surveyed about it. Points that are higher in the chart have been tried by more people, and points that are further to the right are more liked than points to the left.
 
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview

@@ -3,6 +3,7 @@
 .ToolsArrowsChart {
   width: 100%;
   max-width: 50em;
+  min-height: 20em;
   margin: auto;
   overflow: hidden;
 
@@ -36,18 +37,37 @@
     animation-delay: 0.9s;
   }
   @keyframes arrowIn {
-      0% { stroke-dashoffset: -300px; }
+      0% { stroke-dashoffset: -20px; }
     100% { stroke-dashoffset: 0; }
   }
   &__path {
     fill: none;
-    stroke-width: 1.5px;
+    stroke-width: 4.5px;
     mix-blend-mode: screen;
     stroke-linecap: round;
-    stroke-dasharray: 300px 300px;
-    stroke-dashoffset: -300px;
+    stroke-linejoin: round;
+    stroke-dasharray: 20px 20px;
+    stroke-dashoffset: -20px;
     animation: arrowIn 0.9s ease-out;
     animation-fill-mode: forwards;
+    opacity: 0.6;
+  }
+  &__gradient-line {
+    fill: none;
+    stroke-width: 4.5px;
+    mix-blend-mode: lighten;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 20px 20px;
+    stroke-dashoffset: -20px;
+    animation: arrowIn 0.2s ease-out;
+    animation-fill-mode: forwards;
+
+    @for $i from 0 to 100 {
+      &--nth-#{$i} {
+        animation-delay: #{$i * 0.04}s;
+      }
+    }
   }
   &__label {
     font-size: 0.8em;

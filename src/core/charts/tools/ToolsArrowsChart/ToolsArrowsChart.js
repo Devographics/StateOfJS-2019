@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { scaleLinear } from 'd3-scale'
-import map from 'lodash/map'
+import map from "lodash/map"
+import range from "lodash/range"
+import flatten from "lodash/flatten"
 import { extent, max, sum } from 'd3-array'
 import { toolsCategories } from '../../../../../config/variables.yml'
 import offsets from './toolsArrowsLabelOffsets.json'
@@ -14,6 +16,17 @@ map(toolsCategories, (tools, category) => {
         toolToCategoryMap[tool] = category
     })
 })
+let categoryColorMap = {}
+let categoryColorScales = {}
+map(toolsCategories, (tools, category) => {
+    const color = getColor(category)
+    categoryColorMap[category] = color
+    categoryColorScales[category] = scaleLinear()
+        .domain([0, 40])
+        .range([color, "#303652"])
+        .clamp(true)
+})
+
 
 const margins = {
     marginTop: 20,
@@ -30,19 +43,21 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
         toolNames[tool.id] = tool.entity.name
     })
 
-    const points = useMemo(
-        () =>
-            data.map(tool =>
-                ['lastYear', 'thisYear'].map(year => {
-                    const buckets = (tool.experience[year] || {}).buckets || []
-                    const points = buckets.map(status =>
-                        conditionDiffs[status.id].map(d => d * status.percentage)
-                    )
-                    return [sum(points.map(d => d[0])), sum(points.map(d => d[1]))]
-                })
-            ),
-        [data]
-    )
+    const points = useMemo(() => (
+        data.map(tool => (
+            tool.experience.allYears.map(({ buckets }) => {
+                const points = buckets.map(({ id, percentage }) => (
+                    conditionDiffs[id].map(d => (
+                        d * percentage
+                    ))
+                ))
+                return [
+                    sum(points.map(d => d[0])),
+                    sum(points.map(d => d[1])),
+                ]
+            })
+        ))
+    ), [data])
 
     const scales = useMemo(() => {
         const xExtent = extent(points.flat().map(d => d[0]))
@@ -66,10 +81,6 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
     return (
         <div ref={ref} className="ToolsArrowsChart">
             <svg className="ToolsArrowsChart__svg" height={dms.height} width={dms.width}>
-                <defs>
-                    <path id="ToolsArrowsChart__arrow" d="M 0 -9 L 4 0 L -4 0 Z" />
-                </defs>
-
                 <g transform={`translate(${dms.marginLeft}, ${dms.marginTop})`}>
                     <line
                         className="ToolsArrowsChart__axis"
@@ -121,48 +132,58 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         const tool = tools[i]
                         const toolName = toolNames[tool]
                         const category = toolToCategoryMap[tool]
-                        if (activeCategory != 'all' && activeCategory != category) return
+                        if (!points.length) return null
+                        if (activeCategory != "all" && activeCategory != category) return null
 
-                        const [lastYearPoint, thisYearPoint] = points
-                        const x1 = scales.x(lastYearPoint[0] || thisYearPoint[0])
-                        const x2 = scales.x(thisYearPoint[0])
-                        const y1 = scales.y(lastYearPoint[1] || thisYearPoint[1])
-                        const y2 = scales.y(thisYearPoint[1])
-                        const xDiff = x2 - x1
-                        const yDiff = y2 - y1
-                        const angle = (Math.atan2(yDiff, xDiff) * 180) / Math.PI + 90
-                        const color = getColor(category)
+                        const thisYearPoint = points.slice(-1)[0]
+                        const circles = flatten(
+                            points.map(([x, y], i) => {
+                                const nextPoint = points[i + 1]
+                                if (!nextPoint) return []
+                                const xScale = scaleLinear()
+                                    .domain([0, 20])
+                                    .range([x, nextPoint[0]])
+                                const yScale = scaleLinear()
+                                    .domain([0, 20])
+                                    .range([y, nextPoint[1]])
+                                return range(0, 21).map(i => [
+                                    scales.x(xScale(i)),
+                                    scales.y(yScale(i)),
+                                ])
+                            })
+                        )
+
+                        const x = scales.x(thisYearPoint[0])
+                        const y = scales.y(thisYearPoint[1])
+                        const color = categoryColorMap[category]
+                        const colorScale = categoryColorScales[category]
 
                         return (
                             <g>
-                                <line
-                                    className="ToolsArrowsChart__path"
-                                    key={i}
-                                    x1={x2}
-                                    x2={x1}
-                                    y1={y2}
-                                    y2={y1}
-                                    stroke={color}
-                                    title={toolName}
-                                />
-                                <use
-                                    href="#ToolsArrowsChart__arrow"
-                                    className="ToolsArrowsChart__arrow"
-                                    x={x2}
-                                    y={y2}
-                                    style={{
-                                        transformOrigin: `${x2}px ${y2}px`
-                                    }}
-                                    transform={`rotate(${angle})`}
+                                {circles.slice(0, -1).map(([ x, y ], i) => (
+                                    <line
+                                        className={`ToolsArrowsChart__gradient-line ToolsArrowsChart__gradient-line--nth-${circles.length - i}`}
+                                        x1={x}
+                                        y1={y}
+                                        x2={(circles[i + 1] || [])[0]}
+                                        y2={(circles[i + 1] || [])[1]}
+                                        stroke={colorScale(circles.length - i)}
+                                    />
+                                ))}
+                                <circle
+                                    cx={x}
+                                    cy={y}
                                     fill={color}
-                                    title={toolName}
+                                    r="6"
                                 />
                                 <text
                                     className="ToolsArrowsChart__label"
                                     fill={color}
-                                    transform={`translate(${x2 +
-                                        ((offsets[tools[i]] || {}).x || 0)}, ${y2 +
-                                        ((offsets[tools[i]] || {}).y || 0)})`}
+                                    transform={`translate(${
+                                        x + ((offsets[tools[i]] || {}).x || 0)
+                                    }, ${
+                                        y + ((offsets[tools[i]] || {}).y || 0)
+                                    })`}
                                 >
                                     {toolName}
                                 </text>
