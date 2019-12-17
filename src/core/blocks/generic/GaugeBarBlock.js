@@ -8,6 +8,7 @@ import ChartContainer from 'core/charts/ChartContainer'
 const GaugeBarBlock = ({ block, data }) => {
     const { id, units: defaultUnits = 'percentage' } = block
     const [units, setUnits] = useState(defaultUnits)
+
     return (
         <Block units={units} setUnits={setUnits} data={data.buckets} block={block}>
             <ChartContainer height={200} fit={true}>

@@ -4,7 +4,6 @@ import { ResponsiveBump } from '@nivo/bump'
 import theme from 'nivoTheme'
 
 const ToolsExperienceRankingChart = ({ data }) => {
-
     return (
         <ResponsiveBump
             data={data}

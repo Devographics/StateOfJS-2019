@@ -45,24 +45,24 @@ toolSectionTemplate:
           blockName: workExperience
           template: heatmapTemplate
           variables:
-              heatmapId: 'workExperience'
-              sectionId: '${id}'
+              subject: tools
+              heatmapId: workExperience
               toolIds: ${toolIds}
 
         - id: '${id}-salary-heatmap'
           blockName: salary
           template: heatmapTemplate
           variables:
-              heatmapId: 'salary'
-              sectionId: '${id}'
+              subject: tools
+              heatmapId: salary
               toolIds: ${toolIds}
 
         - id: '${id}-company-size-heatmap'
           blockName: companySize
           template: heatmapTemplate
           variables:
-              heatmapId: 'companySize'
-              sectionId: '${id}'
+              subject: tools
+              heatmapId: companySize
               toolIds: ${toolIds}
 
         # - id: '${id}-scatterplot'
@@ -89,7 +89,7 @@ toolSectionTemplate:
 toolPageTemplate:
     showTitle: false
     defaultVariables:
-      sponsors: []
+        sponsors: []
     blocks:
         - id: ${id}-header
           variables:
@@ -110,13 +110,13 @@ toolPageTemplate:
         #       toolIds: ${toolIds}
         - id: '${id}_recommended_resources'
           template: recommendedResourcesTemplate
-          variables: 
-            sponsors: ${sponsors}
+          variables:
+              sponsors: ${sponsors}
 
 # Other Tools (/front-end/others, /data-layer/others, etc.)
 categoryOtherToolsPageTemplate:
     defaultVariables:
-      sponsors: []
+        sponsors: []
     blocks:
         - id: ${id}-other-tools
           blockName: category-other-tools
@@ -125,5 +125,5 @@ categoryOtherToolsPageTemplate:
               sectionId: ${sectionId}
         - id: '${id}_recommended_resources'
           template: recommendedResourcesTemplate
-          variables: 
-            sponsors: ${sponsors}
+          variables:
+              sponsors: ${sponsors}

@@ -111,33 +111,49 @@ translations:
       t: One employee
     - key: companySize.1.short
       t: one
+    - key: companySize.1.shorter
+      t: '1'
     - key: companySize.1_5.long
       t: 1 to 5 employees
     - key: companySize.1_5.short
+      t: 1~5
+    - key: companySize.1_5.shorter
       t: 1~5
     - key: companySize.5_10.long
       t: 5 to 10 employees
     - key: companySize.5_10.short
       t: 5~10
+    - key: companySize.5_10.shorter
+      t: 5~10
     - key: companySize.10_20.long
       t: 10 to 20 employees
     - key: companySize.10_20.short
+      t: 10~20
+    - key: companySize.10_20.shorter
       t: 10~20
     - key: companySize.20_50.long
       t: 20 to 50 employees
     - key: companySize.20_50.short
       t: 20~50
+    - key: companySize.20_50.shorter
+      t: 20~50
     - key: companySize.50_100.long
       t: 50 to 100 employees
     - key: companySize.50_100.short
+      t: 50~100
+    - key: companySize.50_100.shorter
       t: 50~100
     - key: companySize.100_1000.long
       t: 100 to 1000 employees
     - key: companySize.100_1000.short
       t: 100~1000
+    - key: companySize.100_1000.shorter
+      t: 100~1000
     - key: companySize.more_than_1000.long
       t: More than 1000 employees
     - key: companySize.more_than_1000.short
+      t: 1000+
+    - key: companySize.more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
       t: Number of Employees

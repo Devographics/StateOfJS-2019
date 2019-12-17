@@ -7,12 +7,7 @@ import ToolsSectionOverviewChart from 'core/charts/tools/ToolsSectionOverviewCha
 const ToolsSectionOverviewBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
     return (
-        <Block
-            units={units}
-            setUnits={setUnits}
-            block={block}
-            data={data}
-        >
+        <Block units={units} setUnits={setUnits} block={block} data={data}>
             <ChartContainer height={400} fit={true}>
                 <ToolsSectionOverviewChart data={data} units={units} />
             </ChartContainer>

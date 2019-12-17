@@ -34,8 +34,8 @@ const getChartData = (data, translate, getName) => {
 
                 // get count for a given bucket
                 const getCount = id => {
-                    return (buckets && buckets.find(b => b.id === id).count)
-                } 
+                    return buckets && buckets.find(b => b.id === id).count
+                }
 
                 const usersCount = getCount('would_use') + getCount('would_not_use')
                 const satisfactionPercentage = round((getCount('would_use') / usersCount) * 100, 2)
@@ -49,12 +49,14 @@ const getChartData = (data, translate, getName) => {
 
                 return node
             })
-        return categoryData.length > 0 ? {
-            id: categoryId,
-            name: translate(`page.${categoryId}`),
-            color: getColor(categoryId),
-            data: compact(categoryData),
-        } : null
+        return categoryData.length > 0
+            ? {
+                  id: categoryId,
+                  name: translate(`page.${categoryId}`),
+                  color: getColor(categoryId),
+                  data: compact(categoryData)
+              }
+            : null
     })
     return compact(allTools)
 }

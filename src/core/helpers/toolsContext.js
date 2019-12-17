@@ -7,16 +7,16 @@ export const ToolsContext = createContext()
 
 const toolsQuery = graphql`
     query {
-      surveyApi {
-        survey(survey: js, year: 2019) {
-            tools{
-              id
-              entity{
-                name
-              }
+        surveyApi {
+            survey(survey: js, year: 2019) {
+                tools {
+                    id
+                    entity {
+                        name
+                    }
+                }
             }
         }
-      }
     }
 `
 

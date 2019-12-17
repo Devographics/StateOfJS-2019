@@ -25,7 +25,7 @@ const Pagination = ({ position, toggleSidebar }) => {
     }
 
     let next = <span />
-    if (context.next !== undefined&& !isEmpty(context.next)) {
+    if (context.next !== undefined && !isEmpty(context.next)) {
         next = (
             <PageLink page={context.next} className="pagination__link pagination__next">
                 {/* <span className="pagination__link__label pagination__link__label--full">

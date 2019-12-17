@@ -14,7 +14,7 @@ const Block = ({
     data,
     block = {},
     legendProps,
-    titleProps,
+    titleProps
 }) => {
     const { id, showLegend } = block
 
@@ -32,13 +32,8 @@ const Block = ({
             <div className="Block__Contents">
                 {error ? <div className="error">{error}</div> : children}
             </div>
-            {(showLegend) && (
-                <BlockLegends
-                    block={block}
-                    data={data}
-                    units={units}
-                    {...legendProps}
-                />
+            {showLegend && (
+                <BlockLegends block={block} data={data} units={units} {...legendProps} />
             )}
         </div>
     )

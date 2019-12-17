@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from 'react'
 import PropTypes from 'prop-types'
-import { keys } from 'core/constants.js'
+import { salaryArray, workExperienceArray, companySizeArray } from 'core/constants.js'
 // import { useI18n } from 'core/i18n/i18nContext'
 import { useEntities } from 'core/entities/entitiesContext'
 import Block from 'core/blocks/block/Block'
@@ -9,16 +9,16 @@ import sortBy from 'lodash/sortBy'
 
 const configByType = {
     salary: {
-        keys: keys.salary,
+        keys: salaryArray,
         i18nNamespace: 'salary'
     },
     workExperience: {
-        keys: keys.workExperience,
-        i18nNamespace: 'years-of-experience'
+        keys: workExperienceArray,
+        i18nNamespace: 'workExperience'
     },
     companySize: {
-        keys: keys.companySize,
-        i18nNamespace: 'company-size'
+        keys: companySizeArray,
+        i18nNamespace: 'companySize'
     }
 }
 
@@ -90,20 +90,15 @@ const HeatmapBlock = ({ block, data }) => {
     //     getName
     // ])
 
-    // console.log({ block, data, config })
+    console.log({ block, data, config })
 
     return (
-        <Block
-            // title={translate(`block.title.${block.subject}_${block.heatmapType}_heatmap`)}
-            // description={translate(
-            //     `block.description.${block.subject}_${block.heatmapType}_heatmap`
-            // )}
-            data={data.buckets}
-            block={block}
-        >
-            <div>TODO</div>
-            {/* <HeatmapChart keys={config.keys} data={data.buckets} i18nNamespace={config.i18nNamespace} /> */}
-            {/* <HeatmapChart keys={heatmapKeys} data={data.buckets} /> */}
+        <Block data={data.buckets} block={block}>
+            <HeatmapChart
+                keys={config.keys}
+                data={data.buckets}
+                i18nNamespace={config.i18nNamespace}
+            />
         </Block>
     )
 }
@@ -111,8 +106,10 @@ const HeatmapBlock = ({ block, data }) => {
 HeatmapBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        heatmapType: PropTypes.oneOf(['experience', 'salary']).isRequired,
-        subject: PropTypes.oneOf(['tools', 'features']).isRequired
+        variables: PropTypes.shape({
+            subject: PropTypes.oneOf(['tools', 'features']).isRequired,
+            heatmapId: PropTypes.oneOf(['workExperience', 'salary', 'companySize']).isRequired
+        }).isRequired
     }).isRequired,
     data: PropTypes.shape({
         year: PropTypes.number.isRequired,
@@ -124,9 +121,9 @@ HeatmapBlock.propTypes = {
                     PropTypes.shape({
                         range: PropTypes.string.isRequired,
                         count: PropTypes.number.isRequired,
-                        percentage: PropTypes.number.isRequired,
+                        percentage: PropTypes.number.isRequired
                     })
-                ).isRequired,
+                ).isRequired
             })
         ).isRequired
     })

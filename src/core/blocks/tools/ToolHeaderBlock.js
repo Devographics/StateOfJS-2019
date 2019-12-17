@@ -8,7 +8,7 @@ import get from 'lodash/get'
 const starsFormatter = format('.2s')
 
 const ToolHeaderBlock = ({ block, data }) => {
-  const { translate } = useI18n()
+    const { translate } = useI18n()
 
     const toolId = get(block, 'variables.toolId')
     const toolName = get(data, 'entity.name')

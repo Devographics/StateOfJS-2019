@@ -2,7 +2,11 @@ import React from 'react'
 import { useI18n } from 'core/i18n/i18nContext'
 import ReactMarkdown from 'react-markdown/with-html'
 
-const images = ['stateofjs2019tshirt1.jpg', 'stateofjs2019tshirt2.jpg', 'stateofjs2019tshirt-illustration.png']
+const images = [
+    'stateofjs2019tshirt1.jpg',
+    'stateofjs2019tshirt2.jpg',
+    'stateofjs2019tshirt-illustration.png'
+]
 
 const TshirtBlock = () => {
     const { translate } = useI18n()

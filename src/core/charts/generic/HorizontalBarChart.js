@@ -47,7 +47,7 @@ const TickItem = tick => {
         if (name) {
             label = name
         }
-        link = homepage || github && github.url
+        link = homepage || (github && github.url)
     }
 
     label = label.length > labelMaxLength ? label.substr(0, labelMaxLength) + '…' : label
@@ -123,7 +123,7 @@ const HorizontalBarChart = ({
                 borderRadius={1}
                 axisTop={{
                     tickValues: 5,
-                    format: formatValue,
+                    format: formatValue
                 }}
                 axisBottom={{
                     tickValues: 5,

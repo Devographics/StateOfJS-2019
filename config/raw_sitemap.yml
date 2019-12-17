@@ -1,3 +1,5 @@
+--- # ------------------------------------------------------------------------------------
+
 # ------------------------------------------------------------------------------------
 # Pages Properties
 # - id: the unique (survey-wide) ID of the page
@@ -19,28 +21,26 @@
 # - showLegend: whether to show the block's legend
 # - showDescription: whether to show the block's description
 # - blockTemplate: a template from which to inherit its properties
-# ------------------------------------------------------------------------------------
-
 - id: introduction
   path: /
   showTitle: false
   blocks:
-    - id: survey-intro
-      variables:
-        pageId: ${id}
-      template: pageIntroductionTemplate
-      blockType: SurveyIntroBlock
+      - id: survey-intro
+        variables:
+            pageId: ${id}
+        template: pageIntroductionTemplate
+        blockType: SurveyIntroBlock
 
 - id: tshirt
   showTitle: false
   path: /tshirt
   blocks:
-    - id: tshirt-intro
-      template: pageIntroductionTemplate
-      variables:
-        pageId: ${id}
-    - id: tshirt-block
-      blockType: TshirtBlock
+      - id: tshirt-intro
+        template: pageIntroductionTemplate
+        variables:
+            pageId: ${id}
+      - id: tshirt-block
+        blockType: TshirtBlock
 
 - id: demographics
   path: /demographics
@@ -48,7 +48,7 @@
       - id: demographics-intro
         template: pageIntroductionTemplate
         variables:
-          pageId: ${id}
+            pageId: ${id}
       - id: country
         template: demographicsTemplate
         blockType: ParticipationByCountryBlock
@@ -82,10 +82,10 @@
 - id: overview
   path: /overview
   blocks:
-    - id: toolsArrow
-      template: toolsArrowsTemplate
-    - id: scatterplotOverview
-      template: scatterplotOverviewTemplate
+      - id: toolsArrow
+        template: toolsArrowsTemplate
+      - id: scatterplotOverview
+        template: scatterplotOverviewTemplate
 
 - id: features
   path: /features
@@ -240,8 +240,8 @@
       - id: typescript
         template: toolPageTemplate
         variables:
-          sponsors:
-            - typescript-v2
+            sponsors:
+                - typescript-v2
 
       - id: reason
         template: toolPageTemplate
@@ -249,8 +249,8 @@
       - id: elm
         template: toolPageTemplate
         variables:
-          sponsors:
-            - intro-elm
+            sponsors:
+                - intro-elm
 
       - id: clojurescript
         template: toolPageTemplate
@@ -274,20 +274,20 @@
       - id: react
         template: toolPageTemplate
         variables:
-          sponsors:
-            - complete-react-v5
+            sponsors:
+                - complete-react-v5
 
       - id: vuejs
         template: toolPageTemplate
         variables:
-          sponsors:
-            - vue
+            sponsors:
+                - vue
 
       - id: angular
         template: toolPageTemplate
         variables:
-          sponsors:
-            - angular-core
+            sponsors:
+                - angular-core
 
       - id: preact
         template: toolPageTemplate
@@ -295,8 +295,8 @@
       - id: ember
         template: toolPageTemplate
         variables:
-          sponsors:
-            - ember-octane
+            sponsors:
+                - ember-octane
 
       - id: svelte
         template: toolPageTemplate
@@ -320,20 +320,20 @@
       - id: redux
         template: toolPageTemplate
         variables:
-          sponsors:
-            - intermediate-react-v2
+            sponsors:
+                - intermediate-react-v2
 
       - id: apollo
         template: toolPageTemplate
         variables:
-          sponsors:
-            - client-graphql-react
+            sponsors:
+                - client-graphql-react
 
       - id: graphql
         template: toolPageTemplate
         variables:
-          sponsors:
-            - server-graphql-nodejs
+            sponsors:
+                - server-graphql-nodejs
 
       - id: relay
         template: toolPageTemplate
@@ -341,8 +341,8 @@
       - id: mobx
         template: toolPageTemplate
         variables:
-          sponsors:
-            - redux-mobx
+            sponsors:
+                - redux-mobx
 
       - id: data_layer_others
         sectionId: data_layer
@@ -363,8 +363,8 @@
       - id: express
         template: toolPageTemplate
         variables:
-          sponsors:
-            - api-design-nodejs-v3
+            sponsors:
+                - api-design-nodejs-v3
 
       - id: nextjs
         template: toolPageTemplate
@@ -387,8 +387,8 @@
       - id: gatsby
         template: toolPageTemplate
         variables:
-          sponsors:
-            - gatsby
+            sponsors:
+                - gatsby
 
       - id: back_end_frameworks_others
         sectionId: back_end_frameworks
@@ -409,8 +409,8 @@
       - id: jest
         template: toolPageTemplate
         variables:
-          sponsors:
-            - testing-react
+            sponsors:
+                - testing-react
 
       - id: mocha
         template: toolPageTemplate
@@ -421,8 +421,8 @@
       - id: cypress
         template: toolPageTemplate
         variables:
-          sponsors:
-            - testing-react
+            sponsors:
+                - testing-react
 
       - id: enzyme
         template: toolPageTemplate
@@ -455,8 +455,8 @@
       - id: electron
         template: toolPageTemplate
         variables:
-          sponsors:
-            - electron-v2
+            sponsors:
+                - electron-v2
 
       - id: react-native
         template: toolPageTemplate
@@ -492,7 +492,7 @@
       - id: other-tools-intro
         template: pageIntroductionTemplate
         variables:
-          pageId: ${id}
+            pageId: ${id}
 
       - id: utilities
         template: otherToolsTemplate
@@ -613,7 +613,7 @@
       - id: awards-intro
         template: pageIntroductionTemplate
         variables:
-          pageId: ${id}
+            pageId: ${id}
 
       - id: feature_adoption
         blockType: AwardBlock

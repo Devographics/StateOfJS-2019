@@ -16,8 +16,8 @@ const HeatmapChartRow = ({
     const onMouseEnter = useCallback(() => setCurrent(index), [setCurrent, index])
     const onMouseLeave = useCallback(() => setCurrent(null), [setCurrent])
 
-    console.log(item)
-    console.log(keys)
+    // console.log({ item, keys })
+
     return (
         <>
             <div
@@ -29,7 +29,7 @@ const HeatmapChartRow = ({
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                {item.name}
+                {item.id}
             </div>
             <div
                 className={classNames('Heatmap__Average', {
@@ -42,7 +42,7 @@ const HeatmapChartRow = ({
             >
                 {item.average}%
             </div>
-            {keys.map(({ keyId }) => {
+            {keys.map(keyId => {
                 const cell = item.ranges.find(r => r.range === keyId)
 
                 return (
@@ -71,8 +71,13 @@ const HeatmapChartRow = ({
 HeatmapChartRow.propTypes = {
     item: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        average: PropTypes.number.isRequired
+        ranges: PropTypes.arrayOf(
+            PropTypes.shape({
+                range: PropTypes.string.isRequired,
+                count: PropTypes.number.isRequired,
+                percentage: PropTypes.number.isRequired
+            })
+        ).isRequired
     }).isRequired,
     keys: PropTypes.arrayOf(PropTypes.string).isRequired,
     index: PropTypes.number.isRequired,

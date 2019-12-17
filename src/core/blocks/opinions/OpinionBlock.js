@@ -15,7 +15,7 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
         <Block
             units={units}
             setUnits={setUnits}
-            block={{...block, showLegend: true}}
+            block={{ ...block, showLegend: true }}
             data={data}
             legendProps={{
                 onMouseEnter: ({ id }) => {

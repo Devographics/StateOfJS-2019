@@ -33,7 +33,7 @@ const VerticalBarBlock = ({ block, data }) => {
 
     const { buckets, total, completion } = data
 
-    const sortedBuckets = bucketKeys.map(({id : bucketKey}) => {
+    const sortedBuckets = bucketKeys.map(({ id: bucketKey }) => {
         const bucket = buckets.find(b => b.id === bucketKey)
         if (bucket === undefined) {
             return {

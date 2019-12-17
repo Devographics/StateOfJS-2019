@@ -434,9 +434,9 @@ heatmapTemplate:
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
                 matrices {
-                    tools(ids:[${toolIds}]) {
-                        ${heatmapId}{
-                            year(year:${currentYear}) {
+                    tools(ids: [${toolIds}]) {
+                        ${heatmapId}(experience: would_use) {
+                            year(year: ${currentYear}) {
                                 year
                                 buckets{
                                     average

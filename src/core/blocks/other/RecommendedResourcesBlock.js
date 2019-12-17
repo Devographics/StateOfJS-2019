@@ -19,15 +19,13 @@ const RecommendedResourcesBlock = ({ block, data }) => {
     const { translate } = useI18n()
 
     const sponsors = get(block, 'variables.sponsors')
-    
+
     if (!sponsors) {
         return null
     }
 
     // although sponsors should always be an array, seems like it can be a string for some reason
-    const sponsorsIds = Array.isArray(sponsors)
-        ? sponsors
-        : [sponsors]
+    const sponsorsIds = Array.isArray(sponsors) ? sponsors : [sponsors]
 
     const { id } = block
     const sectionResources = resources.filter(r => sponsorsIds.includes(r.id))

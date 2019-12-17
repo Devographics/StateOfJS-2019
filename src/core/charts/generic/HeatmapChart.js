@@ -35,7 +35,7 @@ const textColorScale = scaleLinear()
     ])
 // .clamp(true)
 
-const HeatmapChart = ({ keys, data, namespace }) => {
+const HeatmapChart = ({ keys, data, i18nNamespace }) => {
     const { translate } = useI18n()
     const [currentIndex, setCurrentIndex] = useState(null)
 
@@ -47,12 +47,12 @@ const HeatmapChart = ({ keys, data, namespace }) => {
                     gridTemplateColumns: `auto ${'70px '.repeat(keys.length + 1)}`
                 }}
             >
-                <div className="Heatmap__Legend">{translate(`${namespace}.axis_legend`)}</div>
+                <div className="Heatmap__Legend">{translate(`${i18nNamespace}.axis_legend`)}</div>
                 <div className="Heatmap__Header">{translate(`heatmap.average`)}</div>
                 {keys.map(key => {
                     return (
                         <div key={key} className="Heatmap__Header">
-                            {translate(`${namespace}.${key}.short`)}
+                            {translate(`${i18nNamespace}.${key}.shorter`)}
                         </div>
                     )
                 })}
@@ -127,11 +127,16 @@ const HeatmapChart = ({ keys, data, namespace }) => {
 
 HeatmapChart.propTypes = {
     keys: PropTypes.arrayOf(PropTypes.string).isRequired,
-    items: PropTypes.arrayOf(
+    data: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-            average: PropTypes.number.isRequired
+            ranges: PropTypes.arrayOf(
+                PropTypes.shape({
+                    range: PropTypes.string.isRequired,
+                    count: PropTypes.number.isRequired,
+                    percentage: PropTypes.number.isRequired
+                })
+            ).isRequired
         })
     ).isRequired,
     i18nNamespace: PropTypes.string.isRequired

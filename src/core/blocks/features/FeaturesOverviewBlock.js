@@ -63,7 +63,6 @@ const FeaturesOverviewBlock = ({ block, data }) => {
     // console.log(chartData)
     // note: slightly different from Usage legend
 
-
     return (
         <Block
             block={block}

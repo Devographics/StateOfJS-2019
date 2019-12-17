@@ -116,12 +116,16 @@ ${trimmedQuery}
                             {hasCSV ? (
                                 <textarea className="Export__Textarea" value={csvExport} readOnly />
                             ) : (
-                            <div className="Export__Message Export__NoCSVMessage">{translate('export.nocsv')}</div>
+                                <div className="Export__Message Export__NoCSVMessage">
+                                    {translate('export.nocsv')}
+                                </div>
                             )}
                         </TabPanel>
                         <TabPanel>
                             <textarea className="Export__Textarea" value={graphQLExport} readOnly />
-                            <div className="Export__Message Export__GraphQLMessage">{translate('export.nocsv')}</div>
+                            <div className="Export__Message Export__GraphQLMessage">
+                                {translate('export.nocsv')}
+                            </div>
                         </TabPanel>
                     </Tabs>
                 </div>

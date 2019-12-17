@@ -24,7 +24,9 @@ const BlockLegends = ({
     const blockKeys = keys[bucketKeysName]
 
     if (!blockKeys) {
-        throw new Error(`Could not find any keys defined for ${bucketKeysName}. If there are none, set "showLegend: false" on block definition.`)
+        throw new Error(
+            `Could not find any keys defined for ${bucketKeysName}. If there are none, set "showLegend: false" on block definition.`
+        )
     }
 
     const classNames = ['Legends', `Legends--${layout}`]

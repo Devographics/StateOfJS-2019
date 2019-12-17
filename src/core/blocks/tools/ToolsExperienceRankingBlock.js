@@ -67,7 +67,7 @@ const ToolsExperienceRankingBlock = ({ block, data }) => {
 ToolsExperienceRankingBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired
-    }).isRequired,
+    }).isRequired
     // data: PropTypes.arrayOf(
     //     PropTypes.shape({
     //         id: PropTypes.string.isRequired,
