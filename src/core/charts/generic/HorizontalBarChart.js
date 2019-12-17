@@ -9,7 +9,6 @@ import BarTooltip from 'core/charts/generic/BarTooltip'
 import HorizontalBarStripes from './HorizontalBarStripes'
 import sortBy from 'lodash/sortBy'
 import round from 'lodash/round'
-import { useEntities } from 'core/entities/entitiesContext'
 
 const labelMaxLength = 13
 
@@ -38,10 +37,12 @@ const TickItem = tick => {
     const { translate } = useI18n()
 
     const { x, y, value, shouldTranslate, i18nNamespace, entity } = tick
-    const { name, homepage } = entity
-    const link = homepage
+    const { name, homepage, github } = entity
 
-    let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : name || value
+    const link = homepage || github && github.url
+    const itemName = name || value
+
+    let label = shouldTranslate ? translate(`${i18nNamespace}.${value}.short`) : itemName
 
     label = label.length > labelMaxLength ? label.substr(0, labelMaxLength) + '…' : label
 
