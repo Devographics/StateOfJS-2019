@@ -16,8 +16,6 @@ const HeatmapChartRow = ({
     const onMouseEnter = useCallback(() => setCurrent(index), [setCurrent, index])
     const onMouseLeave = useCallback(() => setCurrent(null), [setCurrent])
 
-    // console.log({ item, keys })
-
     return (
         <>
             <div
@@ -30,17 +28,6 @@ const HeatmapChartRow = ({
                 onMouseLeave={onMouseLeave}
             >
                 {item.id}
-            </div>
-            <div
-                className={classNames('Heatmap__Average', {
-                    'Heatmap__Average--even': isEven,
-                    'Heatmap__Average--active': isActive,
-                    'Heatmap__Average--inactive': isInactive
-                })}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {item.average}%
             </div>
             {keys.map(keyId => {
                 const cell = item.ranges.find(r => r.range === keyId)

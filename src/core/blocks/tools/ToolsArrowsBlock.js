@@ -6,13 +6,14 @@ import { toolsCategories } from '../../../../config/variables.yml'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const ToolsArrowsBlock = ({ block, data }) => {
-    const [activeCategory, setActiveCategory] = useState("all")
+    const [activeCategory, setActiveCategory] = useState('all')
 
     return (
         <Block
-            titleProps={{ switcher: <Switcher {...{activeCategory, setActiveCategory}} /> }}
-            block={block}>
-            <ToolsArrowsChart {...{data, activeCategory}} />
+            titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
+            block={block}
+        >
+            <ToolsArrowsChart {...{ data, activeCategory }} />
         </Block>
     )
 }
@@ -26,11 +27,7 @@ ToolsArrowsBlock.propTypes = {
 
 export default ToolsArrowsBlock
 
-
-const categoryOptions = [
-    "all",
-    ...Object.keys(toolsCategories),
-]
+const categoryOptions = ['all', ...Object.keys(toolsCategories)]
 const Switcher = ({ setActiveCategory, activeCategory }) => {
     const { translate } = useI18n()
     return (
@@ -44,9 +41,7 @@ const Switcher = ({ setActiveCategory, activeCategory }) => {
                         }`}
                         onClick={() => setActiveCategory(category)}
                     >
-                        {translate(
-                            category == "all" ? "all" : `page.${category}`
-                        )}
+                        {translate(category == 'all' ? 'all' : `page.${category}`)}
                     </span>
                 ))}
             </span>

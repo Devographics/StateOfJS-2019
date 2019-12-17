@@ -8,7 +8,11 @@ import IntroductionFooter from 'core/pages/IntroductionFooter'
 const SurveyIntroBlock = ({ data, block }) => (
     <div>
         <div className="main-logo-wrapper">
-            <img className="logo-image" src="/images/stateofjs-logo.svg" alt="State of JavaScript 2019 Logo"/>
+            <img
+                className="logo-image"
+                src="/images/stateofjs-logo.svg"
+                alt="State of JavaScript 2019 Logo"
+            />
             {/* <LogoFull size="l" /> */}
         </div>
         <TextBlock text={data} />

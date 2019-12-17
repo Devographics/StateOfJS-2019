@@ -52,7 +52,10 @@ const Tooltip = props => {
                     <strong className="Tooltip__Value">{usage}</strong>
                 </div>
                 <div className="Tooltip__Item">
-                    <Chip color={`${getColor(data.sectionId)}50`} color2={getColor(data.sectionId)} />
+                    <Chip
+                        color={`${getColor(data.sectionId)}50`}
+                        color2={getColor(data.sectionId)}
+                    />
                     {translate('features.usage.ratio')}:{' '}
                     <strong className="Tooltip__Value">
                         {round((usage / awareness) * 100, 1)}%

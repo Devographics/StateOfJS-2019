@@ -83,7 +83,7 @@ export const distinctColors = [
     colors.skyblue,
     colors.yellow,
     colors.green,
-    colors.teal,
+    colors.teal
 ]
 
 export const pinkRange = [colors.pinkLightest, colors.pinkLighter, colors.pinkLight, colors.pink]

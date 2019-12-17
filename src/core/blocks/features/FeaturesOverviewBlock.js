@@ -30,7 +30,7 @@ const getChartData = (data, getName, translate) => {
                     usageColor: getColor(sectionId),
                     unusedCount: knowNotUsedBucket.count,
                     name: feature.name,
-                    sectionId,
+                    sectionId
                 }
             })
 
