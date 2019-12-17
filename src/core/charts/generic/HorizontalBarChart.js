@@ -44,7 +44,9 @@ const TickItem = tick => {
 
     if (entity) {
         const { name, homepage, github } = entity
-        label = name
+        if (name) {
+            label = name
+        }
         link = homepage || github && github.url
     }
 
