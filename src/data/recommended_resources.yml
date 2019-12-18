@@ -116,10 +116,16 @@
   description: The in-depth, complete, and up-to-date book on Angular. Become an Angular expert today.
   image: /images/resources/newline/angular-ng-book.png
 
+- name: Fullstack D3 and Data Visualization
+  id: fullstack-d3
+  url: https://www.newline.co/fullstack-d3?utm_source=stateofjs2019&utm_campaign=stateofjs2019
+  description: Dig in right away and build your first visualization by the end of the first chapter (a free download)! Fullstack D3 will walk you through practical examples, while teaching tips and tricks, data visualization design fundamentals, and a flexible approach to use on your own custom visualizations.
+  image: /images/resources/newline/d3-fullstack.png
+
 # chroma
 
 - name: Learn Storybook – A free tutorial for React, Vue, and Angular
   id: storybook1
   url: https://www.learnstorybook.com/?utm_source=stateofjs2019&utm_campaign=stateofjs2019
   description: See why companies like Airbnb, Microsoft, and IBM use Storybook to build UI components and libraries. This in-depth tutorial teaches you best practices as you build a UI from scratch using Storybook. Follow along with real code commits.
-  image: /images/resources/chroma/sojs2019-lsb.jpg 
+  image: /images/resources/chroma/sojs2019-lsb.jpg
