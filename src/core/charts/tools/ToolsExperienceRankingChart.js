@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ResponsiveBump } from '@nivo/bump'
 import theme from 'nivoTheme'
-import { colors } from 'core/constants'
+import { colors, distinctColors } from 'core/constants'
 // import get from 'lodash/get'
 
 const CustomPoint = props => {
@@ -36,7 +36,7 @@ const ToolsExperienceRankingChart = ({ data }) => {
         <ResponsiveBump
             data={data}
             margin={{ top: 40, right: 100, bottom: 40, left: 100 }}
-            colors={{ scheme: 'accent' }}
+            colors={distinctColors}
             inactiveLineWidth={5}
             theme={theme}
             enableGridX={true}
