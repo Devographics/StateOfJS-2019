@@ -25,10 +25,12 @@ Modal.setAppElement('#___gatsby')
 
 const ExportIcon = () => (
     <svg
-        className="Share__Icon"
+        className="Export__Icon"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
+        x="0"
+        y="0"
         viewBox="0 0 24 24"
     >
         <g
@@ -36,12 +38,15 @@ const ExportIcon = () => (
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeMiterlimit="10"
-            id="New_icons_1_"
-            strokeWidth={2}
+            strokeWidth={1}
         >
-            <line x1="11.5" y1="13.5" x2="11.5" y2="0.5" />
-            <polyline points="7,5 11.5,0.5 16,5" />
-            <polyline points="14.5,8.5 19.5,8.5 19.5,23.5 3.5,23.5 3.5,8.5 8.5,8.5" />
+            <path d="M20.5 23.5L3.5 23.5 3.5 0.5 14.5 0.5 20.5 6.5z"></path>
+            <path d="M14.5 0.5L14.5 6.5 20.5 6.5"></path>
+            <path d="M6.5 8.5H17.5V20.5H6.5z"></path>
+            <path d="M6.5 11.5L17.5 11.5"></path>
+            <path d="M6.5 14.5L17.5 14.5"></path>
+            <path d="M6.5 17.5L17.5 17.5"></path>
+            <path d="M10.5 8.5L10.5 20.5"></path>
         </g>
     </svg>
 )

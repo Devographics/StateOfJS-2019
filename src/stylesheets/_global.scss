@@ -156,7 +156,9 @@ iframe{
     font-size: $largest-font;
 }
 .Page__Introduction{
-    font-size: $larger-font;
+    @include large{
+        font-size: $larger-font;
+    }
     margin-bottom: $spacing*4;
 }
 

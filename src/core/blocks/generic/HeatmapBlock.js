@@ -4,6 +4,7 @@ import { salaryArray, workExperienceArray, companySizeArray } from 'core/constan
 import Block from 'core/blocks/block/Block'
 import HeatmapChart from 'core/charts/generic/HeatmapChart'
 import { useI18n } from 'core/i18n/i18nContext'
+import ChartContainer from 'core/charts/ChartContainer'
 
 const keysByType = {
     salary: salaryArray,
@@ -18,11 +19,13 @@ const HeatmapBlock = ({ block, data }) => {
     const description = translate(`block.description.${blockName}_heatmap`)
     return (
         <Block data={data.buckets} block={{...block, title, description }}>
-            <HeatmapChart
-                keys={keysByType[block.variables.heatmapId]}
-                data={data.buckets}
-                i18nNamespace={block.variables.heatmapId}
-            />
+            <ChartContainer>
+                <HeatmapChart
+                    keys={keysByType[block.variables.heatmapId]}
+                    data={data.buckets}
+                    i18nNamespace={block.variables.heatmapId}
+                />
+            </ChartContainer>
         </Block>
     )
 }

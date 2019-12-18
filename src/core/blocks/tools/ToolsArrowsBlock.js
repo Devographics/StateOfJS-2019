@@ -5,6 +5,7 @@ import ToolsArrowsChart from 'core/charts/tools/ToolsArrowsChart/ToolsArrowsChar
 import { toolsCategories } from '../../../../config/variables.yml'
 import { useI18n } from 'core/i18n/i18nContext'
 import BioBlock from 'core/blocks/other/BioBlock'
+import ChartContainer from 'core/charts/ChartContainer'
 
 const ToolsArrowsBlock = ({ block, data }) => {
     const [activeCategory, setActiveCategory] = useState('all')
@@ -17,7 +18,9 @@ const ToolsArrowsBlock = ({ block, data }) => {
             data={data}
         >
             <Fragment>
-                <ToolsArrowsChart {...{ data, activeCategory }} />
+                <ChartContainer vscroll={true}>
+                    <ToolsArrowsChart {...{ data, activeCategory }} />
+                </ChartContainer>
                 <BioBlock
                     heading={`<span>${translate(
                         'bio.guest_visualizer'
@@ -49,7 +52,7 @@ const Switcher = ({ setActiveCategory, activeCategory }) => {
                     <span
                         key={category}
                         className={`Button Button--small Button--${
-                            activeCategory === category ? 'active' : 'disabled'
+                            activeCategory === category ? 'selected' : 'unselected'
                         }`}
                         onClick={() => setActiveCategory(category)}
                     >

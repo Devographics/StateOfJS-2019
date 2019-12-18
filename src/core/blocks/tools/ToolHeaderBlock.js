@@ -38,7 +38,7 @@ const ToolHeaderBlock = ({ block, data }) => {
                     )}
                 </div>
                 <Fragment>
-                    <div>{description}</div>
+                    <div className="ToolHeader__Description">{description}</div>
                     <div className="ToolHeader__Links">
                         {homepageLink && (
                             <a

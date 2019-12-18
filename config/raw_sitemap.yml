@@ -442,12 +442,12 @@
         template: toolPageTemplate
         sponsors:
             - electron-v2
-      - id: react-native
+      - id: reactnative
         template: toolPageTemplate
         sponsors:
             - fullstack-react-native-1
 
-      - id: native-apps
+      - id: nativeapps
         template: toolPageTemplate
 
       - id: cordova

@@ -14,11 +14,12 @@ const Switcher = ({ setMetric, metric }) => {
                     <span
                         key={key}
                         className={`Button Button--small Button--${
-                            metric === key ? 'active' : 'disabled'
+                            metric === key ? 'selected' : 'unselected'
                         }`}
                         onClick={() => setMetric(key)}
                     >
-                        {translate(`opinions.legends.${key}_ratio`)}
+                        <span className="desktop">{translate(`opinions.legends.${key}_ratio`)}</span>
+                        <span className="mobile">{translate(`opinions.legends.${key}_ratio`)[0]}</span>
                     </span>
                 ))}
             </span>
@@ -57,7 +58,7 @@ const ToolsExperienceRankingBlock = ({ block, data }) => {
             titleProps={{ switcher: <Switcher setMetric={setMetric} metric={metric} /> }}
             data={data}
         >
-            <ChartContainer height={data.length * 50 + 80} fit={true}>
+            <ChartContainer height={data.length * 50 + 80}>
                 <ToolsExperienceRankingChart data={chartData} />
             </ChartContainer>
         </Block>

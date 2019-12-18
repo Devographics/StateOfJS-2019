@@ -26,7 +26,7 @@ const ToolsSectionOverviewBlock = ({ block, data, units: defaultUnits = 'percent
                 }
             }}
         >
-            <ChartContainer height={400} fit={true}>
+            <ChartContainer height={400}>
                 <ToolsSectionOverviewChart
                     data={data}
                     units={units}

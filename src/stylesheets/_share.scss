@@ -14,6 +14,12 @@ $smallShareItemOffset: 150%;
     font-size: $smaller-font;
     color: $text-color;
     border-color: $border-color;
+    @include small{
+        .mobile{
+            height: 22px;
+            @include flex-center;
+        }
+    }
 }
 .export-button{
     margin-left: $spacing/2;
@@ -198,7 +204,7 @@ $smallShareItemOffset: 150%;
     }
 }
 
-.Share__Icon {
+.Share__Icon, .Export__Icon {
     stroke: $teal;
     height: 16px;
     width: 16px;
@@ -211,6 +217,9 @@ $smallShareItemOffset: 150%;
     .capture & {
         display: none;
     }
+}
+.ReactModal__Overlay{
+    z-index: 1000;
 }
 .Export__Modal{
     padding: $spacing;
@@ -229,15 +238,20 @@ $smallShareItemOffset: 150%;
     p{
         padding: $spacing/2;
         margin: 0;
-        width: 600px;
-        height: 400px;
+        // width: 600px;
+        // height: 400px;
     }
 }
 .Export__Textarea{
-    width: 600px;
-    height: 400px;
+    width: 100%;
     font-size: $small-font;
     padding: $spacing/2;
+    @include small{
+        height: 150px;
+    }
+    @include medium-large{
+        height: 400px;
+    }
 }
 .Export__Message{
     max-width: 600px;
