@@ -200,7 +200,7 @@ const ToolsScatterplotChart = ({ data, metric = 'satisfaction', current }) => {
         props => <Quadrants {...props} metric={metric} />,
         'grid',
         'axes',
-        props => <Nodes {...props} current={current} metric={metric}/>,
+        props => <Nodes {...props} current={current} metric={metric} />,
         /*'nodes', */ 'markers',
         'mesh',
         'legends'

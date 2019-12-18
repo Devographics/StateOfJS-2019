@@ -31,7 +31,6 @@ const AwardBlock = ({ block }) => {
                 <div className="Award__Element" onClick={handleClick}>
                     <div className="Award__Element__Face Award__Element__Face--front">
                         <AwardIcon />
-
                     </div>
                     <div className="Award__Element__Face Award__Element__Face--back">
                         {isRevealed && (
@@ -47,7 +46,7 @@ const AwardBlock = ({ block }) => {
                                     colors={distinctColors}
                                 />
                             </div>
-                        )}                        
+                        )}
                         <PeriodicElement
                             tool={winner.id}
                             name={winner.name}
@@ -76,8 +75,8 @@ const AwardBlock = ({ block }) => {
                         key={runnerUp.id}
                         className={`Awards__RunnerUps__Item Awards__RunnerUps__Item--${i}`}
                     >
-                        {i + 2}.{' '}
-                        {runnerUp.name}{runnerUp.value ? `: ${runnerUp.value}` : ''}
+                        {i + 2}. {runnerUp.name}
+                        {runnerUp.value ? `: ${runnerUp.value}` : ''}
                     </div>
                 ))}
             </div>

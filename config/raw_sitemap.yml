@@ -21,7 +21,7 @@
 # - showLegend: whether to show the block's legend
 # - showDescription: whether to show the block's description
 # - blockTemplate: a template from which to inherit its properties
-# - translateData: whether to try and translate 
+# - translateData: whether to try and translate
 - id: introduction
   path: /
   showTitle: false
@@ -444,7 +444,7 @@
             - electron-v2
       - id: react-native
         template: toolPageTemplate
-        sponsors: 
+        sponsors:
             - fullstack-react-native-1
 
       - id: native-apps
@@ -603,77 +603,77 @@
       - id: feature_adoption_award
         blockType: AwardBlock
         awards:
-          - id: arrow_functions
-            name: Arrow Functions
-            value: 97.8%
-          - id: promises
-            name: Promises
-            value: 94.8%
-          - id: spread_operator
-            name: Spread Operator
-            value: 92.3%
+            - id: arrow_functions
+              name: Arrow Functions
+              value: 97.8%
+            - id: promises
+              name: Promises
+              value: 94.8%
+            - id: spread_operator
+              name: Spread Operator
+              value: 92.3%
 
       - id: tool_usage_award
         blockType: AwardBlock
         awards:
-          - id: react
-            name: React
-            value: 16099
-          - id: express
-            name: Express
-            value: 15374
-          - id: redux
-            name: Redux
-            value: 13441
+            - id: react
+              name: React
+              value: 16099
+            - id: express
+              name: Express
+              value: 15374
+            - id: redux
+              name: Redux
+              value: 13441
 
       - id: tool_satisfaction_award
         blockType: AwardBlock
         awards:
-          - id: jest
-            name: Jest
-            value: 96.4%
-          - id: graphql
-            name: GraphQL
-            value: 94.8%
-          - id: cypress
-            name: Cypress
-            value: 93.2%
+            - id: jest
+              name: Jest
+              value: 96.4%
+            - id: graphql
+              name: GraphQL
+              value: 94.8%
+            - id: cypress
+              name: Cypress
+              value: 93.2%
 
       - id: tool_interest_award
         blockType: AwardBlock
         awards:
-          - id: graphql
-            name: GraphQL
-            value: 89.6%
-          - id: jest
-            name: Jest
-            value: 81.6%
-          - id: graphql
-            name: Apollo
-            value: 78.8%
+            - id: graphql
+              name: GraphQL
+              value: 89.6%
+            - id: jest
+              name: Jest
+              value: 81.6%
+            - id: graphql
+              name: Apollo
+              value: 78.8%
 
       - id: resource_usage_award
         blockType: AwardBlock
         awards:
-          - id: stack_overflow
-            name: Stack Overflow
-            value: 17942
-          - id: mdn
-            name: MDN
-            value: 15531
-          - id: css_tricks
-            name: CSS Tricks
-            value: 12842
+            - id: stack_overflow
+              name: Stack Overflow
+              value: 17942
+            - id: mdn
+              name: MDN
+              value: 15531
+            - id: css_tricks
+              name: CSS Tricks
+              value: 12842
 
       - id: prediction_award
         blockType: AwardBlock
         awards:
-          - id: svelte
-            name: Svelte
-          - id: nest
-            name: Nest.js
-          - id: stencil
-            name: Stencil
+            - id: svelte
+              name: Svelte
+            - id: nest
+              name: Nest.js
+            - id: stencil
+              name: Stencil
 
 - id: conclusion
   path: /conclusion
@@ -683,7 +683,7 @@
             pageId: ${id}
         template: pageIntroductionTemplate
         blockType: ConclusionBlock
-        
+
 # note: other pages need to be included in the sitemap too so they can get the proper
 # locale passed to them
 

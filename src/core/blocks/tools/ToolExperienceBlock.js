@@ -42,7 +42,7 @@ const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }
                 <StreamChart
                     colorScale={toolExperience.map(i => i.color)}
                     current={current}
-                    data={chartData.length === 1 ? [chartData[0],chartData[0]] : chartData}
+                    data={chartData.length === 1 ? [chartData[0], chartData[0]] : chartData}
                     keys={bucketKeys.map(k => k.id)}
                     units={units}
                     applyEmptyPatternTo="never_heard"

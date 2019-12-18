@@ -35,12 +35,14 @@ const BlockLegends = ({
         classNames.push('Legends--withFrame')
     }
 
-    const blockLegends = legends || blockKeys.map(({ id: keyId, color }) => ({
-        id: `${bucketKeysName}.${keyId}`,
-        label: translate(`${bucketKeysName}.${keyId}.long`),
-        keyLabel: `${translate(`${bucketKeysName}.${keyId}.short`)}:`,
-        color
-    }))
+    const blockLegends =
+        legends ||
+        blockKeys.map(({ id: keyId, color }) => ({
+            id: `${bucketKeysName}.${keyId}`,
+            label: translate(`${bucketKeysName}.${keyId}.long`),
+            keyLabel: `${translate(`${bucketKeysName}.${keyId}.short`)}:`,
+            color
+        }))
 
     const rootStyle = { ...style }
 

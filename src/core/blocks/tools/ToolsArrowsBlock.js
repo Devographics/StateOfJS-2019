@@ -18,7 +18,13 @@ const ToolsArrowsBlock = ({ block, data }) => {
         >
             <Fragment>
                 <ToolsArrowsChart {...{ data, activeCategory }} />
-                <BioBlock heading={`<span>${translate('bio.guest_visualizer')}: </span><strong>Amelia Wattenberger</strong>`} photo="/images/guests/amelia.png" bio={translate('amelia.bio')}/>
+                <BioBlock
+                    heading={`<span>${translate(
+                        'bio.guest_visualizer'
+                    )}: </span><strong>Amelia Wattenberger</strong>`}
+                    photo="/images/guests/amelia.png"
+                    bio={translate('amelia.bio')}
+                />
             </Fragment>
         </Block>
     )

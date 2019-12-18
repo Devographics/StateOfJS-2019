@@ -1,11 +1,10 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { ResponsiveBump } from '@nivo/bump'
 import theme from 'nivoTheme'
 // import get from 'lodash/get'
 
 const ToolsExperienceRankingChart = ({ data }) => {
-
     // const formatTick = id => {
     //     const tool = data.find(t => t.id === id)
     //     return get(tool, 'entity.name', id)
@@ -24,7 +23,7 @@ const ToolsExperienceRankingChart = ({ data }) => {
             enableGridY={false}
             axisTop={{
                 tickSize: 0,
-                tickPadding: 9,
+                tickPadding: 9
             }}
             axisRight={null}
             axisBottom={{
@@ -52,18 +51,18 @@ const ToolsExperienceRankingChart = ({ data }) => {
 }
 
 ToolsExperienceRankingChart.propTypes = {
-    // data: PropTypes.arrayOf(
-    //     PropTypes.shape({
-    //         id: PropTypes.string.isRequired,
-    //         data: PropTypes.arrayOf(
-    //             PropTypes.shape({
-    //                 x: PropTypes.number.isRequired,
-    //                 y: PropTypes.number.isRequired,
-    //                 percentage: PropTypes.number.isRequired
-    //             })
-    //         ).isRequired
-    //     })
-    // ).isRequired
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            data: PropTypes.arrayOf(
+                PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number,
+                    percentage: PropTypes.number
+                })
+            ).isRequired
+        })
+    ).isRequired
 }
 
 export default ToolsExperienceRankingChart

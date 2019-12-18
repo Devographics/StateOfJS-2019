@@ -123,7 +123,10 @@ ${trimmedQuery}
                         </TabPanel> */}
                         <TabPanel>
                             <textarea className="Export__Textarea" value={graphQLExport} readOnly />
-                            <div className="Export__Message Export__GraphQLMessage" dangerouslySetInnerHTML={{__html: translate('export.graphql')}}/>
+                            <div
+                                className="Export__Message Export__GraphQLMessage"
+                                dangerouslySetInnerHTML={{ __html: translate('export.graphql') }}
+                            />
                         </TabPanel>
                     </Tabs>
                 </div>

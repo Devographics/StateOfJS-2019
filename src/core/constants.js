@@ -297,7 +297,7 @@ export const keys = {
     toolExperience,
     featureExperience,
     featureExperienceSimplified,
-    toolCategories,
+    toolCategories
 }
 
 export const fontFamily = `'IBM Plex Mono', monospace`

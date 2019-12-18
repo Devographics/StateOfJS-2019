@@ -57,7 +57,7 @@ const blockRegistry = {
     SurveyIntroBlock,
     AwardBlock,
     ConclusionBlock,
-    
+
     // demographics
     ParticipationByCountryBlock,
 
