@@ -474,7 +474,11 @@ translations:
       t: Changes Over Time
     - key: block.description.toolsArrow
       t: >
-          How has the ecosystem changed since 2016? Each line below starts in its position this year, and extends back through the years until the first year we surveyed about it. Points that are higher in the chart have been tried by more people, and points that are further to the right are more liked than points to the left.
+          How has the ecosystem changed over three years? 
+          Each line below starts in 2016, and extends forward through the years until today. 
+          Points that are higher in the chart have been tried by more people, 
+          and points that are further to the right are more liked than points to the left.
+
     - key: amelia.bio
       t: >
         Amelia Wattenberger is a frontend developer and designer focused on data visualization. 
@@ -1009,3 +1013,7 @@ translations:
       t: 'Difference from overall usage:'
     - key: all
       t: 'All'
+
+    # other
+    - key: bio.guest_visualizer
+      t: Guest Expert

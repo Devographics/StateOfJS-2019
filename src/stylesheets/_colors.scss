@@ -6,7 +6,7 @@ $greyLight: #e0e4e4;
 $grey: #e1e1e1;
 $greyMedium: #cecdcc;
 $greyMediumer: #616868;
-$greyDark: #4d4f4f;
+$greyDark: #3d4049;
 $greyDarkish: #2a2d33;
 $greyDarker: #222429;
 
@@ -48,6 +48,7 @@ $yellowDark: #d4cc33;
 $aqua: #1ea0f2;
 
 $white: #ffffff;
+$black: #000000;
 
 $navyLightest: #7e86ad;
 $navyLighter: #484F73;
@@ -68,7 +69,7 @@ $contrast-color-dark: $redDark;
 
 $bg-color: $greyDarker;
 $bg-color-light: $greyDarkish;
-$bg-color-lighter: $greyMediumer;
+$bg-color-lighter: $greyDark;
 $bg-color-inverted: $greyLight;
 
 $border-color: $greyMedium;

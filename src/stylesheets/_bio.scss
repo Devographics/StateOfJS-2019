@@ -1,0 +1,32 @@
+.Bio {
+    background: $bg-color-lighter;
+    // border: $border2;
+    @include box-shadow-dark;
+    .Block--toolsArrow & {
+        margin-top: $spacing * 2;
+    }
+}
+.Bio__Heading {
+  margin-bottom: $spacing/3;
+}
+.Bio__Contents {
+    display: grid;
+    grid-template-columns: 170px auto;
+    // column-gap: $spacing;
+    p:last-child{
+      margin: 0;
+    }
+}
+.Bio__Photo {
+    // border-radius: 5px;
+    overflow: hidden;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.Bio__Bio {
+  padding: $spacing;
+  font-size: $medium-font;
+
+}

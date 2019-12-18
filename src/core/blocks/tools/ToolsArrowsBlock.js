@@ -1,26 +1,24 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/blocks/block/Block'
 import ToolsArrowsChart from 'core/charts/tools/ToolsArrowsChart/ToolsArrowsChart'
 import { toolsCategories } from '../../../../config/variables.yml'
 import { useI18n } from 'core/i18n/i18nContext'
-
-const BioBlock = () => {
-    const { translate } = useI18n()
-    return (
-        <div>{translate('amelia.bio')}</div>
-    )
-}
+import BioBlock from 'core/blocks/other/BioBlock'
 
 const ToolsArrowsBlock = ({ block, data }) => {
     const [activeCategory, setActiveCategory] = useState('all')
+    const { translate } = useI18n()
 
     return (
         <Block
-            titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
+            // titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
             block={block}
         >
-            <ToolsArrowsChart {...{ data, activeCategory }} />
+            <Fragment>
+                <ToolsArrowsChart {...{ data, activeCategory }} />
+                <BioBlock heading={`<span>${translate('bio.guest_visualizer')}: </span><strong>Amelia Wattenberger</strong>`} photo="/images/guests/amelia.png" bio={translate('amelia.bio')}/>
+            </Fragment>
         </Block>
     )
 }

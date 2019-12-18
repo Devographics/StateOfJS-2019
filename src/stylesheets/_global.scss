@@ -165,3 +165,11 @@ Page-specific styles
 iframe{
     display: none;
 }
+
+.Page__Title{
+    font-size: $largest-font;
+}
+.Page__Introduction{
+    font-size: $larger-font;
+    margin-bottom: $spacing*4;
+}

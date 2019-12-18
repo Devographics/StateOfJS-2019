@@ -19,7 +19,7 @@ const Block = ({
     const { id, showLegend } = block
 
     return (
-        <div id={id} className={`Block${className !== undefined ? ` ${className}` : ''}`}>
+        <div id={id} className={`Block--${id} Block${className !== undefined ? ` ${className}` : ''}`}>
             <BlockTitle
                 isShareable={isShareable}
                 units={units}

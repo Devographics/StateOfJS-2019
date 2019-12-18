@@ -84,6 +84,10 @@
 - id: overview
   path: /overview
   blocks:
+      - id: overviewIntroduction
+        template: pageIntroductionTemplate
+        variables:
+            pageId: '${id}'
       - id: toolsArrow
         template: toolsArrowsTemplate
       - id: scatterplotOverview
