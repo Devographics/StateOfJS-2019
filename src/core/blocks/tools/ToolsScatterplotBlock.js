@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Block from 'core/blocks/block/Block'
 import compact from 'lodash/compact'
-import { getColor } from 'core/constants.js'
+import { getColor, keys } from 'core/constants.js'
 import round from 'lodash/round'
 import ToolsScatterplotChart from 'core/charts/tools/ToolsScatterplotChart'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -50,7 +50,7 @@ const getChartData = (data, translate, metric = 'satisfaction') => {
                 const percentages = {
                     satisfaction: getPercentage('would_use'),
                     interest: getPercentage('interested'),
-                    awareness: (100 - getPercentage('never_heard'))
+                    awareness: 100 - getPercentage('never_heard')
                 }
 
                 const node = {
@@ -76,7 +76,7 @@ const getChartData = (data, translate, metric = 'satisfaction') => {
 
 const Switcher = ({ setMetric, metric }) => {
     const { translate } = useI18n()
-    
+
     return (
         <div className="ChartUnitsSelector">
             <span className="ButtonGroup">
@@ -101,17 +101,40 @@ const ToolsOverviewBlock = ({ block, data }) => {
     const [metric, setMetric] = useState('satisfaction')
     const chartData = getChartData(data, translate, metric)
     const { id, blockName = id } = block
+    const [current, setCurrent] = useState(null)
 
     const description = translate(`block.description.${blockName}.${metric}`)
+
+    const legends = keys.toolCategories.map(({ id: keyId, color }) => ({
+        id: `toolCategories.${keyId}`,
+        label: translate(`page.${keyId}.short`),
+        keyLabel: `${translate(`page.${keyId}.short`)}:`,
+        color
+    }))
+
     return (
         <Block
             className="ToolsScatterplotBlock"
             data={chartData}
-            block={{...block, description}}
+            block={{ ...block, description, showLegend: true, legends }}
             titleProps={{ switcher: <Switcher setMetric={setMetric} metric={metric} /> }}
+            legendProps={{
+                legends,
+                onMouseEnter: ({ id }) => {
+                    setCurrent(id.replace('toolCategories.', ''))
+                },
+                onMouseLeave: () => {
+                    setCurrent(null)
+                }
+            }}
         >
             <ChartContainer vscroll={true}>
-                <ToolsScatterplotChart data={chartData} metric={metric} showQuadrants={metric === 'satisfaction'}/>
+                <ToolsScatterplotChart
+                    data={chartData}
+                    metric={metric}
+                    showQuadrants={metric === 'satisfaction'}
+                    current={current}
+                />
             </ChartContainer>
         </Block>
     )

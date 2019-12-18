@@ -1,6 +1,7 @@
 import React, { memo, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import get from 'lodash/get'
 
 const HeatmapChartRow = ({
     item,
@@ -27,7 +28,7 @@ const HeatmapChartRow = ({
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                {item.id}
+                {get(item, 'entity.name', item.id)}
             </div>
             {keys.map(keyId => {
                 const cell = item.ranges.find(r => r.range === keyId)

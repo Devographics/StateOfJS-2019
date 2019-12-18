@@ -2,6 +2,7 @@ import { getColor, colors, colorRange, fontFamily } from 'core/constants.js'
 
 export default {
     name: 'state_of_css_2019',
+    fontFamily,
     // background: '#ffffff',
     opinionColors: {
         would_use: colors.pink,

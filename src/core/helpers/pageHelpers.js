@@ -1,6 +1,6 @@
 import { getToolName } from '../helpers/tools'
 
-const WEBSITE_TITLE = 'The State of CSS 2019'
+const WEBSITE_TITLE = 'The State of JavaScript 2019'
 
 export const getTranslationValuesFromContext = (context, translate) => {
     const values = {}

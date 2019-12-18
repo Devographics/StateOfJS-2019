@@ -248,14 +248,22 @@ translations:
       t: 'Able to handle complex multi-server or microservices architectures'
 
     # job title
-    - key: jobTitle.front_end_dev.short
-      t: Front-end Developer
-    - key: jobTitle.front_end_dev.long
-      t: Front-end Developer/Engineer
-    - key: jobTitle.full_stack_dev.short
-      t: Full-stack Developer
-    - key: jobTitle.full_stack_dev.long
-      t: Full-stack Developer/Engineer
+    - key: jobTitle.front_end_developer.short
+      t: Front End Developer
+    - key: jobTitle.front_end_developer.long
+      t: Front End Developer/Engineer
+    - key: jobTitle.back_end_developer.short
+      t: Back End Developer
+    - key: jobTitle.back_end_developer.long
+      t: Back End Developer/Engineer
+    - key: jobTitle.full_stack_developer.short
+      t: Full Stack Developer
+    - key: jobTitle.full_stack_developer.long
+      t: Full Stack Developer/Engineer
+    - key: jobTitle.web_developer.short
+      t: Web Developer
+    - key: jobTitle.web_developer.long
+      t: Web Developer
     - key: jobTitle.web_designer.short
       t: Web Designer
     - key: jobTitle.web_designer.long
@@ -467,7 +475,14 @@ translations:
     - key: block.description.toolsArrow
       t: >
           How has the ecosystem changed since 2016? Each line below starts in its position this year, and extends back through the years until the first year we surveyed about it. Points that are higher in the chart have been tried by more people, and points that are further to the right are more liked than points to the left.
-
+    - key: amelia.bio
+      t: >
+        Amelia Wattenberger is a frontend developer and designer focused on data visualization. 
+        She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3), 
+        a guide to creating your own data visualizations, 
+        and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger) 
+        and [her site](https://wattenberger.com/)
+        
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
       t: Satisfaction vs Usage
@@ -809,25 +824,37 @@ translations:
       t: Other Features
     - key: page.javascript_flavors
       t: JavaScript Flavors
+    - key: page.javascript_flavors.short
+      t: JavaScript Flavors
     - key: page.javascript_flavors_others
       t: Other Flavors
     - key: page.front_end_frameworks
       t: Front End Frameworks
+    - key: page.front_end_frameworks.short
+      t: Front End
     - key: page.front_end_frameworks_others
       t: Other Frameworks
     - key: page.data_layer
+      t: Data Layer
+    - key: page.data_layer.short
       t: Data Layer
     - key: page.data_layer_others
       t: Other Data Layer Tools
     - key: page.back_end_frameworks
       t: Back End Frameworks
+    - key: page.back_end_frameworks.short
+      t: Back End
     - key: page.back_end_frameworks_others
       t: Other Frameworks
     - key: page.testing
       t: Testing
+    - key: page.testing.short
+      t: Testing
     - key: page.testing_others
       t: Other Tools
     - key: page.mobile_desktop
+      t: Mobile & Desktop
+    - key: page.mobile_desktop.short
       t: Mobile & Desktop
     - key: page.mobile_desktop_others
       t: Other Tools

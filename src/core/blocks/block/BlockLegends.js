@@ -16,6 +16,7 @@ const BlockLegends = ({
     onMouseLeave,
     onClick,
     data,
+    legends,
     units
 }) => {
     const { id: blockId, bucketKeysName = blockId } = block
@@ -23,7 +24,7 @@ const BlockLegends = ({
     const { translate } = useI18n()
     const blockKeys = keys[bucketKeysName]
 
-    if (!blockKeys) {
+    if (!legends && !blockKeys) {
         throw new Error(
             `Could not find any keys defined for ${bucketKeysName}. If there are none, set "showLegend: false" on block definition.`
         )
@@ -34,7 +35,7 @@ const BlockLegends = ({
         classNames.push('Legends--withFrame')
     }
 
-    const blockLegends = blockKeys.map(({ id: keyId, color }) => ({
+    const blockLegends = legends || blockKeys.map(({ id: keyId, color }) => ({
         id: `${bucketKeysName}.${keyId}`,
         label: translate(`${bucketKeysName}.${keyId}.long`),
         keyLabel: `${translate(`${bucketKeysName}.${keyId}.short`)}:`,

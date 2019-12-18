@@ -6,23 +6,39 @@ import { colors, getColor } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const labelPositions = {
-    // Emotion: [0, -10],
-    // Tailwind: [0, 10],
-    // ITCSS: [0, 2],
-    // SMACSS: [0, -10],
-    // PureCSS: [0, -10],
-    // Tachyons: [0, 10],
-    // UIKit: [0, 15]
+    satisfaction: {
+        Feathers: [0, 5],
+        Puppeteer: [0, 5],
+        Svelte: [0, 10],
+        Gatsby: [-70, 0],
+        Cypress: [0, -10],
+        'Next.js': [0, -10]
+    },
+    interest: {
+        Jasmine: [-80, 0],
+        PureScript: [0, -10],
+        Sails: [-60, 0],
+        Sails: [-60, 0],
+        'Next.js': [-80, 0]
+    }
 }
 
 const margins = { top: 20, right: 90, bottom: 70, left: 90 }
 
 const Nodes = props => {
-    const { width, height, margin, nodes } = props
+    const { width, height, margin, nodes, current, metric } = props
     return (
         <g>
             {nodes.map((node, i) => (
-                <Node key={i} {...node} width={width} height={height} margin={margin} />
+                <Node
+                    key={i}
+                    {...node}
+                    width={width}
+                    height={height}
+                    margin={margin}
+                    current={current}
+                    metric={metric}
+                />
             ))}
         </g>
     )
@@ -64,12 +80,13 @@ const Crosshair = ({ x, y, label, cutoffX = 0, cutoffY = 0 }) => {
     )
 }
 const Node = props => {
-    const { data, style, x, y, height, margin } = props
+    const { id, data, style, x, y, height, margin, current, metric } = props
     const { name, formattedX, formattedY } = data
     const yInverted = height - margin.top - margin.bottom - y
     const cutoff = 12 // cut off the lines a little before the node
-    const translateLabel = labelPositions[name] || [0, 0]
-
+    const translateLabel = labelPositions[metric][name] || [0, 0]
+    const category = id.split('.')[0]
+    const opacity = current !== null && current !== category ? 0.3 : 1
     return (
         <g className="Scatterplot__Node" transform={`translate(${x},${y})`}>
             <g className="Scatterplot__Node__Crosshairs">
@@ -84,11 +101,17 @@ const Node = props => {
             </g>
 
             <circle className="Scatterplot__Node__PointHoverZone" r={16} fill="transparent" />
-            <circle className="Scatterplot__Node__Point" r={6} fill={style.color} />
+            <circle
+                className="Scatterplot__Node__Point"
+                r={6}
+                fill={style.color}
+                opacity={opacity}
+            />
 
             <g
                 className="Scatterplot__Node__Label"
                 transform={`translate(${12 + translateLabel[0]},${1 + translateLabel[1]})`}
+                opacity={opacity}
             >
                 <rect
                     className="Scatterplot__Node__Label__Background"
@@ -154,7 +177,8 @@ const Quadrants = ({ width, height, margin, metric = 'satisfaction' }) => {
             {quadrants.map(({ x, y, color, label }) => (
                 <g key={label}>
                     <rect x={x} y={y} width={qWidth} height={qHeight} fill={color} />
-                        {metric === 'satisfaction' && <text
+                    {metric === 'satisfaction' && (
+                        <text
                             className="Quadrant__Label"
                             x={x + qWidth / 2}
                             y={y + qHeight / 2}
@@ -162,21 +186,22 @@ const Quadrants = ({ width, height, margin, metric = 'satisfaction' }) => {
                             alignmentBaseline="central"
                         >
                             {label}
-                        </text>}
+                        </text>
+                    )}
                 </g>
             ))}
         </g>
     )
 }
 
-const ToolsScatterplotChart = ({ data, metric = 'satisfaction' }) => {
+const ToolsScatterplotChart = ({ data, metric = 'satisfaction', current }) => {
     const { translate } = useI18n()
 
     const quadrants = [
         props => <Quadrants {...props} metric={metric} />,
         'grid',
         'axes',
-        Nodes,
+        props => <Nodes {...props} current={current} metric={metric}/>,
         /*'nodes', */ 'markers',
         'mesh',
         'legends'
@@ -227,20 +252,20 @@ const ToolsScatterplotChart = ({ data, metric = 'satisfaction' }) => {
                         </span>
                     )
                 }}
-                legends={[
-                    {
-                        anchor: 'bottom-right',
-                        direction: 'column',
-                        translateX: -70,
-                        translateY: -20,
-                        itemWidth: 100,
-                        itemHeight: 18,
-                        itemsSpacing: 5,
-                        itemTextColor: colors.teal,
-                        symbolSize: 12,
-                        symbolShape: 'circle'
-                    }
-                ]}
+                // legends={[
+                //     {
+                //         anchor: 'bottom-right',
+                //         direction: 'column',
+                //         translateX: -70,
+                //         translateY: -20,
+                //         itemWidth: 100,
+                //         itemHeight: 18,
+                //         itemsSpacing: 5,
+                //         itemTextColor: colors.teal,
+                //         symbolSize: 12,
+                //         symbolShape: 'circle'
+                //     }
+                // ]}
                 renderNode={Node}
             />
         </div>

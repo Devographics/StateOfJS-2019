@@ -13,7 +13,7 @@
     }
     @include large {
         // fit in as many columns as possible as long as they're wider than 150px
-        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        grid-template-columns: repeat(auto-fit, minmax(120px, auto));
     }
     &.Legends--withFrame {
         @include small {
@@ -50,8 +50,11 @@
 .Legends__Item {
     display: flex;
     align-items: center;
-    // cursor: pointer;
+    cursor: default;
     flex: 1;
+    &:hover{
+        background: $bg-color-light;
+    }
     @include small{
         margin-bottom: $spacing/2;
     }

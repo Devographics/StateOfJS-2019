@@ -12,7 +12,7 @@ const theme = {
 const features = countries.features.map(feature => {
     return {
         ...feature,
-        id: feature.properties.name
+        id: feature.id
     }
 })
 

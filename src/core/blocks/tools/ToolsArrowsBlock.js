@@ -5,6 +5,13 @@ import ToolsArrowsChart from 'core/charts/tools/ToolsArrowsChart/ToolsArrowsChar
 import { toolsCategories } from '../../../../config/variables.yml'
 import { useI18n } from 'core/i18n/i18nContext'
 
+const BioBlock = () => {
+    const { translate } = useI18n()
+    return (
+        <div>{translate('amelia.bio')}</div>
+    )
+}
+
 const ToolsArrowsBlock = ({ block, data }) => {
     const [activeCategory, setActiveCategory] = useState('all')
 

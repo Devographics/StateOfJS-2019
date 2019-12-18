@@ -105,7 +105,7 @@ export const mainColors = {
     contrastColor: colors.red
 }
 
-export const categoryColors = [
+export const toolCategories = [
     { id: 'javascript_flavors', color: distinctColors[0] },
     { id: 'front_end_frameworks', color: distinctColors[1] },
     { id: 'data_layer', color: distinctColors[2] },
@@ -114,7 +114,7 @@ export const categoryColors = [
     { id: 'mobile_desktop', color: distinctColors[5] }
 ]
 
-export const featureCategoryColors = [
+export const featureCategories = [
     { id: 'syntax', color: distinctColors[0] },
     { id: 'language', color: distinctColors[1] },
     { id: 'data_structures', color: distinctColors[2] },
@@ -175,8 +175,8 @@ export const getColor = id =>
         ...toolExperience,
         ...otherColors,
         ...gender,
-        ...categoryColors,
-        ...featureCategoryColors
+        ...toolCategories,
+        ...featureCategories
     ].find(color => color.id === id).color
 
 /*
@@ -296,7 +296,8 @@ export const keys = {
     opinions,
     toolExperience,
     featureExperience,
-    featureExperienceSimplified
+    featureExperienceSimplified,
+    toolCategories,
 }
 
 export const fontFamily = `'IBM Plex Mono', monospace`
