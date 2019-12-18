@@ -11,6 +11,7 @@ import PageIntroductionBlock from 'core/blocks/other/PageIntroductionBlock'
 import SurveyIntroBlock from 'core/blocks/other/SurveyIntroBlock'
 import TshirtBlock from 'core/blocks/other/TshirtBlock'
 import AwardBlock from 'core/blocks/awards/AwardBlock'
+import ConclusionBlock from 'core/blocks/other/ConclusionBlock'
 
 // import { HappinessTrendBlock } from 'modules/happiness'
 
@@ -55,7 +56,8 @@ const blockRegistry = {
     TshirtBlock,
     SurveyIntroBlock,
     AwardBlock,
-
+    ConclusionBlock,
+    
     // demographics
     ParticipationByCountryBlock,
 

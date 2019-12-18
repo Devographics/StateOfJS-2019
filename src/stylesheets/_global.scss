@@ -108,20 +108,6 @@ a {
 //     color: $text-color-dark;
 // }
 
-/*
-
-Page-specific styles
-
-*/
-.PageLayout--introduction{
-    .block__content{
-        p:first-child{
-            @include medium-large{
-                font-size: $larger-font;
-            }
-        }
-    }
-}
 
 .desktop{
     @include small{
@@ -172,4 +158,23 @@ iframe{
 .Page__Introduction{
     font-size: $larger-font;
     margin-bottom: $spacing*4;
+}
+
+/*
+
+Page-specific styles
+
+*/
+.SurveyIntro__Content{
+    @include large{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .block__content{
+        p:first-child{
+            @include medium-large{
+                font-size: $larger-font;
+            }
+        }
+    }
 }

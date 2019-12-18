@@ -14,6 +14,7 @@ const ToolsArrowsBlock = ({ block, data }) => {
         <Block
             // titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
             block={block}
+            data={data}
         >
             <Fragment>
                 <ToolsArrowsChart {...{ data, activeCategory }} />
