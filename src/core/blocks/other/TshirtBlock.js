@@ -36,7 +36,7 @@ const TshirtBlock = () => {
                 </div>
                 <a
                     className="Button Tshirt__Button gumroad-button"
-                    href="https://gum.co/NjNjH"
+                    href="https://gumroad.com/l/stateofjs-tshirt"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

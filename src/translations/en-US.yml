@@ -8,8 +8,8 @@ translations:
       t: About the T-shirt
     - key: tshirt.description
       t: >
-          The design is printed on a black heather Bella+Canvas 3001 unisex premium t-shirt
-          with a semi-slim fit. Sizing uses U.S. sizes.
+          The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
+          with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
 
     - key: tshirt.getit
       t: Get It
@@ -304,10 +304,6 @@ translations:
       t: Salary
     - key: block.description.salary
       t: Yearly salary in USD.
-    # - key: block.title.salary-per-country
-    #   t: Average Salary per Country
-    # - key: block.description.salary-per-country
-    #   t: Average Salary per Country.
     - key: block.title.workExperience
       t: Years of Experience
     - key: block.description.workExperience
@@ -420,26 +416,48 @@ translations:
     - key: block.title.other-methodologies
       t: Other Methodologies
 
-    - key: block.title.tools_experience_heatmap
+    - key: block.title.companySize_heatmap
+      t: Usage by Company Size
+    - key: block.description.companySize_heatmap
+      t: |
+
+          For each technology, how usage is spread among respondents who picked different
+          company size ranges. 
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+
+    - key: block.title.workExperience_heatmap
       t: Usage by Years Of Experience
-    - key: block.description.tools_experience_heatmap
+    - key: block.description.workExperience_heatmap
       t: |
 
-          The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
-          while the following columns show the usage ratio for each “years of experience” bracket.
+          For each technology, how usage is spread among respondents who picked different
+          experience ranges. 
 
-          A brighter <span class="text-teal text-bold">teal</span> background indicates
-          a higher-than-overall-average ratio for a given bracket.
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
 
-    - key: block.title.tools_salary_heatmap
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    - key: block.title.salary_heatmap
       t: Usage by Salary Range
-    - key: block.description.tools_salary_heatmap
+    - key: block.description.salary_heatmap
       t: |
-          The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
-          while the following columns show the usage ratio for each “yearly salary” bracket.
 
-          A brighter <span class="text-teal text-bold">teal</span> background indicates
-          a higher-than-overall-average ratio for a given bracket.
+          For each technology, how usage is spread among respondents who picked different
+          salary ranges. 
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “yearly salary” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
 
     # rankings/bump chart
     - key: block.title.toolExperienceRanking

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { salaryArray, workExperienceArray, companySizeArray } from 'core/constants.js'
 import Block from 'core/blocks/block/Block'
 import HeatmapChart from 'core/charts/generic/HeatmapChart'
+import { useI18n } from 'core/i18n/i18nContext'
 
 const keysByType = {
     salary: salaryArray,
@@ -11,8 +12,12 @@ const keysByType = {
 }
 
 const HeatmapBlock = ({ block, data }) => {
+    const { id, blockName = id } = block
+    const { translate } = useI18n()
+    const title = translate(`block.title.${blockName}_heatmap`)
+    const description = translate(`block.description.${blockName}_heatmap`)
     return (
-        <Block data={data.buckets} block={block}>
+        <Block data={data.buckets} block={{...block, title, description }}>
             <HeatmapChart
                 keys={keysByType[block.variables.heatmapId]}
                 data={data.buckets}
