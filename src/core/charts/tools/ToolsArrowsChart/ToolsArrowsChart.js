@@ -80,7 +80,12 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
     }, [points, dms])
 
     return (
-        <div ref={ref} className="ToolsArrowsChart">
+        <div
+            ref={ref}
+            className={`ToolsArrowsChart ToolsArrowsChart--is-${
+                activeCategory != 'all' ? 'animated' : 'not-animated'
+            }`}
+        >
             <svg className="ToolsArrowsChart__svg" height={dms.height} width={dms.width}>
                 <g transform={`translate(${dms.marginLeft}, ${dms.marginTop})`}>
                     <line
@@ -154,6 +159,12 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                             })
                         )
 
+                        const backgroundPath = [
+                            'M',
+                            points.map(([x, y]) => [scales.x(x), scales.y(y)].join(',')).join('L ')
+                        ].join(' ')
+                        console.log(backgroundPath)
+
                         const x = scales.x(thisYearPoint[0])
                         const y = scales.y(thisYearPoint[1])
                         const color = categoryColorMap[category]
@@ -191,6 +202,10 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                     cy={y}
                                     fill={color}
                                     r="6"
+                                />
+                                <path
+                                    className="ToolsArrowsChart__hover-background"
+                                    d={backgroundPath}
                                 />
                                 <text
                                     className="ToolsArrowsChart__label-background"

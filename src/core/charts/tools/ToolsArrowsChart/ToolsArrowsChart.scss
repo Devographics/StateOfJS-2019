@@ -37,7 +37,8 @@
 
         text {
           fill-opacity: 0;
-          opacity: 0;
+          stroke-opacity: 0;
+          // opacity: 0;
         }
 
         .ToolsArrowsChart {
@@ -48,6 +49,11 @@
         }
       }
     }
+  }
+  &__hover-background {
+    stroke-width: 30px;
+    stroke: rgba(0, 0, 0, 0);
+    fill: none;
   }
 
   @keyframes gradientLineSegmentIn {
@@ -62,15 +68,19 @@
     mix-blend-mode: lighten;
     stroke-linecap: round;
     stroke-linejoin: round;
-    // stroke-dasharray: 20px 20px;
-    stroke-opacity: 0;
-    animation: gradientLineSegmentIn 0.2s ease-out;
-    animation-fill-mode: forwards;
-    // transition: all 0.1s ease-out;
+  }
 
-    @for $i from 0 to 100 {
-      &--nth-#{$i} {
-        animation-delay: #{$i * 0.04}s;
+  &--is-animated {
+    .ToolsArrowsChart {
+      &__gradient-line {
+        stroke-opacity: 0;
+        animation: gradientLineSegmentIn 0.2s ease-out;
+        animation-fill-mode: forwards;
+        @for $i from 0 to 100 {
+          &--nth-#{$i} {
+            animation-delay: #{$i * 0.03}s;
+          }
+        }
       }
     }
   }
