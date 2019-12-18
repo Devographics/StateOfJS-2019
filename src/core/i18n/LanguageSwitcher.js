@@ -31,7 +31,7 @@ const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
                 <div className="LanguageSwitcher__Options">
                     <Locales />
                     <div className="LanguageSwitcher__Help">
-                        <a href="https://github.com/StateOfJS/state-of-css-2019/issues/30">
+                        <a href="https://github.com/StateOfJS/State-of-JS-2019/issues/8">
                             {translate('general.help_us_translate')}
                         </a>
                     </div>
