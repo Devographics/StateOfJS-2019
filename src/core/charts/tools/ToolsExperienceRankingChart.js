@@ -6,7 +6,7 @@ import { colors } from 'core/constants'
 // import get from 'lodash/get'
 
 const CustomPoint = props => {
-    const { x, y, data, isInactive, size, color, borderColor, borderWidth } = props
+    const { x, y, data, isInactive, size, borderColor, borderWidth } = props
 
     return (
         <g transform={`translate(${x}, ${y})`} style={{ pointerEvents: 'none' }}>
@@ -18,7 +18,7 @@ const CustomPoint = props => {
                 strokeWidth={borderWidth}
             />
             {!isInactive && (
-                <text textAnchor="middle" y={4} fill={color} fontSize="11px">
+                <text textAnchor="middle" y={4} fill={colors.greyLight} fontSize="11px">
                     {Math.round(data.percentage)}%
                 </text>
             )}
@@ -64,7 +64,6 @@ const ToolsExperienceRankingChart = ({ data }) => {
             }}
             endLabelPadding={20}
             pointComponent={CustomPoint}
-            pointColor={{ from: 'serie.color', modifiers: [['brighter', 2]] }}
             lineWidth={5}
             pointSize={36}
             pointBorderWidth={3}
