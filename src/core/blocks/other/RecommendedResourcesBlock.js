@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import resources from 'data/recommended_resources.yml'
 import BlockTitle from 'core/blocks/block/BlockTitle'
 import { useI18n } from 'core/i18n/i18nContext'
+import { usePageContext } from 'core/helpers/pageContext'
 
 const trackClick = (id, resource, label) => {
     ReactGA.event({
@@ -16,11 +17,12 @@ const trackClick = (id, resource, label) => {
 
 const RecommendedResourcesBlock = ({ block, data }) => {
     const { translate } = useI18n()
-    const { sponsors } = block
+    const context = usePageContext()
+    const { sponsors } = context
+
     if (!sponsors) {
         return null
     }
-
     const { id } = block
     const sectionResources = resources.filter(r => sponsors.includes(r.id))
 
