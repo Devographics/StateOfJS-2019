@@ -48,7 +48,7 @@ tools:
     puppeteer: Pp
     json-server: Js
     nightmare: Nm
-    react-native: Rn
+    reactnative: Rn
     electron: E
     ionic: Io
     nativescript: Ns
@@ -68,7 +68,7 @@ tools:
     polymer: Po
     elm: El
     es6: E6
-    native-apps: Na
+    nativeapps: Na
     vuex: Vx
     visual-studio: Vs
     # not really tools but who cares
