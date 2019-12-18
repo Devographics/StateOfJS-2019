@@ -42,13 +42,13 @@ const HeatmapChartRow = ({
                             'Heatmap__Cell--inactive': isInactive
                         })}
                         style={{
-                            background: backgroundColorScale(cell.count),
-                            color: textColorScale(cell.count)
+                            background: backgroundColorScale((cell && cell.count) || 0),
+                            color: textColorScale((cell && cell.count) || 0)
                         }}
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
-                        {cell.percentage}%
+                        {(cell && cell.percentage) || 0}%
                     </div>
                 )
             })}
