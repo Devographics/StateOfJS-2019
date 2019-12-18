@@ -61,13 +61,13 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
     )
 
     const scales = useMemo(() => {
-        const xExtent = extent(points.flat().map(d => d[0]))
+        const xExtent = extent(flatten(points).map(d => d[0]))
         const maxAbsX = max(xExtent.map(Math.abs))
         const xScale = scaleLinear()
             .domain([-maxAbsX, maxAbsX])
             .range([0, dms.boundedWidth])
 
-        const yExtent = extent(points.flat().map(d => d[1]))
+        const yExtent = extent(flatten(points).map(d => d[1]))
         const maxAbsY = max(yExtent.map(Math.abs))
         const yScale = scaleLinear()
             .domain([-maxAbsY, maxAbsY])
