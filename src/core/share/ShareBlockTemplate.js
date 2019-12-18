@@ -11,6 +11,8 @@ import Trans from '../i18n/Trans'
 export default class ShareBlockTemplate extends Component {
     render() {
         const { pageContext, location } = this.props
+        const { block } = pageContext
+
         const context = mergePageContext(pageContext, location)
 
         return (
@@ -19,7 +21,7 @@ export default class ShareBlockTemplate extends Component {
                     <Trans>
                         {translate => {
                             const overrides = {
-                                title: `${getBlockTitle(context.block, context, translate, {
+                                title: `${getBlockTitle(block, context, translate, {
                                     format: 'full'
                                 })} #StateOfJS`,
                                 description: getBlockDescription(

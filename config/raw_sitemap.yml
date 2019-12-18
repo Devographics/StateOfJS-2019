@@ -179,6 +179,11 @@
             - id: array_prototype_flat
               template: featureExperienceTemplate
 
+            - id: browser_apis_recommended_resources
+              template: recommendedResourcesTemplate
+              sponsors:
+                  - wesbos-js30
+
       - id: browser_apis
         path: /browser-apis
         blocks:
@@ -231,7 +236,7 @@
             - id: browser_apis_recommended_resources
               template: recommendedResourcesTemplate
               sponsors:
-                  - wesbos-js30
+                  - service-workers
 
       - id: other_features
         path: /other-features
@@ -252,6 +257,11 @@
             - id: wasm
               template: featureExperienceTemplate
 
+            - id: browser_apis_recommended_resources
+              template: recommendedResourcesTemplate
+              sponsors:
+                  - js-recent-parts
+                  
 - id: javascript_flavors
   path: /javascript-flavors
   template: toolSectionTemplate

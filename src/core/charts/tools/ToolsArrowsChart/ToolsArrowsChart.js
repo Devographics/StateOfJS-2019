@@ -34,15 +34,20 @@ const gradientLineWidthScale = scaleLinear()
 const ToolsArrowsChart = ({ data, activeCategory }) => {
     const [hoveredTool, setHoveredTool] = useState(null)
     const windowWidth = useWindowWidth()
+    const windowHeight = useWindowHeight()
 
     const dms = useMemo(() => {
         const width = windowWidth > 1300 ? 900 :
             windowWidth > 900 ? 700 :
             800
 
+        const height = windowHeight > 1300 ? 900 :
+            windowHeight > 800 ? 700 :
+            550
+
         return {
             width,
-            height: width,
+            height,
         }
     }, [windowWidth])
 
@@ -284,4 +289,21 @@ function useWindowWidth() {
     }, [])
 
     return windowWidth
+}
+
+function useWindowHeight() {
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+
+    function handleResize() {
+      setWindowHeight(window.innerHeight)
+    }
+
+    useEffect(() => {
+      window.addEventListener('resize', handleResize)
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
+    }, [])
+
+    return windowHeight
 }

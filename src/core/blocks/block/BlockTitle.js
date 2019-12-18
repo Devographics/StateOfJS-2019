@@ -34,7 +34,7 @@ const BlockTitle = ({
     } else if (blockName) {
         blockTitle = translate(`block.title.${blockName}`)
     } else {
-        blockTitle = getBlockTitle(id, context, translate, { values })
+        blockTitle = getBlockTitle(block, context, translate, { values })
     }
 
     let blockDescription
