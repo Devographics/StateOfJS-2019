@@ -403,6 +403,8 @@
 
       - id: storybook
         template: toolPageTemplate
+        sponsors:
+            - storybook1
 
       - id: cypress
         template: toolPageTemplate
@@ -549,10 +551,10 @@
         mode: relative
         units: count
 
-      - id: resources-sponsors
-        blockType: RecommendedResourcesBlock
-        items:
-            - storybook1
+      # - id: resources-sponsors
+      #   blockType: RecommendedResourcesBlock
+      #   sponsors:
+      #       - storybook1
 
 - id: opinions
   path: /opinions
