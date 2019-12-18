@@ -343,12 +343,14 @@ translations:
       t: CanIUse
     - key: feature.specification_link
       t: W3C Specification
+
     - key: featureExperienceSimplified.used_it.long
       t: Have used it
     - key: featureExperienceSimplified.know_it.long
       t: Know about it
     - key: features.usage.ratio
       t: Usage Ratio
+
     - key: featureExperience.used_it.long
       t: Have used it
     - key: featureExperience.know_not_used.long
@@ -469,7 +471,7 @@ translations:
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
       t: Satisfaction vs Usage
-    - key: block.description.scatterplotOverview
+    - key: block.description.scatterplotOverview.satisfaction
       t: >
           This chart shows each technology’s **satisfaction ratio** over its total **user count**.
           It can be divided into four quadrants:
@@ -481,6 +483,11 @@ translations:
           - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
 
           - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+    - key: block.description.scatterplotOverview.interest
+      t: >
+          This chart shows each technology’s **interest ratio** over its total **user count** (as defined by respondents who are aware of a technology but *haven't* used it yet).
+
+          (Note that low user numbers can be due to either an unknown technology; or a technology with a lot of respondents already using it.) 
 
     - key: quadrants.assess
       t: Assess
@@ -616,53 +623,6 @@ translations:
     - key: block.description.env-browsers
       t: Which browsers do you test in?
 
-    # print styles
-    - key: block.title.print-styles
-      t: CSS for Print
-    - key: block.description.print-styles
-      t: Do you write print styles?
-    - key: print-styles.axis_legend
-      t: Periodicity
-    - key: print-styles.never.short
-      t: Never
-    - key: print-styles.never.long
-      t: I (almost) never write print styles
-    - key: print-styles.occasionally.short
-      t: Occasionally
-    - key: print-styles.occasionally.long
-      t: I occasionally write print styles
-    - key: print-styles.often.short
-      t: Often
-    - key: print-styles.often.long
-      t: I write print styles as part of most projects
-    - key: print-styles.mainly.short
-      t: Mainly
-    - key: print-styles.mainly.long
-      t: I focus mainly on CSS for print
-
-    # email styles
-    - key: block.title.email-styles
-      t: CSS for Email Clients
-    - key: block.description.email-styles
-      t: Do you write CSS for email clients?
-    - key: email-styles.axis_legend
-      t: Periodicity
-    - key: email-styles.never.short
-      t: Never
-    - key: email-styles.never.long
-      t: I (almost) never write CSS for email clients
-    - key: email-styles.occasionally.short
-      t: Occasionally
-    - key: email-styles.occasionally.long
-      t: I occasionally write CSS for email clients
-    - key: email-styles.often.short
-      t: Often
-    - key: email-styles.often.long
-      t: I write CSS for email clients as part of most projects
-    - key: email-styles.mainly.short
-      t: Mainly
-    - key: email-styles.mainly.long
-      t: I focus mainly on CSS for email clients
 
     ###########################################################################
     # Resources
@@ -692,7 +652,7 @@ translations:
     - key: block.title.podcasts
       t: Podcasts
     - key: block.description.podcasts
-      t: Which CSS or programming-related podcasts do you listen to?
+      t: Which JavaScript or programming-related podcasts do you listen to?
     - key: block.title.podcasts_others
       t: Other Podcasts
     - key: block.description.podcasts_others
@@ -705,7 +665,7 @@ translations:
     - key: block.title.easy-to-learn
       t: Learning Curve
     - key: block.description.easy-to-learn
-      t: “CSS is easy to learn”
+      t: JavaScript is easy to learn”
 
     - key: block.title.js_moving_in_right_direction
       t: Direction
@@ -740,7 +700,7 @@ translations:
     - key: block.title.missing-features
       t: Missing Features
     - key: block.description.missing-features
-      t: What do developers feel is currently missing from CSS?
+      t: What do developers feel is currently missing from JavaScript?
 
     ###########################################################################
     # Awards
@@ -748,78 +708,87 @@ translations:
 
     - key: awards.runner_ups
       t: Runner Ups
-    - key: award.runner_up
-      t: '${item.name}: ${item.value}'
 
     # feature_adoption
-    - key: award.feature-adoption.title
+    - key: award.feature_adoption_award.title
       t: Most Adopted Feature
-    - key: award.feature-adoption.description
+    - key: award.feature_adoption_award.description
       t: |
-          Awarded to the most adopted CSS feature.
-    - key: award.feature-adoption.comment
+          Awarded to the most adopted JavaScript feature.
+    - key: award.feature_adoption_award.comment
       t: |
           With **${items[0].value}** users ${items[0].name}
-          is the most used CSS feature this year.
+          is the most used JavaScript feature this year.
 
     # tool_satisfaction
-    - key: award.tool-satisfaction.title
+    - key: award.tool_satisfaction_award.title
       t: Highest Satisfaction
-    - key: award.tool-satisfaction.description
+    - key: award.tool_satisfaction_award.description
       t: |
           Awarded to the technology with the highest
           percentage of satisfied users.
-    - key: award.tool-satisfaction.comment
+    - key: award.tool_satisfaction_award.comment
       t: |
-          With **${items[0].value}%** of users willing to use it again,
-          ${items[0].name} proves it’s not kidding around.
+          With **${items[0].value}** of users willing to use it again,
+          ${items[0].name} proves once more it’s not kidding around.
 
     # tool_interest
-    - key: award.tool-interest.title
+    - key: award.tool_interest_award.title
       t: Highest Interest
-    - key: award.tool-interest.description
+    - key: award.tool_interest_award.description
       t: |
           Awarded to the technology developers
           are most interested in learning.
-    - key: award.tool-interest.comment
+    - key: award.tool_interest_award.comment
       t: |
-          **${items[0].value}%** of developers who have heard
+          **${items[0].value}** of developers who have heard
           about ${items[0].name} want to learn it.
           That’s some serious interest!
 
     # tool_usage
-    - key: award.tool-usage.title
+    - key: award.tool_usage_award.title
       t: Most Used Technology
-    - key: award.tool-usage.description
+    - key: award.tool_usage_award.description
       t: |
           Awarded to technology with the largest user base.
-    - key: award.tool-usage.comment
+    - key: award.tool_usage_award.comment
       t: |
           With **${items[0].value}** users ${items[0].name}
           is the most used technology this year.
 
     # resource_usage
-    - key: award.resource-usage.title
+    - key: award.resource_usage_award.title
       t: Most Used Resource
-    - key: award.resource-usage.description
+    - key: award.resource_usage_award.description
       t: |
           Awarded to the resource with the largest user base.
-    - key: award.resource-usage.comment
+    - key: award.resource_usage_award.comment
       t: |
           With **${items[0].value}** users ${items[0].name}
           is the most used resource this year.
 
     # tool_mention
-    - key: award.tool-mention.title
+    - key: award.tool_mention_award.title
       t: Most Mentioned
-    - key: award.tool-mention.description
+    - key: award.tool_mention.description
       t: |
           Awarded to the library mentioned
           the most in the “other libraries” answer.
-    - key: award.tool-mention.comment
+    - key: award.tool_mention_award.comment
       t: |
           ${items[0].name} collected **${items[0].value}** mentions,
           making it the most submitted freeform answer by far.
+
+    # prediction_award
+    - key: award.prediction_award.title
+      t: Prediction Award
+    - key: award.prediction_award.description
+      t: |
+          Awarded to an up-and-coming technology that might take over… or not?
+    - key: award.prediction_award.comment
+      t: |
+          ${items[0].name} made its explosive debut in this year's survey and we can't
+          wait to see where it goes from here
 
     ###########################################################################
     # Generic
@@ -881,19 +850,19 @@ translations:
     - key: share.share
       t: Share
     - key: share.site.title
-      t: Discover the StateOf CSS 2019 results
+      t: Discover the StateOf JavaScript 2019 results
     - key: share.site.twitter_text
-      t: 'Discover the State Of CSS 2019 results ${link} #StateOfCSS'
+      t: 'Discover the State Of JavaScript 2019 results ${link} #StateOfJS'
     - key: share.site.subject
-      t: State Of CSS Survey Results
+      t: State Of JavaScript Survey Results
     - key: share.site.body
-      t: 'Here are some interesting CSS survey results: ${link}'
+      t: 'Here are some interesting JavaScript survey results: ${link}'
     - key: share.block.twitter_text
       t: '#StateOfJS 2019: ${title} ${link}'
     - key: share.block.subject
-      t: State Of CSS Survey Results
+      t: State Of JavaScript Survey Results
     - key: share.block.body
-      t: 'Here are some interesting CSS survey results (${title}): ${link}'
+      t: 'Here are some interesting JavaScript survey results (${title}): ${link}'
     - key: share.twitter
       t: Share on Twitter
     - key: share.facebook
@@ -932,9 +901,9 @@ translations:
 
     # general
     - key: general.title
-      t: State of CSS 2019
+      t: State of JavaScript 2019
     - key: general.description
-      t: Discover the most popular CSS features & technologies of the year.
+      t: Discover the most popular JavaScript features & technologies of the year.
     - key: general.stay_tuned
       t: Stay Tuned
     - key: general.leave_your_email
@@ -950,7 +919,7 @@ translations:
 
           ## Error 404
 
-          Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/state-of-css-2019/issues) if you think something might be broken.
+          Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/State-of-JS-2019/issues) if you think something might be broken.
     - key: general.back_to_intro
       t: Back to introduction
     - key: general.close_nav
@@ -987,6 +956,8 @@ translations:
       t: User Count
     - key: satisfaction_percentage
       t: Satisfaction Percentage
+    - key: interest_percentage
+      t: Interest Percentage
     - key: chart_mode
       t: mode
     - key: chart_mode.absolute
@@ -1003,6 +974,8 @@ translations:
       t: users
     - key: percent_satisfaction
       t: '% satisfaction'
+    - key: percent_interest
+      t: '% interest'
     - key: heatmap.average
       t: overall
     - key: difference_from_average_usage

@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Block from 'core/blocks/block/Block'
 import compact from 'lodash/compact'
 import { getColor } from 'core/constants.js'
 import round from 'lodash/round'
 import ToolsScatterplotChart from 'core/charts/tools/ToolsScatterplotChart'
-import { useEntities } from 'core/entities/entitiesContext'
 import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
 import get from 'lodash/get'
@@ -15,7 +14,7 @@ import { toolsCategories } from '../../../../config/variables.yml'
 Parse data and convert it into a format compatible with the Scatterplot chart
 
 */
-const getChartData = (data, translate, getName) => {
+const getChartData = (data, translate, metric = 'satisfaction') => {
     const allTools = Object.keys(toolsCategories).map(categoryId => {
         const toolsIds = toolsCategories[categoryId]
 
@@ -26,6 +25,7 @@ const getChartData = (data, translate, getName) => {
                 const { id, entity, experience } = tool
                 const name = entity.name
                 const buckets = get(experience, 'year.buckets')
+                const total = get(experience, 'year.total')
 
                 // if tool doesn't have experience data, abort
                 if (!buckets) {
@@ -37,13 +37,26 @@ const getChartData = (data, translate, getName) => {
                     return buckets && buckets.find(b => b.id === id).count
                 }
 
-                const usersCount = getCount('would_use') + getCount('would_not_use')
-                const satisfactionPercentage = round((getCount('would_use') / usersCount) * 100, 2)
+                const totals = {
+                    satisfaction: getCount('would_use') + getCount('would_not_use'),
+                    interest: getCount('interested') + getCount('not_interested'),
+                    awareness: total
+                }
+
+                const getPercentage = id => {
+                    return round((getCount(id) / totals[metric]) * 100, 2)
+                }
+
+                const percentages = {
+                    satisfaction: getPercentage('would_use'),
+                    interest: getPercentage('interested'),
+                    awareness: (100 - getPercentage('never_heard'))
+                }
 
                 const node = {
                     id,
-                    x: usersCount,
-                    y: satisfactionPercentage,
+                    x: totals[metric],
+                    y: percentages[metric],
                     name
                 }
 
@@ -61,16 +74,44 @@ const getChartData = (data, translate, getName) => {
     return compact(allTools)
 }
 
+const Switcher = ({ setMetric, metric }) => {
+    const { translate } = useI18n()
+    
+    return (
+        <div className="ChartUnitsSelector">
+            <span className="ButtonGroup">
+                {['satisfaction', 'interest' /*, 'awareness'*/].map(key => (
+                    <span
+                        key={key}
+                        className={`Button Button--small Button--${
+                            metric === key ? 'active' : 'disabled'
+                        }`}
+                        onClick={() => setMetric(key)}
+                    >
+                        {translate(`opinions.legends.${key}_ratio`)}
+                    </span>
+                ))}
+            </span>
+        </div>
+    )
+}
+
 const ToolsOverviewBlock = ({ block, data }) => {
     const { translate } = useI18n()
-    const { getName } = useEntities()
+    const [metric, setMetric] = useState('satisfaction')
+    const chartData = getChartData(data, translate, metric)
+    const { id, blockName = id } = block
 
-    const chartData = getChartData(data, translate, getName)
-
+    const description = translate(`block.description.${blockName}.${metric}`)
     return (
-        <Block className="ToolsScatterplotBlock" data={chartData} block={block}>
+        <Block
+            className="ToolsScatterplotBlock"
+            data={chartData}
+            block={{...block, description}}
+            titleProps={{ switcher: <Switcher setMetric={setMetric} metric={metric} /> }}
+        >
             <ChartContainer vscroll={true}>
-                <ToolsScatterplotChart data={chartData} />
+                <ToolsScatterplotChart data={chartData} metric={metric} showQuadrants={metric === 'satisfaction'}/>
             </ChartContainer>
         </Block>
     )

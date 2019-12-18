@@ -130,6 +130,7 @@ scatterplotOverviewTemplate:
                     }
                     experience {
                         year(year:${currentYear}) {
+                            total
                             buckets{
                                 id
                                 count
@@ -433,6 +434,9 @@ heatmapTemplate:
                                     average
                                     total
                                     id
+                                    entity{
+                                        name
+                                    }
                                     ranges {
                                         range
                                         percentage
@@ -464,6 +468,7 @@ scatterplotTemplate:
                     }
                     experience {
                         year(year:${currentYear}) {
+                            total
                             buckets{
                                 id
                                 count

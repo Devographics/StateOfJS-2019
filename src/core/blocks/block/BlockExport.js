@@ -4,9 +4,9 @@ import { useI18n } from 'core/i18n/i18nContext'
 import Modal from 'react-modal'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
-import { Parser } from 'json2csv'
+// import { Parser } from 'json2csv'
 
-const parser = new Parser()
+// const parser = new Parser()
 
 const customStyles = {
     content: {
@@ -57,7 +57,7 @@ const BlockExport = ({ data, block, title }) => {
     }
 
     const isArray = Array.isArray(data)
-    const hasCSV = isArray
+    // const hasCSV = isArray
 
     // try to remove entities data
     const cleanedData = isArray
@@ -68,7 +68,7 @@ const BlockExport = ({ data, block, title }) => {
         : data
 
     const jsonExport = JSON.stringify(cleanedData, '', 2)
-    const csvExport = hasCSV && parser.parse(cleanedData)
+    // const csvExport = hasCSV && parser.parse(cleanedData)
 
     // remove first and last lines of query to remove "surveyApi" field
     const trimmedQuery = query
@@ -102,17 +102,17 @@ ${trimmedQuery}
                 contentLabel="Example Modal"
             >
                 <div className="Export__Modal">
-                    <h3>{translate('export.title', { title })}</h3>
+                    <h3>{translate('export.title', { values: { title } })}</h3>
                     <Tabs>
                         <TabList>
                             <Tab>JSON</Tab>
-                            <Tab>CSV</Tab>
+                            {/* <Tab>CSV</Tab> */}
                             <Tab>GraphQL</Tab>
                         </TabList>
                         <TabPanel>
                             <textarea className="Export__Textarea" value={jsonExport} readOnly />
                         </TabPanel>
-                        <TabPanel>
+                        {/* <TabPanel>
                             {hasCSV ? (
                                 <textarea className="Export__Textarea" value={csvExport} readOnly />
                             ) : (
@@ -120,12 +120,10 @@ ${trimmedQuery}
                                     {translate('export.nocsv')}
                                 </div>
                             )}
-                        </TabPanel>
+                        </TabPanel> */}
                         <TabPanel>
                             <textarea className="Export__Textarea" value={graphQLExport} readOnly />
-                            <div className="Export__Message Export__GraphQLMessage">
-                                {translate('export.nocsv')}
-                            </div>
+                            <div className="Export__Message Export__GraphQLMessage" dangerouslySetInnerHTML={{__html: translate('export.graphql')}}/>
                         </TabPanel>
                     </Tabs>
                 </div>

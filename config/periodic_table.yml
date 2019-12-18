@@ -71,7 +71,16 @@ tools:
     native-apps: Na
     vuex: Vx
     visual-studio: Vs
-
+    # not really tools but who cares
+    arrow_functions: Af
+    promises: Pr
+    spread_operator: Sp
+    stack_overflow: So
+    mdn: Md
+    css_tricks: Ct
+    stencil: St
+    nest: Ne
+    
 utilities:
     projects:
         - symbol: Ch

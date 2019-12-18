@@ -6,11 +6,11 @@
 
 featuresPageTemplate:
     blocks:
-        - id: features-introduction
+        - id: features_introduction
           template: pageIntroductionTemplate
           variables:
               pageId: '${id}'
-        - id: ${id}-featuresOverview
+        - id: ${id}_featuresOverview
           template: featuresOverviewTemplate
           blockName: featuresOverview
 
@@ -23,25 +23,25 @@ featuresPageTemplate:
 # Tool section (/front-end, /data-layer, etc.)
 toolSectionTemplate:
     blocks:
-        - id: '${id}-introduction'
+        - id: '${id}_introduction'
           template: pageIntroductionTemplate
           variables:
               pageId: '${id}'
 
-        - id: '${id}-experience-ranking'
+        - id: '${id}_experience_ranking'
           blockName: toolsExperienceRanking
           template: toolsExperienceRankingTemplate
           variables:
               sectionId: '${id}'
 
-        - id: '${id}-section-overview'
+        - id: '${id}_section_overview'
           blockName: toolsSectionOverview
           template: toolsSectionOverviewTemplate
           variables:
               category: '${id}'
               toolIds: ${toolIds}
 
-        - id: '${id}-experience-heatmap'
+        - id: '${id}_experience_heatmap'
           blockName: workExperience
           template: heatmapTemplate
           variables:
@@ -49,7 +49,7 @@ toolSectionTemplate:
               heatmapId: workExperience
               toolIds: ${toolIds}
 
-        - id: '${id}-salary-heatmap'
+        - id: '${id}_salary_heatmap'
           blockName: salary
           template: heatmapTemplate
           variables:
@@ -57,7 +57,7 @@ toolSectionTemplate:
               heatmapId: salary
               toolIds: ${toolIds}
 
-        - id: '${id}-company-size-heatmap'
+        - id: '${id}_company_size_heatmap'
           blockName: companySize
           template: heatmapTemplate
           variables:
@@ -91,11 +91,11 @@ toolPageTemplate:
     defaultVariables:
         sponsors: []
     blocks:
-        - id: ${id}-header
+        - id: ${id}_header
           variables:
               toolId: '${id}'
           template: toolHeaderTemplate
-        - id: '${id}-experience'
+        - id: '${id}_experience'
           blockName: toolExperience
           variables:
               toolId: '${id}'
@@ -118,7 +118,7 @@ categoryOtherToolsPageTemplate:
     defaultVariables:
         sponsors: []
     blocks:
-        - id: ${id}-other-tools
+        - id: ${id}_other_tools
           blockName: category-other-tools
           template: categoryOtherToolsTemplate
           variables:

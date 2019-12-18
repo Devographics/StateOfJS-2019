@@ -111,7 +111,13 @@ const Node = props => {
         </g>
     )
 }
-const Quadrants = ({ width, height, margin }) => {
+
+const quadrantLabels = {
+    satisfaction: ['assess', 'adopt', 'avoid', 'analyze'],
+    interest: ['mainstream', 'next_big_thing', 'unknown', 'low_interest']
+}
+
+const Quadrants = ({ width, height, margin, metric = 'satisfaction' }) => {
     const { translate } = useI18n()
     const qWidth = (width - margin.right - margin.left) / 2
     const qHeight = (height - margin.top - margin.bottom) / 2
@@ -121,49 +127,60 @@ const Quadrants = ({ width, height, margin }) => {
             x: 0,
             y: 0,
             color: colors.navyLight,
-            label: translate('quadrants.assess')
+            label: translate(`quadrants.${quadrantLabels[metric][0]}`)
         },
         {
             x: qWidth,
             y: 0,
             color: colors.navyLighter,
-            label: translate('quadrants.adopt')
+            label: translate(`quadrants.${quadrantLabels[metric][1]}`)
         },
         {
             x: 0,
             y: qHeight,
             color: colors.navyDark,
-            label: translate('quadrants.avoid')
+            label: translate(`quadrants.${quadrantLabels[metric][2]}`)
         },
         {
             x: qWidth,
             y: qHeight,
             color: colors.navyLight,
-            label: translate('quadrants.analyze')
+            label: translate(`quadrants.${quadrantLabels[metric][3]}`)
         }
     ]
+
     return (
         <g className="Quadrant__Background">
             {quadrants.map(({ x, y, color, label }) => (
                 <g key={label}>
                     <rect x={x} y={y} width={qWidth} height={qHeight} fill={color} />
-                    <text
-                        className="Quadrant__Label"
-                        x={x + qWidth / 2}
-                        y={y + qHeight / 2}
-                        textAnchor="middle"
-                        alignmentBaseline="central"
-                    >
-                        {label}
-                    </text>
+                        {metric === 'satisfaction' && <text
+                            className="Quadrant__Label"
+                            x={x + qWidth / 2}
+                            y={y + qHeight / 2}
+                            textAnchor="middle"
+                            alignmentBaseline="central"
+                        >
+                            {label}
+                        </text>}
                 </g>
             ))}
         </g>
     )
 }
 
-const ToolsScatterplotChart = ({ data }) => {
+const ToolsScatterplotChart = ({ data, metric = 'satisfaction' }) => {
     const { translate } = useI18n()
+
+    const quadrants = [
+        props => <Quadrants {...props} metric={metric} />,
+        'grid',
+        'axes',
+        Nodes,
+        /*'nodes', */ 'markers',
+        'mesh',
+        'legends'
+    ]
 
     return (
         <div style={{ height: 600 }}>
@@ -191,20 +208,12 @@ const ToolsScatterplotChart = ({ data }) => {
                     tickSize: 5,
                     tickPadding: 5,
                     tickRotation: 0,
-                    legend: translate('satisfaction_percentage'),
+                    legend: translate(`${metric}_percentage`),
                     legendPosition: 'middle',
                     legendOffset: -60,
                     format: s => `${s}%`
                 }}
-                layers={[
-                    Quadrants,
-                    'grid',
-                    'axes',
-                    Nodes,
-                    /*'nodes', */ 'markers',
-                    'mesh',
-                    'legends'
-                ]}
+                layers={quadrants}
                 colors={dot => getColor(dot.serieId)}
                 animate={false}
                 tooltip={({ node }) => {
@@ -214,10 +223,7 @@ const ToolsScatterplotChart = ({ data }) => {
                             <strong>
                                 {data.name} ({data.serieId})
                             </strong>
-                            :{' '}
-                            {`${x} ${translate('users')},  ${y}${translate(
-                                'percent_satisfaction'
-                            )}`}
+                            : {`${x} ${translate('users')},  ${y}${translate(`percent_${metric}`)}`}
                         </span>
                     )
                 }}

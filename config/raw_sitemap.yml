@@ -21,11 +21,12 @@
 # - showLegend: whether to show the block's legend
 # - showDescription: whether to show the block's description
 # - blockTemplate: a template from which to inherit its properties
+# - translateData: whether to try and translate 
 - id: introduction
   path: /
   showTitle: false
   blocks:
-      - id: survey-intro
+      - id: survey_intro
         variables:
             pageId: ${id}
         template: pageIntroductionTemplate
@@ -35,17 +36,17 @@
   showTitle: false
   path: /tshirt
   blocks:
-      - id: tshirt-intro
+      - id: tshirt_intro
         template: pageIntroductionTemplate
         variables:
             pageId: ${id}
-      - id: tshirt-block
+      - id: tshirt_block
         blockType: TshirtBlock
 
 - id: demographics
   path: /demographics
   blocks:
-      - id: demographics-intro
+      - id: demographics_intro
         template: pageIntroductionTemplate
         variables:
             pageId: ${id}
@@ -68,6 +69,7 @@
       - id: jobTitle
         template: demographicsTemplate
         blockType: HorizontalBarBlock
+        translateData: true
       - id: cssProficiency
         showLegend: true
         template: demographicsTemplate
@@ -476,7 +478,7 @@
 - id: other_tools
   path: /other-tools
   blocks:
-      - id: other-tools-intro
+      - id: other_tools_intro
         template: pageIntroductionTemplate
         variables:
             pageId: ${id}
@@ -596,24 +598,85 @@
 - id: awards
   path: /awards
   blocks:
-      - id: awards-intro
+      - id: awards_intro
         template: pageIntroductionTemplate
         variables:
             pageId: ${id}
-      - id: feature_adoption
-        blockType: AwardBlock
 
-      - id: tool_usage
+      - id: feature_adoption_award
         blockType: AwardBlock
+        awards:
+          - id: arrow_functions
+            name: Arrow Functions
+            value: 97.8%
+          - id: promises
+            name: Promises
+            value: 94.8%
+          - id: spread_operator
+            name: Spread Operator
+            value: 92.3%
 
-      - id: tool_satisfaction
+      - id: tool_usage_award
         blockType: AwardBlock
+        awards:
+          - id: react
+            name: React
+            value: 16099
+          - id: express
+            name: Express
+            value: 15374
+          - id: redux
+            name: Redux
+            value: 13441
 
-      - id: tool_interest
+      - id: tool_satisfaction_award
         blockType: AwardBlock
+        awards:
+          - id: jest
+            name: Jest
+            value: 96.4%
+          - id: graphql
+            name: GraphQL
+            value: 94.8%
+          - id: cypress
+            name: Cypress
+            value: 93.2%
 
-      - id: resource_usage
+      - id: tool_interest_award
         blockType: AwardBlock
+        awards:
+          - id: graphql
+            name: GraphQL
+            value: 89.6%
+          - id: jest
+            name: Jest
+            value: 81.6%
+          - id: graphql
+            name: Apollo
+            value: 78.8%
+
+      - id: resource_usage_award
+        blockType: AwardBlock
+        awards:
+          - id: stack_overflow
+            name: Stack Overflow
+            value: 17942
+          - id: mdn
+            name: MDN
+            value: 15531
+          - id: css_tricks
+            name: CSS Tricks
+            value: 12842
+
+      - id: prediction_award
+        blockType: AwardBlock
+        awards:
+          - id: svelte
+            name: Svelte
+          - id: nest
+            name: Nest.js
+          - id: stencil
+            name: Stencil
 
 - id: conclusion
   path: /conclusion

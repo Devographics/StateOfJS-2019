@@ -1,13 +1,14 @@
 import React, { useMemo } from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
+import { getColor } from 'core/constants.js'
 
 const margin = {
     top: 81,
     bottom: 30
 }
 
-const ToolsSectionOverviewChart = ({ data, units }) => {
+const ToolsSectionOverviewChart = ({ data, units, current, namespace, keys, colorScale }) => {
     const chartData = useMemo(
         () =>
             data.map(tool => ({
@@ -28,9 +29,18 @@ const ToolsSectionOverviewChart = ({ data, units }) => {
         format = v => `${v}%`
     }
 
+    const getLayerColor = (layer) => {
+        const { id } = layer
+        if (current !== null && current !== `${namespace}.${id}`) {
+            return `${getColor(id)}33`
+        }
+        return getColor(id)
+    }
+
     return (
         <ResponsiveBar
             margin={margin}
+            colors={getLayerColor}
             keys={['would_use', 'would_not_use', 'interested', 'not_interested', 'never_heard']}
             indexBy="tool"
             data={chartData}

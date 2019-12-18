@@ -95,7 +95,7 @@ const PeriodicElement = ({
                 className="PeriodicTableElement_Label"
                 x={100 * 0.5}
                 y={100 * 0.78}
-                fontSize={100 * 0.14}
+                fontSize={100 * (name.length > 10 ? 0.09 : 0.14)}
                 fill={color}
                 textAnchor="middle"
             >

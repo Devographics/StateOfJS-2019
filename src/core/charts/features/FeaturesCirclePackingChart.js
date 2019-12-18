@@ -43,12 +43,12 @@ const Tooltip = props => {
                 <h4 className="Tooltip__Heading">{name}</h4>
                 <div className="Tooltip__Item">
                     <Chip color={`${getColor(data.sectionId)}50`} />
-                    {translate('features.usage.know_it')}:{' '}
+                    {translate('featureExperienceSimplified.know_it.long')}:{' '}
                     <strong className="Tooltip__Value">{awareness}</strong>
                 </div>
                 <div className="Tooltip__Item">
                     <Chip color={getColor(data.sectionId)} />
-                    {translate('features.usage.used_it')}:{' '}
+                    {translate('featureExperienceSimplified.used_it.long')}:{' '}
                     <strong className="Tooltip__Value">{usage}</strong>
                 </div>
                 <div className="Tooltip__Item">

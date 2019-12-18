@@ -10,6 +10,7 @@ import RecommendedResourcesBlock from 'core/blocks/other/RecommendedResourcesBlo
 import PageIntroductionBlock from 'core/blocks/other/PageIntroductionBlock'
 import SurveyIntroBlock from 'core/blocks/other/SurveyIntroBlock'
 import TshirtBlock from 'core/blocks/other/TshirtBlock'
+import AwardBlock from 'core/blocks/awards/AwardBlock'
 
 // import { HappinessTrendBlock } from 'modules/happiness'
 
@@ -53,6 +54,7 @@ const blockRegistry = {
     RecommendedResourcesBlock,
     TshirtBlock,
     SurveyIntroBlock,
+    AwardBlock,
 
     // demographics
     ParticipationByCountryBlock,

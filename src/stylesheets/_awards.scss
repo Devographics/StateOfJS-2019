@@ -1,3 +1,15 @@
+.Page__Contents--awards{
+    @include medium-large{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: $spacing*4;
+        row-gap: $spacing*4;
+        .Page__Introduction{
+            grid-column: 1/3;
+        }
+    }
+}
+
 @keyframes glow-soft {
     from {
         box-shadow: 0px 1px 1px 1px rgba(65, 199, 199, 0.1);
@@ -12,13 +24,13 @@
 
 @keyframes glow {
     from {
-        box-shadow: 0px 1px 2px 1px rgba($pink, 0.5);
+        box-shadow: 0px 1px 2px 1px rgba($teal, 0.5);
     }
     50% {
-        box-shadow: 0px 1px 30px 2px rgba($pink, 0.9);
+        box-shadow: 0px 1px 30px 2px rgba($teal, 0.9);
     }
     to {
-        box-shadow: 0px 1px 2px 1px rgba($pink, 0.5);
+        box-shadow: 0px 1px 2px 1px rgba($teal, 0.5);
     }
 }
 
@@ -27,7 +39,7 @@
         box-shadow: 0px 0px 0px 0px rgba(254, 106, 106, 0);
     }
     50% {
-        box-shadow: 0px 0px 30px 30px rgba($pink, 0.9);
+        box-shadow: 0px 0px 30px 30px rgba($teal, 0.9);
     }
     to {
         box-shadow: 0px 0px 60px 60px rgba(254, 106, 106, 0);
@@ -150,7 +162,7 @@
     .Award__Element:hover &{
         .bg{
             // transition: all 0ms ease-in;
-            stroke: rgba($pink, 0.5);
+            stroke: rgba($teal, 0.5);
             
         }
     }

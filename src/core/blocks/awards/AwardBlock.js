@@ -6,8 +6,12 @@ import { useI18n } from 'core/i18n/i18nContext'
 import AwardIcon from './AwardIcon'
 import Confetti from 'react-confetti'
 import { distinctColors } from 'core/constants.js'
+import PeriodicElement from 'core/blocks/tools/ToolPeriodicElement'
+import periodicTableData from '../../../../config/periodic_table.yml'
 
-const Award = ({ type, items }) => {
+const AwardBlock = ({ block }) => {
+    const { id, awards } = block
+    const type = id
     const { translate } = useI18n()
 
     const [isRevealed, setIsRevealed] = useState(false)
@@ -15,8 +19,9 @@ const Award = ({ type, items }) => {
         setIsRevealed(true)
     }, [setIsRevealed])
 
-    const winner = items[0]
-    const runnerUps = items.slice(1)
+    const winner = awards[0]
+    const runnerUps = awards.slice(1)
+    const items = awards
 
     return (
         <div className={`Award Award--${isRevealed ? 'show' : 'hide'}`} id={type}>
@@ -26,6 +31,7 @@ const Award = ({ type, items }) => {
                 <div className="Award__Element" onClick={handleClick}>
                     <div className="Award__Element__Face Award__Element__Face--front">
                         <AwardIcon />
+
                     </div>
                     <div className="Award__Element__Face Award__Element__Face--back">
                         {isRevealed && (
@@ -41,8 +47,13 @@ const Award = ({ type, items }) => {
                                     colors={distinctColors}
                                 />
                             </div>
-                        )}
-                        <span>{winner.name}</span>
+                        )}                        
+                        <PeriodicElement
+                            tool={winner.id}
+                            name={winner.name}
+                            symbol={periodicTableData.tools[winner.id] || '??'}
+                            number={`#1` || '?'}
+                        />
                     </div>
                 </div>
             </div>
@@ -66,9 +77,7 @@ const Award = ({ type, items }) => {
                         className={`Awards__RunnerUps__Item Awards__RunnerUps__Item--${i}`}
                     >
                         {i + 2}.{' '}
-                        {translate(`award.runner_up`, {
-                            values: { item: runnerUp }
-                        })}
+                        {runnerUp.name}{runnerUp.value ? `: ${runnerUp.value}` : ''}
                     </div>
                 ))}
             </div>
@@ -76,7 +85,7 @@ const Award = ({ type, items }) => {
     )
 }
 
-Award.propTypes = {
+AwardBlock.propTypes = {
     type: PropTypes.oneOf([
         'feature_adoption',
         'tool_satisfaction',
@@ -96,4 +105,4 @@ Award.propTypes = {
     ).isRequired
 }
 
-export default memo(Award)
+export default memo(AwardBlock)

@@ -7,7 +7,7 @@ import BlockSwitcher from 'core/blocks/block/BlockSwitcher'
 
 const PageTemplate = ({ data = {}, pageContext = {} }) => {
     const context = usePageContext()
-    const { pageData, showTitle = true } = pageContext
+    const { pageData, showTitle = true, id } = pageContext
 
     return (
         <>
@@ -16,10 +16,12 @@ const PageTemplate = ({ data = {}, pageContext = {} }) => {
                 <textarea value={pageContext.pageQuery} readOnly />
             </div> */}
             {data.introduction && <TextBlock text={data.introduction.html} />}
-            {context.blocks &&
-                context.blocks.map((block, i) => (
-                    <BlockSwitcher key={block.id} block={block} pageData={pageData} index={i} />
-                ))}
+            <main className={`Page__Contents Page__Contents--${id}`}>
+                {context.blocks &&
+                    context.blocks.map((block, i) => (
+                        <BlockSwitcher key={block.id} block={block} pageData={pageData} index={i} />
+                    ))}
+            </main>
             <PageFooter />
         </>
     )

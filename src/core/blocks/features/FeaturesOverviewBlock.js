@@ -21,13 +21,12 @@ const getChartData = (data, getName, translate) => {
                 const buckets = get(feature, 'experience.year.buckets')
                 const usageBucket = buckets.find(b => b.id === 'used')
                 const knowNotUsedBucket = buckets.find(b => b.id === 'heard')
-                console.log(feature)
                 return {
                     id: feature.id,
                     awareness: usageBucket.count + knowNotUsedBucket.count,
-                    awarenessColor: colors.teal,
+                    // awarenessColor: colors.teal,
                     usage: usageBucket.count,
-                    usageColor: getColor(sectionId),
+                    // usageColor: getColor(sectionId),
                     unusedCount: knowNotUsedBucket.count,
                     name: feature.name,
                     sectionId
