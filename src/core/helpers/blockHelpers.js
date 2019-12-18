@@ -37,11 +37,12 @@ export const getBlockDescription = (
 }
 
 export const getBlockImage = (id, context, translate) => {
-    return `${context.host}/images/captures/${context.basePath &&
-        context.basePath
-            .replace(/^\//, '')
-            .replace(/\/$/, '')
-            .replace(/\//g, '_')}_${id}.png`
+    return `${context.host}/images/captures/${id}.png`
+    // return `${context.host}/images/captures/${context.basePath &&
+    //     context.basePath
+    //         .replace(/^\//, '')
+    //         .replace(/\/$/, '')
+    //         .replace(/\//g, '_')}_${id}.png`
 }
 
 export const getBlockMeta = (id, context, translate, title) => {
@@ -50,7 +51,7 @@ export const getBlockMeta = (id, context, translate, title) => {
     title = title || getBlockTitle(id, context, translate)
 
     const imageUrl = getBlockImage(id, context, translate)
-
+    console.log(imageUrl)
     const twitterText = translate('share.block.twitter_text', {
         values: {
             title,
