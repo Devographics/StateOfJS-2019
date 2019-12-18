@@ -422,7 +422,7 @@ translations:
       t: |
 
           For each technology, how usage is spread among respondents who picked different
-          company size ranges. 
+          company size ranges.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
@@ -437,7 +437,7 @@ translations:
       t: |
 
           For each technology, how usage is spread among respondents who picked different
-          experience ranges. 
+          experience ranges.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
@@ -451,7 +451,7 @@ translations:
       t: |
 
           For each technology, how usage is spread among respondents who picked different
-          salary ranges. 
+          salary ranges.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “yearly salary” bracket.
@@ -492,19 +492,19 @@ translations:
       t: Changes Over Time
     - key: block.description.toolsArrow
       t: >
-          How has the ecosystem changed over three years? 
-          Each line below starts in 2016, and extends forward through the years until today. 
-          Points that are higher in the chart have been tried by more people, 
+          How has the ecosystem changed over three years?
+          Each line below starts in 2016, and extends forward through the years until today.
+          Points that are higher in the chart have been tried by more people,
           and points that are further to the right are more liked than points to the left.
 
     - key: amelia.bio
       t: >
-        Amelia Wattenberger is a frontend developer and designer focused on data visualization. 
-        She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3), 
-        a guide to creating your own data visualizations, 
-        and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger) 
-        and [her site](https://wattenberger.com/)
-        
+        Amelia Wattenberger is a frontend developer and designer focused on data visualization.
+        She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
+        a guide to creating your own data visualizations,
+        and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger)
+        and [her site](https://wattenberger.com/).
+
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
       t: Satisfaction vs Usage
@@ -524,7 +524,7 @@ translations:
       t: >
           This chart shows each technology’s **interest ratio** over its total **user count** (as defined by respondents who are aware of a technology but *haven't* used it yet).
 
-          (Note that low user numbers can be due to either an unknown technology; or a technology with a lot of respondents already using it.) 
+          (Note that low user numbers can be due to either an unknown technology; or a technology with a lot of respondents already using it.)
 
     - key: quadrants.assess
       t: Assess
