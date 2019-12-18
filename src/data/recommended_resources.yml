@@ -93,7 +93,8 @@
 
 # frontend 2
 
-- name: JavaScript: The Recent Parts with Kyle Simpson
+- name: >
+    JavaScript: The Recent Parts with Kyle Simpson
   id: js-recent-parts
   description: Learn the latest features in JavaScript with Kyle Simpson, author of the popular, You Don't Know JS, book series!
   url: https://frontendmasters.com/courses/js-recent-parts/?utm_source=stateofjs&utm_medium=website&utm_campaign=stateofjs2019
@@ -104,7 +105,7 @@
   description: Explore the core API enabling Progressive Web Apps with Kyle Simpson, author of the popular, You Don't Know JS, book series!
   url: https://frontendmasters.com/courses/service-workers/?utm_source=stateofjs&utm_medium=website&utm_campaign=stateofjs2019
   image: https://static.frontendmasters.com/assets/teachers/simpson/thumb@2x.jpg
-  
+
 # amelia
 
 - name: Fullstack D3 and Data Visualization
