@@ -51,8 +51,10 @@
   }
 
   @keyframes gradientLineSegmentIn {
-      0% { stroke-dashoffset: -20px; }
-    100% { stroke-dashoffset: 0; }
+      0% { stroke-opacity: 0; }
+    100% { stroke-opacity: 1; }
+    //   0% { stroke-dashoffset: -20px; }
+    // 100% { stroke-dashoffset: 0; }
   }
   &__gradient-line {
     fill: none;
@@ -60,8 +62,8 @@
     mix-blend-mode: lighten;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-dasharray: 20px 20px;
-    stroke-dashoffset: -20px;
+    // stroke-dasharray: 20px 20px;
+    stroke-opacity: 0;
     animation: gradientLineSegmentIn 0.2s ease-out;
     animation-fill-mode: forwards;
     // transition: all 0.1s ease-out;
@@ -71,14 +73,6 @@
         animation-delay: #{$i * 0.04}s;
       }
     }
-  }
-  text {
-    // transition: all 0.1s ease-out;
-  }
-
-  &__now {
-    // stroke: $navy;
-    // stroke-width: 2px;
   }
   @keyframes fadeInSlideUp {
       0% { fill-opacity: 0; transform: translateY(1em); }
@@ -102,10 +96,10 @@
   &__label {
     font-size: 0.8em;
     font-weight: 600;
-    opacity: 0;
-    animation: fadeIn 0.9s ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 0.9s;
+    // opacity: 0;
+    // animation: fadeIn 0.9s ease-out;
+    // animation-fill-mode: forwards;
+    // animation-delay: 0.1s;
 
     &__box {
       cursor: default;

@@ -185,16 +185,6 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                         }}
                                     />
                                 ))}
-                                {hoveredTool == tool &&
-                                    points.slice(0, -1).map(([x, y], i) => (
-                                        <text
-                                            className="ToolsArrowsChart__year"
-                                            x={scales.x(x)}
-                                            y={scales.y(y)}
-                                        >
-                                            {2019 - (points.length - 1 - i)}
-                                        </text>
-                                    ))}
                                 <circle
                                     className="ToolsArrowsChart__now"
                                     cx={x}
@@ -217,6 +207,22 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 >
                                     {toolName}
                                 </text>
+                                {hoveredTool == tool &&
+                                    points.map(([x, y], i) => (
+                                        <text
+                                            className="ToolsArrowsChart__year"
+                                            x={scales.x(x)}
+                                            y={scales.y(y)}
+                                            style={{
+                                                textAnchor:
+                                                    scales.x(x) > dms.boundedWidth - 200
+                                                        ? 'end'
+                                                        : 'start'
+                                            }}
+                                        >
+                                            {2019 - (points.length - 1 - i)}
+                                        </text>
+                                    ))}
                             </g>
                         )
                     })}
