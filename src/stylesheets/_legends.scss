@@ -31,7 +31,7 @@
     justify-content: space-between;
     @include small {
         margin-top: $spacing;
-        border: 1px solid $dark-border-color;
+        border: 1px solid $border-color-dark;
         padding: $spacing;
     }
     @include medium {
@@ -39,7 +39,7 @@
 }
 
 .Legends--withFrame {
-    border: $border2;
+    @include border;
     padding: $spacing;
 }
 

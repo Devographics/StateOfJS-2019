@@ -37,7 +37,7 @@ const categoryOptions = ['all', ...Object.keys(toolsCategories)]
 const Switcher = ({ setActiveCategory, activeCategory }) => {
     const { translate } = useI18n()
     return (
-        <div className="ChartUnitsSelector">
+        <div className="BlockUnitsSelector">
             <span className="ButtonGroup">
                 {categoryOptions.map(category => (
                     <span

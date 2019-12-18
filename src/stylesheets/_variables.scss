@@ -9,8 +9,8 @@ $antsFg: $hover-color;
     align-items: center;
 }
 
-$border: 1px solid $dark-border-color;
-$border2: 1px dashed $dark-border-color;
+$border: 1px solid $border-color-dark;
+$border2: 1px solid $border-color;
 
 @mixin border-radius{
     border-radius: 3px;

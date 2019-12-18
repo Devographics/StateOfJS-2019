@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { format } from 'd3-format'
 import periodicTableData from '../../../../config/periodic_table.yml'
-import PeriodicElement from 'core/blocks/tools/ToolPeriodicElement'
+import ToolPeriodicElement from 'core/blocks/tools/ToolPeriodicElement'
 import { useI18n } from 'core/i18n/i18nContext'
 import get from 'lodash/get'
 
@@ -23,11 +23,11 @@ const ToolHeaderBlock = ({ block, data }) => {
     return (
         <div className="Block ToolHeader">
             <div className="ToolHeader__Element">
-                <PeriodicElement
+                <ToolPeriodicElement
                     tool={toolId}
                     name={toolName}
                     symbol={periodicTableData.tools[toolId] || '??'}
-                    number={`#${number}` || '?'}
+                    // number={`#${number}` || '?'}
                 />
             </div>
             <div className="ToolHeader__Content">

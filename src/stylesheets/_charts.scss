@@ -223,7 +223,7 @@ Chart Controls
 }
 
 .ChartModeSelector,
-.ChartUnitsSelector {
+.BlockUnitsSelector {
     display: inline-flex;
     align-items: center;
 }
@@ -233,7 +233,7 @@ Chart Controls
 }
 
 .ChartModeSelector__Label,
-.ChartUnitsSelector__Label {
+.BlockUnitsSelector__Label {
     @include font-bold;
     padding: $spacing / 5 $spacing / 1.5 $spacing / 5 0;
     font-size: $small-font;

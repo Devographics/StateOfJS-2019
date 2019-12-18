@@ -55,7 +55,7 @@ export const getPageImageUrl = context => {
             .replace(/\/$/, '')
             .replace(/\//g, '_')}_${context.block}.png`
     } else {
-        imageUrl = `${baseUrl}stateofjs_socialmedia.png`
+        imageUrl = `${baseUrl}stateofjs-socialmedia.png`
     }
 
     return imageUrl

@@ -6,6 +6,7 @@ $greyLight: #e0e4e4;
 $grey: #e1e1e1;
 $greyMedium: #cecdcc;
 $greyMediumer: #616868;
+$greyMediumest: #5c6069;
 $greyDark: #3d4049;
 $greyDarkish: #2a2d33;
 $greyDarker: #222429;
@@ -73,9 +74,10 @@ $bg-color-lighter: $greyDark;
 $bg-color-inverted: $greyLight;
 
 $border-color: $greyMedium;
-$dark-border-color: $greyDark;
+$border-color-dark: $greyMediumest;
 
 $text-color: $grey;
+$text-color-dark: $greyMediumer;
 $text-color-inverted: $greyDarker;
 
 $link-color: $active-color;

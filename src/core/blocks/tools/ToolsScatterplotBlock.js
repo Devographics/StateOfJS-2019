@@ -78,7 +78,7 @@ const Switcher = ({ setMetric, metric }) => {
     const { translate } = useI18n()
 
     return (
-        <div className="ChartUnitsSelector">
+        <div className="BlockUnitsSelector">
             <span className="ButtonGroup">
                 {['satisfaction', 'interest' /*, 'awareness'*/].map(key => (
                     <span

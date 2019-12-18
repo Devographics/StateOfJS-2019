@@ -54,7 +54,7 @@
     position: absolute;
     width: 300px;
     left: 50%;
-    border: $border2;
+    border: $border;
     background: $bg-color;
     padding: $spacing;
     transform: translateX(-50%);
@@ -96,7 +96,7 @@
             border-bottom-color: $bg-color;
         }
         &:before {
-            border-bottom-color: $border-color;
+            border-bottom-color: $border-color-dark;
             border-style: dashed;
         }
     }
@@ -110,7 +110,7 @@
             border-top-color: $bg-color;
         }
         &:before {
-            border-top-color: $border-color;
+            border-top-color: $border-color-dark;
             border-style: dashed;
         }
     }

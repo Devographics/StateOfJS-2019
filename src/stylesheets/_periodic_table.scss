@@ -35,7 +35,7 @@
 
 .PeriodicTableElement_Frame {
   stroke-width: 1px;
-  stroke: #646a6a;
+  stroke: $border-color-dark;
   fill: $bg-color;
   &--chart {
       cursor: pointer;

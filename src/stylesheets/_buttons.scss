@@ -1,7 +1,7 @@
 .Button,
 .button {
     background: none;
-    @include border;
+    @include border2;
     padding: $spacing/2 $spacing;
     cursor: pointer;
     display: block;
@@ -43,11 +43,14 @@
         font-size: $large-font;
     }
 
-    &--disabled {
-        color: $active-color-dark;
+    &--unselected {
     }
 
-    &--active {
+    &--selected {
+        background: $bg-color-lighter;
+        cursor: default;
+        pointer-events: none;
+        // color: $text-color-dark;
         border-style: solid;
     }
 }
