@@ -1,15 +1,24 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { usePageContext } from '../helpers/pageContext'
-import { getPageSocialMeta, getPageMeta } from '../helpers/pageHelpers'
-import { useI18n } from '../i18n/i18nContext'
+import { usePageContext } from 'core/helpers/pageContext'
+import { getPageSocialMeta, getPageMeta } from 'core/helpers/pageHelpers'
+import { useI18n } from 'core/i18n/i18nContext'
+import { useTools } from 'core/helpers/toolsContext'
+import { websiteTitle } from 'core/constants.js'
 
 const Head = () => {
     const context = usePageContext()
     const { translate } = useI18n()
+    const { getToolName } = useTools()
 
-    const meta = getPageMeta(context, translate)
-    const socialMeta = getPageSocialMeta(context, translate)
+    let overrides = {}
+    const toolName = getToolName(context)
+    if (toolName) {
+        overrides.title = `${websiteTitle}: ${toolName}`
+    }
+
+    const meta = getPageMeta(context, translate, overrides)
+    const socialMeta = getPageSocialMeta(context, translate, overrides)
     const description = translate(`general.description`)
 
     const mergedMeta = [

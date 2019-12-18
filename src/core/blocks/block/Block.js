@@ -31,7 +31,7 @@ const Block = ({
                 block={block}
                 {...titleProps}
             />
-            {isShareable && <ShareBlockDebug id={id} />}
+            {isShareable && <ShareBlockDebug block={block} />}
             <div className="Block__Contents">
                 {error ? <div className="error">{error}</div> : children}
             </div>

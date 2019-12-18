@@ -20,8 +20,9 @@
 # - dataPath: the path to use (from the query root) to access the block's data
 # - showLegend: whether to show the block's legend
 # - showDescription: whether to show the block's description
-# - blockTemplate: a template from which to inherit its properties
+# - template: a template from which to inherit its properties
 # - translateData: whether to try and translate
+
 - id: introduction
   path: /
   showTitle: false
@@ -92,7 +93,11 @@
         template: toolsArrowsTemplate
       - id: scatterplotOverview
         template: scatterplotOverviewTemplate
-
+      - id: overview_recommended_resources
+        template: recommendedResourcesTemplate
+        sponsors:
+            - fullstack-d3
+            
 - id: features
   path: /features
   template: featuresPageTemplate
@@ -143,6 +148,11 @@
 
             - id: decorators
               template: featureExperienceTemplate
+
+            - id: language_recommended_resources
+              template: recommendedResourcesTemplate
+              sponsors:
+                  - wesbos-es6
 
       - id: data_structures
         path: /data-structures
@@ -218,6 +228,11 @@
             - id: webvr
               template: featureExperienceTemplate
 
+            - id: browser_apis_recommended_resources
+              template: recommendedResourcesTemplate
+              sponsors:
+                  - wesbos-js30
+
       - id: other_features
         path: /other-features
         blocks:
@@ -272,6 +287,8 @@
 - id: front_end_frameworks
   path: /front-end-frameworks
   template: toolSectionTemplate
+  sponsors: 
+    - wesbos-advanced-react
   variables:
       toolIds: ${toolsCategories.front_end_frameworks}
   children:
@@ -689,8 +706,12 @@
 
 - id: support
   path: /support
-  blockType: page
   is_hidden: true
+  blocks:
+    - id: support
+      variables:
+          pageId: ${id}
+      template: pageIntroductionTemplate
 
 - id: notfound
   path: /404

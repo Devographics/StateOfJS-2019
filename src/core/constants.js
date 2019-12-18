@@ -303,10 +303,12 @@ export const keys = {
 export const fontFamily = `'IBM Plex Mono', monospace`
 
 export const emailOctopusUrl =
-    'https://emailoctopus.com/lists/ed0386c4-2f55-11e9-a3c9-06b79b628af2/members/embedded/1.3/add'
+    'https://emailoctopus.com/lists/463dc2a9-b2ff-11e8-a3c9-06b79b628af2/members/embedded/1.3/add'
 
 export const emailOctopusSiteKey = '6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6'
 
-export const emailOctopusCode = 'hped0386c4-2f55-11e9-a3c9-06b79b628af2'
+export const emailOctopusCode = 'hp463dc2a9-b2ff-11e8-a3c9-06b79b628af2'
 
 export const totalCount = 21717
+
+export const websiteTitle = 'The State of JavaScript 2019'

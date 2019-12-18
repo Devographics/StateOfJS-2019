@@ -46,7 +46,7 @@ const BlockTitle = ({
         blockDescription = getBlockDescription(id, context, translate, { values })
     }
 
-    const meta = getBlockMeta(id, context, translate)
+    const meta = getBlockMeta(block, context, translate)
 
     return (
         <div className={`Block__Heading Block__Heading--${id}`}>
@@ -73,7 +73,7 @@ const BlockTitle = ({
                     )}
                     {isShareable && (
                         <ShareBlock
-                            id={id}
+                            block={block}
                             className="Block__Title__Share"
                             values={values}
                             title={blockTitle}

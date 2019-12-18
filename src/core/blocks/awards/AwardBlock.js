@@ -64,7 +64,7 @@ const AwardBlock = ({ block }) => {
                 />
                 <ShareBlock
                     title={`${translate(`award.${type}.title`)} Award`}
-                    id={type}
+                    block={block}
                     className="Award__Share"
                 />
             </div>

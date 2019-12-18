@@ -1,13 +1,24 @@
 import removeMarkdown from 'remove-markdown'
 import { getTranslationValuesFromContext, getPageLabel } from '../helpers/pageHelpers'
 
-export const getBlockTitle = (id, context, translate, { format = 'short', values = {} } = {}) => {
-    let blockTitle = translate(`block.title.${id}`, {
+export const getBlockTitle = (block, context, translate, { format = 'short', values = {} } = {}) => {
+    const { id, title, blockName } = block
+    let blockTitle
+
+    const titleValues = {
         values: {
             ...getTranslationValuesFromContext(context, translate),
             ...values
         }
-    })
+    }
+
+    if (title) {
+        blockTitle = title
+    } else if (blockName) {
+        blockTitle = translate(`block.title.${blockName}`, titleValues)
+    } else {
+        blockTitle = translate(`block.title.${id}`, titleValues)
+    }
 
     if (format === 'full') {
         const pageLabel = getPageLabel(context, translate)
@@ -36,8 +47,8 @@ export const getBlockDescription = (
     return description
 }
 
-export const getBlockImage = (id, context, translate) => {
-    return `${context.host}/images/captures/${id}.png`
+export const getBlockImage = (block, context, translate) => {
+    return `${context.host}/images/captures/${block.id}.png`
     // return `${context.host}/images/captures/${context.basePath &&
     //     context.basePath
     //         .replace(/^\//, '')
@@ -45,13 +56,15 @@ export const getBlockImage = (id, context, translate) => {
     //         .replace(/\//g, '_')}_${id}.png`
 }
 
-export const getBlockMeta = (id, context, translate, title) => {
+export const getBlockMeta = (block, context, translate, title) => {
+    const { id } = block
     const link = `${context.host}${context.basePath}${id}`
     const trackingId = `${context.basePath}${id}`.replace(/^\//, '')
-    title = title || getBlockTitle(id, context, translate)
 
-    const imageUrl = getBlockImage(id, context, translate)
-    console.log(imageUrl)
+    title = title || getBlockTitle(block, context, translate)
+
+    const imageUrl = getBlockImage(block, context, translate)
+
     const twitterText = translate('share.block.twitter_text', {
         values: {
             title,

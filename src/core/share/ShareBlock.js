@@ -34,7 +34,7 @@ const ShareIcon = () => (
     </svg>
 )
 
-const ShareBlock = ({ section, id, className, toggleClass, title }) => {
+const ShareBlock = ({ block, section, id, className, toggleClass, title }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
@@ -50,7 +50,7 @@ const ShareBlock = ({ section, id, className, toggleClass, title }) => {
         })
     }
 
-    const meta = getBlockMeta(id, context, translate, title)
+    const meta = getBlockMeta(block, context, translate, title)
 
     return (
         <div

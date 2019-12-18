@@ -48,7 +48,7 @@ const createBlockPages = (page, context, createPage) => {
                 context: {
                     ...context,
                     redirect: `${localizedPath(page.path, locale)}#${block.id}`,
-                    block: block.id,
+                    block,
                     locale: locale.locale,
                     localePath: locale.path === 'default' ? '' : `/${locale.path}`
                 }

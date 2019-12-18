@@ -1,6 +1,7 @@
-import { getToolName } from '../helpers/tools'
+import { getToolName } from 'core/helpers/tools'
+import { websiteTitle } from 'core/constants.js'
 
-const WEBSITE_TITLE = 'The State of JavaScript 2019'
+const WEBSITE_TITLE = websiteTitle
 
 export const getTranslationValuesFromContext = (context, translate) => {
     const values = {}

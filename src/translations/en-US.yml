@@ -474,7 +474,7 @@ translations:
 
     # overview
     - key: block.title.toolsSectionOverview
-      t: Sentiment Overview
+      t: Category Overview
     - key: block.description.toolsSectionOverview
       t: >
           Overview of opinions on the tools and methodologies surveyed. <span class="text-teal text-bold">Teal segments</span> represent positive opinions,

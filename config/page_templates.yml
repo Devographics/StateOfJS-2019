@@ -79,11 +79,7 @@ toolSectionTemplate:
               sectionId: '${id}'
 
         - id: '${id}_recommended_resources'
-          blockName: recommendedResources
-          blockType: RecommendedResourcesBlock
-          showDescription: false
-          items:
-              - frontendmasters-sass
+          template: recommendedResourcesTemplate
 
 # Tool (/front-end/react, /front-end/angular, etc.)
 toolPageTemplate:

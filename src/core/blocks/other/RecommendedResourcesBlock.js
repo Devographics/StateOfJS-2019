@@ -18,7 +18,11 @@ const trackClick = (id, resource, label) => {
 const RecommendedResourcesBlock = ({ block, data }) => {
     const { translate } = useI18n()
     const context = usePageContext()
-    const { sponsors } = context
+    const { sponsors: pageSponsors } = context
+    const { sponsors: blockSponsors } = block
+
+    // sponsors can be defined either at the page level or block level
+    const sponsors = pageSponsors || blockSponsors
 
     if (!sponsors) {
         return null
