@@ -47,7 +47,7 @@ const Switcher = ({ setActiveCategory, activeCategory }) => {
                         }`}
                         onClick={() => setActiveCategory(category)}
                     >
-                        {translate(category == 'all' ? 'all' : `page.${category}`)}
+                        {translate(category === 'all' ? 'all' : `page.${category}`)}
                     </span>
                 ))}
             </span>

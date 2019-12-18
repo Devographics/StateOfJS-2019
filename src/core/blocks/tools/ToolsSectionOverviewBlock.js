@@ -8,7 +8,7 @@ import { keys, toolExperience } from 'core/constants.js'
 const ToolsSectionOverviewBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
     const [current, setCurrent] = useState(null)
-    const { id, bucketKeysName = id, blockName } = block
+    const { id, bucketKeysName = id } = block
     const bucketKeys = keys[bucketKeysName]
 
     return (

@@ -18,7 +18,6 @@ const labelPositions = {
         Jasmine: [-80, 0],
         PureScript: [0, -10],
         Sails: [-60, 0],
-        Sails: [-60, 0],
         'Next.js': [-80, 0]
     }
 }

@@ -10,7 +10,7 @@ const BioBlock = ({ subheading, heading, photo, bio }) => {
             {subheading && <h3 className="Bio__Subheading">{subheading}</h3>}
             <div className="Bio__Contents">
                 <div className="Bio__Photo">
-                    <img src={photo} />
+                    <img src={photo} alt={heading}/>
                 </div>
                 <div className="Bio__Bio">
                     <h3 className="Bio__Heading" dangerouslySetInnerHTML={{ __html: heading }} />

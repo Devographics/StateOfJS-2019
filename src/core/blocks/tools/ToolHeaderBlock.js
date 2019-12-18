@@ -18,8 +18,6 @@ const ToolHeaderBlock = ({ block, data }) => {
     const stars = get(data, 'entity.github.stars')
     // const npmLink = get(data, 'entity.npm')
 
-    // const number = ranking[tool]
-    const number = 9
     return (
         <div className="Block ToolHeader">
             <div className="ToolHeader__Element">

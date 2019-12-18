@@ -86,7 +86,7 @@ const HorizontalBarChart = ({
 }) => {
     const { translate } = useI18n()
 
-    const { formatTick, formatValue, maxValue, ticks, tickCount } = useBarChart({
+    const { formatTick, formatValue, maxValue /*, ticks, tickCount*/ } = useBarChart({
         buckets,
         total,
         i18nNamespace,

@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
 import { getColor } from 'core/constants.js'
+import get from 'lodash/get'
 
 const margin = {
     top: 81,
@@ -29,12 +30,17 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace, keys, colo
         format = v => `${v}%`
     }
 
-    const getLayerColor = (layer) => {
+    const getLayerColor = layer => {
         const { id } = layer
         if (current !== null && current !== `${namespace}.${id}`) {
             return `${getColor(id)}33`
         }
         return getColor(id)
+    }
+
+    const formatTick = id => {
+        const tool = data.find(t => t.id === id)
+        return get(tool, 'entity.name', id)
     }
 
     return (
@@ -48,9 +54,13 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace, keys, colo
             labelSkipWidth={32}
             labelSkipHeight={20}
             padding={0.6}
-            axisTop={{}}
+            axisTop={{
+                format: formatTick
+            }}
             axisRight={null}
-            axisBottom={{}}
+            axisBottom={{
+                format: formatTick
+            }}
             axisLeft={null}
             enableGridY={false}
             theme={theme}

@@ -245,18 +245,16 @@
   children:
       - id: typescript
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - typescript-v2
+        sponsors:
+            - typescript-v2
 
       - id: reason
         template: toolPageTemplate
 
       - id: elm
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - intro-elm
+        sponsors:
+            - intro-elm
 
       - id: clojurescript
         template: toolPageTemplate
@@ -279,27 +277,26 @@
   children:
       - id: react
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - complete-react-v5
+        sponsors:
+            - complete-react-v5
+            - fullstack-react-masterclass-tinyhouse-1
       - id: vuejs
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - vue
+        sponsors:
+            - fullstack-vue-1
+            - vue-fem
       - id: angular
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - angular-core
+        sponsors:
+            - ng-book-1
+            - angular-core
       - id: preact
         template: toolPageTemplate
 
       - id: ember
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - ember-octane
+        sponsors:
+            - ember-octane
       - id: svelte
         template: toolPageTemplate
 
@@ -321,27 +318,23 @@
   children:
       - id: redux
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - intermediate-react-v2
+        sponsors:
+            - intermediate-react-v2
       - id: apollo
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - client-graphql-react
+        sponsors:
+            - client-graphql-react
       - id: graphql
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - server-graphql-nodejs
+        sponsors:
+            - server-graphql-nodejs
       - id: relay
         template: toolPageTemplate
 
       - id: mobx
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - redux-mobx
+        sponsors:
+            - redux-mobx
       - id: data_layer_others
         sectionId: data_layer
         path: /other-tools
@@ -360,9 +353,9 @@
   children:
       - id: express
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - api-design-nodejs-v3
+        sponsors:
+            - api-design-nodejs-v3
+            - fullstack-node-1
       - id: nextjs
         template: toolPageTemplate
 
@@ -383,9 +376,8 @@
 
       - id: gatsby
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - gatsby
+        sponsors:
+            - gatsby
       - id: back_end_frameworks_others
         sectionId: back_end_frameworks
         path: /other-tools
@@ -404,9 +396,8 @@
   children:
       - id: jest
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - testing-react
+        sponsors:
+            - testing-react
       - id: mocha
         template: toolPageTemplate
 
@@ -415,9 +406,8 @@
 
       - id: cypress
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - testing-react
+        sponsors:
+            - testing-react
       - id: enzyme
         template: toolPageTemplate
 
@@ -448,11 +438,12 @@
   children:
       - id: electron
         template: toolPageTemplate
-        variables:
-            sponsors:
-                - electron-v2
+        sponsors:
+            - electron-v2
       - id: react-native
         template: toolPageTemplate
+        sponsors: 
+            - fullstack-react-native-1
 
       - id: native-apps
         template: toolPageTemplate

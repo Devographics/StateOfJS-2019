@@ -289,6 +289,9 @@ toolsSectionOverviewTemplate:
                             year
                             tools {
                                 id
+                                entity {
+                                    name
+                                }
                                 buckets {
                                     id
                                     count
@@ -398,6 +401,9 @@ toolsExperienceRankingTemplate:
                     ids
                     experience {
                         id
+                        entity {
+                            name
+                        }
                         awareness {
                             year
                             rank

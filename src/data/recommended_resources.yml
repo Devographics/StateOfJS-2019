@@ -1,3 +1,5 @@
+# Front End Masters
+
 - name: Learn the Fundamentals of TypeScript 3 to Add Type Checking to Your JavaScript
   id: typescript-v2
   description: TypeScript adds a powerful type system on top of your JavaScript to catch bugs before they happen and provides a superior developer experience for collaborative teams.
@@ -17,7 +19,7 @@
   image: https://static.frontendmasters.com/assets/courses/2019-06-04-complete-react-v5/thumb.jpg
 
 - name: Introduction to Vue.js with Sarah Drasner
-  id: vue
+  id: vue-fem
   description: Vue.js brings together the best features of the javascript framework landscape elegantly. Build complex and maintainable applications faster!
   url: https://frontendmasters.com/courses/vue/?utm_source=stateofjs&utm_medium=website&utm_campaign=stateofjs2019
   image: https://static.frontendmasters.com/assets/courses/2017-09-14-vue/thumb.jpg
@@ -81,3 +83,35 @@
   description: Use Electron to build native, cross-platform desktop applications using web technologies (e.g. HTML, CSS, and JavaScript).
   url: https://frontendmasters.com/courses/electron-v2/?utm_source=stateofjs&utm_medium=website&utm_campaign=stateofjs2019
   image: https://static.frontendmasters.com/assets/courses/2019-02-18-electron-v2/thumb.jpg
+
+# NewLine
+
+- name: Fullstack Node.js Book
+  id: fullstack-node-1
+  url: https://www.newline.co/fullstack-nodejs?utm_source=stateofcss2019&utm_campaign=stateofcss2019
+  description: Learn to build production Node.js apps with the Fullstack Node.js Book
+  image: /images/resources/newline/express-fullstack-nodejs.png
+
+- name: Fullstack React Native Book
+  id: fullstack-react-native-1
+  url: https://www.newline.co/fullstack-react-native/?utm_source=stateofcss2019&utm_campaign=stateofcss2019
+  description: Learn React Native and build beautiful apps with the up-to-date, in-depth, complete guide to React Native.
+  image: /images/resources/newline/react-native-fullstack-react-native.png
+
+- name: Tinyhouse Fullstack React Masterclass
+  id: fullstack-react-masterclass-tinyhouse-1
+  url: https://www.newline.co/tinyhouse?utm_source=stateofcss2019&utm_campaign=stateofcss2019
+  description: Learn advanced React, Node, TypeScript, and GraphQL by building a production-ready application in this 8-week, online course.
+  image: /images/resources/newline/react-tinyhouse.png
+
+- name: Fullstack Vue.js Book
+  id: fullstack-vue-1
+  url: https://www.newline.co/vue?utm_source=stateofcss2019&utm_campaign=stateofcss2019
+  description: Learn how to create elegant apps with Vue.js with the up-to-date, in-depth, complete guide to Vue.
+  image: /images/resources/newline/vue-fullstack-vue.png
+
+- name: ng-book
+  id: ng-book-1
+  url: https://www.ng-book.com/2/?utm_source=stateofcss2019&utm_campaign=stateofcss2019
+  description: The in-depth, complete, and up-to-date book on Angular. Become an Angular expert today.
+  image: /images/resources/newline/angular-ng-book.png

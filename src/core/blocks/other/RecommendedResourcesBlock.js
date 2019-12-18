@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 import resources from 'data/recommended_resources.yml'
 import BlockTitle from 'core/blocks/block/BlockTitle'
 import { useI18n } from 'core/i18n/i18nContext'
-import get from 'lodash/get'
 
 const trackClick = (id, resource, label) => {
     ReactGA.event({
@@ -17,18 +16,13 @@ const trackClick = (id, resource, label) => {
 
 const RecommendedResourcesBlock = ({ block, data }) => {
     const { translate } = useI18n()
-
-    const sponsors = get(block, 'variables.sponsors')
-
+    const { sponsors } = block
     if (!sponsors) {
         return null
     }
 
-    // although sponsors should always be an array, seems like it can be a string for some reason
-    const sponsorsIds = Array.isArray(sponsors) ? sponsors : [sponsors]
-
     const { id } = block
-    const sectionResources = resources.filter(r => sponsorsIds.includes(r.id))
+    const sectionResources = resources.filter(r => sponsors.includes(r.id))
 
     if (!sectionResources.length) {
         return null

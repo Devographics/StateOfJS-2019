@@ -83,7 +83,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
         <div
             ref={ref}
             className={`ToolsArrowsChart ToolsArrowsChart--is-${
-                activeCategory != 'all' ? 'animated' : 'not-animated'
+                activeCategory !== 'all' ? 'animated' : 'not-animated'
             }`}
         >
             <svg className="ToolsArrowsChart__svg" height={dms.height} width={dms.width}>
@@ -139,7 +139,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         const toolName = toolNames[tool]
                         const category = toolToCategoryMap[tool]
                         if (!points.length) return null
-                        if (activeCategory != 'all' && activeCategory != category) return null
+                        if (activeCategory !== 'all' && activeCategory !== category) return null
 
                         const thisYearPoint = points.slice(-1)[0]
                         const circles = flatten(
@@ -175,7 +175,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
                                     !hoveredTool
                                         ? 'normal'
-                                        : hoveredTool == tool
+                                        : hoveredTool === tool
                                         ? 'hovering'
                                         : 'hovering-other'
                                 }`}
@@ -222,7 +222,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 >
                                     {toolName}
                                 </text>
-                                {hoveredTool == tool &&
+                                {hoveredTool === tool &&
                                     points.map(([x, y], i) => (
                                         <text
                                             className="ToolsArrowsChart__year"
@@ -311,7 +311,7 @@ export const useChartDimensions = (passedSettings, isSquare = false) => {
         setTimeout(onResize, 100)
 
         return () => window.removeEventListener('resize', onResize)
-    }, [dimensions, height, width])
+    }, [dimensions, height, width, isSquare])
 
     const newSettings = combineChartDimensions({
         ...dimensions,

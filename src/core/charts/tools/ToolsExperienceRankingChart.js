@@ -1,9 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { ResponsiveBump } from '@nivo/bump'
 import theme from 'nivoTheme'
+// import get from 'lodash/get'
 
 const ToolsExperienceRankingChart = ({ data }) => {
+
+    // const formatTick = id => {
+    //     const tool = data.find(t => t.id === id)
+    //     return get(tool, 'entity.name', id)
+    // }
+
     return (
         <ResponsiveBump
             data={data}
@@ -17,7 +24,7 @@ const ToolsExperienceRankingChart = ({ data }) => {
             enableGridY={false}
             axisTop={{
                 tickSize: 0,
-                tickPadding: 9
+                tickPadding: 9,
             }}
             axisRight={null}
             axisBottom={{
