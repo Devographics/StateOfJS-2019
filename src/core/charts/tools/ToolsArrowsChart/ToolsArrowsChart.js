@@ -44,13 +44,13 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
         //     windowWidth > 900 ? 700 :
         //     600
 
-        const width = windowHeight > 1000 ? 900 :
-            windowHeight > 800 ? 800 :
-            700
+        const width = windowHeight > 1000 ? 1200 :
+            windowHeight > 800 ? 1000 :
+            950
 
-        const height = windowHeight > 1000 ? 800 :
-            windowHeight > 800 ? 700 :
-            600
+        const height = windowHeight > 1000 ? 850 :
+            windowHeight > 800 ? 750 :
+            650
 
         return {
             width,

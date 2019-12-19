@@ -14,7 +14,8 @@ const Block = ({
     data,
     block = {},
     legendProps,
-    titleProps
+    titleProps,
+    blockFooter = null,
 }) => {
     const { id, showLegend } = block
 
@@ -38,6 +39,7 @@ const Block = ({
             {showLegend && (
                 <BlockLegends block={block} data={data} units={units} {...legendProps} />
             )}
+            {blockFooter}
         </div>
     )
 }

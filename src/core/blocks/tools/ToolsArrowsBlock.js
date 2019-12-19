@@ -6,24 +6,37 @@ import { toolsCategories } from '../../../../config/variables.yml'
 import { useI18n } from 'core/i18n/i18nContext'
 import BioBlock from 'core/blocks/other/BioBlock'
 import ChartContainer from 'core/charts/ChartContainer'
+import { keys } from 'core/constants.js'
 
 const ToolsArrowsBlock = ({ block, data }) => {
     const [activeCategory, setActiveCategory] = useState('all')
     const { translate } = useI18n()
+    const [current, setCurrent] = useState(null)
 
     const description = translate('block.description.toolsArrow')
+
+    const legends = keys.toolCategories.map(({ id: keyId, color }) => ({
+        id: `toolCategories.${keyId}`,
+        label: translate(`page.${keyId}.short`),
+        keyLabel: `${translate(`page.${keyId}.short`)}:`,
+        color
+    }))
 
     return (
         <Block
             // titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
-            block={{...block, showDescription: false}}
+            block={{ ...block, showLegend: true, legends, showDescription: false }}
             data={data}
-        >
-            <div className="ToolsArrows__Contents">
-                <div className="ToolsArrows__Description"><p>{description}</p></div>
-                <ChartContainer vscroll={true}>
-                    <ToolsArrowsChart {...{ data, activeCategory }} />
-                </ChartContainer>
+            legendProps={{
+                legends,
+                onMouseEnter: ({ id }) => {
+                    setCurrent(id.replace('toolCategories.', ''))
+                },
+                onMouseLeave: () => {
+                    setCurrent(null)
+                }
+            }}
+            blockFooter={
                 <BioBlock
                     heading={`<span>${translate(
                         'bio.guest_visualizer'
@@ -31,6 +44,15 @@ const ToolsArrowsBlock = ({ block, data }) => {
                     photo="/images/guests/amelia.png"
                     bio={translate('amelia.bio')}
                 />
+            }
+        >
+            <div className="ToolsArrows__Contents">
+                <div className="ToolsArrows__Description">
+                    <p>{description}</p>
+                </div>
+                <ChartContainer vscroll={true}>
+                    <ToolsArrowsChart {...{ data, activeCategory }} />
+                </ChartContainer>
             </div>
         </Block>
     )
