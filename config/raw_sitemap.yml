@@ -316,7 +316,7 @@
       - id: angular
         template: toolPageTemplate
         sponsors:
-            - ng-book-1
+            - fullstack-ng-book-1
             - angular-core
       - id: preact
         template: toolPageTemplate
