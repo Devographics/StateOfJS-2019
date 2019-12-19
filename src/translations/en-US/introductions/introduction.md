@@ -33,6 +33,6 @@ Because all survey questions could be skipped, some questions ended up with fewe
 
 The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofjs.com)
 
-And now, let's see what CSS has been up to this year!
+And now, let's see what JavaScript has been up to this year!
 
 <span class="conclusion__byline">– Sacha and Raphaël</span>
