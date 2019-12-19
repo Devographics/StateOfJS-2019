@@ -81,7 +81,6 @@ export const getPageMeta = (context, translate, overrides = {}) => {
 export const getPageSocialMeta = (context, translate, overrides = {}) => {
     const meta = getPageMeta(context, translate, overrides)
 
-    console.log(meta)
     const socialMeta = [
         // facebook
         { property: 'og:type', content: 'article' },

@@ -25,7 +25,7 @@ const localizedPath = (path, locale) =>
     locale.path === 'default' ? path : `/${locale.path}${path}`
 
 const getPageContext = page => {
-    const context = omit(page, ['path', 'children', 'is_hidden'])
+    const context = omit(page, ['path', 'children'])
     context.basePath = page.path
 
     return {

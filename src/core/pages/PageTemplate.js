@@ -7,7 +7,7 @@ import BlockSwitcher from 'core/blocks/block/BlockSwitcher'
 
 const PageTemplate = ({ data = {}, pageContext = {} }) => {
     const context = usePageContext()
-    const { pageData, showTitle = true, id } = pageContext
+    const { pageData, showTitle = true, id, is_hidden = false } = pageContext
 
     return (
         <>
@@ -22,7 +22,7 @@ const PageTemplate = ({ data = {}, pageContext = {} }) => {
                         <BlockSwitcher key={block.id} block={block} pageData={pageData} index={i} />
                     ))}
             </main>
-            <PageFooter />
+            {!is_hidden && <PageFooter />}
         </>
     )
 }
