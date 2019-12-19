@@ -125,3 +125,10 @@
     }
   }
 }
+
+.ToolsArrowsChart__label{
+  cursor: pointer;
+  &:hover{
+    fill: $white;
+  }
+}

@@ -272,6 +272,7 @@
         template: toolPageTemplate
         sponsors:
             - typescript-v2
+            - intermediate-react-v2
 
       - id: reason
         template: toolPageTemplate
@@ -319,6 +320,8 @@
             - angular-core
       - id: preact
         template: toolPageTemplate
+        sponsors:
+            - complete-react-v5
 
       - id: ember
         template: toolPageTemplate
@@ -347,6 +350,7 @@
         template: toolPageTemplate
         sponsors:
             - intermediate-react-v2
+            - redux-mobx
       - id: apollo
         template: toolPageTemplate
         sponsors:

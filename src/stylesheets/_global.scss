@@ -156,10 +156,13 @@ iframe{
     font-size: $largest-font;
 }
 .Page__Introduction{
+    @include small-medium{
+        margin-bottom: $spacing*2;
+    }
     @include large{
         font-size: $larger-font;
+        margin-bottom: $spacing*4;
     }
-    margin-bottom: $spacing*4;
 }
 
 /*
@@ -177,6 +180,27 @@ Page-specific styles
             @include medium-large{
                 font-size: $larger-font;
             }
+        }
+    }
+}
+
+.ToolsArrows__Contents{
+    position: relative;
+}
+
+.ToolsArrows__Description{
+    @include large{
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 450px;
+        background: rgba(0,0,0,0.3);
+        // background: rgba(255,255,255,0.1);
+        padding: $spacing;
+        font-size: $smallish-font;
+        p:last-child{
+            margin: 0;
         }
     }
 }

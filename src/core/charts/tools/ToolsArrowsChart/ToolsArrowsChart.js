@@ -7,6 +7,7 @@ import { extent, max, sum } from 'd3-array'
 import { toolsCategories } from '../../../../../config/variables.yml'
 import offsets from './toolsArrowsLabelOffsets.json'
 import { getColor } from 'core/constants.js'
+import { useI18n } from 'core/i18n/i18nContext'
 
 import './ToolsArrowsChart.scss'
 
@@ -32,18 +33,24 @@ const gradientLineWidthScale = scaleLinear()
     .clamp(true)
 
 const ToolsArrowsChart = ({ data, activeCategory }) => {
+    const { translate } = useI18n()
+
     const [hoveredTool, setHoveredTool] = useState(null)
     const windowWidth = useWindowWidth()
     const windowHeight = useWindowHeight()
 
     const dms = useMemo(() => {
-        const width = windowWidth > 1300 ? 900 :
-            windowWidth > 900 ? 700 :
-            800
+        // const width = windowWidth > 1300 ? 900 :
+        //     windowWidth > 900 ? 700 :
+        //     600
 
-        const height = windowHeight > 1300 ? 900 :
+        const width = windowHeight > 1000 ? 900 :
+            windowHeight > 800 ? 800 :
+            700
+
+        const height = windowHeight > 1000 ? 800 :
             windowHeight > 800 ? 700 :
-            550
+            600
 
         return {
             width,
@@ -111,7 +118,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     y2={dms.height}
                 />
                 <text className="ToolsArrowsChart__axis__label" y={dms.height / 2 - 10}>
-                    dislike
+                    {translate('toolExperience.negative_opinion.extrashort')}
                 </text>
                 <text
                     className="ToolsArrowsChart__axis__label"
@@ -121,7 +128,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         textAnchor: 'end'
                     }}
                 >
-                    like
+                    {translate('toolExperience.positive_opinion.extrashort')}
                 </text>
                 <text
                     className="ToolsArrowsChart__axis__label"
@@ -131,7 +138,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         textAnchor: 'middle'
                     }}
                 >
-                    have tried
+                    {translate('toolExperience.have_used.extrashort')}
                 </text>
                 <text
                     className="ToolsArrowsChart__axis__label"
@@ -141,7 +148,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         textAnchor: 'middle'
                     }}
                 >
-                    have not tried
+                    {translate('toolExperience.have_not_used.extrashort')}
                 </text>
 
                 {points.map((points, i) => {

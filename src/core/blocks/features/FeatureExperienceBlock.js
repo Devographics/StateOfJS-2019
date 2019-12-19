@@ -51,13 +51,18 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
         }
     })
 
+    const mdnLink = mdn && `https://developer.mozilla.org${mdn.url}`
+    const description =
+        mdn &&
+        `${parseMDNLinks(mdn.summary)} <a href="${mdnLink}">${translate('feature.mdn_link')}</a>`
+
     return (
         <Block
             title={name}
             units={units}
             setUnits={setUnits}
             data={buckets}
-            block={{ ...block, title: name, description: mdn && parseMDNLinks(mdn.summary) }}
+            block={{ ...block, title: name, description }}
             showDescription={false}
         >
             <div className="Feature FTBlock">
@@ -72,24 +77,6 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                         />
                     </ChartContainer>
                 </div>
-                {!context.isCapturing && (
-                    <>
-                        <div className="Feature__Description FTBlock__Description">
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: mdn
-                                        ? parseMDNLinks(mdn.summary)
-                                        : translate(`block.description.${block.id}`)
-                                }}
-                            />
-                        </div>
-                        <FeatureResources
-                            id={feature.resources.id}
-                            mdnInfo={mdn}
-                            caniuseInfo={caniuseInfo}
-                        />
-                    </>
-                )}
             </div>
         </Block>
     )

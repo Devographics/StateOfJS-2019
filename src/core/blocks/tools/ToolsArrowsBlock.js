@@ -11,13 +11,16 @@ const ToolsArrowsBlock = ({ block, data }) => {
     const [activeCategory, setActiveCategory] = useState('all')
     const { translate } = useI18n()
 
+    const description = translate('block.description.toolsArrow')
+
     return (
         <Block
             // titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
-            block={block}
+            block={{...block, showDescription: false}}
             data={data}
         >
-            <Fragment>
+            <div className="ToolsArrows__Contents">
+                <div className="ToolsArrows__Description"><p>{description}</p></div>
                 <ChartContainer vscroll={true}>
                     <ToolsArrowsChart {...{ data, activeCategory }} />
                 </ChartContainer>
@@ -28,7 +31,7 @@ const ToolsArrowsBlock = ({ block, data }) => {
                     photo="/images/guests/amelia.png"
                     bio={translate('amelia.bio')}
                 />
-            </Fragment>
+            </div>
         </Block>
     )
 }

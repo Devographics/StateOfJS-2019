@@ -339,8 +339,13 @@ translations:
     - key: page.browser_apis
       t: Browser APIs
 
+    - key: block.description.decorators
+      t: >
+        In its simplest form, a decorator is simply a way of 
+        wrapping one piece of code with another — literally “decorating” it. 
+
     - key: feature.learn_more
-      t: Learn More
+      t: Learn More (MDN)
     - key: feature.mdn_link
       t: MDN
     - key: feature.caniuse_link
@@ -490,12 +495,13 @@ translations:
     # movement
     - key: block.title.toolsArrow
       t: Changes Over Time
+    # - key: block.description.toolsArrow
+    #   t: >
+    #       How has the ecosystem changed over three years?
     - key: block.description.toolsArrow
       t: >
-          How has the ecosystem changed over three years?
-          Each line below starts in 2016, and extends forward through the years until today.
-          Points that are higher in the chart have been tried by more people,
-          and points that are further to the right are more liked than points to the left.
+          Each line goes from 2016 to 2019. A higher point means a technology has been used by more people,
+          and a point further to the right means more users want to learn it; or have used it and would use it again.
 
     - key: amelia.bio
       t: >
@@ -582,6 +588,16 @@ translations:
       t: Used it, would not use again
     - key: toolExperience.would_not_use.extrashort
       t: Would not use
+
+
+    - key: toolExperience.negative_opinion.extrashort
+      t: Negative opinions
+    - key: toolExperience.positive_opinion.extrashort
+      t: Positive opinions
+    - key: toolExperience.have_not_used.extrashort
+      t: Have not used
+    - key: toolExperience.have_used.extrashort
+      t: Have used
 
     - key: toolExperience.total_respondents.long
       t: Total Respondents

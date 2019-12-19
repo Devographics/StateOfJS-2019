@@ -8,8 +8,12 @@
         margin-top: $spacing*4;
     }
     @include medium-large{
-        @include flex-center;
         margin-top: $spacing * 6;
+    }
+}
+.PageFooter__Nav{
+    @include medium-large{
+        @include flex-center;
     }
 }
 .IntroductionFooter{
@@ -32,4 +36,15 @@
             margin-right: $spacing;
         }
     }
+}
+
+.PageFooter__Footer{
+    @include small{
+        margin-top: $spacing*4;
+    }
+    @include medium-large{
+        margin-top: $spacing*6;
+    }
+    font-size: $smaller-font;
+    text-align: center;
 }

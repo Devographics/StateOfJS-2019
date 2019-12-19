@@ -37,10 +37,10 @@ $sidebar_width: 270px;
     overflow-x: hidden;
     flex-grow: 1;
     @include small-medium {
-        padding: $spacing $spacing $spacing * 4 $spacing;
+        padding: $spacing $spacing $spacing $spacing;
     }
     @include large {
-        padding: $spacing * 3 $spacing * 3 $spacing * 7 $spacing * 3;
+        padding: $spacing * 3 $spacing * 3 $spacing * 3 $spacing * 3;
     }
 }
 
