@@ -490,15 +490,8 @@ translations:
       t: Category Overview
     - key: block.description.toolsSectionOverview
       t: >
-          Overview of opinions on the tools and methodologies surveyed. <span class="text-teal text-bold">Teal segments</span> represent positive opinions,
-          while <span class="text-red text-bold">red segments</span> correspond to negative sentiment.
-
-
-          The diameter of each circle corresponds to the aggregate sum of respondents for all of these four options
-          (excluding respondents unaware of the technology).
-
-
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents.
+          Overview of opinions on the technologies surveyed. Darker segments represent positive opinions,
+          while lighter segments correspond to negative sentiment.
 
     # movement
     - key: block.title.toolsArrow
@@ -1010,7 +1003,7 @@ translations:
     - key: partners.our_partners
       t: Our Partners
     - key: partners.become_partner
-      t: Help sponsor the survey
+      t: Help support the survey
     - key: partners.thanks
       t: Thanks to our partners for supporting us!
     - key: partners.learn_more

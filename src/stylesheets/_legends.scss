@@ -54,7 +54,7 @@
     &--interactive{
         cursor: pointer;
         &:hover{
-            background: $bg-color-light;
+            background: $bg-color-lighter;
         }
     }
     flex: 1;
@@ -102,6 +102,7 @@
     @include small{
         flex: 1;
     }
+    padding-right: $spacing;
 }
 .Legends__Item__Value{
     display: inline-block;
