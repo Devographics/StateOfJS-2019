@@ -327,3 +327,7 @@
   name: Software Engineering Radio
   homepage: https://www.se-radio.net/
   category: resources
+- id: frontend_weekend
+  name: Frontend Weekend
+  homepage: https://frontendweekend.ml/ru/
+  category: resources
