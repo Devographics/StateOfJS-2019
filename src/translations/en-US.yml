@@ -450,7 +450,8 @@ translations:
       t: |
 
           For each technology, how usage is spread among respondents who picked different
-          experience ranges.
+          experience ranges. Note that the experience in question here is general JavaScript experience, not
+          experience with a specific technology. 
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
