@@ -312,7 +312,7 @@
         template: toolPageTemplate
         sponsors:
             - fullstack-vue-1
-            - vue-fem
+            - fem-vue
       - id: angular
         template: toolPageTemplate
         sponsors:

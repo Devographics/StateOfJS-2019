@@ -19,7 +19,7 @@
   image: https://static.frontendmasters.com/assets/teachers/holt/thumb@2x.jpg
 
 - name: Introduction to Vue.js with Sarah Drasner
-  id: vue
+  id: fem-vue
   description: Vue.js brings together the best features of the javascript framework landscape elegantly. Build complex and maintainable applications faster!
   url: https://frontendmasters.com/courses/vue/?utm_source=stateofjs&utm_medium=website&utm_campaign=stateofjs2019
   image: https://static.frontendmasters.com/assets/teachers/drasner/thumb@2x.jpg
