@@ -11,7 +11,6 @@ import { keys } from 'core/constants.js'
 const ToolsArrowsBlock = ({ block, data }) => {
     const [activeCategory, setActiveCategory] = useState('all')
     const { translate } = useI18n()
-    const [current, setCurrent] = useState(null)
 
     const description = translate('block.description.toolsArrow')
 
