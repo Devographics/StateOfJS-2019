@@ -360,5 +360,5 @@ function useWindowHeight() {
 }
 
 const labelsToTheRight = [
-    "mobx", "relay", "nuxt", "svelte", "ava", "electron", "nextjs", "vuejs"
+    "mobx", "relay", "nuxt", "svelte", "ava", "electron", "nextjs", "vuejs", "cypress"
 ]
