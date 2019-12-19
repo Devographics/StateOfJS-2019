@@ -153,7 +153,6 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
 
                 {points.map((points, i) => {
                     const tool = tools[i]
-                    const toolName = toolNames[tool]
                     const category = toolToCategoryMap[tool]
                     if (!points.length) return null
                     if (activeCategory !== 'all' && activeCategory !== category) return null
@@ -267,38 +266,40 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                             >
                                 {toolName}
                             </text>
-                        </g>
-                    )
-                })}
+                            {points.map(([x, y], i) => {
+                                const isFirstLabelToTheRight = scales.x(x) > dms.width * 0.9
+                                || labelsToTheRight.indexOf(tool) != -1
 
-                {hoveredTool && hoveredTool.points.map(([x, y], i) => {
-                    const isFirstLabelToTheRight = scales.x(x) > dms.width * 0.9
-                    || labelsToTheRight.indexOf(hoveredTool.tool) != -1
+                                const showLabel = i === 0 || i === (points.length - 1)
 
-                    const showLabel = i === 0 || i === (hoveredTool.points.length - 1)
-
-                    return (
-                        <g>
-                            {showLabel && <text
-                                className="ToolsArrowsChart__year"
-                                x={scales.x(x) + (10 * (isFirstLabelToTheRight ? -1 : 1))}
-                                y={scales.y(y) + 5}
-                                key={i}
-                                style={{
-                                    textAnchor:
-                                        isFirstLabelToTheRight
-                                            ? 'end'
-                                            : 'start'
-                                }}
-                            >
-                                {2019 - (hoveredTool.points.length - 1 - i)}
-                            </text>}
-                            <circle
-                                cx={scales.x(x)}
-                                cy={scales.y(y)}
-                                r="4"
-                                fill="white"
-                            />
+                                return (
+                                    <>
+                                        {showLabel && (
+                                            <text
+                                                className="ToolsArrowsChart__year"
+                                                x={scales.x(x) + (10 * (isFirstLabelToTheRight ? -1 : 1))}
+                                                y={scales.y(y) + 5}
+                                                key={i}
+                                                style={{
+                                                    textAnchor:
+                                                        isFirstLabelToTheRight
+                                                            ? 'end'
+                                                            : 'start'
+                                                }}
+                                            >
+                                                {2019 - (points.length - 1 - i)}
+                                            </text>
+                                        )}
+                                        <circle
+                                            className="ToolsArrowsChart__year"
+                                            cx={scales.x(x)}
+                                            cy={scales.y(y)}
+                                            r="4"
+                                            fill="white"
+                                        />
+                                    </>
+                                )
+                            })}
                         </g>
                     )
                 })}
@@ -323,13 +324,14 @@ const conditionDiffs = {
 }
 
 function useWindowWidth() {
-    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' && window.innerWidth)
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' && window.innerWidth || 1000)
 
     function handleResize() {
-      setWindowWidth(typeof window !== 'undefined' && window.innerWidth)
+      setWindowWidth(typeof window !== 'undefined' && window.innerWidth || 1000)
     }
 
     useEffect(() => {
+        if (typeof window === 'undefined') return
       window.addEventListener('resize', handleResize)
       return () => {
         window.removeEventListener('resize', handleResize)
@@ -340,13 +342,14 @@ function useWindowWidth() {
 }
 
 function useWindowHeight() {
-    const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' && window.innerHeight)
+    const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' && window.innerHeight || 1000)
 
     function handleResize() {
-      setWindowHeight(typeof window !== 'undefined' && window.innerHeight)
+      setWindowHeight(typeof window !== 'undefined' && window.innerHeight || 1000)
     }
 
     useEffect(() => {
+        if (typeof window === 'undefined') return
       window.addEventListener('resize', handleResize)
       return () => {
         window.removeEventListener('resize', handleResize)
