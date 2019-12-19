@@ -58,7 +58,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
         }
     }, [windowWidth])
 
-    var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1
+    var isFirefox = typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().indexOf('firefox') > -1
 
     const tools = data.map(d => d.id)
     let toolNames = {}
@@ -282,10 +282,10 @@ const conditionDiffs = {
 }
 
 function useWindowWidth() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' && window.innerWidth)
 
     function handleResize() {
-      setWindowWidth(window.innerWidth)
+      setWindowWidth(typeof window !== 'undefined' && window.innerWidth)
     }
 
     useEffect(() => {
@@ -299,10 +299,10 @@ function useWindowWidth() {
 }
 
 function useWindowHeight() {
-    const [windowHeight, setWindowHeight] = useState(window.innerHeight)
+    const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' && window.innerHeight)
 
     function handleResize() {
-      setWindowHeight(window.innerHeight)
+      setWindowHeight(typeof window !== 'undefined' && window.innerHeight)
     }
 
     useEffect(() => {
