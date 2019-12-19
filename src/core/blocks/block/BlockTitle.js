@@ -43,7 +43,7 @@ const BlockTitle = ({
     } else if (blockName) {
         blockDescription = translate(`block.description.${blockName}`)
     } else {
-        blockDescription = getBlockDescription(id, context, translate, { values })
+        blockDescription = getBlockDescription(block, context, translate, { values })
     }
 
     const meta = getBlockMeta(block, context, translate)
