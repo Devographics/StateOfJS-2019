@@ -84,13 +84,13 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
         const maxAbsX = max(xExtent.map(Math.abs))
         const xScale = scaleLinear()
             .domain([-maxAbsX, maxAbsX])
-            .range([0, dms.width])
+            .range([20, dms.width - 20])
 
         const yExtent = extent(flatten(points).map(d => d[1]))
         const maxAbsY = max(yExtent.map(Math.abs))
         const yScale = scaleLinear()
             .domain([-maxAbsY, maxAbsY])
-            .range([dms.height, 0])
+            .range([dms.height - 30, 30])
 
         return {
             x: xScale,
@@ -273,8 +273,9 @@ ToolsArrowsChart.propTypes = {
 
 export default ToolsArrowsChart
 
+// each response has an associated value for the [x, y] axes
 const conditionDiffs = {
-    never_heard: [0, 0],
+    never_heard: [0, -1],
     not_interested: [-1, -1],
     interested: [1, -1],
     would_not_use: [-1, 1],
