@@ -76,6 +76,8 @@ const StreamChart = ({ data, keys, units, className, current, colorScale, namesp
         format: i => data[i].year
     }
 
+    const additionalClassName = className ? ` ${className}` : ``
+
     let tooltipFormat
     if (units === 'percents') {
         tooltipFormat = d => `${d.value}%`
@@ -89,7 +91,7 @@ const StreamChart = ({ data, keys, units, className, current, colorScale, namesp
     }
 
     return (
-        <div style={{ height: 260 }} className={`StreamChart ${className}`}>
+        <div style={{ height: 260 }} className={`StreamChart${additionalClassName}`}>
             <ResponsiveStream
                 theme={{
                     ...theme,
