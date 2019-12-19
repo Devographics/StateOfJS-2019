@@ -202,8 +202,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         >
                             {circles.slice(0, -1).map(([x, y], i) => (
                                 <line
-                                    className={`ToolsArrowsChart__gradient-line ToolsArrowsChart__gradient-line--nth-${circles.length -
-                                        i}`}
+                                    className={`ToolsArrowsChart__gradient-line ToolsArrowsChart__gradient-line--nth-${i}`}
                                     x1={x}
                                     y1={y}
                                     x2={(circles[i + 1] || [])[0]}
