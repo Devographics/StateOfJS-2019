@@ -221,6 +221,33 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 fill={color}
                                 r="6"
                             />
+                        </g>
+                    )
+                })}
+
+                {points.map((points, i) => {
+                    const tool = tools[i]
+                    const toolName = toolNames[tool]
+                    const category = toolToCategoryMap[tool]
+                    if (!points.length) return null
+                    if (activeCategory !== 'all' && activeCategory !== category) return null
+
+                    const thisYearPoint = points.slice(-1)[0]
+
+                    const x = scales.x(thisYearPoint[0])
+                    const y = scales.y(thisYearPoint[1])
+                    const color = categoryColorMap[category]
+
+                    return (
+                        <g
+                            className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
+                                !hoveredTool
+                                    ? 'normal'
+                                    : hoveredTool.tool === tool
+                                    ? 'hovering'
+                                    : 'hovering-other'
+                            }`}
+                        >
                             <text
                                 className="ToolsArrowsChart__label-background"
                                 x={x + ((offsets[tools[i]] || {}).x || 0)}
@@ -242,30 +269,35 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     )
                 })}
 
-                {hoveredTool && hoveredTool.points.map(([x, y], i) => (
-                    <g>
-                        <text
-                            className="ToolsArrowsChart__year"
-                            x={scales.x(x) + (10 * (scales.x(x) > dms.width - 200 ? -1 : 1))}
-                            y={scales.y(y) + 5}
-                            key={i}
-                            style={{
-                                textAnchor:
-                                    scales.x(x) > dms.width - 200
-                                        ? 'end'
-                                        : 'start'
-                            }}
-                        >
-                            {2019 - (hoveredTool.points.length - 1 - i)}
-                        </text>
-                        <circle
-                            cx={scales.x(x)}
-                            cy={scales.y(y)}
-                            r="4"
-                            fill="white"
-                        />
-                    </g>
-                ))}
+                {hoveredTool && hoveredTool.points.map(([x, y], i) => {
+                    const isFirstLabelToTheRight = scales.x(x) > dms.width * 0.9
+                    || labelsToTheRight.indexOf(hoveredTool.tool) != -1
+
+                    return (
+                        <g>
+                            <text
+                                className="ToolsArrowsChart__year"
+                                x={scales.x(x) + (10 * (isFirstLabelToTheRight ? -1 : 1))}
+                                y={scales.y(y) + 5}
+                                key={i}
+                                style={{
+                                    textAnchor:
+                                        isFirstLabelToTheRight
+                                            ? 'end'
+                                            : 'start'
+                                }}
+                            >
+                                {2019 - (hoveredTool.points.length - 1 - i)}
+                            </text>
+                            <circle
+                                cx={scales.x(x)}
+                                cy={scales.y(y)}
+                                r="4"
+                                fill="white"
+                            />
+                        </g>
+                    )
+                })}
             </svg>
         </div>
     )
@@ -319,3 +351,7 @@ function useWindowHeight() {
 
     return windowHeight
 }
+
+const labelsToTheRight = [
+    "mobx", "relay", "nuxt", "svelte", "ava", "electron", "nextjs", "vuejs"
+]
