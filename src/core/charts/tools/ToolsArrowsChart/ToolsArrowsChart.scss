@@ -51,7 +51,7 @@
           }
 
           &__now {
-            fill-opacity: 0.2;
+            fill-opacity: 0.2 !important;
           }
         }
       }
@@ -64,7 +64,6 @@
   }
 
   &__now {
-    fill-opacity: 0;
   }
 
   @keyframes gradientLineSegmentIn {

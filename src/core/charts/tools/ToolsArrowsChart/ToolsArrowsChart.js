@@ -219,6 +219,9 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 cy={y}
                                 fill={color}
                                 r="6"
+                                style={{
+                                    fillOpacity: points.length < 2 ? 1 : 0.2
+                                }}
                             />
                         </g>
                     )
