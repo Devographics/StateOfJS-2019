@@ -273,6 +273,8 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     const isFirstLabelToTheRight = scales.x(x) > dms.width * 0.9
                     || labelsToTheRight.indexOf(hoveredTool.tool) != -1
 
+                    if (i != 0 && i != (hoveredTool.points.length - 1)) return null
+
                     return (
                         <g>
                             <text
