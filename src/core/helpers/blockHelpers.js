@@ -29,22 +29,34 @@ export const getBlockTitle = (block, context, translate, { format = 'short', val
 }
 
 export const getBlockDescription = (
-    id,
+    block,
     context,
     translate,
     { isMarkdownEnabled = true, values = {} } = {}
 ) => {
-    let description = translate(`block.description.${id}`, {
+    const { id, description, blockName } = block
+    let blockDescription
+
+    const descriptionValues = {
         values: {
             ...getTranslationValuesFromContext(context, translate),
             ...values
         }
-    })
-    if (isMarkdownEnabled !== true) {
-        description = removeMarkdown(description)
     }
 
-    return description
+    if (description) {
+        blockDescription = description
+    } else if (blockName) {
+        blockDescription = translate(`block.description.${blockName}`, descriptionValues)
+    } else {
+        blockDescription = translate(`block.description.${id}`, descriptionValues)
+    }
+
+    if (isMarkdownEnabled !== true) {
+        blockDescription = removeMarkdown(blockDescription)
+    }
+
+    return blockDescription
 }
 
 export const getBlockImage = (block, context, translate) => {

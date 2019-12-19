@@ -51,10 +51,11 @@ export const getPageImageUrl = context => {
 
     let imageUrl
     if (context.block !== undefined) {
-        imageUrl = `${baseUrl}captures/${context.basePath
-            .replace(/^\//, '')
-            .replace(/\/$/, '')
-            .replace(/\//g, '_')}_${context.block}.png`
+        imageUrl = `${baseUrl}captures/${context.block.id}.png`
+        // imageUrl = `${baseUrl}captures/${context.basePath
+        //     .replace(/^\//, '')
+        //     .replace(/\/$/, '')
+        //     .replace(/\//g, '_')}_${context.block.id}.png`
     } else {
         imageUrl = `${baseUrl}stateofjs-socialmedia.png`
     }
@@ -80,6 +81,7 @@ export const getPageMeta = (context, translate, overrides = {}) => {
 export const getPageSocialMeta = (context, translate, overrides = {}) => {
     const meta = getPageMeta(context, translate, overrides)
 
+    console.log(meta)
     const socialMeta = [
         // facebook
         { property: 'og:type', content: 'article' },
