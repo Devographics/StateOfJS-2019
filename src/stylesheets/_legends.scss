@@ -6,7 +6,7 @@
 .Legends--horizontal {
     @include medium-large {
         display: grid;
-        grid-gap: $spacing;
+        // grid-gap: $spacing;
     }
     @include medium {
         grid-template-columns: 1fr 1fr;
@@ -51,6 +51,9 @@
     display: flex;
     align-items: center;
     cursor: default;
+    &--interactive{
+        cursor: pointer;
+    }
     flex: 1;
     &:hover{
         background: $bg-color-light;

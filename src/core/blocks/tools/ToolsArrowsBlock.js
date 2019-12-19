@@ -30,10 +30,10 @@ const ToolsArrowsBlock = ({ block, data }) => {
             legendProps={{
                 legends,
                 onMouseEnter: ({ id }) => {
-                    setCurrent(id.replace('toolCategories.', ''))
+                    setActiveCategory(id.replace('toolCategories.', ''))
                 },
                 onMouseLeave: () => {
-                    setCurrent(null)
+                    setActiveCategory('all')
                 }
             }}
             blockFooter={

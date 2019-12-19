@@ -39,11 +39,13 @@ export default class LegendsItem extends Component {
     }
 
     render() {
-        const { color, label, keyLabel, chipSize, style, chipStyle, data, units } = this.props
+        const { color, label, keyLabel, chipSize, style, chipStyle, data, units, onMouseEnter } = this.props
 
+        const isInteractive = typeof onMouseEnter !== 'undefined'
+        
         return (
             <div
-                className={`Legends__Item ${keyLabel ? 'Legends__Item--withKeyLabel' : ''}`}
+                className={`Legends__Item ${keyLabel ? 'Legends__Item--withKeyLabel' : ''} ${isInteractive ? 'Legends__Item--interactive' : ''}`}
                 style={style}
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.handleMouseLeave}
