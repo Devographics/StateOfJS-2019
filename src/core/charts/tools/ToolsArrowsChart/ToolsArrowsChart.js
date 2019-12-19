@@ -180,10 +180,10 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         })
                     )
 
-                    const backgroundPath = [
-                        'M',
-                        points.map(([x, y]) => [scales.x(x), scales.y(y)].join(',')).join('L ')
-                    ].join(' ')
+                    // const backgroundPath = [
+                    //     'M',
+                    //     points.map(([x, y]) => [scales.x(x), scales.y(y)].join(',')).join('L ')
+                    // ].join(' ')
 
                     const x = scales.x(thisYearPoint[0])
                     const y = scales.y(thisYearPoint[1])
@@ -199,8 +199,6 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                     ? 'hovering'
                                     : 'hovering-other'
                             }`}
-                            onMouseEnter={() => setHoveredTool({tool, points})}
-                            onMouseLeave={() => setHoveredTool(null)}
                         >
                             {circles.slice(0, -1).map(([x, y], i) => (
                                 <line
@@ -223,10 +221,6 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 fill={color}
                                 r="6"
                             />
-                            <path
-                                className="ToolsArrowsChart__hover-background"
-                                d={backgroundPath}
-                            />
                             <text
                                 className="ToolsArrowsChart__label-background"
                                 x={x + ((offsets[tools[i]] || {}).x || 0)}
@@ -239,6 +233,8 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 fill={color}
                                 x={x + ((offsets[tools[i]] || {}).x || 0)}
                                 y={y + ((offsets[tools[i]] || {}).y || 0)}
+                                onMouseEnter={() => setHoveredTool({tool, points})}
+                                onMouseLeave={() => setHoveredTool(null)}
                             >
                                 {toolName}
                             </text>
@@ -247,20 +243,28 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                 })}
 
                 {hoveredTool && hoveredTool.points.map(([x, y], i) => (
-                    <text
-                        className="ToolsArrowsChart__year"
-                        x={scales.x(x)}
-                        y={scales.y(y)}
-                        key={i}
-                        style={{
-                            textAnchor:
-                                scales.x(x) > dms.width - 200
-                                    ? 'end'
-                                    : 'start'
-                        }}
-                    >
-                        {2019 - (hoveredTool.points.length - 1 - i)}
-                    </text>
+                    <g>
+                        <text
+                            className="ToolsArrowsChart__year"
+                            x={scales.x(x) + (10 * (scales.x(x) > dms.width - 200 ? -1 : 1))}
+                            y={scales.y(y) + 5}
+                            key={i}
+                            style={{
+                                textAnchor:
+                                    scales.x(x) > dms.width - 200
+                                        ? 'end'
+                                        : 'start'
+                            }}
+                        >
+                            {2019 - (hoveredTool.points.length - 1 - i)}
+                        </text>
+                        <circle
+                            cx={scales.x(x)}
+                            cy={scales.y(y)}
+                            r="4"
+                            fill="white"
+                        />
+                    </g>
                 ))}
             </svg>
         </div>
