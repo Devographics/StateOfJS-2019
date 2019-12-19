@@ -19,20 +19,27 @@ const margin = {
     left: 140
 }
 
-const Text = ({ hasLink = false, label }) => (
-    <text
-        dominantBaseline="central"
-        textAnchor="end"
-        transform="translate(-10,0) rotate(0)"
-        style={{
-            fill: hasLink ? getColor('legendWithLink') : getColor('legend'),
-            fontSize: 14,
-            fontFamily
-        }}
-    >
-        {label}
-    </text>
-)
+const Text = ({ hasLink = false, label }) => {
+    const shortenLabel = label.length > labelMaxLength
+    const shortLabel = shortenLabel ? label.substr(0, labelMaxLength) + '…' : label
+
+    return (
+        <text
+            dominantBaseline="central"
+            textAnchor="end"
+            transform="translate(-10,0) rotate(0)"
+            style={{
+                fill: hasLink ? getColor('legendWithLink') : getColor('legend'),
+                fontSize: 14,
+                fontFamily
+            }}
+        >
+            <title>{label}</title>
+            {shortLabel || label}
+        </text>
+    )
+}
+
 const TickItem = tick => {
     const { translate } = useI18n()
 
@@ -49,8 +56,6 @@ const TickItem = tick => {
         }
         link = homepage || (github && github.url)
     }
-
-    label = label.length > labelMaxLength ? label.substr(0, labelMaxLength) + '…' : label
 
     return (
         <g transform={`translate(${x},${y})`}>
