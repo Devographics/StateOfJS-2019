@@ -35,6 +35,14 @@
 
   &__tool {
     &--is {
+      &-hovering {
+        .ToolsArrowsChart {
+            &__year {
+            fill-opacity: 1;
+          }
+        }
+      }
+
       &-hovering-other {
         // opacity: 0.3;
 
@@ -64,6 +72,9 @@
   }
 
   &__now {
+  }
+  &__year {
+    fill-opacity: 0;
   }
 
   @keyframes gradientLineSegmentIn {
