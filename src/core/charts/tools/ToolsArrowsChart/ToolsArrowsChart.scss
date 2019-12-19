@@ -47,8 +47,12 @@
 
         .ToolsArrowsChart {
           &__gradient-line {
-            stroke: $navyLightest;
+            stroke: $navy;
             stroke-width: 1 !important;
+          }
+
+          &__now {
+            fill-opacity: 0.2;
           }
         }
       }
@@ -72,6 +76,7 @@
     mix-blend-mode: lighten;
     stroke-linecap: round;
     stroke-linejoin: round;
+    pointer-events: none;
   }
 
   &--is-animated {
@@ -96,6 +101,7 @@
   &__year {
     font-size: 0.8em;
     font-weight: 600;
+    pointer-events: none;
     // fill-opacity: 0; transform: translateY(1em);
     // animation: fadeInSlideUp 0.2s ease-out;
     // animation-fill-mode: forwards;
