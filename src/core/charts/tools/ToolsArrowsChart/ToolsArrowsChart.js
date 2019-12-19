@@ -272,11 +272,11 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     const isFirstLabelToTheRight = scales.x(x) > dms.width * 0.9
                     || labelsToTheRight.indexOf(hoveredTool.tool) != -1
 
-                    if (i != 0 && i != (hoveredTool.points.length - 1)) return null
+                    const showLabel = i === 0 || i === (hoveredTool.points.length - 1)
 
                     return (
                         <g>
-                            <text
+                            {showLabel && <text
                                 className="ToolsArrowsChart__year"
                                 x={scales.x(x) + (10 * (isFirstLabelToTheRight ? -1 : 1))}
                                 y={scales.y(y) + 5}
@@ -289,7 +289,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 }}
                             >
                                 {2019 - (hoveredTool.points.length - 1 - i)}
-                            </text>
+                            </text>}
                             <circle
                                 cx={scales.x(x)}
                                 cy={scales.y(y)}
