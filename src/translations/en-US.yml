@@ -286,12 +286,20 @@ translations:
       t: Gender
     - key: block.description.gender
       t: Respondents gender.
+    - key: gender.female
+      t: Female
     - key: gender.female.long
       t: Female
+    - key: gender.male
+      t: Male
     - key: gender.male.long
       t: Male
+    - key: gender.non_binary
+      t: Non-Binary/Third Gender
     - key: gender.non_binary.long
       t: Non-Binary/Third Gender
+    - key: gender.prefer_not_to_say
+      t: Prefer not to say
     - key: gender.prefer_not_to_say.long
       t: Prefer not to say
 

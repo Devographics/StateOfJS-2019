@@ -53,11 +53,11 @@
     cursor: default;
     &--interactive{
         cursor: pointer;
+        &:hover{
+            background: $bg-color-light;
+        }
     }
     flex: 1;
-    &:hover{
-        background: $bg-color-light;
-    }
     @include small{
         margin-bottom: $spacing/2;
     }

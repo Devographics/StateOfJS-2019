@@ -14,7 +14,7 @@ We also borrowed a couple new visualisations from the State of JS's sister surve
 
 ### Team
 
-The State of CSS Survey is created and maintained by:
+The State of JavaScript Survey is created and maintained by:
 
 - [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
 - [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
