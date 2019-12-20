@@ -100,9 +100,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
 
     return (
         <div
-            className={`ToolsArrowsChart ToolsArrowsChart--is-${
-                activeCategory !== 'all' ? 'animated' : 'not-animated'
-            }`}
+            className="ToolsArrowsChart"
         >
             <svg className="ToolsArrowsChart__svg" height={dms.height} width={dms.width}>
                 <line
@@ -155,7 +153,6 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     const tool = tools[i]
                     const category = toolToCategoryMap[tool]
                     if (!points.length) return null
-                    if (activeCategory !== 'all' && activeCategory !== category) return null
 
                     const thisYearPoint = points.slice(-1)[0]
 
@@ -192,6 +189,8 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     return (
                         <g
                             className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
+                                activeCategory !== "all" && activeCategory !== category ? "hidden" :
+                                activeCategory === category ? "active" :
                                 !hoveredTool
                                     ? 'normal'
                                     : hoveredTool.tool === tool
@@ -231,7 +230,6 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     const toolName = toolNames[tool]
                     const category = toolToCategoryMap[tool]
                     if (!points.length) return null
-                    if (activeCategory !== 'all' && activeCategory !== category) return null
 
                     const thisYearPoint = points.slice(-1)[0]
 
@@ -242,6 +240,8 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     return (
                         <g
                             className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
+                                activeCategory !== "all" && activeCategory !== category ? "hidden" :
+                                activeCategory === category ? "active" :
                                 !hoveredTool
                                     ? 'normal'
                                     : hoveredTool.tool === tool
