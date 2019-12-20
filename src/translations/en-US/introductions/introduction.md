@@ -6,7 +6,7 @@ locale: en-US
 
 <span class="first-letter">W</span>e were pretty sure 2018 would be the last time we did this survey. After all, the JavaScript ecosystem can’t very well keep changing *again*, can it?
 
-But what do you know, turns out JavaScript isn’t quite done changing just yet! And so we had to dig up our components and charts, curse us-from-a-year-ago for writing such crappy code, and get to work. 
+But what do you know, turns out JavaScript isn’t quite done changing just yet! And so after over 21,717 respondents took this year's survey we had to dig up our components and charts, curse us-from-a-year-ago for writing such crappy code, and get to work digging through the data. 
 
 We had some help though. The amazing [Amelia Wattenberger](http://wattenberger.com/) joined the team as a guest dataviz expert to contribute a fresh new look on our data, and you’ll be able to explore her work in the **Overview** section.
 

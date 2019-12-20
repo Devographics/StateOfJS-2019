@@ -73,7 +73,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                             colorMapping={featureExperience}
                             units={units}
                             applyEmptyPatternTo="never_heard_not_sure"
-                            i18nNamespace="features.usage"
+                            i18nNamespace="featureExperience"
                         />
                     </ChartContainer>
                 </div>

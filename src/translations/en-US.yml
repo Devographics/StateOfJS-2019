@@ -368,6 +368,13 @@ translations:
     - key: features.usage.ratio
       t: Usage Ratio
 
+    - key: featureExperience.used_it
+      t: Have used it
+    - key: featureExperience.know_not_used
+      t: Know what it is, but haven't used it
+    - key: featureExperience.never_heard_not_sure
+      t: Never heard of it/Not sure what it is
+
     - key: featureExperience.used_it.long
       t: Have used it
     - key: featureExperience.know_not_used.long
@@ -955,6 +962,17 @@ translations:
           <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
 
       # opinion scale
+    - key: opinions.0.short
+      t: Strongly Disagree
+    - key: opinions.1.short
+      t: Disagree
+    - key: opinions.2.short
+      t: Neutral
+    - key: opinions.3.short
+      t: Agree
+    - key: opinions.4.short
+      t: Strongly Agree
+
     - key: opinions.0.long
       t: Strongly Disagree
     - key: opinions.1.long

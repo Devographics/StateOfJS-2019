@@ -35,7 +35,7 @@ const ToolsExperienceRankingChart = ({ data }) => {
     return (
         <ResponsiveBump
             data={data}
-            margin={{ top: 40, right: 100, bottom: 40, left: 100 }}
+            margin={{ top: 40, right: 120, bottom: 40, left: 120 }}
             colors={distinctColors}
             inactiveLineWidth={5}
             theme={theme}
