@@ -82,7 +82,7 @@
         description: Other JavaScript flavors you use not mentioned in the list above
         template: text
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of JavaScript flavors?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of JavaScript flavors?
         template: happiness
 
 - title: Front-end Frameworks
@@ -100,7 +100,7 @@
         description: Other Front-end frameworks you use not mentioned in the list above
         template: text
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of front-end frameworks?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of front-end frameworks?
         template: happiness
 
 - title: Data Layer
@@ -117,7 +117,7 @@
         description: Other data layer tools you use not mentioned in the list above
         template: text
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of data layer technologies?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of data layer technologies?
         template: happiness
 
 - title: Back-end Frameworks
@@ -137,7 +137,7 @@
         description: Other back-end frameworks you use not mentioned in the list above
         template: text
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of back-end frameworks?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of back-end frameworks?
         template: happiness
 
 - title: Testing
@@ -157,7 +157,7 @@
         description: Other testing tools you use not mentioned in the list above
         template: text
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of testing tools?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of testing tools?
         template: happiness
 
 - title: Mobile & Desktop
@@ -176,7 +176,7 @@
         description: Other mobile & desktop tools you use not mentioned in the list above
         template: text
       - title: Overall Happiness
-        description: On a scale of one (very unhappy) to five (very happy), how happy you with the current overall state of mobile & desktop tools?
+        description: On a scale of one (very unhappy) to five (very happy), how happy are you with the current overall state of mobile & desktop tools?
         template: happiness
 
 ### OTHER TOOLS ###

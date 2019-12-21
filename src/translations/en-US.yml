@@ -162,34 +162,6 @@ translations:
     - key: sources.other_unknown
       t: Other/Unknown
 
-    # javascript proficiency
-    - key: block.title.javascript-proficiency
-      t: JavaScript Proficiency
-    - key: block.description.javascript-proficiency
-      t: How proficient are you at JavaScript development?
-    - key: javascript-proficiency.axis_legend
-      t: JavaScript Proficiency
-    - key: javascript-proficiency.none.short
-      t: None
-    - key: javascript-proficiency.none.long
-      t: I am not able to write any JavaScript
-    - key: javascript-proficiency.short_simple_javascript.short
-      t: Beginner
-    - key: javascript-proficiency.short_simple_javascript.long
-      t: I can write short, simple JavaScript or jQuery statements
-    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
-      t: Intermediate
-    - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
-      t: I can work on existing front-end codebases using modern frameworks (React, Vue, etc.)
-    - key: javascript-proficiency.advanced_front_end_patterns.short
-      t: Advanced
-    - key: javascript-proficiency.advanced_front_end_patterns.long
-      t: Can handle advanced front-end patterns (state management, data loading, etc.)
-    - key: javascript-proficiency.entire_codebases_from_scratch.short
-      t: Expert
-    - key: javascript-proficiency.entire_codebases_from_scratch.long
-      t: Can architecture entire front-end codebases from scratch
-
     # css proficiency
 
     - key: block.title.cssProficiency
@@ -337,6 +309,8 @@ translations:
     ###########################################################################
     # Features
     ###########################################################################
+
+    # General 
 
     - key: page.syntax
       t: Syntax
@@ -501,7 +475,7 @@ translations:
           Overview of opinions on the technologies surveyed. Darker segments represent positive opinions,
           while lighter segments correspond to negative sentiment.
 
-    # movement
+    # Arrows (Movement over time)
     - key: block.title.toolsArrow
       t: Changes Over Time
     # - key: block.description.toolsArrow
@@ -670,21 +644,6 @@ translations:
     - key: block.description.non_js_languages_others
       t: Other answers (freeform field).
 
-    ###########################################################################
-    # Environments
-    ###########################################################################
-
-    # general
-    - key: block.title.form-factors
-      t: Form Factors
-    - key: block.description.form-factors
-      t: Which form factors do you test on?
-
-    - key: block.title.env-browsers
-      t: Browsers
-    - key: block.description.env-browsers
-      t: Which browsers do you test in?
-
 
     ###########################################################################
     # Resources
@@ -763,6 +722,29 @@ translations:
       t: Missing Features
     - key: block.description.missing-features
       t: What do developers feel is currently missing from JavaScript?
+
+      # opinion scale
+    - key: opinions.0.short
+      t: Strongly Disagree
+    - key: opinions.1.short
+      t: Disagree
+    - key: opinions.2.short
+      t: Neutral
+    - key: opinions.3.short
+      t: Agree
+    - key: opinions.4.short
+      t: Strongly Agree
+
+    - key: opinions.0.long
+      t: Strongly Disagree
+    - key: opinions.1.long
+      t: Disagree
+    - key: opinions.2.long
+      t: Neutral
+    - key: opinions.3.long
+      t: Agree
+    - key: opinions.4.long
+      t: Strongly Agree
 
     ###########################################################################
     # Awards
@@ -961,28 +943,6 @@ translations:
           on exposing it to make querying our data easier. If you'd like to hear more, you can
           <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
 
-      # opinion scale
-    - key: opinions.0.short
-      t: Strongly Disagree
-    - key: opinions.1.short
-      t: Disagree
-    - key: opinions.2.short
-      t: Neutral
-    - key: opinions.3.short
-      t: Agree
-    - key: opinions.4.short
-      t: Strongly Agree
-
-    - key: opinions.0.long
-      t: Strongly Disagree
-    - key: opinions.1.long
-      t: Disagree
-    - key: opinions.2.long
-      t: Neutral
-    - key: opinions.3.long
-      t: Agree
-    - key: opinions.4.long
-      t: Strongly Agree
 
     # general
     - key: general.title
