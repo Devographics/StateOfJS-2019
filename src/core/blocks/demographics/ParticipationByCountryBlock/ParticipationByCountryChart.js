@@ -39,7 +39,8 @@ const chartLegends = [
         itemHeight: 18,
         itemDirection: 'left-to-right',
         itemTextColor: colors.tealLight,
-        symbolSize: 18
+        symbolSize: 18,
+        justify: true
     }
 ]
 
