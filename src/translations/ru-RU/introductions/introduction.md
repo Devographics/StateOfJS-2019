@@ -1,38 +1,38 @@
 ---
 type: introduction
 page: introduction
-locale: en-US
+locale: ru-RU
 ---
 
-<span class="first-letter">W</span>e were pretty sure 2018 would be the last time we did this survey. After all, the JavaScript ecosystem can’t very well keep changing *again*, can it?
+<span class="first-letter">М</span>ы были уверены, что 2018 станет последним для этого опроса. В конце концов, экосистема JavaScript не может продолжать *так* меняться, не правда ли?
 
-But what do you know, turns out JavaScript isn’t quite done changing just yet! And so after over 21,717 respondents took this year's survey we had to dig up our components and charts, curse us-from-a-year-ago for writing such crappy code, and get to work digging through the data. 
+Но что бы вы думали, оказывается, JavaScript вовсе не собирается останавливаться на этом! И поэтому, после того, как более 21 717 респондентов в этом году приняли участие в опросе, нам пришлось откопать наши компоненты и диаграммы, и, проклиная нас-из-прошлого за написание говнокода, начать копаться в данных.
 
-We had some help though. The amazing [Amelia Wattenberger](http://wattenberger.com/) joined the team as a guest dataviz expert to contribute a fresh new look on our data, and you’ll be able to explore her work in the **Overview** section.
+Впрочем, нам помогли. Удивительная [Амелия Ваттенбергер](http://wattenberger.com/) присоединилась к команде в качестве гостя, как эксперт по визуализации данных, чтобы привнести новый взгляд на наши данные. Вы можете ознакомиться с ее работой в разделе **Обзор**.
 
-We also borrowed a couple new visualisations from the State of JS's sister survey, the [State of CSS](https://2019.stateofcss.com/). We recommend checking it out if you haven’t done so yet!
+Мы также позаимствовали парочку новых визуализаций из [State of CSS](https://2019.stateofcss.com/). Рекомендуем ознакомиться, если вы этого еще не сделали!
 
-### Team
+### Команда
 
-The State of JavaScript Survey is created and maintained by:
+State of JavaScript создается и поддерживается:
 
-- [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
-- [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
+- [Сашей Грайф](https://twitter.com/sachagreif) (мной!): Дизайн, текст, код
+- [Рафаэлем Бенитт](https://twitter.com/benitteraphael): Анализ данных, визуализация данных
 
-Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
+Обязательно ознакомьтесь с моим React/GraphQL JavaScript фреймворком — [Vulcan.js](http://vulcanjs.org), а также с React библиотекой Рафаэля для визуализации данных — [nivo](https://nivo.rocks).
 
-### Download Our Data
+### Наши Данные
 
-You can [download the raw JSON data for this survey](https://www.kaggle.com/sachag/state-of-js-2019). Let us know if you end up making your own data visualizations!
+Вы можете [загрузить исходный JSON с данными для этого опроса](https://www.kaggle.com/sachag/state-of-js-2019). Дайте нам знать, если вы сделаете свои визуализации.
 
-### Completion Percentages
+### Процент Завершения
 
-Because all survey questions could be skipped, some questions ended up with fewer answers than others. So we've added a small pie chart indicator to each question to let you know which proportion of total respondents answered it.  
+Поскольку вопросы в опросе можно было пропускать, некоторые из них набрали меньше ответов, чем другие. Так что мы добавили небольшой индикатор в виде круговой диаграммы для каждого вопроса, чтобы было понятно, какая доля респондентов ответила на него.
 
-### Credits & Stuff
+### Благодарности & Всякое
 
-The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofjs.com)
+Сайт использует шрифт IBM Plex Mono. Вопросы? Фидбек? [Свяжитесь с нами!](mailto:hello@stateofjs.com)
 
-And now, let's see what JavaScript has been up to this year!
+А теперь давайте посмотрим, каким был JavaScript в этом году!
 
-<span class="conclusion__byline">– Sacha and Raphaël</span>
+<span class="conclusion__byline">– Саша и Рафаэль</span>

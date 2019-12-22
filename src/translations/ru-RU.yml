@@ -840,7 +840,7 @@ translations:
 
     # pages
     - key: page.introduction
-      t: Introduction
+      t: Введение
     - key: page.tshirt
       t: T-shirt
     - key: page.demographics
