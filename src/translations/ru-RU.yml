@@ -684,67 +684,67 @@ translations:
     ###########################################################################
 
     - key: block.title.easy-to-learn
-      t: Learning Curve
+      t: Кривая Обучения
     - key: block.description.easy-to-learn
-      t: JavaScript is easy to learn”
+      t: “JavaScript легко выучить”
 
     - key: block.title.js_moving_in_right_direction
-      t: Direction
+      t: Направление
     - key: block.description.js_moving_in_right_direction
-      t: “JavaScript is moving in the right direction”
+      t: “JavaScript двигается в правильном направлении”
 
     - key: block.title.building_js_apps_overly_complex
-      t: Complexity
+      t: Сложность
     - key: block.description.building_js_apps_overly_complex
-      t: “Building JavaScript apps is overly complex right now”
+      t: “Писать приложения на JavaScript сейчас слишком сложно”
 
     - key: block.title.js_over_used_online
-      t: Usage
+      t: Использование
     - key: block.description.js_over_used_online
-      t: “JavaScript is over-used online”
+      t: “JavaScript используется слишком часто”
 
     - key: block.title.enjoy_building_js_apps
-      t: Enjoyment
+      t: Удовольствие
     - key: block.description.enjoy_building_js_apps
-      t: “I enjoy building JavaScript apps”
+      t: “Мне нравится писать приложения на JavaScript”
 
     - key: block.title.would_like_js_to_be_main_lang
-      t: Main Language
+      t: Основной Язык
     - key: block.description.would_like_js_to_be_main_lang
-      t: “I would like JavaScript to be my main programming language”
+      t: “Я бы хотел, чтобы JavaScript был моим основным языком программирования”
 
     - key: block.title.js_ecosystem_changing_to_fast
-      t: Rate of Change
+      t: Скорость Изменения
     - key: block.description.js_ecosystem_changing_to_fast
-      t: “The JavaScript ecosystem is changing too fast”
+      t: “Экосистема JavaScript меняется слишком быстро”
 
     - key: block.title.missing-features
-      t: Missing Features
+      t: Отсутствующие Фичи
     - key: block.description.missing-features
-      t: What do developers feel is currently missing from JavaScript?
+      t: Что, по мнению разработчиков, в настоящее время отсутствует в JavaScript?
 
       # opinion scale
     - key: opinions.0.short
-      t: Strongly Disagree
+      t: Полностью не согласен
     - key: opinions.1.short
-      t: Disagree
+      t: Не согласен
     - key: opinions.2.short
-      t: Neutral
+      t: Трудно сказать
     - key: opinions.3.short
-      t: Agree
+      t: Согласен
     - key: opinions.4.short
-      t: Strongly Agree
+      t: Полностью согласен
 
     - key: opinions.0.long
-      t: Strongly Disagree
+      t: Полностью не согласен
     - key: opinions.1.long
-      t: Disagree
+      t: Не согласен
     - key: opinions.2.long
-      t: Neutral
+      t: Трудно сказать
     - key: opinions.3.long
-      t: Agree
+      t: Согласен
     - key: opinions.4.long
-      t: Strongly Agree
+      t: Полностью согласен
 
     ###########################################################################
     # Awards
@@ -894,7 +894,7 @@ translations:
     - key: page.resources
       t: Resources
     - key: page.opinions
-      t: Opinions
+      t: Мнения
     - key: page.awards
       t: Awards
     - key: page.conclusion
