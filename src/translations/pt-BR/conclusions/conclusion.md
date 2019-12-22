@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: conclusion
-locale: en-US
+locale: pt-BR
 ---
 
 You know how you sometimes start tweaking a few lines of code here and there, then realize a couple functions could use some refactoring, and then one things leading to another you find yourself a few days later in the process of setting up a brand new stack complete with a database and GraphQL API?

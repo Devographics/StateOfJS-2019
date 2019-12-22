@@ -1,20 +1,20 @@
-locale: en-US
+locale: pt-BR
 translations:
     ###########################################################################
     # Tshirt
     ###########################################################################
 
     - key: tshirt.about
-      t: About the T-shirt
+      t: Sobre a camiseta
     - key: tshirt.description
       t: >
           The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
           with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
 
     - key: tshirt.getit
-      t: Get It
+      t: Adquira já!
     - key: tshirt.price
-      t: $${price} + shipping
+      t: $${price} + despesas de envio
 
     ###########################################################################
     # Demographics

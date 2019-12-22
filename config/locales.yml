@@ -1,3 +1,7 @@
 - locale: en-US
   path: default
   label: English
+
+- locale: pt-BR
+  path: pt
+  label: Português

@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   data_structures
-locale: en-US
+locale: pt-BR
 ---
 
 How you store and manipulate data.

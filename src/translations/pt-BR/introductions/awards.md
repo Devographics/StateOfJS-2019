@@ -1,8 +1,7 @@
 ---
 type: introduction
 page: awards
-locale: en-US
+locale: pt-BR
 ---
 
-The world's most prestigious (and possibly only) JavaScript awards are back. Before you click, try guessing which technology took gold in each category!
-
+A premiação mais prestigiada do mundo (e possivelmente a única) em relação ao JavaScript está de volta. Antes de seguir adiante, que tal tentar adivinhar quem levou o ouro em cada categoria?

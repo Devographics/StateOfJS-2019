@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   javascript_flavors
-locale: en-US
+locale: pt-BR
 ---
 
 Languages that compile to JavaScript

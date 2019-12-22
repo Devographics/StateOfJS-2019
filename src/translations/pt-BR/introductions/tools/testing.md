@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   testing
-locale: en-US
+locale: pt-BR
 ---
 
 Tools for testing your code.
