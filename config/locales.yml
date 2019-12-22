@@ -1,3 +1,7 @@
 - locale: en-US
   path: default
   label: English
+
+- locale: ru-RU
+  path: ru
+  label: Русский
