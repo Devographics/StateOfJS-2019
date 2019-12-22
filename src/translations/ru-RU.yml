@@ -156,7 +156,7 @@ translations:
     - key: companySize.more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
-      t: Количество сотрудников
+      t: Количество Сотрудников
 
     # sources
     - key: sources.other_unknown
