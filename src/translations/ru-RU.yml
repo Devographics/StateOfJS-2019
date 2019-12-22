@@ -277,34 +277,33 @@ translations:
 
     # other
     - key: block.title.country
-      t: Participation by Country
+      t: Участники в разбивке по странам
     - key: block.description.country
-      t: Which proportion of survey respondents came from each country.
+      t: Распределение респондентов по странам.
     - key: block.title.salary
-      t: Salary
+      t: Зарплата
     - key: block.description.salary
-      t: Yearly salary in USD.
+      t: Годовая зарплата в USD.
     - key: block.title.workExperience
-      t: Years of Experience
+      t: Опыт
     - key: block.description.workExperience
-      t: How long you've been writing JavaScript.
+      t: Как долго вы писали на JavaScript.
     - key: block.title.companySize
-      t: Company Size
+      t: Размер компании
     - key: block.description.companySize
-      t: Company size breakdown.
+      t: Размер компании.
     - key: block.title.source
-      t: Source
+      t: Источник
     - key: block.description.source
       t: >
-          How participants found out about the survey (aggregation of self-reported answers and
-          referrer tracking).
+          Как участники узнали об опросе (aggregation of self-reported answers and referrer tracking).
 
-          **State of JS** indicates subscribers from our previous surveys, while **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
+          **State of JS** обозначает подписчиков из наших прошлых опросов, в то время как **Word of Mouth** включает в себя Slack, друзей, коллег, и т.д.
 
     - key: block.title.jobTitle
-      t: Job Title
+      t: Должность
     - key: block.description.jobTitle
-      t: How do you introduce yourself at parties?
+      t: Как вы представляетесь на тусовках?
 
     ###########################################################################
     # Features
