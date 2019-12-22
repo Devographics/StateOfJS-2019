@@ -108,59 +108,59 @@ translations:
 
     # company size
     - key: companySize.1.long
-      t: One employee
+      t: Один сотрудник
     - key: companySize.1.short
-      t: one
+      t: один
     - key: companySize.1.shorter
       t: '1'
     - key: companySize.1_5.long
-      t: 1 to 5 employees
+      t: От 1 до 5 сотрудников
     - key: companySize.1_5.short
       t: 1~5
     - key: companySize.1_5.shorter
       t: 1~5
     - key: companySize.5_10.long
-      t: 5 to 10 employees
+      t: От 5 до 10 сотрудников
     - key: companySize.5_10.short
       t: 5~10
     - key: companySize.5_10.shorter
       t: 5~10
     - key: companySize.10_20.long
-      t: 10 to 20 employees
+      t: От 10 до 20 сотрудников
     - key: companySize.10_20.short
       t: 10~20
     - key: companySize.10_20.shorter
       t: 10~20
     - key: companySize.20_50.long
-      t: 20 to 50 employees
+      t: От 20 до 50 сотрудников
     - key: companySize.20_50.short
       t: 20~50
     - key: companySize.20_50.shorter
       t: 20~50
     - key: companySize.50_100.long
-      t: 50 to 100 employees
+      t: От 50 до 100 сотрудников
     - key: companySize.50_100.short
       t: 50~100
     - key: companySize.50_100.shorter
       t: 50~100
     - key: companySize.100_1000.long
-      t: 100 to 1000 employees
+      t: От 100 до 1000 сотрудников
     - key: companySize.100_1000.short
       t: 100~1000
     - key: companySize.100_1000.shorter
       t: 100~1000
     - key: companySize.more_than_1000.long
-      t: More than 1000 employees
+      t: Более 1000 сотрудников
     - key: companySize.more_than_1000.short
       t: 1000+
     - key: companySize.more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
-      t: Number of Employees
+      t: Количество сотрудников
 
     # sources
     - key: sources.other_unknown
-      t: Other/Unknown
+      t: Другое/Неизвестно
 
     # css proficiency
 
