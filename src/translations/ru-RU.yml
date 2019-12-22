@@ -22,9 +22,9 @@ translations:
 
     # salary ranges
     - key: salary.work_for_free.long
-      t: I work for free
+      t: Я работаю бесплатно
     - key: salary.work_for_free.short
-      t: work for free
+      t: работаю бесплатно
     - key: salary.work_for_free.shorter
       t: '0'
     - key: salary.0_10.long
@@ -64,7 +64,7 @@ translations:
     - key: salary.more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
-      t: Salary Range (USD)
+      t: Вилка Зарплат (USD)
 
     # years of experience
     - key: workExperience.less_than_1.long
