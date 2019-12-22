@@ -68,43 +68,43 @@ translations:
 
     # years of experience
     - key: workExperience.less_than_1.long
-      t: Less than one year
+      t: Менее одного года
     - key: workExperience.less_than_1.short
-      t: '<1 year'
+      t: '<1 года'
     - key: workExperience.less_than_1.shorter
       t: '<1'
     - key: workExperience.1_2.long
-      t: 1 to 2 years
+      t: От 1 до 2 лет
     - key: workExperience.1_2.short
-      t: 1~2 years
+      t: 1~2 года
     - key: workExperience.1_2.shorter
       t: 1~2
     - key: workExperience.2_5.long
-      t: 2 to 5 years
+      t: От 2 до 5 лет
     - key: workExperience.2_5.short
-      t: 2~5 years
+      t: 2~5 лет
     - key: workExperience.2_5.shorter
       t: 2~5
     - key: workExperience.5_10.long
-      t: 5 to 10 years
+      t: От 5 до 10 лет
     - key: workExperience.5_10.short
-      t: 5~10 years
+      t: 5~10 лет
     - key: workExperience.5_10.shorter
       t: 5~10
     - key: workExperience.10_20.long
-      t: 10 to 20 years
+      t: От 10 до 20 лет
     - key: workExperience.10_20.short
-      t: 10~20 years
+      t: 10~20 лет
     - key: workExperience.10_20.shorter
       t: 10~20
     - key: workExperience.more_than_20.long
-      t: More than 20 years
+      t: Более 20 лет
     - key: workExperience.more_than_20.short
-      t: '>20 years'
+      t: '>20 лет'
     - key: workExperience.more_than_20.shorter
       t: '>20'
     - key: workExperience.axis_legend
-      t: Years of Experience
+      t: Опыт
 
     # company size
     - key: companySize.1.long
