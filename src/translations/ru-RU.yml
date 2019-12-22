@@ -255,25 +255,25 @@ translations:
 
     # gender
     - key: block.title.gender
-      t: Gender
+      t: Пол
     - key: block.description.gender
-      t: Respondents gender.
+      t: Пол респондентов.
     - key: gender.female
-      t: Female
+      t: Женский
     - key: gender.female.long
-      t: Female
+      t: Женский
     - key: gender.male
-      t: Male
+      t: Мужской
     - key: gender.male.long
-      t: Male
+      t: Мужской
     - key: gender.non_binary
-      t: Non-Binary/Third Gender
+      t: Небинарный/Другой
     - key: gender.non_binary.long
-      t: Non-Binary/Third Gender
+      t: Небинарный/Другой
     - key: gender.prefer_not_to_say
-      t: Prefer not to say
+      t: Предпочли не говорить
     - key: gender.prefer_not_to_say.long
-      t: Prefer not to say
+      t: Предпочли не говорить
 
     # other
     - key: block.title.country
