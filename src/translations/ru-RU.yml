@@ -895,7 +895,7 @@ translations:
     - key: page.opinions
       t: Мнения
     - key: page.awards
-      t: Awards
+      t: Награды
     - key: page.conclusion
       t: Conclusion
     - key: page.support
