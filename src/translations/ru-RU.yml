@@ -899,7 +899,7 @@ translations:
     - key: page.conclusion
       t: Conclusion
     - key: page.support
-      t: Support Us
+      t: Поддержите Нас
 
     # sharing
     - key: share.share
@@ -979,15 +979,15 @@ translations:
 
     # partners
     - key: partners.our_partners
-      t: Our Partners
+      t: Наши Партнеры
     - key: partners.become_partner
-      t: Help support the survey
+      t: Станьте партнером
     - key: partners.thanks
-      t: Thanks to our partners for supporting us!
+      t: Спасибо нашим партнерам за поддержку!
     - key: partners.learn_more
-      t: Learn more.
+      t: Узнать больше.
     - key: block.title.recommendedResources
-      t: Recommended Resources
+      t: Рекомендуемые Ресурсы
 
     # charts
     - key: block.title.usage-ratio

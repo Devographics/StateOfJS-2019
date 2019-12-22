@@ -1,11 +1,9 @@
 ---
 type: introduction
 page: support
-locale: en-US
+locale: ru-RU
 ---
-The State of JavaScript survey is a volunteer project, but in order to make the
-project sustainable we’re always looking for partners who can help support us,
-either financially or by helping us spread the word.
 
-If you think you could help in any way, please don’t hesitate to
-<a href="mailto:hello@stateofjs.com">get in touch</a>!
+State of JavaScript — это волонтерский проект, но мы всегда ищем партнеров, которые могут оказать нам финансовую поддержку или помочь распространить информацию.
+
+Если вы думаете, что могли бы помочь, то, пожалуйста, не стесняйтесь <a href="mailto:hello@stateofjs.com">связаться с нами</a>!
