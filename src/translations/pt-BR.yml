@@ -8,13 +8,13 @@ translations:
       t: Sobre a camiseta
     - key: tshirt.description
       t: >
-          The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
-          with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
+          O design é impresso numa [camiseta unisex Bella+Canvas 3001 premium cor preta](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (masculina)
+          com um ajuste semi-fino; ou camiseta cinza escura modelo [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (feminina). A modelagem utiliza tamanhos americanos.
 
     - key: tshirt.getit
-      t: Adquira já!
+      t: Adquira já a sua!
     - key: tshirt.price
-      t: $${price} + despesas de envio
+      t: $${price} + frete
 
     ###########################################################################
     # Demographics
