@@ -840,95 +840,95 @@ translations:
 
     # pages
     - key: page.introduction
-      t: Introduction
+      t: Introdução
     - key: page.tshirt
-      t: T-shirt
+      t: Camiseta
     - key: page.demographics
-      t: Demographics
+      t: Demografia
     - key: page.overview
-      t: Overview
+      t: Visão Geral
     - key: page.features
-      t: Features
+      t: Funcionalidades
     - key: page.other_features
-      t: Other Features
+      t: Outras Funcionalidades
     - key: page.javascript_flavors
       t: JavaScript Flavors
     - key: page.javascript_flavors.short
       t: JavaScript Flavors
     - key: page.javascript_flavors_others
-      t: Other Flavors
+      t: Outros Flavors
     - key: page.front_end_frameworks
-      t: Front End Frameworks
+      t: Frameworks Front End
     - key: page.front_end_frameworks.short
       t: Front End
     - key: page.front_end_frameworks_others
-      t: Other Frameworks
+      t: Outros Frameworks
     - key: page.data_layer
-      t: Data Layer
+      t: Camada de Dados
     - key: page.data_layer.short
-      t: Data Layer
+      t: Camada de Dados
     - key: page.data_layer_others
-      t: Other Data Layer Tools
+      t: Outras Ferramentas da Camada de Dados
     - key: page.back_end_frameworks
-      t: Back End Frameworks
+      t: Frameworks Back End
     - key: page.back_end_frameworks.short
       t: Back End
     - key: page.back_end_frameworks_others
-      t: Other Frameworks
+      t: Outros Frameworks
     - key: page.testing
-      t: Testing
+      t: Testes
     - key: page.testing.short
-      t: Testing
+      t: Testes
     - key: page.testing_others
-      t: Other Tools
+      t: Outras Ferramentas
     - key: page.mobile_desktop
       t: Mobile & Desktop
     - key: page.mobile_desktop.short
       t: Mobile & Desktop
     - key: page.mobile_desktop_others
-      t: Other Tools
+      t: Outras Ferramentas
     - key: page.other_tools
-      t: Other Tools
+      t: Outras Ferramentas
     - key: page.environments
-      t: Environments
+      t: Ambientes
     - key: page.resources
-      t: Resources
+      t: Recursos
     - key: page.opinions
-      t: Opinions
+      t: Opiniões
     - key: page.awards
-      t: Awards
+      t: Premiação
     - key: page.conclusion
-      t: Conclusion
+      t: Conclusão
     - key: page.support
-      t: Support Us
+      t: Nos Apoie
 
     # sharing
     - key: share.share
-      t: Share
+      t: Compartilhar
     - key: share.site.title
-      t: Discover the StateOf JavaScript 2019 results
+      t: Descubra os resultados da StateOf JavaScript 2019
     - key: share.site.twitter_text
-      t: 'Discover the State Of JavaScript 2019 results ${link} #StateOfJS'
+      t: 'Descubra os resultados Discover the State Of JavaScript 2019 results ${link} #StateOfJS'
     - key: share.site.subject
-      t: State Of JavaScript Survey Results
+      t: Resultados da pesquisa State Of JavaScript
     - key: share.site.body
-      t: 'Here are some interesting JavaScript survey results: ${link}'
+      t: 'Veja alguns resultados interessantes da pesquisa State of JavaScript: ${link}'
     - key: share.block.twitter_text
       t: '#StateOfJS 2019: ${title} ${link}'
     - key: share.block.subject
-      t: State Of JavaScript Survey Results
+      t: Resultados da pesquisa State Of JavaScript
     - key: share.block.body
-      t: 'Here are some interesting JavaScript survey results (${title}): ${link}'
+      t: 'Veja alguns resultados interessantes da pesquisa State of JavaScript (${title}): ${link}'
     - key: share.twitter
-      t: Share on Twitter
+      t: Compartilhar no Twitter
     - key: share.facebook
-      t: Share on Facebook
+      t: Compartilhar no Facebook
     - key: share.linkedin
-      t: Share on LinkedIn
+      t: Compartilhar no LinkedIn
     - key: share.email
-      t: Share by email
+      t: Compartilhar por email
     - key: share.image
-      t: Get image
+      t: Salvar imagem
 
     # export
     - key: export.export
@@ -1030,4 +1030,4 @@ translations:
 
     # other
     - key: bio.guest_visualizer
-      t: Guest Expert
+      t: Expert convidada
