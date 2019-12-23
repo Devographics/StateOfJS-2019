@@ -1,3 +1,6 @@
 - locale: en-US
   path: default
   label: English
+- locale: ko-KR
+  path: ko
+  label: 한국어

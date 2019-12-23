@@ -1,0 +1,1033 @@
+locale: ko-KR
+translations:
+    ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: About the T-shirt
+    - key: tshirt.description
+      t: >
+          The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
+          with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
+
+    - key: tshirt.getit
+      t: Get It
+    - key: tshirt.price
+      t: $${price} + shipping
+
+    ###########################################################################
+    # Demographics
+    ###########################################################################
+
+    # salary ranges
+    - key: salary.work_for_free.long
+      t: I work for free
+    - key: salary.work_for_free.short
+      t: work for free
+    - key: salary.work_for_free.shorter
+      t: '0'
+    - key: salary.0_10.long
+      t: $0k-$10k
+    - key: salary.0_10.short
+      t: $0k-$10k
+    - key: salary.0_10.shorter
+      t: 0~10k
+    - key: salary.10_30.long
+      t: $10k-$30k
+    - key: salary.10_30.short
+      t: $10k-$30k
+    - key: salary.10_30.shorter
+      t: 10~30k
+    - key: salary.30_50.long
+      t: $30k-$50k
+    - key: salary.30_50.short
+      t: $30k-$50k
+    - key: salary.30_50.shorter
+      t: 30~50k
+    - key: salary.50_100.long
+      t: $50k-$100k
+    - key: salary.50_100.short
+      t: $50k-$100k
+    - key: salary.50_100.shorter
+      t: 50~100k
+    - key: salary.100_200.long
+      t: $100k-$200k
+    - key: salary.100_200.short
+      t: $100k-$200k
+    - key: salary.100_200.shorter
+      t: 100~200k
+    - key: salary.more_than_200.long
+      t: more than $200k
+    - key: salary.more_than_200.short
+      t: $200k+
+    - key: salary.more_than_200.shorter
+      t: '>200k'
+    - key: salary.axis_legend
+      t: Salary Range (USD)
+
+    # years of experience
+    - key: workExperience.less_than_1.long
+      t: Less than one year
+    - key: workExperience.less_than_1.short
+      t: '<1 year'
+    - key: workExperience.less_than_1.shorter
+      t: '<1'
+    - key: workExperience.1_2.long
+      t: 1 to 2 years
+    - key: workExperience.1_2.short
+      t: 1~2 years
+    - key: workExperience.1_2.shorter
+      t: 1~2
+    - key: workExperience.2_5.long
+      t: 2 to 5 years
+    - key: workExperience.2_5.short
+      t: 2~5 years
+    - key: workExperience.2_5.shorter
+      t: 2~5
+    - key: workExperience.5_10.long
+      t: 5 to 10 years
+    - key: workExperience.5_10.short
+      t: 5~10 years
+    - key: workExperience.5_10.shorter
+      t: 5~10
+    - key: workExperience.10_20.long
+      t: 10 to 20 years
+    - key: workExperience.10_20.short
+      t: 10~20 years
+    - key: workExperience.10_20.shorter
+      t: 10~20
+    - key: workExperience.more_than_20.long
+      t: More than 20 years
+    - key: workExperience.more_than_20.short
+      t: '>20 years'
+    - key: workExperience.more_than_20.shorter
+      t: '>20'
+    - key: workExperience.axis_legend
+      t: Years of Experience
+
+    # company size
+    - key: companySize.1.long
+      t: One employee
+    - key: companySize.1.short
+      t: one
+    - key: companySize.1.shorter
+      t: '1'
+    - key: companySize.1_5.long
+      t: 1 to 5 employees
+    - key: companySize.1_5.short
+      t: 1~5
+    - key: companySize.1_5.shorter
+      t: 1~5
+    - key: companySize.5_10.long
+      t: 5 to 10 employees
+    - key: companySize.5_10.short
+      t: 5~10
+    - key: companySize.5_10.shorter
+      t: 5~10
+    - key: companySize.10_20.long
+      t: 10 to 20 employees
+    - key: companySize.10_20.short
+      t: 10~20
+    - key: companySize.10_20.shorter
+      t: 10~20
+    - key: companySize.20_50.long
+      t: 20 to 50 employees
+    - key: companySize.20_50.short
+      t: 20~50
+    - key: companySize.20_50.shorter
+      t: 20~50
+    - key: companySize.50_100.long
+      t: 50 to 100 employees
+    - key: companySize.50_100.short
+      t: 50~100
+    - key: companySize.50_100.shorter
+      t: 50~100
+    - key: companySize.100_1000.long
+      t: 100 to 1000 employees
+    - key: companySize.100_1000.short
+      t: 100~1000
+    - key: companySize.100_1000.shorter
+      t: 100~1000
+    - key: companySize.more_than_1000.long
+      t: More than 1000 employees
+    - key: companySize.more_than_1000.short
+      t: 1000+
+    - key: companySize.more_than_1000.shorter
+      t: 1000+
+    - key: companySize.axis_legend
+      t: Number of Employees
+
+    # sources
+    - key: sources.other_unknown
+      t: Other/Unknown
+
+    # css proficiency
+
+    - key: block.title.cssProficiency
+      t: CSS Proficiency
+    - key: block.description.cssProficiency
+      t: How proficient are you at CSS?
+    - key: cssProficiency.axis_legend
+      t: CSS Proficiency
+    - key: cssProficiency.0.short
+      t: None
+    - key: cssProficiency.0.long
+      t: 'Virtually no knowledge of CSS'
+    - key: cssProficiency.1.short
+      t: Beginner
+    - key: cssProficiency.1.long
+      t: 'Using CSS frameworks and tweaking existing styles'
+    - key: cssProficiency.2.short
+      t: Intermediate
+    - key: cssProficiency.2.long
+      t: 'Knowing specificity rules, being able to create layouts'
+    - key: cssProficiency.3.short
+      t: Advanced
+    - key: cssProficiency.3.long
+      t: 'Mastering animations, interactions, transitions, etc.'
+    - key: cssProficiency.4.short
+      t: Expert
+    - key: cssProficiency.4.long
+      t: 'Being able to style an entire front-end from scratch following a consistent methodology'
+
+    # backend proficiency
+    - key: block.title.backendProficiency
+      t: Back-end Proficiency
+    - key: block.description.backendProficiency
+      t: How proficient are you at back-end development?
+    - key: backendProficiency.axis_legend
+      t: Back-End Proficiency
+    - key: backendProficiency.0.short
+      t: None
+    - key: backendProficiency.0.long
+      t: 'Not able to handle any back-end work'
+    - key: backendProficiency.1.short
+      t: Beginner
+    - key: backendProficiency.1.long
+      t: 'Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+    - key: backendProficiency.2.short
+      t: Intermediate
+    - key: backendProficiency.2.long
+      t: 'Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)'
+    - key: backendProficiency.3.short
+      t: Advanced
+    - key: backendProficiency.3.long
+      t: 'Setting up an entire back-end from scratch (Go, Node, etc.)'
+    - key: backendProficiency.4.short
+      t: Expert
+    - key: backendProficiency.4.long
+      t: 'Able to handle complex multi-server or microservices architectures'
+
+    # job title
+    - key: jobTitle.front_end_developer.short
+      t: Front End Developer
+    - key: jobTitle.front_end_developer.long
+      t: Front End Developer/Engineer
+    - key: jobTitle.back_end_developer.short
+      t: Back End Developer
+    - key: jobTitle.back_end_developer.long
+      t: Back End Developer/Engineer
+    - key: jobTitle.full_stack_developer.short
+      t: Full Stack Developer
+    - key: jobTitle.full_stack_developer.long
+      t: Full Stack Developer/Engineer
+    - key: jobTitle.web_developer.short
+      t: Web Developer
+    - key: jobTitle.web_developer.long
+      t: Web Developer
+    - key: jobTitle.web_designer.short
+      t: Web Designer
+    - key: jobTitle.web_designer.long
+      t: Web Designer
+    - key: jobTitle.ux_designer.short
+      t: UX Designer
+    - key: jobTitle.ux_designer.long
+      t: UX Designer
+    - key: jobTitle.ui_designer.short
+      t: UI Designer
+    - key: jobTitle.ui_designer.long
+      t: UI Designer
+    - key: jobTitle.back_end_dev.short
+      t: Back-end Developer
+    - key: jobTitle.back_end_dev.long
+      t: Back-end Developer/Engineer
+
+    # gender
+    - key: block.title.gender
+      t: Gender
+    - key: block.description.gender
+      t: Respondents gender.
+    - key: gender.female
+      t: Female
+    - key: gender.female.long
+      t: Female
+    - key: gender.male
+      t: Male
+    - key: gender.male.long
+      t: Male
+    - key: gender.non_binary
+      t: Non-Binary/Third Gender
+    - key: gender.non_binary.long
+      t: Non-Binary/Third Gender
+    - key: gender.prefer_not_to_say
+      t: Prefer not to say
+    - key: gender.prefer_not_to_say.long
+      t: Prefer not to say
+
+    # other
+    - key: block.title.country
+      t: Participation by Country
+    - key: block.description.country
+      t: Which proportion of survey respondents came from each country.
+    - key: block.title.salary
+      t: Salary
+    - key: block.description.salary
+      t: Yearly salary in USD.
+    - key: block.title.workExperience
+      t: Years of Experience
+    - key: block.description.workExperience
+      t: How long you've been writing JavaScript.
+    - key: block.title.companySize
+      t: Company Size
+    - key: block.description.companySize
+      t: Company size breakdown.
+    - key: block.title.source
+      t: Source
+    - key: block.description.source
+      t: >
+          How participants found out about the survey (aggregation of self-reported answers and
+          referrer tracking).
+
+          **State of JS** indicates subscribers from our previous surveys, while **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
+
+    - key: block.title.jobTitle
+      t: Job Title
+    - key: block.description.jobTitle
+      t: How do you introduce yourself at parties?
+
+    ###########################################################################
+    # Features
+    ###########################################################################
+
+    # General 
+
+    - key: page.syntax
+      t: Syntax
+    - key: page.language
+      t: Language
+    - key: page.data_structures
+      t: Data Structures
+    - key: page.browser_apis
+      t: Browser APIs
+
+    - key: block.description.decorators
+      t: >
+        In its simplest form, a decorator is simply a way of 
+        wrapping one piece of code with another — literally “decorating” it. 
+
+    - key: feature.learn_more
+      t: Learn More (MDN)
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: CanIUse
+    - key: feature.specification_link
+      t: W3C Specification
+
+    - key: featureExperienceSimplified.used_it.long
+      t: Have used it
+    - key: featureExperienceSimplified.know_it.long
+      t: Know about it
+    - key: features.usage.ratio
+      t: Usage Ratio
+
+    - key: featureExperience.used_it
+      t: Have used it
+    - key: featureExperience.know_not_used
+      t: Know what it is, but haven't used it
+    - key: featureExperience.never_heard_not_sure
+      t: Never heard of it/Not sure what it is
+
+    - key: featureExperience.used_it.long
+      t: Have used it
+    - key: featureExperience.know_not_used.long
+      t: Know what it is, but haven't used it
+    - key: featureExperience.never_heard_not_sure.long
+      t: Never heard of it/Not sure what it is
+
+    # Feature Overview
+    - key: block.title.featuresOverview
+      t: Usage Overview
+    - key: block.description.featuresOverview
+      t: >
+          This chart presents the various adoption rates for all features, grouped by category.
+
+
+          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
+
+
+          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents.
+
+    # Features Section Overview
+    - key: block.title.featuresSectionOverview
+      t: Usage Overview
+    - key: block.description.featuresSectionOverview
+      t: >
+          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
+          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
+
+
+          Hover on each node to view detailed data along with an <span class="text-blackred text-bold">overlay</span> representing the total number of survey respondents.
+
+    - key: block.title.featuresExperienceHeatmap
+      t: Usage by Years Of Experience
+    - key: block.description.featuresExperienceHeatmap
+      t: |
+          The “overall” column shows overall usage for each feature (respondents who selected “have used it”),
+          while the following columns show the usage ratio for each “years of experience” bracket.
+
+          A brighter <span class="text-teal text-bold">teal</span> background indicates
+          a higher-than-overall-average ratio for a given bracket.
+
+    ###########################################################################
+    # Tools & Methodologies
+    ###########################################################################
+
+    # general
+    - key: block.tool.links
+      t: Links
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.github_stars
+      t: stars
+    - key: block.tool.homepage_link
+      t: Homepage
+    - key: block.tool.npm_link
+      t: NPM
+
+    - key: block.title.other-methodologies
+      t: Other Methodologies
+
+    - key: block.title.companySize_heatmap
+      t: Usage by Company Size
+    - key: block.description.companySize_heatmap
+      t: |
+
+          For each technology, how usage is spread among respondents who picked different
+          company size ranges.
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+
+    - key: block.title.workExperience_heatmap
+      t: Usage by Years Of Experience
+    - key: block.description.workExperience_heatmap
+      t: |
+
+          For each technology, how usage is spread among respondents who picked different
+          experience ranges. Note that the experience in question here is general JavaScript experience, not
+          experience with a specific technology. 
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    - key: block.title.salary_heatmap
+      t: Usage by Salary Range
+    - key: block.description.salary_heatmap
+      t: |
+
+          For each technology, how usage is spread among respondents who picked different
+          salary ranges.
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “yearly salary” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    # rankings/bump chart
+    - key: block.title.toolExperienceRanking
+      t: Rankings
+    - key: block.description.toolExperienceRanking
+      t: >
+          Awareness, interest, and satisfaction ratio rankings.
+    - key: opinions.legends.awareness_ratio
+      t: Awareness
+    - key: opinions.legends.interest_ratio
+      t: Interest
+    - key: opinions.legends.satisfaction_ratio
+      t: Satisfaction
+
+    # overview
+    - key: block.title.toolsSectionOverview
+      t: Category Overview
+    - key: block.description.toolsSectionOverview
+      t: >
+          Overview of opinions on the technologies surveyed. Darker segments represent positive opinions,
+          while lighter segments correspond to negative sentiment.
+
+    # Arrows (Movement over time)
+    - key: block.title.toolsArrow
+      t: Changes Over Time
+    # - key: block.description.toolsArrow
+    #   t: >
+    #       How has the ecosystem changed over three years?
+    - key: block.description.toolsArrow
+      t: >
+          Each line goes from 2016 to 2019. A higher point means a technology has been used by more people,
+          and a point further to the right means more users want to learn it; or have used it and would use it again.
+
+    - key: amelia.bio
+      t: >
+        Amelia Wattenberger is a frontend developer and designer focused on data visualization.
+        She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
+        a guide to creating your own data visualizations,
+        and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger)
+        and [her site](https://wattenberger.com/).
+
+    # quadrant/scatterplot chart
+    - key: block.title.scatterplotOverview
+      t: Satisfaction vs Usage
+    - key: block.description.scatterplotOverview.satisfaction
+      t: >
+          This chart shows each technology’s **satisfaction ratio** over its total **user count**.
+          It can be divided into four quadrants:
+
+          - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
+
+          - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
+
+          - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
+
+          - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+    - key: block.description.scatterplotOverview.interest
+      t: >
+          This chart shows each technology’s **interest ratio** over its total **user count** (as defined by respondents who are aware of a technology but *haven't* used it yet).
+
+          (Note that low user numbers can be due to either an unknown technology; or a technology with a lot of respondents already using it.)
+
+    - key: quadrants.assess
+      t: Assess
+    - key: quadrants.adopt
+      t: Adopt
+    - key: quadrants.avoid
+      t: Avoid
+    - key: quadrants.analyze
+      t: Analyze
+
+    # happiness
+    - key: block.title.happiness
+      t: Overall Happiness
+    - key: block.description.happiness
+      t: |
+          On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
+
+    # experience
+    - key: block.title.toolExperience
+      t: ${name} Experience Over Time
+    - key: block.description.toolExperience
+      t: Respondent's experience with ${name}.
+
+    - key: toolExperience.never_heard.long
+      t: I've never heard of it
+    - key: toolExperience.never_heard.short
+      t: Never heard of it
+    - key: toolExperience.never_heard.extrashort
+      t: Never heard
+
+    - key: toolExperience.not_interested.long
+      t: I've HEARD of it, and am NOT interested
+    - key: toolExperience.not_interested.short
+      t: Heard of it, not interested
+    - key: toolExperience.not_interested.extrashort
+      t: Not interested
+
+    - key: toolExperience.interested.long
+      t: I've HEARD of it, and WOULD like to learn it
+    - key: toolExperience.interested.short
+      t: Heard of it, would like to learn
+    - key: toolExperience.interested.extrashort
+      t: Interested
+
+    - key: toolExperience.would_use.long
+      t: I've USED it before, and WOULD use it again
+    - key: toolExperience.would_use.short
+      t: Used it, would use again
+    - key: toolExperience.would_use.extrashort
+      t: Would use again
+
+    - key: toolExperience.would_not_use.long
+      t: I've USED it before, and would NOT use it again
+    - key: toolExperience.would_not_use.short
+      t: Used it, would not use again
+    - key: toolExperience.would_not_use.extrashort
+      t: Would not use
+
+
+    - key: toolExperience.negative_opinion.extrashort
+      t: Negative opinions
+    - key: toolExperience.positive_opinion.extrashort
+      t: Positive opinions
+    - key: toolExperience.have_not_used.extrashort
+      t: Have not used
+    - key: toolExperience.have_used.extrashort
+      t: Have used
+
+    - key: toolExperience.total_respondents.long
+      t: Total Respondents
+    - key: toolExperience.total_respondents.short
+      t: Total Respondents
+    - key: toolExperience.total_respondents.extrashort
+      t: Total Respondents
+
+    # other category tools
+    - key: block.title.category-other-tools
+      t: Other Tools
+    - key: block.description.category-other-tools
+      t: Other tools in this category (freeform answers).
+
+    ###########################################################################
+    # Other Tools
+    ###########################################################################
+
+    - key: block.title.utilities
+      t: Utilities
+    - key: block.description.utilities
+      t: Which utility libraries do you regularly use?
+    - key: block.title.utilities_others
+      t: Other Utilities
+    - key: block.description.utilities_others
+      t: Other utilities (freeform field).
+
+    - key: block.title.text_editors
+      t: Text Editors
+    - key: block.description.text_editors
+      t: Which text editor(s) do you regularly use?
+    - key: block.title.text_editors_others
+      t: Other Text Editors
+    - key: block.description.text_editors_others
+      t: Other answers (freeform field).
+
+    - key: block.title.browsers
+      t: Browsers
+    - key: block.description.browsers
+      t: Which browser(s) do you primarily work in during initial development?
+    - key: block.title.browsers_others
+      t: Other Browsers
+    - key: block.description.browsers_others
+      t: Other answers (freeform field).
+
+    - key: block.title.build_tools
+      t: Build Tools
+    - key: block.description.build_tools
+      t: Which build tools do you use?
+    - key: block.title.build_tools_others
+      t: Other Build Tools
+    - key: block.description.build_tools_others
+      t: Other answers (freeform field).
+
+    - key: block.title.non_js_languages
+      t: Non-JavaScript Languages
+    - key: block.description.non_js_languages
+      t: Which other programming languages do you use?
+    - key: block.title.non_js_languages_others
+      t: Other Languages
+    - key: block.description.non_js_languages_others
+      t: Other answers (freeform field).
+
+
+    ###########################################################################
+    # Resources
+    ###########################################################################
+
+    # blogs & magazines
+    - key: block.title.blogs_news_magazines
+      t: Blogs & Magazines
+    - key: block.description.blogs_news_magazines
+      t: Which JS-related blogs/magazines/etc. do you read?
+    - key: block.title.blogs_news_magazines_others
+      t: Other Blogs & Magazines
+    - key: block.description.blogs_news_magazines_others
+      t: Other answers (freeform field).
+
+    # sites & courses
+    - key: block.title.sites_courses
+      t: Sites & Courses
+    - key: block.description.sites_courses
+      t: Which JS-related sites/courses/etc. do you consult?
+    - key: block.title.sites_courses_others
+      t: Other Sites & Courses
+    - key: block.description.sites_courses_others
+      t: Other answers (freeform field).
+
+    # podcasts
+    - key: block.title.podcasts
+      t: Podcasts
+    - key: block.description.podcasts
+      t: Which JavaScript or programming-related podcasts do you listen to?
+    - key: block.title.podcasts_others
+      t: Other Podcasts
+    - key: block.description.podcasts_others
+      t: Other answers (freeform field).
+
+    ###########################################################################
+    # Opinions
+    ###########################################################################
+
+    - key: block.title.easy-to-learn
+      t: Learning Curve
+    - key: block.description.easy-to-learn
+      t: JavaScript is easy to learn”
+
+    - key: block.title.js_moving_in_right_direction
+      t: Direction
+    - key: block.description.js_moving_in_right_direction
+      t: “JavaScript is moving in the right direction”
+
+    - key: block.title.building_js_apps_overly_complex
+      t: Complexity
+    - key: block.description.building_js_apps_overly_complex
+      t: “Building JavaScript apps is overly complex right now”
+
+    - key: block.title.js_over_used_online
+      t: Usage
+    - key: block.description.js_over_used_online
+      t: “JavaScript is over-used online”
+
+    - key: block.title.enjoy_building_js_apps
+      t: Enjoyment
+    - key: block.description.enjoy_building_js_apps
+      t: “I enjoy building JavaScript apps”
+
+    - key: block.title.would_like_js_to_be_main_lang
+      t: Main Language
+    - key: block.description.would_like_js_to_be_main_lang
+      t: “I would like JavaScript to be my main programming language”
+
+    - key: block.title.js_ecosystem_changing_to_fast
+      t: Rate of Change
+    - key: block.description.js_ecosystem_changing_to_fast
+      t: “The JavaScript ecosystem is changing too fast”
+
+    - key: block.title.missing-features
+      t: Missing Features
+    - key: block.description.missing-features
+      t: What do developers feel is currently missing from JavaScript?
+
+      # opinion scale
+    - key: opinions.0.short
+      t: Strongly Disagree
+    - key: opinions.1.short
+      t: Disagree
+    - key: opinions.2.short
+      t: Neutral
+    - key: opinions.3.short
+      t: Agree
+    - key: opinions.4.short
+      t: Strongly Agree
+
+    - key: opinions.0.long
+      t: Strongly Disagree
+    - key: opinions.1.long
+      t: Disagree
+    - key: opinions.2.long
+      t: Neutral
+    - key: opinions.3.long
+      t: Agree
+    - key: opinions.4.long
+      t: Strongly Agree
+
+    ###########################################################################
+    # Awards
+    ###########################################################################
+
+    - key: awards.runner_ups
+      t: Runner Ups
+
+    # feature_adoption
+    - key: award.feature_adoption_award.title
+      t: Most Adopted Feature
+    - key: award.feature_adoption_award.description
+      t: |
+          Awarded to the most adopted JavaScript feature.
+    - key: award.feature_adoption_award.comment
+      t: |
+          With **${items[0].value}** users ${items[0].name}
+          is the most used JavaScript feature this year.
+
+    # tool_satisfaction
+    - key: award.tool_satisfaction_award.title
+      t: Highest Satisfaction
+    - key: award.tool_satisfaction_award.description
+      t: |
+          Awarded to the technology with the highest
+          percentage of satisfied users.
+    - key: award.tool_satisfaction_award.comment
+      t: |
+          With **${items[0].value}** of users willing to use it again,
+          ${items[0].name} proves once more it’s not kidding around.
+
+    # tool_interest
+    - key: award.tool_interest_award.title
+      t: Highest Interest
+    - key: award.tool_interest_award.description
+      t: |
+          Awarded to the technology developers
+          are most interested in learning.
+    - key: award.tool_interest_award.comment
+      t: |
+          **${items[0].value}** of developers who have heard
+          about ${items[0].name} want to learn it.
+          That’s some serious interest!
+
+    # tool_usage
+    - key: award.tool_usage_award.title
+      t: Most Used Technology
+    - key: award.tool_usage_award.description
+      t: |
+          Awarded to technology with the largest user base.
+    - key: award.tool_usage_award.comment
+      t: |
+          With **${items[0].value}** users ${items[0].name}
+          is the most used technology this year.
+
+    # resource_usage
+    - key: award.resource_usage_award.title
+      t: Most Used Resource
+    - key: award.resource_usage_award.description
+      t: |
+          Awarded to the resource with the largest user base.
+    - key: award.resource_usage_award.comment
+      t: |
+          With **${items[0].value}** users ${items[0].name}
+          is the most used resource this year.
+
+    # tool_mention
+    - key: award.tool_mention_award.title
+      t: Most Mentioned
+    - key: award.tool_mention.description
+      t: |
+          Awarded to the library mentioned
+          the most in the “other libraries” answer.
+    - key: award.tool_mention_award.comment
+      t: |
+          ${items[0].name} collected **${items[0].value}** mentions,
+          making it the most submitted freeform answer by far.
+
+    # prediction_award
+    - key: award.prediction_award.title
+      t: Prediction Award
+    - key: award.prediction_award.description
+      t: |
+          Awarded to an up-and-coming technology that might take over… or not?
+    - key: award.prediction_award.comment
+      t: |
+          ${items[0].name} made its explosive debut in this year's survey and we can't
+          wait to see where it goes from here
+
+    ###########################################################################
+    # Generic
+    ###########################################################################
+
+    # pages
+    - key: page.introduction
+      t: Introduction
+    - key: page.tshirt
+      t: T-shirt
+    - key: page.demographics
+      t: Demographics
+    - key: page.overview
+      t: Overview
+    - key: page.features
+      t: Features
+    - key: page.other_features
+      t: Other Features
+    - key: page.javascript_flavors
+      t: JavaScript Flavors
+    - key: page.javascript_flavors.short
+      t: JavaScript Flavors
+    - key: page.javascript_flavors_others
+      t: Other Flavors
+    - key: page.front_end_frameworks
+      t: Front End Frameworks
+    - key: page.front_end_frameworks.short
+      t: Front End
+    - key: page.front_end_frameworks_others
+      t: Other Frameworks
+    - key: page.data_layer
+      t: Data Layer
+    - key: page.data_layer.short
+      t: Data Layer
+    - key: page.data_layer_others
+      t: Other Data Layer Tools
+    - key: page.back_end_frameworks
+      t: Back End Frameworks
+    - key: page.back_end_frameworks.short
+      t: Back End
+    - key: page.back_end_frameworks_others
+      t: Other Frameworks
+    - key: page.testing
+      t: Testing
+    - key: page.testing.short
+      t: Testing
+    - key: page.testing_others
+      t: Other Tools
+    - key: page.mobile_desktop
+      t: Mobile & Desktop
+    - key: page.mobile_desktop.short
+      t: Mobile & Desktop
+    - key: page.mobile_desktop_others
+      t: Other Tools
+    - key: page.other_tools
+      t: Other Tools
+    - key: page.environments
+      t: Environments
+    - key: page.resources
+      t: Resources
+    - key: page.opinions
+      t: Opinions
+    - key: page.awards
+      t: Awards
+    - key: page.conclusion
+      t: Conclusion
+    - key: page.support
+      t: Support Us
+
+    # sharing
+    - key: share.share
+      t: Share
+    - key: share.site.title
+      t: Discover the StateOf JavaScript 2019 results
+    - key: share.site.twitter_text
+      t: 'Discover the State Of JavaScript 2019 results ${link} #StateOfJS'
+    - key: share.site.subject
+      t: State Of JavaScript Survey Results
+    - key: share.site.body
+      t: 'Here are some interesting JavaScript survey results: ${link}'
+    - key: share.block.twitter_text
+      t: '#StateOfJS 2019: ${title} ${link}'
+    - key: share.block.subject
+      t: State Of JavaScript Survey Results
+    - key: share.block.body
+      t: 'Here are some interesting JavaScript survey results (${title}): ${link}'
+    - key: share.twitter
+      t: Share on Twitter
+    - key: share.facebook
+      t: Share on Facebook
+    - key: share.linkedin
+      t: Share on LinkedIn
+    - key: share.email
+      t: Share by email
+    - key: share.image
+      t: Get image
+
+    # export
+    - key: export.export
+      t: Export
+    - key: export.title
+      t: Export data for ${title}
+    - key: export.nocsv
+      t: Sorry, CSV export is not available for this dataset.
+    - key: export.graphql
+      t: >
+          While our internal GraphQL API is not currently public, in the future we are planning
+          on exposing it to make querying our data easier. If you'd like to hear more, you can
+          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
+
+
+    # general
+    - key: general.title
+      t: State of JavaScript 2019
+    - key: general.description
+      t: Discover the most popular JavaScript features & technologies of the year.
+    - key: general.stay_tuned
+      t: Stay Tuned
+    - key: general.leave_your_email
+      t: "If you'd like to know when we release additional results or announce next year's edition, just leave us your email below:"
+    - key: general.your_email
+      t: Your Email
+    - key: general.notify_me
+      t: Notify Me
+    - key: general.help_us_translate
+      t: Help translate the survey →
+    - key: general.not_found
+      t: >
+
+          ## Error 404
+
+          Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/State-of-JS-2019/issues) if you think something might be broken.
+    - key: general.back_to_intro
+      t: Back to introduction
+    - key: general.close_nav
+      t: Close navigation menu
+    - key: general.completion_percentage
+      t: 'Completion Percentage:'
+    - key: general.previous
+      t: 'Previous:'
+    - key: general.next
+      t: 'Next:'
+    - key: general.start
+      t: Start
+
+    # partners
+    - key: partners.our_partners
+      t: Our Partners
+    - key: partners.become_partner
+      t: Help support the survey
+    - key: partners.thanks
+      t: Thanks to our partners for supporting us!
+    - key: partners.learn_more
+      t: Learn more.
+    - key: block.title.recommendedResources
+      t: Recommended Resources
+
+    # charts
+    - key: block.title.usage-ratio
+      t: Usage Ratio Ranking
+    - key: block.description.usage-ratio
+      t: Ranking usage ratios among users who are aware of a technology.
+    - key: users_percentage
+      t: Percentage of Users
+    - key: users_count
+      t: User Count
+    - key: satisfaction_percentage
+      t: Satisfaction Percentage
+    - key: interest_percentage
+      t: Interest Percentage
+    - key: chart_mode
+      t: mode
+    - key: chart_mode.absolute
+      t: absolute
+    - key: chart_mode.relative
+      t: relative
+    - key: chart_units
+      t: Units
+    - key: chart_units.percentage
+      t: Percents
+    - key: chart_units.count
+      t: Count
+    - key: users
+      t: users
+    - key: percent_satisfaction
+      t: '% satisfaction'
+    - key: percent_interest
+      t: '% interest'
+    - key: heatmap.average
+      t: overall
+    - key: difference_from_average_usage
+      t: 'Difference from overall usage:'
+    - key: all
+      t: 'All'
+
+    # other
+    - key: bio.guest_visualizer
+      t: Guest Expert
