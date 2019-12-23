@@ -4,7 +4,7 @@ page: tshirt
 locale: pt-BR
 ---
 
-## The State of JavaScript T-shirt: Ajude a pesquisa e fique bem na fita!
+## Camiseta The State of JavaScript: Ajude a pesquisa e fique bem na fita!
 
 Este ano estamos lançando a nossa própria **👕 Camiseta State of JavaScript 👕** para financiar nossos esforços!
 
