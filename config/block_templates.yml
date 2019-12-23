@@ -7,12 +7,13 @@
 pageIntroductionTemplate:
     blockType: PageIntroductionBlock
     dataPath: '${pageId}_introduction.html'
+    queryVariables: '$locale: String'
     query: >
         ${pageId}_introduction: markdownRemark(
             frontmatter: {
                 type:   { eq: "introduction" }
                 page:   { eq: "${pageId}" }
-                locale: { eq: "en-US" }
+                locale: { eq: $locale }
             }
         ) {
             html

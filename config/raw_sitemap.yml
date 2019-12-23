@@ -10,6 +10,7 @@
 # - pageTemplate: a template from which to inherit its properties
 # - defaultVariables: default values for variables
 # - showTitle: whether to show the page title or not
+# - variables: page variables (compiled during sitemap generation)
 
 # Block Properties
 # - id: the unique (survey-wide) ID of the block
@@ -22,6 +23,8 @@
 # - showDescription: whether to show the block's description
 # - template: a template from which to inherit its properties
 # - translateData: whether to try and translate
+# - queryVariables: GraphQL query variables (handled by GraphQL)
+# - variables: block variables (compiled during sitemap generation)
 
 - id: introduction
   path: /
