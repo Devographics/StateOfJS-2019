@@ -22,9 +22,9 @@ translations:
 
     # salary ranges
     - key: salary.work_for_free.long
-      t: I work for free
+      t: Eu trabalho voluntariamente
     - key: salary.work_for_free.short
-      t: work for free
+      t: trabalho voluntário
     - key: salary.work_for_free.shorter
       t: '0'
     - key: salary.0_10.long
@@ -58,109 +58,109 @@ translations:
     - key: salary.100_200.shorter
       t: 100~200k
     - key: salary.more_than_200.long
-      t: more than $200k
+      t: mais de $200k
     - key: salary.more_than_200.short
       t: $200k+
     - key: salary.more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
-      t: Salary Range (USD)
+      t: Faixa Salarial (USD)
 
     # years of experience
     - key: workExperience.less_than_1.long
-      t: Less than one year
+      t: Menos de um ano
     - key: workExperience.less_than_1.short
-      t: '<1 year'
+      t: '<1 ano'
     - key: workExperience.less_than_1.shorter
       t: '<1'
     - key: workExperience.1_2.long
-      t: 1 to 2 years
+      t: 1 a 2 anos
     - key: workExperience.1_2.short
-      t: 1~2 years
+      t: 1~2 anos
     - key: workExperience.1_2.shorter
       t: 1~2
     - key: workExperience.2_5.long
-      t: 2 to 5 years
+      t: 2 a 5 anos
     - key: workExperience.2_5.short
-      t: 2~5 years
+      t: 2~5 anos
     - key: workExperience.2_5.shorter
       t: 2~5
     - key: workExperience.5_10.long
-      t: 5 to 10 years
+      t: 5 a 10 anos
     - key: workExperience.5_10.short
-      t: 5~10 years
+      t: 5~10 anos
     - key: workExperience.5_10.shorter
       t: 5~10
     - key: workExperience.10_20.long
-      t: 10 to 20 years
+      t: 10 a 20 anos
     - key: workExperience.10_20.short
-      t: 10~20 years
+      t: 10~20 anos
     - key: workExperience.10_20.shorter
       t: 10~20
     - key: workExperience.more_than_20.long
-      t: More than 20 years
+      t: Mais de 20 anos
     - key: workExperience.more_than_20.short
-      t: '>20 years'
+      t: '>20 anos'
     - key: workExperience.more_than_20.shorter
       t: '>20'
     - key: workExperience.axis_legend
-      t: Years of Experience
+      t: Anos de Experiência
 
     # company size
     - key: companySize.1.long
-      t: One employee
+      t: Um empregado
     - key: companySize.1.short
-      t: one
+      t: um
     - key: companySize.1.shorter
       t: '1'
     - key: companySize.1_5.long
-      t: 1 to 5 employees
+      t: 1 a 5 empregados
     - key: companySize.1_5.short
       t: 1~5
     - key: companySize.1_5.shorter
       t: 1~5
     - key: companySize.5_10.long
-      t: 5 to 10 employees
+      t: 5 a 10 empregados
     - key: companySize.5_10.short
       t: 5~10
     - key: companySize.5_10.shorter
       t: 5~10
     - key: companySize.10_20.long
-      t: 10 to 20 employees
+      t: 10 a 20 empregados
     - key: companySize.10_20.short
       t: 10~20
     - key: companySize.10_20.shorter
       t: 10~20
     - key: companySize.20_50.long
-      t: 20 to 50 employees
+      t: 20 a 50 empregados
     - key: companySize.20_50.short
       t: 20~50
     - key: companySize.20_50.shorter
       t: 20~50
     - key: companySize.50_100.long
-      t: 50 to 100 employees
+      t: 50 a 100 empregados
     - key: companySize.50_100.short
       t: 50~100
     - key: companySize.50_100.shorter
       t: 50~100
     - key: companySize.100_1000.long
-      t: 100 to 1000 employees
+      t: 100 a 1000 empregados
     - key: companySize.100_1000.short
       t: 100~1000
     - key: companySize.100_1000.shorter
       t: 100~1000
     - key: companySize.more_than_1000.long
-      t: More than 1000 employees
+      t: Mais de 1000 empregados
     - key: companySize.more_than_1000.short
       t: 1000+
     - key: companySize.more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
-      t: Number of Employees
+      t: Número de Empregados
 
     # sources
     - key: sources.other_unknown
-      t: Other/Unknown
+      t: Outra/Desconhecida
 
     # css proficiency
 
@@ -255,25 +255,25 @@ translations:
 
     # gender
     - key: block.title.gender
-      t: Gender
+      t: Gênero
     - key: block.description.gender
-      t: Respondents gender.
+      t: Gênero do participante.
     - key: gender.female
-      t: Female
+      t: Feminino
     - key: gender.female.long
-      t: Female
+      t: Feminino
     - key: gender.male
-      t: Male
+      t: Masculino
     - key: gender.male.long
-      t: Male
+      t: Masculino
     - key: gender.non_binary
-      t: Non-Binary/Third Gender
+      t: Não-Binário/Terceiro Gênero
     - key: gender.non_binary.long
-      t: Non-Binary/Third Gender
+      t: Não-Binário/Terceiro Gênero
     - key: gender.prefer_not_to_say
-      t: Prefer not to say
+      t: Prefiro não responder
     - key: gender.prefer_not_to_say.long
-      t: Prefer not to say
+      t: Prefiro não responder
 
     # other
     - key: block.title.country
