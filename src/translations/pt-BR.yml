@@ -165,31 +165,31 @@ translations:
     # css proficiency
 
     - key: block.title.cssProficiency
-      t: CSS Proficiency
+      t: Proficiência em CSS
     - key: block.description.cssProficiency
-      t: How proficient are you at CSS?
+      t: Você considera ter qual grau de proficiência em CSS?
     - key: cssProficiency.axis_legend
-      t: CSS Proficiency
+      t: Proficiência em CSS
     - key: cssProficiency.0.short
-      t: None
+      t: Nenhum
     - key: cssProficiency.0.long
-      t: 'Virtually no knowledge of CSS'
+      t: 'Praticamente nenhum conhecimento de CSS'
     - key: cssProficiency.1.short
-      t: Beginner
+      t: Iniciante
     - key: cssProficiency.1.long
-      t: 'Using CSS frameworks and tweaking existing styles'
+      t: 'Utiliza frameworks CSS e ajusta estilos existentes'
     - key: cssProficiency.2.short
-      t: Intermediate
+      t: Intermediário
     - key: cssProficiency.2.long
-      t: 'Knowing specificity rules, being able to create layouts'
+      t: 'Conhece regras de especificidade e é capaz de criar layouts'
     - key: cssProficiency.3.short
-      t: Advanced
+      t: Avançado
     - key: cssProficiency.3.long
-      t: 'Mastering animations, interactions, transitions, etc.'
+      t: 'Domina animações, interações, transições etc..'
     - key: cssProficiency.4.short
       t: Expert
     - key: cssProficiency.4.long
-      t: 'Being able to style an entire front-end from scratch following a consistent methodology'
+      t: 'Capaz de estilizar um front-end por completo do zero seguindo uma metodologia consistente'
 
     # backend proficiency
     - key: block.title.backendProficiency
