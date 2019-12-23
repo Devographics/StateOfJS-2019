@@ -4,12 +4,12 @@ page: conclusion
 locale: pt-BR
 ---
 
-You know how you sometimes start tweaking a few lines of code here and there, then realize a couple functions could use some refactoring, and then one things leading to another you find yourself a few days later in the process of setting up a brand new stack complete with a database and GraphQL API?
+Sabe quando as vezes você está ajustando algumas linhas de código aqui e acolá e, de repente, percebe que algumas funções poderiam ser refatoradas? Daí em diante, uma coisa leva a outra... e de repente, você se vê já há alguns dias no processo de montar uma stack completa, super nova, com um banco de dados e uma API GraphQL?
 
-This is what happened to us this year. And while it resulted in quite a few stressful evenings as we tried to wrap this up and release the State of JavaScript 2019 results in, well, 2019; it also means we now have a much more powerful and flexible stack to collect and analyze data going forward.
+Foi isso que aconteceu com a gente este ano. E, apesar de ter como resultado algumas noites bem estressantes enquanto tentávamos concluir e lançar os resultados da State of JavaScript 2019 ainda em 2019; também significa que temos uma stack muito mais poderosa e flexível para coletar e analisar dados daqui em diante.
 
-This will come in handy to analyze the evolution of all the new tools starting to make waves such as Svelte, Stencil, Sporky, Nest, or Flutter. And yes, I did just make up one of those five, but admit it: you had a moment of doubt didn’t you?
+Isso virá a calhar para analisar a evolução de todas as novas ondas de ferramentas como Svelte, Stencil, Sporky, Nest, ou Flutter. E sim, eu acabei de inventar um desses cinco, mas, admita: por um momento, você ficou na dúvida, não foi?
 
-But don’t worry. No matter how many weirdly-named libraries the community keeps throwing at you, we’ll be there to help make sense of all this chaos… that is, if we’re not too busy going through yet another refactoring to get our code just perfect!
+Mas, não se preocupe. Não importa quantas bibliotecas com nomes estranhos a comunidade continue lançando, estaremos lá para ajudar a desvendar todo esse caos... isto é, se não estivermos muito ocupados fazendo uma nova refactoração para tornar nosso código simplesmente perfeito!
 
 <span class="conclusion__byline">– Sacha & Raphaël</span>
