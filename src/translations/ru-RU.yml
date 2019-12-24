@@ -5,16 +5,16 @@ translations:
     ###########################################################################
 
     - key: tshirt.about
-      t: About the T-shirt
+      t: О футболке
     - key: tshirt.description
       t: >
-          The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
-          with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
+          Полуприлегающая футболка. Дизайн напечатан на ткани типа Heather черного цвета [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (мужская);
+          или темно-серого [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (женская). Размеры одежды по стандарту США.
 
     - key: tshirt.getit
-      t: Get It
+      t: Заказать
     - key: tshirt.price
-      t: $${price} + shipping
+      t: $${price} + доставка
 
     ###########################################################################
     # Demographics
