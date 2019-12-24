@@ -1,7 +1,8 @@
 ---
 type: introduction
 page: overview
-locale: en-US
+locale: ko-KR
 ---
 
-Before digging deep in the details, let's take a moment to take in a bigger-picture overview of the JavaScript ecosystem in 2019 courtesy of the talented [Amelia Wattenberger](https://wattenberger.com/), our guest data visualization expert!
+세부사항으로 들어가기 전에, 저희의 재능 있는 객원 데이터 시각화 전문가인 [Amelia Wattenberger](https://wattenberger.com/)의 도움을 받아
+2019년 자바스크립트 생태계의 보다 큰 그림을 잠시 살펴보세요!

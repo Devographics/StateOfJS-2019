@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   front_end_frameworks
-locale: en-US
+locale: ko-KR
 ---
 
 Front-end frameworks and libraries.

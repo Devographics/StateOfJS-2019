@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: tshirt
-locale: en-US
+locale: ko-KR
 ---
 
 ## The State of JavaScript T-shirt: Support the survey and look good in the process!

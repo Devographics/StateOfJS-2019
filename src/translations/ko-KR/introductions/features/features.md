@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: features
-locale: en-US
+locale: ko-KR
 ---
 
 One of the most exciting things about JavaScript as a language is that it's not standing still. From arrow functions to destructuring, many key features added over the past couple years are now an integral part of how we write JavaScript.

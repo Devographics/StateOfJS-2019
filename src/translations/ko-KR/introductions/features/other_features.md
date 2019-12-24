@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   other_features
-locale: en-US
+locale: ko-KR
 ---
 
 Other technologies and patterns.
