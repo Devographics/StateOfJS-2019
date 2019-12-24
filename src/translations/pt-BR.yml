@@ -401,22 +401,21 @@ translations:
     - key: block.tool.github_link
       t: GitHub
     - key: block.tool.github_stars
-      t: stars
+      t: estrelas
     - key: block.tool.homepage_link
       t: Homepage
     - key: block.tool.npm_link
       t: NPM
 
     - key: block.title.other-methodologies
-      t: Other Methodologies
+      t: Outras Metodologias
 
     - key: block.title.companySize_heatmap
-      t: Usage by Company Size
+      t: Uso por Tamanho da Empresa
     - key: block.description.companySize_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          company size ranges.
+          Para cada tecnologia, mostra como o uso se divide entre os participantes que selecionaram diferentes faixas de tamanho da empresa.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
@@ -426,13 +425,12 @@ translations:
 
 
     - key: block.title.workExperience_heatmap
-      t: Usage by Years Of Experience
+      t: Uso por Anos de Experiência
     - key: block.description.workExperience_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          experience ranges. Note that the experience in question here is general JavaScript experience, not
-          experience with a specific technology. 
+          Para cada tecnologia, mostra como o uso se divide entre os participantes que escolheram diferentes faixas de experiência. 
+          Note que a experiência aqui em questão é a experiência geral com JavaScript e não com alguma tecnologia específica.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
@@ -441,12 +439,11 @@ translations:
       # a higher-than-overall-average ratio for a given bracket.
 
     - key: block.title.salary_heatmap
-      t: Usage by Salary Range
+      t: Uso por Faixa Salarial
     - key: block.description.salary_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          salary ranges.
+          Para cada tecnologia, mostra como se divide entre os participantes que selecionaram diferentes faixas salariais.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “yearly salary” bracket.
@@ -456,16 +453,16 @@ translations:
 
     # rankings/bump chart
     - key: block.title.toolExperienceRanking
-      t: Rankings
+      t: Classificações
     - key: block.description.toolExperienceRanking
       t: >
-          Awareness, interest, and satisfaction ratio rankings.
+          Classificação de Percepção, Interesse, e Satisfação.
     - key: opinions.legends.awareness_ratio
-      t: Awareness
+      t: Percepção
     - key: opinions.legends.interest_ratio
-      t: Interest
+      t: Interesse
     - key: opinions.legends.satisfaction_ratio
-      t: Satisfaction
+      t: Satisfação
 
     # overview
     - key: block.title.toolsSectionOverview
@@ -992,41 +989,44 @@ translations:
 
     # charts
     - key: block.title.usage-ratio
-      t: Usage Ratio Ranking
+      t: Classificação por Taxa de Uso
     - key: block.description.usage-ratio
-      t: Ranking usage ratios among users who are aware of a technology.
+      t: Classificação das taxas de uso entre usuários que conhecem a tecnologia.
     - key: users_percentage
-      t: Percentage of Users
+      t: Percentual de Usuários
     - key: users_count
-      t: User Count
+      t: Contagem de Usuários
     - key: satisfaction_percentage
-      t: Satisfaction Percentage
+      t: Percentual de Satisfação
     - key: interest_percentage
-      t: Interest Percentage
+      t: Percentual de Interesse
     - key: chart_mode
-      t: mode
+      t: modo
     - key: chart_mode.absolute
-      t: absolute
+      t: absoluto
     - key: chart_mode.relative
-      t: relative
+      t: relativo
     - key: chart_units
-      t: Units
+      t: Unidades
     - key: chart_units.percentage
-      t: Percents
+      t: Percentuais
     - key: chart_units.count
-      t: Count
+      t: Contagem
     - key: users
-      t: users
+      t: usuários
     - key: percent_satisfaction
-      t: '% satisfaction'
+      t: '% de satisfação'
     - key: percent_interest
-      t: '% interest'
+      t: '% de interesse'
+    # find usage
     - key: heatmap.average
-      t: overall
+      t: Total
+    # find usage
     - key: difference_from_average_usage
-      t: 'Difference from overall usage:'
+      t: 'Diferença de uso do total:'
+    # find usage
     - key: all
-      t: 'All'
+      t: 'Tudo'
 
     # other
     - key: bio.guest_visualizer
