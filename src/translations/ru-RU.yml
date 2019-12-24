@@ -177,7 +177,7 @@ translations:
     - key: cssProficiency.1.short
       t: Начинающий
     - key: cssProficiency.1.long
-      t: 'Использую CSS фреймворки и настраиваю существуюшие стили'
+      t: 'Использую CSS фреймворки и настраиваю существующие стили'
     - key: cssProficiency.2.short
       t: Средний
     - key: cssProficiency.2.long
