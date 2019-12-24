@@ -291,14 +291,14 @@ translations:
     - key: block.title.companySize
       t: Размер компании
     - key: block.description.companySize
-      t: Размер компании.
+      t: Разбивка по размеру компании.
     - key: block.title.source
       t: Источник
     - key: block.description.source
       t: >
-          Как участники узнали об опросе (aggregation of self-reported answers and referrer tracking).
+          Как участники узнали об опросе (агрегирование из предоставленных ответов и отслеживания рефереров).
 
-          **State of JS** обозначает подписчиков из наших прошлых опросов, в то время как **Word of Mouth** включает в себя Slack, друзей, коллег, и т.д.
+          Пункт **State of JS** обозначает подписчиков из наших прошлых опросов, в то время как **Word of Mouth** включает в себя Slack, друзей, коллег, и т.д.
 
     - key: block.title.jobTitle
       t: Должность
