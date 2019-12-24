@@ -221,21 +221,21 @@ translations:
 
     # job title
     - key: jobTitle.front_end_developer.short
-      t: Front End Developer
+      t: Desenvolvedor Front End
     - key: jobTitle.front_end_developer.long
-      t: Front End Developer/Engineer
+      t: Desenvolvedor/Engenheiro de Front End
     - key: jobTitle.back_end_developer.short
-      t: Back End Developer
+      t: Desenvolvedor Back End
     - key: jobTitle.back_end_developer.long
-      t: Back End Developer/Engineer
+      t: Desenvolvedor/Engenheiro de Back End
     - key: jobTitle.full_stack_developer.short
-      t: Full Stack Developer
+      t: Desenvolvedor Full Stack
     - key: jobTitle.full_stack_developer.long
-      t: Full Stack Developer/Engineer
+      t: Desenvolvedor/Engenheiro Full Stack
     - key: jobTitle.web_developer.short
-      t: Web Developer
+      t: Desenvolvedor Web
     - key: jobTitle.web_developer.long
-      t: Web Developer
+      t: Desenvolvedor Web
     - key: jobTitle.web_designer.short
       t: Web Designer
     - key: jobTitle.web_designer.long
@@ -249,9 +249,9 @@ translations:
     - key: jobTitle.ui_designer.long
       t: UI Designer
     - key: jobTitle.back_end_dev.short
-      t: Back-end Developer
+      t: Desenvolvedor Back-end
     - key: jobTitle.back_end_dev.long
-      t: Back-end Developer/Engineer
+      t: Desenvolvedor/Engenheiro Back-end
 
     # gender
     - key: block.title.gender
