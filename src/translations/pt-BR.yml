@@ -928,16 +928,16 @@ translations:
 
     # export
     - key: export.export
-      t: Export
+      t: Exportar
     - key: export.title
-      t: Export data for ${title}
+      t: Exportar dados de ${title}
     - key: export.nocsv
-      t: Sorry, CSV export is not available for this dataset.
+      t: Desculpe, mas, este conjunto de dados não está disponível em formato CSV.
     - key: export.graphql
       t: >
-          While our internal GraphQL API is not currently public, in the future we are planning
-          on exposing it to make querying our data easier. If you'd like to hear more, you can
-          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
+          Apesar da nossa API GraphQL ainda não estar pública, pretendemos expô-la para tornar 
+          mais fácil a consulta dos dados. Caso tenha interesse e deseje saber mais, acompanhe 
+          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">esta issue no GitHub</a>
 
 
     # general
