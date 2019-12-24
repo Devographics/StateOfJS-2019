@@ -542,14 +542,14 @@ translations:
       t: Nunca ouvi
 
     - key: toolExperience.not_interested.long
-      t: Já OUVI FALAR sobre ela, e NÃO estou interessado
+      t: Já OUVI FALAR a respeito, e NÃO estou interessado
     - key: toolExperience.not_interested.short
       t: Já OUVI FALAR a respeito, mas não me interessa
     - key: toolExperience.not_interested.extrashort
       t: Não interessado
 
     - key: toolExperience.interested.long
-      t: Já OUVI FALAR sobre ela, e GOSTARIA de aprender sobre
+      t: Já OUVI FALAR a respeito, e GOSTARIA de aprender sobre
     - key: toolExperience.interested.short
       t: OUVI FALAR sobre ela, GOSTARIA de aprender
     - key: toolExperience.interested.extrashort
