@@ -841,7 +841,7 @@ translations:
     - key: page.introduction
       t: Введение
     - key: page.tshirt
-      t: T-shirt
+      t: Футболка
     - key: page.demographics
       t: Demographics
     - key: page.overview
