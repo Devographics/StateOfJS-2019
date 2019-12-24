@@ -193,31 +193,31 @@ translations:
 
     # backend proficiency
     - key: block.title.backendProficiency
-      t: Back-end Proficiency
+      t: Уровень опыта на бэкенде
     - key: block.description.backendProficiency
-      t: How proficient are you at back-end development?
+      t: Насколько вы опытны в бэкенд разработке?
     - key: backendProficiency.axis_legend
-      t: Back-End Proficiency
+      t: Уровень опыта на бэкенде
     - key: backendProficiency.0.short
-      t: None
+      t: Отсутствует
     - key: backendProficiency.0.long
-      t: 'Not able to handle any back-end work'
+      t: 'Не могу справиться с какой-либо работой на бэкенде'
     - key: backendProficiency.1.short
-      t: Beginner
+      t: Начинающий
     - key: backendProficiency.1.long
-      t: 'Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+      t: 'Могу устанавливать универсальные CMS (WordPress и т.п.) или статические генераторы сайтов (Jekyll, etc.)'
     - key: backendProficiency.2.short
-      t: Intermediate
+      t: Средний
     - key: backendProficiency.2.long
-      t: 'Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)'
+      t: 'Могу разрабатывать приложения, используя существующие фреймворки (Rails, Laravel и т.п.)'
     - key: backendProficiency.3.short
-      t: Advanced
+      t: Продвинутый
     - key: backendProficiency.3.long
-      t: 'Setting up an entire back-end from scratch (Go, Node, etc.)'
+      t: 'Настройка всего бэкенда с нуля (Go, Node и т.п.)'
     - key: backendProficiency.4.short
-      t: Expert
+      t: Эксперт
     - key: backendProficiency.4.long
-      t: 'Able to handle complex multi-server or microservices architectures'
+      t: 'Могу управлять сложными многосерверными или микросервисными архитектурами'
 
     # job title
     - key: jobTitle.front_end_developer.short
