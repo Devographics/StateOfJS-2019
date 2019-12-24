@@ -4,4 +4,4 @@ page:   language
 locale: pt-BR
 ---
 
-The vocabulary of JavaScript.
+O vocabulário do JavaScript.

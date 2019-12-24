@@ -4,4 +4,4 @@ page:   browser_apis
 locale: pt-BR
 ---
 
-The features provided by the browser.
+As funcionalidades fornecidas pelo navegador.
