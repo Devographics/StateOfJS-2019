@@ -1,3 +1,7 @@
 - locale: en-US
   path: default
   label: English
+
+- locale: zh-Hans
+  path: zh
+  label: 简体中文
