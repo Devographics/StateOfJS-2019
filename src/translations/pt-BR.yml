@@ -193,31 +193,31 @@ translations:
 
     # backend proficiency
     - key: block.title.backendProficiency
-      t: Back-end Proficiency
+      t: Proficiência no Back-end
     - key: block.description.backendProficiency
-      t: How proficient are you at back-end development?
+      t: Quão proficiente você é em desenvolvimento back-end?
     - key: backendProficiency.axis_legend
-      t: Back-End Proficiency
+      t: Proficiência em Back-End
     - key: backendProficiency.0.short
-      t: None
+      t: Nenhuma
     - key: backendProficiency.0.long
-      t: 'Not able to handle any back-end work'
+      t: 'Incapaz de lidar com qualquer trabalho back-end'
     - key: backendProficiency.1.short
-      t: Beginner
+      t: Iniciante
     - key: backendProficiency.1.long
-      t: 'Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+      t: 'Capaz de configurar CMS completos como (WordPress, etc.) ou geradores de sites estáticos (Jekyll, etc.)'
     - key: backendProficiency.2.short
-      t: Intermediate
+      t: Intermediário
     - key: backendProficiency.2.long
-      t: 'Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)'
+      t: 'Capaz de desenvolver apps usando algum framework pré-existente (Rails, Laravel, etc.)'
     - key: backendProficiency.3.short
-      t: Advanced
+      t: Avançado
     - key: backendProficiency.3.long
-      t: 'Setting up an entire back-end from scratch (Go, Node, etc.)'
+      t: 'Capaz de configurar um back-end completo do zero (Go, Node, etc.)'
     - key: backendProficiency.4.short
       t: Expert
     - key: backendProficiency.4.long
-      t: 'Able to handle complex multi-server or microservices architectures'
+      t: 'Capaz de lidar com arquiteturas complexas multi servidor ou com microsserviços'
 
     # job title
     - key: jobTitle.front_end_developer.short
