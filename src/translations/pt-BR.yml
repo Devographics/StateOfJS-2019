@@ -345,14 +345,14 @@ translations:
     - key: featureExperience.know_not_used
       t: Sei o que é, mas nunca usei
     - key: featureExperience.never_heard_not_sure
-      t: Nunca ouvi falar sobre/Não tenho certeza do que é
+      t: Nunca ouvi falar/Não tenho certeza do que é
 
     - key: featureExperience.used_it.long
       t: Já usei
     - key: featureExperience.know_not_used.long
       t: Sei o que é, mas nunca usei
     - key: featureExperience.never_heard_not_sure.long
-      t: Nunca ouvi falar sobre/Não tenho certeza do que é
+      t: Nunca ouvi falar/Não tenho certeza do que é
 
     # Feature Overview
     - key: block.title.featuresOverview
@@ -526,7 +526,7 @@ translations:
       t: Felicidade Geral
     - key: block.description.happiness
       t: |
-          Numa escala de um (muito infeliz) a cinco (muito feliz), quão feliz estão dos desenvolvedores com o estado geral atual desta categoria?
+          Numa escala de 1 (muito infeliz) a 5 (muito feliz), quão feliz estão dos desenvolvedores com o estado geral atual desta categoria?
 
     # experience
     - key: block.title.toolExperience
@@ -551,7 +551,7 @@ translations:
     - key: toolExperience.interested.long
       t: Já OUVI FALAR a respeito, e GOSTARIA de aprender sobre
     - key: toolExperience.interested.short
-      t: OUVI FALAR sobre ela, GOSTARIA de aprender
+      t: OUVI FALAR a respeito, GOSTARIA de aprender
     - key: toolExperience.interested.extrashort
       t: Interessado
 
