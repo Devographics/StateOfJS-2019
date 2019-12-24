@@ -4,4 +4,4 @@ page:   front_end_frameworks
 locale: pt-BR
 ---
 
-Front-end frameworks and libraries.
+Frameworks e Bibliotecas Front-end.

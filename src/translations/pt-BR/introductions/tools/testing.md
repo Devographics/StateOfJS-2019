@@ -4,4 +4,4 @@ page:   testing
 locale: pt-BR
 ---
 
-Tools for testing your code.
+Ferramentas para testar o seu código.

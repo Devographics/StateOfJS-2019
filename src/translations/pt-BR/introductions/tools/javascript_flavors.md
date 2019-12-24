@@ -4,4 +4,4 @@ page:   javascript_flavors
 locale: pt-BR
 ---
 
-Languages that compile to JavaScript
+Linguagens de programação que compilam para JavaScript.
