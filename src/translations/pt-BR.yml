@@ -976,15 +976,15 @@ translations:
 
     # partners
     - key: partners.our_partners
-      t: Our Partners
+      t: Nossos Parceiros
     - key: partners.become_partner
-      t: Help support the survey
+      t: Apoie a pesquisa
     - key: partners.thanks
-      t: Thanks to our partners for supporting us!
+      t: Obrigado aos nossos parceiros pelo apoio dado!
     - key: partners.learn_more
-      t: Learn more.
+      t: Saiba mais.
     - key: block.title.recommendedResources
-      t: Recommended Resources
+      t: Recursos Recomendados
 
     # charts
     - key: block.title.usage-ratio
