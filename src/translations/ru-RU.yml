@@ -312,48 +312,48 @@ translations:
     # General
 
     - key: page.syntax
-      t: Syntax
+      t: Синтаксис
     - key: page.language
-      t: Language
+      t: Язык
     - key: page.data_structures
-      t: Data Structures
+      t: Структуры данных
     - key: page.browser_apis
-      t: Browser APIs
+      t: API браузера
 
     - key: block.description.decorators
       t: >
-        In its simplest form, a decorator is simply a way of
-        wrapping one piece of code with another — literally “decorating” it.
+        В упрощенном виде, декоратор — просто способ обернуть
+        один фрагмент кода другим, буквально “декорируя” его.
 
     - key: feature.learn_more
-      t: Learn More (MDN)
+      t: Подробнее (MDN)
     - key: feature.mdn_link
       t: MDN
     - key: feature.caniuse_link
       t: CanIUse
     - key: feature.specification_link
-      t: W3C Specification
+      t: Спецификация W3C
 
     - key: featureExperienceSimplified.used_it.long
-      t: Have used it
+      t: Использовал
     - key: featureExperienceSimplified.know_it.long
-      t: Know about it
+      t: Знаю
     - key: features.usage.ratio
-      t: Usage Ratio
+      t: Доля использования
 
     - key: featureExperience.used_it
-      t: Have used it
+      t: Использовал
     - key: featureExperience.know_not_used
-      t: Know what it is, but haven't used it
+      t: Знаю, но не использовал
     - key: featureExperience.never_heard_not_sure
-      t: Never heard of it/Not sure what it is
+      t: Никогда не слышал/Не уверен, что это
 
     - key: featureExperience.used_it.long
-      t: Have used it
+      t: Использовал
     - key: featureExperience.know_not_used.long
-      t: Know what it is, but haven't used it
+      t: Знаю, но не использовал
     - key: featureExperience.never_heard_not_sure.long
-      t: Never heard of it/Not sure what it is
+      t: Никогда не слышал/Не уверен, что это
 
     # Feature Overview
     - key: block.title.featuresOverview
