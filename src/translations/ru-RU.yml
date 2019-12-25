@@ -531,61 +531,61 @@ translations:
 
     # experience
     - key: block.title.toolExperience
-      t: ${name} Experience Over Time
+      t: Опыт в ${name} с течением времени
     - key: block.description.toolExperience
-      t: Respondent's experience with ${name}.
+      t: Опыт работы участника опроса с ${name}.
 
     - key: toolExperience.never_heard.long
-      t: I've never heard of it
+      t: Никогда не слышал(а)
     - key: toolExperience.never_heard.short
-      t: Never heard of it
+      t: Никогда не слышал
     - key: toolExperience.never_heard.extrashort
-      t: Never heard
+      t: Не слышал
 
     - key: toolExperience.not_interested.long
-      t: I've HEARD of it, and am NOT interested
+      t: СЛЫШАЛ(а), но не интересно
     - key: toolExperience.not_interested.short
-      t: Heard of it, not interested
+      t: Слышал, не интересно
     - key: toolExperience.not_interested.extrashort
-      t: Not interested
+      t: Не интересно
 
     - key: toolExperience.interested.long
-      t: I've HEARD of it, and WOULD like to learn it
+      t: СЛЫШАЛ(а) и ХОЧУ изучить
     - key: toolExperience.interested.short
-      t: Heard of it, would like to learn
+      t: Слышал, хочу изучить
     - key: toolExperience.interested.extrashort
-      t: Interested
+      t: Интересно
 
     - key: toolExperience.would_use.long
-      t: I've USED it before, and WOULD use it again
+      t: ИСПОЛЬЗОВАЛ(а) ранее и БУДУ использовать снова
     - key: toolExperience.would_use.short
-      t: Used it, would use again
+      t: Использовал и буду использовать
     - key: toolExperience.would_use.extrashort
-      t: Would use again
+      t: Буду использовать снова
 
     - key: toolExperience.would_not_use.long
-      t: I've USED it before, and would NOT use it again
+      t: ИСПОЛЬЗОВАЛ(а) ранее, но НЕ БУДУ использовать снова
     - key: toolExperience.would_not_use.short
-      t: Used it, would not use again
+      t: Использовал, но не буду использовать
     - key: toolExperience.would_not_use.extrashort
-      t: Would not use
+      t: Не буду использовать снова
 
 
     - key: toolExperience.negative_opinion.extrashort
-      t: Negative opinions
+      t: Негативное отношение
     - key: toolExperience.positive_opinion.extrashort
-      t: Positive opinions
+      t: Положительное отношение
     - key: toolExperience.have_not_used.extrashort
-      t: Have not used
+      t: Не использовал(а)
     - key: toolExperience.have_used.extrashort
-      t: Have used
+      t: Использовал(а)
 
     - key: toolExperience.total_respondents.long
-      t: Total Respondents
+      t: Всего участников
     - key: toolExperience.total_respondents.short
-      t: Total Respondents
+      t: Всего участников
     - key: toolExperience.total_respondents.extrashort
-      t: Total Respondents
+      t: Всего участников
 
     # other category tools
     - key: block.title.category-other-tools
