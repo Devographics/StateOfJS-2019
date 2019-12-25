@@ -455,16 +455,16 @@ translations:
 
     # rankings/bump chart
     - key: block.title.toolExperienceRanking
-      t: Rankings
+      t: Рейтинги
     - key: block.description.toolExperienceRanking
       t: >
-          Awareness, interest, and satisfaction ratio rankings.
+          Рейтинги по уровню узнаваемости, интереса и удовлетворенности.
     - key: opinions.legends.awareness_ratio
-      t: Awareness
+      t: Узнаваемость
     - key: opinions.legends.interest_ratio
-      t: Interest
+      t: Интерес
     - key: opinions.legends.satisfaction_ratio
-      t: Satisfaction
+      t: Удовлетворенность
 
     # overview
     - key: block.title.toolsSectionOverview
