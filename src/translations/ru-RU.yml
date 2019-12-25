@@ -589,9 +589,9 @@ translations:
 
     # other category tools
     - key: block.title.category-other-tools
-      t: Other Tools
+      t: Другие инструменты
     - key: block.description.category-other-tools
-      t: Other tools in this category (freeform answers).
+      t: Другие инструменты в этой категории (свободный формат ответа)
 
     ###########################################################################
     # Other Tools
