@@ -476,22 +476,21 @@ translations:
 
     # Arrows (Movement over time)
     - key: block.title.toolsArrow
-      t: Changes Over Time
+      t: Изменения во времени
     # - key: block.description.toolsArrow
     #   t: >
     #       How has the ecosystem changed over three years?
     - key: block.description.toolsArrow
       t: >
-          Each line goes from 2016 to 2019. A higher point means a technology has been used by more people,
-          and a point further to the right means more users want to learn it; or have used it and would use it again.
+          Каждая линия проходит с 2016 по 2019 год. Чем выше точка, тем больше людей использовало технологию.
+          Чем правее точка, тем больше людей хотят изучить её или уже использовали и будут снова пользоваться ей.
 
     - key: amelia.bio
       t: >
-        Amelia Wattenberger is a frontend developer and designer focused on data visualization.
-        She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
-        a guide to creating your own data visualizations,
-        and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger)
-        and [her site](https://wattenberger.com/).
+        Amelia Wattenberger - фронтенд разработчик и дизайнер, сосредоточенная на визуализации данных.
+        Она автор руководства по созданию собственных визуализаций данных [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
+        так же она делится мыслями и практическими примерами в [Twitter](https://twitter.com/Wattenberger)
+        и на [своём сайте](https://wattenberger.com/).
 
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
