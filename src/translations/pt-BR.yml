@@ -944,35 +944,35 @@ translations:
     - key: general.title
       t: State of JavaScript 2019
     - key: general.description
-      t: Discover the most popular JavaScript features & technologies of the year.
+      t: Descubra as tecnologias e funcionalidades do JavaScript mais populares do ano.
     - key: general.stay_tuned
-      t: Stay Tuned
+      t: Fique ligado
     - key: general.leave_your_email
-      t: "If you'd like to know when we release additional results or announce next year's edition, just leave us your email below:"
+      t: "Caso tenha interesse em saber sobre lançamentos de novos resultados ou sobre a edição do ano que vem, deixe o seu email abaixo:" 
     - key: general.your_email
-      t: Your Email
+      t: Seu Email
     - key: general.notify_me
-      t: Notify Me
+      t: Me avise
     - key: general.help_us_translate
-      t: Help translate the survey →
+      t: Ajude a traduzir a pesquisa →
     - key: general.not_found
       t: >
 
           ## Error 404
 
-          Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/State-of-JS-2019/issues) if you think something might be broken.
+          Desculpe, mas não conseguimos encontrar esta página. Caso, ache que alguma coisa está quebrada, por favor [abra uma issue](https://github.com/StateOfJS/State-of-JS-2019/issues)
     - key: general.back_to_intro
-      t: Back to introduction
+      t: Voltar para a Introdução
     - key: general.close_nav
-      t: Close navigation menu
+      t: Fechar o menu de navegação
     - key: general.completion_percentage
-      t: 'Completion Percentage:'
+      t: 'Porcentagem de Conclusão:'
     - key: general.previous
-      t: 'Previous:'
+      t: 'Anterior:'
     - key: general.next
-      t: 'Next:'
+      t: 'Próximo:'
     - key: general.start
-      t: Start
+      t: Iniciar
 
     # partners
     - key: partners.our_partners
