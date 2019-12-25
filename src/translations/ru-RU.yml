@@ -396,26 +396,26 @@ translations:
 
     # general
     - key: block.tool.links
-      t: Links
+      t: Ссылки
     - key: block.tool.github_link
       t: GitHub
     - key: block.tool.github_stars
-      t: stars
+      t: звёзд
     - key: block.tool.homepage_link
-      t: Homepage
+      t: Сайт
     - key: block.tool.npm_link
       t: NPM
 
     - key: block.title.other-methodologies
-      t: Other Methodologies
+      t: Другие методологии
 
     - key: block.title.companySize_heatmap
-      t: Usage by Company Size
+      t: Использование в разбивке по размеру компании.
     - key: block.description.companySize_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          company size ranges.
+          Как распределенно применение каждой технлогии среди ответивших, которые
+          выбрали разные диапазоны размеров компаний.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
@@ -425,13 +425,13 @@ translations:
 
 
     - key: block.title.workExperience_heatmap
-      t: Usage by Years Of Experience
+      t: Использование по длительности опыта
     - key: block.description.workExperience_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          experience ranges. Note that the experience in question here is general JavaScript experience, not
-          experience with a specific technology.
+          Как распределенно применение каждой технлогии среди ответивших, которые
+          выбрали разные диапазоны длительности опыта. Обратите внимание, рассматриваемый
+          опыт - это общий опыт работы с JavaScript, а не опыт с конкретной технологией.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
@@ -440,12 +440,12 @@ translations:
       # a higher-than-overall-average ratio for a given bracket.
 
     - key: block.title.salary_heatmap
-      t: Usage by Salary Range
+      t: Использование по размеру зарплаты
     - key: block.description.salary_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          salary ranges.
+          Как распределенно применение каждой технлогии среди ответивших, которые
+          выбрали разные диапазоны размеров зарплат.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “yearly salary” bracket.
