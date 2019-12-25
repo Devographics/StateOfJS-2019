@@ -524,10 +524,10 @@ translations:
 
     # happiness
     - key: block.title.happiness
-      t: Overall Happiness
+      t: Общее счастье
     - key: block.description.happiness
       t: |
-          On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
+          Насколько разработчики довольны текущим положением дел в этой категории? По шкале от одного (очень недоволен) до пяти (очень доволен).
 
     # experience
     - key: block.title.toolExperience
