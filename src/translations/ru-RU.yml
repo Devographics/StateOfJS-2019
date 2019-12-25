@@ -357,17 +357,17 @@ translations:
 
     # Feature Overview
     - key: block.title.featuresOverview
-      t: Usage Overview
+      t: Анализ использования
     - key: block.description.featuresOverview
       t: >
-          This chart presents the various adoption rates for all features, grouped by category.
+          Данный график представляет степень применения различных возможностей JavaScript, объединенных по категориям.
 
 
-          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
+          Размер <span class="text-teal-darker text-bold">внешнего круга</span> соответствует общему количеству пользователей, которые знают о возможности,
+          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно изпользовал её.
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents.
+          Наведите на любой круг, чтобы увидеть <span class="text-blackpink text-bold">всплывающую подсказку</span> с подробными данными об общем количестве опрошенных.
 
     # Features Section Overview
     - key: block.title.featuresSectionOverview
