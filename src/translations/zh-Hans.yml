@@ -431,7 +431,7 @@ translations:
       t: |
 
           在不同经验的受访者之间，每种技术的使用情况如何分布。
-          请注意，这里的经验是指通用的 JavaScript 经验，
+          请注意，这里的经验是指通用的 JavaScript 经验，
           而不仅限于某个特定技术。
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
