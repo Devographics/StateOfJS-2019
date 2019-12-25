@@ -494,33 +494,33 @@ translations:
 
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
-      t: Satisfaction vs Usage
+      t: Сравнение удовлетворенности и использования
     - key: block.description.scatterplotOverview.satisfaction
       t: >
-          This chart shows each technology’s **satisfaction ratio** over its total **user count**.
-          It can be divided into four quadrants:
+          Эта диаграмма показывает **рейтинг удовлетворения** каждой технологией относительно её общего **количества пользователей**.
+          Делиться на четыре квадранта:
 
-          - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
+          - **ПРОБУЙ**: Низкий уровень использования, высокий уровень удовлетворённости. Технологии, за которыми стоит следить.
 
-          - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
+          - **ПРИМЕНЯЙ**: Высокий уровень использования, высокий уровень удовлетворённости. Технологии, которые можно спокойно применять.
 
-          - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
+          - **ИЗБЕГАЙ**: Низкий уровень использования, низкий уровень удовлетворённости. Технологии, которые лучше избегать в настоящий момент.
 
-          - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+          - **ПРОАНАЛИЗИРУЙ**: Высокий уровень использования, низкий уровень удовлетворённости. Технологии, о которых стоит подумать, чтобы перестать их использовать.
     - key: block.description.scatterplotOverview.interest
       t: >
-          This chart shows each technology’s **interest ratio** over its total **user count** (as defined by respondents who are aware of a technology but *haven't* used it yet).
+          Эта диаграмма показывает **рейтинг интереса** к каждой технологии относительно её общего **количества пользователей** (определяется по участникам, которым известно о технологии, но еще **не** пользовались ей).
 
-          (Note that low user numbers can be due to either an unknown technology; or a technology with a lot of respondents already using it.)
+          (Обратите внимание, низкое количество пользователей может быть из-за того, что технология либо не известна, либо её уже многие используют)
 
     - key: quadrants.assess
-      t: Assess
+      t: Пробуй
     - key: quadrants.adopt
-      t: Adopt
+      t: Применяй
     - key: quadrants.avoid
-      t: Avoid
+      t: Избегай
     - key: quadrants.analyze
-      t: Analyze
+      t: Проанализируй
 
     # happiness
     - key: block.title.happiness
