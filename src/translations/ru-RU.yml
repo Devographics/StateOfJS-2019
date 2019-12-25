@@ -468,11 +468,11 @@ translations:
 
     # overview
     - key: block.title.toolsSectionOverview
-      t: Category Overview
+      t: Общий обзор
     - key: block.description.toolsSectionOverview
       t: >
-          Overview of opinions on the technologies surveyed. Darker segments represent positive opinions,
-          while lighter segments correspond to negative sentiment.
+          Обзор мнений по исследуемым технологиям. Темные сегменты обозначают положительное отношение,
+          тогда как светлые соответствуют негативному.
 
     # Arrows (Movement over time)
     - key: block.title.toolsArrow
