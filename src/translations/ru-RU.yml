@@ -371,24 +371,24 @@ translations:
 
     # Features Section Overview
     - key: block.title.featuresSectionOverview
-      t: Usage Overview
+      t: Анализ использования
     - key: block.description.featuresSectionOverview
       t: >
-          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
+          Размер <span class="text-teal-darker text-bold">внешнего круга</span> соответствует общему количеству пользователей, которые знают о возможности,
+          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно изпользовал её.
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackred text-bold">overlay</span> representing the total number of survey respondents.
+          Наведите на любой круг, чтобы увидеть <span class="text-blackpink text-bold">всплывающую подсказку</span> с подробными данными об общем количестве опрошенных.
 
     - key: block.title.featuresExperienceHeatmap
-      t: Usage by Years Of Experience
+      t: Использование по длительности опыта
     - key: block.description.featuresExperienceHeatmap
       t: |
-          The “overall” column shows overall usage for each feature (respondents who selected “have used it”),
-          while the following columns show the usage ratio for each “years of experience” bracket.
+          Столбец “всего” показывает общее использование каждой возможности (участники, которые отметили пункт “Использовал”),
+          а следующие столбцы отображают долю использования по длительности опыта, в годах.
 
-          A brighter <span class="text-teal text-bold">teal</span> background indicates
-          a higher-than-overall-average ratio for a given bracket.
+          Ярко-<span class="text-teal text-bold">бирюзовый</span> фон обозначает,
+          что доля для данной группы выше среднего показателя.
 
     ###########################################################################
     # Tools & Methodologies
