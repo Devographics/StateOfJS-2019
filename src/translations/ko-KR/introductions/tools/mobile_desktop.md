@@ -4,4 +4,4 @@ page:   mobile_desktop
 locale: ko-KR
 ---
 
-JavaScript for mobile devices and desktop apps
+모바일 기기와 데스크톱 앱에서의 자바스크립트

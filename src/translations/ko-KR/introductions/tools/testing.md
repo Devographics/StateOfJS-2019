@@ -4,4 +4,4 @@ page:   testing
 locale: ko-KR
 ---
 
-Tools for testing your code.
+코드를 테스트하는 도구.

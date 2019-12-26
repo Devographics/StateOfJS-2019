@@ -4,6 +4,7 @@ page: opinions
 locale: ko-KR
 ---
 
-Sometimes the best way to take the pulse of a community is to just go ahead and ask. From your opinion about JavaScript's rate of change, to more thorny questions like whether JavaScript is moving in the right direction, you finally had a chance to tell us exactly what's on your mind!
+때때로 공동체의 흐름을 읽는 가장 좋은 방법은 단도직입적으로 물어보는 것입니다. 자바스크립트가 변화하는 속도부터 정말 자바스크립트가 올바른 방향으로 움직이고 있는지 같은 좀 더 까다로운 질문들까지, 여러분의 속마음을 제대로 이야기할 수 있는 기회가 여러분들에게 주어졌습니다!
 
-For each of the following statements, we asked you how much you agreed on a 5-point scale. 
+아래의 각 서술에 대해, 5점 척도로 여러분이 얼마나 동의하시는지를 여쭤봤습니다.
+ 

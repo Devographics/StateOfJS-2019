@@ -4,4 +4,4 @@ page: demographics
 locale: ko-KR
 ---
 
-This year's State of JavaScript was the survey's fourth edition, and it reached 21,717 respondents. It was interesting to see that despite few people identifying as pure back-end developers, our respondents still feel quite comfortable dealing with development on the server.
+올해의 State of JavaScript는 네 번째 설문으로, 총 21,717 명이 응답해주셨습니다. 순수 백엔드 개발자로 보이는 분이 거의 없는데도 응답자분들이 서버 개발을 다루는 데 꽤 편안해 보이는 게 흥미로웠습니다.
