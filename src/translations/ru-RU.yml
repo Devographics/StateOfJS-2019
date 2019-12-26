@@ -968,7 +968,7 @@ translations:
     - key: general.close_nav
       t: Закрыть меню
     - key: general.completion_percentage
-      t: 'Процент выполнения:'
+      t: 'Процент заполнения:'
     - key: general.previous
       t: 'Ранее:'
     - key: general.next
