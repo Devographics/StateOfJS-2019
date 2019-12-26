@@ -36,4 +36,4 @@ O site está hospedado no IBM Plex Mono. Perguntas? Algum feedback? [Entre em co
 
 Agora vejamos o que o JavaScript andou aprontando esse ano!
 
-<span class="conclusion__byline">– Sacha and Raphaël</span>
+<span class="conclusion__byline">– Sacha e Raphaël</span>

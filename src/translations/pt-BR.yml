@@ -171,7 +171,7 @@ translations:
     - key: cssProficiency.axis_legend
       t: Proficiência em CSS
     - key: cssProficiency.0.short
-      t: Nenhum
+      t: Nenhuma Proficiência
     - key: cssProficiency.0.long
       t: 'Praticamente nenhum conhecimento de CSS'
     - key: cssProficiency.1.short
@@ -195,11 +195,11 @@ translations:
     - key: block.title.backendProficiency
       t: Proficiência no Back-end
     - key: block.description.backendProficiency
-      t: Quão proficiente você é em desenvolvimento back-end?
+      t: Qual o seu grau de proficiência em desenvolvimento back-end?
     - key: backendProficiency.axis_legend
       t: Proficiência em Back-End
     - key: backendProficiency.0.short
-      t: Nenhuma
+      t: Nenhuma Proficiência
     - key: backendProficiency.0.long
       t: 'Incapaz de lidar com qualquer trabalho back-end'
     - key: backendProficiency.1.short
@@ -358,11 +358,11 @@ translations:
     - key: block.title.featuresOverview
       t: Visão Geral de Uso
     - key: block.description.featuresOverview
-      t: >
+      t: |
           Este gráfico apresenta as várias taxas de adoção para todas as funcionalidades, agrupadas por categoria.
 
           O tamanho do <span class="text-teal-darker text-bold">círculo externo</span> corresponde ao número total de usuários que conhecem
-          uma funcionalidade, enquanto que o <span class="text-teal text-bold">círculo interno</span> representa aqueles que realmente usaram-na.
+          uma funcionalidade, enquanto que o <span class="text-teal text-bold">círculo interno</span> representa aqueles que realmente a usaram.
 
           Arraste o mouse em cima de cada nó para visualizar dados detalhados juntamente com uma <span class="text-blackpink text-bold">camada</span> 
           representando o total de participantes.
@@ -530,7 +530,7 @@ translations:
 
     # experience
     - key: block.title.toolExperience
-      t: ${name} Experiência em relação ao Tempo
+      t: Experiência em relação ao Tempo - ${name}
     - key: block.description.toolExperience
       t: Experiência do participante com ${name}.
 
@@ -900,7 +900,7 @@ translations:
     - key: share.site.title
       t: Descubra os resultados da StateOf JavaScript 2019
     - key: share.site.twitter_text
-      t: 'Descubra os resultados Discover the State Of JavaScript 2019 results ${link} #StateOfJS'
+      t: 'Descubra os resultados da pesquisa State Of JavaScript 2019 ${link} #StateOfJS'
     - key: share.site.subject
       t: Resultados da pesquisa State Of JavaScript
     - key: share.site.body
