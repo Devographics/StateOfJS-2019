@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   front_end_frameworks
-locale: en-US
+locale: ru-RU
 ---
 
-Front-end frameworks and libraries.
+Front-end фреймворки и библиотеки.
