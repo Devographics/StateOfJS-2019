@@ -58,7 +58,7 @@ translations:
     - key: salary.100_200.shorter
       t: 100~200k
     - key: salary.more_than_200.long
-      t: more than $200k
+      t: больше $200k
     - key: salary.more_than_200.short
       t: $200k+
     - key: salary.more_than_200.shorter
@@ -156,7 +156,7 @@ translations:
     - key: companySize.more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
-      t: Количество Сотрудников
+      t: Количество сотрудников
 
     # sources
     - key: sources.other_unknown
@@ -287,7 +287,7 @@ translations:
     - key: block.title.workExperience
       t: Опыт
     - key: block.description.workExperience
-      t: Как долго вы писали на JavaScript.
+      t: Как долго вы писали на JavaScript?
     - key: block.title.companySize
       t: Размер компании
     - key: block.description.companySize
@@ -364,7 +364,7 @@ translations:
 
 
           Размер <span class="text-teal-darker text-bold">внешнего круга</span> соответствует общему количеству пользователей, которые знают о возможности,
-          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно изпользовал её.
+          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно использовал её.
 
 
           Наведите на любой круг, чтобы увидеть <span class="text-blackpink text-bold">всплывающую подсказку</span> с подробными данными об общем количестве опрошенных.
@@ -375,7 +375,7 @@ translations:
     - key: block.description.featuresSectionOverview
       t: >
           Размер <span class="text-teal-darker text-bold">внешнего круга</span> соответствует общему количеству пользователей, которые знают о возможности,
-          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно изпользовал её.
+          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно использовал её.
 
 
           Наведите на любой круг, чтобы увидеть <span class="text-blackpink text-bold">всплывающую подсказку</span> с подробными данными об общем количестве опрошенных.
@@ -414,7 +414,7 @@ translations:
     - key: block.description.companySize_heatmap
       t: |
 
-          Как распределенно применение каждой технлогии среди ответивших, которые
+          Как распределено применение каждой технологии среди ответивших, которые
           выбрали разные диапазоны размеров компаний.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
@@ -429,7 +429,7 @@ translations:
     - key: block.description.workExperience_heatmap
       t: |
 
-          Как распределенно применение каждой технлогии среди ответивших, которые
+          Как распределено применение каждой технологии среди ответивших, которые
           выбрали разные диапазоны длительности опыта. Обратите внимание, рассматриваемый
           опыт - это общий опыт работы с JavaScript, а не опыт с конкретной технологией.
 
@@ -444,7 +444,7 @@ translations:
     - key: block.description.salary_heatmap
       t: |
 
-          Как распределенно применение каждой технлогии среди ответивших, которые
+          Как распределено применение каждой технологии среди ответивших, которые
           выбрали разные диапазоны размеров зарплат.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
@@ -498,7 +498,7 @@ translations:
     - key: block.description.scatterplotOverview.satisfaction
       t: >
           Эта диаграмма показывает **рейтинг удовлетворения** каждой технологией относительно её общего **количества пользователей**.
-          Делиться на четыре квадранта:
+          Делится на четыре квадранта:
 
           - **ПРОБУЙ**: Низкий уровень использования, высокий уровень удовлетворённости. Технологии, за которыми стоит следить.
 
@@ -511,7 +511,7 @@ translations:
       t: >
           Эта диаграмма показывает **рейтинг интереса** к каждой технологии относительно её общего **количества пользователей** (определяется по участникам, которым известно о технологии, но еще **не** пользовались ей).
 
-          (Обратите внимание, низкое количество пользователей может быть из-за того, что технология либо не известна, либо её уже многие используют)
+          (Обратите внимание, низкое количество пользователей может быть из-за того, что технология либо неизвестна, либо её уже многие используют)
 
     - key: quadrants.assess
       t: Пробуй
@@ -992,7 +992,7 @@ translations:
     - key: block.title.usage-ratio
       t: Рейтинг использования
     - key: block.description.usage-ratio
-      t: Рейтинг по уровню использования среди пользоватeлей, знакомых с технологией.
+      t: Рейтинг по уровню использования среди пользователей, знакомых с технологией.
     - key: users_percentage
       t: Доля пользователей, %
     - key: users_count
