@@ -649,33 +649,33 @@ translations:
 
     # blogs & magazines
     - key: block.title.blogs_news_magazines
-      t: Blogs & Magazines
+      t: Блоги и журналы
     - key: block.description.blogs_news_magazines
-      t: Which JS-related blogs/magazines/etc. do you read?
+      t: Какие блоги, журналы (и т.п.), касающиеся JavaScript, вы читаете?
     - key: block.title.blogs_news_magazines_others
-      t: Other Blogs & Magazines
+      t: Другие блоги и журналы
     - key: block.description.blogs_news_magazines_others
-      t: Other answers (freeform field).
+      t: Другие ответы (поле со свободной формой ответа).
 
     # sites & courses
     - key: block.title.sites_courses
-      t: Sites & Courses
+      t: Сайты и курсы
     - key: block.description.sites_courses
-      t: Which JS-related sites/courses/etc. do you consult?
+      t: К каким сайтам, курсам (и т.п.) по JavaScript вы обращаетесь?
     - key: block.title.sites_courses_others
-      t: Other Sites & Courses
+      t: Другие сайты и курсы
     - key: block.description.sites_courses_others
-      t: Other answers (freeform field).
+      t: Другие ответы (поле со свободной формой ответа).
 
     # podcasts
     - key: block.title.podcasts
-      t: Podcasts
+      t: Подкасты
     - key: block.description.podcasts
-      t: Which JavaScript or programming-related podcasts do you listen to?
+      t: Какие подкасты по JavaScript или программированию вы слушаете?
     - key: block.title.podcasts_others
-      t: Other Podcasts
+      t: Другие подкасты
     - key: block.description.podcasts_others
-      t: Other answers (freeform field).
+      t: Другие ответы (поле со свободной формой ответа).
 
     ###########################################################################
     # Opinions
