@@ -647,188 +647,184 @@ translations:
 
     # blogs & magazines
     - key: block.title.blogs_news_magazines
-      t: Blogs & Magazines
+      t: Blogs e Revistas
     - key: block.description.blogs_news_magazines
-      t: Which JS-related blogs/magazines/etc. do you read?
+      t: Quais blogs/revistas/etc relacionados à JavaScript você costuma ler?
     - key: block.title.blogs_news_magazines_others
-      t: Other Blogs & Magazines
+      t: Outros Blogs e Revistas
     - key: block.description.blogs_news_magazines_others
-      t: Other answers (freeform field).
+      t: Outras respostas (campo aberto).
 
     # sites & courses
     - key: block.title.sites_courses
-      t: Sites & Courses
+      t: Sites e Cursos
     - key: block.description.sites_courses
-      t: Which JS-related sites/courses/etc. do you consult?
+      t: Quais sites/cursos/etc relacionados à JavaScript você costuma consultar?
     - key: block.title.sites_courses_others
-      t: Other Sites & Courses
+      t: Outros Sites e Cursos
     - key: block.description.sites_courses_others
-      t: Other answers (freeform field).
+      t: Outras respostas (campo aberto).
 
     # podcasts
     - key: block.title.podcasts
       t: Podcasts
     - key: block.description.podcasts
-      t: Which JavaScript or programming-related podcasts do you listen to?
+      t: Quais podcasts relacionados à JavaScript ou a programação você costuma ouvir?
     - key: block.title.podcasts_others
-      t: Other Podcasts
+      t: Outros Podcasts
     - key: block.description.podcasts_others
-      t: Other answers (freeform field).
+      t: Outras respostas (campo aberto).
 
     ###########################################################################
     # Opinions
     ###########################################################################
 
     - key: block.title.easy-to-learn
-      t: Learning Curve
+      t: Curva de Aprendizado
     - key: block.description.easy-to-learn
-      t: JavaScript is easy to learn”
+      t: "JavaScript é fácil de aprender"
 
     - key: block.title.js_moving_in_right_direction
-      t: Direction
+      t: Direcção
     - key: block.description.js_moving_in_right_direction
-      t: “JavaScript is moving in the right direction”
+      t: “JavaScript está indo na direção correta”
 
     - key: block.title.building_js_apps_overly_complex
-      t: Complexity
+      t: Complexidade
     - key: block.description.building_js_apps_overly_complex
-      t: “Building JavaScript apps is overly complex right now”
+      t: “Construir aplicações JavaScript se tornou muito mais complexo”
 
     - key: block.title.js_over_used_online
-      t: Usage
+      t: Uso
     - key: block.description.js_over_used_online
-      t: “JavaScript is over-used online”
+      t: “JavaScript é usado em excesso online”
 
     - key: block.title.enjoy_building_js_apps
-      t: Enjoyment
+      t: Satisfação
     - key: block.description.enjoy_building_js_apps
-      t: “I enjoy building JavaScript apps”
+      t: “Estou gosto de construir aplicações JavaScript”
 
     - key: block.title.would_like_js_to_be_main_lang
-      t: Main Language
+      t: Linguagem Principal
     - key: block.description.would_like_js_to_be_main_lang
-      t: “I would like JavaScript to be my main programming language”
+      t: “Eu gostaria de ter JavaScript como a minha principal linguagem de programação”
 
     - key: block.title.js_ecosystem_changing_to_fast
-      t: Rate of Change
+      t: Velocidade de Mudança
     - key: block.description.js_ecosystem_changing_to_fast
-      t: “The JavaScript ecosystem is changing too fast”
+      t: “O ecossistema do JavaScript está mudando muito rápido”
 
     - key: block.title.missing-features
-      t: Missing Features
+      t: Funcionalidades ausentes
     - key: block.description.missing-features
-      t: What do developers feel is currently missing from JavaScript?
+      t: O que os desenvolvedores acham que está em falta no JavaScript?
 
       # opinion scale
     - key: opinions.0.short
-      t: Strongly Disagree
+      t: Discordo Totalmente
     - key: opinions.1.short
-      t: Disagree
+      t: Discordo
     - key: opinions.2.short
-      t: Neutral
+      t: Neutro
     - key: opinions.3.short
-      t: Agree
+      t: Concordo
     - key: opinions.4.short
-      t: Strongly Agree
+      t: Concordo Totalmente
 
     - key: opinions.0.long
-      t: Strongly Disagree
+      t: Discordo Totalmente
     - key: opinions.1.long
-      t: Disagree
+      t: Discordo
     - key: opinions.2.long
-      t: Neutral
+      t: Neutro
     - key: opinions.3.long
-      t: Agree
+      t: Concordo
     - key: opinions.4.long
-      t: Strongly Agree
+      t: Concordo Totalmente
 
     ###########################################################################
     # Awards
     ###########################################################################
 
     - key: awards.runner_ups
-      t: Runner Ups
+      t: 2º e 3º Colocados
 
     # feature_adoption
     - key: award.feature_adoption_award.title
-      t: Most Adopted Feature
+      t: Funcionalidade mais adotada
     - key: award.feature_adoption_award.description
       t: |
-          Awarded to the most adopted JavaScript feature.
+          Concedido à funcionalidade mais adotada do JavaScript.
     - key: award.feature_adoption_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used JavaScript feature this year.
+          Com **${items[0].value}** usuários ${items[0].name}
+          é a funcionalidade mais utilizada do JavaScript este ano.
 
     # tool_satisfaction
     - key: award.tool_satisfaction_award.title
-      t: Highest Satisfaction
+      t: Maior Satisfação
     - key: award.tool_satisfaction_award.description
       t: |
-          Awarded to the technology with the highest
-          percentage of satisfied users.
+          Concedido à tecnologia com a maior porcentagem de usuários satisfeitos.
     - key: award.tool_satisfaction_award.comment
       t: |
-          With **${items[0].value}** of users willing to use it again,
-          ${items[0].name} proves once more it’s not kidding around.
+          Com **${items[0].value}** de usuários que usariam novamente,
+          ${items[0].name} prova mais uma vez que não está para brincadeiras.
 
     # tool_interest
     - key: award.tool_interest_award.title
-      t: Highest Interest
+      t: Maior Interesse
     - key: award.tool_interest_award.description
       t: |
-          Awarded to the technology developers
-          are most interested in learning.
+          Concedido à tecnologia com o maior número de desenvolvedores interessados em aprender.
     - key: award.tool_interest_award.comment
       t: |
-          **${items[0].value}** of developers who have heard
-          about ${items[0].name} want to learn it.
-          That’s some serious interest!
+          **${items[0].value}** de desenvolvedores que ouviram falar a sobre ${items[0].name} querem aprender sobre a tecnologia.
+          Isso é que é interesse!
 
     # tool_usage
     - key: award.tool_usage_award.title
-      t: Most Used Technology
+      t: Tecnologia Mais Usada
     - key: award.tool_usage_award.description
       t: |
-          Awarded to technology with the largest user base.
+          Concedido à tecnologia com a maior base de usuários.
     - key: award.tool_usage_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used technology this year.
+          Com **${items[0].value}** usuários ${items[0].name}
+          é a tecnologia mais usada desse ano.
 
     # resource_usage
     - key: award.resource_usage_award.title
-      t: Most Used Resource
+      t: Recurso Mais Usado
     - key: award.resource_usage_award.description
       t: |
-          Awarded to the resource with the largest user base.
+          Concedido ao recurso com a maior base de usuários.
     - key: award.resource_usage_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used resource this year.
+          Com **${items[0].value}** usuários ${items[0].name}
+          é o recurso mais utilizado desse ano.
 
     # tool_mention
     - key: award.tool_mention_award.title
-      t: Most Mentioned
+      t: Mais Mencionado
     - key: award.tool_mention.description
       t: |
-          Awarded to the library mentioned
-          the most in the “other libraries” answer.
+          Concedido à biblioteca mais mencionada na resposta "Outras Bibliotecas".
     - key: award.tool_mention_award.comment
       t: |
-          ${items[0].name} collected **${items[0].value}** mentions,
-          making it the most submitted freeform answer by far.
+          ${items[0].name} coletou **${items[0].value}** menções,
+          se tornando a principal resposta de campo aberto com folga.
 
     # prediction_award
     - key: award.prediction_award.title
-      t: Prediction Award
+      t: Prêmio de Futurologia
     - key: award.prediction_award.description
       t: |
-          Awarded to an up-and-coming technology that might take over… or not?
+          Concedido a uma tecnologia promissora que pode dominar geral, ou não...
     - key: award.prediction_award.comment
       t: |
-          ${items[0].name} made its explosive debut in this year's survey and we can't
-          wait to see where it goes from here
+          ${items[0].name} fez a sua entrada triunfal na pesquisa desse ano e 
+          mal podemos esperar pra ver até onde ela vai chegar!
 
     ###########################################################################
     # Generic
