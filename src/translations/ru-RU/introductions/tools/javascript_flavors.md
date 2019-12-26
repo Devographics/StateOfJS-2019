@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   javascript_flavors
-locale: en-US
+locale: ru-RU
 ---
 
-Languages that compile to JavaScript
+Языки, компилируемые в JavaScript.
