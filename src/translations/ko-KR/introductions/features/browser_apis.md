@@ -4,4 +4,4 @@ page:   browser_apis
 locale: ko-KR
 ---
 
-The features provided by the browser.
+브라우저에서 제공하는 기능입니다.

@@ -4,4 +4,4 @@ page:   syntax
 locale: ko-KR
 ---
 
-The grammar of JavaScript.
+JavaScript의 문법입니다.

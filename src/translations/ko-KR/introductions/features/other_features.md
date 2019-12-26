@@ -4,4 +4,4 @@ page:   other_features
 locale: ko-KR
 ---
 
-Other technologies and patterns.
+다른 기술과 패턴들입니다.

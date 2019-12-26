@@ -4,4 +4,4 @@ page:   language
 locale: ko-KR
 ---
 
-The vocabulary of JavaScript.
+JavaScript의 어휘들입니다.
