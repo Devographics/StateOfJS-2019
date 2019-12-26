@@ -842,61 +842,61 @@ translations:
     - key: page.tshirt
       t: Футболка
     - key: page.demographics
-      t: Demographics
+      t: Демография
     - key: page.overview
-      t: Overview
+      t: Обзор
     - key: page.features
-      t: Features
+      t: Возможности
     - key: page.other_features
-      t: Other Features
+      t: Другие возможности
     - key: page.javascript_flavors
-      t: JavaScript Flavors
+      t: Разновидности JavaScript
     - key: page.javascript_flavors.short
-      t: JavaScript Flavors
+      t: Разновидности JavaScript
     - key: page.javascript_flavors_others
-      t: Other Flavors
+      t: Другие разновидности
     - key: page.front_end_frameworks
-      t: Front End Frameworks
+      t: Front-end фреймворки
     - key: page.front_end_frameworks.short
-      t: Front End
+      t: Front-end
     - key: page.front_end_frameworks_others
-      t: Other Frameworks
+      t: Другие фреймворки
     - key: page.data_layer
-      t: Data Layer
+      t: Слой данных
     - key: page.data_layer.short
-      t: Data Layer
+      t: Слой данных
     - key: page.data_layer_others
-      t: Other Data Layer Tools
+      t: Другие инструменты
     - key: page.back_end_frameworks
-      t: Back End Frameworks
+      t: Back-end фреймворки
     - key: page.back_end_frameworks.short
-      t: Back End
+      t: Back-end
     - key: page.back_end_frameworks_others
-      t: Other Frameworks
+      t: Другие фреймворки
     - key: page.testing
-      t: Testing
+      t: Тестирование
     - key: page.testing.short
-      t: Testing
+      t: Тестирование
     - key: page.testing_others
-      t: Other Tools
+      t: Другие инструменты
     - key: page.mobile_desktop
       t: Mobile & Desktop
     - key: page.mobile_desktop.short
       t: Mobile & Desktop
     - key: page.mobile_desktop_others
-      t: Other Tools
+      t: Другие инструменты
     - key: page.other_tools
-      t: Other Tools
+      t: Другие инструменты
     - key: page.environments
-      t: Environments
+      t: Окружение
     - key: page.resources
-      t: Resources
+      t: Ресурсы
     - key: page.opinions
       t: Мнения
     - key: page.awards
       t: Награды
     - key: page.conclusion
-      t: Conclusion
+      t: Заключение
     - key: page.support
       t: Поддержите Нас
 
