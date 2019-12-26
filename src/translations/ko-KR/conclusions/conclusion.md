@@ -4,12 +4,12 @@ page: conclusion
 locale: ko-KR
 ---
 
-You know how you sometimes start tweaking a few lines of code here and there, then realize a couple functions could use some refactoring, and then one things leading to another you find yourself a few days later in the process of setting up a brand new stack complete with a database and GraphQL API?
+코드를 이렇게 저렇게 건드리다가 어떤 함수는 리팩토링을 좀 해볼 만 한 것 같고, 그러다 보니 하나가 둘을 불러오고, 며칠 뒤엔 완전히 새로운 데이터베이스와 GraphQL API 기술 스택을 세팅하고 있는, 그런 느낌 아시죠?
 
-This is what happened to us this year. And while it resulted in quite a few stressful evenings as we tried to wrap this up and release the State of JavaScript 2019 results in, well, 2019; it also means we now have a much more powerful and flexible stack to collect and analyze data going forward.
+올해 저희가 바로 그랬습니다. 그러다 보니 State of JavaScript 2019를... 어... 2019년 안에 공개하기 위해서 상당히 빡빡한 저녁을 보내야 했지만, 앞으로의 데이터를 모으고 분석할 수 있도록 훨씬 더 강력하고 유연한 스택을 갖게 됐습니다.
 
-This will come in handy to analyze the evolution of all the new tools starting to make waves such as Svelte, Stencil, Sporky, Nest, or Flutter. And yes, I did just make up one of those five, but admit it: you had a moment of doubt didn’t you?
+이 작업은 새로운 물결을 일으키기 시작한 Svelte, Stencil, Sporky, Nest, Flutter 등등 모든 도구들의 진화를 분석하는데 도움이 될 겁니다. 그래요, 다섯 개 중 한 개는 방금 새로 지어냈는데요, 인정하시죠. 방금 살짝 의심하긴 했죠?
 
-But don’t worry. No matter how many weirdly-named libraries the community keeps throwing at you, we’ll be there to help make sense of all this chaos… that is, if we’re not too busy going through yet another refactoring to get our code just perfect!
+하지만 걱정 마세요. 아무리 이상한 이름의 라이브러리들이 커뮤니티에서 활개를 치고 다니더라도, 저희가 이 모든 혼돈을 정리해 드릴테니까요… 그 때도 저희가 코드를 다시 완벽하게 리팩토링하느라 바쁘지만 않다면요!
 
 <span class="conclusion__byline">– Sacha & Raphaël</span>
