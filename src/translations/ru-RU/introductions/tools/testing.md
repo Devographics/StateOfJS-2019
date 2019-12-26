@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   testing
-locale: en-US
+locale: ru-RU
 ---
 
-Tools for testing your code.
+Инструменты для тестирования вашего кода.
