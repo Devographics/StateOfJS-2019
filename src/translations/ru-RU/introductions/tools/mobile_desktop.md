@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   mobile_desktop
-locale: en-US
+locale: ru-RU
 ---
 
-JavaScript for mobile devices and desktop apps
+JavaScript для приложений на мобильных устройствах и ПК.
