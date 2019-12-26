@@ -749,88 +749,88 @@ translations:
     ###########################################################################
 
     - key: awards.runner_ups
-      t: Runner Ups
+      t: Призовые места
 
     # feature_adoption
     - key: award.feature_adoption_award.title
-      t: Most Adopted Feature
+      t: Самая популярная возможность
     - key: award.feature_adoption_award.description
       t: |
-          Awarded to the most adopted JavaScript feature.
+          Награждается, как наиболее применяемая возможность JavaScript.
     - key: award.feature_adoption_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used JavaScript feature this year.
+          **${items[0].value}** пользователей в этом году
+          использовали ${items[0].name}.
 
     # tool_satisfaction
     - key: award.tool_satisfaction_award.title
-      t: Highest Satisfaction
+      t: Самый высокий уровень удовлетворённости
     - key: award.tool_satisfaction_award.description
       t: |
-          Awarded to the technology with the highest
-          percentage of satisfied users.
+          Награждается, как библиотека с наибольшим
+          процентом удовлетворённых пользователей.
     - key: award.tool_satisfaction_award.comment
       t: |
-          With **${items[0].value}** of users willing to use it again,
-          ${items[0].name} proves once more it’s not kidding around.
+          **${items[0].value}** пользователей хотят использовать его снова,
+          так ${items[0].name} ещё раз доказывает, что это не шутка.
 
     # tool_interest
     - key: award.tool_interest_award.title
-      t: Highest Interest
+      t: Самая высокая заинтересованность
     - key: award.tool_interest_award.description
       t: |
-          Awarded to the technology developers
-          are most interested in learning.
+          Награждается, как технология, которую
+          многие разработчики желают изучить.
     - key: award.tool_interest_award.comment
       t: |
-          **${items[0].value}** of developers who have heard
-          about ${items[0].name} want to learn it.
-          That’s some serious interest!
+          **${items[0].value}** разработчиков слышали
+          и хотят изучить ${items[0].name}.
+          Это значительный уровень заинтересованности.
 
     # tool_usage
     - key: award.tool_usage_award.title
-      t: Most Used Technology
+      t: Наиболее используемая технология
     - key: award.tool_usage_award.description
       t: |
-          Awarded to technology with the largest user base.
+          Награждается, как технология с самой большой базой пользователей.
     - key: award.tool_usage_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used technology this year.
+          **${items[0].value}** разработчиков в этом году
+          использовали ${items[0].name}.
 
     # resource_usage
     - key: award.resource_usage_award.title
-      t: Most Used Resource
+      t: Самый популярный ресурс
     - key: award.resource_usage_award.description
       t: |
-          Awarded to the resource with the largest user base.
+          Награждается, как ресурс с самой большой популярностью.
     - key: award.resource_usage_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used resource this year.
+          **${items[0].value}** разработчиков в этом году
+          посещали ${items[0].name}.
 
     # tool_mention
     - key: award.tool_mention_award.title
-      t: Most Mentioned
+      t: Самое упоминаемое
     - key: award.tool_mention.description
       t: |
-          Awarded to the library mentioned
-          the most in the “other libraries” answer.
+          Награждается, как самая упоминаемая библиотека
+          при ответе на вопрос "Другие библиотеки".
     - key: award.tool_mention_award.comment
       t: |
-          ${items[0].name} collected **${items[0].value}** mentions,
-          making it the most submitted freeform answer by far.
+          Библиотека ${items[0].name} была упомянута
+          **${items[0].value}** раз.
 
     # prediction_award
     - key: award.prediction_award.title
-      t: Prediction Award
+      t: Самая перспективная технология
     - key: award.prediction_award.description
       t: |
-          Awarded to an up-and-coming technology that might take over… or not?
+          Награждается, как технология, которая может стать лидером… или нет?
     - key: award.prediction_award.comment
       t: |
-          ${items[0].name} made its explosive debut in this year's survey and we can't
-          wait to see where it goes from here
+          ${items[0].name} мощно дебютировал в опросе этого года,
+          и нам не терпится увидеть, что будет дальше.
 
     ###########################################################################
     # Generic
