@@ -598,49 +598,49 @@ translations:
     ###########################################################################
 
     - key: block.title.utilities
-      t: Utilities
+      t: Утилиты
     - key: block.description.utilities
-      t: Which utility libraries do you regularly use?
+      t: Какие библиотеки-утилиты вы регулярно используете?
     - key: block.title.utilities_others
-      t: Other Utilities
+      t: Другие утилиты
     - key: block.description.utilities_others
-      t: Other utilities (freeform field).
+      t: Другие утилиты (поле со свободной формой ответа).
 
     - key: block.title.text_editors
-      t: Text Editors
+      t: Текстовые редакторы
     - key: block.description.text_editors
-      t: Which text editor(s) do you regularly use?
+      t: Какими текстовыми редакторами вы регулярно пользуетесь?
     - key: block.title.text_editors_others
-      t: Other Text Editors
+      t: Другие текстовые редакторы
     - key: block.description.text_editors_others
-      t: Other answers (freeform field).
+      t: Другие ответы (поле со свободной формой ответа).
 
     - key: block.title.browsers
-      t: Browsers
+      t: Браузеры
     - key: block.description.browsers
-      t: Which browser(s) do you primarily work in during initial development?
+      t: В каких браузерах вы в основном работаете при начальной разработке?
     - key: block.title.browsers_others
-      t: Other Browsers
+      t: Другие браузеры
     - key: block.description.browsers_others
-      t: Other answers (freeform field).
+      t: Другие ответы (поле со свободной формой ответа).
 
     - key: block.title.build_tools
-      t: Build Tools
+      t: Сборщики
     - key: block.description.build_tools
-      t: Which build tools do you use?
+      t: Какие сборщики вы используете?
     - key: block.title.build_tools_others
-      t: Other Build Tools
+      t: Другие сборщики
     - key: block.description.build_tools_others
-      t: Other answers (freeform field).
+      t: Другие ответы (поле со свободной формой ответа).
 
     - key: block.title.non_js_languages
-      t: Non-JavaScript Languages
+      t: Языки, помимо JavaScript
     - key: block.description.non_js_languages
-      t: Which other programming languages do you use?
+      t: Какими другими языками программирования вы пользуетесь?
     - key: block.title.non_js_languages_others
-      t: Other Languages
+      t: Другие языки
     - key: block.description.non_js_languages_others
-      t: Other answers (freeform field).
+      t: Другие ответы (поле со свободной формой ответа).
 
 
     ###########################################################################
