@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   language
-locale: en-US
+locale: ru-RU
 ---
 
-The vocabulary of JavaScript.
+Kонструкции JavaScript.

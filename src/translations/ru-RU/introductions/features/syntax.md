@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   syntax
-locale: en-US
+locale: ru-RU
 ---
 
-The grammar of JavaScript.
+Грамматика JavaScript.

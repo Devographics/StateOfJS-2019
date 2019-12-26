@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: features
-locale: en-US
+locale: ru-RU
 ---
 
-One of the most exciting things about JavaScript as a language is that it's not standing still. From arrow functions to destructuring, many key features added over the past couple years are now an integral part of how we write JavaScript.
+Одна из самых интересных особенностей JavaScript, как языка в том, что он не стоит на месте. От стрелочных функций до деструктурирования, многие ключевые возможности, добавленные за последние пару лет, теперь являются неотъемлемой частью того, как мы пишем на JavaScript.
 
-So starting this year, in addition to which tools you use we're also tracking how you write JavaScript: the patterns, syntax, and features you use… or maybe don't use just yet but are definitely keeping an eye on!
+Поэтому, начиная с этого года, помимо того, какие инструменты вы используете, мы также отслеживаем, как вы пишете на JavaScript: паттерны, синтаксис и возможности, которые вы используете или, может быть, еще нет, но наверняка присматривайте!

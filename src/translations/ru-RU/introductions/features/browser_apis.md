@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   browser_apis
-locale: en-US
+locale: ru-RU
 ---
 
-The features provided by the browser.
+Возможности, предоставляемые браузером.

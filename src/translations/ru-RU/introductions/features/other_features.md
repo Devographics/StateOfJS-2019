@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   other_features
-locale: en-US
+locale: ru-RU
 ---
 
-Other technologies and patterns.
+Другие технологии и паттерны.

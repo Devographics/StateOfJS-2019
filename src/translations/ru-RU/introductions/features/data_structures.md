@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   data_structures
-locale: en-US
+locale: ru-RU
 ---
 
-How you store and manipulate data.
+Как вы храните и манипулируете данными.
