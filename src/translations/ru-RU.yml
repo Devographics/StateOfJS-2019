@@ -990,41 +990,41 @@ translations:
 
     # charts
     - key: block.title.usage-ratio
-      t: Usage Ratio Ranking
+      t: Рейтинг использования
     - key: block.description.usage-ratio
-      t: Ranking usage ratios among users who are aware of a technology.
+      t: Рейтинг по уровню использования среди пользоватeлей, знакомых с технологией.
     - key: users_percentage
-      t: Percentage of Users
+      t: Доля пользователей, %
     - key: users_count
-      t: User Count
+      t: Пользователей
     - key: satisfaction_percentage
-      t: Satisfaction Percentage
+      t: Удовлетворённость, %
     - key: interest_percentage
-      t: Interest Percentage
+      t: Заинтересованность, %
     - key: chart_mode
-      t: mode
+      t: режим
     - key: chart_mode.absolute
-      t: absolute
+      t: абсолютный
     - key: chart_mode.relative
-      t: relative
+      t: относительный
     - key: chart_units
-      t: Units
+      t: Единицы измерения
     - key: chart_units.percentage
-      t: Percents
+      t: Проценты
     - key: chart_units.count
-      t: Count
+      t: Кол-во
     - key: users
-      t: users
+      t: пользователей
     - key: percent_satisfaction
-      t: '% satisfaction'
+      t: '% удовлетворённости'
     - key: percent_interest
-      t: '% interest'
+      t: '% заинтересованности'
     - key: heatmap.average
-      t: overall
+      t: общее
     - key: difference_from_average_usage
-      t: 'Difference from overall usage:'
+      t: 'Отличие от общего использования:'
     - key: all
-      t: 'All'
+      t: 'Все'
 
     # other
     - key: bio.guest_visualizer
