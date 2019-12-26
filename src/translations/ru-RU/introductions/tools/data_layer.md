@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   data_layer
-locale: en-US
+locale: ru-RU
 ---
 
-Loading and managing data in your app.
+Загрузка и управление данными в вашем приложении.
