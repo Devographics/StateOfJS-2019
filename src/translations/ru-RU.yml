@@ -902,31 +902,31 @@ translations:
 
     # sharing
     - key: share.share
-      t: Share
+      t: Поделиться
     - key: share.site.title
-      t: Discover the StateOf JavaScript 2019 results
+      t: Узнайте результаты опроса State Of JavaScript 2019
     - key: share.site.twitter_text
-      t: 'Discover the State Of JavaScript 2019 results ${link} #StateOfJS'
+      t: 'Узнайте результаты опроса State Of JavaScript 2019 ${link} #StateOfJS'
     - key: share.site.subject
-      t: State Of JavaScript Survey Results
+      t: Результаты опроса State Of JavaScript 2019
     - key: share.site.body
-      t: 'Here are some interesting JavaScript survey results: ${link}'
+      t: 'Вот некоторые интересные результаты опроса по JavaScript: ${link}'
     - key: share.block.twitter_text
       t: '#StateOfJS 2019: ${title} ${link}'
     - key: share.block.subject
-      t: State Of JavaScript Survey Results
+      t: Результаты опроса State Of JavaScript 2019
     - key: share.block.body
-      t: 'Here are some interesting JavaScript survey results (${title}): ${link}'
+      t: 'Вот некоторые интересные результаты опроса по JavaScript (${title}): ${link}'
     - key: share.twitter
-      t: Share on Twitter
+      t: Поделиться в Twitter
     - key: share.facebook
-      t: Share on Facebook
+      t: Поделиться на Facebook
     - key: share.linkedin
-      t: Share on LinkedIn
+      t: Поделиться на LinkedIn
     - key: share.email
-      t: Share by email
+      t: Поделиться по email
     - key: share.image
-      t: Get image
+      t: Получить картинку
 
     # export
     - key: export.export
