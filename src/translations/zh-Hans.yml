@@ -5,7 +5,7 @@ translations:
     ###########################################################################
 
     - key: tshirt.about
-      t: 关于 T恤
+      t: 关于 T 恤
     - key: tshirt.description
       t: >
           这个设计将印于修身裁剪的黑色上衣 [Bella + Canvas 3001 中性优质 T 恤](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (男士款)
@@ -508,7 +508,7 @@ translations:
 
           - **避免**: 低使用率，低满意度。目前最好避免使用的技术。
 
-          - **分析**: 高使用率，低满意度。如果你目前在使用这些技术，最好重新评估它们。
+          - **待定**: 高使用率，低满意度。如果你目前在使用这些技术，最好重新评估它们。
     - key: block.description.scatterplotOverview.interest
       t: >
           这个图表展示了每个技术基于它总**受访者数量**的**关注率**（根据受访者知道某项技术但*尚未*使用该技术进行定义）。
@@ -522,7 +522,7 @@ translations:
     - key: quadrants.avoid
       t: 避免
     - key: quadrants.analyze
-      t: 分析
+      t: 待定
 
     # happiness
     - key: block.title.happiness
@@ -533,7 +533,7 @@ translations:
 
     # experience
     - key: block.title.toolExperience
-      t: ${name} 经验时间轴
+      t: ${name} 使用情况曲线
     - key: block.description.toolExperience
       t: 受访者使用 ${name} 的经验。
 
@@ -701,7 +701,7 @@ translations:
     - key: block.title.js_over_used_online
       t: 使用情况
     - key: block.description.js_over_used_online
-      t: “JavaScript 目前在线上被过渡使用了”
+      t: “JavaScript 目前在线上被过度使用了”
 
     - key: block.title.enjoy_building_js_apps
       t: 享受程度
@@ -825,10 +825,10 @@ translations:
 
     # prediction_award
     - key: award.prediction_award.title
-      t: 预测奖
+      t: 最具潜力奖
     - key: award.prediction_award.description
       t: |
-          授予可能（也可能不会）取代……的新技术？
+          授予有发展潜力的新技术
     - key: award.prediction_award.comment
       t: |
           ${items[0].name} 在今年的调查问卷中首次亮相，

@@ -4,4 +4,4 @@ page:   data_structures
 locale: zh-Hans
 ---
 
-你怎么存储和操作数据
+存储和操作数据的方式
