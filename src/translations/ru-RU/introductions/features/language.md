@@ -4,4 +4,4 @@ page:   language
 locale: ru-RU
 ---
 
-Kонструкции JavaScript.
+Словарь JavaScript.

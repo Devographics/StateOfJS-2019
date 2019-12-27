@@ -8,7 +8,7 @@ translations:
       t: О футболке
     - key: tshirt.description
       t: >
-          Полуприлегающая футболка. Дизайн напечатан на ткани типа Heather черного цвета [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (мужская);
+          Полуприлегающая футболка. Дизайн напечатан на ткани типа Heather чёрного цвета [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (мужская);
           или темно-серого [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (женская). Размеры одежды по стандарту США.
 
     - key: tshirt.getit
@@ -64,7 +64,7 @@ translations:
     - key: salary.more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
-      t: Вилка Зарплат (USD)
+      t: Вилка зарплат (USD)
 
     # years of experience
     - key: workExperience.less_than_1.long
@@ -322,7 +322,7 @@ translations:
 
     - key: block.description.decorators
       t: >
-        В упрощенном виде, декоратор — просто способ обернуть
+        В упрощённом виде, декоратор — просто способ обернуть
         один фрагмент кода другим, буквально “декорируя” его.
 
     - key: feature.learn_more
@@ -360,7 +360,7 @@ translations:
       t: Анализ использования
     - key: block.description.featuresOverview
       t: >
-          Данный график представляет степень применения различных возможностей JavaScript, объединенных по категориям.
+          Данный график представляет степень применения различных возможностей JavaScript, объединённых по категориям.
 
 
           Размер <span class="text-teal-darker text-bold">внешнего круга</span> соответствует общему количеству пользователей, которые знают о возможности,
@@ -458,20 +458,20 @@ translations:
       t: Рейтинги
     - key: block.description.toolExperienceRanking
       t: >
-          Рейтинги по уровню узнаваемости, интереса и удовлетворенности.
+          Рейтинги по уровню узнаваемости, интереса и удовлетворённости.
     - key: opinions.legends.awareness_ratio
       t: Узнаваемость
     - key: opinions.legends.interest_ratio
       t: Интерес
     - key: opinions.legends.satisfaction_ratio
-      t: Удовлетворенность
+      t: Удовлетворённость
 
     # overview
     - key: block.title.toolsSectionOverview
       t: Общий обзор
     - key: block.description.toolsSectionOverview
       t: >
-          Обзор мнений по исследуемым технологиям. Темные сегменты обозначают положительное отношение,
+          Обзор мнений по исследуемым технологиям. Тёмные сегменты обозначают положительное отношение,
           тогда как светлые соответствуют негативному.
 
     # Arrows (Movement over time)
@@ -487,14 +487,14 @@ translations:
 
     - key: amelia.bio
       t: >
-        Amelia Wattenberger - фронтенд разработчик и дизайнер, сосредоточенная на визуализации данных.
+        Амелия Ваттенбергер - фронтенд разработчик и дизайнер, сосредоточенная на визуализации данных.
         Она автор руководства по созданию собственных визуализаций данных [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
         так же она делится мыслями и практическими примерами в [Twitter](https://twitter.com/Wattenberger)
         и на [своём сайте](https://wattenberger.com/).
 
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
-      t: Сравнение удовлетворенности и использования
+      t: Сравнение удовлетворённости и использования
     - key: block.description.scatterplotOverview.satisfaction
       t: >
           Эта диаграмма показывает **рейтинг удовлетворения** каждой технологией относительно её общего **количества пользователей**.
@@ -509,7 +509,7 @@ translations:
           - **ПРОАНАЛИЗИРУЙ**: Высокий уровень использования, низкий уровень удовлетворённости. Технологии, о которых стоит подумать, чтобы перестать их использовать.
     - key: block.description.scatterplotOverview.interest
       t: >
-          Эта диаграмма показывает **рейтинг интереса** к каждой технологии относительно её общего **количества пользователей** (определяется по участникам, которым известно о технологии, но еще **не** пользовались ей).
+          Эта диаграмма показывает **рейтинг интереса** к каждой технологии относительно её общего **количества пользователей** (определяется по участникам, которым известно о технологии, но ещё **не** пользовались ей).
 
           (Обратите внимание, низкое количество пользователей может быть из-за того, что технология либо неизвестна, либо её уже многие используют)
 
@@ -682,7 +682,7 @@ translations:
     ###########################################################################
 
     - key: block.title.easy-to-learn
-      t: Кривая Обучения
+      t: Кривая обучения
     - key: block.description.easy-to-learn
       t: “JavaScript легко выучить”
 
@@ -707,17 +707,17 @@ translations:
       t: “Мне нравится писать приложения на JavaScript”
 
     - key: block.title.would_like_js_to_be_main_lang
-      t: Основной Язык
+      t: Основной язык
     - key: block.description.would_like_js_to_be_main_lang
       t: “Я бы хотел, чтобы JavaScript был моим основным языком программирования”
 
     - key: block.title.js_ecosystem_changing_to_fast
-      t: Скорость Изменения
+      t: Скорость изменения
     - key: block.description.js_ecosystem_changing_to_fast
       t: “Экосистема JavaScript меняется слишком быстро”
 
     - key: block.title.missing-features
-      t: Отсутствующие Фичи
+      t: Отсутствующие фичи
     - key: block.description.missing-features
       t: Что, по мнению разработчиков, в настоящее время отсутствует в JavaScript?
 
@@ -898,7 +898,7 @@ translations:
     - key: page.conclusion
       t: Заключение
     - key: page.support
-      t: Поддержите Нас
+      t: Поддержите нас
 
     # sharing
     - key: share.share
@@ -978,15 +978,15 @@ translations:
 
     # partners
     - key: partners.our_partners
-      t: Наши Партнеры
+      t: Наши партнёры
     - key: partners.become_partner
-      t: Станьте партнером
+      t: Станьте партнёром
     - key: partners.thanks
-      t: Спасибо нашим партнерам за поддержку!
+      t: Спасибо нашим партнёрам за поддержку!
     - key: partners.learn_more
       t: Узнать больше.
     - key: block.title.recommendedResources
-      t: Рекомендуемые Ресурсы
+      t: Рекомендуемые ресурсы
 
     # charts
     - key: block.title.usage-ratio
@@ -1028,4 +1028,4 @@ translations:
 
     # other
     - key: bio.guest_visualizer
-      t: Приглашенный специалист
+      t: Приглашённый специалист
