@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: overview
-locale: en-US
+locale: ru-RU
 ---
 
-Before digging deep in the details, let's take a moment to take in a bigger-picture overview of the JavaScript ecosystem in 2019 courtesy of the talented [Amelia Wattenberger](https://wattenberger.com/), our guest data visualization expert!
+Прежде чем погрузиться в детали, давайте немного взглянем на общую картину экосистемы JavaScript в 2019 году, которую любезно предоставила талантливая [Amelia Wattenberger](https://wattenberger.com/), наш приглашённый эксперт по визуализации данных.
