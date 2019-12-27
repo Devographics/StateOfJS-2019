@@ -1,15 +1,15 @@
 ---
 type: introduction
 page: conclusion
-locale: en-US
+locale: ru-RU
 ---
 
-You know how you sometimes start tweaking a few lines of code here and there, then realize a couple functions could use some refactoring, and then one things leading to another you find yourself a few days later in the process of setting up a brand new stack complete with a database and GraphQL API?
+Знаете, как иногда начиная поправлять несколько строк кода то тут, то там, затем понимая, что можно было бы немного отрефакторить пару функций, ну а потом то там, то сям, и через несколько дней оказываетесь в процессе настройки абсолютно нового стека с базой данных и API GraphQL?
 
-This is what happened to us this year. And while it resulted in quite a few stressful evenings as we tried to wrap this up and release the State of JavaScript 2019 results in, well, 2019; it also means we now have a much more powerful and flexible stack to collect and analyze data going forward.
+Тоже самое было с нами в этом году. И хотя это и привело к нескольким довольно напряженным вечерам, когда мы старались закончить и выпустить результаты "State of JavaScript 2019" именно в 2019-м; но зато теперь у нас есть значительно более мощный и гибкий стек для сбора и анализа данных в будущем.
 
-This will come in handy to analyze the evolution of all the new tools starting to make waves such as Svelte, Stencil, Sporky, Nest, or Flutter. And yes, I did just make up one of those five, but admit it: you had a moment of doubt didn’t you?
+Это пригодится для анализа эволюции всех новых инструментов, начинающих только поднимать шумиху, таких как Svelte, Stencil, Sportky, Nest или Flutter. И да, я только что выдумал один из этих пяти. Признайтесь: вы немного засомневались, не так ли?
 
-But don’t worry. No matter how many weirdly-named libraries the community keeps throwing at you, we’ll be there to help make sense of all this chaos… that is, if we’re not too busy going through yet another refactoring to get our code just perfect!
+Не волнуйтесь. Независимо от того, сколько странных имен библиотек сообщество ещё нагенерирует, мы поможем разобраться во всем этом хаосе… если, конечно, опять не будем слишком заняты рефакторингом, чтобы довести наш код до идеала!
 
-<span class="conclusion__byline">– Sacha & Raphaël</span>
+<span class="conclusion__byline">– Саша и Рафаэль</span>
