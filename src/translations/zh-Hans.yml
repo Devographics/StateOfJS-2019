@@ -574,9 +574,9 @@ translations:
 
 
     - key: toolExperience.negative_opinion.extrashort
-      t: 看好
-    - key: toolExperience.positive_opinion.extrashort
       t: 不看好
+    - key: toolExperience.positive_opinion.extrashort
+      t: 看好
     - key: toolExperience.have_not_used.extrashort
       t: 没有用过
     - key: toolExperience.have_used.extrashort
@@ -758,11 +758,11 @@ translations:
       t: 最受欢迎的特性
     - key: award.feature_adoption_award.description
       t: |
-          授予最受欢迎的 JavasScript 特性。
+          授予最受欢迎的 JavaScript 特性。
     - key: award.feature_adoption_award.comment
       t: |
           ${items[0].name} 有 **${items[0].value}** 的用户使用，
-          是今年最常被使用的 JavaScript 特性。
+          是今年最常使用的 JavaScript 特性。
 
     # tool_satisfaction
     - key: award.tool_satisfaction_award.title
@@ -774,7 +774,7 @@ translations:
     - key: award.tool_satisfaction_award.comment
       t: |
           有 **${items[0].value}** 的用户愿意再次使用它，
-          ${items[0].name} 再次证明了它可不是在开玩笑。
+          ${items[0].name} 再次证明了它可不是盖的。
 
     # tool_interest
     - key: award.tool_interest_award.title
@@ -786,7 +786,7 @@ translations:
     - key: award.tool_interest_award.comment
       t: |
           **${items[0].value}** 的开发者听说过 ${items[0].name} 并且想学习它，
-          那可是算是相当的关注！
+          那可是真是颇受关注！
 
 
     # tool_usage
