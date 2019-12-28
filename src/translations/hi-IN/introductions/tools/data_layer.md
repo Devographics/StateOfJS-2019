@@ -4,4 +4,4 @@ page: data_layer
 locale: hi-IN
 ---
 
-Loading and managing data in your app.
+अपने ऐप में डेटा लोड करना और प्रबंधित करना।

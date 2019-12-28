@@ -4,4 +4,4 @@ page: front_end_frameworks
 locale: hi-IN
 ---
 
-Front-end frameworks and libraries.
+फ्रंट-एंड फ्रेमवर्क और लाइब्रेरियां।

@@ -4,4 +4,4 @@ page: testing
 locale: hi-IN
 ---
 
-Tools for testing your code.
+अपने कोड के परीक्षण के लिए उपकरण।
