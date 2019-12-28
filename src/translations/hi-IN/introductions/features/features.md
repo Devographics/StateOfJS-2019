@@ -4,6 +4,6 @@ page: features
 locale: hi-IN
 ---
 
-One of the most exciting things about JavaScript as a language is that it's not standing still. From arrow functions to destructuring, many key features added over the past couple years are now an integral part of how we write JavaScript.
+भाषा के रूप में JavaScript के बारे में सबसे रोमांचक चीजों में से एक यह है कि यह अभी भी खड़ा नहीं है। Arrow functions से लेकर destructuring होने तक, पिछले कुछ वर्षों में जोड़ी गई कई प्रमुख विशेषताएं अब हम JavaScript कैसे लिखते हैं, इसका एक अभिन्न हिस्सा हैं।
 
-So starting this year, in addition to which tools you use we're also tracking how you write JavaScript: the patterns, syntax, and features you use… or maybe don't use just yet but are definitely keeping an eye on!
+इसलिए इस वर्ष से, आपके द्वारा उपयोग किए जाने वाले टूल के अलावा हम यह भी ट्रैक कर रहे हैं कि आप JavaScript कैसे लिखते हैं: पैटर्न, वाक्यविन्यास, और आपके द्वारा उपयोग की जाने वाली सुविधाएँ... या शायद अभी तक उपयोग न करें लेकिन निश्चित रूप से नज़र रख रहे हैं!

@@ -4,4 +4,4 @@ page: language
 locale: hi-IN
 ---
 
-The vocabulary of JavaScript.
+JavaScript की शब्दावली।

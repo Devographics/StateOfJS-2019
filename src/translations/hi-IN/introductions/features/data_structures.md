@@ -4,4 +4,4 @@ page: data_structures
 locale: hi-IN
 ---
 
-How you store and manipulate data.
+आप डेटा को कैसे स्टोर और मैनिपुलेट करते हैं।

@@ -4,4 +4,4 @@ page: syntax
 locale: hi-IN
 ---
 
-The grammar of JavaScript.
+JavaScript का व्याकरण।
