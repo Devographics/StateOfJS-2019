@@ -4,4 +4,4 @@ page: back_end_frameworks
 locale: hi-IN
 ---
 
-JavaScript on the server.
+JavaScript सर्वर पर।
