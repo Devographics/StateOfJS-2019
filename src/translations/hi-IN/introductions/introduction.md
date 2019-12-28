@@ -4,35 +4,35 @@ page: introduction
 locale: hi-IN
 ---
 
-<span class="first-letter">W</span>e were pretty sure 2018 would be the last time we did this survey. After all, the JavaScript ecosystem can’t very well keep changing _again_, can it?
+<span class="first-letter">ह</span>में पूरा यकीन था कि 2018 आखिरी बार होगा जब हमने यह सर्वेक्षण किया था। आखिरकार, JavaScript पारिस्थितिकी तंत्र बहुत अच्छी तरह से _फिर से_ बदल नहीं सकता है, क्या यह हो सकता है?
 
-But what do you know, turns out JavaScript isn’t quite done changing just yet! And so after over 21,717 respondents took this year's survey we had to dig up our components and charts, curse us-from-a-year-ago for writing such crappy code, and get to work digging through the data.
+लेकिन आपको क्या पता है, JavaScript का बदलाव अभी रुका नहीं है! और इसलिए 21,717 से अधिक उत्तरदाताओं ने इस वर्ष के सर्वेक्षण के बाद हमें अपने घटकों और चार्टों को खोदना पड़ा, हमें इस तरह के भद्दे कोड लिखने के लिए एक साल पहले से ही शाप दिया और डेटा के माध्यम से खुदाई का काम करने को मिला।
 
-We had some help though. The amazing [Amelia Wattenberger](http://wattenberger.com/) joined the team as a guest dataviz expert to contribute a fresh new look on our data, and you’ll be able to explore her work in the **Overview** section.
+अद्भुत [अमेलिया वॉटनबर्गर](http://wattenberger.com/) हमारे डेटा पर एक नए रूप में योगदान करने के लिए अतिथि डेटाविज़ विशेषज्ञ के रूप में टीम में शामिल हो गयी, और आप **अवलोकन** अनुभाग में उसके काम का पता लगाने में सक्षम होंगे।
 
-We also borrowed a couple new visualisations from the State of JS's sister survey, the [State of CSS](https://2019.stateofcss.com/). We recommend checking it out if you haven’t done so yet!
+हमने JS की बहन के सर्वेक्षण, [State of CSS](https://2019.stateofcss.com/) से कुछ नए दृश्य भी लिए। यदि आप अभी तक ऐसा नहीं करते हैं तो हम इसकी जाँच करने की सलाह देते हैं!
 
-### Team
+### टीम
 
-The State of JavaScript Survey is created and maintained by:
+"State of JavaScript" सर्वेक्षण इनके द्वारा बनाया और अनुरक्षित किया जा रहा है:
 
--   [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
--   [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
+-   [Sacha Greif](https://twitter.com/sachagreif) (me!): डिजाइन, लेखन, कोडिंग
+-   [Raphaël Benitte](https://twitter.com/benitteraphael): डेटा विश्लेषण, डेटा विज़ुअलाइज़ेशन
 
-Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
+मेरे React/GraphQL JavaScript फ्रेमवर्क, [Vulcan.js](http://vulcanjs.org) और साथ ही राफेल के रिएक्ट डेटा विज़ुअलाइज़ेशन लाइब्रेरी [nivo](https://nivo.rocks) की जाँच करना सुनिश्चित करें।
 
-### Download Our Data
+### हमारा डेटा डाउनलोड करें
 
-You can [download the raw JSON data for this survey](https://www.kaggle.com/sachag/state-of-js-2019). Let us know if you end up making your own data visualizations!
+आप [इस सर्वेक्षण के लिए कच्चे JSON डेटा डाउनलोड कर सकते हैं](https://www.kaggle.com/sachag/state-of-js-2019)। यदि आप अपना स्वयं का डेटा विज़ुअलाइज़ेशन बनाते हैं, तो हमें बताएं!
 
-### Completion Percentages
+### पूर्णता प्रतिशत
 
-Because all survey questions could be skipped, some questions ended up with fewer answers than others. So we've added a small pie chart indicator to each question to let you know which proportion of total respondents answered it.
+क्योंकि सभी सर्वेक्षण प्रश्नों को छोड़ दिया जा सकता है, कुछ प्रश्न दूसरों की तुलना में कम उत्तरों के साथ समाप्त हो गए। इसलिए हमने प्रत्येक प्रश्न के लिए एक छोटा पाई चार्ट इंडिकेटर जोड़ा है ताकि आपको पता चल सके कि कुल उत्तरदाताओं के किस अनुपात ने इसका उत्तर दिया।
 
-### Credits & Stuff
+### क्रेडिट और कुछ शब्द
 
-The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofjs.com)
+साइट IBM Plex Mono में सेट है. प्रश्न? सुझाव? [संपर्क करें!](mailto:hello@stateofjs.com)
 
-And now, let's see what JavaScript has been up to this year!
+और अब, आइए देखें कि इस वर्ष तक JavaScript क्या रहा है!
 
 <span class="conclusion__byline">– Sacha and Raphaël</span>
