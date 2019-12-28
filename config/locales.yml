@@ -1,3 +1,6 @@
 - locale: en-US
   path: default
   label: English
+- locale: hi-IN
+  path: hi
+  label: हिंदी
