@@ -6,8 +6,8 @@ locale: hi-IN
 
 ## The State of JavaScript T-shirt: Support the survey and look good in the process!
 
-This year we're releasing our very own **👕 State of JavaScript T-shirt 👕** to finance our efforts!
+इस साल हम अपने प्रयासों को वित्त देने के लिए **👕 State of JavaScript T-shirt 👕** जारी कर रहे हैं!
 
-The shirt features a ”periodic table of JavaScript” that lists the most popular libraries grouped by category, along with their GitHub stars counts (in thousands).
+शर्ट में "JavaScript” की आवर्त सारणी" है जो श्रेणी के आधार पर सबसे लोकप्रिय लाइब्रेरियों को सूचीबद्ध करती है, साथ ही उनके Github stars की गिनती (हजारों में) होती है।
 
-This shirt is a great way to familiarize yourself with the JavaScript ecosystem, and maybe even strike up a conversation with other like-minded JavaScript developers!
+यह शर्ट JavaScript पारिस्थितिकी तंत्र के साथ खुद को परिचित करने का एक शानदार तरीका है, और शायद अन्य समान विचारधारा वाले JavaScript डेवलपर्स के साथ बातचीत भी कर सकती है!
