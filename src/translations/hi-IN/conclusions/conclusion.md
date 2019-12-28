@@ -4,12 +4,12 @@ page: conclusion
 locale: hi-IN
 ---
 
-You know how you sometimes start tweaking a few lines of code here and there, then realize a couple functions could use some refactoring, and then one things leading to another you find yourself a few days later in the process of setting up a brand new stack complete with a database and GraphQL API?
+आप जानते हैं कि कैसे आप कभी-कभी कोड की कुछ पंक्तियों को यहाँ और वहाँ ट्विक करना शुरू करते हैं, तब महसूस करते हैं कि कुछ फ़ंक्शन कुछ रीफैक्टरिंग का उपयोग कर सकते हैं, और फिर एक चीज़ जो आपको दूसरे में ले जाती है वह कुछ दिनों के बाद आपको एक नया स्टैक सेट करने की प्रक्रिया में मिलती है एक डेटाबेस और GraphQL API के साथ पूरा करती है?
 
-This is what happened to us this year. And while it resulted in quite a few stressful evenings as we tried to wrap this up and release the State of JavaScript 2019 results in, well, 2019; it also means we now have a much more powerful and flexible stack to collect and analyze data going forward.
+इस साल भी हमारे साथ ऐसा ही हुआ। और जब इसने कुछ तनावपूर्ण शामों में परिणाम दिया, जैसा कि हमने इसे पूरा करने और "State of JavaScript 2019" के परिणामों को जारी करने की कोशिश की, अच्छी तरह से, 2019; इसका अर्थ यह भी है कि अब हमारे पास आगे जाने के लिए डेटा एकत्र करने और उनका विश्लेषण करने के लिए एक अधिक शक्तिशाली और लचीला स्टैक है।
 
-This will come in handy to analyze the evolution of all the new tools starting to make waves such as Svelte, Stencil, Sporky, Nest, or Flutter. And yes, I did just make up one of those five, but admit it: you had a moment of doubt didn’t you?
+यह Svelte, Stencil, Sporky, Nest, या Flutter जैसी तरंगों को बनाने के लिए शुरू होने वाले सभी नए उपकरणों के विकास का विश्लेषण करने के लिए काम आएगा। और हां, मैंने उन पांच में से एक को ही बनाया था, लेकिन स्वीकार करते हैं: एक पल के लिए आपको भी संदेह था, नहीं?
 
-But don’t worry. No matter how many weirdly-named libraries the community keeps throwing at you, we’ll be there to help make sense of all this chaos… that is, if we’re not too busy going through yet another refactoring to get our code just perfect!
+लेकिन चिंता मत करो। कोई फर्क नहीं पड़ता कि कितने अजीब तरह से नामित लाइब्रेरियों को समुदाय आपको दे रहा है, हम इस सभी अराजकता की समझ बनाने में मदद करने के लिए वहां मौजूद रहेंगे... यानी, अगर हम अभी भी अपने कोड को सही पाने के लिए एक और रिफैक्टरिंग के माध्यम से जाने में व्यस्त नहीं हैं!
 
 <span class="conclusion__byline">– Sacha & Raphaël</span>
