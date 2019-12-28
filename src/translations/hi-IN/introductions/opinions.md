@@ -4,6 +4,6 @@ page: opinions
 locale: hi-IN
 ---
 
-Sometimes the best way to take the pulse of a community is to just go ahead and ask. From your opinion about JavaScript's rate of change, to more thorny questions like whether JavaScript is moving in the right direction, you finally had a chance to tell us exactly what's on your mind!
+कभी-कभी किसी समुदाय की नब्ज लेने का सबसे अच्छा तरीका सिर्फ यह है कि आप आगे बढ़ें और पूछें। JavaScript के परिवर्तन की दर के बारे में आपकी राय से, अधिक कांटेदार प्रश्नों की तरह जैसे कि JavaScript सही दिशा में आगे बढ़ रहा है, आपको आखिरकार हमें यह बताने का मौका मिला कि आपके दिमाग में वास्तव में क्या है!
 
-For each of the following statements, we asked you how much you agreed on a 5-point scale.
+निम्नलिखित में से प्रत्येक कथन के लिए, हमने आपसे पूछा कि आप 5-बिंदु के पैमाने पर कितना सहमत थे।
