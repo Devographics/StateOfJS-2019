@@ -4,4 +4,4 @@ page: other_features
 locale: hi-IN
 ---
 
-Other technologies and patterns.
+अन्य प्रौद्योगिकियां और पैटर्न।
