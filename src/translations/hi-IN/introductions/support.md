@@ -4,9 +4,6 @@ page: support
 locale: hi-IN
 ---
 
-The State of JavaScript survey is a volunteer project, but in order to make the
-project sustainable we’re always looking for partners who can help support us,
-either financially or by helping us spread the word.
+"State of JavaScript" सर्वेक्षण एक स्वयंसेवी परियोजना है, लेकिन इसे स्थायी परियोजना बनाने के लिए जो हम हमेशा उन साथियों की तलाश में हैं जो हमें समर्थन दे सकते हैं, या तो आर्थिक रूप से या हमें शब्द फैलाने में मदद करके।
 
-If you think you could help in any way, please don’t hesitate to
-<a href="mailto:hello@stateofjs.com">get in touch</a>!
+यदि आपको लगता है कि आप किसी भी तरह से मदद कर सकते हैं, तो कृपया <a href="mailto:hello@stateofjs.com">संपर्क में रहने</a> में संकोच न करें!
