@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { ResponsiveBump } from '@nivo/bump'
 import theme from 'nivoTheme'
 import { colors, distinctColors } from 'core/constants'
-// import get from 'lodash/get'
 
 const CustomPoint = props => {
     const { x, y, data, isInactive, size, borderColor, borderWidth } = props
@@ -27,11 +26,6 @@ const CustomPoint = props => {
 }
 
 const ToolsExperienceRankingChart = ({ data }) => {
-    // const formatTick = id => {
-    //     const tool = data.find(t => t.id === id)
-    //     return get(tool, 'entity.name', id)
-    // }
-
     return (
         <ResponsiveBump
             data={data}
@@ -51,13 +45,13 @@ const ToolsExperienceRankingChart = ({ data }) => {
                 tickPadding: 9
             }}
             axisLeft={null}
-            startLabel={true}
+            startLabel={d => d.name}
             startLabelTextColor={{
                 from: 'color',
                 modifiers: [['brighter', 1]]
             }}
             startLabelPadding={20}
-            endLabel={true}
+            endLabel={d => d.name}
             endLabelTextColor={{
                 from: 'color',
                 modifiers: [['brighter', 1]]

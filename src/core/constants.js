@@ -185,27 +185,34 @@ Keys
 
 */
 export const salaryArray = [
-    'work_for_free',
-    '0_10',
-    '10_30',
-    '30_50',
-    '50_100',
-    '100_200',
-    'more_than_200'
+    'range_work_for_free',
+    'range_0_10',
+    'range_10_30',
+    'range_30_50',
+    'range_50_100',
+    'range_100_200',
+    'range_more_than_200'
 ]
 
 export const companySizeArray = [
-    '1',
-    '1_5',
-    '5_10',
-    '10_20',
-    '20_50',
-    '50_100',
-    '100_1000',
-    'more_than_1000'
+    'range_1',
+    'range_1_5',
+    'range_5_10',
+    'range_10_20',
+    'range_20_50',
+    'range_50_100',
+    'range_100_1000',
+    'range_more_than_1000'
 ]
 
-export const workExperienceArray = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+export const workExperienceArray = [
+    'range_less_than_1',
+    'range_1_2',
+    'range_2_5',
+    'range_5_10',
+    'range_10_20',
+    'range_more_than_20'
+]
 
 export const environmentUsageArray = ['never', 'occasionally', 'often', 'mainly']
 

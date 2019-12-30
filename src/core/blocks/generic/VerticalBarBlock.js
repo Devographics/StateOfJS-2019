@@ -51,7 +51,7 @@ const VerticalBarBlock = ({ block, data }) => {
             units={units}
             setUnits={setUnits}
             completion={completion}
-            data={sortedBuckets}
+            data={data}
             block={block}
             legendProps={{ layout: 'vertical' }}
         >
@@ -83,7 +83,7 @@ VerticalBarBlock.propTypes = {
     data: PropTypes.shape({
         buckets: PropTypes.arrayOf(
             PropTypes.shape({
-                id: PropTypes.string.isRequired
+                id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
             })
         ).isRequired
     }).isRequired
