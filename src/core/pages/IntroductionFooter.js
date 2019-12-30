@@ -1,7 +1,7 @@
 import React from 'react'
 import { usePageContext } from '../helpers/pageContext'
 import { useI18n } from '../i18n/i18nContext'
-import { Link } from 'gatsby'
+import Link from 'core/components/LocaleLink'
 
 const IntroductionFooter = () => {
     const context = usePageContext()

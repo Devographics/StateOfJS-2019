@@ -19,6 +19,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     const [units, setUnits] = useState(defaultUnits)
 
     const context = usePageContext()
+    const { locale } = context
     const { translate } = useI18n()
     const { name, mdn } = data
 
@@ -52,7 +53,9 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     })
 
     const mdnLink = mdn && `https://developer.mozilla.org${mdn.url}`
+    // only show descriptions for english version
     const description =
+        locale === 'en-US' &&
         mdn &&
         `${parseMDNLinks(mdn.summary)} <a href="${mdnLink}">${translate('feature.mdn_link')}</a>`
 
@@ -63,7 +66,6 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
             setUnits={setUnits}
             data={buckets}
             block={{ ...block, title: name, description }}
-            showDescription={false}
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">
