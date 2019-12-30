@@ -7,6 +7,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 
 const Switcher = ({ setMetric, metric }) => {
     const { translate } = useI18n()
+
     return (
         <div className="BlockUnitsSelector">
             <span className="ButtonGroup">
@@ -36,6 +37,7 @@ const ToolsExperienceRankingBlock = ({ block, data }) => {
             data.map(tool => {
                 return {
                     id: tool.id,
+                    name: tool.entity.name,
                     data: tool[metric].map(bucket => {
                         return {
                             x: bucket.year,
