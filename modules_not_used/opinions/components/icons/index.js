@@ -1,5 +1,0 @@
-export { default as StronglyAgreeIcon } from './StronglyAgreeIcon'
-export { default as AgreeIcon } from './AgreeIcon'
-export { default as NeutralIcon } from './NeutralIcon'
-export { default as DisagreeIcon } from './DisagreeIcon'
-export { default as StronglyDisagreeIcon } from './StronglyDisagreeIcon'
