@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { ResponsiveBump } from '@nivo/bump'
 import theme from 'nivoTheme'
 import { colors, distinctColors } from 'core/constants'
-// import get from 'lodash/get'
 
 const CustomPoint = props => {
     const { x, y, data, isInactive, size, borderColor, borderWidth } = props
