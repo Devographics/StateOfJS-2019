@@ -51,7 +51,7 @@ const VerticalBarBlock = ({ block, data }) => {
             units={units}
             setUnits={setUnits}
             completion={completion}
-            data={sortedBuckets}
+            data={data}
             block={block}
             legendProps={{ layout: 'vertical' }}
         >
