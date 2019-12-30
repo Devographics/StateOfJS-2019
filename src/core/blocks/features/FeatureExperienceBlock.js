@@ -5,6 +5,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
 import { featureExperience } from 'core/constants'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
+import { usePageContext } from 'core/helpers/pageContext'
 
 // convert relative links into absolute MDN links
 const parseMDNLinks = content =>
@@ -13,6 +14,8 @@ const parseMDNLinks = content =>
 const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
 
+    const context = usePageContext()
+    const { locale } = context
     const { translate } = useI18n()
     const { name, mdn } = data
 
@@ -36,7 +39,9 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     })
 
     const mdnLink = mdn && `https://developer.mozilla.org${mdn.url}`
+    // only show descriptions for english version
     const description =
+        locale === 'en-US' &&
         mdn &&
         `${parseMDNLinks(mdn.summary)} <a href="${mdnLink}">${translate('feature.mdn_link')}</a>`
 
@@ -50,7 +55,6 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                 buckets
             }}
             block={{ ...block, title: name, description }}
-            showDescription={false}
         >
             <div className="Feature FTBlock">
                 <div className="Feature__Chart FTBlock__Chart">

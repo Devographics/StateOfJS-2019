@@ -2,7 +2,7 @@ import React from 'react'
 import { usePageContext } from '../helpers/pageContext'
 import { useI18n } from '../i18n/i18nContext'
 import PageLabel from './PageLabel'
-import { Link } from 'gatsby'
+import Link from 'core/components/LocaleLink'
 import isEmpty from 'lodash/isEmpty'
 
 const PageFooter = () => {
@@ -30,9 +30,27 @@ const PageFooter = () => {
                 )}
             </div>
             <div className="PageFooter__Footer">
-                &copy; 2019 <a href="http://stateofjs.com/">State of JavaScript</a>.{' '}
-                Questions? Found a bug?{' '}
-                <a href="https://github.com/StateOfJS/State-of-JS-2019/issues">Leave an issue</a>
+                <span
+                    dangerouslySetInnerHTML={{
+                        __html: translate('footer.state_of_js_link', {
+                            values: { link: 'http://stateofjs.com/' }
+                        })
+                    }}
+                />{' '}
+                <span
+                    dangerouslySetInnerHTML={{
+                        __html: translate('footer.leave_an_issue', {
+                            values: { link: 'https://github.com/StateOfJS/State-of-JS-2019/issues' }
+                        })
+                    }}
+                />{' '}
+                <span
+                    dangerouslySetInnerHTML={{
+                        __html: translate('footer.netlify', {
+                            values: { link: 'https://www.netlify.com' }
+                        })
+                    }}
+                />
             </div>
         </footer>
     )
