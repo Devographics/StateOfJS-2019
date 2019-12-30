@@ -17,6 +17,7 @@ const HeatmapBlock = ({ block, data }) => {
     const { translate } = useI18n()
     const title = translate(`block.title.${blockName}_heatmap`)
     const description = translate(`block.description.${blockName}_heatmap`)
+
     return (
         <Block data={data.buckets} block={{...block, title, description }}>
             <ChartContainer>
