@@ -278,26 +278,23 @@ featureExperienceTemplate:
 
 toolsSectionOverviewTemplate:
     blockType: ToolsSectionOverviewBlock
-    dataPath: 'surveyApi.survey.category.tools.experience.tools'
+    dataPath: 'surveyApi.survey.tools'
     bucketKeysName: toolExperience
     showLegend: true
     query: >
         surveyApi {
             survey(survey: ${surveyType}, year: ${currentYear}) {
-                category(id: ${category}) {
-                    tools {
-                        experience {
-                            year
-                            tools {
+                tools(ids: [${toolIds}]) {
+                    id
+                    entity {
+                        name
+                    }
+                    experience {
+                        year(year: 2019) {
+                            buckets {
                                 id
-                                entity {
-                                    name
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
+                                count
+                                percentage
                             }
                         }
                     }
