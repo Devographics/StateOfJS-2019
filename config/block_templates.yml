@@ -55,7 +55,7 @@ demographicsTemplate:
         surveyApi {
             survey(survey: ${surveyType}) {
                 demographics {
-                    ${id} {
+                    ${id}(filters: { gender: { in: [female, non_binary] } }) {
                         year(year: ${currentYear}) {
                             year
                             total
@@ -82,7 +82,7 @@ sourceTemplate:
         surveyApi {
             survey(survey: ${surveyType}) {
                 demographics {
-                    ${id} {
+                    ${id}(filters: { gender: { in: [female, non_binary] } }) {
                         year(year: ${currentYear}) {
                             year
                             total
@@ -129,8 +129,8 @@ scatterplotOverviewTemplate:
                             url
                         }
                     }
-                    experience {
-                        year(year:${currentYear}) {
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
+                        year(year: ${currentYear}) {
                             total
                             buckets{
                                 id
@@ -157,7 +157,7 @@ toolsArrowsTemplate:
                         description
                         id
                     }
-                    experience {
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         allYears {
                             buckets {
                                 percentage
@@ -186,7 +186,7 @@ featuresOverviewTemplate:
                 features {
                     id
                     name
-                    experience{
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         year(year: ${currentYear}) {
                             year
                             completion {
@@ -215,7 +215,7 @@ featuresCategoryOverviewTemplate:
             survey(survey: ${surveyType}) {
                 features(ids: [${featureIds}]) {
                     id
-                    experience{
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         year(year: ${currentYear}) {
                             year
                             completion {
@@ -252,7 +252,7 @@ featureExperienceTemplate:
                         title
                         summary
                     }
-                    experience {
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         year(year: ${currentYear}) {
                             year
                             completion {
@@ -289,7 +289,7 @@ toolsSectionOverviewTemplate:
                     entity {
                         name
                     }
-                    experience {
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         year(year: 2019) {
                             buckets {
                                 id
@@ -311,7 +311,7 @@ toolsMovementTemplate:
         surveyApi {
             survey(survey: ${surveyType}) {
                 tools {
-                    experience {
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         year
                         tools {
                             id
@@ -365,7 +365,7 @@ toolExperienceTemplate:
                             url
                         }
                     }
-                    experience {
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         allYears{
                             year
                             total
@@ -395,7 +395,7 @@ toolsExperienceRankingTemplate:
     query: >
         surveyApi {
             survey(survey: ${surveyType}) {
-                toolsRankings(ids: [${toolsCategories[sectionId]}]) {
+                toolsRankings(ids: [${toolsCategories[sectionId]}], filters: { gender: { in: [female, non_binary] } }) {
                     ids
                     experience {
                         id
@@ -467,13 +467,13 @@ scatterplotTemplate:
                         homepage
                         name
                         github {
-                                url
-                              }
+                            url
+                        }
                     }
-                    experience {
+                    experience(filters: { gender: { in: [female, non_binary] } }) {
                         year(year:${currentYear}) {
                             total
-                            buckets{
+                            buckets {
                                 id
                                 count
                                 percentage
@@ -492,7 +492,7 @@ happinessTemplate:
         surveyApi {
             survey(survey: ${surveyType}) {
                 category(id: ${sectionId}) {
-                    happiness {
+                    happiness(filters: { gender: { in: [female, non_binary] } }) {
                         allYears {
                             year
                             mean
@@ -510,7 +510,7 @@ categoryOtherToolsTemplate:
         surveyApi {
             survey(survey: ${surveyType}) {
                 category(id:${sectionId}) {
-                    otherTools{
+                    otherTools(filters: { gender: { in: [female, non_binary] } }) {
                         year(year:2019) {
                             year
                             total
@@ -552,7 +552,7 @@ opinionTemplate:
     query: >
         surveyApi {
             survey(survey: ${surveyType}) {
-                ${id}: opinion(id: ${id}) {
+                ${id}: opinion(id: ${id}, filters: { gender: { in: [female, non_binary] } }) {
                     id
                     allYears {
                         year
@@ -585,7 +585,7 @@ otherToolsTemplate:
     query: >
         surveyApi {
             survey(survey: ${surveyType}) {
-                ${id}: otherTools(id: ${id}) {
+                ${id}: otherTools(id: ${id}, filters: { gender: { in: [female, non_binary] } }) {
                     id
                     year(year: ${currentYear}) {
                         year
@@ -626,7 +626,7 @@ resourcesTemplate:
     query: >
         surveyApi {
             survey(survey: ${surveyType}) {
-                ${id}: resources(id: ${id}) {
+                ${id}: resources(id: ${id}, filters: { gender: { in: [female, non_binary] } }) {
                     id
                     year(year: ${currentYear}) {
                         year
