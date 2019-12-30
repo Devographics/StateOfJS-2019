@@ -34,7 +34,7 @@ const ShareIcon = () => (
     </svg>
 )
 
-const ShareBlock = ({ block, section, id, className, toggleClass, title }) => {
+const ShareBlock = ({ block, section, className, toggleClass, title }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
@@ -93,7 +93,9 @@ const ShareBlock = ({ block, section, id, className, toggleClass, title }) => {
 }
 
 ShareBlock.propTypes = {
-    id: PropTypes.string.isRequired
+    block: PropTypes.shape({
+        id: PropTypes.string.isRequired
+    }).isRequired
 }
 
 export default ShareBlock
