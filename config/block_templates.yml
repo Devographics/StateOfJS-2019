@@ -431,14 +431,14 @@ heatmapTemplate:
             survey(survey: ${surveyType}) {
                 matrices {
                     tools(ids: [${toolIds}]) {
-                        ${heatmapId}(experience: would_use) {
+                        ${heatmapId}(experience: would_use, filters: { gender: { in: [female, non_binary] } }) {
                             year(year: ${currentYear}) {
                                 year
-                                buckets{
+                                buckets {
                                     average
                                     total
                                     id
-                                    entity{
+                                    entity {
                                         name
                                     }
                                     ranges {
