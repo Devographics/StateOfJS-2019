@@ -1020,10 +1020,10 @@
     react-motion "^0.5.2"
     recompose "^0.30.0"
 
-"@nivo/sankey@0.61.1":
-  version "0.61.1"
-  resolved "https://registry.yarnpkg.com/@nivo/sankey/-/sankey-0.61.1.tgz#6a3ebbbf63c481c4fd1129fe32c46f2b94e38ea3"
-  integrity sha512-s2c3JlCQ41fzyDqR16tEjjQYx5dHtKuPV1HXvdgof1nqZhupC04XWJ9TuEJ0fA1dB1un+fXaQWmC+h5JwPGO1A==
+"@nivo/sankey@0.61.2":
+  version "0.61.2"
+  resolved "https://registry.yarnpkg.com/@nivo/sankey/-/sankey-0.61.2.tgz#88f4bf1507ec69a0eab8c2301cb950c027e9681e"
+  integrity sha512-kZpzRWLA/XfnGLf4XgLv+ojqFCY7zm0DXdk3EQ00GxqXFRq2pXvbWwihFHOW1vuhXj3bCcOPIAa+X/Y7X8eJ6w==
   dependencies:
     "@nivo/colors" "0.61.0"
     "@nivo/core" "0.61.0"
