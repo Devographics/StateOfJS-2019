@@ -11,9 +11,9 @@ const LinkTooltip = link => {
                 values: {
                     count: link.value,
                     previousYear: link.source.year,
-                    previousExperience: link.source.experience,
+                    previousExperience: translate(`toolExperience.${link.source.experience}.short`),
                     nextYear: link.target.year,
-                    nextExperience: link.target.experience,
+                    nextExperience: translate(`toolExperience.${link.target.experience}.short`),
                 }
             })}
         </div>
