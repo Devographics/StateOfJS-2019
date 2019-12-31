@@ -1,26 +1,17 @@
 import React from 'react'
-import { ResponsiveSankey } from '@nivo/sankey'
-import theme from 'nivoTheme'
-import { colors, toolExperience } from 'core/constants'
-
-const getColor = d => {
-    // is a node
-    if (d.id) {
-        const xp = toolExperience.find(i => i.id === d.experience)
-
-        return xp.color
-    }
-
-    // the returned color for links does not really matter
-    // as gradients are enabled
-    return '#000000'
-}
+import PropTypes from 'prop-types'
+import { colors } from 'core/constants'
 
 const YearLabel = ({ year, x }) => (
     <text fill={colors.grey} textAnchor="middle" x={x} fontSize={16}>
         {year}
     </text>
 )
+
+YearLabel.propTypes = {
+    year: PropTypes.number.isRequired,
+    x: PropTypes.number.isRequired
+}
 
 const YearsLayer = ({ nodes, height }) => {
     const allYears = []
@@ -67,38 +58,15 @@ const YearsLayer = ({ nodes, height }) => {
     )
 }
 
-const ToolExperienceGraphChart = ({ data }) => {
-    const links = data.links.map(link => ({
-        ...link,
-        value: link.count
-    }))
-
-    return (
-        <ResponsiveSankey
-            layers={[YearsLayer, 'links', 'nodes', 'labels', 'legends']}
-            margin={{ top: 60, right: 16, bottom: 40, left: 16 }}
-            data={{
-                nodes: data.nodes,
-                links
-            }}
-            sort="auto"
-            align="center"
-            theme={theme}
-            colors={getColor}
-            animate={false}
-            enableLabels={false}
-            nodeThickness={20}
-            nodeSpacing={12}
-            nodeOpacity={1}
-            nodeBorderWidth={0}
-            nodeInnerPadding={2}
-            linkContract={1}
-            linkBlendMode="screen"
-            enableLinkGradient
-            linkOpacity={0.75}
-            linkHoverOpacity={1}
-        />
-    )
+YearsLayer.propTypes = {
+    height: PropTypes.number.isRequired,
+    nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+            year: PropTypes.number.isRequired,
+            x0: PropTypes.number.isRequired,
+            x1: PropTypes.number.isRequired
+        })
+    ).isRequired
 }
 
-export default ToolExperienceGraphChart
+export default YearsLayer

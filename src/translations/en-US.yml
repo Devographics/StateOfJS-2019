@@ -595,6 +595,16 @@ translations:
       t: |
         Evolution of respondents' experience with **${name}** for users who participated
         to the survey for at least two consecutive years.
+    - key: toolExperienceGraph.node.tooltip
+      t: |
+        in ${year}, ${count} respondents who also participated
+        to the ${year - 1} or ${year + 1} survey answered:
+        "${experience}"
+    - key: toolExperienceGraph.link.tooltip
+      t: |
+        ${count} respondents
+        answered "${previousExperience}" in ${previousYear},
+        answered "${nextExperience}" in ${nextYear}
 
     # other category tools
     - key: block.title.category-other-tools
