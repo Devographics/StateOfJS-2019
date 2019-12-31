@@ -7,7 +7,7 @@ import ToolExperienceGraphChart from 'core/charts/tools/ToolExperienceGraphChart
 
 const ToolExperienceGraphBlock = ({ block, data }) => {
     const { translate } = useI18n()
-    
+
     // skip if there's not enough data to show the block
     if (data.experienceGraph.nodes.length === 0) {
         return null

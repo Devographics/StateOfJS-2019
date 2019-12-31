@@ -16,6 +16,12 @@ const getColor = d => {
     return '#000000'
 }
 
+const YearLabel = ({ year, x }) => (
+    <text fill={colors.grey} textAnchor="middle" x={x} fontSize={16}>
+        {year}
+    </text>
+)
+
 const YearsLayer = ({ nodes, height }) => {
     const allYears = []
     nodes.forEach(node => {
@@ -38,15 +44,7 @@ const YearsLayer = ({ nodes, height }) => {
         <>
             <g transform="translate(0, -26)">
                 {yearLegends.map(yearLegend => (
-                    <text
-                        fill={colors.grey}
-                        key={yearLegend.year}
-                        textAnchor="middle"
-                        x={yearLegend.x}
-                        fontSize={16}
-                    >
-                        {yearLegend.year}
-                    </text>
+                    <YearLabel key={yearLegend.year} year={yearLegend.year} x={yearLegend.x} />
                 ))}
             </g>
             {yearLegends.map(yearLegend => (
@@ -62,15 +60,7 @@ const YearsLayer = ({ nodes, height }) => {
             ))}
             <g transform={`translate(0, ${height + 36})`}>
                 {yearLegends.map(yearLegend => (
-                    <text
-                        fill={colors.grey}
-                        key={yearLegend.year}
-                        textAnchor="middle"
-                        x={yearLegend.x}
-                        fontSize={16}
-                    >
-                        {yearLegend.year}
-                    </text>
+                    <YearLabel key={yearLegend.year} year={yearLegend.year} x={yearLegend.x} />
                 ))}
             </g>
         </>
