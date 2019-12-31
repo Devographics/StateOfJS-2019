@@ -572,7 +572,6 @@ translations:
     - key: toolExperience.would_not_use.extrashort
       t: Would not use
 
-
     - key: toolExperience.negative_opinion.extrashort
       t: Negative opinions
     - key: toolExperience.positive_opinion.extrashort
@@ -588,6 +587,14 @@ translations:
       t: Total Respondents
     - key: toolExperience.total_respondents.extrashort
       t: Total Respondents
+
+    # experience graph
+    - key: block.title.toolExperienceGraph
+      t: ${name} Experience Graph
+    - key: block.description.toolExperienceGraph
+      t: |
+        Evolution of respondents' experience with **${name}** for users who participated
+        to the survey for at least two consecutive years.
 
     # other category tools
     - key: block.title.category-other-tools
