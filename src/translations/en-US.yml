@@ -1054,3 +1054,8 @@ translations:
       t:  Questions? Found a bug? <a href="${link}">Leave an issue</a>.
     - key: footer.netlify
       t: This site is powered by <a href="${link}">Netlify</a>.
+
+    - key: fnb
+      t: >
+        This is a special edition of the [2019 State of JavaScript survey results](http://2019.stateofjs.com/) that
+        only includes responses from respondents identifying as female or non-binary. [Read more about it here](http://foo.com).
