@@ -99,11 +99,11 @@ toolPageTemplate:
           variables:
               toolId: '${id}'
 
-        - id: '${id}_experience_graph'
-          blockName: toolExperienceGraph
-          template: toolExperienceGraphTemplate
-          variables:
-              toolId: '${id}'
+        # - id: '${id}_experience_graph'
+        #   blockName: toolExperienceGraph
+        #   template: toolExperienceGraphTemplate
+        #   variables:
+        #       toolId: '${id}'
 
         # - id: '${id}-related-tools-heatmap'
         #   blockName: relatedTools
