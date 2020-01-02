@@ -67,41 +67,41 @@ translations:
       t: Вилка зарплат (USD)
 
     # years of experience
-    - key: workExperience.less_than_1.long
+    - key: workExperience.range_less_than_1.long
       t: Менее одного года
-    - key: workExperience.less_than_1.short
+    - key: workExperience.range_less_than_1.short
       t: '<1 года'
-    - key: workExperience.less_than_1.shorter
+    - key: workExperience.range_less_than_1.shorter
       t: '<1'
-    - key: workExperience.1_2.long
+    - key: workExperience.range_1_2.long
       t: От 1 до 2 лет
-    - key: workExperience.1_2.short
+    - key: workExperience.range_1_2.short
       t: 1~2 года
-    - key: workExperience.1_2.shorter
+    - key: workExperience.range_1_2.shorter
       t: 1~2
-    - key: workExperience.2_5.long
+    - key: workExperience.range_2_5.long
       t: От 2 до 5 лет
-    - key: workExperience.2_5.short
+    - key: workExperience.range_2_5.short
       t: 2~5 лет
-    - key: workExperience.2_5.shorter
+    - key: workExperience.range_2_5.shorter
       t: 2~5
-    - key: workExperience.5_10.long
+    - key: workExperience.range_5_10.long
       t: От 5 до 10 лет
-    - key: workExperience.5_10.short
+    - key: workExperience.range_5_10.short
       t: 5~10 лет
-    - key: workExperience.5_10.shorter
+    - key: workExperience.range_5_10.shorter
       t: 5~10
-    - key: workExperience.10_20.long
+    - key: workExperience.range_10_20.long
       t: От 10 до 20 лет
-    - key: workExperience.10_20.short
+    - key: workExperience.range_10_20.short
       t: 10~20 лет
-    - key: workExperience.10_20.shorter
+    - key: workExperience.range_10_20.shorter
       t: 10~20
-    - key: workExperience.more_than_20.long
+    - key: workExperience.range_more_than_20.long
       t: Более 20 лет
-    - key: workExperience.more_than_20.short
+    - key: workExperience.range_more_than_20.short
       t: '>20 лет'
-    - key: workExperience.more_than_20.shorter
+    - key: workExperience.range_more_than_20.shorter
       t: '>20'
     - key: workExperience.axis_legend
       t: Опыт
