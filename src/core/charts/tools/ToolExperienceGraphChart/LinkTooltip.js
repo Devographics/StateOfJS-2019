@@ -3,7 +3,6 @@ import { useI18n } from 'core/i18n/i18nContext'
 
 const LinkTooltip = link => {
     const { translate } = useI18n()
-    console.log({ link })
 
     return (
         <div>
