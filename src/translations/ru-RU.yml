@@ -107,53 +107,53 @@ translations:
       t: Опыт
 
     # company size
-    - key: companySize.1.long
+    - key: companySize.range_1.long
       t: Один сотрудник
-    - key: companySize.1.short
+    - key: companySize.range_1.short
       t: один
-    - key: companySize.1.shorter
+    - key: companySize.range_1.shorter
       t: '1'
-    - key: companySize.1_5.long
+    - key: companySize.range_1_5.long
       t: От 1 до 5 сотрудников
-    - key: companySize.1_5.short
+    - key: companySize.range_1_5.short
       t: 1~5
-    - key: companySize.1_5.shorter
+    - key: companySize.range_1_5.shorter
       t: 1~5
-    - key: companySize.5_10.long
+    - key: companySize.range_5_10.long
       t: От 5 до 10 сотрудников
-    - key: companySize.5_10.short
+    - key: companySize.range_5_10.short
       t: 5~10
-    - key: companySize.5_10.shorter
+    - key: companySize.range_5_10.shorter
       t: 5~10
-    - key: companySize.10_20.long
+    - key: companySize.range_10_20.long
       t: От 10 до 20 сотрудников
-    - key: companySize.10_20.short
+    - key: companySize.range_10_20.short
       t: 10~20
-    - key: companySize.10_20.shorter
+    - key: companySize.range_10_20.shorter
       t: 10~20
-    - key: companySize.20_50.long
+    - key: companySize.range_20_50.long
       t: От 20 до 50 сотрудников
-    - key: companySize.20_50.short
+    - key: companySize.range_20_50.short
       t: 20~50
-    - key: companySize.20_50.shorter
+    - key: companySize.range_20_50.shorter
       t: 20~50
-    - key: companySize.50_100.long
+    - key: companySize.range_50_100.long
       t: От 50 до 100 сотрудников
-    - key: companySize.50_100.short
+    - key: companySize.range_50_100.short
       t: 50~100
-    - key: companySize.50_100.shorter
+    - key: companySize.range_50_100.shorter
       t: 50~100
-    - key: companySize.100_1000.long
+    - key: companySize.range_100_1000.long
       t: От 100 до 1000 сотрудников
-    - key: companySize.100_1000.short
+    - key: companySize.range_100_1000.short
       t: 100~1000
-    - key: companySize.100_1000.shorter
+    - key: companySize.range_100_1000.shorter
       t: 100~1000
-    - key: companySize.more_than_1000.long
+    - key: companySize.range_more_than_1000.long
       t: Более 1000 сотрудников
-    - key: companySize.more_than_1000.short
+    - key: companySize.range_more_than_1000.short
       t: 1000+
-    - key: companySize.more_than_1000.shorter
+    - key: companySize.range_more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
       t: Количество сотрудников
