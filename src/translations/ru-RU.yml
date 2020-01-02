@@ -21,47 +21,47 @@ translations:
     ###########################################################################
 
     # salary ranges
-    - key: salary.work_for_free.long
+    - key: salary.range_work_for_free.long
       t: Я работаю бесплатно
-    - key: salary.work_for_free.short
+    - key: salary.range_work_for_free.short
       t: работаю бесплатно
-    - key: salary.work_for_free.shorter
+    - key: salary.range_work_for_free.shorter
       t: '0'
-    - key: salary.0_10.long
+    - key: salary.range_0_10.long
       t: $0k-$10k
-    - key: salary.0_10.short
+    - key: salary.range_0_10.short
       t: $0k-$10k
-    - key: salary.0_10.shorter
+    - key: salary.range_0_10.shorter
       t: 0~10k
-    - key: salary.10_30.long
+    - key: salary.range_10_30.long
       t: $10k-$30k
-    - key: salary.10_30.short
+    - key: salary.range_10_30.short
       t: $10k-$30k
-    - key: salary.10_30.shorter
+    - key: salary.range_10_30.shorter
       t: 10~30k
-    - key: salary.30_50.long
+    - key: salary.range_30_50.long
       t: $30k-$50k
-    - key: salary.30_50.short
+    - key: salary.range_30_50.short
       t: $30k-$50k
-    - key: salary.30_50.shorter
+    - key: salary.range_30_50.shorter
       t: 30~50k
-    - key: salary.50_100.long
+    - key: salary.range_50_100.long
       t: $50k-$100k
-    - key: salary.50_100.short
+    - key: salary.range_50_100.short
       t: $50k-$100k
-    - key: salary.50_100.shorter
+    - key: salary.range_50_100.shorter
       t: 50~100k
-    - key: salary.100_200.long
+    - key: salary.range_100_200.long
       t: $100k-$200k
-    - key: salary.100_200.short
+    - key: salary.range_100_200.short
       t: $100k-$200k
-    - key: salary.100_200.shorter
+    - key: salary.range_100_200.shorter
       t: 100~200k
-    - key: salary.more_than_200.long
+    - key: salary.range_more_than_200.long
       t: больше $200k
-    - key: salary.more_than_200.short
+    - key: salary.range_more_than_200.short
       t: $200k+
-    - key: salary.more_than_200.shorter
+    - key: salary.range_more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
       t: Вилка зарплат (USD)
