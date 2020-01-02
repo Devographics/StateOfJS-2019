@@ -1047,3 +1047,9 @@ translations:
     # other
     - key: bio.guest_visualizer
       t: Приглашённый специалист
+    - key: footer.state_of_js_link
+      t: © 2019 <a href="${link}">State of JavaScript</a>.
+    - key: footer.leave_an_issue
+      t:  Вопросы? Нашли ошибку? <a href="${link}">Создайте ишью</a>.
+    - key: footer.netlify
+      t: Сайт работает на <a href="${link}">Netlify</a>.
