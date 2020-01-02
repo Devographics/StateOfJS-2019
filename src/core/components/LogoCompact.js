@@ -7,8 +7,8 @@ const Logo = ({ width = '100%' }) => (
         <g transform="translate(-2, 0)">
             <Cell px={0} text="St" color={getColor('textColor')} />
             <Cell px={1} text="Js" color={getColor('textColor')} />
-            <Cell px={2} text="20" color={getColor('contrastColor')} />
-            <Cell px={3} text="19" color={getColor('contrastColor')} />
+            <Cell px={2} text="Fe" color={getColor('femaleNonBinary')} />
+            <Cell px={3} text="Nb" color={getColor('femaleNonBinary')} />
         </g>
     </svg>
 )

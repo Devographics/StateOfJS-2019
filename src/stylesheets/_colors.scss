@@ -37,6 +37,7 @@ $tealDarker: #1d7e7e;
 $purpleLight: #B096E7;
 $purple: #7854C3;
 $purpleDark: #57457C;
+$purpleDarkest: #211c2c;
 
 $redLighter: #f8a8a8;
 $redLight: #fc8f8f;
@@ -62,13 +63,13 @@ $navyDark: #1a1f35;
 \*****************************************************************************/
 
 
-$active-color: $teal;
-$active-color-dark: $tealDark;
+$active-color: $purpleLight;
+$active-color-dark: $purple;
 
-$contrast-color: $red;
-$contrast-color-dark: $redDark;
+$contrast-color: $green;
+$contrast-color-dark: $greenDark;
 
-$bg-color: $greyDarker;
+$bg-color: $purpleDarkest;
 $bg-color-light: $greyDarkish;
 $bg-color-lighter: $greyDark;
 $bg-color-inverted: $greyLight;

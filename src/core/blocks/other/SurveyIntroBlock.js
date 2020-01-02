@@ -4,10 +4,12 @@ import LogoMain from 'core/components/LogoMain'
 import SponsorsBlock from 'core/blocks/other/SponsorsBlock'
 import NewsletterBlock from 'core/blocks/other/NewsletterBlock'
 import IntroductionFooter from 'core/pages/IntroductionFooter'
+import FNB from 'core/components/FNB'
 
 const SurveyIntroBlock = ({ data, block }) => (
     <div className="SurveyIntro">
         <div className="SurveyIntro__Content">
+            <FNB/>
             <div className="main-logo-wrapper">
                 {/* <img
                     className="logo-image"
