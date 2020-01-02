@@ -5,7 +5,7 @@ import { useI18n } from 'core/i18n/i18nContext'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@nivo/core'
 import { Chip } from '@nivo/tooltip'
-import { colors } from 'core/constants.js'
+import ChartLabel from 'core/components/ChartLabel.js'
 
 // Define chart patterns
 // const patterns = [
@@ -22,7 +22,7 @@ import { colors } from 'core/constants.js'
 
 // Custom labels using an extra `layer`,
 // this way, we can add an extra outline to bar labels
-const getLabels = units => ({ bars, getLabelTextColor }) => {
+const getLabels = units => ({ bars }) => {
     return bars.map(bar => {
         // skip legend for small bars
         if (bar.width < 60) return null
@@ -35,36 +35,12 @@ const getLabels = units => ({ bars, getLabelTextColor }) => {
         // `pointerEvents: none` is used to not
         // disturb mouse events
         return (
-            <g
+            <ChartLabel
                 key={bar.key}
+                label={value}
                 transform={`translate(${bar.x + bar.width / 2},${bar.y + bar.height / 2})`}
                 style={{ pointerEvents: 'none' }}
-            >
-                <text
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    style={{
-                        strokeWidth: 4,
-                        stroke: '#232840',
-                        strokeLinejoin: 'round',
-                        fontSize: 13,
-                        fontWeight: 600
-                    }}
-                >
-                    {value}
-                </text>
-                <text
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    style={{
-                        fill: colors.greyLight,
-                        fontSize: 13,
-                        fontWeight: 600
-                    }}
-                >
-                    {value}
-                </text>
-            </g>
+            />
         )
     })
 }

@@ -3,11 +3,12 @@ import { colors } from 'core/constants.js'
 
 const ChartLabel = ({
     label,
-    fontSize,
+    fontSize = 13,
     strokeColor = colors.greyDarker,
-    fontColor = colors.white
+    fontColor = colors.white,
+    ...rest
 }) => (
-    <>
+    <g {...rest}>
         <text
             textAnchor="middle"
             dominantBaseline="central"
@@ -34,7 +35,7 @@ const ChartLabel = ({
         >
             {label}
         </text>
-    </>
+    </g>
 )
 
 export default ChartLabel
