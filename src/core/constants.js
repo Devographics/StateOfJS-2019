@@ -101,8 +101,8 @@ export const colorScale = [
 
 export const mainColors = {
     textColor: colors.grey,
-    activeColor: colors.teal,
-    contrastColor: colors.red
+    activeColor: colors.purpleLight,
+    contrastColor: colors.green
 }
 
 export const toolCategories = [
@@ -166,6 +166,10 @@ export const otherColors = [
     {
         id: 'stripe',
         color: colors.greyDarkish
+    },
+    {
+        id: 'femaleNonBinary',
+        color: colors.purpleLight
     }
 ]
 
@@ -316,7 +320,7 @@ export const emailOctopusSiteKey = '6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6'
 
 export const emailOctopusCode = 'hp463dc2a9-b2ff-11e8-a3c9-06b79b628af2'
 
-export const totalCount = 21717
-export const totalCountRounded = 20000 // used by scatterplot chart
+export const totalCount = 1302
+export const totalCountRounded = 1300 // used by scatterplot chart
 
 export const websiteTitle = 'The State of JavaScript 2019'
