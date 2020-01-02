@@ -587,6 +587,24 @@ translations:
     - key: toolExperience.total_respondents.extrashort
       t: Всего участников
 
+    # experience graph
+    - key: block.title.toolExperienceGraph
+      t: График опыта ${name}
+    - key: block.description.toolExperienceGraph
+      t: |
+        Изменение опыта работы с **${name}** для тех респондентов, кто участвовал
+        в опросе не менее двух лет подряд.
+    - key: toolExperienceGraph.node.tooltip
+      t: |
+        в ${year}, ${count} респондентов, кто также участвовал
+        в опросах ${year - 1} or ${year + 1}, ответили:
+        "${experience}"
+    - key: toolExperienceGraph.link.tooltip
+      t: |
+        ${count} респондентов
+        ответили "${previousExperience}" в ${previousYear},
+        ответили "${nextExperience}" в ${nextYear}
+
     # other category tools
     - key: block.title.category-other-tools
       t: Другие инструменты
