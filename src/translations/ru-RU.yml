@@ -937,9 +937,9 @@ translations:
       t: К сожалению, экспорт CSV не доступен для этого набора данных.
     - key: export.graphql
       t: >
-          Хотя сейчас наш внутренний GraphQL API не публичен, в будущем мы планируем
-          предоставить его, что упростит запросы к нашим данным. Если хотите узнать больше,
-          можете ознакомиться на <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">GitHub</a>
+          Хотя сейчас наш внутренний GraphQL API не является публичным, в будущем мы планируем открыть его,
+          чтобы упростить запросы к нашим данным. Если хотите узнать больше, можете ознакомиться
+          на <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">GitHub</a>
 
 
     # general
