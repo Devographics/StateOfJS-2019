@@ -6,16 +6,31 @@ import YearsLayer from './YearsLayer'
 import NodeTooltip from './NodeTooltip'
 import LinkTooltip from './LinkTooltip'
 
+const sortedExperienceKeys = [
+    'never_heard',
+    'not_interested',
+    'interested',
+    'would_not_use',
+    'would_use'
+]
+
 const getColor = d => {
     // it's a node
     if (d.id) {
-        return toolExperience.find(i => i.id === d.experience).color
+        return toolExperience.find(xp => xp.id === d.experience).color
     }
 
     // otherwise it's a link
     // the returned color for links does not matter as link gradients
     // are enabled and will use source/target node colors
     return '#000000'
+}
+
+const minNodeValueOnTop = (nodeA, nodeB) => {
+    return (
+        sortedExperienceKeys.findIndex(xp => xp === nodeA.experience) -
+        sortedExperienceKeys.findIndex(xp => xp === nodeB.experience)
+    )
 }
 
 const ToolExperienceGraphChart = ({ data }) => {
@@ -32,7 +47,7 @@ const ToolExperienceGraphChart = ({ data }) => {
                 nodes: data.nodes,
                 links
             }}
-            sort="auto"
+            sort={minNodeValueOnTop}
             align="center"
             theme={theme}
             colors={getColor}
@@ -43,7 +58,7 @@ const ToolExperienceGraphChart = ({ data }) => {
             nodeOpacity={1}
             nodeBorderWidth={0}
             nodeInnerPadding={2}
-            nodeTooltip={node => <NodeTooltip {...node}/>}
+            nodeTooltip={node => <NodeTooltip {...node} />}
             linkContract={1}
             linkBlendMode="screen"
             enableLinkGradient
