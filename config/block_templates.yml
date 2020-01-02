@@ -389,6 +389,38 @@ toolExperienceTemplate:
             }
         }
 
+toolExperienceGraphTemplate:
+    blockType: ToolExperienceGraphBlock
+    dataPath: surveyApi.survey.tool
+    showLegend: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}) {
+                tool(id: ${toolId}) {
+                    id
+                    entity {
+                        homepage
+                        name
+                        github {
+                            url
+                        }
+                    }
+                    experienceGraph {
+                        nodes {
+                            id
+                            year
+                            experience
+                        }
+                        links {
+                            source
+                            target
+                            count
+                        }
+                    }
+                }
+            }
+        }
+
 toolsExperienceRankingTemplate:
     blockType: ToolsExperienceRankingBlock
     dataPath: 'surveyApi.survey.toolsRankings.experience'

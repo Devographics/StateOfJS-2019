@@ -26,7 +26,7 @@
     "@nivo/geo": "0.61.1",
     "@nivo/line": "0.61.1",
     "@nivo/pie": "0.61.1",
-    "@nivo/sankey": "0.61.1",
+    "@nivo/sankey": "0.61.2",
     "@nivo/scatterplot": "0.61.1",
     "@nivo/stream": "0.61.1",
     "@nivo/sunburst": "0.61.0",
