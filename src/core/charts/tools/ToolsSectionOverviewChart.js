@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
+import get from 'lodash/get'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
-import { getColor } from 'core/constants.js'
-import get from 'lodash/get'
+import { getColor } from 'core/constants'
 
 const margin = {
     top: 81,
@@ -62,6 +62,13 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace }) => {
             axisBottom={{
                 format: formatTick
             }}
+            defs={[theme.emptyPattern]}
+            fill={[
+                {
+                    id: 'empty',
+                    match: { id: 'never_heard' }
+                }
+            ]}
             axisLeft={null}
             enableGridY={false}
             theme={theme}
