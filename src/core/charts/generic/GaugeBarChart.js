@@ -1,6 +1,6 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo, useMemo, useContext } from 'react'
 import PropTypes from 'prop-types'
-import theme from 'nivoTheme'
+import { ThemeContext } from 'styled-components'
 import { useI18n } from 'core/i18n/i18nContext'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@nivo/core'
@@ -49,6 +49,7 @@ const Tooltip = memo(({ translate, i18nNamespace, bar, units }) => {
 
 const GaugeBarChart = ({ buckets, colorMapping, units, applyEmptyPatternTo, i18nNamespace }) => {
     const { translate } = useI18n()
+    const theme = useContext(ThemeContext)
 
     const keys = useMemo(() => colorMapping.map(m => m.id), [colorMapping])
     const data = useMemo(
@@ -104,9 +105,9 @@ const GaugeBarChart = ({ buckets, colorMapping, units, applyEmptyPatternTo, i18n
             enableGridX={false}
             enableGridY={false}
             animate={false}
-            theme={theme}
+            theme={theme.charts}
             layers={['bars', labelsLayer]}
-            defs={[theme.emptyPattern]}
+            defs={[theme.charts.emptyPattern]}
             fill={patternRules}
             tooltip={bar => (
                 <Tooltip

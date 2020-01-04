@@ -32,6 +32,7 @@
     "@nivo/sunburst": "0.61.0",
     "@nivo/treemap": "0.61.0",
     "@nivo/waffle": "0.61.1",
+    "babel-plugin-styled-components": "^1.10.6",
     "bowser": "2.1.0",
     "classnames": "^2.2.6",
     "d3-array": "^2.4.0",
@@ -44,6 +45,7 @@
     "gatsby-plugin-netlify": "^2.1.24",
     "gatsby-plugin-react-helmet": "^3.1.14",
     "gatsby-plugin-sass": "^2.1.26",
+    "gatsby-plugin-styled-components": "^3.1.16",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-source-filesystem": "^2.1.36",
     "gatsby-source-graphql": "^2.1.25",
@@ -68,6 +70,7 @@
     "react-modal": "^3.11.1",
     "react-tabs": "^3.0.0",
     "remove-markdown": "^0.3.0",
+    "styled-components": "^4.4.1",
     "tinycolor2": "^1.4.1",
     "topojson-client": "^3.0.0"
   },
