@@ -25,7 +25,7 @@ const ChartLabel = ({
                 pointerEvents: 'none',
                 fontSize,
                 fontWeight: 400,
-                opacity: .85,
+                opacity: 0.85
             }}
         >
             {label}
@@ -46,7 +46,7 @@ const ChartLabel = ({
 )
 
 ChartLabel.propTypes = {
-    label: PropTypes.string.isRequired,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     fontSize: PropTypes.number,
     strokeColor: PropTypes.string,
     fontColor: PropTypes.string
