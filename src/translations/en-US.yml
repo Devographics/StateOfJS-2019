@@ -778,7 +778,7 @@ translations:
           Awarded to the most adopted JavaScript feature.
     - key: award.feature_adoption_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
+          With **${items[0].value}** of users using it ${items[0].name}
           is the most used JavaScript feature this year.
 
     # tool_satisfaction
