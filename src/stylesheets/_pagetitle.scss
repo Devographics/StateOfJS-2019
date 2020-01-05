@@ -10,3 +10,27 @@
     fill: $white;
     stroke: $white;
 }
+
+.PageHeader {
+    margin-bottom: $spacing * 2;
+}
+
+.PageHeader__Header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.PageHeader__Title {
+    margin: 0;
+    padding: 0;
+    align-items: baseline;
+    @include small {
+        font-size: 1.3rem;
+    }
+    @include medium {
+        font-size: 1.5rem;
+    }
+    @include large {
+        font-size: 2rem;
+    }
+}

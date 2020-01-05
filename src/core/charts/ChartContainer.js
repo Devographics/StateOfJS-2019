@@ -56,13 +56,10 @@ const IndicatorBottom = memo(() => (
     </span>
 ))
 
-/*
-
-- Fit: fit to viewport width
-- Expand: force a 600px width
-
-*/
-
+/**
+ * - Fit: fit to viewport width
+ * - Expand: force a 600px width
+ */
 const ChartContainer = ({ children, height, fit = false, className = '', vscroll = false }) => (
     <div
         className={`Chart__Container__Outer Chart__Container__Outer--${
