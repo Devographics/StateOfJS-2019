@@ -36,8 +36,14 @@ const Button = styled.div.attrs(({ className, size = 'medium', ...props }) => {
     }
 
     &.Button--large {
-        font-size: ${({ theme }) => theme.typography.sizes.large};
-        padding: ${({ theme }) => theme.spacing}px;
+        @media ${mq.small} {
+            font-size: ${({ theme }) => theme.typography.sizes.large};
+            padding: ${({ theme }) => theme.spacing * .75}px;
+        }
+        @media ${mq.mediumLarge} {
+            font-size: ${({ theme }) => theme.typography.sizes.larger};
+            padding: ${({ theme }) => theme.spacing}px;
+        }
     }
 
     &:hover {
