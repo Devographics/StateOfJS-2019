@@ -1,12 +1,7 @@
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
+import { mq } from 'core/theme'
 import Cell from './LogoCell'
-
-const Container = styled.span`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    border-bottom: ${props => props.theme.separationBorder};
-`
 
 const LogoCompact = () => {
     const theme = useContext(ThemeContext)
@@ -20,5 +15,15 @@ const LogoCompact = () => {
         </Container>
     )
 }
+
+const Container = styled.span`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: ${props => props.theme.separationBorder};
+
+    @media ${mq.smallMedium} {
+        border-bottom: 0;
+    }
+`
 
 export default LogoCompact

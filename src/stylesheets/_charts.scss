@@ -1,24 +1,3 @@
-.chart-wrapper {
-    font-size: $medium-font;
-    g.xsmall {
-        font-size: 0.6rem;
-    }
-    g.small {
-        font-size: $smaller-font;
-    }
-    g.medium {
-        font-size: $small-font;
-    }
-    g.large,
-    g.xlarge {
-        font-size: $medium-font;
-    }
-}
-
-.chart--bar {
-    font-size: $medium-font;
-}
-
 .block__contents {
     @include small {
         overflow-x: scroll;
@@ -80,7 +59,6 @@
     z-index: 1000;
 }
 
-
 .ToolsOverviewBlock {
     .Legends {
         margin-top: $spacing * 2;
@@ -125,8 +103,8 @@ Gauge Chart
 Circle Packing Chart
 
 */
-.CirclePackingChart{
-    svg{
+.CirclePackingChart {
+    svg {
         overflow: visible;
     }
 }
@@ -183,28 +161,7 @@ Circle Packing Chart
     }
 }
 
-.CirclePackingNode__TotalCircle {
-    pointer-events: none;
-    opacity: 0;
-    transform: scale(0.8);
-    .CirclePackingNode:hover & {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.CirclePackingNode__TotalCircleLabel{
-    opacity: 0;
-    pointer-events: none;
-    animation: rotateAnim 20s linear infinite;
-    animation-fill-mode: forwards;
-    font-size: $small-font;
-    @include font-bold;
-    .CirclePackingNode:hover & {
-        opacity: 1;
-    }
-}
-.CirclePackingNode__SectionLabel{
+.CirclePackingNode__SectionLabel {
     opacity: 0.65;
 }
 /*
@@ -370,4 +327,3 @@ Bump Chart
         }
     }
 }
-

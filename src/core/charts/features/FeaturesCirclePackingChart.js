@@ -4,7 +4,7 @@ import round from 'lodash/round'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
 import { useTheme } from '@nivo/core'
-import { colors, totalCount, getColor } from 'core/constants'
+import { colors, getColor } from 'core/constants'
 import ChartLabel from 'core/components/ChartLabel'
 import { useI18n } from 'core/i18n/i18nContext'
 
@@ -66,35 +66,6 @@ const Tooltip = props => {
     )
 }
 
-export const TotalCircle = ({ radius, id }) => {
-    const { translate } = useI18n()
-
-    return (
-        <g>
-            <defs>
-                <path
-                    d={`M-${radius},0a${radius},${radius} 0 1,0 ${radius *
-                        2},0a${radius},${radius} 0 1,0 -${radius * 2},0`}
-                    id={`textcircle-${id}`}
-                />
-            </defs>
-            <circle
-                className="CirclePackingNode__TotalCircle"
-                r={radius}
-                // strokeDasharray="4,4"
-                stroke={colors.red}
-                strokeWidth={2}
-                fill="rgba(0,0,0,0.3)"
-            />
-            <text className="CirclePackingNode__TotalCircleLabel" dy={20} dx={0}>
-                <textPath xlinkHref={`#textcircle-${id}`} fill={colors.red}>
-                    {translate('opinions.legends.total_respondents')}: {totalCount}
-                </textPath>
-            </text>
-        </g>
-    )
-}
-
 const Node = ({ node, handlers }) => {
     const radius = node.r
 
@@ -134,10 +105,6 @@ const Node = ({ node, handlers }) => {
             </g>
         )
     }
-    // const surface = Math.PI * node.r * node.r
-    // const surfaceRatio = surface / node.data.awareness
-    // const totalSurface = surfaceRatio * totalCount
-    // const totalRadius = Math.sqrt(totalSurface / Math.PI)
     const usageRadius = node.r * (node.data.usage / node.data.awareness)
 
     return (
@@ -148,8 +115,6 @@ const Node = ({ node, handlers }) => {
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            {/* <TotalCircle radius={totalRadius} id={node.data.id} /> */}
-
             <circle r={node.r} fill={`${getColor(node.data.sectionId)}50`} />
             <circle r={usageRadius} fill={`${getColor(node.data.sectionId)}`} />
             <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />

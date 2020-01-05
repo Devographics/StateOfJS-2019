@@ -5,17 +5,6 @@ $tooltipDisplay: block;
   Libraries
 \*————————————————————————————————————————————————————————————————————————————————————————————————————————————————————*/
 
-.others-wrapper {
-    display: flex;
-    .libraries {
-    }
-    .chart-wrapper {
-        flex: 1;
-    }
-}
-
-.libraries {
-}
 .libraries__inner {
     display: flex;
 }
@@ -159,14 +148,14 @@ $tooltipDisplay: block;
     @include font-bold;
 }
 
-.Tooltip__Heading{
+.Tooltip__Heading {
     margin-bottom: $spacing/4;
 }
-.Tooltip__Item{
+.Tooltip__Item {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.Tooltip__Value{
+.Tooltip__Value {
     @include font-bold;
 }
