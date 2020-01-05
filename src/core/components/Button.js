@@ -2,7 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
 
-const StyledButton = styled.div`
+const Button = styled.div.attrs(({ className, size = 'medium', ...props }) => {
+    return {
+        className: `Button Button--${size}${className ? ` ${className}` : ''}`
+    }
+})`
     background: none;
     padding: ${({ theme }) => theme.spacing / 2}px ${({ theme }) => theme.spacing}px;
     cursor: pointer;
@@ -79,12 +83,5 @@ const StyledButton = styled.div`
         }
     }
 `
-
-const Button = ({ className, size = 'medium', ...props }) => (
-    <StyledButton
-        className={`Button Button--${size}${className ? ` ${className}` : ''}`}
-        {...props}
-    />
-)
 
 export default Button

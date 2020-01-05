@@ -2,20 +2,9 @@
     margin-top: $spacing * 2;
     margin-bottom: $spacing * 2;
 }
+
 .PageFooter__Link {
-    @include small {
-        display: block;
-        text-align: center;
-    }
     &--start {
         font-size: $largest-font;
-    }
-    &--previous {
-        @include small {
-            margin-bottom: $spacing;
-        }
-        @include medium-large {
-            margin-right: $spacing;
-        }
     }
 }
