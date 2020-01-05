@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import Block from 'core/blocks/block/Block'
 import compact from 'lodash/compact'
-import { getColor, keys } from 'core/constants.js'
 import round from 'lodash/round'
+import get from 'lodash/get'
+import { getColor, keys } from 'core/constants'
 import ToolsScatterplotChart from 'core/charts/tools/ToolsScatterplotChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
-import get from 'lodash/get'
+import ButtonGroup from 'core/components/ButtonGroup'
+import Button from 'core/components/Button'
 import { toolsCategories } from '../../../../config/variables.yml'
 
 /*
@@ -78,22 +80,21 @@ const Switcher = ({ setMetric, metric }) => {
     const { translate } = useI18n()
 
     return (
-        <div className="BlockUnitsSelector">
-            <span className="ButtonGroup">
-                {['satisfaction', 'interest' /*, 'awareness'*/].map(key => (
-                    <span
-                        key={key}
-                        className={`Button Button--small Button--${
-                            metric === key ? 'selected' : 'unselected'
-                        }`}
-                        onClick={() => setMetric(key)}
-                    >
-                        <span className="desktop">{translate(`opinions.legends.${key}_ratio`)}</span>
-                        <span className="mobile">{translate(`opinions.legends.${key}_ratio`)[0]}</span>
-                    </span>
-                ))}
-            </span>
-        </div>
+        <ButtonGroup>
+            {['satisfaction', 'interest'].map(key => (
+                <Button
+                    key={key}
+                    size="small"
+                    className={`Button--${
+                        metric === key ? 'selected' : 'unselected'
+                    }`}
+                    onClick={() => setMetric(key)}
+                >
+                    <span className="desktop">{translate(`opinions.legends.${key}_ratio`)}</span>
+                    <span className="mobile">{translate(`opinions.legends.${key}_ratio`)[0]}</span>
+                </Button>
+            ))}
+        </ButtonGroup>
     )
 }
 

@@ -1,5 +1,3 @@
-import nivoTheme from 'nivoTheme'
+import themes from './themes'
 
-export default {
-    charts: nivoTheme
-}
+export default themes.css

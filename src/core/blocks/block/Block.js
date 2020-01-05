@@ -1,8 +1,24 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import mq from 'core/theme/mq'
 import BlockTitle from 'core/blocks/block/BlockTitle'
 import ShareBlockDebug from 'core/share/ShareBlockDebug'
 import BlockLegends from 'core/blocks/block/BlockLegends'
+
+const Container = styled.div`
+    @media ${mq.small} {
+        margin-bottom: ${props => props.theme.spacing * 2}px;
+    }
+    
+    @media ${mq.mediumLarge} {
+        margin-bottom: ${props => props.theme.spacing * 4}px;
+    }
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+`
 
 const Block = ({
     isShareable,
@@ -20,9 +36,9 @@ const Block = ({
     const { id, showLegend } = block
 
     return (
-        <div
+        <Container
             id={id}
-            className={`Block--${id} Block${className !== undefined ? ` ${className}` : ''}`}
+            className={`Block Block--${id}${className !== undefined ? ` ${className}` : ''}`}
         >
             <BlockTitle
                 isShareable={isShareable}
@@ -40,7 +56,7 @@ const Block = ({
                 <BlockLegends block={block} data={data} units={units} {...legendProps} />
             )}
             {blockFooter}
-        </div>
+        </Container>
     )
 }
 
@@ -50,12 +66,6 @@ Block.propTypes = {
         title: PropTypes.node,
         description: PropTypes.node
     }).isRequired,
-    // data: PropTypes.shape({
-    //     completion: PropTypes.shape({
-    //         count: PropTypes.number.isRequired,
-    //         percentage: PropTypes.number.isRequired
-    //     })
-    // }),
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired,
     className: PropTypes.string,

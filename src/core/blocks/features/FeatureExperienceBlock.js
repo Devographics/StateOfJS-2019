@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useMemo } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeContext } from 'styled-components'
 import Block from 'core/blocks/block/Block'
 import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
@@ -13,6 +14,7 @@ const parseMDNLinks = content =>
 
 const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const [units, setUnits] = useState(defaultUnits)
+    const theme = useContext(ThemeContext)
 
     const context = usePageContext()
     const { locale } = context
@@ -38,6 +40,15 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
         }
     })
 
+    const colorMapping = useMemo(
+        () =>
+            featureExperience.map(item => ({
+                ...item,
+                color: theme.colors.ranges.featureExperience[item.id]
+            })),
+        [theme]
+    )
+
     const mdnLink = mdn && `https://developer.mozilla.org${mdn.url}`
     // only show descriptions for english version
     const description =
@@ -61,7 +72,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
                     <ChartContainer height={40} fit={true} className="FeatureChart">
                         <GaugeBarChart
                             buckets={buckets}
-                            colorMapping={featureExperience}
+                            colorMapping={colorMapping}
                             units={units}
                             applyEmptyPatternTo="never_heard_not_sure"
                             i18nNamespace="featureExperience"

@@ -1,73 +1,11 @@
-.Block,
-.block {
-    @include small {
-        margin-bottom: $spacing * 2;
-    }
-    @include medium-large {
-        margin-bottom: $spacing * 4;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.Block__Description,
-.block__description {
-    margin-bottom: $spacing;
-    p {
-        &:last-child {
-            margin: 0;
-        }
-    }
-}
-
 .Block__Title {
-    padding-bottom: $spacing/2;
-    border-bottom: $border;
-    margin-bottom: $spacing;
-    display: flex;
-    align-items: center;
-    .share__link--permalink {
-        float: left;
-        opacity: 0;
-        line-height: 1;
-        width: 22px;
-        margin-left: -22px;
-        padding-right: 4px;
-        transition: none;
-        position: relative;
-        @include small {
-            top: 3px;
-        }
-        @include medium-large {
-            top: 7px;
-        }
-        &:hover::before {
-            content: none;
-        }
-        path {
-            fill: white(0.4);
-        }
-    }
     &:hover {
-        .share__link--permalink {
+        .SharePermalink {
             opacity: 1;
         }
     }
 }
 
-.Block__Title__Left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    // @include small {
-    //     justify-content: space-between;
-    //     overflow: hidden; // make sure share options don't push past viewport limits
-    // }
-}
-.Block__Title__Right {
-}
 .Block__Title__Text {
     margin-bottom: 0;
     @include small {
@@ -81,14 +19,6 @@
 }
 .Block__Title__Share {
     margin-left: $spacing/2;
-}
-
-.block__content {
-    li {
-        margin-bottom: $spacing/2;
-    }
-    strong {
-    }
 }
 
 // hack to avoid having border-bottom block share buttons
@@ -105,60 +35,21 @@
     }
 }
 
-.CompletionIndicator {
-    margin-left: $spacing/2;
-    position: relative;
-    padding: 2px;
-}
 .CompletionIndicator__Tooltip {
-    left: 50%;
-    position: absolute;
     background: $active-color;
     color: $navy;
-    font-size: $small-font;
-    padding: 4px 8px;
-    @include border-radius;
-    white-space: nowrap;
-    // top: -100%;
-    // left: -50%;
-    transform: translate(-50%, -130%);
-    opacity: 0;
-    transition: all 200ms ease-in;
+
     &:after {
-        top: 99%;
-        left: 50%;
-        border: solid transparent;
-        content: ' ';
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-color: rgba(136, 183, 213, 0);
+        border: 8px solid rgba(136, 183, 213, 0);
         border-top-color: $active-color;
-        border-width: 8px;
-        margin-left: -8px;
-    }
-    .CompletionIndicator:hover & {
-        opacity: 1;
-        transform: translate(-50%, -140%);
-        transition: all 200ms ease-in;
     }
 }
 .CompletionIndicator__Data {
     @include sr-only;
 }
-.CompletionIndicator__Chart {
-    display: block;
-}
 .CompletionIndicator__Chart__Bg {
     fill: $active-color-dark;
-    .CompletionIndicator:hover & {
-        // fill: $blueDark;
-    }
 }
 .CompletionIndicator__Chart__Fg {
     stroke: $active-color;
-    .CompletionIndicator:hover & {
-        // stroke: $blue;
-    }
 }

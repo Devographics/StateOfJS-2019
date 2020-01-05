@@ -31,15 +31,6 @@
         min-width: 800px;
     }
 }
-.PieRow {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.PieRow svg {
-    margin-right: 15px;
-}
 
 .Help {
     font-size: 13px;
@@ -51,22 +42,6 @@
     color: rgb(150, 136, 228);
     display: inline-block;
     vertical-align: text-bottom;
-}
-
-.user-facts-placeholder {
-    @include flex-center;
-    border: dotted 1px $border-color;
-    min-height: 400px;
-    h3 {
-        margin: 0;
-    }
-}
-
-.results-chart-wrapper {
-    padding: 0 $spacing * 3;
-    text {
-        font-size: $small-font;
-    }
 }
 
 .Chart__Container__Outer {
@@ -148,21 +123,6 @@
     }
 }
 
-.OpinionSelector {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    border: none;
-    color: $blue;
-    border-bottom: 1px dashed $blue;
-    border-radius: 0;
-
-    &:focus {
-        outline: transparent;
-        border-bottom-style: solid;
-    }
-}
-
 .ToolsUsageByCountry__Chart,
 .SalaryPerCountry__Chart {
     height: 500px;
@@ -182,29 +142,12 @@
     }
 }
 
-.Bar__Tick {
-    z-index: 1000;
-}
-
 .Bar__Tooltip__Wrapper {
     overflow: visible;
     display: none;
     z-index: 1000;
-    .Bar__Tick:hover & {
-        display: block;
-    }
 }
 
-.Bar__Tick__Label {
-    fill: $text-color;
-    font-size: $small-font;
-    cursor: default;
-    &--hoverable {
-        cursor: pointer;
-        @include font-bold;
-        fill: $active-color;
-    }
-}
 
 .ToolsOverviewBlock {
     .Legends {
@@ -222,23 +165,6 @@ Chart Controls
     justify-content: flex-end;
 }
 
-.ChartModeSelector,
-.BlockUnitsSelector {
-    display: inline-flex;
-    align-items: center;
-}
-
-.ChartModeSelector {
-    margin-right: $spacing;
-}
-
-.ChartModeSelector__Label,
-.BlockUnitsSelector__Label {
-    @include font-bold;
-    padding: $spacing / 5 $spacing / 1.5 $spacing / 5 0;
-    font-size: $small-font;
-    white-space: nowrap;
-}
 /*
 
 Vertical Bar Chart
@@ -329,11 +255,9 @@ Circle Packing Chart
     pointer-events: none;
     opacity: 0;
     transform: scale(0.8);
-    // transition: all 200ms ease-in;
     .CirclePackingNode:hover & {
         opacity: 1;
         transform: scale(1);
-        // transition: all 200ms ease-in;
     }
 }
 
@@ -342,12 +266,10 @@ Circle Packing Chart
     pointer-events: none;
     animation: rotateAnim 20s linear infinite;
     animation-fill-mode: forwards;
-    // transition: all 200ms ease-in;
     font-size: $small-font;
     @include font-bold;
     .CirclePackingNode:hover & {
         opacity: 1;
-        // transition: all 200ms ease-in;
     }
 }
 .CirclePackingNode__SectionLabel{
@@ -402,7 +324,6 @@ Quadrant/Scatterplot Chart
         .Scatterplot__Node__Label__Text {
             fill: $navy;
             transition: all 200ms ease-out;
-            // transform: scale(1.2) translateX(15px);
         }
         .Scatterplot__Node__Crosshair__Line {
             @include svgAnts;
@@ -422,9 +343,6 @@ Quadrant/Scatterplot Chart
     transition: all 200ms ease-out;
 }
 
-.Scatterplot__Node__PointHoverZone {
-}
-
 .Scatterplot__Node__Crosshairs {
     pointer-events: none;
     opacity: 0;
@@ -441,10 +359,6 @@ Quadrant/Scatterplot Chart
 Bump Chart
 
 */
-.BumpChart__Node {
-    transition: all 200ms ease-out;
-}
-
 @mixin coloredText($color) {
     display: inline-block;
     background: $teal;

@@ -125,28 +125,3 @@ $sidebar_width: 270px;
         text-align: center;
     }
 }
-// .section-border {
-//     @include border;
-//     position: relative;
-//     @include small {
-//         padding: $spacing $spacing $spacing * 2 $spacing;
-//     }
-//     @include medium {
-//         padding: $spacing $spacing $spacing * 2 $spacing;
-//     }
-//     @include large {
-//         padding: $spacing * 2 $spacing * 2;
-//     }
-//     h3 {
-//         margin: 0;
-//         display: table;
-//         max-width: 90%;
-//         background: $beige;
-//         padding: 0 20px;
-//         position: absolute;
-//         line-height: 1.4;
-//         top: -3px;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//     }
-// }

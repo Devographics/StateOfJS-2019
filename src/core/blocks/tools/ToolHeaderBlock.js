@@ -1,11 +1,23 @@
 import React, { Fragment } from 'react'
 import { format } from 'd3-format'
+import get from 'lodash/get'
+import styled from 'styled-components'
+import mq from 'core/theme/mq'
 import periodicTableData from '../../../../config/periodic_table.yml'
 import ToolPeriodicElement from 'core/blocks/tools/ToolPeriodicElement'
 import { useI18n } from 'core/i18n/i18nContext'
-import get from 'lodash/get'
 
 const starsFormatter = format('.2s')
+
+const Container = styled.div`
+    @media ${mq.small} {
+        margin-bottom: ${props => props.theme.spacing * 2}px;
+    }
+    
+    @media ${mq.mediumLarge} {
+        margin-bottom: ${props => props.theme.spacing * 4}px;
+    }
+`
 
 const ToolHeaderBlock = ({ block, data }) => {
     const { translate } = useI18n()
@@ -19,13 +31,12 @@ const ToolHeaderBlock = ({ block, data }) => {
     // const npmLink = get(data, 'entity.npm')
 
     return (
-        <div className="Block ToolHeader">
+        <Container className="ToolHeader">
             <div className="ToolHeader__Element">
                 <ToolPeriodicElement
                     tool={toolId}
                     name={toolName}
                     symbol={periodicTableData.tools[toolId] || '??'}
-                    // number={`#${number}` || '?'}
                 />
             </div>
             <div className="ToolHeader__Content">
@@ -63,7 +74,7 @@ const ToolHeaderBlock = ({ block, data }) => {
                     </div>
                 </Fragment>
             </div>
-        </div>
+        </Container>
     )
 }
 

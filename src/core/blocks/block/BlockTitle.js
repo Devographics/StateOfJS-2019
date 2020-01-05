@@ -1,5 +1,7 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import last from 'lodash/last'
 import ReactMarkdown from 'react-markdown/with-html'
 import ShareBlock from 'core/share/ShareBlock'
 import BlockExport from 'core/blocks/block/BlockExport'
@@ -10,7 +12,6 @@ import { getBlockMeta } from 'core/helpers/blockHelpers'
 import SharePermalink from 'core/share/SharePermalink'
 import BlockUnitsSelector from 'core/blocks/block/BlockUnitsSelector'
 import BlockCompletionIndicator from 'core/blocks/block/BlockCompletionIndicator'
-import last from 'lodash/last'
 
 const BlockTitle = ({
     isShareable,
@@ -49,19 +50,16 @@ const BlockTitle = ({
     const meta = getBlockMeta(block, context, translate)
 
     return (
-        <div className={`Block__Heading Block__Heading--${id}`}>
-            <div className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}>
-                <div className="Block__Title__Left">
-                    <h3 className="Block__Title__Text Block__Title__Text--short">
+        <>
+            <StyledBlockTitle
+                className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}
+            >
+                <LeftPart>
+                    <h3 className="Block__Title__Text">
                         <SharePermalink url={meta.link} />
                         {blockTitle}
                     </h3>
                     {completion && <BlockCompletionIndicator completion={completion} />}
-                    {/*
-                    <h3 className="Block__Title__Text Block__Title__Text--full">
-                        {title || translate(`fullcharts.${id}`, { values })}
-                    </h3>
-                    */}
                     {isExportable && data && block && (
                         <BlockExport
                             id={id}
@@ -82,27 +80,24 @@ const BlockTitle = ({
                             }}
                         />
                     )}
-                </div>
-                <div className="Block__Title__Right">
-                    {switcher ? (
-                        <div className="Block__Title__ChartControls ChartControls">{switcher}</div>
-                    ) : (
-                        units &&
-                        setUnits && (
-                            <div className="Block__Title__ChartControls ChartControls">
-                                {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
-                                <BlockUnitsSelector units={units} onChange={setUnits} />
-                            </div>
-                        )
-                    )}
-                </div>
-            </div>
+                </LeftPart>
+                {switcher ? (
+                    <div className="Block__Title__ChartControls ChartControls">{switcher}</div>
+                ) : (
+                    units &&
+                    setUnits && (
+                        <div className="Block__Title__ChartControls ChartControls">
+                            <BlockUnitsSelector units={units} onChange={setUnits} />
+                        </div>
+                    )
+                )}
+            </StyledBlockTitle>
             {showDescription && blockDescription && (
-                <div className="Block__Description">
+                <Description className="Block__Description">
                     <ReactMarkdown source={blockDescription} escapeHtml={false} />
-                </div>
+                </Description>
             )}
-        </div>
+        </>
     )
 }
 
@@ -112,12 +107,6 @@ BlockTitle.propTypes = {
         title: PropTypes.node,
         description: PropTypes.node
     }).isRequired,
-    // data: PropTypes.shape({
-    //     completion: PropTypes.shape({
-    //         count: PropTypes.number.isRequired,
-    //         percentage: PropTypes.number.isRequired
-    //     })
-    // }),
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired
 }
@@ -126,5 +115,30 @@ BlockTitle.defaultProps = {
     showDescription: true,
     isShareable: true
 }
+
+const StyledBlockTitle = styled.div`
+    border-bottom: ${props => props.theme.separationBorder};
+    padding-bottom: ${props => props.theme.spacing / 2}px;
+    margin-bottom: ${props => props.theme.spacing}px;
+    display: flex;
+    align-items: center;
+`
+
+const LeftPart = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`
+
+const Description = styled.div`
+    margin-bottom: ${props => props.theme.spacing}px;
+
+    p {
+        &:last-child {
+            margin: 0;
+        }
+    }
+`
 
 export default memo(BlockTitle)

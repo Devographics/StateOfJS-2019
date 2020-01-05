@@ -1,12 +1,3 @@
-.Sponsors {
-    background: $bg-color-light;
-    padding: $spacing * 1.5;
-    margin-top: $spacing * 2;
-}
-.Sponsors__Heading {
-    text-align: center;
-    margin-bottom: $spacing;
-}
 .Sponsors__Items {
     @include flex-center;
     @include small-medium {
@@ -30,14 +21,12 @@
         display: block;
         width: 100%;
     }
-    &--designcode{
+    &--designcode {
         width: 50px;
     }
 }
 
 .Sponsors__Support {
     font-size: $smallish-font;
-    text-align: center;
-    margin-top: $spacing/2;
     @include font-regular;
 }

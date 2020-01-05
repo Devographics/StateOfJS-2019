@@ -1,13 +1,24 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useState, useMemo, useContext } from 'react'
 import PropTypes from 'prop-types'
-import { gender } from 'core/constants.js'
+import { ThemeContext } from 'styled-components'
+import { gender } from 'core/constants'
 import Block from 'core/blocks/block/Block'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
 import ChartContainer from 'core/charts/ChartContainer'
 
-const GaugeBarBlock = ({ block, data }) => {
+const GenderBlock = ({ block, data }) => {
     const { id, units: defaultUnits = 'percentage' } = block
     const [units, setUnits] = useState(defaultUnits)
+    const theme = useContext(ThemeContext)
+
+    const colorMapping = useMemo(
+        () =>
+            gender.map(item => ({
+                ...item,
+                color: theme.colors.ranges.gender[item.id]
+            })),
+        [theme]
+    )
 
     return (
         <Block units={units} setUnits={setUnits} data={data} block={block}>
@@ -15,7 +26,7 @@ const GaugeBarBlock = ({ block, data }) => {
                 <GaugeBarChart
                     units={units}
                     buckets={data.buckets}
-                    colorMapping={gender}
+                    colorMapping={colorMapping}
                     i18nNamespace={id}
                 />
             </ChartContainer>
@@ -23,7 +34,7 @@ const GaugeBarBlock = ({ block, data }) => {
     )
 }
 
-GaugeBarBlock.propTypes = {
+GenderBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired
     }).isRequired,
@@ -36,4 +47,4 @@ GaugeBarBlock.propTypes = {
     }).isRequired
 }
 
-export default memo(GaugeBarBlock)
+export default memo(GenderBlock)

@@ -1,9 +1,10 @@
 import React from 'react'
-import Nav from './Nav'
-import LogoCompact from './LogoCompact'
 import Link from 'core/components/LocaleLink'
-import ShareSite from '../share/ShareSite'
+import styled from 'styled-components'
+import ShareSite from 'core/share/ShareSite'
 import { useI18n } from 'core/i18n/i18nContext'
+import Nav from 'core/components/Nav'
+import LogoCompact from 'core/components/LogoCompact'
 
 const Close = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -22,11 +23,15 @@ const Close = () => (
     </svg>
 )
 
-const Sidebar = ({ showSidebar, sidebarClassName, closeSidebar, rest }) => {
+const Container = styled.nav`
+    border-right: ${props => props.theme.separationBorder};
+`
+
+const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => {
     const { translate } = useI18n()
 
     return (
-        <nav className={`Sidebar ${sidebarClassName}`}>
+        <Container className={`Sidebar ${sidebarClassName}`}>
             <div className="Sidebar__Fixed">
                 <div className="Sidebar__Logo__Wrapper Logo__Wrapper">
                     <h1 className="Sidebar__Title sr-only">{translate('general.title')}</h1>
@@ -57,11 +62,9 @@ const Sidebar = ({ showSidebar, sidebarClassName, closeSidebar, rest }) => {
                 <div className="Sidebar__Inner">
                     <Nav {...rest} closeSidebar={closeSidebar} />
                 </div>
-                <div className="Sidebar__Footer">
-                    <ShareSite />
-                </div>
+                <ShareSite />
             </div>
-        </nav>
+        </Container>
     )
 }
 

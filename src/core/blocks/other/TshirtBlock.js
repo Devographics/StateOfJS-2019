@@ -1,6 +1,8 @@
 import React from 'react'
-import { useI18n } from 'core/i18n/i18nContext'
+import styled from 'styled-components'
 import ReactMarkdown from 'react-markdown/with-html'
+import { useI18n } from 'core/i18n/i18nContext'
+import mq from 'core/theme/mq'
 
 const images = [
     'stateofjs2019tshirt1.jpg',
@@ -12,10 +14,10 @@ const TshirtBlock = () => {
     const { translate } = useI18n()
 
     return (
-        <div className="Tshirt">
-            <div className="Tshirt__Images">
+        <Container>
+            <ImagesContainer>
                 {images.map((image, i) => (
-                    <div key={i} className={`Tshirt__Image Tshirt__Image${i}`}>
+                    <Image key={i}>
                         <a
                             href={`/images/tshirt/${image}`}
                             target="_blank"
@@ -26,10 +28,10 @@ const TshirtBlock = () => {
                                 alt={translate('tshirt.stateofjs')}
                             />
                         </a>
-                    </div>
+                    </Image>
                 ))}
-            </div>
-            <div className="Tshirt__Description">
+            </ImagesContainer>
+            <Description>
                 <h2>{translate('tshirt.about')}</h2>
                 <div>
                     <ReactMarkdown source={translate('tshirt.description')} escapeHtml={false} />
@@ -43,9 +45,63 @@ const TshirtBlock = () => {
                     {translate('tshirt.getit')} –{' '}
                     {translate('tshirt.price', { values: { price: 24 } })}
                 </a>
-            </div>
-        </div>
+            </Description>
+        </Container>
     )
 }
+
+const Container = styled.div`
+    border: ${props => props.theme.separationBorder};
+
+    @media ${mq.mediumLarge} {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+`
+
+const ImagesContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    @media ${mq.small} {
+        border-bottom: ${props => props.theme.separationBorder};
+    }
+    @media ${mq.mediumLarge} {
+        border-right: ${props => props.theme.separationBorder};
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+`
+
+const Image = styled.div`
+    &:nth-child(1) {
+        border-bottom: ${props => props.theme.separationBorder};
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    &:nth-child(2) {
+        border-right: ${props => props.theme.separationBorder};
+    }
+`
+
+const Description = styled.div`
+    @media ${mq.small} {
+        padding: ${props => props.theme.spacing}px;
+    }
+    @media ${mq.mediumLarge} {
+        padding: ${props => props.theme.spacing * 2}px;
+    }
+    h2 {
+        margin-bottom: ${props => props.theme.spacing / 4}px;
+    }
+    h3 {
+        font-size: ${props => props.theme.typography.sizes.medium};
+    }
+`
 
 export default TshirtBlock

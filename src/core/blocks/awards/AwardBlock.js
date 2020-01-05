@@ -1,11 +1,11 @@
-import React, { memo, useState, useCallback } from 'react'
+import React, { memo, useState, useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeContext} from 'styled-components'
 import ReactMarkdown from 'react-markdown'
 import ShareBlock from 'core/share/ShareBlock'
 import { useI18n } from 'core/i18n/i18nContext'
 import AwardIcon from './AwardIcon'
 import Confetti from 'react-confetti'
-import { distinctColors } from 'core/constants.js'
 import PeriodicElement from 'core/blocks/tools/ToolPeriodicElement'
 import periodicTableData from '../../../../config/periodic_table.yml'
 
@@ -13,6 +13,7 @@ const AwardBlock = ({ block }) => {
     const { id, awards } = block
     const type = id
     const { translate } = useI18n()
+    const theme = useContext(ThemeContext)
 
     const [isRevealed, setIsRevealed] = useState(false)
     const handleClick = useCallback(() => {
@@ -43,7 +44,7 @@ const AwardBlock = ({ block }) => {
                                     initialVelocityX={5}
                                     initialVelocityY={20}
                                     confettiSource={{ x: 200, y: 100, w: 100, h: 100 }}
-                                    colors={distinctColors}
+                                    colors={theme.colors.distinct}
                                 />
                             </div>
                         )}

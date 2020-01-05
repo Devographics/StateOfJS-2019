@@ -1,27 +1,9 @@
-.footer {
-    text-align: center;
-    font-size: $medium-font;
-}
-
-.PageFooter {
-    @include small{
-        margin-top: $spacing*4;
-    }
-    @include medium-large{
-        margin-top: $spacing * 6;
-    }
-}
-.PageFooter__Nav{
-    @include medium-large{
-        @include flex-center;
-    }
-}
-.IntroductionFooter{
+.IntroductionFooter {
     margin-top: $spacing * 2;
     margin-bottom: $spacing * 2;
 }
 .PageFooter__Link {
-    @include small{
+    @include small {
         display: block;
         text-align: center;
     }
@@ -29,22 +11,11 @@
         font-size: $largest-font;
     }
     &--previous {
-        @include small{
+        @include small {
             margin-bottom: $spacing;
         }
-        @include medium-large{
+        @include medium-large {
             margin-right: $spacing;
         }
     }
-}
-
-.PageFooter__Footer{
-    @include small{
-        margin-top: $spacing*4;
-    }
-    @include medium-large{
-        margin-top: $spacing*6;
-    }
-    font-size: $smaller-font;
-    text-align: center;
 }

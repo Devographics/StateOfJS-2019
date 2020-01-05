@@ -4,8 +4,6 @@
 }
 
 .Sidebar {
-    border-right: $border;
-    border-bottom: $border;
     @include small-medium {
         top: 0;
         bottom: 0;
@@ -67,11 +65,9 @@
 }
 
 .Sidebar__Logo--mobile {
-    // @include flex-center;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     border-bottom: $border;
-    // height: 50px;
     .Sidebar__Logo__Inner {
         @include flex-center;
     }
@@ -110,28 +106,16 @@
         flex-direction: column;
     }
 }
-.Nav__Page__Link {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: $medium-font;
-    margin: 0 0 $spacing / 3 0;
-}
 
 .Nav__Page--lvl-1,
 .Nav__Page--lvl-2 {
     .Nav__Page__Link {
         font-size: $smallish-font;
         @include font-regular;
-        &,
-        &:link,
-        &:visited {
-            color: $text-color;
-        }
     }
 }
 
-.Nav__Page__Link--active {
-    color: $active-color !important;
+.Nav__Page__Link._is-active {
     @include font-bold;
     span::before {
         content: '> ';

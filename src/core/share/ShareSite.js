@@ -1,11 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 import ShareTwitter from './ShareTwitter'
 import ShareEmail from './ShareEmail'
 import ShareFacebook from './ShareFacebook'
 import ShareLinkedIn from './ShareLinkedIn'
 import { usePageContext } from '../helpers/pageContext'
 import { useI18n } from '../i18n/i18nContext'
-// import { GridLinesSVG } from '../components/Illustration'
 
 const ShareSite = () => {
     const context = usePageContext()
@@ -21,16 +21,21 @@ const ShareSite = () => {
     const body = translate('share.site.body', transOptions)
 
     return (
-        <div className="ShareSite">
-            {/* <GridLinesSVG ratio="logo" /> */}
-            <div className="ShareSite__Content">
-                <ShareTwitter text={twitterText} />
-                <ShareFacebook link={link} />
-                <ShareLinkedIn link={link} title={title} />
-                <ShareEmail subject={subject} body={body} />
-            </div>
-        </div>
+        <Container className="ShareSite">
+            <ShareTwitter text={twitterText} />
+            <ShareFacebook link={link} />
+            <ShareLinkedIn link={link} title={title} />
+            <ShareEmail subject={subject} body={body} />
+        </Container>
     )
 }
+
+const Container = styled.div`
+    border-top: ${props => props.theme.separationBorder};
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+`
 
 export default ShareSite

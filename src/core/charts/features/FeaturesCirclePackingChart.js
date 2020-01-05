@@ -1,12 +1,12 @@
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
+import { ThemeContext } from 'styled-components'
+import round from 'lodash/round'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
-import theme from 'nivoTheme'
-import { colors, totalCount, getColor } from 'core/constants.js'
-import ChartLabel from 'core/components/ChartLabel'
 import { useTheme } from '@nivo/core'
+import { colors, totalCount, getColor } from 'core/constants'
+import ChartLabel from 'core/components/ChartLabel'
 import { useI18n } from 'core/i18n/i18nContext'
-import round from 'lodash/round'
 
 const fontSizeByRadius = radius => {
     if (radius < 25) return 8
@@ -158,10 +158,12 @@ const Node = ({ node, handlers }) => {
 }
 
 const FeaturesCirclePackingChart = ({ data, className }) => {
+    const theme = useContext(ThemeContext)
+
     return (
         <div className={`CirclePackingChart ${className}`}>
             <ResponsiveBubble
-                theme={theme}
+                theme={theme.charts}
                 margin={{
                     top: 2,
                     right: 2,

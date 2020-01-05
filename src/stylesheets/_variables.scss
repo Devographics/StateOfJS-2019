@@ -40,14 +40,6 @@ $border2: 1px solid $border-color;
     box-shadow: 0px 4px 13px rgba($black, 0.4);
 }
 
-@mixin clearfix {
-    &:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
-}
-
 @function black($opacity) {
     @return rgba(0, 0, 0, $opacity);
 }

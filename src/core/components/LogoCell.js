@@ -1,38 +1,48 @@
 import React from 'react'
-import { colors } from 'core/constants.js'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-const Cell = ({ px = 0, py = 0, text, color, variant = 'full' }) => (
-    <g transform={`translate(${px * 98 + 1},${py * 98 + 1})`}>
-        <rect
-            width="98"
-            height="98"
-            stroke={colors.greyDark}
-            strokeWidth="1.75"
-            shapeRendering="crispEdges"
-        />
-        <text
-            fill={colors.greyMediumer}
-            x="20"
-            y="20"
-            textAnchor="middle"
-            alignmentBaseline="middle"
-            fontWeight="normal"
-            fontSize={18}
-        >
-            {px + py * 5}
-        </text>
-        <text
-            x="49"
-            y="55"
-            fill={color}
-            textAnchor="middle"
-            alignmentBaseline="middle"
-            fontWeight={800}
-            fontSize={36}
-        >
+const Container = styled.span`
+    width: 67px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    position: relative;
+    border-left: ${props => props.theme.separationBorder};
+    
+    &:first-child {
+        border-left: 0;
+    }
+`
+
+const Index = styled.span`
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 6px 8px;
+    color: ${props => props.theme.colors.text};
+    opacity: .35;
+    font-weight: 300;
+`
+
+const Cell = ({ index, text, color }) => {
+    return (
+        <Container style={{ color }}>
+            <Index>
+                {index}
+            </Index>
             {text}
-        </text>
-    </g>
-)
+        </Container>
+    )
+}
+
+Cell.propTypes = {
+    text: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
+}
 
 export default Cell

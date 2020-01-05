@@ -1,17 +1,48 @@
 import React from 'react'
-import { usePageContext } from '../helpers/pageContext'
-import { useI18n } from '../i18n/i18nContext'
-import PageLabel from './PageLabel'
-import Link from 'core/components/LocaleLink'
 import isEmpty from 'lodash/isEmpty'
+import styled from 'styled-components'
+import mq from 'core/theme/mq'
+import { usePageContext } from 'core/helpers/pageContext'
+import { useI18n } from 'core/i18n/i18nContext'
+import Link from 'core/components/LocaleLink'
+import PageLabel from './PageLabel'
+
+const Container = styled.div`
+    @media ${mq.small} {
+        margin-top: ${props => props.theme.spacing * 4}px;
+    }
+    @media ${mq.mediumLarge} {
+        margin-top: ${props => props.theme.spacing * 6}px;
+    }
+`
+
+const Nav = styled.div`
+    @media ${mq.mediumLarge} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`
+
+const Notes = styled.div`
+    font-size: ${props => props.theme.typography.sizes.smaller};
+    text-align: center;
+    
+    @media ${mq.small} {
+        margin-top: ${props => props.theme.spacing * 4}px;
+    }
+    @media ${mq.mediumLarge} {
+        margin-top: ${props => props.theme.spacing * 6}px;
+    }
+`
 
 const PageFooter = () => {
     const context = usePageContext()
     const { translate } = useI18n()
 
     return (
-        <footer className="PageFooter">
-            <div className="PageFooter__Nav">
+        <Container className="PageFooter">
+            <Nav className="PageFooter__Nav">
                 {context.previous && !isEmpty(context.previous) && (
                     <Link
                         className="PageFooter__Link PageFooter__Link--previous"
@@ -28,8 +59,8 @@ const PageFooter = () => {
                         {translate('general.next')} <PageLabel page={context.next} /> »
                     </Link>
                 )}
-            </div>
-            <div className="PageFooter__Footer">
+            </Nav>
+            <Notes>
                 <span
                     dangerouslySetInnerHTML={{
                         __html: translate('footer.state_of_js_link', {
@@ -51,8 +82,8 @@ const PageFooter = () => {
                         })
                     }}
                 />
-            </div>
-        </footer>
+            </Notes>
+        </Container>
     )
 }
 

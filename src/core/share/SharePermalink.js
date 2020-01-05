@@ -1,11 +1,35 @@
 import React from 'react'
+import styled from 'styled-components'
+import mq from 'core/theme/mq'
 import track from './tracking'
+
+const Link = styled.a`
+    float: left;
+    opacity: 0;
+    line-height: 1;
+    width: 22px;
+    margin-left: -22px;
+    padding-right: 4px;
+    transition: none;
+    position: relative;
+    
+    @media ${mq.small} {
+        top: 3px;
+    }
+    @media ${mq.mediumLarge} {
+        top: 7px;
+    }
+    
+    path {
+        fill: rgba(255, 255, 255, .4);
+    }
+`
 
 const SharePermalink = ({ trackingId, url }) => {
     return (
-        <a
+        <Link
             onClick={track('Permalink', trackingId)}
-            className="share__link--permalink share__link"
+            className="SharePermalink share__link"
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -20,7 +44,7 @@ const SharePermalink = ({ trackingId, url }) => {
                 </g>
                 <rect fill="none" width="24" height="24" id="Frames-24px" />
             </svg>
-        </a>
+        </Link>
     )
 }
 

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeContext } from 'styled-components'
 import { ResponsiveLine } from '@nivo/line'
-import theme from 'nivoTheme'
-import { fontFamily, getColor } from 'core/constants.js'
+import { fontFamily } from 'core/constants'
 
 const horizontalAxis = {
     tickSize: 10,
@@ -31,6 +31,8 @@ const verticalAxis = {
 }
 
 const HappinessChart = ({ data }) => {
+    const theme = useContext(ThemeContext)
+
     const xySerie = data.map(bucket => ({
         x: bucket.year,
         y: bucket.mean
@@ -40,18 +42,18 @@ const HappinessChart = ({ data }) => {
         <div style={{ height: 240 }}>
             <ResponsiveLine
                 theme={{
-                    ...theme,
-                    axis: theme.streamTimelineAxis,
+                    ...theme.charts,
+                    axis: theme.charts.streamTimelineAxis,
                     dots: {
                         text: {
                             fontFamily,
                             fontWeight: 600,
                             fontSize: 12,
-                            fill: '#e1e1e1'
+                            fill: theme.colors.text
                         }
                     }
                 }}
-                colors={[getColor('line')]}
+                colors={[theme.colors.lineChartDefaultColor]}
                 lineWidth={4}
                 margin={{
                     top: 40,
@@ -79,8 +81,8 @@ const HappinessChart = ({ data }) => {
                 enablePointLabel
                 pointLabelYOffset={4}
                 pointSize={42}
-                pointColor={getColor('background')}
-                pointBorderColor={getColor('line')}
+                pointColor={theme.colors.background}
+                pointBorderColor={theme.colors.lineChartDefaultColor}
                 pointBorderWidth={4}
                 isInteractive={false}
                 animate={false}

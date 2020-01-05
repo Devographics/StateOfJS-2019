@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 import { ResponsiveStream } from '@nivo/stream'
-import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const Dot = ({ x, y, data, current, units }) => {
@@ -66,6 +66,7 @@ const StreamChart = ({
     applyEmptyPatternTo
 }) => {
     const { translate } = useI18n()
+    const theme = useContext(ThemeContext)
 
     const horizontalAxis = {
         tickSize: 10,
@@ -91,8 +92,8 @@ const StreamChart = ({
         <div style={{ height: 260 }} className={`StreamChart${additionalClassName}`}>
             <ResponsiveStream
                 theme={{
-                    ...theme,
-                    axis: theme.streamTimelineAxis
+                    ...theme.charts,
+                    axis: theme.charts.streamTimelineAxis
                 }}
                 offsetType="expand"
                 colors={getLayerColor}
@@ -111,7 +112,7 @@ const StreamChart = ({
                 animate={false}
                 tooltipLabel={d => translate(`${namespace}.${d.id}.short`)}
                 tooltipFormat={tooltipFormat}
-                defs={[theme.emptyPattern]}
+                defs={[theme.charts.emptyPattern]}
                 fill={[
                     {
                         match: {
