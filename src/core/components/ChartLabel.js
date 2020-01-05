@@ -1,6 +1,12 @@
-import React from 'react'
-import { colors } from 'core/constants.js'
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import { colors } from 'core/constants'
 
+/**
+ * This component is used to render a custom label for charts,
+ * its main advantage is to add an outline to the labels so
+ * they are more legible.
+ */
 const ChartLabel = ({
     label,
     fontSize = 13,
@@ -18,7 +24,8 @@ const ChartLabel = ({
             style={{
                 pointerEvents: 'none',
                 fontSize,
-                fontWeight: 600
+                fontWeight: 400,
+                opacity: 0.85
             }}
         >
             {label}
@@ -30,7 +37,7 @@ const ChartLabel = ({
             style={{
                 pointerEvents: 'none',
                 fontSize,
-                fontWeight: 600
+                fontWeight: 400
             }}
         >
             {label}
@@ -38,4 +45,11 @@ const ChartLabel = ({
     </g>
 )
 
-export default ChartLabel
+ChartLabel.propTypes = {
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    fontSize: PropTypes.number,
+    strokeColor: PropTypes.string,
+    fontColor: PropTypes.string
+}
+
+export default memo(ChartLabel)

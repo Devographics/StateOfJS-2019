@@ -1,5 +1,4 @@
 require('dotenv').config()
-const ignoreFiles = ['**/wording.yml']
 
 module.exports = {
     siteMetadata: {
@@ -12,37 +11,35 @@ module.exports = {
             options: {
                 name: 'pages',
                 path: `${__dirname}/src/pages/`,
-                ignore: ignoreFiles
             }
         },
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: 'gatsby-source-filesystem',
             options: {
                 name: `data`,
-                path: `${__dirname}/src/data/`,
-                ignore: ignoreFiles
+                path: `${__dirname}/src/data/`
             }
         },
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: 'gatsby-source-filesystem',
             options: {
                 name: `translations`,
-                path: `${__dirname}/src/translations/`,
-                ignore: ignoreFiles
+                path: `${__dirname}/src/translations/`
             }
         },
         {
-          resolve: 'gatsby-source-graphql',
-          options: {
-              typeName: 'SurveyApi',
-              fieldName: "surveyApi",
-              url: process.env.API_URL,
-          },
+            resolve: 'gatsby-source-graphql',
+            options: {
+                typeName: 'SurveyApi',
+                fieldName: 'surveyApi',
+                url: process.env.API_URL
+            }
         },
-        `gatsby-transformer-remark`,
+        'gatsby-transformer-remark',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         'gatsby-plugin-netlify',
+        'gatsby-plugin-styled-components'
         // 'gatsby-plugin-webpack-bundle-analyzer',
     ]
 }

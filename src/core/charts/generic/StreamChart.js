@@ -35,18 +35,6 @@ const Dot = ({ x, y, data, current, units }) => {
     )
 }
 
-const patterns = [
-    {
-        id: 'lines',
-        type: 'patternLines',
-        background: 'inherit',
-        color: 'rgba(0, 0, 0, .07)',
-        rotation: -45,
-        lineWidth: 3,
-        spacing: 6
-    }
-]
-
 const margin = {
     top: 40,
     right: 20,
@@ -67,7 +55,16 @@ const getChartData = (data, units) => {
     })
 }
 
-const StreamChart = ({ data, keys, units, className, current, colorScale, namespace }) => {
+const StreamChart = ({
+    data,
+    keys,
+    units,
+    className,
+    current,
+    colorScale,
+    namespace,
+    applyEmptyPatternTo
+}) => {
     const { translate } = useI18n()
 
     const horizontalAxis = {
@@ -114,13 +111,13 @@ const StreamChart = ({ data, keys, units, className, current, colorScale, namesp
                 animate={false}
                 tooltipLabel={d => translate(`${namespace}.${d.id}.short`)}
                 tooltipFormat={tooltipFormat}
-                defs={patterns}
+                defs={[theme.emptyPattern]}
                 fill={[
                     {
                         match: {
-                            id: 'never_heard'
+                            id: applyEmptyPatternTo
                         },
-                        id: 'lines'
+                        id: 'empty'
                     }
                 ]}
             />
