@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import ReactMarkdown from 'react-markdown/with-html'
 import { useI18n } from 'core/i18n/i18nContext'
-import mq from 'core/theme/mq'
+import { mq, spacing, fontSize } from 'core/theme'
+import Button from 'core/components/Button'
 
 const images = [
     'stateofjs2019tshirt1.jpg',
@@ -36,15 +37,16 @@ const TshirtBlock = () => {
                 <div>
                     <ReactMarkdown source={translate('tshirt.description')} escapeHtml={false} />
                 </div>
-                <a
-                    className="Button Tshirt__Button gumroad-button"
+                <TshirtButton
+                    as="a"
+                    className="TshirtButton gumroad-button"
                     href="https://gumroad.com/l/stateofjs-tshirt"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     {translate('tshirt.getit')} –{' '}
                     {translate('tshirt.price', { values: { price: 24 } })}
-                </a>
+                </TshirtButton>
             </Description>
         </Container>
     )
@@ -91,16 +93,22 @@ const Image = styled.div`
 
 const Description = styled.div`
     @media ${mq.small} {
-        padding: ${props => props.theme.spacing}px;
+        padding: ${spacing(1)};
     }
     @media ${mq.mediumLarge} {
-        padding: ${props => props.theme.spacing * 2}px;
+        padding: ${spacing(2)};
     }
     h2 {
-        margin-bottom: ${props => props.theme.spacing / 4}px;
+        margin-bottom: ${spacing(.25)};
     }
     h3 {
-        font-size: ${props => props.theme.typography.sizes.medium};
+        font-size: ${fontSize('medium')};
+    }
+`
+
+const TshirtButton = styled(Button)`
+    &:hover {
+        // @include ants;
     }
 `
 
