@@ -13,6 +13,7 @@ import { ToolsContextProvider } from './helpers/toolsContext'
 import { EntitiesContextProvider } from './entities/entitiesContext'
 import PageMetaDebug from './pages/PageMetaDebug'
 import themes from './theme/themes'
+import mq from './theme/mq'
 
 const themeIds = ['js', 'css', 'test']
 
@@ -190,5 +191,18 @@ const GlobalStyle = createGlobalStyle`
     
     .ReactModal__Overlay {
         z-index: 1000;
+    }
+    
+    .Page__Contents--awards {
+        @media ${mq.mediumLarge} {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: ${props => props.theme.spacing * 4}px;
+            row-gap: ${props => props.theme.spacing * 4}px;
+            
+            .Page__Introduction {
+                grid-column: 1 / 3;
+            }
+        }
     }
 `
