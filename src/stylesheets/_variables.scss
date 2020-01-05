@@ -24,22 +24,6 @@ $border2: 1px solid $border-color;
     border: $border2;
 }
 
-@mixin text-shadow {
-    text-shadow: 0px 2px 5px rgba($pink, 0.6);
-}
-
-@mixin text-shadow-faint {
-    text-shadow: 0px 2px 3px rgba($pink, 0.5);
-}
-
-@mixin box-shadow {
-    box-shadow: 0px 2px 5px rgba($pink, 0.6);
-}
-
-@mixin box-shadow-dark {
-    box-shadow: 0px 4px 13px rgba($black, 0.4);
-}
-
 @function black($opacity) {
     @return rgba(0, 0, 0, $opacity);
 }

@@ -10,6 +10,39 @@ const svgs = {
     bottom: <polygon stroke="#000" points="0,0 100,0 50,50" />
 }
 
+const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
+    const { translate } = useI18n()
+
+    const context = usePageContext()
+    const [isOpened, setIsOpened] = useState(false)
+    const toggle = useCallback(() => setIsOpened(flag => !flag), [])
+
+    return (
+        <div
+            className={`LanguageSwitcher LanguageSwitcher--${position} LanguageSwitcher--${
+                isOpened ? 'open' : 'closed'
+            }`}
+        >
+            <div className="LanguageSwitcher__Inner">
+                <div className="LanguageSwitcher__Toggle" onClick={toggle}>
+                    <span>{context.localeLabel}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+                        {isOpened ? svgs[positionOpen] : svgs[position]}
+                    </svg>
+                </div>
+                <Popup className="LanguageSwitcher__Options" position={position}>
+                    <Locales />
+                    <Help className="LanguageSwitcher__Help">
+                        <a href="https://github.com/StateOfJS/State-of-JS-2019/issues/8">
+                            {translate('general.help_us_translate')}
+                        </a>
+                    </Help>
+                </Popup>
+            </div>
+        </div>
+    )
+}
+
 const ARROW_SIZE = 24
 
 const Popup = styled.div`
@@ -23,7 +56,7 @@ const Popup = styled.div`
     border: ${props => props.theme.separationBorder};
     transform: translateX(-50%);
     z-index: 10000;
-    box-shadow: -5px 16px 0 0 rgba(0, 0, 0, 0.15);
+    box-shadow: ${({ theme }) => theme.blockShadow};
 
     &:after,
     &:before {
@@ -67,38 +100,5 @@ const Help = styled.div`
     margin-top: ${props => props.theme.spacing}px;
     border-top: ${props => props.theme.separationBorder};
 `
-
-const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
-    const { translate } = useI18n()
-
-    const context = usePageContext()
-    const [isOpened, setIsOpened] = useState(false)
-    const toggle = useCallback(() => setIsOpened(flag => !flag), [])
-
-    return (
-        <div
-            className={`LanguageSwitcher LanguageSwitcher--${position} LanguageSwitcher--${
-                isOpened ? 'open' : 'closed'
-            }`}
-        >
-            <div className="LanguageSwitcher__Inner">
-                <div className="LanguageSwitcher__Toggle" onClick={toggle}>
-                    <span>{context.localeLabel}</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
-                        {isOpened ? svgs[positionOpen] : svgs[position]}
-                    </svg>
-                </div>
-                <Popup className="LanguageSwitcher__Options" position={position}>
-                    <Locales />
-                    <Help className="LanguageSwitcher__Help">
-                        <a href="https://github.com/StateOfJS/State-of-JS-2019/issues/8">
-                            {translate('general.help_us_translate')}
-                        </a>
-                    </Help>
-                </Popup>
-            </div>
-        </div>
-    )
-}
 
 export default memo(LanguageSwitcher)
