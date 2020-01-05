@@ -60,7 +60,6 @@ Logo
             color: $pink;
             @include font-bold;
             line-height: 1;
-            // fill: $pink;
         }
         .c {
             @include centerV;
@@ -75,7 +74,6 @@ Logo
             right: $offset;
             div {
                 text-align: right;
-                // background: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g><circle r="10" x="0" y="0" /></g></svg>');
                 background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 #{50 * $s} #{50 * $s}" xml:space="preserve" height="#{10px * $s}" width="#{10px * $s}"><g ><circle r="#{15 * $s}" cx="#{15 * $s}" cy="#{15 * $s}" fill="%23EC2F95"/></g></svg>');
                 background-clip: text;
                 color: transparent;

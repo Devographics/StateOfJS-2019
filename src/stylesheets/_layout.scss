@@ -77,7 +77,6 @@ $sidebar_width: 270px;
             border-bottom: 1px solid $border-color;
         }
     }
-    // background: rgba(0,0,0,0.1);
 }
 .section-layout-b {
     display: block;
@@ -108,9 +107,6 @@ $sidebar_width: 270px;
     @include large {
         width: 55%;
         margin-right: 5%;
-        .sticky {
-            // padding: $spacing*2 0;
-        }
     }
 }
 .chart {

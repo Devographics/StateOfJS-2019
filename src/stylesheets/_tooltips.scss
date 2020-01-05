@@ -36,7 +36,6 @@ $tooltipDisplay: block;
 
 .libraries--vertical {
     padding: 40px 0;
-    // padding: 65px 0;
     display: flex;
     .libraries__inner {
         display: flex;
@@ -70,10 +69,6 @@ $tooltipDisplay: block;
 }
 .library__tooltip {
     color: $text-color-inverted;
-    // position: absolute;
-    // top: 30px;
-    // left: 50%;
-    // margin-left: -$tooltip-width/2;
     width: $tooltip-width;
     z-index: 100;
     font-size: $small-font;

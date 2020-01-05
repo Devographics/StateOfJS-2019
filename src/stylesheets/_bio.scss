@@ -1,6 +1,5 @@
 .Bio {
     background: $bg-color-lighter;
-    // border: $border2;
     @include box-shadow-dark;
     .Block--toolsArrow & {
         margin-top: $spacing * 2;
@@ -15,7 +14,6 @@
     @include large {
         display: grid;
         grid-template-columns: 170px auto;
-        // column-gap: $spacing;
     }
 
     p:last-child {
@@ -23,7 +21,6 @@
     }
 }
 .Bio__Photo {
-    // border-radius: 5px;
     overflow: hidden;
 
     @include small-medium {
