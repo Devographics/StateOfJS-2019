@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import last from 'lodash/last'
 import ReactMarkdown from 'react-markdown/with-html'
+import { mq, spacing } from 'core/theme'
 import ShareBlock from 'core/share/ShareBlock'
 import BlockExport from 'core/blocks/block/BlockExport'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -55,10 +56,10 @@ const BlockTitle = ({
                 className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}
             >
                 <LeftPart>
-                    <h3 className="Block__Title__Text">
+                    <BlockTitleText className="BlockTitleText">
                         <SharePermalink url={meta.link} />
                         {blockTitle}
-                    </h3>
+                    </BlockTitleText>
                     {completion && <BlockCompletionIndicator completion={completion} />}
                     {isExportable && data && block && (
                         <BlockExport
@@ -82,13 +83,15 @@ const BlockTitle = ({
                     )}
                 </LeftPart>
                 {switcher ? (
-                    <div className="Block__Title__ChartControls ChartControls">{switcher}</div>
+                    <BlockChartControls className="BlockChartControls">
+                        {switcher}
+                    </BlockChartControls>
                 ) : (
                     units &&
                     setUnits && (
-                        <div className="Block__Title__ChartControls ChartControls">
+                        <BlockChartControls className="BlockChartControls">
                             <BlockUnitsSelector units={units} onChange={setUnits} />
-                        </div>
+                        </BlockChartControls>
                     )
                 )}
             </StyledBlockTitle>
@@ -118,10 +121,34 @@ BlockTitle.defaultProps = {
 
 const StyledBlockTitle = styled.div`
     border-bottom: ${props => props.theme.separationBorder};
-    padding-bottom: ${props => props.theme.spacing / 2}px;
-    margin-bottom: ${props => props.theme.spacing}px;
+    padding-bottom: ${spacing(0.5)};
+    margin-bottom: ${spacing(1)};
     display: flex;
     align-items: center;
+
+    .Block__Title__Share {
+        margin-left: ${spacing(0.5)};
+    }
+
+    &:hover {
+        .SharePermalink {
+            opacity: 1;
+        }
+    }
+`
+
+const BlockTitleText = styled.h3`
+    margin-bottom: 0;
+
+    @media ${mq.small} {
+        opacity: 1;
+        transition: all 300ms ease-in;
+        flex: 1;
+
+        .Block__Title--open & {
+            opacity: 0.2;
+        }
+    }
 `
 
 const LeftPart = styled.div`
@@ -132,12 +159,25 @@ const LeftPart = styled.div`
 `
 
 const Description = styled.div`
-    margin-bottom: ${props => props.theme.spacing}px;
+    margin-bottom: ${spacing(1)};
 
     p {
         &:last-child {
             margin: 0;
         }
+    }
+`
+
+const BlockChartControls = styled.div`
+    display: flex;
+    justify-content: flex-end;
+
+    @media ${mq.small} {
+        margin-left: ${spacing(0.5)};
+    }
+
+    .capture & {
+        display: none;
     }
 `
 
