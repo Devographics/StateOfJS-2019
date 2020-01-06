@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { useI18n } from 'core/i18n/i18nContext'
+import { color, spacing, fontSize } from 'core/theme'
 
 const BlockCompletionIndicator = ({ completion }) => {
     const { translate } = useI18n()
@@ -12,13 +13,18 @@ const BlockCompletionIndicator = ({ completion }) => {
                 {translate('general.completion_percentage')}{' '}
                 <strong>{completion.percentage}%</strong> ({completion.count})
             </Tooltip>
-            <div className="CompletionIndicator__Data">
+            <div className="CompletionIndicator__Data sr-only">
                 {translate('general.completion_percentage')}{' '}
                 <strong>{completion.percentage}%</strong> ({completion.count})
             </div>
             <Chart height="16" width="16" viewBox="0 0 20 20">
-                <circle className="CompletionIndicator__Chart__Bg" r="10" cx="10" cy="10" />
-                <circle
+                <ChartBackground
+                    className="CompletionIndicator__Chart__Bg"
+                    r="10"
+                    cx="10"
+                    cy="10"
+                />
+                <ChartForeground
                     className="CompletionIndicator__Chart__Fg"
                     r="5"
                     cx="10"
@@ -47,10 +53,12 @@ const Tooltip = styled.div`
     white-space: nowrap;
     transform: translate(-50%, -130%);
     opacity: 0;
-    font-size: ${props => props.theme.typography.sizes.small};
+    font-size: ${fontSize('small')};
     border-radius: 3px;
     transition: all 200ms ease-in;
     pointer-events: none;
+    background: ${color('link')};
+    color: ${color('background')};
 
     &:after {
         top: 99%;
@@ -61,11 +69,13 @@ const Tooltip = styled.div`
         position: absolute;
         pointer-events: none;
         margin-left: -8px;
+        border: 8px solid rgba(136, 183, 213, 0);
+        border-top-color: ${color('link')};
     }
 `
 
 const Container = styled.div`
-    margin-left: ${props => props.theme.spacing / 2}px;
+    margin-left: ${spacing(0.5)};
     position: relative;
     padding: 2px;
 
@@ -78,6 +88,15 @@ const Container = styled.div`
 
 const Chart = styled.svg`
     display: block;
+`
+
+const ChartBackground = styled.circle`
+    fill: ${color('link')};
+    opacity: 0.5;
+`
+
+const ChartForeground = styled.circle`
+    stroke: ${color('link')};
 `
 
 export default memo(BlockCompletionIndicator)
