@@ -1,18 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { mq } from 'core/theme'
+import { mq, color } from 'core/theme'
 
-const Cell = ({ index, text, color }) => {
-    return (
-        <Container style={{ color }}>
-            <Index>{index}</Index>
-            {text}
-        </Container>
-    )
-}
+const LogoCell = ({ index, text, color: textColor }) => (
+    <Container className="LogoCell" style={{ color: textColor }}>
+        <Index>{index}</Index>
+        {text}
+    </Container>
+)
 
-Cell.propTypes = {
+LogoCell.propTypes = {
     text: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired
 }
@@ -26,6 +24,12 @@ const Container = styled.span`
     font-size: 26px;
     position: relative;
     border-left: ${props => props.theme.separationBorder};
+    background: ${color('background')};
+    text-decoration: none;
+
+    .Logo:hover & {
+        background: ${color('backgroundAlt')};
+    }
 
     @media ${mq.smallMedium} {
         &:last-child {
@@ -47,9 +51,9 @@ const Index = styled.span`
     font-size: 12px;
     line-height: 12px;
     padding: 6px 8px;
-    color: ${props => props.theme.colors.text};
+    color: ${color('text')};
     opacity: 0.35;
     font-weight: 300;
 `
 
-export default Cell
+export default LogoCell

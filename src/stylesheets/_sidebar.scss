@@ -5,22 +5,8 @@
 
 .Sidebar {
     @include small-medium {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: $bg-color;
-        z-index: 1000;
-        text-align: center;
-        overflow-y: scroll;
-        padding: 0 0 $spacing * 2 0;
         &.Sidebar--hidden {
             @include sr-only;
-        }
-        &.Sidebar--shown {
-            overflow: hidden;
-            overflow-y: scroll;
-            position: fixed;
         }
     }
 }
@@ -65,38 +51,11 @@
 }
 
 .Sidebar__Logo--mobile {
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    border-bottom: $border;
     .Sidebar__Logo__Inner {
         @include flex-center;
     }
     .Logo--simple {
         display: block;
-    }
-    @include large {
-        display: none;
-    }
-}
-
-.Sidebar__Logo__Link {
-    @include disableUnderline;
-}
-
-.Sidebar__Close {
-    margin: 0;
-    padding: 0;
-    button {
-        background: none;
-        cursor: pointer;
-        border: none;
-    }
-    @include flex-center;
-    @include large {
-        display: none;
-    }
-    svg {
-        stroke: $active-color;
     }
 }
 

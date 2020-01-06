@@ -7,7 +7,7 @@ const LogoCompact = () => {
     const theme = useContext(ThemeContext)
 
     return (
-        <Container>
+        <Container className="Logo">
             <Cell text="St" color={theme.colors.text} index={0} />
             <Cell text="Js" color={theme.colors.text} index={1} />
             <Cell text="20" color={theme.colors.contrast} index={2} />

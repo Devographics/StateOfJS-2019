@@ -1,6 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
-import mq from 'core/theme/mq'
+import { mq, fontSize, fontWeight, spacing, color } from 'core/theme'
 
 const Button = styled.div.attrs(({ className, size = 'medium', ...props }) => {
     return {
@@ -8,54 +7,54 @@ const Button = styled.div.attrs(({ className, size = 'medium', ...props }) => {
     }
 })`
     background: none;
-    padding: ${({ theme }) => theme.spacing / 2}px ${({ theme }) => theme.spacing}px;
+    padding: ${spacing(0.5)} ${spacing(1)};
     cursor: pointer;
     display: block;
     text-align: center;
     white-space: nowrap;
-    font-weight: ${({ theme }) => theme.typography.weights.bold};
-    border: 1px solid ${({ theme }) => theme.colors.text};
+    font-weight: ${fontWeight('bold')};
+    border: 1px solid ${color('text')};
 
     @media ${mq.small} {
-        font-size: ${({ theme }) => theme.typography.sizes.small};
+        font-size: ${fontSize('small')};
     }
     @media ${mq.mediumLarge} {
-        font-size: ${({ theme }) => theme.typography.sizes.medium};
+        font-size: ${fontSize('medium')};
     }
 
     &,
     &:link,
     &:visited {
-        color: ${({ theme }) => theme.colors.text};
+        color: ${color('text')};
         text-decoration: none;
     }
 
     &.Button--small {
-        font-size: ${({ theme }) => theme.typography.sizes.small};
-        padding: ${({ theme }) => theme.spacing / 5}px ${({ theme }) => theme.spacing / 2}px;
+        font-size: ${fontSize('small')};
+        padding: ${spacing(0.2)} ${spacing(0.5)};
     }
 
     &.Button--large {
         @media ${mq.small} {
-            font-size: ${({ theme }) => theme.typography.sizes.large};
-            padding: ${({ theme }) => theme.spacing * .75}px;
+            font-size: ${fontSize('large')};
+            padding: ${spacing(0.75)};
         }
         @media ${mq.mediumLarge} {
-            font-size: ${({ theme }) => theme.typography.sizes.larger};
-            padding: ${({ theme }) => theme.spacing}px;
+            font-size: ${fontSize('larger')};
+            padding: ${spacing(1)};
         }
     }
 
     &:hover {
-        color: ${({ theme }) => theme.colors.contrast};
-        border-color: ${({ theme }) => theme.colors.contrast};
+        color: ${color('contrast')};
+        border-color: ${color('contrast')};
         border-style: solid;
         text-decoration: none;
-        background: ${({ theme }) => theme.colors.backgroundAlt};
+        background: ${color('backgroundAlt')};
     }
 
     &.Button--selected {
-        background: ${({ theme }) => theme.colors.backgroundAlt};
+        background: ${color('backgroundAlt')};
         cursor: default;
         pointer-events: none;
         border-style: solid;
