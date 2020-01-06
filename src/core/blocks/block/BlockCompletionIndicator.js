@@ -19,13 +19,11 @@ const BlockCompletionIndicator = ({ completion }) => {
             </div>
             <Chart height="16" width="16" viewBox="0 0 20 20">
                 <ChartBackground
-                    className="CompletionIndicator__Chart__Bg"
                     r="10"
                     cx="10"
                     cy="10"
                 />
                 <ChartForeground
-                    className="CompletionIndicator__Chart__Fg"
                     r="5"
                     cx="10"
                     cy="10"
