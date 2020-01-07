@@ -1,5 +1,5 @@
 import React, { memo, useContext } from 'react'
-import { ThemeContext } from 'styled-components'
+import styled, { ThemeContext } from 'styled-components'
 import round from 'lodash/round'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
@@ -83,17 +83,15 @@ const Node = ({ node, handlers }) => {
                         id={`textcircle-${node.data.id}`}
                     />
                 </defs>
-                <text className="CirclePackingNode__SectionLabel" dy={30}>
+                <CirclePackingNodeCategoryLabel dy={30}>
                     <textPath
                         xlinkHref={`#textcircle-${node.data.id}`}
-                        fill={colors.teal}
                         side="right"
                         startOffset={sectionLabelOffsets[node.data.id]}
                     >
                         {node.id}
                     </textPath>
-                </text>
-
+                </CirclePackingNodeCategoryLabel>
                 <circle
                     r={node.r}
                     fill="rgba(255,255,255,0.1)"
@@ -108,7 +106,7 @@ const Node = ({ node, handlers }) => {
     const usageRadius = node.r * (node.data.usage / node.data.awareness)
 
     return (
-        <g
+        <CirclePackingNode
             className="CirclePackingNode"
             transform={`translate(${node.x},${node.y})`}
             onMouseEnter={handlers.onMouseEnter}
@@ -118,7 +116,7 @@ const Node = ({ node, handlers }) => {
             <circle r={node.r} fill={`${getColor(node.data.sectionId)}50`} />
             <circle r={usageRadius} fill={`${getColor(node.data.sectionId)}`} />
             <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
-        </g>
+        </CirclePackingNode>
     )
 }
 
@@ -126,7 +124,7 @@ const FeaturesCirclePackingChart = ({ data, className }) => {
     const theme = useContext(ThemeContext)
 
     return (
-        <div className={`CirclePackingChart ${className}`}>
+        <Chart className={`CirclePackingChart ${className}`}>
             <ResponsiveBubble
                 theme={theme.charts}
                 margin={{
@@ -145,7 +143,7 @@ const FeaturesCirclePackingChart = ({ data, className }) => {
                 animate={false}
                 tooltip={Tooltip}
             />
-        </div>
+        </Chart>
     )
 }
 
@@ -168,5 +166,22 @@ FeaturesCirclePackingChart.propTypes = {
         )
     })
 }
+
+const Chart = styled.div`
+    svg {
+        overflow: visible;
+    }
+`
+
+const CirclePackingNode = styled.g`
+    &.CirclePackingNode--inactive {
+        opacity: 0.15;
+    }
+`
+
+const CirclePackingNodeCategoryLabel = styled.text`
+    fill: ${({ theme }) => theme.colors.link};
+    opacity: 0.65;
+`
 
 export default memo(FeaturesCirclePackingChart)
