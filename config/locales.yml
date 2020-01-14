@@ -10,3 +10,6 @@
 - locale: ko-KR
   path: ko
   label: 한국어
+- locale: pt-BR
+  path: pt
+  label: Português
