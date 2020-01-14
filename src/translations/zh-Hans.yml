@@ -1,0 +1,1033 @@
+locale: zh-Hans
+translations:
+    ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: 关于 T 恤
+    - key: tshirt.description
+      t: >
+          这个设计将印于修身裁剪的黑色上衣 [Bella + Canvas 3001 中性优质 T 恤](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (男士款)
+          ；以及深灰色上衣 [Anvil 880 女士时尚贴身 T 恤](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (女士款)。尺寸使用美国尺寸。
+
+    - key: tshirt.getit
+      t: 购买
+    - key: tshirt.price
+      t: $${price} + 邮费
+
+    ###########################################################################
+    # Demographics
+    ###########################################################################
+
+    # salary ranges
+    - key: salary.work_for_free.long
+      t: 我没有收入
+    - key: salary.work_for_free.short
+      t: 没有收入
+    - key: salary.work_for_free.shorter
+      t: '0'
+    - key: salary.0_10.long
+      t: 0 美元 - 1 万美元
+    - key: salary.0_10.short
+      t: 0 美元 - 1 万美元
+    - key: salary.0_10.shorter
+      t: 0 - 1 万美元
+    - key: salary.10_30.long
+      t: 1 万美元 - 3 万美元
+    - key: salary.10_30.short
+      t: 1 万美元 - 3 万美元
+    - key: salary.10_30.shorter
+      t: 1 - 3 万美元
+    - key: salary.30_50.long
+      t: 3 万美元 - 5 万美元
+    - key: salary.30_50.short
+      t: 3 万美元 - 5 万美元
+    - key: salary.30_50.shorter
+      t: 3 - 5 万美元
+    - key: salary.50_100.long
+      t: 5 万美元 - 10 万美元
+    - key: salary.50_100.short
+      t: 5 万美元 - 10 万美元
+    - key: salary.50_100.shorter
+      t: 5 - 10 万美元
+    - key: salary.100_200.long
+      t: 10 万美元 - 20 万美元
+    - key: salary.100_200.short
+      t: 10 万美元 - 20 万美元
+    - key: salary.100_200.shorter
+      t: 10 - 20 万美元
+    - key: salary.more_than_200.long
+      t: 大于 20 万美元
+    - key: salary.more_than_200.short
+      t: 大于 20 万美元
+    - key: salary.more_than_200.shorter
+      t: '>20 万美元'
+    - key: salary.axis_legend
+      t: 薪资范围（美元）
+
+    # years of experience
+    - key: workExperience.less_than_1.long
+      t: 少于 1 年
+    - key: workExperience.less_than_1.short
+      t: '<1 年'
+    - key: workExperience.less_than_1.shorter
+      t: '<1'
+    - key: workExperience.1_2.long
+      t: 1 至 2 年
+    - key: workExperience.1_2.short
+      t: 1~2 年
+    - key: workExperience.1_2.shorter
+      t: 1~2
+    - key: workExperience.2_5.long
+      t: 2 至 5 年
+    - key: workExperience.2_5.short
+      t: 2~5 年
+    - key: workExperience.2_5.shorter
+      t: 2~5
+    - key: workExperience.5_10.long
+      t: 5 至 10 年
+    - key: workExperience.5_10.short
+      t: 5~10 年
+    - key: workExperience.5_10.shorter
+      t: 5~10
+    - key: workExperience.10_20.long
+      t: 10 至 20 年
+    - key: workExperience.10_20.short
+      t: 10~20 年
+    - key: workExperience.10_20.shorter
+      t: 10~20
+    - key: workExperience.more_than_20.long
+      t: 20 年以上
+    - key: workExperience.more_than_20.short
+      t: '>20 年'
+    - key: workExperience.more_than_20.shorter
+      t: '>20'
+    - key: workExperience.axis_legend
+      t: 工龄
+
+    # company size
+    - key: companySize.1.long
+      t: 1 个雇员
+    - key: companySize.1.short
+      t: '1'
+    - key: companySize.1.shorter
+      t: '1'
+    - key: companySize.1_5.long
+      t: 1 至 5 个雇员
+    - key: companySize.1_5.short
+      t: 1~5
+    - key: companySize.1_5.shorter
+      t: 1~5
+    - key: companySize.5_10.long
+      t: 5 至 10 个雇员
+    - key: companySize.5_10.short
+      t: 5~10
+    - key: companySize.5_10.shorter
+      t: 5~10
+    - key: companySize.10_20.long
+      t: 10 至 20 个雇员
+    - key: companySize.10_20.short
+      t: 10~20
+    - key: companySize.10_20.shorter
+      t: 10~20
+    - key: companySize.20_50.long
+      t: 20 至 50 个雇员
+    - key: companySize.20_50.short
+      t: 20~50
+    - key: companySize.20_50.shorter
+      t: 20~50
+    - key: companySize.50_100.long
+      t: 50 至 100 个雇员
+    - key: companySize.50_100.short
+      t: 50~100
+    - key: companySize.50_100.shorter
+      t: 50~100
+    - key: companySize.100_1000.long
+      t: 100 至 1000 个雇员
+    - key: companySize.100_1000.short
+      t: 100~1000
+    - key: companySize.100_1000.shorter
+      t: 100~1000
+    - key: companySize.more_than_1000.long
+      t: 超过 1000 个雇员
+    - key: companySize.more_than_1000.short
+      t: 1000+
+    - key: companySize.more_than_1000.shorter
+      t: 1000+
+    - key: companySize.axis_legend
+      t: 公司雇员数
+
+    # sources
+    - key: sources.other_unknown
+      t: 其他/未知
+
+    # css proficiency
+
+    - key: block.title.cssProficiency
+      t: CSS 熟练度
+    - key: block.description.cssProficiency
+      t: 你在 CSS 上有多熟练？
+    - key: cssProficiency.axis_legend
+      t: CSS 熟练度
+    - key: cssProficiency.0.short
+      t: 无经验
+    - key: cssProficiency.0.long
+      t: '实际上没有 CSS 经验'
+    - key: cssProficiency.1.short
+      t: 初学者
+    - key: cssProficiency.1.long
+      t: '使用 CSS 框架以及调整现有样式'
+    - key: cssProficiency.2.short
+      t: 中级
+    - key: cssProficiency.2.long
+      t: '知道特定规则，能够创建布局'
+    - key: cssProficiency.3.short
+      t: 高级
+    - key: cssProficiency.3.long
+      t: '精通动画、交互、过渡等'
+    - key: cssProficiency.4.short
+      t: 专家
+    - key: cssProficiency.4.long
+      t: '能够以统一的方法论从零构建整个前端站点的样式'
+
+    # backend proficiency
+    - key: block.title.backendProficiency
+      t: 后端熟练程度
+    - key: block.description.backendProficiency
+      t: 你在后端开发上有多熟练？
+    - key: backendProficiency.axis_legend
+      t: 后端熟练度
+    - key: backendProficiency.0.short
+      t: 无经验
+    - key: backendProficiency.0.long
+      t: '无法完成任何后端工作'
+    - key: backendProficiency.1.short
+      t: 初学者
+    - key: backendProficiency.1.long
+      t: '会配置一体化 CMS（WordPress 等）或静态站点生成器（Jekyll 等）'
+    - key: backendProficiency.2.short
+      t: 中级
+    - key: backendProficiency.2.long
+      t: '能够使用现有框架开发应用（Rails、Laravel 等）'
+    - key: backendProficiency.3.short
+      t: 高级
+    - key: backendProficiency.3.long
+      t: '从零搭建整个后端（Go、Node 等）'
+    - key: backendProficiency.4.short
+      t: 专家
+    - key: backendProficiency.4.long
+      t: '能够掌控复杂的多台服务器或微服务架构'
+
+    # job title
+    - key: jobTitle.front_end_developer.short
+      t: 前端开发者
+    - key: jobTitle.front_end_developer.long
+      t: 前端开发者/工程师
+    - key: jobTitle.back_end_developer.short
+      t: 后端开发者
+    - key: jobTitle.back_end_developer.long
+      t: 后端开发者/工程师
+    - key: jobTitle.full_stack_developer.short
+      t: 全栈开发者
+    - key: jobTitle.full_stack_developer.long
+      t: 全栈开发者/工程师
+    - key: jobTitle.web_developer.short
+      t: Web 开发者
+    - key: jobTitle.web_developer.long
+      t: Web 开发者
+    - key: jobTitle.web_designer.short
+      t: Web 设计师
+    - key: jobTitle.web_designer.long
+      t: Web 设计师
+    - key: jobTitle.ux_designer.short
+      t: UX 设计师
+    - key: jobTitle.ux_designer.long
+      t: UX 设计师
+    - key: jobTitle.ui_designer.short
+      t: UI 设计师
+    - key: jobTitle.ui_designer.long
+      t: UI 设计师
+    - key: jobTitle.back_end_dev.short
+      t: 后端开发者
+    - key: jobTitle.back_end_dev.long
+      t: 后端开发者/工程师
+
+    # gender
+    - key: block.title.gender
+      t: 性别
+    - key: block.description.gender
+      t: 受访者性别
+    - key: gender.female
+      t: 女性
+    - key: gender.female.long
+      t: 女性
+    - key: gender.male
+      t: 男性
+    - key: gender.male.long
+      t: 男性
+    - key: gender.non_binary
+      t: 第三性别
+    - key: gender.non_binary.long
+      t: 第三性别
+    - key: gender.prefer_not_to_say
+      t: 未透露
+    - key: gender.prefer_not_to_say.long
+      t: 未透露
+
+    # other
+    - key: block.title.country
+      t: 受访者地区分布
+    - key: block.description.country
+      t: 每个地区的受访情况
+    - key: block.title.salary
+      t: 薪资
+    - key: block.description.salary
+      t: 年收入（美元）
+    - key: block.title.workExperience
+      t: 工龄
+    - key: block.description.workExperience
+      t: 你写了多久 JavaScript 了
+    - key: block.title.companySize
+      t: 公司规模
+    - key: block.description.companySize
+      t: 所在公司规模分析
+    - key: block.title.source
+      t: 来源
+    - key: block.description.source
+      t: >
+          受访者如何发现这个这个调查（整理自个人表述和访问来源调查）。
+
+
+          **State of JS** 表示我们上次调查的订阅者，**口头传播**按 Slack、朋友、同事等来源进行了重新分类。
+
+    - key: block.title.jobTitle
+      t: 职位名称
+    - key: block.description.jobTitle
+      t: 你在社交场合如何介绍自己？
+
+    ###########################################################################
+    # Features
+    ###########################################################################
+
+    # General 
+
+    - key: page.syntax
+      t: 语法
+    - key: page.language
+      t: 语言
+    - key: page.data_structures
+      t: 数据结构
+    - key: page.browser_apis
+      t: 浏览器 API
+
+    - key: block.description.decorators
+      t: >
+        装饰器最简单的形式：仅仅是用一小块代码包裹另一块代码 — 
+        字面意义上的“装饰”。
+
+    - key: feature.learn_more
+      t: 了解更多（MDN）
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: CanIUse
+    - key: feature.specification_link
+      t: W3C 标准文档
+
+    - key: featureExperienceSimplified.used_it.long
+      t: 用过
+    - key: featureExperienceSimplified.know_it.long
+      t: 知道
+    - key: features.usage.ratio
+      t: 使用比例
+
+    - key: featureExperience.used_it
+      t: 用过
+    - key: featureExperience.know_not_used
+      t: 知道它是什么，但是没用过
+    - key: featureExperience.never_heard_not_sure
+      t: 没听说过/不确定它是什么
+
+    - key: featureExperience.used_it.long
+      t: 用过
+    - key: featureExperience.know_not_used.long
+      t: 知道它是什么，但是没用过
+    - key: featureExperience.never_heard_not_sure.long
+      t: 没听说过/不确定它是什么
+
+    # Feature Overview
+    - key: block.title.featuresOverview
+      t: 使用情况总览
+    - key: block.description.featuresOverview
+      t: >
+          该图表按类别分组显示了所有特性的不同使用率。
+
+
+          <span class="text-teal-darker text-bold">外圈</span> 的大小表示了解该特性的受访者总数，
+          同时<span class="text-teal text-bold">内圈</span>表示实际用过它的那些受访者。
+
+
+          悬停在每个节点上显示<span class="text-blackpink text-bold">叠加层</span>查看受访者总数的详细数据。
+
+    # Features Section Overview
+    - key: block.title.featuresSectionOverview
+      t: 使用情况总览
+    - key: block.description.featuresSectionOverview
+      t: >
+          <span class="text-teal-darker text-bold">外圈</span> 的大小表示了解该特性的受访者总数，
+          同时<span class="text-teal text-bold">内圈</span>表示实际用过它的那些受访者。
+
+
+          悬停在每个节点上显示<span class="text-blackpink text-bold">叠加层</span>查看受访者总数的详细数据。
+
+    - key: block.title.featuresExperienceHeatmap
+      t: 不同工作经验的使用情况
+    - key: block.description.featuresExperienceHeatmap
+      t: |
+          The “overall” column shows overall usage for each feature (respondents who selected “have used it”),
+          while the following columns show the usage ratio for each “years of experience” bracket.
+
+          A brighter <span class="text-teal text-bold">teal</span> background indicates
+          a higher-than-overall-average ratio for a given bracket.
+
+    ###########################################################################
+    # Tools & Methodologies
+    ###########################################################################
+
+    # general
+    - key: block.tool.links
+      t: 链接
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.github_stars
+      t: stars
+    - key: block.tool.homepage_link
+      t: 主页
+    - key: block.tool.npm_link
+      t: NPM
+
+    - key: block.title.other-methodologies
+      t: 其他方法论
+
+    - key: block.title.companySize_heatmap
+      t: 不同公司规模的使用情况
+    - key: block.description.companySize_heatmap
+      t: |
+
+          在不同公司规模的受访者之间，
+          每种技术的使用情况如何分布。
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+
+    - key: block.title.workExperience_heatmap
+      t: 不同工作经验的使用情况
+    - key: block.description.workExperience_heatmap
+      t: |
+
+          在不同经验的受访者之间，每种技术的使用情况如何分布。
+          请注意，这里的经验是指通用的 JavaScript 经验，
+          而不仅限于某个特定技术。
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    - key: block.title.salary_heatmap
+      t: 不同薪资范围的使用情况
+    - key: block.description.salary_heatmap
+      t: |
+
+          在不同薪资的受访者之间，
+          每种技术的使用情况如何分布。
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “yearly salary” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    # rankings/bump chart
+    - key: block.title.toolExperienceRanking
+      t: 排名
+    - key: block.description.toolExperienceRanking
+      t: >
+          认知度、关注度和满意度排名。
+    - key: opinions.legends.awareness_ratio 
+      t: 认知度
+    - key: opinions.legends.interest_ratio
+      t: 关注度
+    - key: opinions.legends.satisfaction_ratio
+      t: 满意度
+
+    # overview
+    - key: block.title.toolsSectionOverview
+      t: 分类总览
+    - key: block.description.toolsSectionOverview
+      t: >
+          关于所调查技术的看法总览。深色的区段表示积极看待，
+          浅色的区段表示消极看待。
+
+    # Arrows (Movement over time)
+    - key: block.title.toolsArrow
+      t: 随时间变化
+    # - key: block.description.toolsArrow
+    #   t: >
+    #       How has the ecosystem changed over three years?
+    - key: block.description.toolsArrow
+      t: >
+          每条线的时间从 2016 到 2019 年。较高的点表示更多的人在使用该技术，
+          较右测的点意味着更多的受访者想要学习它；或者已经使用过并且会再次使用它。
+
+    - key: amelia.bio
+      t: >
+        Amelia Wattenberger 是一名专注于数据可视化的前端开发者和设计师。
+        她是 [全栈 D3 和数据可视化](https://www.newline.co/fullstack-d3) 的作者，
+        那是一个建立你自己的数据可视化项目的指南，
+        她还在 [Twitter](https://twitter.com/Wattenberger)
+        和 [她的个人网站](https://wattenberger.com/) 上分享想法和教程。
+
+    # quadrant/scatterplot chart
+    - key: block.title.scatterplotOverview
+      t: 满意度 vs 使用率
+    - key: block.description.scatterplotOverview.satisfaction
+      t: >
+          这个图表展示了每个技术基于它总**受访者数量**的**满意率**。
+          分成四个象限：
+
+          - **评估**: 低使用率，高满意度。值得一看的技术。
+
+          - **采用**: 高使用率，高满意度。可以安全采用的技术。
+
+          - **避免**: 低使用率，低满意度。目前最好避免使用的技术。
+
+          - **待定**: 高使用率，低满意度。如果你目前在使用这些技术，最好重新评估它们。
+    - key: block.description.scatterplotOverview.interest
+      t: >
+          这个图表展示了每个技术基于它总**受访者数量**的**关注率**（根据受访者知道某项技术但*尚未*使用该技术进行定义）。
+
+          （请注意，较低的用户数量可能是由于不知道该技术；或有大量受访者已经使用了该技术。）
+
+    - key: quadrants.assess
+      t: 评估
+    - key: quadrants.adopt
+      t: 采用
+    - key: quadrants.avoid
+      t: 避免
+    - key: quadrants.analyze
+      t: 待定
+
+    # happiness
+    - key: block.title.happiness
+      t: 整体满意度
+    - key: block.description.happiness
+      t: |
+          开发者对此类技术目前的整体满意度如何？其中 1 分表示非常不满意，5 分表示非常满意。
+
+    # experience
+    - key: block.title.toolExperience
+      t: ${name} 使用情况曲线
+    - key: block.description.toolExperience
+      t: 受访者使用 ${name} 的经验。
+
+    - key: toolExperience.never_heard.long
+      t: 我从来没有听说过这个技术
+    - key: toolExperience.never_heard.short
+      t: 从来没听说过
+    - key: toolExperience.never_heard.extrashort
+      t: 从没听说
+
+    - key: toolExperience.not_interested.long
+      t: 我听说过这个技术，但我不感兴趣
+    - key: toolExperience.not_interested.short
+      t: 听说过，但不感兴趣
+    - key: toolExperience.not_interested.extrashort
+      t: 不感兴趣
+
+    - key: toolExperience.interested.long
+      t: 我听说过这个技术，且有学习的意向
+    - key: toolExperience.interested.short
+      t: 听说过，且打算学习
+    - key: toolExperience.interested.extrashort
+      t: 感兴趣
+
+    - key: toolExperience.would_use.long
+      t: 我使用过这个技术，以后也愿意再次使用
+    - key: toolExperience.would_use.short
+      t: 使用过，以后也愿意用
+    - key: toolExperience.would_use.extrashort
+      t: 会再次使用
+
+    - key: toolExperience.would_not_use.long
+      t: 我使用过这个技术，但以后不愿意再用
+    - key: toolExperience.would_not_use.short
+      t: 使用过，以后不愿意用
+    - key: toolExperience.would_not_use.extrashort
+      t: 不会再用
+
+
+    - key: toolExperience.negative_opinion.extrashort
+      t: 不看好
+    - key: toolExperience.positive_opinion.extrashort
+      t: 看好
+    - key: toolExperience.have_not_used.extrashort
+      t: 没有用过
+    - key: toolExperience.have_used.extrashort
+      t: 用过
+
+    - key: toolExperience.total_respondents.long
+      t: 总受访者
+    - key: toolExperience.total_respondents.short
+      t: 总受访者
+    - key: toolExperience.total_respondents.extrashort
+      t: 总受访者
+
+    # other category tools
+    - key: block.title.category-other-tools
+      t: 其他工具
+    - key: block.description.category-other-tools
+      t: 该分类的其他工具（自由填写）
+
+    ###########################################################################
+    # Other Tools
+    ###########################################################################
+
+    - key: block.title.utilities
+      t: 工具类库
+    - key: block.description.utilities
+      t: 你通常使用哪个工具库？
+    - key: block.title.utilities_others
+      t: 其他工具类库
+    - key: block.description.utilities_others
+      t: 其他工具类库（自由填写）
+
+    - key: block.title.text_editors
+      t: 文本编辑器
+    - key: block.description.text_editors
+      t: 你通常使用哪个（或多个）编辑器？
+    - key: block.title.text_editors_others
+      t: 其他编辑器
+    - key: block.description.text_editors_others
+      t: 其他回答（自由填写）
+
+    - key: block.title.browsers
+      t: 浏览器
+    - key: block.description.browsers
+      t: 你主要使用哪个（或多个）浏览器进行工作？
+    - key: block.title.browsers_others
+      t: 其他浏览器
+    - key: block.description.browsers_others
+      t: 其他回答（自由填写）
+
+    - key: block.title.build_tools
+      t: 构建工具
+    - key: block.description.build_tools
+      t: 你使用哪些构建工具？
+    - key: block.title.build_tools_others
+      t: 其他构建工具
+    - key: block.description.build_tools_others
+      t: 其他回答（自由填写）
+
+    - key: block.title.non_js_languages
+      t: 非 JavaScript 语言
+    - key: block.description.non_js_languages
+      t: 你使用哪些其他编程语言？
+    - key: block.title.non_js_languages_others
+      t: 其他语言
+    - key: block.description.non_js_languages_others
+      t: 其他回答（自由填写）
+
+
+    ###########################################################################
+    # Resources
+    ###########################################################################
+
+    # blogs & magazines
+    - key: block.title.blogs_news_magazines
+      t: 博客和杂志
+    - key: block.description.blogs_news_magazines
+      t: 你阅读哪些 JS 相关的博客/杂志？
+    - key: block.title.blogs_news_magazines_others
+      t: 其他博客和杂志
+    - key: block.description.blogs_news_magazines_others
+      t: 其他回答（自由填写）。
+
+    # sites & courses
+    - key: block.title.sites_courses
+      t: 站点和教程
+    - key: block.description.sites_courses
+      t: 你查阅哪些 JS 相关的站点/教程？
+    - key: block.title.sites_courses_others
+      t: 其他站点和教程
+    - key: block.description.sites_courses_others
+      t: 其他回答（自由填写）。
+
+    # podcasts
+    - key: block.title.podcasts
+      t: 播客
+    - key: block.description.podcasts
+      t: 你收听哪些 JS 或编程相关的播客？
+    - key: block.title.podcasts_others
+      t: 其他播客
+    - key: block.description.podcasts_others
+      t: 其他回答（自由填写）。
+
+    ###########################################################################
+    # Opinions
+    ###########################################################################
+
+    - key: block.title.easy-to-learn
+      t: 学习曲线
+    - key: block.description.easy-to-learn
+      t: “JavaScript 学起来很容易”
+
+    - key: block.title.js_moving_in_right_direction
+      t: 发展方向
+    - key: block.description.js_moving_in_right_direction
+      t: “JavaScript 正朝好的方向发展”
+
+    - key: block.title.building_js_apps_overly_complex
+      t: 复杂度
+    - key: block.description.building_js_apps_overly_complex
+      t: “构建 JavaScript 应用现在复杂过头了”
+
+    - key: block.title.js_over_used_online
+      t: 使用情况
+    - key: block.description.js_over_used_online
+      t: “JavaScript 目前在线上被过度使用了”
+
+    - key: block.title.enjoy_building_js_apps
+      t: 享受程度
+    - key: block.description.enjoy_building_js_apps
+      t: “我乐于创造 JavaScript 应用”
+
+    - key: block.title.would_like_js_to_be_main_lang
+      t: 主要语言
+    - key: block.description.would_like_js_to_be_main_lang
+      t: “我想把 JavaScript 作为我的主要编程语言”
+
+    - key: block.title.js_ecosystem_changing_to_fast
+      t: 变化频率
+    - key: block.description.js_ecosystem_changing_to_fast
+      t: “JavaScript 生态圈变得太快了”
+
+    - key: block.title.missing-features
+      t: 缺少的特性
+    - key: block.description.missing-features
+      t: 开发者们认为 JavaScript 目前缺少什么？
+
+      # opinion scale
+    - key: opinions.0.short
+      t: 强烈反对
+    - key: opinions.1.short
+      t: 反对
+    - key: opinions.2.short
+      t: 中立
+    - key: opinions.3.short
+      t: 同意
+    - key: opinions.4.short
+      t: 十分同意
+
+    - key: opinions.0.long
+      t: 强烈反对
+    - key: opinions.1.long
+      t: 反对
+    - key: opinions.2.long
+      t: 中立
+    - key: opinions.3.long
+      t: 同意
+    - key: opinions.4.long
+      t: 十分同意
+
+    ###########################################################################
+    # Awards
+    ###########################################################################
+
+    - key: awards.runner_ups
+      t: 亚军
+
+    # feature_adoption
+    - key: award.feature_adoption_award.title
+      t: 最受欢迎的特性
+    - key: award.feature_adoption_award.description
+      t: |
+          授予最受欢迎的 JavaScript 特性。
+    - key: award.feature_adoption_award.comment
+      t: |
+          ${items[0].name} 有 **${items[0].value}** 的用户使用，
+          是今年最常使用的 JavaScript 特性。
+
+    # tool_satisfaction
+    - key: award.tool_satisfaction_award.title
+      t: 最高的满意度
+    - key: award.tool_satisfaction_award.description
+      t: |
+          授予拥有最高满意度的技术。
+
+    - key: award.tool_satisfaction_award.comment
+      t: |
+          有 **${items[0].value}** 的用户愿意再次使用它，
+          ${items[0].name} 再次证明了它可不是盖的。
+
+    # tool_interest
+    - key: award.tool_interest_award.title
+      t: 最高关注度
+    - key: award.tool_interest_award.description
+      t: |
+          授予开发者最想学习的技术。
+
+    - key: award.tool_interest_award.comment
+      t: |
+          **${items[0].value}** 的开发者听说过 ${items[0].name} 并且想学习它，
+          那可是真是颇受关注！
+
+
+    # tool_usage
+    - key: award.tool_usage_award.title
+      t: 最常使用的技术
+    - key: award.tool_usage_award.description
+      t: |
+          授予拥有最大用户群的技术。
+    - key: award.tool_usage_award.comment
+      t: |
+          ${items[0].name} 有 **${items[0].value}** 的用户使用，
+          是今年最常使用的技术。
+
+    # resource_usage
+    - key: award.resource_usage_award.title
+      t: 最常使用的资源
+    - key: award.resource_usage_award.description
+      t: |
+          授予拥有最大用户群的资源。
+    - key: award.resource_usage_award.comment
+      t: |
+          ${items[0].name} 有 **${items[0].value}** 的用户使用，
+          是今年最常使用的资源。
+
+    # tool_mention
+    - key: award.tool_mention_award.title
+      t: 最常提及
+    - key: award.tool_mention.description
+      t: |
+          授予 “其他库” 回答中
+          被提及最多的库。
+    - key: award.tool_mention_award.comment
+      t: |
+          ${items[0].name} 被 **${items[0].value}** 的用户提及，
+          使其成为迄今为止自由回答中被提及最多的库。
+
+    # prediction_award
+    - key: award.prediction_award.title
+      t: 最具潜力奖
+    - key: award.prediction_award.description
+      t: |
+          授予有发展潜力的新技术
+    - key: award.prediction_award.comment
+      t: |
+          ${items[0].name} 在今年的调查问卷中首次亮相，
+          并且我们等不及看它可以走多远。
+
+    ###########################################################################
+    # Generic
+    ###########################################################################
+
+    # pages
+    - key: page.introduction
+      t: 简介
+    - key: page.tshirt
+      t: T 恤
+    - key: page.demographics
+      t: 从业者统计
+    - key: page.overview
+      t: 总览
+    - key: page.features
+      t: 特性
+    - key: page.other_features
+      t: 其他特性
+    - key: page.javascript_flavors
+      t: JavaScript 偏好
+    - key: page.javascript_flavors.short
+      t: JavaScript 偏好
+    - key: page.javascript_flavors_others
+      t: 其他偏好
+    - key: page.front_end_frameworks
+      t: 前端框架
+    - key: page.front_end_frameworks.short
+      t: 前端
+    - key: page.front_end_frameworks_others
+      t: 其他框架
+    - key: page.data_layer
+      t: 数据层
+    - key: page.data_layer.short
+      t: 数据层
+    - key: page.data_layer_others
+      t: 其他数据层工具
+    - key: page.back_end_frameworks
+      t: 后端框架
+    - key: page.back_end_frameworks.short
+      t: 后端
+    - key: page.back_end_frameworks_others
+      t: 其他框架
+    - key: page.testing
+      t: 测试
+    - key: page.testing.short
+      t: 测试
+    - key: page.testing_others
+      t: 其他工具
+    - key: page.mobile_desktop
+      t: 移动端和桌面
+    - key: page.mobile_desktop.short
+      t: 移动端和桌面
+    - key: page.mobile_desktop_others
+      t: 其他工具
+    - key: page.other_tools
+      t: 其他工具
+    - key: page.environments
+      t: 环境
+    - key: page.resources
+      t: 资源
+    - key: page.opinions
+      t: 看法
+    - key: page.awards
+      t: 大奖
+    - key: page.conclusion
+      t: 结语
+    - key: page.support
+      t: 支持我们
+
+    # sharing
+    - key: share.share
+      t: 分享
+    - key: share.site.title
+      t: 来看看 StateOf JavaScript 2019 的调查结果吧
+    - key: share.site.twitter_text
+      t: '来看看 State Of JavaScript 2019 的调查结果吧 ${link} #StateOfJS'
+    - key: share.site.subject
+      t: State Of JavaScript 调查结果
+    - key: share.site.body
+      t: '与你分享有意思的 JavaScript 调查结果：${link}'
+    - key: share.block.twitter_text
+      t: '#StateOfJS 2019: ${title} ${link}'
+    - key: share.block.subject
+      t: State Of JavaScript 调查结果
+    - key: share.block.body
+      t: '与你分享有意思的 JavaScript 调查结果 (${title}): ${link}'
+    - key: share.twitter
+      t: 分享到 Twitter
+    - key: share.facebook
+      t: 分享到 Facebook
+    - key: share.linkedin
+      t: 分享到 LinkedIn
+    - key: share.email
+      t: 通过 email 分享
+    - key: share.image
+      t: 获取图片
+
+    # export
+    - key: export.export
+      t: 导出
+    - key: export.title
+      t: 导出 ${title} 的数据
+    - key: export.nocsv
+      t: 抱歉，当前表单不支持 CSV 导出。
+    - key: export.graphql
+      t: >
+          我们内部的 GraphQL API 尚未公开，未来我们计划公开它，以便更容易进行数据查询。
+          如果你想了解更多，
+          你可以 <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">查看这个 GitHub issue</a>
+
+
+    # general
+    - key: general.title
+      t: State of JavaScript 2019
+    - key: general.description
+      t: 探索一年中最受欢迎的 JavaScript 特性和技术。
+    - key: general.stay_tuned
+      t: 订阅我们的邮件
+    - key: general.leave_your_email
+      t: "如果你想获取我们的内容更新，或者想让我们在发布下一次调查时第一时间通知你，请在下方留下你的邮箱："
+    - key: general.your_email
+      t: 你的邮箱
+    - key: general.notify_me
+      t: 通知我
+    - key: general.help_us_translate
+      t: 帮助翻译此次调查 →
+    - key: general.not_found
+      t: >
+
+          ## Error 404
+
+          抱歉，我们找不到这个页面。如果你觉得有东西挂了，请 [提一个 issue](https://github.com/StateOfJS/State-of-JS-2019/issues)。
+    - key: general.back_to_intro
+      t: 返回介绍
+    - key: general.close_nav
+      t: 关闭导航菜单
+    - key: general.completion_percentage
+      t: '完成百分比：'
+    - key: general.previous
+      t: '上一项：'
+    - key: general.next
+      t: '下一项：'
+    - key: general.start
+      t: 开始
+
+    # partners
+    - key: partners.our_partners
+      t: 我们的合作伙伴
+    - key: partners.become_partner
+      t: 帮助支持此次调查
+    - key: partners.thanks
+      t: 感谢我们的合作伙伴对本项目的大力支持！
+    - key: partners.learn_more
+      t: 了解更多
+    - key: block.title.recommendedResources
+      t: 推荐资源
+
+    # charts
+    - key: block.title.usage-ratio
+      t: 使用率排名
+    - key: block.description.usage-ratio
+      t: 了解该技术的用户中的使用率排名
+    - key: users_percentage
+      t: 用户百分比
+    - key: users_count
+      t: 用户数量
+    - key: satisfaction_percentage
+      t: 满意度百分比
+    - key: interest_percentage
+      t: 关注度百分比
+    - key: chart_mode
+      t: 模式
+    - key: chart_mode.absolute
+      t: 绝对
+    - key: chart_mode.relative
+      t: 相对
+    - key: chart_units
+      t: 单位
+    - key: chart_units.percentage
+      t: 百分比
+    - key: chart_units.count
+      t: 数量
+    - key: users
+      t: 用户
+    - key: percent_satisfaction
+      t: '% 满意'
+    - key: percent_interest
+      t: '% 关注'
+    - key: heatmap.average
+      t: 总体
+    - key: difference_from_average_usage
+      t: '总体使用情况差异：'
+    - key: all
+      t: '全部'
+
+    # other
+    - key: bio.guest_visualizer
+      t: 专家来宾
