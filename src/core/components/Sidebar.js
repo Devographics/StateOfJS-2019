@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
 import LogoCompact from './LogoCompact'
-import { Link } from 'gatsby'
+import Link from 'core/components/LocaleLink'
 import ShareSite from '../share/ShareSite'
 import { useI18n } from 'core/i18n/i18nContext'
 

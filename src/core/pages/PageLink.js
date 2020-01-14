@@ -1,17 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import { usePageContext } from '../helpers/pageContext'
+import Link from 'core/components/LocaleLink'
 
-const PageLink = ({ page, children, ...rest }) => {
-    const context = usePageContext()
-
-    return (
-        <Link {...rest} to={`${context.localePath}${page.path}`}>
-            <span>{children}</span>
-        </Link>
-    )
-}
+const PageLink = ({ page, children, ...rest }) => (
+    <Link {...rest} to={page.path}>
+        <span>{children}</span>
+    </Link>
+)
 
 PageLink.propTypes = {
     page: PropTypes.shape({

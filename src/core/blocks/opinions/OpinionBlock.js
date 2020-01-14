@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import StreamChart from 'core/charts/generic/StreamChart'
-import { keys } from 'core/constants.js'
+import { keys } from 'core/constants'
 
 const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
     const { id, bucketKeysName = id } = block
@@ -33,7 +33,7 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
                     data={data}
                     keys={bucketKeys.map(key => key.id)}
                     units={units}
-                    applyEmptyPatternTo="never_heard"
+                    applyEmptyPatternTo={2}
                     namespace={bucketKeysName}
                 />
             </ChartContainer>

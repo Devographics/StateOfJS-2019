@@ -1,42 +1,39 @@
 import React from 'react'
-import Hamburger from '../components/Hamburger'
-import { usePageContext } from '../helpers/pageContext'
-import PageLabel from '../pages/PageLabel'
-import PageLink from '../pages/PageLink'
-import LanguageSwitcher from '../i18n/LanguageSwitcher'
+import PropTypes from 'prop-types'
 import isEmpty from 'lodash/isEmpty'
+import Hamburger from 'core/components/Hamburger'
+import { usePageContext } from 'core/helpers/pageContext'
+import LanguageSwitcher from 'core/i18n/LanguageSwitcher'
+import PageLabel from './PageLabel'
+import PageLink from './PageLink'
+
+const PaginationLink = ({ page, type }) => (
+    <PageLink page={page} className={`pagination__link pagination__${type}`}>
+        <span className="pagination__link__label pagination__link__label--short">
+            <PageLabel page={page} />
+        </span>
+    </PageLink>
+)
+
+PaginationLink.propTypes = {
+    page: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired
+    }).isRequired,
+    type: PropTypes.oneOf(['previous', 'next']).isRequired
+}
 
 const Pagination = ({ position, toggleSidebar }) => {
     const context = usePageContext()
 
     let previous = <span />
     if (context.previous !== undefined && !isEmpty(context.previous)) {
-        previous = (
-            <PageLink page={context.previous} className="pagination__link pagination__previous">
-                {/* <span className="pagination__link__symbol">&lt;&lt;&nbsp;</span> */}
-                {/* <span className="pagination__link__label pagination__link__label--full">
-                    <PageLabel page={context.previous} mode="long" />
-                </span> */}
-                <span className="pagination__link__label pagination__link__label--short">
-                    <PageLabel page={context.previous} />
-                </span>
-            </PageLink>
-        )
+        previous = <PaginationLink page={context.previous} type="previous" />
     }
 
     let next = <span />
     if (context.next !== undefined && !isEmpty(context.next)) {
-        next = (
-            <PageLink page={context.next} className="pagination__link pagination__next">
-                {/* <span className="pagination__link__label pagination__link__label--full">
-                    <PageLabel page={context.next} mode="long" />
-                </span> */}
-                <span className="pagination__link__label pagination__link__label--short">
-                    <PageLabel page={context.next} />
-                </span>
-                {/* <span className="pagination__link__symbol">&nbsp;&gt;&gt;</span> */}
-            </PageLink>
-        )
+        next = <PaginationLink page={context.next} type="next" />
     }
 
     return (
@@ -68,7 +65,8 @@ const Pagination = ({ position, toggleSidebar }) => {
 }
 
 Pagination.defaultProps = {
-    mode: 'title'
+    position: PropTypes.oneOf(['top', 'bottom']).isRequired,
+    toggleSidebar: PropTypes.func.isRequired
 }
 
 export default Pagination

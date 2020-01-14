@@ -1,6 +1,5 @@
 import React, { createContext, useContext } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-// import variables from '../../../config/variables.yml'
 import get from 'lodash/get'
 
 export const ToolsContext = createContext()
@@ -8,7 +7,7 @@ export const ToolsContext = createContext()
 const toolsQuery = graphql`
     query {
         surveyApi {
-            survey(survey: js, year: 2019) {
+            survey(survey: js) {
                 tools {
                     id
                     entity {

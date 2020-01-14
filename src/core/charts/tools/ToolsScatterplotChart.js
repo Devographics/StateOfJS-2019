@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import theme from 'nivoTheme'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
-import { colors, getColor } from 'core/constants.js'
+import { colors, getColor, totalCountRounded } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const labelPositions = {
@@ -211,7 +211,7 @@ const ToolsScatterplotChart = ({ data, metric = 'satisfaction', current }) => {
             <ResponsiveScatterPlot
                 data={data}
                 margin={margins}
-                xScale={{ type: 'linear', min: 0, max: 20000 }}
+                xScale={{ type: 'linear', min: 0, max: totalCountRounded }}
                 yScale={{ type: 'linear', min: 0, max: 100 }}
                 symbolSize={16}
                 theme={theme}

@@ -42,8 +42,8 @@ const HeatmapChartRow = ({
                             'Heatmap__Cell--inactive': isInactive
                         })}
                         style={{
-                            background: backgroundColorScale((cell && cell.count) || 0),
-                            color: textColorScale((cell && cell.count) || 0)
+                            background: backgroundColorScale((cell && cell.percentage) || 0),
+                            color: textColorScale((cell && cell.percentage) || 0)
                         }}
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}

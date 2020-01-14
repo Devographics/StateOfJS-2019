@@ -20,7 +20,7 @@ const getAlphaScale = (color, alphaSteps, startOffset) => {
 
 const backgroundColorScale = scaleLinear()
     .domain([0, 10, 20, 30, 40])
-    .range(getAlphaScale(colors.teal, 5, 0.15))
+    .range(getAlphaScale(colors.teal, 5, 0.3))
 
 const textColorScale = scaleLinear()
     .domain([0, 10, 20, 30, 40])

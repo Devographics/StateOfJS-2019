@@ -1,28 +1,18 @@
-import { getColor, colors, colorRange, fontFamily } from 'core/constants.js'
+import { getColor, colors, fontFamily } from 'core/constants'
 
 export default {
-    name: 'state_of_css_2019',
+    name: 'state_of_js_2019',
     fontFamily,
-    // background: '#ffffff',
-    opinionColors: {
-        would_use: colors.pink,
-        would_not_use: colors.pinkLight,
-        interested: colors.blue,
-        not_interested: colors.blueDark,
-        never_heard: colors.greyLight
-    },
-    opinionScaleColors: colorRange,
-    salaryColors: colorRange,
-    sourceColors: {
-        Email: colors.teal,
-        Twitter: colors.aqua,
-        Reddit: colors.red,
-        Slack: 'rgb(110, 93, 133)',
-        'JavaScript Weekly': colors.yellow,
-        'Hacker News': 'rgb(240, 128, 72)',
-        Medium: '#48A57F',
-        Facebook: 'rgb(99, 130, 197)',
-        'Other/Unknown': colors.greyMedium
+    // this pattern can be used on various charts
+    // for empty/neutral values
+    emptyPattern: {
+        id: 'empty',
+        type: 'patternLines',
+        background: 'inherit',
+        color: 'rgba(0, 0, 0, .07)',
+        rotation: -45,
+        lineWidth: 3,
+        spacing: 6
     },
     axis: {
         domain: {

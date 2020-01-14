@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'core/components/LocaleLink'
 import locales from '../../../config/locales.yml'
 import { usePageContext } from '../helpers/pageContext'
 
