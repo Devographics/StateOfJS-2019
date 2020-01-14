@@ -1,0 +1,1025 @@
+locale: ko-KR
+translations:
+    ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: 티셔츠에 관해
+    - key: tshirt.description
+      t: >
+          디자인이 세미 슬림 핏 검은색 헤더 [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt)(남성용)
+          혹은 짙은 회색 헤더 [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt)(여성용)에 프린트되어 있습니다. 사이즈는 미국식 사이즈 표기에 따릅니다.
+
+    - key: tshirt.getit
+      t: 주문하세요
+    - key: tshirt.price
+      t: $${price} + 배송비 별도
+
+    ###########################################################################
+    # Demographics
+    ###########################################################################
+
+    # salary ranges
+    - key: salary.work_for_free.long
+      t: 무료로 일함
+    - key: salary.work_for_free.short
+      t: 무료로 일함
+    - key: salary.work_for_free.shorter
+      t: '0'
+    - key: salary.0_10.long
+      t: $0k-$1만
+    - key: salary.0_10.short
+      t: $0k-$1만
+    - key: salary.0_10.shorter
+      t: 0~1만
+    - key: salary.10_30.long
+      t: $1만-$3만
+    - key: salary.10_30.short
+      t: $1만-$3만
+    - key: salary.10_30.shorter
+      t: 1~3만
+    - key: salary.30_50.long
+      t: $3만-$5만
+    - key: salary.30_50.short
+      t: $3만-$5만
+    - key: salary.30_50.shorter
+      t: 3~5만
+    - key: salary.50_100.long
+      t: $5만-$10만
+    - key: salary.50_100.short
+      t: $5만-$10만
+    - key: salary.50_100.shorter
+      t: 5~10만
+    - key: salary.100_200.long
+      t: $10만-$20만
+    - key: salary.100_200.short
+      t: $10만-$20만
+    - key: salary.100_200.shorter
+      t: 10~20만
+    - key: salary.more_than_200.long
+      t: $20만보다 많음
+    - key: salary.more_than_200.short
+      t: $20만+
+    - key: salary.more_than_200.shorter
+      t: '>20만'
+    - key: salary.axis_legend
+      t: 급여 구간 (USD)
+
+    # years of experience
+    - key: workExperience.less_than_1.long
+      t: 1년 미만
+    - key: workExperience.less_than_1.short
+      t: '<1년'
+    - key: workExperience.less_than_1.shorter
+      t: '<1'
+    - key: workExperience.1_2.long
+      t: 1에서 2년
+    - key: workExperience.1_2.short
+      t: 1~2년
+    - key: workExperience.1_2.shorter
+      t: 1~2
+    - key: workExperience.2_5.long
+      t: 2에서 5년
+    - key: workExperience.2_5.short
+      t: 2~5년
+    - key: workExperience.2_5.shorter
+      t: 2~5
+    - key: workExperience.5_10.long
+      t: 5에서 10년
+    - key: workExperience.5_10.short
+      t: 5~10년
+    - key: workExperience.5_10.shorter
+      t: 5~10
+    - key: workExperience.10_20.long
+      t: 10에서 20년
+    - key: workExperience.10_20.short
+      t: 10~20년
+    - key: workExperience.10_20.shorter
+      t: 10~20
+    - key: workExperience.more_than_20.long
+      t: 20년보다 김
+    - key: workExperience.more_than_20.short
+      t: '>20년'
+    - key: workExperience.more_than_20.shorter
+      t: '>20'
+    - key: workExperience.axis_legend
+      t: 업무 연차
+
+    # company size
+    - key: companySize.1.long
+      t: 한명
+    - key: companySize.1.short
+      t: 한명
+    - key: companySize.1.shorter
+      t: '1'
+    - key: companySize.1_5.long
+      t: 1에서 5명
+    - key: companySize.1_5.short
+      t: 1~5
+    - key: companySize.1_5.shorter
+      t: 1~5
+    - key: companySize.5_10.long
+      t: 5에서 10명
+    - key: companySize.5_10.short
+      t: 5~10
+    - key: companySize.5_10.shorter
+      t: 5~10
+    - key: companySize.10_20.long
+      t: 10에서 20명
+    - key: companySize.10_20.short
+      t: 10~20
+    - key: companySize.10_20.shorter
+      t: 10~20
+    - key: companySize.20_50.long
+      t: 20에서 50명
+    - key: companySize.20_50.short
+      t: 20~50
+    - key: companySize.20_50.shorter
+      t: 20~50
+    - key: companySize.50_100.long
+      t: 50에서 100명
+    - key: companySize.50_100.short
+      t: 50~100
+    - key: companySize.50_100.shorter
+      t: 50~100
+    - key: companySize.100_1000.long
+      t: 100에서 1000명
+    - key: companySize.100_1000.short
+      t: 100~1000
+    - key: companySize.100_1000.shorter
+      t: 100~1000
+    - key: companySize.more_than_1000.long
+      t: 1000명 보다 많음
+    - key: companySize.more_than_1000.short
+      t: 1000+
+    - key: companySize.more_than_1000.shorter
+      t: 1000+
+    - key: companySize.axis_legend
+      t: 임직원 수
+
+    # sources
+    - key: sources.other_unknown
+      t: 기타/모름
+
+    # css proficiency
+
+    - key: block.title.cssProficiency
+      t: CSS 숙련도
+    - key: block.description.cssProficiency
+      t: CSS를 다루는 데 얼마나 능숙한가?
+    - key: cssProficiency.axis_legend
+      t: CSS 숙련도
+    - key: cssProficiency.0.short
+      t: 없음
+    - key: cssProficiency.0.long
+      t: '사실상 CSS에 대해 아는 게 없음'
+    - key: cssProficiency.1.short
+      t: 초보
+    - key: cssProficiency.1.long
+      t: 'CSS 프레임워크를 쓰고 기존 스타일을 수정할 줄 앎'
+    - key: cssProficiency.2.short
+      t: 중급
+    - key: cssProficiency.2.long
+      t: '특수한 규칙들을 알고, 레이아웃을 직접 만들 수 있음'
+    - key: cssProficiency.3.short
+      t: 고급
+    - key: cssProficiency.3.long
+      t: '애니메이션, 인터랙션, 트랜지션 등을 능숙하게 다룸'
+    - key: cssProficiency.4.short
+      t: 전문가
+    - key: cssProficiency.4.long
+      t: '일정한 방법으로 처음부터 프론트엔드 전체를 스타일링 할 수 있음'
+
+    # backend proficiency
+    - key: block.title.backendProficiency
+      t: 백엔드 숙련도
+    - key: block.description.backendProficiency
+      t: 백엔드 개발에 얼마나 능숙한가?
+    - key: backendProficiency.axis_legend
+      t: 백엔드 숙련도
+    - key: backendProficiency.0.short
+      t: 없음
+    - key: backendProficiency.0.long
+      t: '백엔드는 하나도 만질 줄 모름'
+    - key: backendProficiency.1.short
+      t: 초보
+    - key: backendProficiency.1.long
+      t: '올인원 CMS(Wordpress 등)나 정적 사이트 생성기(Jekyll 등)를 설치할 수 있음'
+    - key: backendProficiency.2.short
+      t: 중급
+    - key: backendProficiency.2.long
+      t: '기존 프레임워크(Rails, Laravel 등)를 이용해 어플리케이션을 개발할 수 있음'
+    - key: backendProficiency.3.short
+      t: 고급
+    - key: backendProficiency.3.long
+      t: '백엔드를 밑바닥부터 설계할 수 있음 (Go, Node 등)'
+    - key: backendProficiency.4.short
+      t: 전문가
+    - key: backendProficiency.4.long
+      t: '복잡한 멀티서버나 마이크로서비스 아키텍처를 다룰 수 있음'
+
+    # job title
+    - key: jobTitle.front_end_developer.short
+      t: 프론트엔드 개발자
+    - key: jobTitle.front_end_developer.long
+      t: 프론트엔드 개발자/엔지니어
+    - key: jobTitle.back_end_developer.short
+      t: 백엔드 개발자
+    - key: jobTitle.back_end_developer.long
+      t: 백엔드 개발자/엔지니어
+    - key: jobTitle.full_stack_developer.short
+      t: 풀스택 개발자
+    - key: jobTitle.full_stack_developer.long
+      t: 풀스택 개발자/엔지니어
+    - key: jobTitle.web_developer.short
+      t: 웹 개발자
+    - key: jobTitle.web_developer.long
+      t: 웹 개발자
+    - key: jobTitle.web_designer.short
+      t: 웹 디자이너
+    - key: jobTitle.web_designer.long
+      t: 웹 디자이너
+    - key: jobTitle.ux_designer.short
+      t: UX 디자이너
+    - key: jobTitle.ux_designer.long
+      t: UX 디자이너
+    - key: jobTitle.ui_designer.short
+      t: UI 디자이너
+    - key: jobTitle.ui_designer.long
+      t: UI 디자이너
+    - key: jobTitle.back_end_dev.short
+      t: 백엔드 개발자
+    - key: jobTitle.back_end_dev.long
+      t: 백엔드 개발자/디자이너
+
+    # gender
+    - key: block.title.gender
+      t: 성별
+    - key: block.description.gender
+      t: 응답자 성별.
+    - key: gender.female
+      t: 여성
+    - key: gender.female.long
+      t: 여성
+    - key: gender.male
+      t: 남성
+    - key: gender.male.long
+      t: 남성
+    - key: gender.non_binary
+      t: 논바이너리/제 3의 성
+    - key: gender.non_binary.long
+      t: 논바이너리/제 3의 성
+    - key: gender.prefer_not_to_say
+      t: 밝히기를 원하지 않음
+    - key: gender.prefer_not_to_say.long
+      t: 밝히기를 원하지 않음
+
+    # other
+    - key: block.title.country
+      t: 나라별 참여
+    - key: block.description.country
+      t: 각 국가 출신 응답자의 비율.
+    - key: block.title.salary
+      t: 연봉
+    - key: block.description.salary
+      t: 미국 달러(USD) 환산 연봉.
+    - key: block.title.workExperience
+      t: 업무 연차
+    - key: block.description.workExperience
+      t: 자바스크립트를 쓴 지 얼마나 되었는지.
+    - key: block.title.companySize
+      t: 직장 규모
+    - key: block.description.companySize
+      t: 직장 규모 분석.
+    - key: block.title.source
+      t: 출처
+    - key: block.description.source
+      t: >
+          설문을 접하게 된 경로 (설문 응답과 경로 추적의 총합)
+
+          **State of JS** 는 이전 설문의 구독자를, **입소문** 은 Slack, 친구, 직장동료 등을 묶어 나타냅니다.
+
+    - key: block.title.jobTitle
+      t: 직함
+    - key: block.description.jobTitle
+      t: 파티에 가면 어떻게 자기소개를 하나요?
+
+    ###########################################################################
+    # Features
+    ###########################################################################
+
+    # General 
+
+    - key: page.syntax
+      t: 구문
+    - key: page.language
+      t: 언어
+    - key: page.data_structures
+      t: 자료구조
+    - key: page.browser_apis
+      t: 브라우저 API
+
+    - key: block.description.decorators
+      t: >
+        간단히 말해, 데코레이터는 한 코드를 다른 코드로 감싸는 - 말 그대로 장식하는 - 방법 입니다.
+
+    - key: feature.learn_more
+      t: 더 보기 (MDN)
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: CanIUse
+    - key: feature.specification_link
+      t: W3C 명세
+
+    - key: featureExperienceSimplified.used_it.long
+      t: 사용한 적 있음
+    - key: featureExperienceSimplified.know_it.long
+      t: 알고 있음
+    - key: features.usage.ratio
+      t: 사용률
+
+    - key: featureExperience.used_it
+      t: 사용한 적 있음
+    - key: featureExperience.know_not_used
+      t: 알고는 있지만, 사용한 적은 없음
+    - key: featureExperience.never_heard_not_sure
+      t: 들어본 적 없음/정확히 알지 못함
+
+    - key: featureExperience.used_it.long
+      t: 사용한 적 있음
+    - key: featureExperience.know_not_used.long
+      t: 알고는 있지만, 사용한 적은 없음
+    - key: featureExperience.never_heard_not_sure.long
+      t: 들어본 적 없음/정확히 알지 못함
+
+    # Feature Overview
+    - key: block.title.featuresOverview
+      t: 사용량 개요
+    - key: block.description.featuresOverview
+      t: >
+          이 차트는 카테고리별로 분류된 각 기능들에 대한 다양한 적용률을 보여줍니다.
+
+
+          <span class="text-teal-darker text-bold">바깥 원</span>의 크기는 해당 기능을 아는 모든 사람,
+          <span class="text-teal text-bold">안쪽 원</span>은 실제로 사용한 사람의 수에 해당합니다.
+
+
+          세부 데이터를 보기 위해서는 각 원 위에 마우스를 올려 총 응답수가 표시된 <span class="text-blackpink text-bold">오버레이</span>를 확인하세요.
+
+    # Features Section Overview
+    - key: block.title.featuresSectionOverview
+      t: 사용량 개요
+    - key: block.description.featuresSectionOverview
+      t: >
+          <span class="text-teal-darker text-bold">바깥 원</span>의 크기는 해당 기능을 아는 모든 사람,
+          <span class="text-teal text-bold">안쪽 원</span>은 실제로 사용한 사람의 수에 해당합니다.
+
+
+          세부 데이터를 보기 위해서는 각 원 위에 마우스를 올려 총 응답수가 표시된 <span class="text-blackpink text-bold">오버레이</span>를 확인하세요.
+
+    - key: block.title.featuresExperienceHeatmap
+      t: 업무 연차 별 사용량
+    - key: block.description.featuresExperienceHeatmap
+      t: |
+          “총계” 열은 각 기능의 총 사용량(“사용한 적 있음”을 선택한 응답자 수)을,
+          이후의 열은 “업무 연차” 범주에 따른 사용량 비율을 나타냅니다.
+
+          <span class="text-teal text-bold">청록색</span> 배경이 높을 수록
+          전체 평균보다 해당 범주에서 더 많이 사용했음을 나타냅니다.
+
+    ###########################################################################
+    # Tools & Methodologies
+    ###########################################################################
+
+    # general
+    - key: block.tool.links
+      t: 링크
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.github_stars
+      t: stars
+    - key: block.tool.homepage_link
+      t: 홈페이지
+    - key: block.tool.npm_link
+      t: NPM
+
+    - key: block.title.other-methodologies
+      t: 기타 방법
+
+    - key: block.title.companySize_heatmap
+      t: 직장 규모 별 사용률
+    - key: block.description.companySize_heatmap
+      t: |
+
+          각 기술에 대해, 서로 다른 직장 규모를 선택한 응답자의 사용률이 어떻게 분포되어있는지.
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+
+    - key: block.title.workExperience_heatmap
+      t: 업무 연차에 따른 사용률
+    - key: block.description.workExperience_heatmap
+      t: |
+
+          각 기술에 대해, 서로 다른 연차를 선택한 사람들의 사용률이 어떻게 분포되어있는지.
+          이 질문에서의 경험은 특정 기술이 아니라 통상적인 자바스크립트 경험을 말합니다. 
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    - key: block.title.salary_heatmap
+      t: 연봉 구간에 따른 사용률
+    - key: block.description.salary_heatmap
+      t: |
+
+          각 기술에 대해, 서로 다른 연봉 구간을 선택한 사람들의 사용률이 어떻게 분포되어있는지.
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “yearly salary” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    # rankings/bump chart
+    - key: block.title.toolExperienceRanking
+      t: 순위
+    - key: block.description.toolExperienceRanking
+      t: >
+          인지도, 관심도 및 만족도 순위.
+    - key: opinions.legends.awareness_ratio
+      t: 인지도
+    - key: opinions.legends.interest_ratio
+      t: 관심도
+    - key: opinions.legends.satisfaction_ratio
+      t: 만족도
+
+    # overview
+    - key: block.title.toolsSectionOverview
+      t: 분야 개요
+    - key: block.description.toolsSectionOverview
+      t: >
+          설문 받은 기술에 대한 개요, 어두운 구간일 수록 긍정적인 의견, 밝은 구간일 수록 부정적인 반응을 나타냅니다.
+
+    # Arrows (Movement over time)
+    - key: block.title.toolsArrow
+      t: 시간에 따른 변화
+    # - key: block.description.toolsArrow
+    #   t: >
+    #       How has the ecosystem changed over three years?
+    - key: block.description.toolsArrow
+      t: >
+          각 선은 2016년부터 2019년까지 이동합니다. 점이 높을 수록 기술이 보다 많은 사람들에게 쓰였음을,
+          점이 오른쪽으로 멀어질 수록 더 많은 사람들이 이 기술을 배웠거나, 사용한 적 있고 다시 쓸 것임을 나타냅니다.
+
+    - key: amelia.bio
+      t: >
+        Amelia Wattenberger는 데이터 시각화를 주로 하는 프론트엔드 개발자이자 디자이너입니다.
+        그녀는 여러분 자신만의 데이터 시각화를 만드는 데 길잡이가 될 책인
+        [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3)의 저자로, 
+        [트위터](https://twitter.com/Wattenberger)와 [웹사이트](https://wattenberger.com/)로 그녀의 생각과
+        How-to들을 공유하고 있습니다.
+
+    # quadrant/scatterplot chart
+    - key: block.title.scatterplotOverview
+      t: 만족도 대 사용량
+    - key: block.description.scatterplotOverview.satisfaction
+      t: >
+          이 차트는 각 기술의 전체 **사용자 수** 대비 **만족도 비율**을 보여줍니다.
+          차트를 사분면으로 나누면:
+
+          - **평가**: 낮은 사용량, 높은 만족도. 지켜볼 만한 기술.
+
+          - **적용**: 높은 사용량, 높은 만족도. 적용해도 되는 기술.
+
+          - **기피**: 낮은 사용량, 낮은 만족도. 현재는 피하는 게 좋은 기술.
+
+          - **검토**: 높은 사용량, 낮은 만족도. 현재 사용하고 있다면 재검토해볼 것.
+    - key: block.description.scatterplotOverview.interest
+      t: >
+          이 차트는 각 기술의 전체 **사용자 수** 대비 **관심도 비율**을 나타냅니다. (해당 기술을 알고는 있지만 아직 *사용한 적* 없는 응답자로 규정)
+
+          (사용자 수가 적은 경우는 잘 모르는 기술이거나, 많은 응답자가 이미 사용중인 기술일 수도 있습니다.)
+
+    - key: quadrants.assess
+      t: 평가
+    - key: quadrants.adopt
+      t: 적용
+    - key: quadrants.avoid
+      t: 기피
+    - key: quadrants.analyze
+      t: 검토
+
+    # happiness
+    - key: block.title.happiness
+      t: 전체 행복도
+    - key: block.description.happiness
+      t: |
+          1(매우 불행)부터 5(매우 행복)까지의 척도로, 개발자들은 이 분야의 전체적인 현재 상태에 얼마나 행복한가요?
+
+    # experience
+    - key: block.title.toolExperience
+      t: 시간에 따른 ${name} 경험
+    - key: block.description.toolExperience
+      t: 응답자들의 ${name} 경험.
+
+    - key: toolExperience.never_heard.long
+      t: 전혀 들어본 적 없음
+    - key: toolExperience.never_heard.short
+      t: 전혀 들어본 적 없음
+    - key: toolExperience.never_heard.extrashort
+      t: 들어본 적 없음
+
+    - key: toolExperience.not_interested.long
+      t: “들어본 적”은 있지만, 관심은 “없음”
+    - key: toolExperience.not_interested.short
+      t: 들어보았고, 관심 없음
+    - key: toolExperience.not_interested.extrashort
+      t: 관심 없음
+
+    - key: toolExperience.interested.long
+      t: “들어본 적” 있고, 배울 생각이 “있음”
+    - key: toolExperience.interested.short
+      t: 들어보았고, 배울 생각 있음
+    - key: toolExperience.interested.extrashort
+      t: 관심 있음
+
+    - key: toolExperience.would_use.long
+      t: 전에 “사용한 적”이 있고, 다시 사용할 생각이 “있음”
+    - key: toolExperience.would_use.short
+      t: 사용한 적 있고, 다시 사용할 것
+    - key: toolExperience.would_use.extrashort
+      t: 다시 사용할 것
+
+    - key: toolExperience.would_not_use.long
+      t: 전에 “사용한 적” 있고, 다시 사용할 생각이 “없음”
+    - key: toolExperience.would_not_use.short
+      t: 사용한 적 있고, 다시 사용 안함
+    - key: toolExperience.would_not_use.extrashort
+      t: 다시 사용 안함
+
+
+    - key: toolExperience.negative_opinion.extrashort
+      t: 부정적 의견
+    - key: toolExperience.positive_opinion.extrashort
+      t: 긍정적 의견
+    - key: toolExperience.have_not_used.extrashort
+      t: 사용한 적 없음
+    - key: toolExperience.have_used.extrashort
+      t: 사용한 적 있음
+
+    - key: toolExperience.total_respondents.long
+      t: 전체 응답자 수
+    - key: toolExperience.total_respondents.short
+      t: 전체 응답자 수
+    - key: toolExperience.total_respondents.extrashort
+      t: 전체 응답
+
+    # other category tools
+    - key: block.title.category-other-tools
+      t: 기타 툴
+    - key: block.description.category-other-tools
+      t: 이 분야의 다른 툴들 (자유응답).
+
+    ###########################################################################
+    # Other Tools
+    ###########################################################################
+
+    - key: block.title.utilities
+      t: 유틸리티
+    - key: block.description.utilities
+      t: 주로 어떤 유틸리티 라이브러리를 사용하나요?
+    - key: block.title.utilities_others
+      t: 기타 유틸리티
+    - key: block.description.utilities_others
+      t: 기타 유틸리티 (자유입력).
+
+    - key: block.title.text_editors
+      t: 텍스트 에디터
+    - key: block.description.text_editors
+      t: 주로 어떤 텍스트 에디터(들)을 사용하나요?
+    - key: block.title.text_editors_others
+      t: 기타 텍스트 에디터
+    - key: block.description.text_editors_others
+      t: 기타 응답 (자유입력).
+
+    - key: block.title.browsers
+      t: 브라우저
+    - key: block.description.browsers
+      t: 초기 개발중에 어떤 브라우저를 주로 사용하나요?
+    - key: block.title.browsers_others
+      t: 기타 브라우저
+    - key: block.description.browsers_others
+      t: 기타 응답 (자유입력).
+
+    - key: block.title.build_tools
+      t: 빌드 툴
+    - key: block.description.build_tools
+      t: 어떤 빌드 툴을 사용하나요?
+    - key: block.title.build_tools_others
+      t: 기타 빌드 툴
+    - key: block.description.build_tools_others
+      t: 기타 응답 (자유입력).
+
+    - key: block.title.non_js_languages
+      t: 비(非)자바스크립트 언어
+    - key: block.description.non_js_languages
+      t: 다른 프로그래밍 언어는 무엇을 사용하나요?
+    - key: block.title.non_js_languages_others
+      t: 기타 언어
+    - key: block.description.non_js_languages_others
+      t: 기타 응답 (자유입력).
+
+
+    ###########################################################################
+    # Resources
+    ###########################################################################
+
+    # blogs & magazines
+    - key: block.title.blogs_news_magazines
+      t: 블로그 & 잡지
+    - key: block.description.blogs_news_magazines
+      t: JS관련 블로그/잡지 등을 읽나요?
+    - key: block.title.blogs_news_magazines_others
+      t: 기타 블로그 & 잡지
+    - key: block.description.blogs_news_magazines_others
+      t: 기타 응답 (자유입력).
+
+    # sites & courses
+    - key: block.title.sites_courses
+      t: 사이트 & 강의
+    - key: block.description.sites_courses
+      t: JS관련 사이트/강의 등에 주로 질문을 하나요?
+    - key: block.title.sites_courses_others
+      t: 기타 사이트 & 강의
+    - key: block.description.sites_courses_others
+      t: 기타 응답 (자유입력).
+
+    # podcasts
+    - key: block.title.podcasts
+      t: 팟캐스트
+    - key: block.description.podcasts
+      t: 어떤 자바스크립트나 프로그래밍 관련 팟캐스트를 듣나요?
+    - key: block.title.podcasts_others
+      t: 기타 팟캐스트
+    - key: block.description.podcasts_others
+      t: 기타 응답 (자유입력).
+
+    ###########################################################################
+    # Opinions
+    ###########################################################################
+
+    - key: block.title.easy-to-learn
+      t: 러닝커브
+    - key: block.description.easy-to-learn
+      t: “자바스크립트는 배우기 쉽다”
+
+    - key: block.title.js_moving_in_right_direction
+      t: 방향
+    - key: block.description.js_moving_in_right_direction
+      t: “자바스크립트는 올바른 방향으로 나아가고 있다”
+
+    - key: block.title.building_js_apps_overly_complex
+      t: 복잡도
+    - key: block.description.building_js_apps_overly_complex
+      t: “현재 자바스크립트 애플리케이션 구축은 너무 복잡하다”
+
+    - key: block.title.js_over_used_online
+      t: 사용량
+    - key: block.description.js_over_used_online
+      t: “자바스크립트는 온라인 상에서 과도하게 쓰이고 있다”
+
+    - key: block.title.enjoy_building_js_apps
+      t: 즐거움
+    - key: block.description.enjoy_building_js_apps
+      t: “자바스크립트 앱을 만드는 게 즐겁다”
+
+    - key: block.title.would_like_js_to_be_main_lang
+      t: 주언어
+    - key: block.description.would_like_js_to_be_main_lang
+      t: “자바스크립트를 내 주언어로 사용하겠다”
+
+    - key: block.title.js_ecosystem_changing_to_fast
+      t: 변화의 정도
+    - key: block.description.js_ecosystem_changing_to_fast
+      t: “자바스크립트 생태계는 너무 빨리 바뀌고 있다”
+
+    - key: block.title.missing-features
+      t: 부족한 기능
+    - key: block.description.missing-features
+      t: 개발자가 현재 자바스크립트에 빠져있다고 느끼는 기능은 무엇인가요?
+
+      # opinion scale
+    - key: opinions.0.short
+      t: 매우 반대
+    - key: opinions.1.short
+      t: 반대
+    - key: opinions.2.short
+      t: 중립
+    - key: opinions.3.short
+      t: 동의
+    - key: opinions.4.short
+      t: 매우 동의
+
+    - key: opinions.0.long
+      t: 매우 반대함
+    - key: opinions.1.long
+      t: 반대함
+    - key: opinions.2.long
+      t: 중립적
+    - key: opinions.3.long
+      t: 동의함
+    - key: opinions.4.long
+      t: 매우 동의함
+
+    ###########################################################################
+    # Awards
+    ###########################################################################
+
+    - key: awards.runner_ups
+      t: 2, 3위
+
+    # feature_adoption
+    - key: award.feature_adoption_award.title
+      t: 최다 사용 기능
+    - key: award.feature_adoption_award.description
+      t: |
+          가장 많이 쓰인 자바스크립트 기능에 수여됩니다.
+    - key: award.feature_adoption_award.comment
+      t: |
+          **${items[0].value}**의 사용률을 기록한 ${items[0].name}이 
+          올해 가장 많이 사용된 자바스크립트 기능입니다.
+
+    # tool_satisfaction
+    - key: award.tool_satisfaction_award.title
+      t: 최고 만족도
+    - key: award.tool_satisfaction_award.description
+      t: |
+          가장 높은 만족도를 기록한 기술에 수여됩니다.
+    - key: award.tool_satisfaction_award.comment
+      t: |
+          **${items[0].value}**의 사용자가 다시 사용하겠다고 응답한
+          ${items[0].name}가 다시 한 번 농담이 아니라는 것을 증명했습니다.
+
+    # tool_interest
+    - key: award.tool_interest_award.title
+      t: 최고 관심도
+    - key: award.tool_interest_award.description
+      t: |
+          개발자가 가장 배우고 싶어한 기술에 수여됩니다.
+    - key: award.tool_interest_award.comment
+      t: |
+          ${items[0].name}을 들어본 **${items[0].value}**의 개발자가
+          이 기술을 배우고 싶어했습니다.
+          대단한 관심인걸요!
+
+    # tool_usage
+    - key: award.tool_usage_award.title
+      t: 최다 사용 기술
+    - key: award.tool_usage_award.description
+      t: |
+          가장 넓은 사용자층을 보유한 기술에 수여됩니다.
+    - key: award.tool_usage_award.comment
+      t: |
+          **${items[0].value}**의 사용률을 기록한 ${items[0].name}이
+          올해 가장 많이 쓰인 기술입니다.
+
+    # resource_usage
+    - key: award.resource_usage_award.title
+      t: 최다 사용 자원
+    - key: award.resource_usage_award.description
+      t: |
+          가장 넓은 사용자층을 보유한 자원에 수여됩니다.
+    - key: award.resource_usage_award.comment
+      t: |
+          **${items[0].value}**명을 기록한 ${items[0].name}이
+          올해 가장 많이 활용한 자원입니다.
+
+    # tool_mention
+    - key: award.tool_mention_award.title
+      t: 최다 언급
+    - key: award.tool_mention.description
+      t: |
+          “기타 라이브러리” 응답에서 가장 많이 언급된
+          라이브러리에 수여됩니다.
+    - key: award.tool_mention_award.comment
+      t: |
+          ${items[0].name}가 **${items[0].value}**번 언급되어
+          지금까지 가장 많이 제출된 자유응답이 되었습니다.
+
+    # prediction_award
+    - key: award.prediction_award.title
+      t: 예측상
+    - key: award.prediction_award.description
+      t: |
+          아마 시장을 집어삼킬...지도 모르는 유망한 기술에 수여됩니다.
+    - key: award.prediction_award.comment
+      t: |
+          올해 설문에서 인상적인 데뷔를 한 ${items[0].name}의 미래가 어떻게 될지 기대됩니다
+
+    ###########################################################################
+    # Generic
+    ###########################################################################
+
+    # pages
+    - key: page.introduction
+      t: 소개
+    - key: page.tshirt
+      t: 티셔츠
+    - key: page.demographics
+      t: 통계자료
+    - key: page.overview
+      t: 개요
+    - key: page.features
+      t: 기능
+    - key: page.other_features
+      t: 기타 기능
+    - key: page.javascript_flavors
+      t: 자바스크립트 취향
+    - key: page.javascript_flavors.short
+      t: 자바스크립트 취향
+    - key: page.javascript_flavors_others
+      t: 기타 취향
+    - key: page.front_end_frameworks
+      t: 프론트엔드 프레임워크
+    - key: page.front_end_frameworks.short
+      t: 프론트엔드
+    - key: page.front_end_frameworks_others
+      t: 기타 프레임워크
+    - key: page.data_layer
+      t: 데이터 계층
+    - key: page.data_layer.short
+      t: 데이터 계층
+    - key: page.data_layer_others
+      t: 기타 데이터 계층 툴
+    - key: page.back_end_frameworks
+      t: 백엔드 프레임워크
+    - key: page.back_end_frameworks.short
+      t: 백엔드
+    - key: page.back_end_frameworks_others
+      t: 기타 프레임워크
+    - key: page.testing
+      t: 테스팅
+    - key: page.testing.short
+      t: 테스팅
+    - key: page.testing_others
+      t: 기타 툴
+    - key: page.mobile_desktop
+      t: 모바일 & 데스크탑
+    - key: page.mobile_desktop.short
+      t: 모바일 & 데스크탑
+    - key: page.mobile_desktop_others
+      t: 기타 툴
+    - key: page.other_tools
+      t: 기타 툴
+    - key: page.environments
+      t: 환경
+    - key: page.resources
+      t: 자원
+    - key: page.opinions
+      t: 의견
+    - key: page.awards
+      t: 시상식
+    - key: page.conclusion
+      t: 결론
+    - key: page.support
+      t: 후원
+
+    # sharing
+    - key: share.share
+      t: 공유
+    - key: share.site.title
+      t: StateOf JavaScript 2019 결과 확인
+    - key: share.site.twitter_text
+      t: 'State Of JavaScript 2019의 결과를 확인해보세요 ${link} #StateOfJS'
+    - key: share.site.subject
+      t: State Of JavaScript 설문 결과
+    - key: share.site.body
+      t: '여기 흥미로운 자바스크립트 설문 결과가 있습니다: ${link}'
+    - key: share.block.twitter_text
+      t: '#StateOfJS 2019: ${title} ${link}'
+    - key: share.block.subject
+      t: State Of JavaScript 설문 결과
+    - key: share.block.body
+      t: '여기 흥미로운 자바스크립트 설문 결과가 있습니다 (${title}): ${link}'
+    - key: share.twitter
+      t: 트위터에 공유
+    - key: share.facebook
+      t: 페이스북에 공유
+    - key: share.linkedin
+      t: 링크드인에 공유
+    - key: share.email
+      t: 이메일로 공유
+    - key: share.image
+      t: 이미지 받기
+
+    # export
+    - key: export.export
+      t: 내보내기
+    - key: export.title
+      t: ${title} 데이터 내보내기
+    - key: export.nocsv
+      t: 죄송합니다. 해당 데이터셋은 CSV 내보내기가 지원되지 않습니다.
+    - key: export.graphql
+      t: >
+          현재 저희 내부 GraphQL API가 공개되어있지 않지만, 이후에는 저희 데이터를 보다 쉽게 질의할 수 있도록
+          이를 공개할 예정입니다. 더 많은 정보는
+          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">해당 GitHub 이슈에서 확인</a>
+          하실 수 있습니다.
+
+
+    # general
+    - key: general.title
+      t: State of JavaScript 2019
+    - key: general.description
+      t: 올해 가장 인기있었던 자바스크립트 기능과 기술들을 확인해보세요.
+    - key: general.stay_tuned
+      t: 채널 고정
+    - key: general.leave_your_email
+      t: "설문 결과가 추가되거나 내년의 설문을 공지할 때를 알고 싶다면 아래에 이메일을 남겨주세요:"
+    - key: general.your_email
+      t: 이메일 주소
+    - key: general.notify_me
+      t: 알림 받기
+    - key: general.help_us_translate
+      t: 이 설문의 번역을 도와주세요 →
+    - key: general.not_found
+      t: >
+
+          ## Error 404
+
+          죄송합니다, 해당 페이지를 찾을 수 없습니다. 무언가 오류가 발생한 것 같다면 [이슈를 남겨주세요](https://github.com/StateOfJS/State-of-JS-2019/issues).
+    - key: general.back_to_intro
+      t: 소개로 돌아가기
+    - key: general.close_nav
+      t: 내비게이션 메뉴 닫기
+    - key: general.completion_percentage
+      t: '응답 완료율:'
+    - key: general.previous
+      t: '이전:'
+    - key: general.next
+      t: '다음:'
+    - key: general.start
+      t: 시작
+
+    # partners
+    - key: partners.our_partners
+      t: 저희와 함께합니다
+    - key: partners.become_partner
+      t: 이 설문을 도와주세요
+    - key: partners.thanks
+      t: 저희를 지원해주시는 동반자 분들에게 감사드립니다!
+    - key: partners.learn_more
+      t: 더 알아보기.
+    - key: block.title.recommendedResources
+      t: 추천 자료
+
+    # charts
+    - key: block.title.usage-ratio
+      t: 사용률 순위
+    - key: block.description.usage-ratio
+      t: 해당 기술을 알고있는 사용자들의 비율 순위.
+    - key: users_percentage
+      t: 사용자 백분율
+    - key: users_count
+      t: 사용자 수
+    - key: satisfaction_percentage
+      t: 만족도 백분율
+    - key: interest_percentage
+      t: 관심도 백분율
+    - key: chart_mode
+      t: 모드
+    - key: chart_mode.absolute
+      t: 절대
+    - key: chart_mode.relative
+      t: 상대
+    - key: chart_units
+      t: 단위
+    - key: chart_units.percentage
+      t: 백분율
+    - key: chart_units.count
+      t: 숫자
+    - key: users
+      t: 사용자
+    - key: percent_satisfaction
+      t: '% 만족도'
+    - key: percent_interest
+      t: '% 관심도'
+    - key: heatmap.average
+      t: 전체
+    - key: difference_from_average_usage
+      t: '전체 사용량과의 차이:'
+    - key: all
+      t: '전체'
+
+    # other
+    - key: bio.guest_visualizer
+      t: 객원 전문가

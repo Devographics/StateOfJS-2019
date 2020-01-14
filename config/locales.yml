@@ -7,3 +7,6 @@
 - locale: hi-IN
   path: hi
   label: हिंदी
+- locale: ko-KR
+  path: ko
+  label: 한국어
