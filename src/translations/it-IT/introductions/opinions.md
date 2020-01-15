@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: opinions
-locale: en-US
+locale: it-IT
 ---
 
-Sometimes the best way to take the pulse of a community is to just go ahead and ask. From your opinion about JavaScript's rate of change, to more thorny questions like whether JavaScript is moving in the right direction, you finally had a chance to tell us exactly what's on your mind!
+A volte il modo migliore per sentire il polso di una comunità è semplicemente chiedere. Dalla tua opinione sulla velocità di cambiamento di JavaScript, alle domande più spinose come se JavaScript si sta muovendo nella giusta direzione, hai finalmente avuto la possibilità di dirci esattamente cosa hai in mente!
 
-For each of the following statements, we asked you how much you agreed on a 5-point scale. 
+Per ciascuna delle seguenti affermazioni, ti abbiamo chiesto quanto hai concordato su una scala di 5 punti.

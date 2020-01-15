@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   testing
-locale: en-US
+type: introduction
+page: testing
+locale: it-IT
 ---
 
-Tools for testing your code.
+Strumenti per testare il tuo codice.

@@ -1,10 +1,10 @@
 ---
 type: introduction
 page: resources
-locale: en-US
+locale: it-IT
 # note: naming this file `resources.md` creates conflict with existing `resources.yml`
 ---
 
-There's only so much you can figure out by yourself. At some point you need to put down the keyboard and take a moment to listen to your wise elders – or maybe just ask Google. 
+C'è un limite a quello che puoi capire da solo. Ad un certo punto devi fermare la tastiera e prenderti un momento per ascoltare i tuoi saggi anziani - o forse basta chiedere a Google.
 
-Whatever the case may be, we wanted to know which blogs, magazines, podcasts, and sites you relied on. 
+In ogni caso, volevamo sapere su quali blog, riviste, podcast e siti a cui ti affidavi.

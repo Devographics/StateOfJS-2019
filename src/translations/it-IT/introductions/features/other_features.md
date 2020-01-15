@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   other_features
-locale: en-US
+type: introduction
+page: other_features
+locale: it-IT
 ---
 
-Other technologies and patterns.
+Altre tecnologie e modelli

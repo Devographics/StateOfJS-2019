@@ -1,9 +1,9 @@
 ---
 type: introduction
 page: features
-locale: en-US
+locale: it-IT
 ---
 
-One of the most exciting things about JavaScript as a language is that it's not standing still. From arrow functions to destructuring, many key features added over the past couple years are now an integral part of how we write JavaScript.
+Una delle cose più interessanti di JavaScript come linguaggio è che non sta mai fermo. Dalle fat arrow functions al destructuring, molte funzionalità chiave aggiunte negli ultimi due anni sono ora parte integrante del modo in cui scriviamo JavaScript.
 
-So starting this year, in addition to which tools you use we're also tracking how you write JavaScript: the patterns, syntax, and features you use… or maybe don't use just yet but are definitely keeping an eye on!
+Quindi a partire da quest'anno, oltre agli strumenti che utilizziamo, stiamo anche monitorando il modo in cui scrivi JavaScript: i modelli, la sintassi e le funzionalità che usi ... o forse non usi ancora ma stai sicuramente tenendo d'occhio!

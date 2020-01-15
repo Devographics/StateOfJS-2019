@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   front_end_frameworks
-locale: en-US
+type: introduction
+page: front_end_frameworks
+locale: it-IT
 ---
 
-Front-end frameworks and libraries.
+Front-end frameworks e librerie.

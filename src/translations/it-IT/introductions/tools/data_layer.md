@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   data_layer
-locale: en-US
+type: introduction
+page: data_layer
+locale: it-IT
 ---
 
-Loading and managing data in your app.
+Caricare e gestire dati nell tua applicazione.

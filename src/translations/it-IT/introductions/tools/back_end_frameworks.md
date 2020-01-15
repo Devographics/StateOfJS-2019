@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   back_end_frameworks
-locale: en-US
+type: introduction
+page: back_end_frameworks
+locale: it-IT
 ---
 
-JavaScript on the server.
+JavaScript lato server.

@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   javascript_flavors
-locale: en-US
+type: introduction
+page: javascript_flavors
+locale: it-IT
 ---
 
-Languages that compile to JavaScript
+Linguaggi che compilano in JavaScript

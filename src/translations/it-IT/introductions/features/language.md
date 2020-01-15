@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   language
-locale: en-US
+type: introduction
+page: language
+locale: it-IT
 ---
 
-The vocabulary of JavaScript.
+Il vocabolario di JavaScript.

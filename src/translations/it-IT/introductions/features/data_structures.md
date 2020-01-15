@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   data_structures
-locale: en-US
+type: introduction
+page: data_structures
+locale: it-IT
 ---
 
-How you store and manipulate data.
+Come memorizzi e manupoli dati.

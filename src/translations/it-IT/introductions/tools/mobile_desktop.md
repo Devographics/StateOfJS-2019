@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   mobile_desktop
-locale: en-US
+type: introduction
+page: mobile_desktop
+locale: it-It
 ---
 
-JavaScript for mobile devices and desktop apps
+JavaScript per dispositivi mobili e applicazioni desktop

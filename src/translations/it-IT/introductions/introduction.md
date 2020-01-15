@@ -1,38 +1,38 @@
 ---
 type: introduction
 page: introduction
-locale: en-US
+locale: it-IT
 ---
 
-<span class="first-letter">W</span>e were pretty sure 2018 would be the last time we did this survey. After all, the JavaScript ecosystem can’t very well keep changing *again*, can it?
+<span class="first-letter">E</span>ravamo abbastanza sicuri che il 2018 sarebbe stata l'ultima volta che facevamo questo sondaggio. Dopotutto, l'ecosistema JavaScript non può continuare a cambiare _ancora_, vero?
 
-But what do you know, turns out JavaScript isn’t quite done changing just yet! And so after over 21,717 respondents took this year's survey we had to dig up our components and charts, curse us-from-a-year-ago for writing such crappy code, and get to work digging through the data. 
+Ma che ne sai, risulta che JavaScript non è ancora del tutto cambiato! E così dopo che oltre 21.717 intervistati hanno partecipato al sondaggio di quest'anno, abbiamo dovuto scavare i nostri componenti e grafici, maledirci da un anno fa per aver scritto un codice così scadente e iniziare a scavare tra i dati.
 
-We had some help though. The amazing [Amelia Wattenberger](http://wattenberger.com/) joined the team as a guest dataviz expert to contribute a fresh new look on our data, and you’ll be able to explore her work in the **Overview** section.
+Abbiamo avuto un aiuto. L'incredibile [Amelia Wattenberger](http://wattenberger.com/) si è unita al team come esperta di visualizzazione dati per dare un nuovo sguardo ai nostri dati e potrai esplorare il suo lavoro nella sezione **Panoramica**.
 
-We also borrowed a couple new visualisations from the State of JS's sister survey, the [State of CSS](https://2019.stateofcss.com/). We recommend checking it out if you haven’t done so yet!
+Abbiamo anche preso in prestito un paio di nuove visualizzazioni dall'indagine sorella di State of JS, lo [State of CSS](https://2019.stateofcss.com/). Ti consigliamo di guardarlo se non l'hai ancora fatto!
 
 ### Team
 
-The State of JavaScript Survey is created and maintained by:
+Il sondaggio State of JavaScript è creato e gestito da:
 
-- [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
-- [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
+-   [Sacha Greif](https://twitter.com/sachagreif) (io!): Design, Contenuti, codice
+-   [Raphaël Benitte](https://twitter.com/benitteraphael): Analisi dei dati, visualizzazione dei dati
 
-Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
+Assicurati di controllare il mio JavaScript framework basato su React/GraphQL, [Vulcan.js](http://vulcanjs.org), e la libreria per visualizzazione di dati in React di Raphaël [nivo](https://nivo.rocks).
 
-### Download Our Data
+### Scarica i nostri dati
 
-You can [download the raw JSON data for this survey](https://www.kaggle.com/sachag/state-of-js-2019). Let us know if you end up making your own data visualizations!
+Puoi [scaricare i dati grezzi in JSON per questo sondaggio](https://www.kaggle.com/sachag/state-of-js-2019). Facci sapere se finirai per creare la tua visualizzazione di dati personalizzata!
 
-### Completion Percentages
+### Percentuale di completamento
 
-Because all survey questions could be skipped, some questions ended up with fewer answers than others. So we've added a small pie chart indicator to each question to let you know which proportion of total respondents answered it.  
+Visto che tutte le domande del sondaggio potevano essere saltate, alcune hanno avuto meno risposte di altre. Quindi abbiamo aggiunto un piccolo grafico a torna ad ogni domanda per farti sapere la proporzione di intervistati che hanno risposto.
 
-### Credits & Stuff
+### Titoli di coda & Cose
 
-The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofjs.com)
+Questo sito è impostato su IBM Plex Mono. Domande?
+The site is set in IBM Plex Mono. Questions? Valutazioni? [Contattaci!](mailto:hello@stateofjs.com)
 
-And now, let's see what JavaScript has been up to this year!
-
-<span class="conclusion__byline">– Sacha and Raphaël</span>
+E ora, vediamo cosa JavaScript ha combinato quest'anno!
+<span class="conclusion__byline">– Sacha e Raphaël</span>

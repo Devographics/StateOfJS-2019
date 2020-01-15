@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   browser_apis
-locale: en-US
+type: introduction
+page: browser_apis
+locale: it-IT
 ---
 
-The features provided by the browser.
+Le caratteristiche presenti nel browser.

@@ -1,8 +1,7 @@
 ---
 type: introduction
 page: awards
-locale: en-US
+locale: it-IT
 ---
 
-The world's most prestigious (and possibly only) JavaScript awards are back. Before you click, try guessing which technology took gold in each category!
-
+I più prestigiosi (e forse unici) premi JavaScript del mondo sono tornati. Prima di fare clic, prova a indovinare quale tecnologia ha preso l'oro in ogni categoria!

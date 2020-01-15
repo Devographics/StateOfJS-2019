@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: other_tools
-locale: en-US
+locale: it-IT
 ---
 
-You always need a text editor to code, but the process of writing JavaScript also relies on browsers and devtools to a greater extent than probably any other language. 
+È sempre necessario un editor di testo per fare codice, ma il processo di scrittura di JavaScript si basa anche su browser e strumenti di sviluppo in misura maggiore rispetto a qualsiasi altra lingua.
