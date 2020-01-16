@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import ReactGA from 'react-ga'
 import Link from 'core/components/LocaleLink'
 import resources from 'data/recommended_resources.yml'
 import BlockTitle from 'core/blocks/block/BlockTitle'
 import { useI18n } from 'core/i18n/i18nContext'
 import { usePageContext } from 'core/helpers/pageContext'
+import mq from 'core/theme/mq'
 
 const trackClick = (id, resource, label) => {
     ReactGA.event({
@@ -40,20 +42,19 @@ const RecommendedResourcesBlock = ({ block, data }) => {
     }
 
     return (
-        <div className="block block--resources">
+        <div className="Block">
             <div className="resources">
                 <BlockTitle block={{ ...block, showDescription: false }} isShareable={false} />
-                <div className="resources-list">
+                <List className="Resources__list">
                     {sectionResources.map(resource => {
                         const url = resource.url.includes('utm_source')
                             ? resource.url
                             : `${resource.url}?utm_source=stateofjs&utm_medium=sponsor&utm_campaign=${id}`
 
                         return (
-                            <div key={resource.name} className="resource">
-                                <div className="resource-image">
+                            <Resource key={resource.name} className="Resource">
+                                <ResourceImage className="Resource__image">
                                     <div>
-                                        {/* eslint-disable-next-line */}
                                         <a
                                             onClick={() => trackClick(id, resource, 'text')}
                                             href={`${url}&utm_content=textlink`}
@@ -63,31 +64,28 @@ const RecommendedResourcesBlock = ({ block, data }) => {
                                             title={resource.name}
                                         />
                                     </div>
-                                </div>
-                                <div className="resource-contents">
-                                    <h4 className="resource-title">
+                                </ResourceImage>
+                                <ResourceContent className="Resource__content">
+                                    <Title className="Resource__title">
                                         <a
                                             onClick={() => trackClick(id, resource, 'text')}
                                             href={`${url}&utm_content=textlink`}
                                         >
                                             {resource.name}
                                         </a>
-                                    </h4>
-                                    {/*
-                                    <h5 className="resource-author">{resource.author}</h5>
-                                    */}
-                                    <div className="resource-description">
+                                    </Title>
+                                    <Description className="Resource__description">
                                         {resource.description}
-                                    </div>
-                                </div>
-                            </div>
+                                    </Description>
+                                </ResourceContent>
+                            </Resource>
                         )
                     })}
-                </div>
-                <div className="resources-sponsored">
+                </List>
+                <Sponsoring className="Resources__sponsoring">
                     <span>{translate('partners.thanks')}</span>{' '}
                     <Link to="/support">{translate('partners.learn_more')}</Link>
-                </div>
+                </Sponsoring>
             </div>
         </div>
     )
@@ -96,5 +94,75 @@ const RecommendedResourcesBlock = ({ block, data }) => {
 RecommendedResourcesBlock.propTypes = {
     section: PropTypes.string
 }
+
+const List = styled.div`
+    @media ${mq.large} {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: ${({ theme }) => theme.spacing * 2}px;
+    }
+`
+
+const Title = styled.h4`
+    margin-bottom: 0;
+`
+
+const Description = styled.div`
+    font-size: ${({ theme }) => theme.typography.sizes.smallish};
+`
+
+const Resource = styled.div`
+    margin-bottom: ${({ theme }) => theme.spacing}px;
+
+    @media ${mq.mediumLarge} {
+        display: flex;
+    }
+`
+
+const ResourceImage = styled.div`
+    @media ${mq.small} {
+        width: 60px;
+        float: right;
+        margin: 0 0 ${({ theme }) => theme.spacing}px ${({ theme }) => theme.spacing}px;
+    }
+
+    @media ${mq.mediumLarge} {
+        width: 160px;
+        margin-right: ${({ theme }) => theme.spacing}px;
+    }
+
+    div {
+        background: ${({ theme }) => theme.colors.text};
+        position: relative;
+        z-index: 10;
+        border: 2px solid ${({ theme }) => theme.colors.text};
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding-bottom: 90%;
+        height: 0;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    img,
+    svg {
+        display: block;
+        width: 100%;
+        border: 3px solid white;
+    }
+`
+
+const ResourceContent = styled.div`
+    flex: 1;
+`
+
+const Sponsoring = styled.div`
+    font-weight: ${({ theme }) => theme.typography.weights.bold};
+    font-size: ${({ theme }) => theme.typography.sizes.smaller};
+    text-align: center;
+`
 
 export default RecommendedResourcesBlock

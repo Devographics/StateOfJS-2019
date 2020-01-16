@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react'
+import get from 'lodash/get'
+import compact from 'lodash/compact'
 import Block from 'core/blocks/block/Block'
 import FeaturesOverviewCirclePackingChart from 'core/charts/features/FeaturesOverviewCirclePackingChart'
 import { useI18n } from 'core/i18n/i18nContext'
 import { useEntities } from 'core/entities/entitiesContext'
 import ChartContainer from 'core/charts/ChartContainer'
 import variables from '../../../../config/variables.yml'
-import get from 'lodash/get'
-import compact from 'lodash/compact'
 
 const getChartData = (data, getName, translate) => {
     const categories = variables.featuresCategories
@@ -15,7 +15,6 @@ const getChartData = (data, getName, translate) => {
         const sectionFeatures = categories[sectionId]
         const features = data
             .filter(f => sectionFeatures.includes(f.id))
-            // .filter(a => a.usage !== null)
             .map(feature => {
                 const buckets = get(feature, 'experience.year.buckets')
                 const usageBucket = buckets.find(b => b.id === 'used')
@@ -23,9 +22,7 @@ const getChartData = (data, getName, translate) => {
                 return {
                     id: feature.id,
                     awareness: usageBucket.count + knowNotUsedBucket.count,
-                    // awarenessColor: colors.teal,
                     usage: usageBucket.count,
-                    // usageColor: getColor(sectionId),
                     unusedCount: knowNotUsedBucket.count,
                     name: feature.name,
                     sectionId
@@ -57,9 +54,6 @@ const FeaturesOverviewBlock = ({ block, data }) => {
         getName,
         translate
     ])
-
-    // console.log(chartData)
-    // note: slightly different from Usage legend
 
     return (
         <Block

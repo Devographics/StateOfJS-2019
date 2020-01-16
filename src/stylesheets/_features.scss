@@ -9,7 +9,7 @@
 
 .FTBlock__Chart {
     grid-column: 1 / 3;
-    @include small{
+    @include small {
         margin-bottom: $spacing;
     }
 }
@@ -56,23 +56,23 @@
     color: #ffffff;
     cursor: pointer;
 }
-.FTBlock__Description{
-    .capture &{
+.FTBlock__Description {
+    .capture & {
         grid-column: 1 / 3;
     }
 }
-.FTBlock__Resources{
-    @include small{
+.FTBlock__Resources {
+    @include small {
         margin-top: $spacing;
     }
-    h3{
+    h3 {
         margin-bottom: $spacing/2;
         font-size: $medium-font;
     }
-    ul{
+    ul {
         padding-left: $spacing;
     }
-    .capture &{
+    .capture & {
         display: none;
     }
 }

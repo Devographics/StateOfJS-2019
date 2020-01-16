@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useContext} from 'react'
 import { ResponsiveSankey } from '@nivo/sankey'
-import theme from 'nivoTheme'
+import { ThemeContext} from 'styled-components'
 import { toolExperience } from 'core/constants'
 import YearsLayer from './YearsLayer'
 import NodeTooltip from './NodeTooltip'
@@ -34,6 +34,8 @@ const minNodeValueOnTop = (nodeA, nodeB) => {
 }
 
 const ToolExperienceGraphChart = ({ data }) => {
+    const theme = useContext(ThemeContext)
+
     const links = data.links.map(link => ({
         ...link,
         value: link.count
@@ -49,7 +51,7 @@ const ToolExperienceGraphChart = ({ data }) => {
             }}
             sort={minNodeValueOnTop}
             align="center"
-            theme={theme}
+            theme={theme.charts}
             colors={getColor}
             animate={false}
             enableLabels={false}

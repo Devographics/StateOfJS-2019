@@ -1,9 +1,8 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo, useMemo, useContext } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeContext } from 'styled-components'
 import { ResponsiveBar } from '@nivo/bar'
 import { useI18n } from 'core/i18n/i18nContext'
-import theme from 'nivoTheme'
-import { getColor } from 'core/constants'
 import { useBarChart } from 'core/charts/hooks'
 import BarTooltip from './BarTooltip'
 import ChartLabel from 'core/components/ChartLabel'
@@ -55,6 +54,7 @@ const VerticalBarChart = ({
     units,
     chartProps
 }) => {
+    const theme = useContext(ThemeContext)
     const { translate } = useI18n()
 
     const { formatTick, formatValue, maxValue, ticks } = useBarChart({
@@ -77,9 +77,9 @@ const VerticalBarChart = ({
                 maxValue={maxValue}
                 margin={getMargins(viewportWidth)}
                 padding={0.4}
-                theme={theme}
+                theme={theme.charts}
                 animate={false}
-                colors={[getColor('bar')]}
+                colors={[theme.colors.lineChartDefaultColor]}
                 borderRadius={1}
                 enableLabel={false}
                 enableGridX={false}

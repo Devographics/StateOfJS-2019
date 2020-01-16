@@ -1,5 +1,2 @@
-import nivoTheme from 'nivoTheme'
-
-export default {
-    charts: nivoTheme
-}
+export { default as mq } from './mq'
+export * from './util'

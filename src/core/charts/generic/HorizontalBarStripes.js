@@ -1,7 +1,9 @@
-import React, { memo } from 'react'
-import { getColor } from 'core/constants.js'
+import React, { memo, useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 
 const HorizontalBarStripes = ({ bars, width, yScale }) => {
+    const theme = useContext(ThemeContext)
+
     const step = yScale.step()
 
     return bars.map((bar, i) => {
@@ -13,7 +15,7 @@ const HorizontalBarStripes = ({ bars, width, yScale }) => {
                 y={bar.y + bar.height / 2 - step / 2}
                 width={width}
                 height={step}
-                fill={getColor('stripe')}
+                fill={theme.colors.backgroundAlt}
             />
         )
     })

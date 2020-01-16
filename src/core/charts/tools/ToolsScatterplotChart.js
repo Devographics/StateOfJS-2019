@@ -1,6 +1,6 @@
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
 import PropTypes from 'prop-types'
-import theme from 'nivoTheme'
+import { ThemeContext } from 'styled-components'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot'
 import { colors, getColor, totalCountRounded } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -194,6 +194,7 @@ const Quadrants = ({ width, height, margin, metric = 'satisfaction' }) => {
 }
 
 const ToolsScatterplotChart = ({ data, metric = 'satisfaction', current }) => {
+    const theme = useContext(ThemeContext)
     const { translate } = useI18n()
 
     const quadrants = [
@@ -214,7 +215,7 @@ const ToolsScatterplotChart = ({ data, metric = 'satisfaction', current }) => {
                 xScale={{ type: 'linear', min: 0, max: totalCountRounded }}
                 yScale={{ type: 'linear', min: 0, max: 100 }}
                 symbolSize={16}
-                theme={theme}
+                theme={theme.charts}
                 axisTop={null}
                 axisRight={null}
                 useMesh={false}
@@ -251,20 +252,6 @@ const ToolsScatterplotChart = ({ data, metric = 'satisfaction', current }) => {
                         </span>
                     )
                 }}
-                // legends={[
-                //     {
-                //         anchor: 'bottom-right',
-                //         direction: 'column',
-                //         translateX: -70,
-                //         translateY: -20,
-                //         itemWidth: 100,
-                //         itemHeight: 18,
-                //         itemsSpacing: 5,
-                //         itemTextColor: colors.teal,
-                //         symbolSize: 12,
-                //         symbolShape: 'circle'
-                //     }
-                // ]}
                 renderNode={Node}
             />
         </div>

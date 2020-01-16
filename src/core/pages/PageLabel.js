@@ -5,6 +5,7 @@ import { useTools } from 'core/helpers/toolsContext'
 const PageLabel = ({ page, isContextual, includeWebsite }) => {
     const { translate } = useI18n()
     const { getToolName } = useTools()
+
     return getToolName(page) || getPageLabel(page, translate, { isContextual, includeWebsite })
 }
 

@@ -1,22 +1,30 @@
 import React from 'react'
-import { usePageContext } from '../helpers/pageContext'
-import { useI18n } from '../i18n/i18nContext'
+import styled from 'styled-components'
+import { usePageContext } from 'core/helpers/pageContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import Link from 'core/components/LocaleLink'
+import Button from 'core/components/Button'
 
 const IntroductionFooter = () => {
     const context = usePageContext()
     const { translate } = useI18n()
 
     return (
-        <div className="PageFooter IntroductionFooter">
-            <Link
-                className="PageFooter__Link PageFooter__Link--start Button"
+        <Container className="IntroductionFooter">
+            <Button
+                as={Link}
+                size="large"
+                className="IntroductionFooter__Link--start"
                 to={`${context.localePath}${context.next.path}`}
             >
                 {translate('general.start')} »
-            </Link>
-        </div>
+            </Button>
+        </Container>
     )
 }
+
+const Container = styled.div`
+    margin: ${({ theme }) => theme.spacing * 2}px 0;
+`
 
 export default IntroductionFooter

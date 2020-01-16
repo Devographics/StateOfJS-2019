@@ -14,6 +14,7 @@ const BarTooltip = ({ indexValue, data, i18nNamespace, shouldTranslate }) => {
     const label = shouldTranslate
         ? translate(`${i18nNamespace}.${indexValue}.long`)
         : getName(indexValue)
+
     return (
         <div style={{ maxWidth: 300 }}>
             {label}:&nbsp;

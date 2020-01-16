@@ -1,15 +1,29 @@
-import React from 'react'
-import { getColor } from 'core/constants.js'
-import Cell from './LogoCell.js'
+import React, { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
+import { mq } from 'core/theme'
+import Cell from './LogoCell'
 
-const Logo = ({ width = '100%' }) => (
-    <svg width={width} viewBox="0 0 390 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(-2, 0)">
-            <Cell px={0} text="St" color={getColor('textColor')} />
-            <Cell px={1} text="Js" color={getColor('textColor')} />
-            <Cell px={2} text="20" color={getColor('contrastColor')} />
-            <Cell px={3} text="19" color={getColor('contrastColor')} />
-        </g>
-    </svg>
-)
-export default Logo
+const LogoCompact = () => {
+    const theme = useContext(ThemeContext)
+
+    return (
+        <Container className="Logo">
+            <Cell text="St" color={theme.colors.text} index={0} />
+            <Cell text="Js" color={theme.colors.text} index={1} />
+            <Cell text="20" color={theme.colors.contrast} index={2} />
+            <Cell text="19" color={theme.colors.contrast} index={3} />
+        </Container>
+    )
+}
+
+const Container = styled.span`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: ${props => props.theme.separationBorder};
+
+    @media ${mq.smallMedium} {
+        border-bottom: 0;
+    }
+`
+
+export default LogoCompact
