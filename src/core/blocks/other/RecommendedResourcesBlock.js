@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
-import { Link } from 'gatsby'
+import Link from 'core/components/LocaleLink'
 import resources from 'data/recommended_resources.yml'
 import BlockTitle from 'core/blocks/block/BlockTitle'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -18,8 +18,13 @@ const trackClick = (id, resource, label) => {
 const RecommendedResourcesBlock = ({ block, data }) => {
     const { translate } = useI18n()
     const context = usePageContext()
-    const { sponsors: pageSponsors } = context
+    const { sponsors: pageSponsors, locale } = context
     const { sponsors: blockSponsors } = block
+
+    // only show recommended resources on english version
+    if (locale !== 'en-US') {
+        return null
+    }
 
     // sponsors can be defined either at the page level or block level
     const sponsors = pageSponsors || blockSponsors

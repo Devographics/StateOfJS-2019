@@ -86,23 +86,26 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         let pageData = {}
         const context = getPageContext(page)
 
-        const pageQuery = getPageQuery(page)
-        // console.log('// pageQuery')
 
-        try {
-            if (pageQuery) {
-                const queryResults = await graphql(`${pageQuery}`, { id: page.id })
-                // console.log('// queryResults')
-                // console.log(JSON.stringify(queryResults.data, '', 2))
-                pageData = queryResults.data
+        for (let index = 0; index < locales.length; index++) {
+            const locale = locales[index]
+
+            const pageQuery = getPageQuery(page)
+            // console.log('// pageQuery')
+    
+            try {
+                if (pageQuery) {
+                    const queryResults = await graphql(`${pageQuery}`, { id: page.id, locale: locale.locale })
+                    // console.log('// queryResults')
+                    // console.log(JSON.stringify(queryResults.data, '', 2))
+                    pageData = queryResults.data
+                }
+            } catch (error) {
+                console.log(`// Error while loading data for page ${page.id}`)
+                console.log(pageQuery)
+                console.log(error)
             }
-        } catch (error) {
-            console.log(`// Error while loading data for page ${page.id}`)
-            console.log(pageQuery)
-            console.log(error)
-        }
 
-        locales.forEach(locale => {
             createPage({
                 path: localizedPath(page.path, locale),
                 component: path.resolve(`./src/core/pages/PageTemplate.js`),
@@ -115,7 +118,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
                     pageQuery, // passed for debugging purposes
                 }
             })
-        })
+        }
 
         createBlockPages(page, context, createPage)
     }

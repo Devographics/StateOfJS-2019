@@ -1,28 +1,15 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo, useMemo, useContext } from 'react'
 import PropTypes from 'prop-types'
-import theme from 'nivoTheme'
+import { ThemeContext } from 'styled-components'
 import { useI18n } from 'core/i18n/i18nContext'
 import { ResponsiveBar } from '@nivo/bar'
 import { useTheme } from '@nivo/core'
 import { Chip } from '@nivo/tooltip'
-import { colors } from 'core/constants.js'
-
-// Define chart patterns
-// const patterns = [
-//     {
-//         id: 'empty',
-//         type: 'patternLines',
-//         background: 'transparent',
-//         color: 'inherit',
-//         rotation: -45,
-//         lineWidth: 1,
-//         spacing: 8
-//     }
-// ]
+import ChartLabel from 'core/components/ChartLabel'
 
 // Custom labels using an extra `layer`,
 // this way, we can add an extra outline to bar labels
-const getLabels = units => ({ bars, getLabelTextColor }) => {
+const getLabels = units => ({ bars }) => {
     return bars.map(bar => {
         // skip legend for small bars
         if (bar.width < 60) return null
@@ -35,36 +22,12 @@ const getLabels = units => ({ bars, getLabelTextColor }) => {
         // `pointerEvents: none` is used to not
         // disturb mouse events
         return (
-            <g
+            <ChartLabel
                 key={bar.key}
+                label={value}
                 transform={`translate(${bar.x + bar.width / 2},${bar.y + bar.height / 2})`}
                 style={{ pointerEvents: 'none' }}
-            >
-                <text
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    style={{
-                        strokeWidth: 4,
-                        stroke: '#232840',
-                        strokeLinejoin: 'round',
-                        fontSize: 13,
-                        fontWeight: 600
-                    }}
-                >
-                    {value}
-                </text>
-                <text
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    style={{
-                        fill: colors.greyLight,
-                        fontSize: 13,
-                        fontWeight: 600
-                    }}
-                >
-                    {value}
-                </text>
-            </g>
+            />
         )
     })
 }
@@ -86,6 +49,7 @@ const Tooltip = memo(({ translate, i18nNamespace, bar, units }) => {
 
 const GaugeBarChart = ({ buckets, colorMapping, units, applyEmptyPatternTo, i18nNamespace }) => {
     const { translate } = useI18n()
+    const theme = useContext(ThemeContext)
 
     const keys = useMemo(() => colorMapping.map(m => m.id), [colorMapping])
     const data = useMemo(
@@ -141,9 +105,9 @@ const GaugeBarChart = ({ buckets, colorMapping, units, applyEmptyPatternTo, i18n
             enableGridX={false}
             enableGridY={false}
             animate={false}
-            theme={theme}
+            theme={theme.charts}
             layers={['bars', labelsLayer]}
-            // defs={patterns}
+            defs={[theme.charts.emptyPattern]}
             fill={patternRules}
             tooltip={bar => (
                 <Tooltip

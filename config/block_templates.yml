@@ -7,12 +7,13 @@
 pageIntroductionTemplate:
     blockType: PageIntroductionBlock
     dataPath: '${pageId}_introduction.html'
+    queryVariables: '$locale: String'
     query: >
         ${pageId}_introduction: markdownRemark(
             frontmatter: {
                 type:   { eq: "introduction" }
                 page:   { eq: "${pageId}" }
-                locale: { eq: "en-US" }
+                locale: { eq: $locale }
             }
         ) {
             html
@@ -52,7 +53,7 @@ demographicsTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 demographics {
                     ${id} {
                         year(year: ${currentYear}) {
@@ -79,29 +80,29 @@ sourceTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 demographics {
                     ${id} {
-                      year(year: ${currentYear}) {
-                        year
-                        total
-                        completion {
-                            percentage
-                            count
-                        }
-                        buckets {
-                            id
-                            count
-                            percentage
-                            entity{
-                                name
-                                homepage
-                                github{
-                                    url
+                        year(year: ${currentYear}) {
+                            year
+                            total
+                            completion {
+                                percentage
+                                count
+                            }
+                            buckets {
+                                id
+                                count
+                                percentage
+                                entity {
+                                    name
+                                    homepage
+                                    github {
+                                        url
+                                    }
                                 }
                             }
                         }
-                      }
                     }
                 }
             }
@@ -118,15 +119,15 @@ scatterplotOverviewTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                  tools {
                     id
                     entity {
                         homepage
                         name
                         github {
-                                url
-                              }
+                            url
+                        }
                     }
                     experience {
                         year(year:${currentYear}) {
@@ -148,7 +149,7 @@ toolsArrowsTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: js, year: 2019) {
+            survey(survey: ${surveyType}) {
                 tools {
                     id
                     entity {
@@ -181,7 +182,7 @@ featuresOverviewTemplate:
     showLegend: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 features {
                     id
                     name
@@ -211,7 +212,7 @@ featuresCategoryOverviewTemplate:
     showLegend: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 features(ids: [${featureIds}]) {
                     id
                     experience{
@@ -241,7 +242,7 @@ featureExperienceTemplate:
     showLegend: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 ${id}: feature(id: ${id}) {
                     id
                     name
@@ -277,26 +278,23 @@ featureExperienceTemplate:
 
 toolsSectionOverviewTemplate:
     blockType: ToolsSectionOverviewBlock
-    dataPath: 'surveyApi.survey.category.tools.experience.tools'
+    dataPath: 'surveyApi.survey.tools'
     bucketKeysName: toolExperience
     showLegend: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
-                category(id: ${category}) {
-                    tools {
-                        experience {
-                            year
-                            tools {
+            survey(survey: ${surveyType}) {
+                tools(ids: [${toolIds}]) {
+                    id
+                    entity {
+                        name
+                    }
+                    experience {
+                        year(year: 2019) {
+                            buckets {
                                 id
-                                entity {
-                                    name
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
+                                count
+                                percentage
                             }
                         }
                     }
@@ -311,19 +309,19 @@ toolsMovementTemplate:
     showLegend: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
-                    tools {
-                        experience {
-                            year
-                            tools {
+            survey(survey: ${surveyType}) {
+                tools {
+                    experience {
+                        year
+                        tools {
+                            id
+                            buckets {
                                 id
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
+                                count
+                                percentage
                             }
                         }
+                    }
                 }
             }
         }
@@ -333,15 +331,15 @@ toolHeaderTemplate:
     dataPath: surveyApi.survey.headerData
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 headerData: tool(id: ${toolId}) {
                     id
-                    entity{
+                    entity {
                         name
                         description
                         homepage
                         npm
-                        github{
+                        github {
                             stars
                             url
                         }
@@ -357,35 +355,67 @@ toolExperienceTemplate:
     showLegend: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 tool(id: ${toolId}) {
                     id
-                    entity{
+                    entity {
                         homepage
                         name
                         github {
-                                url
-                              }
+                            url
+                        }
                     }
                     experience {
-                      allYears{
-                        year
-                        total
-                        completion {
-                            count
-                            percentage
+                        allYears{
+                            year
+                            total
+                            completion {
+                                count
+                                percentage
+                            }
+                            awarenessInterestSatisfaction {
+                                awareness
+                                interest
+                                satisfaction
+                            }
+                            buckets {
+                                id
+                                count
+                                percentage
+                            }
                         }
-                        awarenessInterestSatisfaction {
-                            awareness
-                            interest
-                            satisfaction
+                    }
+                }
+            }
+        }
+
+toolExperienceGraphTemplate:
+    blockType: ToolExperienceGraphBlock
+    dataPath: surveyApi.survey.tool
+    showLegend: true
+    query: >
+        surveyApi {
+            survey(survey: ${surveyType}) {
+                tool(id: ${toolId}) {
+                    id
+                    entity {
+                        homepage
+                        name
+                        github {
+                            url
                         }
-                        buckets {
+                    }
+                    experienceGraph {
+                        nodes {
                             id
-                            count
-                            percentage
+                            year
+                            experience
                         }
-                      }
+                        links {
+                            source
+                            target
+                            count
+                        }
                     }
                 }
             }
@@ -396,7 +426,7 @@ toolsExperienceRankingTemplate:
     dataPath: 'surveyApi.survey.toolsRankings.experience'
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 toolsRankings(ids: [${toolsCategories[sectionId]}]) {
                     ids
                     experience {
@@ -430,7 +460,7 @@ heatmapTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 matrices {
                     tools(ids: [${toolIds}]) {
                         ${heatmapId}(experience: would_use) {
@@ -462,7 +492,7 @@ scatterplotTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                  tools(ids:[${toolIds}]) {
                     id
                     entity {
@@ -492,7 +522,7 @@ happinessTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 category(id: ${sectionId}) {
                     happiness {
                         allYears {
@@ -510,21 +540,21 @@ categoryOtherToolsTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
-                category(id:${sectionId}){
+            survey(survey: ${surveyType}) {
+                category(id:${sectionId}) {
                     otherTools{
-                        year(year:2019){
+                        year(year:2019) {
                             year
                             total
-                            completion{
+                            completion {
                                 count
                                 percentage
                             }
-                            buckets{
+                            buckets {
                                 id
                                 count
                                 percentage
-                                entity{
+                                entity {
                                     id
                                     homepage
                                     name
@@ -553,7 +583,7 @@ opinionTemplate:
     showDescription: true
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 ${id}: opinion(id: ${id}) {
                     id
                     allYears {
@@ -586,7 +616,7 @@ otherToolsTemplate:
     dataPath: 'surveyApi.survey.${id}.year'
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 ${id}: otherTools(id: ${id}) {
                     id
                     year(year: ${currentYear}) {
@@ -627,7 +657,7 @@ resourcesTemplate:
     dataPath: 'surveyApi.survey.${id}.year'
     query: >
         surveyApi {
-            survey(survey: ${surveyType}, year: ${currentYear}) {
+            survey(survey: ${surveyType}) {
                 ${id}: resources(id: ${id}) {
                     id
                     year(year: ${currentYear}) {
@@ -637,16 +667,16 @@ resourcesTemplate:
                             count
                             percentage
                         }
-                        buckets{
+                        buckets {
                             id
                             count
                             percentage
                             entity {
-                              homepage
-                              name
-                              github {
-                                url
-                              }
+                                homepage
+                                name
+                                github {
+                                    url
+                                }
                             }
                         }
                     }

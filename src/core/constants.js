@@ -10,6 +10,7 @@ export let colors = {
     grey: '#d9dedf',
     greyMedium: '#cecdcc',
     greyMediumer: '#616868',
+    greyMediumest: '#5c6069',
     greyDark: '#4d4f4f',
     greyDarkish: '#2a2d33',
     greyDarker: '#222429',
@@ -140,6 +141,10 @@ export const otherColors = [
         color: colors.greyDarker
     },
     {
+        id: 'stroke',
+        color: colors.greyMediumest
+    },
+    {
         id: 'legendWithLink',
         color: mainColors.activeColor
     },
@@ -185,27 +190,34 @@ Keys
 
 */
 export const salaryArray = [
-    'work_for_free',
-    '0_10',
-    '10_30',
-    '30_50',
-    '50_100',
-    '100_200',
-    'more_than_200'
+    'range_work_for_free',
+    'range_0_10',
+    'range_10_30',
+    'range_30_50',
+    'range_50_100',
+    'range_100_200',
+    'range_more_than_200'
 ]
 
 export const companySizeArray = [
-    '1',
-    '1_5',
-    '5_10',
-    '10_20',
-    '20_50',
-    '50_100',
-    '100_1000',
-    'more_than_1000'
+    'range_1',
+    'range_1_5',
+    'range_5_10',
+    'range_10_20',
+    'range_20_50',
+    'range_50_100',
+    'range_100_1000',
+    'range_more_than_1000'
 ]
 
-export const workExperienceArray = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+export const workExperienceArray = [
+    'range_less_than_1',
+    'range_1_2',
+    'range_2_5',
+    'range_5_10',
+    'range_10_20',
+    'range_more_than_20'
+]
 
 export const environmentUsageArray = ['never', 'occasionally', 'often', 'mainly']
 
@@ -310,5 +322,6 @@ export const emailOctopusSiteKey = '6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6'
 export const emailOctopusCode = 'hp463dc2a9-b2ff-11e8-a3c9-06b79b628af2'
 
 export const totalCount = 21717
+export const totalCountRounded = 20000 // used by scatterplot chart
 
 export const websiteTitle = 'The State of JavaScript 2019'

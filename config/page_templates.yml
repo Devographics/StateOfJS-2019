@@ -88,15 +88,23 @@ toolPageTemplate:
         sponsors: []
     blocks:
         - id: ${id}_header
+          template: toolHeaderTemplate
           variables:
               toolId: '${id}'
-          template: toolHeaderTemplate
+
         - id: '${id}_experience'
           blockName: toolExperience
-          variables:
-              toolId: '${id}'
           template: toolExperienceTemplate
           bucketKeysName: toolExperience
+          variables:
+              toolId: '${id}'
+
+        # - id: '${id}_experience_graph'
+        #   blockName: toolExperienceGraph
+        #   template: toolExperienceGraphTemplate
+        #   variables:
+        #       toolId: '${id}'
+
         # - id: '${id}-related-tools-heatmap'
         #   blockName: relatedTools
         #   template: heatmapTemplate
@@ -104,6 +112,7 @@ toolPageTemplate:
         #       heatmapId: 'relatedTools'
         #       pageId: '${id}'
         #       toolIds: ${toolIds}
+
         - id: '${id}_recommended_resources'
           template: recommendedResourcesTemplate
           variables:

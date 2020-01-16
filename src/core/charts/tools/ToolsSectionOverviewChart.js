@@ -1,20 +1,21 @@
 import React, { useMemo } from 'react'
+import PropTypes from 'prop-types'
+import get from 'lodash/get'
 import { ResponsiveBar } from '@nivo/bar'
 import theme from 'nivoTheme'
-import { getColor } from 'core/constants.js'
-import get from 'lodash/get'
+import { getColor } from 'core/constants'
 
 const margin = {
     top: 81,
     bottom: 30
 }
 
-const ToolsSectionOverviewChart = ({ data, units, current, namespace, keys, colorScale }) => {
+const ToolsSectionOverviewChart = ({ data, units, current, namespace }) => {
     const chartData = useMemo(
         () =>
             data.map(tool => ({
                 tool: tool.id,
-                ...tool.buckets.reduce(
+                ...tool.experience.year.buckets.reduce(
                     (acc, bucket) => ({
                         ...acc,
                         [bucket.id]: bucket[units]
@@ -61,6 +62,13 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace, keys, colo
             axisBottom={{
                 format: formatTick
             }}
+            defs={[theme.emptyPattern]}
+            fill={[
+                {
+                    id: 'empty',
+                    match: { id: 'never_heard' }
+                }
+            ]}
             axisLeft={null}
             enableGridY={false}
             theme={theme}
@@ -70,6 +78,26 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace, keys, colo
     )
 }
 
-ToolsSectionOverviewChart.propTypes = {}
+ToolsSectionOverviewChart.propTypes = {
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            entity: PropTypes.shape({
+                name: PropTypes.string.isRequired
+            }).isRequired,
+            experience: PropTypes.shape({
+                year: PropTypes.shape({
+                    buckets: PropTypes.arrayOf(
+                        PropTypes.shape({
+                            id: PropTypes.string.isRequired,
+                            count: PropTypes.number.isRequired,
+                            percentage: PropTypes.number.isRequired
+                        })
+                    ).isRequired
+                }).isRequired
+            })
+        })
+    ).isRequired
+}
 
 export default ToolsSectionOverviewChart

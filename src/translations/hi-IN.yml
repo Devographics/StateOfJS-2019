@@ -1,0 +1,1022 @@
+locale: hi-IN
+translations:
+    ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: टी-शर्ट के बारे में
+    - key: tshirt.description
+      t: >
+          डिजाइन एक काले रंग के हीथ पर मुद्रित किया गया है [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (पुरुषों के लिए)
+          एक अर्द्ध स्लिम फिट के साथ; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (महिलाओं के लिए). आकार यू.एस. आकार का उपयोग करता है.
+
+    - key: tshirt.getit
+      t: ले लो
+    - key: tshirt.price
+      t: $${price} + शिपिंग
+
+    ###########################################################################
+    # Demographics
+    ###########################################################################
+
+    # salary ranges
+    - key: salary.work_for_free.long
+      t: मैं मुफ्त में काम करता हूँ
+    - key: salary.work_for_free.short
+      t: मुफ्त में काम करो
+    - key: salary.work_for_free.shorter
+      t: '0'
+    - key: salary.0_10.long
+      t: $0k-$10k
+    - key: salary.0_10.short
+      t: $0k-$10k
+    - key: salary.0_10.shorter
+      t: 0~10k
+    - key: salary.10_30.long
+      t: $10k-$30k
+    - key: salary.10_30.short
+      t: $10k-$30k
+    - key: salary.10_30.shorter
+      t: 10~30k
+    - key: salary.30_50.long
+      t: $30k-$50k
+    - key: salary.30_50.short
+      t: $30k-$50k
+    - key: salary.30_50.shorter
+      t: 30~50k
+    - key: salary.50_100.long
+      t: $50k-$100k
+    - key: salary.50_100.short
+      t: $50k-$100k
+    - key: salary.50_100.shorter
+      t: 50~100k
+    - key: salary.100_200.long
+      t: $100k-$200k
+    - key: salary.100_200.short
+      t: $100k-$200k
+    - key: salary.100_200.shorter
+      t: 100~200k
+    - key: salary.more_than_200.long
+      t: $200k से ज्यादा
+    - key: salary.more_than_200.short
+      t: $200k+
+    - key: salary.more_than_200.shorter
+      t: '>200k'
+    - key: salary.axis_legend
+      t: वेतन सीमा (USD)
+
+    # years of experience
+    - key: workExperience.less_than_1.long
+      t: एक वर्ष से कम
+    - key: workExperience.less_than_1.short
+      t: '<1 वर्ष'
+    - key: workExperience.less_than_1.shorter
+      t: '<1'
+    - key: workExperience.1_2.long
+      t: 1 से 2 वर्ष
+    - key: workExperience.1_2.short
+      t: 1~2 वर्ष
+    - key: workExperience.1_2.shorter
+      t: 1~2
+    - key: workExperience.2_5.long
+      t: 2 से 5 वर्ष
+    - key: workExperience.2_5.short
+      t: 2~5 वर्ष
+    - key: workExperience.2_5.shorter
+      t: 2~5
+    - key: workExperience.5_10.long
+      t: 5 से 10 वर्ष
+    - key: workExperience.5_10.short
+      t: 5~10 वर्ष
+    - key: workExperience.5_10.shorter
+      t: 5~10
+    - key: workExperience.10_20.long
+      t: 10 से 20 वर्ष
+    - key: workExperience.10_20.short
+      t: 10~20 वर्ष
+    - key: workExperience.10_20.shorter
+      t: 10~20
+    - key: workExperience.more_than_20.long
+      t: 20 वर्ष से ज्यादा
+    - key: workExperience.more_than_20.short
+      t: '>20 वर्ष'
+    - key: workExperience.more_than_20.shorter
+      t: '>20'
+    - key: workExperience.axis_legend
+      t: वर्षों का अनुभव
+
+    # company size
+    - key: companySize.1.long
+      t: एक कर्मचारी
+    - key: companySize.1.short
+      t: एक
+    - key: companySize.1.shorter
+      t: '1'
+    - key: companySize.1_5.long
+      t: 1 से 5 कर्मचारी
+    - key: companySize.1_5.short
+      t: 1~5
+    - key: companySize.1_5.shorter
+      t: 1~5
+    - key: companySize.5_10.long
+      t: 5 से 10 कर्मचारी
+    - key: companySize.5_10.short
+      t: 5~10
+    - key: companySize.5_10.shorter
+      t: 5~10
+    - key: companySize.10_20.long
+      t: 10 से 20 कर्मचारी
+    - key: companySize.10_20.short
+      t: 10~20
+    - key: companySize.10_20.shorter
+      t: 10~20
+    - key: companySize.20_50.long
+      t: 20 से 50 कर्मचारी
+    - key: companySize.20_50.short
+      t: 20~50
+    - key: companySize.20_50.shorter
+      t: 20~50
+    - key: companySize.50_100.long
+      t: 50 से 100 कर्मचारी
+    - key: companySize.50_100.short
+      t: 50~100
+    - key: companySize.50_100.shorter
+      t: 50~100
+    - key: companySize.100_1000.long
+      t: 100 से 1000 कर्मचारी
+    - key: companySize.100_1000.short
+      t: 100~1000
+    - key: companySize.100_1000.shorter
+      t: 100~1000
+    - key: companySize.more_than_1000.long
+      t: 1000 कर्मचारियों से ज्यादा
+    - key: companySize.more_than_1000.short
+      t: 1000+
+    - key: companySize.more_than_1000.shorter
+      t: 1000+
+    - key: companySize.axis_legend
+      t: कर्मचारियों की संख्या
+
+    # sources
+    - key: sources.other_unknown
+      t: अन्य/अनजान
+
+    # css proficiency
+
+    - key: block.title.cssProficiency
+      t: CSS प्रवीणता
+    - key: block.description.cssProficiency
+      t: आप CSS में कितने कुशल हैं?
+    - key: cssProficiency.axis_legend
+      t: CSS प्रवीणता
+    - key: cssProficiency.0.short
+      t: कोई नहीं
+    - key: cssProficiency.0.long
+      t: 'वस्तुतः CSS का कोई ज्ञान नहीं है'
+    - key: cssProficiency.1.short
+      t: शुरुआती
+    - key: cssProficiency.1.long
+      t: 'CSS फ्रेमवर्क का उपयोग करना तथा मौजूदा शैलियों में फेरबदल करना'
+    - key: cssProficiency.2.short
+      t: मध्यम
+    - key: cssProficiency.2.long
+      t: 'विशिष्टता नियमों को जानना, ख़ाका(layout) बनाने में सक्षम होना'
+    - key: cssProficiency.3.short
+      t: उन्नत
+    - key: cssProficiency.3.long
+      t: 'Mastering animations, interactions, transitions, etc.'
+    - key: cssProficiency.4.short
+      t: विशेषज्ञ
+    - key: cssProficiency.4.long
+      t: 'एक सुसंगत कार्यप्रणाली का पालन कर के, शून्य से पूरे फ्रंट-एंड को स्टाइल करने में सक्षम होना'
+
+    # backend proficiency
+    - key: block.title.backendProficiency
+      t: बैक-एंड प्रवीणता
+    - key: block.description.backendProficiency
+      t: आप बैक-एंड डेवलपमेंट में कितने कुशल हैं?
+    - key: backendProficiency.axis_legend
+      t: बैक-एंड प्रवीणता
+    - key: backendProficiency.0.short
+      t: कोई नहीं
+    - key: backendProficiency.0.long
+      t: 'किसी भी बैक-एंड काम को संभालने में सक्षम नहीं है'
+    - key: backendProficiency.1.short
+      t: शुरुआती
+    - key: backendProficiency.1.long
+      t: 'Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+    - key: backendProficiency.2.short
+      t: मध्यम
+    - key: backendProficiency.2.long
+      t: 'पहले से मौजूद frameworks का उपयोग करके ऐप विकसित करने में सक्षम (Rails, Laravel, etc.)'
+    - key: backendProficiency.3.short
+      t: उन्नत
+    - key: backendProficiency.3.long
+      t: 'Setting up an entire बैक-एंड from scratch (Go, Node, etc.)'
+    - key: backendProficiency.4.short
+      t: विशेषज्ञ
+    - key: backendProficiency.4.long
+      t: 'जटिल मल्टी-सर्वर या microservices आर्किटेक्चर को संभालने में सक्षम'
+
+    # job title
+    - key: jobTitle.front_end_developer.short
+      t: फ़्रंट एंड डेवलपर
+    - key: jobTitle.front_end_developer.long
+      t: फ़्रंट एंड डेवलपर/इंजीनियर
+    - key: jobTitle.back_end_developer.short
+      t: बैक एंड डेवलपर
+    - key: jobTitle.back_end_developer.long
+      t: बैक एंड डेवलपर/इंजीनियर
+    - key: jobTitle.full_stack_developer.short
+      t: फुल स्टैक डेवलपर
+    - key: jobTitle.full_stack_developer.long
+      t: फुल स्टैक डेवलपर/इंजीनियर
+    - key: jobTitle.web_developer.short
+      t: वेब डेवलपर
+    - key: jobTitle.web_developer.long
+      t: वेब डेवलपर
+    - key: jobTitle.web_designer.short
+      t: वेब डिजाइनर
+    - key: jobTitle.web_designer.long
+      t: वेब डिजाइनर
+    - key: jobTitle.ux_designer.short
+      t: UX डिजाइनर
+    - key: jobTitle.ux_designer.long
+      t: UX डिजाइनर
+    - key: jobTitle.ui_designer.short
+      t: UI डिजाइनर
+    - key: jobTitle.ui_designer.long
+      t: UI डिजाइनर
+    - key: jobTitle.back_end_dev.short
+      t: बैक-एंड डेवलपर
+    - key: jobTitle.back_end_dev.long
+      t: बैक-एंड डेवलपर/इंजीनियर
+
+    # gender
+    - key: block.title.gender
+      t: लिंग
+    - key: block.description.gender
+      t: उत्तर लिंग.
+    - key: gender.female
+      t: महिला
+    - key: gender.female.long
+      t: महिला
+    - key: gender.male
+      t: पुरुष
+    - key: gender.male.long
+      t: पुरुष
+    - key: gender.non_binary
+      t: नॉन बाइनरी/थर्ड जेंडर
+    - key: gender.non_binary.long
+      t: नॉन बाइनरी/थर्ड जेंडर
+    - key: gender.prefer_not_to_say
+      t: ना बताना पसंद करेंगे
+    - key: gender.prefer_not_to_say.long
+      t: ना बताना पसंद करेंगे
+
+    # other
+    - key: block.title.country
+      t: देश द्वारा भागीदारी
+    - key: block.description.country
+      t: प्रत्येक देश से सर्वेक्षण के उत्तरदाताओं का कौन सा अनुपात आया?
+    - key: block.title.salary
+      t: वेतन
+    - key: block.description.salary
+      t: USD में वार्षिक वेतन.
+    - key: block.title.workExperience
+      t: वर्षों का अनुभव
+    - key: block.description.workExperience
+      t: आप कितने समय से JavaScript लिख रहे हैं?
+    - key: block.title.companySize
+      t: कंपनी का आकार
+    - key: block.description.companySize
+      t: Company size breakdown.
+    - key: block.title.source
+      t: स्रोत
+    - key: block.description.source
+      t: >
+          सर्वेक्षण के बारे में प्रतिभागियों को कैसे पता चला (aggregation of self-reported answers and
+          referrer tracking).
+
+          **State of JS** हमारे पिछले सर्वेक्षणों से ग्राहकों को इंगित करता है, जबकि ** Word of Mouth ** स्लैक, दोस्तों, सहकर्मियों, आदि जैसे स्रोतों को फिर से इकट्ठा करता है.
+
+    - key: block.title.jobTitle
+      t: नौकरी का नाम
+    - key: block.description.jobTitle
+      t: आप स्वयं का पार्टियों में कैसे परिचय कराते है?
+
+    ###########################################################################
+    # Features
+    ###########################################################################
+
+    # General
+
+    - key: page.syntax
+      t: वाक्य
+    - key: page.language
+      t: भाषा
+    - key: page.data_structures
+      t: Data Structures
+    - key: page.browser_apis
+      t: ब्राउज़र एपीआई (Browser APIs)
+
+    - key: block.description.decorators
+      t: >
+          अपने सरलतम रूप में, एक डेकोरेटर बस एक तरीका है कोड के एक टुकड़े को दूसरे के साथ जोड़ने का — literally "decorating" it.
+
+    - key: feature.learn_more
+      t: और अधिक जानें (MDN)
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: क्या में उपयोग कर सकता हूँ
+    - key: feature.specification_link
+      t: W3C विशिष्टता
+
+    - key: featureExperienceSimplified.used_it.long
+      t: इसका उपयोग किया है
+    - key: featureExperienceSimplified.know_it.long
+      t: जानिए इसके बारे में
+    - key: features.usage.ratio
+      t: उपयोग अनुपात
+
+    - key: featureExperience.used_it
+      t: इसका उपयोग किया है
+    - key: featureExperience.know_not_used
+      t: पता है कि यह क्या है, लेकिन इसका इस्तेमाल नहीं किया है
+    - key: featureExperience.never_heard_not_sure
+      t: इसके बारे में कभी नहीं सुना / निश्चित नहीं कि यह क्या है
+
+    - key: featureExperience.used_it.long
+      t: इसका उपयोग किया है
+    - key: featureExperience.know_not_used.long
+      t: पता है कि यह क्या है, लेकिन इसका इस्तेमाल नहीं किया है
+    - key: featureExperience.never_heard_not_sure.long
+      t: इसके बारे में कभी नहीं सुना / निश्चित नहीं कि यह क्या है
+
+    # Feature Overview
+    - key: block.title.featuresOverview
+      t: उपयोग अवलोकन
+    - key: block.description.featuresOverview
+      t: >
+          यह चार्ट श्रेणी के आधार पर सभी सुविधाओं के लिए विभिन्न अपनाने लेने की दर प्रस्तुत करता है।
+
+
+          <span class="text-teal-darker text-bold">बाहरी घेरा</span> का आकार उन उपयोगकर्ताओं की कुल संख्या से मेल खाता है जो किसी विशेषता के बारे में जानते हैं,
+          जबकि <span class="text-teal text-bold">आतंरिक घेरा</span> उन लोगों का प्रतिनिधित्व करता है जिन्होंने वास्तव में इसका उपयोग किया है।
+
+
+          सर्वेक्षण उत्तरदाताओं की कुल संख्या का प्रतिनिधित्व करने वाले <span class="text-blackpink text-bold">ओवरले</span> के साथ विस्तृत डेटा देखने के लिए प्रत्येक नोड पर होवर करें।
+
+    # Features Section Overview
+    - key: block.title.featuresSectionOverview
+      t: उपयोग अवलोकन
+    - key: block.description.featuresSectionOverview
+      t: >
+          <span class="text-teal-darker text-bold">बाहरी घेरा</span> का आकार उन उपयोगकर्ताओं की कुल संख्या से मेल खाता है जो एक विशेषता के बारे में जानते हैं,
+          जबकि <span class="text-teal text-bold">आतंरिक घेरा</span> उन लोगों का प्रतिनिधित्व करता है जिन्होंने वास्तव में इसका उपयोग किया है।
+
+
+          सर्वेक्षण उत्तरदाताओं की कुल संख्या का प्रतिनिधित्व करने वाले <span class="text-blackred text-bold">ओवरले</span> के साथ विस्तृत डेटा देखने के लिए प्रत्येक नोड पर होवर करें।
+
+    - key: block.title.featuresExperienceHeatmap
+      t: वर्षों के अनुभव से उपयोग
+    - key: block.description.featuresExperienceHeatmap
+      t: |
+          "समग्र" कॉलम प्रत्येक सुविधा के लिए समग्र उपयोग दिखाता है (उत्तरदाताओं ने "इसका उपयोग किया है" का चयन किया),
+          जबकि निम्नलिखित कॉलम प्रत्येक "अनुभव के वर्षों" ब्रैकेट के लिए उपयोग अनुपात दिखाते हैं।
+
+          एक उज्जवल <span class = "text-teal text-bold"> teal </ span> पृष्ठभूमि किसी दिए गए ब्रैकेट
+          के लिए उच्च-से-समग्र-औसत अनुपात को इंगित करता है।
+
+    ###########################################################################
+    # Tools & Methodologies
+    ###########################################################################
+
+    # general
+    - key: block.tool.links
+      t: लिंक
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.github_stars
+      t: stars
+    - key: block.tool.homepage_link
+      t: मुखपृष्ठ
+    - key: block.tool.npm_link
+      t: NPM
+
+    - key: block.title.other-methodologies
+      t: अन्य तरीके
+
+    - key: block.title.companySize_heatmap
+      t: कंपनी आकार द्वारा उपयोग
+    - key: block.description.companySize_heatmap
+      t: |
+
+          प्रत्येक तकनीक के लिए, कैसे उपयोग उत्तरदाताओं के बीच फैलता है, जिन्होंने अलग-अलग कंपनी के आकार रेंज को चुना है।
+
+      # The "overall" column shows overall usage for each technology (respondents who selected "would use again" or "would not use again"),
+      # while the following columns show the usage ratio for each "years of experience" bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+    - key: block.title.workExperience_heatmap
+      t: वर्षों के अनुभव से उपयोग
+    - key: block.description.workExperience_heatmap
+      t: |
+
+          प्रत्येक तकनीक के लिए, कैसे उपयोग उत्तरदाताओं के बीच फैलता है जिन्होंने विभिन्न अनुभव श्रेणियों को चुना है।
+          ध्यान दें कि यहां प्रश्न का अनुभव सामान्य JavaScript अनुभव है, विशिष्ट तकनीक के साथ अनुभव नहीं।
+
+      # The "overall" column shows overall usage for each technology (respondents who selected "would use again" or "would not use again"),
+      # while the following columns show the usage ratio for each "years of experience" bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+    - key: block.title.salary_heatmap
+      t: वेतन सीमा द्वारा उपयोग
+    - key: block.description.salary_heatmap
+      t: |
+
+          प्रत्येक तकनीक के लिए, उत्तरदाताओं के बीच उपयोग कैसे फैलता है, जिन्होंने अलग-अलग वेतन सीमाएं चुनी हैं।
+
+      # The "overall" column shows overall usage for each technology (respondents who selected "would use again" or "would not use again"),
+      # while the following columns show the usage ratio for each "yearly salary" bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+    # rankings/bump chart
+    - key: block.title.toolExperienceRanking
+      t: रैंकिंग
+    - key: block.description.toolExperienceRanking
+      t: >
+          जागरूकता, रुचि और संतुष्टि अनुपात रैंकिंग।
+    - key: opinions.legends.awareness_ratio
+      t: जागरूकता
+    - key: opinions.legends.interest_ratio
+      t: रुचि
+    - key: opinions.legends.satisfaction_ratio
+      t: संतुष्टि
+
+    # overview
+    - key: block.title.toolsSectionOverview
+      t: श्रेणी अवलोकन
+    - key: block.description.toolsSectionOverview
+      t: >
+          सर्वेक्षण की गई तकनीकों पर राय का अवलोकन। गहरे खंड सकारात्मक विचारों का प्रतिनिधित्व करते हैं,
+          जबकि हल्का खंड नकारात्मक भावना के अनुरूप है।
+
+    # Arrows (Movement over time)
+    - key: block.title.toolsArrow
+      t: समय के साथ बदलता है
+    # - key: block.description.toolsArrow
+    #   t: >
+    #       How has the ecosystem changed over three years?
+    - key: block.description.toolsArrow
+      t: >
+          प्रत्येक पंक्ति 2016 से 2019 तक जाती है। एक उच्च बिंदु का मतलब है कि एक तकनीक का उपयोग अधिक लोगों द्वारा किया गया है,
+          और दाईं ओर एक बिंदु का अर्थ है कि अधिक उपयोगकर्ता इसे सीखना चाहते हैं; या इसका उपयोग किया है और इसे फिर से उपयोग करेंगे।
+
+    - key: amelia.bio
+      t: >
+          अमेलिया वॉटनबर्गर एक फ़्रंट एंड डेवलपर और डिज़ाइनर है जो डेटा विज़ुअलाइज़ेशन पर ध्यान केंद्रित करती है।
+          वह [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3) की लेखिका हैं,
+          अपना खुद का डेटा विज़ुअलाइज़ेशन बनाने के लिए एक गाइड,
+          और वह [Twitter](https://twitter.com/Wattenberger) पर विचार और कैसे-कैसे साझा करती है
+          और [उनका साइट](https://wattenberger.com/).
+
+    # quadrant/scatterplot chart
+    - key: block.title.scatterplotOverview
+      t: संतुष्टि बनाम उपयोग
+    - key: block.description.scatterplotOverview.satisfaction
+      t: >
+          यह चार्ट प्रत्येक प्रौद्योगिकी के ** संतुष्टि अनुपात ** को उसके कुल ** उपयोगकर्ता गणना ** के ऊपर दिखाता है।
+          इसे चार वर्गों में विभाजित किया जा सकता है:
+
+          - **आकलन**: कम उपयोग, उच्च संतुष्टि। निगाह रखने लायक तकनीक।
+
+          - **अपनाना**: उच्च उपयोग, उच्च संतुष्टि। अपनाने के लिए सुरक्षित तकनीकें।
+
+          - **टालना**: कम उपयोग, कम संतुष्टि। वर्तमान में तकनीकियों को शायद सबसे अच्छा टाला गया है।
+
+          - **विश्लेषण**: उच्च उपयोग, कम संतुष्टि। यदि आप वर्तमान में इनका उपयोग कर रहे हैं, तो इन तकनीकों का पुनः आकलन करें
+    - key: block.description.scatterplotOverview.interest
+      t: >
+          यह चार्ट प्रत्येक प्रौद्योगिकी का ** ब्याज अनुपात ** उसके कुल ** उपयोगकर्ता गणना ** के ऊपर दिखाता है (जैसा कि उत्तरदाताओं द्वारा परिभाषित किया गया है जो एक तकनीक के बारे में जानते हैं लेकिन अभी तक इसका उपयोग नहीं किया है).
+
+          (ध्यान दें कि कम उपयोगकर्ता संख्या या तो एक अज्ञात तकनीक के कारण हो सकती है; या एक तकनीक, जिसे पहले से ही इसका उपयोग करने वाले बहुत से उत्तरदाता हैं)
+
+    - key: quadrants.assess
+      t: आकलन
+    - key: quadrants.adopt
+      t: अपनाना
+    - key: quadrants.avoid
+      t: टालना
+    - key: quadrants.analyze
+      t: विश्लेषण
+
+    # happiness
+    - key: block.title.happiness
+      t: कुल मिलाकर खुशी
+    - key: block.description.happiness
+      t: |
+          एक (बहुत दुखी) से पांच (बहुत खुश) के पैमाने पर, इस श्रेणी की वर्तमान समग्र स्थिति से डेवलपर्स कितने खुश हैं?
+
+    # experience
+    - key: block.title.toolExperience
+      t: ${name} समय के साथ अनुभव
+    - key: block.description.toolExperience
+      t: ${name} के साथ उत्तरदाता का अनुभव.
+
+    - key: toolExperience.never_heard.long
+      t: मैंने इसके बारे में नहीं सुना है
+    - key: toolExperience.never_heard.short
+      t: कभी नहीं सुना
+    - key: toolExperience.never_heard.extrashort
+      t: कभी नहीं सुना
+
+    - key: toolExperience.not_interested.long
+      t: मैंने इसकी पुष्टि की है, और मुझे कोई दिलचस्पी नहीं है
+    - key: toolExperience.not_interested.short
+      t: सुना है, यह दिलचस्प नहीं है
+    - key: toolExperience.not_interested.extrashort
+      t: रुचि नहीं
+
+    - key: toolExperience.interested.long
+      t: मैंने इसके बारे में सुना है, और इसे सीखना पसंद करूंगा
+    - key: toolExperience.interested.short
+      t: सुना है, यह सीखना चाहेंगे
+    - key: toolExperience.interested.extrashort
+      t: इच्छुक
+
+    - key: toolExperience.would_use.long
+      t: मैंने इसे पहले इस्तेमाल किया है, और फिर से इसका इस्तेमाल करना चाहूंगा
+    - key: toolExperience.would_use.short
+      t: इसका इस्तेमाल किया, फिर से उपयोग करूँगा
+    - key: toolExperience.would_use.extrashort
+      t: फिर से उपयोग करेंगे
+
+    - key: toolExperience.would_not_use.long
+      t: मैंने इसे पहले इस्तेमाल किया है, और फिर से इसका उपयोग नहीं करना चाहूंगा
+    - key: toolExperience.would_not_use.short
+      t: इसका इस्तेमाल किया, फिर से उपयोग नहीं करूँगा
+    - key: toolExperience.would_not_use.extrashort
+      t: फिर से उपयोग नहीं करेंगे
+
+    - key: toolExperience.negative_opinion.extrashort
+      t: नकारात्मक राय
+    - key: toolExperience.positive_opinion.extrashort
+      t: सकारात्मक राय
+    - key: toolExperience.have_not_used.extrashort
+      t: उपयोग नहीं किया है
+    - key: toolExperience.have_used.extrashort
+      t: उपयोग किया है
+
+    - key: toolExperience.total_respondents.long
+      t: कुल प्रतिक्रियाएं
+    - key: toolExperience.total_respondents.short
+      t: कुल प्रतिक्रियाएं
+    - key: toolExperience.total_respondents.extrashort
+      t: कुल प्रतिक्रियाएं
+
+    # other category tools
+    - key: block.title.category-other-tools
+      t: अन्य उपकरण
+    - key: block.description.category-other-tools
+      t: इस श्रेणी के अन्य उपकरण (फ़्रीफ़ॉर्म उत्तर)।
+
+    ###########################################################################
+    # Other Tools
+    ###########################################################################
+
+    - key: block.title.utilities
+      t: उपयोगिताएँ
+    - key: block.description.utilities
+      t: आप किस उपयोगिता लाइब्रेरी का नियमित रूप से उपयोग करते हैं?
+    - key: block.title.utilities_others
+      t: अन्य उपयोगिताएँ
+    - key: block.description.utilities_others
+      t: अन्य उपयोगिताएँ (मुक्त क्षेत्र).
+
+    - key: block.title.text_editors
+      t: टेक्स्ट एडिटर
+    - key: block.description.text_editors
+      t: आप नियमित रूप से कौन से टेक्स्ट एडिटर का उपयोग करते हैं?
+    - key: block.title.text_editors_others
+      t: अन्य टेक्स्ट एडिटर
+    - key: block.description.text_editors_others
+      t: अन्य उत्तर (मुक्त क्षेत्र).
+
+    - key: block.title.browsers
+      t: ब्राउज़र्स
+    - key: block.description.browsers
+      t: प्रारंभिक विकास के दौरान आप मुख्य रूप से किस ब्राउज़र पर काम करते हैं?
+    - key: block.title.browsers_others
+      t: अन्य ब्राउज़र्स
+    - key: block.description.browsers_others
+      t: अन्य उत्तर (मुक्त क्षेत्र).
+
+    - key: block.title.build_tools
+      t: Build Tools
+    - key: block.description.build_tools
+      t: आप किस "Build Tool" का उपयोग करते हैं?
+    - key: block.title.build_tools_others
+      t: अन्य Build Tools
+    - key: block.description.build_tools_others
+      t: अन्य उत्तर (मुक्त क्षेत्र).
+
+    - key: block.title.non_js_languages
+      t: Non-JavaScript भाषाएं
+    - key: block.description.non_js_languages
+      t: आप किन अन्य प्रोग्रामिंग भाषाओं का उपयोग करते हैं?
+    - key: block.title.non_js_languages_others
+      t: अन्य भाषाएँ
+    - key: block.description.non_js_languages_others
+      t: अन्य उत्तर (मुक्त क्षेत्र).
+
+    ###########################################################################
+    # Resources
+    ###########################################################################
+
+    # blogs & magazines
+    - key: block.title.blogs_news_magazines
+      t: ब्लॉग और पत्रिकाएँ
+    - key: block.description.blogs_news_magazines
+      t: आप कौन सी JS सम्बंधित ब्लॉग/पत्रिकाएं आदि पढ़ते हैं?
+    - key: block.title.blogs_news_magazines_others
+      t: अन्य ब्लॉग और पत्रिकाएँ
+    - key: block.description.blogs_news_magazines_others
+      t: अन्य उत्तर (मुक्त क्षेत्र).
+
+    # sites & courses
+    - key: block.title.sites_courses
+      t: साइटें और ट्यूटोरियल
+    - key: block.description.sites_courses
+      t: आप कौन सी JS सम्बंधित  साइटें/ट्यूटोरियल आदि पढ़ते हैं?
+    - key: block.title.sites_courses_others
+      t: अन्य साइटें और ट्यूटोरियल
+    - key: block.description.sites_courses_others
+      t: अन्य उत्तर (मुक्त क्षेत्र).
+
+    # podcasts
+    - key: block.title.podcasts
+      t: पॉडकास्ट
+    - key: block.description.podcasts
+      t: आप कौन से JavaScript या प्रोग्रामिंग से संबंधित पॉडकास्ट सुनते हैं?
+    - key: block.title.podcasts_others
+      t: अन्य पॉडकास्ट
+    - key: block.description.podcasts_others
+      t: अन्य उत्तर (मुक्त क्षेत्र).
+
+    ###########################################################################
+    # Opinions
+    ###########################################################################
+
+    - key: block.title.easy-to-learn
+      t: Learning Curve
+    - key: block.description.easy-to-learn
+      t: 'JavaScript सीखना आसान है'
+
+    - key: block.title.js_moving_in_right_direction
+      t: दिशा
+    - key: block.description.js_moving_in_right_direction
+      t: 'JavaScript सही दिशा में बढ़ रहा है'
+
+    - key: block.title.building_js_apps_overly_complex
+      t: जटिलता
+    - key: block.description.building_js_apps_overly_complex
+      t: 'JavaScript ऐप्स बनाना अभी बेहद जटिल है'
+
+    - key: block.title.js_over_used_online
+      t: प्रयोग
+    - key: block.description.js_over_used_online
+      t: 'JavaScript का उपयोग ऑनलाइन किया जाता है'
+
+    - key: block.title.enjoy_building_js_apps
+      t: आनदं
+    - key: block.description.enjoy_building_js_apps
+      t: 'मुझे JavaScript ऐप्स बनाने में मज़ा आता है'
+
+    - key: block.title.would_like_js_to_be_main_lang
+      t: मुख्य भाषा
+    - key: block.description.would_like_js_to_be_main_lang
+      t: 'मैं चाहूंगा कि JavaScript मेरी मुख्य प्रोग्रामिंग भाषा हो'
+
+    - key: block.title.js_ecosystem_changing_to_fast
+      t: परिवर्तन की दर
+    - key: block.description.js_ecosystem_changing_to_fast
+      t: 'JavaScript पारिस्थितिकी तंत्र बहुत तेजी से बदल रहा है'
+
+    - key: block.title.missing-features
+      t: विशेषताओं में कमी
+    - key: block.description.missing-features
+      t: डेवलपर्स को क्या लगता है वर्तमान में JavaScript से गायब है?
+
+      # opinion scale
+    - key: opinions.0.short
+      t: दृढ़तापूर्वक असहमत
+    - key: opinions.1.short
+      t: असहमत
+    - key: opinions.2.short
+      t: निष्पक्ष
+    - key: opinions.3.short
+      t: सहमत
+    - key: opinions.4.short
+      t: दृढ़तापूर्वक सहमत
+
+    - key: opinions.0.long
+      t: दृढ़तापूर्वक असहमत
+    - key: opinions.1.long
+      t: असहमत
+    - key: opinions.2.long
+      t: निष्पक्ष
+    - key: opinions.3.long
+      t: सहमत
+    - key: opinions.4.long
+      t: दृढ़तापूर्वक सहमत
+
+    ###########################################################################
+    # Awards
+    ###########################################################################
+
+    - key: awards.runner_ups
+      t: रनर अप
+
+    # feature_adoption
+    - key: award.feature_adoption_award.title
+      t: सबसे ज्यादा अपनाया गया फीचर
+    - key: award.feature_adoption_award.description
+      t: |
+          सबसे ज्यादा अपनाया गया JavaScript फीचर के लिए सम्मानित किया गया।
+    - key: award.feature_adoption_award.comment
+      t: |
+          **${items[0].value}** उपयोगकर्ताओं के साथ ${items[0].name}
+          इस वर्ष सबसे अधिक उपयोग की जाने वाली JavaScript फीचर है।
+
+    # tool_satisfaction
+    - key: award.tool_satisfaction_award.title
+      t: उच्चतम संतुष्टि
+    - key: award.tool_satisfaction_award.description
+      t: |
+          संतुष्ट उपयोगकर्ताओं के उच्चतम प्रतिशत के साथ प्रौद्योगिकी के
+          लिए सम्मानित किया गया।
+    - key: award.tool_satisfaction_award.comment
+      t: |
+          With **${items[0].value}** of users willing to use it again,
+          ${items[0].name} proves once more it’s not kidding around.
+
+    # tool_interest
+    - key: award.tool_interest_award.title
+      t: सबसे ज्यादा दिलचस्पी
+    - key: award.tool_interest_award.description
+      t: |
+          प्रौद्योगिकी डेवलपर्स के लिए सम्मानित किया जाना सीखने
+          में सबसे अधिक रुचि रखते हैं।
+    - key: award.tool_interest_award.comment
+      t: |
+          **${items[0].value}** of developers who have heard
+          about ${items[0].name} want to learn it.
+          यह कुछ गंभीर दिलचस्पी है!
+
+    # tool_usage
+    - key: award.tool_usage_award.title
+      t: सर्वाधिक प्रयुक्त प्रौद्योगिकी
+    - key: award.tool_usage_award.description
+      t: |
+          सबसे बड़े उपयोगकर्ता आधार के साथ प्रौद्योगिकी के लिए सम्मानित किया गया।
+    - key: award.tool_usage_award.comment
+      t: |
+          **${items[0].value}** उपयोगकर्ताओं के साथ ${items[0].name}
+          इस वर्ष की सबसे अधिक उपयोग की जाने वाली तकनीक है।
+
+    # resource_usage
+    - key: award.resource_usage_award.title
+      t: सबसे अधिक इस्तेमाल किया संसाधन
+    - key: award.resource_usage_award.description
+      t: |
+          सबसे बड़े उपयोगकर्ता आधार के साथ संसाधन के लिए सम्मानित किया गया।
+    - key: award.resource_usage_award.comment
+      t: |
+          **${items[0].value}** उपयोगकर्ताओं के साथ ${items[0].name}
+          इस वर्ष सबसे अधिक उपयोग किया जाने वाला संसाधन है।
+
+    # tool_mention
+    - key: award.tool_mention_award.title
+      t: सबसे ज्यादा उल्लेखित
+    - key: award.tool_mention.description
+      t: |
+          लाइब्रेरी में उल्लिखित "अन्य लाइब्रेरियों"
+          के उत्तर में सबसे अधिक उल्लेख किया।
+    - key: award.tool_mention_award.comment
+      t: |
+          ${items[0].name} ने **${items[0].value}** का उल्लेख किया है,
+          जो इसे अब तक का सबसे प्रस्तुत फ्रीफ़ॉर्म उत्तर बनाता है।
+
+    # prediction_award
+    - key: award.prediction_award.title
+      t: पूर्व-सूचना पुरस्कार
+    - key: award.prediction_award.description
+      t: |
+          एक भावी और आने वाली तकनीक, जो कि पदभार संभाल सकता है... या नहीं?
+    - key: award.prediction_award.comment
+      t: |
+          ${items[0].name} ने इस साल के सर्वेक्षण में अपनी पहली शुरुआत की और हम यह देखने के लिए इंतजार
+          नहीं कर सकते कि यह यहाँ से कहाँ जाता है
+
+    ###########################################################################
+    # Generic
+    ###########################################################################
+
+    # pages
+    - key: page.introduction
+      t: परिचय
+    - key: page.tshirt
+      t: टीशर्ट
+    - key: page.demographics
+      t: जनसांख्यिकी
+    - key: page.overview
+      t: अवलोकन
+    - key: page.features
+      t: विशेषताएं
+    - key: page.other_features
+      t: अन्य विशेषताएं
+    - key: page.javascript_flavors
+      t: JavaScript के जायके
+    - key: page.javascript_flavors.short
+      t: JavaScript के जायके
+    - key: page.javascript_flavors_others
+      t: अन्य जायके
+    - key: page.front_end_frameworks
+      t: फ़्रंट एंड फ़्रेमवर्क
+    - key: page.front_end_frameworks.short
+      t: फ़्रंट एंड
+    - key: page.front_end_frameworks_others
+      t: अन्य फ़्रेमवर्क
+    - key: page.data_layer
+      t: डेटा लेयर
+    - key: page.data_layer.short
+      t: डेटा लेयर
+    - key: page.data_layer_others
+      t: अन्य डेटा लेयर उपकरण
+    - key: page.back_end_frameworks
+      t: बैक एंड फ़्रेमवर्क
+    - key: page.back_end_frameworks.short
+      t: बैक एंड
+    - key: page.back_end_frameworks_others
+      t: अन्य फ़्रेमवर्क
+    - key: page.testing
+      t: परिक्षण
+    - key: page.testing.short
+      t: परिक्षण
+    - key: page.testing_others
+      t: अन्य उपकरण
+    - key: page.mobile_desktop
+      t: मोबाइल और डेस्कटॉप
+    - key: page.mobile_desktop.short
+      t: मोबाइल और डेस्कटॉप
+    - key: page.mobile_desktop_others
+      t: अन्य उपकरण
+    - key: page.other_tools
+      t: अन्य उपकरण
+    - key: page.environments
+      t: परिवेश
+    - key: page.resources
+      t: साधन
+    - key: page.opinions
+      t: सम्मति
+    - key: page.awards
+      t: पुरस्कार
+    - key: page.conclusion
+      t: निष्कर्ष
+    - key: page.support
+      t: हमें सहयोग दीजिये
+
+    # sharing
+    - key: share.share
+      t: शेयर
+    - key: share.site.title
+      t: StateOf JavaScript 2019 के परिणामों की खोज करें
+    - key: share.site.twitter_text
+      t: 'StateOf JavaScript की खोज करें 2019 परिणाम ${link} #StateOfJS'
+    - key: share.site.subject
+      t: State Of JavaScript सर्वेक्षण के परिणाम
+    - key: share.site.body
+      t: 'यहां कुछ दिलचस्प JavaScript सर्वेक्षण परिणाम दिए गए हैं: ${link}'
+    - key: share.block.twitter_text
+      t: '#StateOfJS 2019: ${title} ${link}'
+    - key: share.block.subject
+      t: State Of JavaScript सर्वेक्षण के परिणाम
+    - key: share.block.body
+      t: 'यहां कुछ दिलचस्प JavaScript सर्वेक्षण परिणाम हैं (${title}): ${link}'
+    - key: share.twitter
+      t: Twitter पर साझा करें
+    - key: share.facebook
+      t: Facebook पर साझा करें
+    - key: share.linkedin
+      t: LinkedIn पर साझा करें
+    - key: share.email
+      t: ईमेल द्वारा साझा करें
+    - key: share.image
+      t: छवि प्राप्त करें
+
+    # export
+    - key: export.export
+      t: निर्यात
+    - key: export.title
+      t: ${title} के लिए डेटा निर्यात करें
+    - key: export.nocsv
+      t: क्षमा करें, इस डेटासेट के लिए CSV निर्यात उपलब्ध नहीं है।
+    - key: export.graphql
+      t: >
+          हमारी आंतरिक GraphQL API वर्तमान में सार्वजनिक नहीं है, भविष्य में हम इसे उजागर करने की योजना बना रहे हैं ताकि
+          हमारे डेटा क्वेरी को आसान बनाया जा सके। यदि आप अधिक जानकारी चाहते हैं, तो आप इस
+          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">GitHub issue</a> पर नज़र डाल सकते है।
+
+    # general
+    - key: general.title
+      t: State of JavaScript 2019
+    - key: general.description
+      t: वर्ष की सबसे लोकप्रिय JavaScript फ़ीचरो और प्रौद्योगिकियों की खोज करें।
+    - key: general.stay_tuned
+      t: बने रहें
+    - key: general.leave_your_email
+      t: 'यदि आप जानना चाहते हैं कि हम कब अतिरिक्त परिणाम जारी करते हैं या अगले वर्ष के संस्करण की घोषणा करते हैं, तो हमें नीचे अपना ईमेल छोड़ें:'
+    - key: general.your_email
+      t: आपका ईमेल
+    - key: general.notify_me
+      t: मुझे सूचित करें
+    - key: general.help_us_translate
+      t: सर्वेक्षण का अनुवाद करने में सहायता करें →
+    - key: general.not_found
+      t: >
+
+          ## Error 404
+
+          क्षमा करें, हमें यह पृष्ठ नहीं मिला। कृपया [एक issue दाखिल करें](https://github.com/StateOfJS/State-of-JS-2019/issues) अगर आपको लगता है कि कुछ गलत है।
+    - key: general.back_to_intro
+      t: वापस परिचय पर जाएँ
+    - key: general.close_nav
+      t: नेविगेशन मेनू बंद करें
+    - key: general.completion_percentage
+      t: 'पूर्णता का प्रतिशत:'
+    - key: general.previous
+      t: 'पिछला:'
+    - key: general.next
+      t: 'आगे:'
+    - key: general.start
+      t: शुरू
+
+    # partners
+    - key: partners.our_partners
+      t: हमारे सहयोगी
+    - key: partners.become_partner
+      t: सर्वेक्षण का समर्थन करने में मदद करें
+    - key: partners.thanks
+      t: हमें समर्थन देने के लिए हमारे सहयोगियों का धन्यवाद!
+    - key: partners.learn_more
+      t: और अधिक जानें.
+    - key: block.title.recommendedResources
+      t: अनुशंसित संसाधन
+
+    # charts
+    - key: block.title.usage-ratio
+      t: उपयोग अनुपात रैंकिंग
+    - key: block.description.usage-ratio
+      t: उन उपयोगकर्ताओं के बीच का उपयोग अनुपात रैंकिंग जो एक प्रौद्योगिकी के बारे में जानते हैं।
+    - key: users_percentage
+      t: उपयोगकर्ताओं का प्रतिशत
+    - key: users_count
+      t: उपयोगकर्ता गणना
+    - key: satisfaction_percentage
+      t: संतुष्टि का प्रतिशत
+    - key: interest_percentage
+      t: दिलचस्पी का प्रतिशत
+    - key: chart_mode
+      t: मोड
+    - key: chart_mode.absolute
+      t: पूर्ण
+    - key: chart_mode.relative
+      t: सापेक्ष
+    - key: chart_units
+      t: इकाइयां
+    - key: chart_units.percentage
+      t: प्रतिशत
+    - key: chart_units.count
+      t: गिनती
+    - key: users
+      t: उपयोगकर्ता
+    - key: percent_satisfaction
+      t: '% संतुष्टि'
+    - key: percent_interest
+      t: '% दिलचस्पी'
+    - key: heatmap.average
+      t: संपूर्ण
+    - key: difference_from_average_usage
+      t: 'समग्र उपयोग से अंतर:'
+    - key: all
+      t: 'सब'
+
+    # other
+    - key: bio.guest_visualizer
+      t: अतिथि विशेषज्ञ

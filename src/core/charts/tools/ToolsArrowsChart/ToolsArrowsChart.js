@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { Fragment, useEffect, useMemo, useState } from 'react'
 import { scaleLinear } from 'd3-scale'
 import map from 'lodash/map'
 import range from 'lodash/range'
@@ -36,7 +36,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
     const { translate } = useI18n()
 
     const [hoveredTool, setHoveredTool] = useState(null)
-    const windowWidth = useWindowWidth()
+    // const windowWidth = useWindowWidth()
     const windowHeight = useWindowHeight()
 
     const dms = useMemo(() => {
@@ -44,21 +44,19 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
         //     windowWidth > 900 ? 700 :
         //     600
 
-        const width = windowHeight > 1000 ? 1200 :
-            windowHeight > 800 ? 1000 :
-            950
+        const width = windowHeight > 1000 ? 1200 : windowHeight > 800 ? 1000 : 950
 
-        const height = windowHeight > 1000 ? 850 :
-            windowHeight > 800 ? 750 :
-            650
+        const height = windowHeight > 1000 ? 850 : windowHeight > 800 ? 750 : 650
 
         return {
             width,
-            height,
+            height
         }
-    }, [windowWidth])
+    }, [/* windowWidth, */windowHeight])
 
-    var isFirefox = typeof navigator !== 'undefined' && navigator.userAgent.toLowerCase().indexOf('firefox') > -1
+    var isFirefox =
+        typeof navigator !== 'undefined' &&
+        navigator.userAgent.toLowerCase().indexOf('firefox') > -1
 
     const tools = data.map(d => d.id)
     let toolNames = {}
@@ -99,9 +97,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
     }, [points, dms])
 
     return (
-        <div
-            className="ToolsArrowsChart"
-        >
+        <div className="ToolsArrowsChart">
             <svg className="ToolsArrowsChart__svg" height={dms.height} width={dms.width}>
                 <line
                     className="ToolsArrowsChart__axis"
@@ -188,10 +184,13 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
 
                     return (
                         <g
+                            key={i}
                             className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
-                                activeCategory !== "all" && activeCategory !== category ? "hidden" :
-                                activeCategory === category ? "active" :
-                                !hoveredTool
+                                activeCategory !== 'all' && activeCategory !== category
+                                    ? 'hidden'
+                                    : activeCategory === category
+                                    ? 'active'
+                                    : !hoveredTool
                                     ? 'normal'
                                     : hoveredTool.tool === tool
                                     ? 'hovering'
@@ -200,6 +199,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                         >
                             {circles.slice(0, -1).map(([x, y], i) => (
                                 <line
+                                    key={i}
                                     className={`ToolsArrowsChart__gradient-line ToolsArrowsChart__gradient-line--nth-${i}`}
                                     x1={x}
                                     y1={y}
@@ -207,7 +207,9 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                     y2={(circles[i + 1] || [])[1]}
                                     stroke={colorScale((circles.length - i) * (isFirefox ? 5 : 1))}
                                     style={{
-                                        strokeWidth: gradientLineWidthScale((circles.length - i) * (isFirefox ? 5 : 1))
+                                        strokeWidth: gradientLineWidthScale(
+                                            (circles.length - i) * (isFirefox ? 5 : 1)
+                                        )
                                     }}
                                 />
                             ))}
@@ -239,10 +241,13 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
 
                     return (
                         <g
+                            key={i}
                             className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
-                                activeCategory !== "all" && activeCategory !== category ? "hidden" :
-                                activeCategory === category ? "active" :
-                                !hoveredTool
+                                activeCategory !== 'all' && activeCategory !== category
+                                    ? 'hidden'
+                                    : activeCategory === category
+                                    ? 'active'
+                                    : !hoveredTool
                                     ? 'normal'
                                     : hoveredTool.tool === tool
                                     ? 'hovering'
@@ -261,30 +266,32 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 fill={color}
                                 x={x + ((offsets[tools[i]] || {}).x || 0)}
                                 y={y + ((offsets[tools[i]] || {}).y || 0)}
-                                onMouseEnter={() => setHoveredTool({tool, points})}
+                                onMouseEnter={() => setHoveredTool({ tool, points })}
                                 onMouseLeave={() => setHoveredTool(null)}
                             >
                                 {toolName}
                             </text>
                             {points.map(([x, y], i) => {
-                                const isFirstLabelToTheRight = scales.x(x) > dms.width * 0.9
-                                || labelsToTheRight.indexOf(tool) != -1
+                                const isFirstLabelToTheRight =
+                                    scales.x(x) > dms.width * 0.9 ||
+                                    labelsToTheRight.indexOf(tool) !== -1
 
-                                const showLabel = i === 0 || i === (points.length - 1)
+                                const showLabel = i === 0 || i === points.length - 1
 
                                 return (
-                                    <>
+                                    <Fragment key={i}>
                                         {showLabel && (
                                             <text
                                                 className="ToolsArrowsChart__year"
-                                                x={scales.x(x) + (10 * (isFirstLabelToTheRight ? -1 : 1))}
+                                                x={
+                                                    scales.x(x) +
+                                                    10 * (isFirstLabelToTheRight ? -1 : 1)
+                                                }
                                                 y={scales.y(y) + 5}
-                                                key={i}
                                                 style={{
-                                                    textAnchor:
-                                                        isFirstLabelToTheRight
-                                                            ? 'end'
-                                                            : 'start'
+                                                    textAnchor: isFirstLabelToTheRight
+                                                        ? 'end'
+                                                        : 'start'
                                                 }}
                                             >
                                                 {2019 - (points.length - 1 - i)}
@@ -297,7 +304,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                             r="4"
                                             fill="white"
                                         />
-                                    </>
+                                    </Fragment>
                                 )
                             })}
                         </g>
@@ -323,42 +330,56 @@ const conditionDiffs = {
     would_use: [1, 1]
 }
 
+/*
 function useWindowWidth() {
-    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' && window.innerWidth || 1000)
+    const [windowWidth, setWindowWidth] = useState(
+        (typeof window !== 'undefined' && window.innerWidth) || 1000
+    )
 
     function handleResize() {
-      setWindowWidth(typeof window !== 'undefined' && window.innerWidth || 1000)
+        setWindowWidth((typeof window !== 'undefined' && window.innerWidth) || 1000)
     }
 
     useEffect(() => {
         if (typeof window === 'undefined') return
-      window.addEventListener('resize', handleResize)
-      return () => {
-        window.removeEventListener('resize', handleResize)
-      }
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
     }, [])
 
     return windowWidth
 }
+*/
 
 function useWindowHeight() {
-    const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' && window.innerHeight || 1000)
+    const [windowHeight, setWindowHeight] = useState(
+        (typeof window !== 'undefined' && window.innerHeight) || 1000
+    )
 
     function handleResize() {
-      setWindowHeight(typeof window !== 'undefined' && window.innerHeight || 1000)
+        setWindowHeight((typeof window !== 'undefined' && window.innerHeight) || 1000)
     }
 
     useEffect(() => {
         if (typeof window === 'undefined') return
-      window.addEventListener('resize', handleResize)
-      return () => {
-        window.removeEventListener('resize', handleResize)
-      }
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
     }, [])
 
     return windowHeight
 }
 
 const labelsToTheRight = [
-    "mobx", "relay", "nuxt", "svelte", "ava", "electron", "nextjs", "vuejs", "cypress"
+    'mobx',
+    'relay',
+    'nuxt',
+    'svelte',
+    'ava',
+    'electron',
+    'nextjs',
+    'vuejs',
+    'cypress'
 ]

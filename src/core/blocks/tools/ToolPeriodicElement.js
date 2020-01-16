@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { navigate } from 'gatsby'
-import { colors } from 'core/constants'
-
-const defaultColor = colors.teal
+import { getColor } from 'core/constants'
 
 const PeriodicElement = ({
     className,
@@ -11,7 +9,7 @@ const PeriodicElement = ({
     symbol,
     number,
     background,
-    color = defaultColor,
+    color = getColor('activeColor'),
     mode = 'standalone',
     size,
     path,
