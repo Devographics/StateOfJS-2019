@@ -19,7 +19,7 @@ State of JavaScript создана и поддерживается:
 - [Сашей Грайф](https://twitter.com/sachagreif) (мной!): Дизайн, текст, код
 - [Рафаэлем Бенитт](https://twitter.com/benitteraphael): Анализ данных, визуализация данных
 
-Обязательно ознакомьтесь с моим React/GraphQL JavaScript фреймворком — [Vulcan.js](http://vulcanjs.org), а также с React библиотекой Рафаэля для визуализации данных — [nivo](https://nivo.rocks).
+Обязательно ознакомьтесь с моим JavaScript-фреймворком, использующим React/GraphQL — [Vulcan.js](http://vulcanjs.org), а также с React-библиотекой Рафаэля для визуализации данных — [nivo](https://nivo.rocks).
 
 ### Загрузить наши данные
 
