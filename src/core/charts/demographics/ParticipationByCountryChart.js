@@ -1,15 +1,10 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo, useMemo, useContext } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeContext } from 'styled-components'
 import { ResponsiveChoroplethCanvas } from '@nivo/geo'
 import countries from 'data/geo/world_countries'
-import baseTheme from 'nivoTheme'
-import { colors, getColor } from 'core/constants'
+import { colors } from 'core/constants'
 import ParticipationByCountryTooltip from './ParticipationByCountryTooltip'
-
-const theme = {
-    ...baseTheme,
-    background: getColor('stripe')
-}
 
 const features = countries.features.map(feature => {
     return {
@@ -45,6 +40,13 @@ const chartLegends = [
 ]
 
 const ParticipationByCountryChart = ({ units, data }) => {
+    const theme = useContext(ThemeContext)
+
+    const mergedTheme = {
+        ...theme.charts,
+        background: theme.colors.backgroundAlt
+    }
+
     const formatValue = useMemo(() => {
         if (units === 'percentage') return v => `${v.toFixed(1)}%`
         return v => Math.round(v)
@@ -58,11 +60,11 @@ const ParticipationByCountryChart = ({ units, data }) => {
             valueFormat={formatValue}
             domain={units === 'percentage' ? [0, 8] : [0, 1000]}
             colors={colorRange}
-            unknownColor={colors.greyMediumer}
+            unknownColor={theme.colors.background}
             projectionScale={118}
             projectionTranslation={[0.5, 0.7]}
             projectionRotation={[-11, 0, 0]}
-            theme={theme}
+            theme={mergedTheme}
             borderWidth={0.5}
             borderColor={{ theme: 'background' }}
             animate={false}

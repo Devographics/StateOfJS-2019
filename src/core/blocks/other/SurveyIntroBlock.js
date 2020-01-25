@@ -5,7 +5,7 @@ import SponsorsBlock from 'core/blocks/other/SponsorsBlock'
 import NewsletterBlock from 'core/blocks/other/NewsletterBlock'
 import IntroductionFooter from 'core/pages/IntroductionFooter'
 
-const SurveyIntroBlock = ({ data, block }) => (
+const SurveyIntroBlock = ({ data }) => (
     <div className="SurveyIntro">
         <div className="SurveyIntro__Content">
             <div className="main-logo-wrapper">

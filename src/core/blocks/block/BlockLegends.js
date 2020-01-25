@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
+import styled, { ThemeContext } from 'styled-components'
 import BlockLegendsItem from './BlockLegendsItem'
 import { useI18n } from 'core/i18n/i18nContext'
-import { keys } from 'core/constants.js'
+import { keys } from 'core/constants'
 
 const BlockLegends = ({
     block,
@@ -20,8 +21,8 @@ const BlockLegends = ({
     units
 }) => {
     const { id: blockId, bucketKeysName = blockId } = block
-
     const { translate } = useI18n()
+    const theme = useContext(ThemeContext)
     const blockKeys = keys[bucketKeysName]
 
     if (!legends && !blockKeys) {
@@ -37,17 +38,17 @@ const BlockLegends = ({
 
     const blockLegends =
         legends ||
-        blockKeys.map(({ id: keyId, color }) => ({
+        blockKeys.map(({ id: keyId }) => ({
             id: `${bucketKeysName}.${keyId}`,
             label: translate(`${bucketKeysName}.${keyId}.long`),
             keyLabel: `${translate(`${bucketKeysName}.${keyId}.short`)}:`,
-            color
+            color: theme.colors.ranges[bucketKeysName] ? theme.colors.ranges[bucketKeysName][keyId] : undefined
         }))
 
     const rootStyle = { ...style }
 
     return (
-        <div className={classNames.join(' ')} style={rootStyle}>
+        <Container className={classNames.join(' ')} style={rootStyle}>
             {blockLegends.map(({ id, label, color, keyLabel }) => (
                 <BlockLegendsItem
                     key={id}
@@ -65,19 +66,11 @@ const BlockLegends = ({
                     units={units}
                 />
             ))}
-        </div>
+        </Container>
     )
 }
 
 BlockLegends.propTypes = {
-    // legends: PropTypes.arrayOf(
-    //     PropTypes.shape({
-    //         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    //         label: PropTypes.string.isRequired,
-    //         keyLabel: PropTypes.string,
-    //         color: PropTypes.string
-    //     })
-    // ).isRequired,
     layout: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
     withFrame: PropTypes.bool.isRequired,
     chipSize: PropTypes.number.isRequired,
@@ -97,5 +90,10 @@ BlockLegends.defaultProps = {
     chipStyle: {},
     chipSize: 16
 }
+
+const Container = styled.div`
+    font-size: ${props => props.theme.typography.sizes.small};
+    margin-top: ${props => props.theme.spacing}px;
+`
 
 export default BlockLegends

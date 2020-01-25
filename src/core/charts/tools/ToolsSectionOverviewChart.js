@@ -1,9 +1,8 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useContext } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeContext } from 'styled-components'
 import get from 'lodash/get'
 import { ResponsiveBar } from '@nivo/bar'
-import theme from 'nivoTheme'
-import { getColor } from 'core/constants'
 
 const margin = {
     top: 81,
@@ -11,6 +10,8 @@ const margin = {
 }
 
 const ToolsSectionOverviewChart = ({ data, units, current, namespace }) => {
+    const theme = useContext(ThemeContext)
+
     const chartData = useMemo(
         () =>
             data.map(tool => ({
@@ -31,12 +32,13 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace }) => {
         format = v => `${v}%`
     }
 
-    const getLayerColor = layer => {
-        const { id } = layer
+    const getLayerColor = ({ id }) => {
+        const color = theme.colors.ranges.toolExperience[id]
         if (current !== null && current !== `${namespace}.${id}`) {
-            return `${getColor(id)}33`
+            return `${color}33`
         }
-        return getColor(id)
+
+        return color
     }
 
     const formatTick = id => {
@@ -62,7 +64,7 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace }) => {
             axisBottom={{
                 format: formatTick
             }}
-            defs={[theme.emptyPattern]}
+            defs={[theme.charts.emptyPattern]}
             fill={[
                 {
                     id: 'empty',
@@ -71,7 +73,7 @@ const ToolsSectionOverviewChart = ({ data, units, current, namespace }) => {
             ]}
             axisLeft={null}
             enableGridY={false}
-            theme={theme}
+            theme={theme.charts}
             labelFormat={format}
             tooltipFormat={format}
         />

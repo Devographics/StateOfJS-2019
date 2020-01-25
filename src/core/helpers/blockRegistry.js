@@ -2,7 +2,6 @@
 import HorizontalBarBlock from 'core/blocks/generic/HorizontalBarBlock'
 import VerticalBarBlock from 'core/blocks/generic/VerticalBarBlock'
 import HeatmapBlock from 'core/blocks/generic/HeatmapBlock'
-import GaugeBarBlock from 'core/blocks/generic/GaugeBarBlock'
 
 // other
 import TextBlock from 'core/blocks/other/TextBlock'
@@ -13,17 +12,13 @@ import TshirtBlock from 'core/blocks/other/TshirtBlock'
 import AwardBlock from 'core/blocks/awards/AwardBlock'
 import ConclusionBlock from 'core/blocks/other/ConclusionBlock'
 
-// import { HappinessTrendBlock } from 'modules/happiness'
-
 // demographics
 import ParticipationByCountryBlock from 'core/blocks/demographics/ParticipationByCountryBlock'
+import GenderBlock from 'core/blocks/demographics/GenderBlock'
 
 // features
 import FeatureExperienceBlock from 'core/blocks/features/FeatureExperienceBlock'
 import FeaturesOverviewBlock from 'core/blocks/features/FeaturesOverviewBlock'
-// import FeaturesRadialClusterOverviewBlock from 'core/blocks/features/FeaturesRadialClusterOverviewBlock'
-// import FeaturesSectionOverviewBlock from 'core/blocks/features/FeaturesSectionOverviewBlock'
-// import FeaturesUsageRatioBlock from 'core/blocks/features/FeaturesUsageRatioBlock'
 
 // tools
 import ToolHeaderBlock from 'core/blocks/tools/ToolHeaderBlock'
@@ -33,9 +28,6 @@ import ToolsSectionOverviewBlock from 'core/blocks/tools/ToolsSectionOverviewBlo
 import ToolsExperienceRankingBlock from 'core/blocks/tools/ToolsExperienceRankingBlock'
 import ToolsScatterplotBlock from 'core/blocks/tools/ToolsScatterplotBlock'
 import ToolsArrowsBlock from 'core/blocks/tools/ToolsArrowsBlock'
-// import ToolsScaledRankingSectionOverviewBlock from 'core/blocks/tools/ToolsScaledRankingSectionOverviewBlock'
-// import ToolsUsageRatioBlock from 'core/blocks/tools/ToolsUsageRatioBlock'
-// import ToolOpinionsOverTimeBlock from 'core/blocks/tools/ToolOpinionsOverTimeBlock'
 
 // happiness
 import HappinessBlock from 'core/blocks/happiness/HappinessBlock'
@@ -48,7 +40,6 @@ const blockRegistry = {
     HorizontalBarBlock,
     VerticalBarBlock,
     HeatmapBlock,
-    GaugeBarBlock,
 
     // other
     PageIntroductionBlock,
@@ -61,13 +52,11 @@ const blockRegistry = {
 
     // demographics
     ParticipationByCountryBlock,
+    GenderBlock,
 
     // features
     FeatureExperienceBlock,
     FeaturesOverviewBlock,
-    // 'features-radial-cluster-overview': FeaturesRadialClusterOverviewBlock,
-    // 'features-section-overview': FeaturesSectionOverviewBlock,
-    // 'features-usage-ratio': FeaturesUsageRatioBlock,
 
     // tools
     ToolHeaderBlock,
@@ -77,10 +66,6 @@ const blockRegistry = {
     ToolsExperienceRankingBlock,
     ToolsScatterplotBlock,
     ToolsArrowsBlock,
-    // 'tools-section-overview': ToolsSectionOverviewBlock,
-    // 'opinions-over-time': ToolOpinionsOverTimeBlock,
-    // 'tools-scaled-ranking-section-overview': ToolsScaledRankingSectionOverviewBlock,
-    // 'tools-usage-ratio': ToolsUsageRatioBlock,
 
     // happiness
     HappinessBlock,

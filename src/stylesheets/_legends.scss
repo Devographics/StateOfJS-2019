@@ -1,12 +1,6 @@
-.Legends {
-    font-size: $small-font;
-    margin-top: $spacing;
-}
-
 .Legends--horizontal {
     @include medium-large {
         display: grid;
-        // grid-gap: $spacing;
     }
     @include medium {
         grid-template-columns: 1fr 1fr;
@@ -34,8 +28,6 @@
         border: 1px solid $border-color-dark;
         padding: $spacing;
     }
-    @include medium {
-    }
 }
 
 .Legends--withFrame {
@@ -48,16 +40,6 @@
 }
 
 .Legends__Item {
-    display: flex;
-    align-items: center;
-    cursor: default;
-    &--interactive{
-        cursor: pointer;
-        &:hover{
-            background: $bg-color-lighter;
-        }
-    }
-    flex: 1;
     @include small{
         margin-bottom: $spacing/2;
     }
@@ -69,43 +51,18 @@
     .Legends--vertical & {
         margin-bottom: $spacing/2;
     }
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.Legends__Item:hover {
-    // background: rgba(255, 255, 255, 0.15);
-}
-
-.Legends__Item__Chip {
-    display: block;
-    margin-right: 12px;
-    flex-shrink: 0;
 }
 
 .Legends__Item__KeyLabel {
     width: 120px;
     @include font-bold;
 }
-// .Legends--connections {
-//     padding: $spacing / 2;
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-// }
-
-// .Legends--connections .Legends__Item {
-//     padding: $spacing / 2;
-// }
 
 .Legends__Item__Label{
     @include small{
         flex: 1;
     }
-    padding-right: $spacing;
 }
-.Legends__Item__Value{
-    display: inline-block;
-    margin-left: $spacing/2;
+.Legends__Item__Value {
     @include font-bold;
 }

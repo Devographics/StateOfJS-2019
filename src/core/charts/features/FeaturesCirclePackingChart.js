@@ -1,12 +1,12 @@
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
+import round from 'lodash/round'
 import PropTypes from 'prop-types'
 import { ResponsiveBubble } from '@nivo/circle-packing'
-import theme from 'nivoTheme'
-import { colors, totalCount, getColor } from 'core/constants.js'
-import ChartLabel from 'core/components/ChartLabel'
 import { useTheme } from '@nivo/core'
+import { colors, getColor } from 'core/constants'
+import ChartLabel from 'core/components/ChartLabel'
 import { useI18n } from 'core/i18n/i18nContext'
-import round from 'lodash/round'
 
 const fontSizeByRadius = radius => {
     if (radius < 25) return 8
@@ -66,35 +66,6 @@ const Tooltip = props => {
     )
 }
 
-export const TotalCircle = ({ radius, id }) => {
-    const { translate } = useI18n()
-
-    return (
-        <g>
-            <defs>
-                <path
-                    d={`M-${radius},0a${radius},${radius} 0 1,0 ${radius *
-                        2},0a${radius},${radius} 0 1,0 -${radius * 2},0`}
-                    id={`textcircle-${id}`}
-                />
-            </defs>
-            <circle
-                className="CirclePackingNode__TotalCircle"
-                r={radius}
-                // strokeDasharray="4,4"
-                stroke={colors.red}
-                strokeWidth={2}
-                fill="rgba(0,0,0,0.3)"
-            />
-            <text className="CirclePackingNode__TotalCircleLabel" dy={20} dx={0}>
-                <textPath xlinkHref={`#textcircle-${id}`} fill={colors.red}>
-                    {translate('opinions.legends.total_respondents')}: {totalCount}
-                </textPath>
-            </text>
-        </g>
-    )
-}
-
 const Node = ({ node, handlers }) => {
     const radius = node.r
 
@@ -112,17 +83,15 @@ const Node = ({ node, handlers }) => {
                         id={`textcircle-${node.data.id}`}
                     />
                 </defs>
-                <text className="CirclePackingNode__SectionLabel" dy={30}>
+                <CirclePackingNodeCategoryLabel dy={30}>
                     <textPath
                         xlinkHref={`#textcircle-${node.data.id}`}
-                        fill={colors.teal}
                         side="right"
                         startOffset={sectionLabelOffsets[node.data.id]}
                     >
                         {node.id}
                     </textPath>
-                </text>
-
+                </CirclePackingNodeCategoryLabel>
                 <circle
                     r={node.r}
                     fill="rgba(255,255,255,0.1)"
@@ -134,34 +103,30 @@ const Node = ({ node, handlers }) => {
             </g>
         )
     }
-    // const surface = Math.PI * node.r * node.r
-    // const surfaceRatio = surface / node.data.awareness
-    // const totalSurface = surfaceRatio * totalCount
-    // const totalRadius = Math.sqrt(totalSurface / Math.PI)
     const usageRadius = node.r * (node.data.usage / node.data.awareness)
 
     return (
-        <g
+        <CirclePackingNode
             className="CirclePackingNode"
             transform={`translate(${node.x},${node.y})`}
             onMouseEnter={handlers.onMouseEnter}
             onMouseMove={handlers.onMouseMove}
             onMouseLeave={handlers.onMouseLeave}
         >
-            {/* <TotalCircle radius={totalRadius} id={node.data.id} /> */}
-
             <circle r={node.r} fill={`${getColor(node.data.sectionId)}50`} />
             <circle r={usageRadius} fill={`${getColor(node.data.sectionId)}`} />
             <ChartLabel label={node.label} fontSize={fontSizeByRadius(node.r)} />
-        </g>
+        </CirclePackingNode>
     )
 }
 
 const FeaturesCirclePackingChart = ({ data, className }) => {
+    const theme = useContext(ThemeContext)
+
     return (
-        <div className={`CirclePackingChart ${className}`}>
+        <Chart className={`CirclePackingChart ${className}`}>
             <ResponsiveBubble
-                theme={theme}
+                theme={theme.charts}
                 margin={{
                     top: 2,
                     right: 2,
@@ -178,7 +143,7 @@ const FeaturesCirclePackingChart = ({ data, className }) => {
                 animate={false}
                 tooltip={Tooltip}
             />
-        </div>
+        </Chart>
     )
 }
 
@@ -201,5 +166,22 @@ FeaturesCirclePackingChart.propTypes = {
         )
     })
 }
+
+const Chart = styled.div`
+    svg {
+        overflow: visible;
+    }
+`
+
+const CirclePackingNode = styled.g`
+    &.CirclePackingNode--inactive {
+        opacity: 0.15;
+    }
+`
+
+const CirclePackingNodeCategoryLabel = styled.text`
+    fill: ${({ theme }) => theme.colors.link};
+    opacity: 0.65;
+`
 
 export default memo(FeaturesCirclePackingChart)

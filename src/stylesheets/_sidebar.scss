@@ -4,25 +4,9 @@
 }
 
 .Sidebar {
-    border-right: $border;
-    border-bottom: $border;
     @include small-medium {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: $bg-color;
-        z-index: 1000;
-        text-align: center;
-        overflow-y: scroll;
-        padding: 0 0 $spacing * 2 0;
         &.Sidebar--hidden {
             @include sr-only;
-        }
-        &.Sidebar--shown {
-            overflow: hidden;
-            overflow-y: scroll;
-            position: fixed;
         }
     }
 }
@@ -67,40 +51,11 @@
 }
 
 .Sidebar__Logo--mobile {
-    // @include flex-center;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    border-bottom: $border;
-    // height: 50px;
     .Sidebar__Logo__Inner {
         @include flex-center;
     }
     .Logo--simple {
         display: block;
-    }
-    @include large {
-        display: none;
-    }
-}
-
-.Sidebar__Logo__Link {
-    @include disableUnderline;
-}
-
-.Sidebar__Close {
-    margin: 0;
-    padding: 0;
-    button {
-        background: none;
-        cursor: pointer;
-        border: none;
-    }
-    @include flex-center;
-    @include large {
-        display: none;
-    }
-    svg {
-        stroke: $active-color;
     }
 }
 
@@ -110,28 +65,16 @@
         flex-direction: column;
     }
 }
-.Nav__Page__Link {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: $medium-font;
-    margin: 0 0 $spacing / 3 0;
-}
 
 .Nav__Page--lvl-1,
 .Nav__Page--lvl-2 {
     .Nav__Page__Link {
         font-size: $smallish-font;
         @include font-regular;
-        &,
-        &:link,
-        &:visited {
-            color: $text-color;
-        }
     }
 }
 
-.Nav__Page__Link--active {
-    color: $active-color !important;
+.Nav__Page__Link._is-active {
     @include font-bold;
     span::before {
         content: '> ';

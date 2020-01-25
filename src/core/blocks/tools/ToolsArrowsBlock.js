@@ -23,7 +23,6 @@ const ToolsArrowsBlock = ({ block, data }) => {
 
     return (
         <Block
-            // titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
             block={{ ...block, showLegend: true, legends, showDescription: false }}
             data={data}
             legendProps={{
@@ -65,25 +64,3 @@ ToolsArrowsBlock.propTypes = {
 }
 
 export default ToolsArrowsBlock
-
-const categoryOptions = ['all', ...Object.keys(toolsCategories)]
-const Switcher = ({ setActiveCategory, activeCategory }) => {
-    const { translate } = useI18n()
-    return (
-        <div className="BlockUnitsSelector">
-            <span className="ButtonGroup">
-                {categoryOptions.map(category => (
-                    <span
-                        key={category}
-                        className={`Button Button--small Button--${
-                            activeCategory === category ? 'selected' : 'unselected'
-                        }`}
-                        onClick={() => setActiveCategory(category)}
-                    >
-                        {translate(category === 'all' ? 'all' : `page.${category}`)}
-                    </span>
-                ))}
-            </span>
-        </div>
-    )
-}

@@ -1,6 +1,6 @@
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
 import PropTypes from 'prop-types'
-import { colors } from 'core/constants'
+import { ThemeContext } from 'styled-components'
 
 /**
  * This component is used to render a custom label for charts,
@@ -10,46 +10,53 @@ import { colors } from 'core/constants'
 const ChartLabel = ({
     label,
     fontSize = 13,
-    strokeColor = colors.greyDarker,
-    fontColor = colors.white,
+    outlineColor: _outlineColor,
+    textColor: _textColor,
     ...rest
-}) => (
-    <g {...rest}>
-        <text
-            textAnchor="middle"
-            dominantBaseline="central"
-            stroke={strokeColor}
-            strokeWidth={4}
-            strokeLinejoin="round"
-            style={{
-                pointerEvents: 'none',
-                fontSize,
-                fontWeight: 400,
-                opacity: 0.85
-            }}
-        >
-            {label}
-        </text>
-        <text
-            textAnchor="middle"
-            dominantBaseline="central"
-            fill={fontColor}
-            style={{
-                pointerEvents: 'none',
-                fontSize,
-                fontWeight: 400
-            }}
-        >
-            {label}
-        </text>
-    </g>
-)
+}) => {
+    const theme = useContext(ThemeContext)
+
+    const outlineColor = _outlineColor || theme.colors.background
+    const textColor = _textColor || theme.colors.text
+
+    return (
+        <g {...rest}>
+            <text
+                textAnchor="middle"
+                dominantBaseline="central"
+                stroke={outlineColor}
+                strokeWidth={4}
+                strokeLinejoin="round"
+                style={{
+                    pointerEvents: 'none',
+                    fontSize,
+                    fontWeight: 600,
+                    opacity: 1
+                }}
+            >
+                {label}
+            </text>
+            <text
+                textAnchor="middle"
+                dominantBaseline="central"
+                fill={textColor}
+                style={{
+                    pointerEvents: 'none',
+                    fontSize,
+                    fontWeight: 600
+                }}
+            >
+                {label}
+            </text>
+        </g>
+    )
+}
 
 ChartLabel.propTypes = {
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     fontSize: PropTypes.number,
-    strokeColor: PropTypes.string,
-    fontColor: PropTypes.string
+    outlineColor: PropTypes.string,
+    textColor: PropTypes.string
 }
 
 export default memo(ChartLabel)

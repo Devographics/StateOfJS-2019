@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, useCallback, useEffect, useState } from 'react'
 import propTypes from 'prop-types'
 import classNames from 'classnames'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import '../stylesheets/screen.scss'
 import Pagination from './pages/Pagination'
 import Sidebar from './components/Sidebar'
@@ -12,7 +12,83 @@ import { I18nContextProvider } from './i18n/i18nContext'
 import { ToolsContextProvider } from './helpers/toolsContext'
 import { EntitiesContextProvider } from './entities/entitiesContext'
 import PageMetaDebug from './pages/PageMetaDebug'
-import theme from './theme'
+import themes from './theme/themes'
+import mq from './theme/mq'
+
+const themeIds = ['js', 'css', 'test']
+
+const ThemedLayout = ({
+    context,
+    showPagination,
+    showSidebar,
+    toggleSidebar,
+    closeSidebar,
+    props
+}) => {
+    const sidebarClassName = showSidebar ? 'Sidebar--shown' : 'Sidebar--hidden'
+    const [themeId, setThemeId] = useState('js')
+
+    const switchTheme = useCallback(
+        event => {
+            if (event.code === 'KeyX') {
+                setThemeId(current => {
+                    const currentIndex = themeIds.findIndex(id => id === current)
+                    if (currentIndex < themeIds.length - 1) {
+                        return themeIds[currentIndex + 1]
+                    }
+
+                    return themeIds[0]
+                })
+            }
+        },
+        [setThemeId]
+    )
+
+    useEffect(() => {
+        document.addEventListener('keypress', switchTheme)
+
+        return () => {
+            document.removeEventListener('keypress', switchTheme)
+        }
+    }, [switchTheme])
+
+    return (
+        <ThemeProvider theme={themes[themeId]}>
+            <ToolsContextProvider>
+                <EntitiesContextProvider>
+                    <GlobalStyle />
+                    <div
+                        className={classNames('pageLayout', `PageLayout--${context.id}`, {
+                            'PageLayout--sidebar': showSidebar,
+                            'PageLayout--nosidebar': !showSidebar,
+                            capture: context.isCapturing,
+                            nocapture: !context.isCapturing
+                        })}
+                    >
+                        <Head />
+                        <div className="pagelayout__inner">
+                            <Sidebar
+                                {...props}
+                                sidebarClassName={sidebarClassName}
+                                showSidebar={showSidebar}
+                                closeSidebar={closeSidebar}
+                            />
+                            <main className="pagelayout__content">
+                                {showPagination && (
+                                    <Pagination toggleSidebar={toggleSidebar} position="top" />
+                                )}
+                                <div className="pagelayout__main">
+                                    <PageMetaDebug />
+                                    {props.children}
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </EntitiesContextProvider>
+            </ToolsContextProvider>
+        </ThemeProvider>
+    )
+}
 
 export default class Layout extends PureComponent {
     static propTypes = {
@@ -26,8 +102,7 @@ export default class Layout extends PureComponent {
     constructor() {
         super()
         this.state = {
-            showSidebar: false,
-            showAnim: false
+            showSidebar: false
         }
     }
 
@@ -50,77 +125,84 @@ export default class Layout extends PureComponent {
         })
     }
 
-    openSidebar = () => {
-        this.setState({
-            showSidebar: true
-        })
-    }
-
     closeSidebar = () => {
         this.setState({
             showSidebar: false
         })
     }
 
-    showAnim = () => {
-        this.setState({
-            showAnim: true
-        })
-    }
-
     render() {
         const { showPagination, location, pageContext } = this.props
-        const { showAnim, showSidebar } = this.state
-        const sidebarClassName = showSidebar ? 'Sidebar--shown' : 'Sidebar--hidden'
+        const { showSidebar } = this.state
         const context = mergePageContext(pageContext, location, this.state)
 
         return (
             <PageContextProvider value={context}>
-                <ThemeProvider theme={theme}>
-                    <I18nContextProvider>
-                        <ToolsContextProvider>
-                            <EntitiesContextProvider>
-                                <div
-                                    className={classNames(
-                                        'pageLayout',
-                                        `PageLayout--${context.id}`,
-                                        {
-                                            'PageLayout--sidebar': showSidebar,
-                                            'PageLayout--nosidebar': !showSidebar,
-                                            'PageLayout--anim': showAnim,
-                                            'PageLayout--noanim': !showAnim,
-                                            capture: context.isCapturing,
-                                            nocapture: !context.isCapturing
-                                        }
-                                    )}
-                                >
-                                    <Head />
-                                    <div className="pagelayout__inner">
-                                        <Sidebar
-                                            {...this.props}
-                                            sidebarClassName={sidebarClassName}
-                                            showSidebar={showSidebar}
-                                            closeSidebar={this.closeSidebar}
-                                        />
-                                        <main className="pagelayout__content">
-                                            {showPagination && (
-                                                <Pagination
-                                                    toggleSidebar={this.toggleSidebar}
-                                                    position="top"
-                                                />
-                                            )}
-                                            <div className="pagelayout__main">
-                                                <PageMetaDebug />
-                                                {this.props.children}
-                                            </div>
-                                        </main>
-                                    </div>
-                                </div>
-                            </EntitiesContextProvider>
-                        </ToolsContextProvider>
-                    </I18nContextProvider>
-                </ThemeProvider>
+                <I18nContextProvider>
+                    <ThemedLayout
+                        context={context}
+                        showPagination={showPagination}
+                        showSidebar={showSidebar}
+                        toggleSidebar={this.toggleSidebar}
+                        closeSidebar={this.closeSidebar}
+                        props={this.props}
+                    />
+                </I18nContextProvider>
             </PageContextProvider>
         )
     }
 }
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        background: ${props => props.theme.colors.background};
+        color: ${props => props.theme.colors.text};
+        padding: 0;
+        font-feature-settings: 'liga' 0;
+        line-height: 1.7;
+    }
+    
+    html {
+    box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    a {
+        text-decoration: none;
+        
+        &,
+        &:link,
+        &:visited,
+        &:active,
+        &:focus {
+            color: ${props => props.theme.colors.link};
+        }
+        
+        &:hover {
+            text-decoration: underline;
+            color: ${props => props.theme.colors.linkHover};
+        }
+    }
+    
+    .ReactModal__Overlay {
+        z-index: 1000;
+    }
+    
+    .Page__Contents--awards {
+        @media ${mq.mediumLarge} {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: ${props => props.theme.spacing * 4}px;
+            row-gap: ${props => props.theme.spacing * 4}px;
+            
+            .Page__Introduction {
+                grid-column: 1 / 3;
+            }
+        }
+    }
+`
