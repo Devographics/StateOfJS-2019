@@ -29,6 +29,16 @@ export const I18nContextProvider = ({ children }) => {
             {({ translations: _translations }) => {
                 const translations = _translations.edges.map(t => t.node)
                 const catalogue = translations.find(t => t.locale === context.locale)
+                if (!context.locale) {
+                    throw new Error(`No locale defined in context`)
+                }
+                if (!catalogue) {
+                    throw new Error(
+                        `Could not find catalogue for locale ${
+                            context.locale
+                        }. Available locales: ${translations.map(t => t.locale).join(', ')}`
+                    )
+                }
                 const translate = getTranslator(catalogue)
 
                 return (

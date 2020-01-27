@@ -3,7 +3,7 @@
   label: English
 - locale: it-IT
   path: it
-  label: Italian
+  label: Italiano
 - locale: zh-Hans
   path: zh
   label: 简体中文

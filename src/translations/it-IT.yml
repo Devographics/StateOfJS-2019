@@ -1034,7 +1034,7 @@ translations:
     - key: heatmap.average
       t: complessivamente
     - key: difference_from_average_usage
-      t: 'Differenza dall'uso complessivo:'
+      t: "Differenza dall'uso complessivo:"
     - key: all
       t: 'Tutto'
 
