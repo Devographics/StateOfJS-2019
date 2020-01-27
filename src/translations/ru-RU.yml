@@ -993,6 +993,8 @@ translations:
       t: 'Далее:'
     - key: general.start
       t: Начинаем
+    - key: general.translation_help
+      t: Кто помог в переводе
 
     # partners
     - key: partners.our_partners
