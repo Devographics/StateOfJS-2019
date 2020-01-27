@@ -100,7 +100,7 @@ ${trimmedQuery}
                     }}
                 >
                     <span className="desktop">{translate('export.export')}</span>
-                        <ExportIcon />
+                    <ExportIcon />
                 </ExportButton>
             </ButtonWrapper>
             <Modal
@@ -117,10 +117,10 @@ ${trimmedQuery}
                             <Tab>GraphQL</Tab>
                         </TabList>
                         <TabPanel>
-                            <TextArea value={jsonExport} readOnly />
+                            <Text value={jsonExport} />
                         </TabPanel>
                         <TabPanel>
-                            <TextArea value={graphQLExport} readOnly />
+                            <Text value={graphQLExport} />
                             <Message
                                 dangerouslySetInnerHTML={{ __html: translate('export.graphql') }}
                             />
@@ -130,6 +130,14 @@ ${trimmedQuery}
             </Modal>
         </>
     )
+}
+
+const Text = ({ value }) => {
+    const text = React.createRef()
+    const handleClick = () => {
+        text.current.select()
+    }
+    return <TextArea value={value} readOnly ref={text} onClick={handleClick} />
 }
 
 BlockExport.propTypes = {
@@ -162,12 +170,11 @@ const Icon = styled.svg`
     stroke: ${({ theme }) => theme.colors.link};
     height: 16px;
     width: 16px;
-    
+
     ${ExportButton}:hover & {
         stroke: ${({ theme }) => theme.colors.contrast};
     }
 `
-
 
 const Content = styled.div`
     padding: ${({ theme }) => theme.spacing}px;
