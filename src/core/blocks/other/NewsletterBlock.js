@@ -8,6 +8,9 @@ const Container = styled.div`
     padding: ${props => props.theme.spacing * 1.5}px;
     margin-bottom: ${props => props.theme.spacing * 2}px;
     border: ${props => props.theme.separationBorder};
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 `
 
 const NewsletterBlock = () => {

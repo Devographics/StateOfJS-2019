@@ -2,6 +2,7 @@ import React from 'react'
 import TextBlock from 'core/blocks/other/TextBlock'
 import LogoMain from 'core/components/LogoMain'
 import SponsorsBlock from 'core/blocks/other/SponsorsBlock'
+import TranslatorsBlock from 'core/blocks/other/TranslatorsBlock'
 import NewsletterBlock from 'core/blocks/other/NewsletterBlock'
 import IntroductionFooter from 'core/pages/IntroductionFooter'
 
@@ -21,6 +22,7 @@ const SurveyIntroBlock = ({ data }) => (
         </div>
         <NewsletterBlock />
         <SponsorsBlock />
+        <TranslatorsBlock />
     </div>
 )
 

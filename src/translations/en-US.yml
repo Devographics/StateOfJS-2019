@@ -992,6 +992,8 @@ translations:
       t: 'Next:'
     - key: general.start
       t: Start
+    - key: general.translation_help
+      t: Translation Help
 
     # partners
     - key: partners.our_partners
