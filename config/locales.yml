@@ -1,6 +1,9 @@
 - locale: en-US
   path: default
   label: English
+- locale: it-IT
+  path: it
+  label: Italian
 - locale: zh-Hans
   path: zh
   label: 简体中文
@@ -13,3 +16,4 @@
 - locale: pt-BR
   path: pt
   label: Português
+
