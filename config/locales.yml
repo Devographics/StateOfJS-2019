@@ -16,4 +16,6 @@
 - locale: pt-BR
   path: pt
   label: Português
-
+- locale: ru-RU
+  path: ru
+  label: Русский
