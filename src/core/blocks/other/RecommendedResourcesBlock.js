@@ -62,7 +62,7 @@ const RecommendedResourcesBlock = ({ block, data }) => {
                                                 backgroundImage: `url(${resource.image})`
                                             }}
                                             title={resource.name}
-                                        />
+                                        >{resource.name}</a>
                                     </div>
                                 </ResourceImage>
                                 <ResourceContent className="Resource__content">
@@ -145,6 +145,9 @@ const ResourceImage = styled.div`
         height: 0;
         background-position: center center;
         background-size: cover;
+        line-height: 0; 
+        font-size: 0;
+        color: transparent; 
     }
 
     img,

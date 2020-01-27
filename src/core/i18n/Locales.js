@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
-import Link from 'core/components/LocaleLink'
 import locales from '../../../config/locales.yml'
 import { usePageContext } from 'core/helpers/pageContext'
+import { Link } from 'gatsby'
 
 const Container = styled.div`
     display: grid;
