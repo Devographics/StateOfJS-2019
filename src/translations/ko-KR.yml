@@ -583,6 +583,24 @@ translations:
     - key: toolExperience.total_respondents.extrashort
       t: 전체 응답
 
+    # experience graph
+    - key: block.title.toolExperienceGraph
+      t: ${name} 경험 그래프
+    - key: block.description.toolExperienceGraph
+      t: |
+        최소 두 해 이상 연이어 설문에 참여한 응답자의
+        **${name}** 에 대한 경험 변화입니다.
+    - key: toolExperienceGraph.node.tooltip
+      t: |
+        ${year - 1} 혹은 ${year + 1}에도 참여했던
+        ${count}명의 응답자가 ${year}년에는
+        "${experience}"(이)라고 응답함
+    - key: toolExperienceGraph.link.tooltip
+      t: |
+        ${previousYear}년에 "${previousExperience}"(이)라고 응답했던
+        ${count}명의 응답자가
+        ${nextYear}년에는 "${nextExperience}"(이)라고 응답함
+
     # other category tools
     - key: block.title.category-other-tools
       t: 기타 툴
@@ -1023,3 +1041,9 @@ translations:
     # other
     - key: bio.guest_visualizer
       t: 객원 전문가
+    - key: footer.state_of_js_link
+      t: © 2019 <a href="${link}">State of JavaScript</a>.
+    - key: footer.leave_an_issue
+      t:  질문이 있나요? 버그를 발견하셨나요? <a href="${link}">이슈를 남겨주세요</a>.
+    - key: footer.netlify
+      t: 이 사이트는 <a href="${link}">Netlify</a>에서 실행됩니다.
