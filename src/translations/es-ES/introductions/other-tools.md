@@ -4,4 +4,4 @@ page: other_tools
 locale: es-ES
 ---
 
-You always need a text editor to code, but the process of writing JavaScript also relies on browsers and devtools to a greater extent than probably any other language. 
+Siempre necesita un editor de texto para codificar, pero el proceso de escribir JavaScript también se basa en navegadores y herramientas de desarrollo en mayor medida que probablemente cualquier otro idioma.

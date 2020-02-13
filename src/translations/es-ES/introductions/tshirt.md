@@ -4,10 +4,10 @@ page: tshirt
 locale: es-ES
 ---
 
-## The State of JavaScript T-shirt: Support the survey and look good in the process!
+## La camiseta de State of JavaScript: ¡apoya la encuesta y luce bien en el proceso!
 
-This year we're releasing our very own **👕 State of JavaScript T-shirt 👕** to finance our efforts!
+¡Este año estaremos lanzando nuestra propia **👕 Camiseta de State of JavaScript 👕** para financiar nuestros esfuerzos!
 
-The shirt features a ”periodic table of JavaScript” that lists the most popular libraries grouped by category, along with their GitHub stars counts (in thousands).
+La camiseta presenta una "tabla periódica de JavaScript" que enumera las bibliotecas más populares agrupadas por categoría, junto con sus recuentos de estrellas de GitHub (en miles).
 
-This shirt is a great way to familiarize yourself with the JavaScript ecosystem, and maybe even strike up a conversation with other like-minded JavaScript developers!
+¡Esta camiseta es una excelente manera de familiarizarse con el ecosistema de JavaScript, y tal vez incluso entablar una conversación con otros desarrolladores de JavaScript de ideas afines!

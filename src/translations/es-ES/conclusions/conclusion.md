@@ -4,12 +4,12 @@ page: conclusion
 locale: es-ES
 ---
 
-You know how you sometimes start tweaking a few lines of code here and there, then realize a couple functions could use some refactoring, and then one things leading to another you find yourself a few days later in the process of setting up a brand new stack complete with a database and GraphQL API?
+¿Sabes cómo a veces comienzas a ajustar algunas líneas de código aquí y allá, luego te das cuenta de que un par de funciones podrían ser refactorizadas, y luego, una cosa que lleva a otra, te encuentras unos días más tarde en el proceso de configurar una nueva con un nuevo stack completo con una base de datos y API GraphQL?
 
-This is what happened to us this year. And while it resulted in quite a few stressful evenings as we tried to wrap this up and release the State of JavaScript 2019 results in, well, 2019; it also means we now have a much more powerful and flexible stack to collect and analyze data going forward.
+Esto es lo que nos pasó este año. Y aunque resultó en algunas noches estresantes mientras intentábamos concluir esto y publicar los resultados del Estado de JavaScript 2019, bueno en el 2019; También significa que ahora tenemos un stack mucho más potente y flexible para recopilar y analizar datos en el futuro.
 
-This will come in handy to analyze the evolution of all the new tools starting to make waves such as Svelte, Stencil, Sporky, Nest, or Flutter. And yes, I did just make up one of those five, but admit it: you had a moment of doubt didn’t you?
+Esto será útil para analizar la evolución de todas las nuevas herramientas que comienzan a hacer eco como Svelte, Stencil, Sporky, Nest o Flutter. Y sí, acabo de inventar uno de esos cinco, pero admítelo: lo dudaste por un momento, ¿no?
 
-But don’t worry. No matter how many weirdly-named libraries the community keeps throwing at you, we’ll be there to help make sense of all this chaos… that is, if we’re not too busy going through yet another refactoring to get our code just perfect!
+Pero no te preocupes. No importa cuántas bibliotecas con nombres raros la comunidad te siga lanzando, estaremos allí para ayudar a dar sentido a todo este caos... es decir, si no estamos demasiado ocupados en otra refactorización para que nuestro código sea perfecto!
 
 <span class="conclusion__byline">– Sacha & Raphaël</span>

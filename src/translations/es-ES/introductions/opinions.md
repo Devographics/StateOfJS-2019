@@ -4,6 +4,6 @@ page: opinions
 locale: es-ES
 ---
 
-Sometimes the best way to take the pulse of a community is to just go ahead and ask. From your opinion about JavaScript's rate of change, to more thorny questions like whether JavaScript is moving in the right direction, you finally had a chance to tell us exactly what's on your mind!
+A veces, la mejor manera de tomar el pulso de una comunidad es simplemente tomar la iniciativa y preguntar. Desde tu opinión sobre la tasa de cambio de JavaScript, hasta las preguntas más espinosas como si JavaScript se está moviendo en la dirección correcta, ¡finalmente se tuvo la oportunidad de decirnos exactamente lo que está pensando!
 
-For each of the following statements, we asked you how much you agreed on a 5-point scale. 
+Para cada una de las siguientes afirmaciones, preguntamos cuánto acuerda en una escala de 5 puntos.

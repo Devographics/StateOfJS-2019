@@ -4,4 +4,4 @@ page: demographics
 locale: es-ES
 ---
 
-This year's State of JavaScript was the survey's fourth edition, and it reached 21,717 respondents. It was interesting to see that despite few people identifying as pure back-end developers, our respondents still feel quite comfortable dealing with development on the server.
+El State of JavaScript de este año fue la cuarta edición de la encuesta, y llegó a 21,717 encuestados. Fue interesante ver que a pesar de que pocas personas se identifican como desarrolladores de back-end puros, nuestros encuestados todavía se sienten bastante cómodos tratando con el desarrollo en el servidor.

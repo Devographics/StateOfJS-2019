@@ -4,4 +4,4 @@ page:   data_structures
 locale: es-ES
 ---
 
-How you store and manipulate data.
+Cómo almacenas y manipulas los datos.

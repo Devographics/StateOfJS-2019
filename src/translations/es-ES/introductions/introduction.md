@@ -4,35 +4,37 @@ page: introduction
 locale: es-ES
 ---
 
-<span class="first-letter">W</span>e were pretty sure 2018 would be the last time we did this survey. After all, the JavaScript ecosystem can’t very well keep changing *again*, can it?
+<span class="first-letter">N</span>osotros estábamos bastante seguros de que el 2018 sería la última vez que realizariamos esta encuesta. Después de todo, el ecosistema de JavaScript no puede seguir cambiando *otra vez*, ¿verdad?
 
-But what do you know, turns out JavaScript isn’t quite done changing just yet! And so after over 21,717 respondents took this year's survey we had to dig up our components and charts, curse us-from-a-year-ago for writing such crappy code, and get to work digging through the data. 
+Pero, ¿qué sabes? ¡resulta que JavaScript todavía no ha cambiado completamente! Y así, después de que más de 21,717 personas respondieron la encuesta de este año, tuvimos que desenterrar nuestros componentes y gráficos, maldecir al nosotros-de-hace-un-año por escribir un código tan malo y ponernos manos a la obra para investigar los datos.
 
-We had some help though. The amazing [Amelia Wattenberger](http://wattenberger.com/) joined the team as a guest dataviz expert to contribute a fresh new look on our data, and you’ll be able to explore her work in the **Overview** section.
+Aunque tuvimos algo de ayuda. La increíble [Amelia Wattenberger](http://wattenberger.com/) se unió al equipo como experta invitada de dataviz para contribuir con una nueva y fresca mirada a nuestros datos, y podrás explorar su trabajo en la sección **Resumen**.
 
 We also borrowed a couple new visualisations from the State of JS's sister survey, the [State of CSS](https://2019.stateofcss.com/). We recommend checking it out if you haven’t done so yet!
 
-### Team
+También tomamos prestadas un par de nuevas visualizaciones de la encuesta hermana del State of JS, el [State of CSS](https://2019.stateofcss.com/). ¡Recomendamos echarle un vistazo si aún no lo has hecho!
 
-The State of JavaScript Survey is created and maintained by:
+### Equipo
 
-- [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
-- [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
+La Encuesta de State of JavaScript es creada y mantenida por:
 
-Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
+- [Sacha Greif](https://twitter.com/sachagreif) (me!): Diseño, escritura, codificación.
+- [Raphaël Benitte](https://twitter.com/benitteraphael): Análisis de datos, visualizaciones de datos.
 
-### Download Our Data
+Asegúrate de consultar mi framework JavaScript React/GraphQL, [Vulcan.js](http://vulcanjs.org), así como la biblioteca de visualización de datos React de Raphaël [nivo](https://nivo.rocks).
 
-You can [download the raw JSON data for this survey](https://www.kaggle.com/sachag/state-of-js-2019). Let us know if you end up making your own data visualizations!
+### Descarga Nuestros Datos
 
-### Completion Percentages
+Puedes [descargar los datos JSON sin procesar para esta encuesta](https://www.kaggle.com/sachag/state-of-js-2019). ¡Haznos saber si terminas haciendo tus propias visualizaciones de datos!
 
-Because all survey questions could be skipped, some questions ended up with fewer answers than others. So we've added a small pie chart indicator to each question to let you know which proportion of total respondents answered it.  
+### Porcentajes de Finalización
 
-### Credits & Stuff
+Debido a que todas las preguntas de la encuesta podrían saltarse, algunas preguntas terminaron con menos respuestas que otras. Por lo tanto, hemos agregado un pequeño indicador de gráfico circular a cada pregunta para informarte qué proporción del total de encuestados respondió.
 
-The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofjs.com)
+### Créditos y Adicionales
 
-And now, let's see what JavaScript has been up to this year!
+El sitio está configurado en IBM Plex Mono. ¿Preguntas? ¿realimentación? [¡Pónte en contacto!](mailto:hello@stateofjs.com)
+
+¡Y ahora, veamos qué ha estado haciendo JavaScript este año!
 
 <span class="conclusion__byline">– Sacha and Raphaël</span>

@@ -4,4 +4,4 @@ page:   syntax
 locale: es-ES
 ---
 
-The grammar of JavaScript.
+La gramática de JavaScript.
