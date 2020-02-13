@@ -44,4 +44,10 @@
       - name: lex111
         github: https://github.com/lex111
       - name: Userbit
-        github: https://github.com/Userbit        
+        github: https://github.com/Userbit
+- locale: es-ES
+  path: es
+  label: Español
+  translators:
+      - name: wemf
+        github: https://github.com/wemf        
