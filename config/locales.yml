@@ -45,3 +45,9 @@
         github: https://github.com/lex111
       - name: Userbit
         github: https://github.com/Userbit        
+- locale: nl-NL
+  path: nl
+  label: Nederlands
+  translators:
+      - name: casvaniersel
+        github: https://github.com/casvaniersel
