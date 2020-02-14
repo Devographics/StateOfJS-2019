@@ -315,81 +315,81 @@ translations:
     - key: page.syntax
       t: Syntax
     - key: page.language
-      t: Language
+      t: Taal
     - key: page.data_structures
-      t: Data Structures
+      t: Data structuren
     - key: page.browser_apis
       t: Browser APIs
 
     - key: block.description.decorators
       t: >
-        In its simplest form, a decorator is simply a way of 
-        wrapping one piece of code with another — literally “decorating” it. 
+        In de simpelste vorm is een decorator een stukje code om een ander stuk code
+        in te verpakken en het letterlijk te "decoreren".
 
     - key: feature.learn_more
-      t: Learn More (MDN)
+      t: Lees meer (MDN)
     - key: feature.mdn_link
       t: MDN
     - key: feature.caniuse_link
       t: CanIUse
     - key: feature.specification_link
-      t: W3C Specification
+      t: W3C specificatie
 
     - key: featureExperienceSimplified.used_it.long
-      t: Have used it
+      t: Heb ik gebruikt
     - key: featureExperienceSimplified.know_it.long
-      t: Know about it
+      t: Ik weet ervan
     - key: features.usage.ratio
-      t: Usage Ratio
+      t: Gebruiksratio
 
     - key: featureExperience.used_it
-      t: Have used it
+      t: Heb ik gebruikt
     - key: featureExperience.know_not_used
-      t: Know what it is, but haven't used it
+      t: Ik weet wat het is, maar heb het nooit gebruikt
     - key: featureExperience.never_heard_not_sure
-      t: Never heard of it/Not sure what it is
+      t: Nooit van gehoord/Weet niet zeker wat het is
 
     - key: featureExperience.used_it.long
-      t: Have used it
+      t: Heb ik gebruikt
     - key: featureExperience.know_not_used.long
-      t: Know what it is, but haven't used it
+      t: Ik weet wat het is, maar heb het nooit gebruikt
     - key: featureExperience.never_heard_not_sure.long
-      t: Never heard of it/Not sure what it is
+      t: Nooit van gehoord/Weet niet zeker wat het is
 
     # Feature Overview
     - key: block.title.featuresOverview
-      t: Usage Overview
+      t: Gebruiksoverzicht
     - key: block.description.featuresOverview
       t: >
-          This chart presents the various adoption rates for all features, grouped by category.
+          Deze grafiek toont de verschillende adoptie gradaties voor alle features, gegroepeerd op categorie.
 
 
-          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
+          De grootte van de <span class="text-teal-darker text-bold">buitenste cirkel</span> correspondeert met het totaal aantal gebruikers die iets weten van
+          een feature, terwijl de <span class="text-teal text-bold">binnenste cirkel</span> de gebruikers vertegenwoordigd die het al eens hebben gebruikt.
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents.
+          Hover over elke node om de details te zien samen met de <span class="text-blackpink text-bold">overlay</span> die het totaal aantal respondenten laat zien.
 
     # Features Section Overview
     - key: block.title.featuresSectionOverview
-      t: Usage Overview
+      t: Gebruiksoverzicht
     - key: block.description.featuresSectionOverview
       t: >
-          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
+          De grootte van de <span class="text-teal-darker text-bold">buitenste cirkel</span> correspondeert met het totaal aantal gebruikers die iets weten van
+          een feature, terwijl de <span class="text-teal text-bold">binnenste cirkel</span> de gebruikers vertegenwoordigd die het al eens hebben gebruikt.
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackred text-bold">overlay</span> representing the total number of survey respondents.
+          Hover over elke node om de details te zien samen met de <span class="text-blackpink text-bold">overlay</span> die het totaal aantal respondenten laat zien.
 
     - key: block.title.featuresExperienceHeatmap
-      t: Usage by Years Of Experience
+      t: Gebruik bij aantal jaren ervaring
     - key: block.description.featuresExperienceHeatmap
       t: |
-          The “overall” column shows overall usage for each feature (respondents who selected “have used it”),
-          while the following columns show the usage ratio for each “years of experience” bracket.
+          De “overall” kolom toont algemeen gebruik van een feature (respondenten die “heb ik gebruikt” hebben ingevuld),
+          terwijl de volgende kolommen de gebruiksratio voor elk “aantal jaren ervaring” haakje tonen.
 
-          A brighter <span class="text-teal text-bold">teal</span> background indicates
-          a higher-than-overall-average ratio for a given bracket.
+          Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+          een hoger-dan-algemeen gemiddelde ratio voor een gegeven haakje.
 
     ###########################################################################
     # Tools & Methodologies
