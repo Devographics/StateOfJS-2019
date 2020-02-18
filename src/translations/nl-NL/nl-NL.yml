@@ -401,216 +401,216 @@ translations:
     - key: block.tool.github_link
       t: GitHub
     - key: block.tool.github_stars
-      t: stars
+      t: sterren
     - key: block.tool.homepage_link
-      t: Homepage
+      t: Homepagina
     - key: block.tool.npm_link
       t: NPM
 
     - key: block.title.other-methodologies
-      t: Other Methodologies
+      t: Andere methodes
 
     - key: block.title.companySize_heatmap
-      t: Usage by Company Size
+      t: Gebruik bij bedrijfsgrootte
     - key: block.description.companySize_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          company size ranges.
+          Voor elke technologie, hoe het gebruik is verspreid over de respondenten die verschillende
+          bedrijfsgroottes hebben aangegeven.
 
-      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
-      # while the following columns show the usage ratio for each “years of experience” bracket.
+      # De “overall” kolom toont algemeen gebruik voor elke technologie (respondenten die “zou ik weer gebruiken” of “zal ik niet meer gebruiken” hebben geselecteerd),
+      # terwijl de volgende kolommen de gebruiksverhouding tonen voor elk “jaren ervaring” haakje.
 
-      # A brighter <span class="text-teal text-bold">teal</span> background indicates
-      # a higher-than-overall-average ratio for a given bracket.
+      # Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+      # een hoger-dan-algemeen-gemiddelde verhouding voor een gegeven haakje.
 
 
     - key: block.title.workExperience_heatmap
-      t: Usage by Years Of Experience
+      t: Gebruik bij jaren ervaring
     - key: block.description.workExperience_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          experience ranges. Note that the experience in question here is general JavaScript experience, not
-          experience with a specific technology. 
+          Voor elke technologie, hoe het gebruik is verspreid over de respondenten die verschillend
+          bereik in ervaring hebben aangegeven. Let op dat de ervaring in kwestie hier enkel algemene JavaScript ervaring is, niet
+          de ervaring met een specifieke technologie.
 
-      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
-      # while the following columns show the usage ratio for each “years of experience” bracket.
+      # De “overall” kolom toont algemeen gebruik voor elke technologie (respondenten die “zou ik weer gebruiken” of “zal ik niet meer gebruiken” hebben geselecteerd),
+      # terwijl de volgende kolommen de gebruiksverhouding tonen voor elk “jaren ervaring” haakje.
 
-      # A brighter <span class="text-teal text-bold">teal</span> background indicates
-      # a higher-than-overall-average ratio for a given bracket.
+      # Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+      # een hoger-dan-algemeen-gemiddelde verhouding voor een gegeven haakje.
 
     - key: block.title.salary_heatmap
-      t: Usage by Salary Range
+      t: Gebruik bij salarisschaal
     - key: block.description.salary_heatmap
       t: |
 
-          For each technology, how usage is spread among respondents who picked different
-          salary ranges.
+          Voor elke technologie, hoe het gebruik is verspreid over de respondenten die een verschillende
+          salarisschaal hebben aangegeven.
 
-      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
-      # while the following columns show the usage ratio for each “yearly salary” bracket.
+      # De “overall” kolom toont algemeen gebruik voor elke technologie (respondenten die “zou ik weer gebruiken” of “zal ik niet meer gebruiken” hebben geselecteerd),
+      # terwijl de volgende kolommen de gebruiksverhouding tonen voor elk “jaren ervaring” haakje.
 
-      # A brighter <span class="text-teal text-bold">teal</span> background indicates
-      # a higher-than-overall-average ratio for a given bracket.
+      # Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+      # een hoger-dan-algemeen-gemiddelde verhouding voor een gegeven haakje.
 
     # rankings/bump chart
     - key: block.title.toolExperienceRanking
-      t: Rankings
+      t: Beoordeling
     - key: block.description.toolExperienceRanking
       t: >
-          Awareness, interest, and satisfaction ratio rankings.
+          Bewustzijn, interesse, en tevredenheid verhoudingsbeoordeling.
     - key: opinions.legends.awareness_ratio
-      t: Awareness
+      t: Bewustzijn
     - key: opinions.legends.interest_ratio
-      t: Interest
+      t: Interesse
     - key: opinions.legends.satisfaction_ratio
-      t: Satisfaction
+      t: Tevredenheid
 
     # overview
     - key: block.title.toolsSectionOverview
-      t: Category Overview
+      t: Categorieën overzicht
     - key: block.description.toolsSectionOverview
       t: >
-          Overview of opinions on the technologies surveyed. Darker segments represent positive opinions,
-          while lighter segments correspond to negative sentiment.
+          Overzicht van de meningen over de bevraagde technologieën. Donkere delen bevatten positieve meningen en
+          lichtere delen corresponderen met negatieve meningen.
 
     # Arrows (Movement over time)
     - key: block.title.toolsArrow
-      t: Changes Over Time
+      t: Verandering over tijd
     # - key: block.description.toolsArrow
     #   t: >
     #       How has the ecosystem changed over three years?
     - key: block.description.toolsArrow
       t: >
-          Each line goes from 2016 to 2019. A higher point means a technology has been used by more people,
-          and a point further to the right means more users want to learn it; or have used it and would use it again.
+          Elke lijn gaat van 2016 tot 2019. Een hoger punt betekent dat een technologie door meerdere mensen gebruikt wordt 
+          en een punt verder naar rechts dat meer mensen het willen leren; of dat ze het al hebben gebruikt en het weer zouden willen gebruiken.
 
     - key: amelia.bio
       t: >
-        Amelia Wattenberger is a frontend developer and designer focused on data visualization.
-        She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
-        a guide to creating your own data visualizations,
-        and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger)
-        and [her site](https://wattenberger.com/).
+        Amelia Wattenberger is een front end ontwikkelaar en ontwerper met focus op data visualisatie.
+        Ze is de auteur van [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
+        een gids om je eigen data visualisaties te maken,
+        en ze deelt haar gedachten en how-tos op [Twitter](https://twitter.com/Wattenberger)
+        en [haar website](https://wattenberger.com/).
 
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
-      t: Satisfaction vs Usage
+      t: Tevredenheid vs gebruik
     - key: block.description.scatterplotOverview.satisfaction
       t: >
-          This chart shows each technology’s **satisfaction ratio** over its total **user count**.
-          It can be divided into four quadrants:
+          Deze grafiek toont van elke technologie zijn **tevredenheids verhouding** van het totale **gebruikersaantal**.
+          Hij kan worden verdeeld in vier quadranten:
 
-          - **ASSESS**: Low usage, high satisfaction. Technologies worth keeping an eye on.
+          - **Beoordeel**: Weinig gebruikt, hoge tevredenheid. Technologie waarvan je op de hoogte wil blijven.
 
-          - **ADOPT**: High usage, high satisfaction. Safe technologies to adopt.
+          - **Adopteer**: Veel gebruikt, hoge tevredenheid. Veilig om deze technologie te adopteren.
 
-          - **AVOID**: Low usage, low satisfaction. Technologies probably best avoided currently.
+          - **Vermijd**: Weinig gebruikt, lage tevredenheid. Beter om deze technologie te vermijden.
 
-          - **ANALYZE**: High usage, low satisfaction. Reassess these technologies if you're currently using them.
+          - **Analyseer**: Veel gebruikt, lage tevredenheid. Bedenk goed of je deze technologie wil blijven gebruiken.
     - key: block.description.scatterplotOverview.interest
       t: >
-          This chart shows each technology’s **interest ratio** over its total **user count** (as defined by respondents who are aware of a technology but *haven't* used it yet).
+          Deze grafiek toont van elke technologie zijn **interesse verhouding** van het totale **gebruikersaantal** (zoas gedefinieerd door respondenten die zich bewust zijn van een technologie maar deze *nog niet* gebruikt hebben).
 
-          (Note that low user numbers can be due to either an unknown technology; or a technology with a lot of respondents already using it.)
+          (Let op dat lage gebruiksersaantallen kunnen ontstaan doordat een technologie onbekend is; of een technologie met heel veel respondenten die er al gebruik van maken.)
 
     - key: quadrants.assess
-      t: Assess
+      t: Beoordeel
     - key: quadrants.adopt
-      t: Adopt
+      t: Adopteer
     - key: quadrants.avoid
-      t: Avoid
+      t: Vermijd
     - key: quadrants.analyze
-      t: Analyze
+      t: Analyseer
 
     # happiness
     - key: block.title.happiness
-      t: Overall Happiness
+      t: Algemene tevredenheid
     - key: block.description.happiness
       t: |
-          On a scale of one (very unhappy) to five (very happy), how happy are developers with the current overall state of this category?
+          Op een schaal van één (zeer ontevreden) tot vijf (zeer tevreden), hoe tevreden zijn ontwikkelaar met de huidige algemene status van deze categorie?
 
     # experience
     - key: block.title.toolExperience
-      t: ${name} Experience Over Time
+      t: ${name} Ervaring over tijd
     - key: block.description.toolExperience
-      t: Respondent's experience with ${name}.
+      t: Ervaring van de respondent met ${name}.
 
     - key: toolExperience.never_heard.long
-      t: I've never heard of it
+      t: Ik heb er nog nooit van gehoord
     - key: toolExperience.never_heard.short
-      t: Never heard of it
+      t: Nooit van gehoord
     - key: toolExperience.never_heard.extrashort
-      t: Never heard
+      t: Nooit gehoord
 
     - key: toolExperience.not_interested.long
-      t: I've HEARD of it, and am NOT interested
+      t: Ik heb ervan GEHOORD, maar ben NIET geïntresseerd
     - key: toolExperience.not_interested.short
-      t: Heard of it, not interested
+      t: Van gehoord, niet geïntresseerd
     - key: toolExperience.not_interested.extrashort
-      t: Not interested
+      t: Niet geïntresseerd
 
     - key: toolExperience.interested.long
-      t: I've HEARD of it, and WOULD like to learn it
+      t: Ik heb ervan GEHOORD en ZOU het graag willen leren
     - key: toolExperience.interested.short
-      t: Heard of it, would like to learn
+      t: Van gehoord, wil graag leren
     - key: toolExperience.interested.extrashort
-      t: Interested
+      t: Interessant
 
     - key: toolExperience.would_use.long
-      t: I've USED it before, and WOULD use it again
+      t: Ik heb het eerder GEBRUIKT en ZOU het weer gebruiken
     - key: toolExperience.would_use.short
-      t: Used it, would use again
+      t: Gebruikt, zou het weer gebruiken
     - key: toolExperience.would_use.extrashort
-      t: Would use again
+      t: Zou het weer gebruiken
 
     - key: toolExperience.would_not_use.long
-      t: I've USED it before, and would NOT use it again
+      t: Ik heb het GEBRUIKT en zou het NIET weer gebruiken
     - key: toolExperience.would_not_use.short
-      t: Used it, would not use again
+      t: Gebruikt, zou het niet weer gebruiken
     - key: toolExperience.would_not_use.extrashort
-      t: Would not use
+      t: Zou het niet weer gebruiken
 
     - key: toolExperience.negative_opinion.extrashort
-      t: Negative opinions
+      t: Negatieve meningen
     - key: toolExperience.positive_opinion.extrashort
-      t: Positive opinions
+      t: Positieve meningen
     - key: toolExperience.have_not_used.extrashort
-      t: Have not used
+      t: Heb niet gebruikt
     - key: toolExperience.have_used.extrashort
-      t: Have used
+      t: Heb gebruikt
 
     - key: toolExperience.total_respondents.long
-      t: Total Respondents
+      t: Totaal aantal respondenten
     - key: toolExperience.total_respondents.short
-      t: Total Respondents
+      t: Totaal aantal respondenten
     - key: toolExperience.total_respondents.extrashort
-      t: Total Respondents
+      t: Totaal aantal respondenten
 
     # experience graph
     - key: block.title.toolExperienceGraph
-      t: ${name} Experience Graph
+      t: ${name} Ervaringsgrafiek
     - key: block.description.toolExperienceGraph
       t: |
-        Evolution of respondents' experience with **${name}** for users who participated
-        to the survey for at least two consecutive years.
+        Evolutie van de ervaring van de respondenten met **${name}** voor gebruikers die deelnemen
+        aan de enquête voor tenminste het tweede jaar.
     - key: toolExperienceGraph.node.tooltip
       t: |
-        in ${year}, ${count} respondents who also participated
-        to the ${year - 1} or ${year + 1} survey answered:
+        in ${year}, ${count} respondenten die ook hebben deelgenomen 
+        aan de ${year - 1} of ${year + 1} enquête hebben geantwoord:
         "${experience}"
     - key: toolExperienceGraph.link.tooltip
       t: |
-        ${count} respondents
-        answered "${previousExperience}" in ${previousYear},
-        answered "${nextExperience}" in ${nextYear}
+        ${count} respondenten
+        hebben geantwoord "${previousExperience}" in ${previousYear},
+        hebben geantwoord "${nextExperience}" in ${nextYear}
 
     # other category tools
     - key: block.title.category-other-tools
-      t: Other Tools
+      t: Andere tools
     - key: block.description.category-other-tools
-      t: Other tools in this category (freeform answers).
+      t: Andere tools in deze categorie (vrije antwoorden).
 
     ###########################################################################
     # Other Tools
