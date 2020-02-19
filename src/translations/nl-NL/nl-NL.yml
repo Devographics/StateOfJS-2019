@@ -610,56 +610,56 @@ translations:
     - key: block.title.category-other-tools
       t: Andere tools
     - key: block.description.category-other-tools
-      t: Andere tools in deze categorie (vrije antwoorden).
+      t: Andere tools in deze categorie (vrij veld).
 
     ###########################################################################
     # Other Tools
     ###########################################################################
 
     - key: block.title.utilities
-      t: Utilities
+      t: Gereedschap
     - key: block.description.utilities
-      t: Which utility libraries do you regularly use?
+      t: Welke ondersteunende bibliotheken gebruik je regelmatig?
     - key: block.title.utilities_others
-      t: Other Utilities
+      t: Ander gereedschap
     - key: block.description.utilities_others
-      t: Other utilities (freeform field).
+      t: Ander gereedschap (vrij veld).
 
     - key: block.title.text_editors
-      t: Text Editors
+      t: Teksteditor
     - key: block.description.text_editors
-      t: Which text editor(s) do you regularly use?
+      t: Welke teksteditor(s) gebruik je regelmatig?
     - key: block.title.text_editors_others
-      t: Other Text Editors
+      t: Andere teksteditors
     - key: block.description.text_editors_others
-      t: Other answers (freeform field).
+      t: Ander antwoord (vrij veld).
 
     - key: block.title.browsers
       t: Browsers
     - key: block.description.browsers
-      t: Which browser(s) do you primarily work in during initial development?
+      t: Welke browser(s) gebruik je primair tijdens de initiële ontwikkelfase?
     - key: block.title.browsers_others
-      t: Other Browsers
+      t: Andere browsers
     - key: block.description.browsers_others
-      t: Other answers (freeform field).
+      t: Ander antwoord (vrij veld).
 
     - key: block.title.build_tools
-      t: Build Tools
+      t: Build tools
     - key: block.description.build_tools
-      t: Which build tools do you use?
+      t: Welke build tools gebruik je?
     - key: block.title.build_tools_others
-      t: Other Build Tools
+      t: Andere build tools
     - key: block.description.build_tools_others
-      t: Other answers (freeform field).
+      t: Ander antwoord (vrij veld).
 
     - key: block.title.non_js_languages
-      t: Non-JavaScript Languages
+      t: Niet-JavaScript talen
     - key: block.description.non_js_languages
-      t: Which other programming languages do you use?
+      t: Welke andere programmeertalen gebruik je?
     - key: block.title.non_js_languages_others
-      t: Other Languages
+      t: Andere talen
     - key: block.description.non_js_languages_others
-      t: Other answers (freeform field).
+      t: Ander antwoord (vrij veld).
 
 
     ###########################################################################
