@@ -668,188 +668,188 @@ translations:
 
     # blogs & magazines
     - key: block.title.blogs_news_magazines
-      t: Blogs & Magazines
+      t: Blogs & tijdschriften
     - key: block.description.blogs_news_magazines
-      t: Which JS-related blogs/magazines/etc. do you read?
+      t: Welke JS-gerelateerde blogs/tijdschriften/etc. lees je?
     - key: block.title.blogs_news_magazines_others
-      t: Other Blogs & Magazines
+      t: Andere blogs & tijdschriten
     - key: block.description.blogs_news_magazines_others
-      t: Other answers (freeform field).
+      t: Andere antwoorden (vrij veld).
 
     # sites & courses
     - key: block.title.sites_courses
-      t: Sites & Courses
+      t: Sites & cursussen
     - key: block.description.sites_courses
-      t: Which JS-related sites/courses/etc. do you consult?
+      t: Welke JS-gerelateerde sites/cursussen/etc. raadpleeg je?
     - key: block.title.sites_courses_others
-      t: Other Sites & Courses
+      t: Andere sites & cursussen
     - key: block.description.sites_courses_others
-      t: Other answers (freeform field).
+      t: Andere antwoorden (vrij veld).
 
     # podcasts
     - key: block.title.podcasts
       t: Podcasts
     - key: block.description.podcasts
-      t: Which JavaScript or programming-related podcasts do you listen to?
+      t: Welke JavaScript of programmeer-gerelateerde podcasts luister je?
     - key: block.title.podcasts_others
-      t: Other Podcasts
+      t: Andere podcasts
     - key: block.description.podcasts_others
-      t: Other answers (freeform field).
+      t: Andere antwoorden (vrij veld).
 
     ###########################################################################
     # Opinions
     ###########################################################################
 
     - key: block.title.easy-to-learn
-      t: Learning Curve
+      t: Leercurve
     - key: block.description.easy-to-learn
-      t: JavaScript is easy to learn”
+      t: “JavaScript is makkelijk om te leren”
 
     - key: block.title.js_moving_in_right_direction
-      t: Direction
+      t: Richting
     - key: block.description.js_moving_in_right_direction
-      t: “JavaScript is moving in the right direction”
+      t: “JavaScript is beweegt zich in de juiste richting”
 
     - key: block.title.building_js_apps_overly_complex
-      t: Complexity
+      t: Complexiteit
     - key: block.description.building_js_apps_overly_complex
-      t: “Building JavaScript apps is overly complex right now”
+      t: “Het bouwen van JavaScript apps is veel te complex op dit moment”
 
     - key: block.title.js_over_used_online
-      t: Usage
+      t: Gebruik
     - key: block.description.js_over_used_online
-      t: “JavaScript is over-used online”
+      t: “JavaScript wordt teveel gebruikt online”
 
     - key: block.title.enjoy_building_js_apps
-      t: Enjoyment
+      t: Plezier
     - key: block.description.enjoy_building_js_apps
-      t: “I enjoy building JavaScript apps”
+      t: “Ik haal plezier uit het bouwen van JavaScript apps”
 
     - key: block.title.would_like_js_to_be_main_lang
-      t: Main Language
+      t: Primaire taal
     - key: block.description.would_like_js_to_be_main_lang
-      t: “I would like JavaScript to be my main programming language”
+      t: “Ik zou graag willen dat JavaScript mijn primaire programmeertaal is”
 
     - key: block.title.js_ecosystem_changing_to_fast
-      t: Rate of Change
+      t: Snelheid van verandering
     - key: block.description.js_ecosystem_changing_to_fast
-      t: “The JavaScript ecosystem is changing too fast”
+      t: “Het JavaScript ecosysteem veranderd te snel”
 
     - key: block.title.missing-features
-      t: Missing Features
+      t: Missende functies
     - key: block.description.missing-features
-      t: What do developers feel is currently missing from JavaScript?
+      t: Wat denken ontwikkelaars dat er op dit moment mist in JavaScript?
 
       # opinion scale
     - key: opinions.0.short
-      t: Strongly Disagree
+      t: Helemaal oneens
     - key: opinions.1.short
-      t: Disagree
+      t: Oneens
     - key: opinions.2.short
-      t: Neutral
+      t: Neutraal
     - key: opinions.3.short
-      t: Agree
+      t: Mee eens
     - key: opinions.4.short
-      t: Strongly Agree
+      t: Helemaal eens
 
     - key: opinions.0.long
-      t: Strongly Disagree
+      t: Helemaal mee oneens
     - key: opinions.1.long
-      t: Disagree
+      t: Niet mee eens
     - key: opinions.2.long
-      t: Neutral
+      t: Neutraal
     - key: opinions.3.long
-      t: Agree
+      t: Mee eens
     - key: opinions.4.long
-      t: Strongly Agree
+      t: Helemaal mee eens
 
     ###########################################################################
     # Awards
     ###########################################################################
 
     - key: awards.runner_ups
-      t: Runner Ups
+      t: Tweede plaats
 
     # feature_adoption
     - key: award.feature_adoption_award.title
-      t: Most Adopted Feature
+      t: Meest gebruikte functie
     - key: award.feature_adoption_award.description
       t: |
-          Awarded to the most adopted JavaScript feature.
+          Uitgereikt aan de meest gebruikte JavaScript functie.
     - key: award.feature_adoption_award.comment
       t: |
-          With **${items[0].value}** of users using it ${items[0].name}
-          is the most used JavaScript feature this year.
+          Met **${items[0].value}** gebruikers die het inzetten is ${items[0].name}
+          de meest gebruikte JavaScript functie dit jaar.
 
     # tool_satisfaction
     - key: award.tool_satisfaction_award.title
-      t: Highest Satisfaction
+      t: Hoogste tevredenheid
     - key: award.tool_satisfaction_award.description
       t: |
-          Awarded to the technology with the highest
-          percentage of satisfied users.
+          Uitgereikt aan de technologie met het hoogste
+          percentage van tevreden gebruikers.
     - key: award.tool_satisfaction_award.comment
       t: |
-          With **${items[0].value}** of users willing to use it again,
-          ${items[0].name} proves once more it’s not kidding around.
+          Met **${items[0].value}** gebruikers die het opnieuw zouden willen gebruiken,
+          bewijst ${items[0].name} maar weer eens dat het serieus genomen moet worden.
 
     # tool_interest
     - key: award.tool_interest_award.title
-      t: Highest Interest
+      t: Meeste interesse
     - key: award.tool_interest_award.description
       t: |
-          Awarded to the technology developers
-          are most interested in learning.
+          Uitgereikt aan de technologie die ontwikkelaars
+          het meest interessant vinden om te leren.
     - key: award.tool_interest_award.comment
       t: |
-          **${items[0].value}** of developers who have heard
-          about ${items[0].name} want to learn it.
-          That’s some serious interest!
+          **${items[0].value}** ontwikkelaars die van ${items[0].name} hebben
+          gehoord en het ook willen leren.
+          Dat is serieus wat interesse!
 
     # tool_usage
     - key: award.tool_usage_award.title
-      t: Most Used Technology
+      t: Meest gebruikte technologie
     - key: award.tool_usage_award.description
       t: |
-          Awarded to technology with the largest user base.
+          Uitgereikt aan de technologie met de grootste gebruikersbasis.
     - key: award.tool_usage_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used technology this year.
+          Met **${items[0].value}** gebruikers is ${items[0].name}
+          de meest gebruikte technologie dit jaar.
 
     # resource_usage
     - key: award.resource_usage_award.title
-      t: Most Used Resource
+      t: Meest gebruikte bronnen
     - key: award.resource_usage_award.description
       t: |
-          Awarded to the resource with the largest user base.
+          Uitgereikt aan de bron met de grootste gebruikersbasis.
     - key: award.resource_usage_award.comment
       t: |
-          With **${items[0].value}** users ${items[0].name}
-          is the most used resource this year.
+          Met **${items[0].value}** gebruikers is ${items[0].name}
+          de meest gebruikte bron dit jaar.
 
     # tool_mention
     - key: award.tool_mention_award.title
-      t: Most Mentioned
+      t: Meest genoemd
     - key: award.tool_mention.description
       t: |
-          Awarded to the library mentioned
-          the most in the “other libraries” answer.
+          Uitgereikt aan de bibliotheek die het meest
+          genoemd is in het “andere bibliotheken” antwoord.
     - key: award.tool_mention_award.comment
       t: |
-          ${items[0].name} collected **${items[0].value}** mentions,
-          making it the most submitted freeform answer by far.
+          ${items[0].name} heeft **${items[0].value}** vernoemingen verzameld en
+          is daarmee verreweg het meest genoemde vrije antwoord.
 
     # prediction_award
     - key: award.prediction_award.title
-      t: Prediction Award
+      t: Voorspellingen
     - key: award.prediction_award.description
       t: |
-          Awarded to an up-and-coming technology that might take over… or not?
+          Uitgereikt aan een opkomende technologie die het helemaal gaat overnemen… of niet?
     - key: award.prediction_award.comment
       t: |
-          ${items[0].name} made its explosive debut in this year's survey and we can't
-          wait to see where it goes from here
+          ${items[0].name} maakt zijn explosieve debuut in de enquête van dit jaar en we kunnen niet
+          wachten om te zien waar het heen gaat vanaf hier.
 
     ###########################################################################
     # Generic
