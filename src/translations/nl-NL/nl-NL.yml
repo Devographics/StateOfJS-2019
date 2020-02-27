@@ -857,200 +857,199 @@ translations:
 
     # pages
     - key: page.introduction
-      t: Introduction
+      t: Introductie
     - key: page.tshirt
       t: T-shirt
     - key: page.demographics
-      t: Demographics
+      t: Demografie
     - key: page.overview
-      t: Overview
+      t: Overzicht
     - key: page.features
-      t: Features
+      t: Functies
     - key: page.other_features
-      t: Other Features
+      t: Andere functies
     - key: page.javascript_flavors
-      t: JavaScript Flavors
+      t: JavaScript smaken
     - key: page.javascript_flavors.short
-      t: JavaScript Flavors
+      t: JavaScript smaken
     - key: page.javascript_flavors_others
-      t: Other Flavors
+      t: Andere smaken
     - key: page.front_end_frameworks
-      t: Front End Frameworks
+      t: Front End frameworks
     - key: page.front_end_frameworks.short
       t: Front End
     - key: page.front_end_frameworks_others
-      t: Other Frameworks
+      t: Andere frameworks
     - key: page.data_layer
-      t: Data Layer
+      t: Datalaag
     - key: page.data_layer.short
-      t: Data Layer
+      t: Datalaag
     - key: page.data_layer_others
-      t: Other Data Layer Tools
+      t: Andere datalaag tools
     - key: page.back_end_frameworks
-      t: Back End Frameworks
+      t: Back End frameworks
     - key: page.back_end_frameworks.short
       t: Back End
     - key: page.back_end_frameworks_others
-      t: Other Frameworks
+      t: Andere frameworks
     - key: page.testing
-      t: Testing
+      t: Testen
     - key: page.testing.short
-      t: Testing
+      t: Testen
     - key: page.testing_others
-      t: Other Tools
+      t: Andere tools
     - key: page.mobile_desktop
-      t: Mobile & Desktop
+      t: Mobiel & desktop
     - key: page.mobile_desktop.short
-      t: Mobile & Desktop
+      t: Mobiel & desktop
     - key: page.mobile_desktop_others
-      t: Other Tools
+      t: Andere tools
     - key: page.other_tools
-      t: Other Tools
+      t: Andere tools
     - key: page.environments
-      t: Environments
+      t: Omgevingen
     - key: page.resources
-      t: Resources
+      t: Bronnen
     - key: page.opinions
-      t: Opinions
+      t: Meningen
     - key: page.awards
-      t: Awards
+      t: Prijzen
     - key: page.conclusion
-      t: Conclusion
+      t: Conclusie
     - key: page.support
-      t: Support Us
+      t: Steun ons
 
     # sharing
     - key: share.share
-      t: Share
+      t: Delen
     - key: share.site.title
-      t: Discover the StateOf JavaScript 2019 results
+      t: Ontdek de State Of JavaScript 2019 resultaten
     - key: share.site.twitter_text
-      t: 'Discover the State Of JavaScript 2019 results ${link} #StateOfJS'
+      t: 'Ontdek de State Of JavaScript 2019 resultaten ${link} #StateOfJS'
     - key: share.site.subject
-      t: State Of JavaScript Survey Results
+      t: State Of JavaScript resultaten
     - key: share.site.body
-      t: 'Here are some interesting JavaScript survey results: ${link}'
+      t: 'Hier zijn wat interessante JavaScript enquête resultaten: ${link}'
     - key: share.block.twitter_text
       t: '#StateOfJS 2019: ${title} ${link}'
     - key: share.block.subject
-      t: State Of JavaScript Survey Results
+      t: State Of JavaScript enquête resultaten
     - key: share.block.body
-      t: 'Here are some interesting JavaScript survey results (${title}): ${link}'
+      t: 'Hier zijn wat interessante JavaScript enquête resultaten (${title}): ${link}'
     - key: share.twitter
-      t: Share on Twitter
+      t: Delen op Twitter
     - key: share.facebook
-      t: Share on Facebook
+      t: Delene op Facebook
     - key: share.linkedin
-      t: Share on LinkedIn
+      t: Delen op LinkedIn
     - key: share.email
-      t: Share by email
+      t: Delen via email
     - key: share.image
-      t: Get image
+      t: Download plaatje
 
     # export
     - key: export.export
-      t: Export
+      t: Exporteren
     - key: export.title
-      t: Export data for ${title}
+      t: Export data voor ${title}
     - key: export.nocsv
-      t: Sorry, CSV export is not available for this dataset.
+      t: Sorry, CSV export is niet beschikbaar voor deze dataset.
     - key: export.graphql
       t: >
-          While our internal GraphQL API is not currently public, in the future we are planning
-          on exposing it to make querying our data easier. If you'd like to hear more, you can
-          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check out this GitHub issue</a>
-
+          Ondanks dat onze interne GraphQL API niet publiekelijk beschikbaar is, plannen we in de toekomst
+          om deze beschikbaar te maken zodat het makkelijker is onze data op te vragen. Als je hier meer over
+          wil weten <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check dan dit GitHub issue</a>
 
     # general
     - key: general.title
       t: State of JavaScript 2019
     - key: general.description
-      t: Discover the most popular JavaScript features & technologies of the year.
+      t: Ontdek de meeste populaire JavaScript functies & technologieën van het jaar.
     - key: general.stay_tuned
-      t: Stay Tuned
+      t: Blijf up-to-date
     - key: general.leave_your_email
-      t: "If you'd like to know when we release additional results or announce next year's edition, just leave us your email below:"
+      t: "Als je wil weten wanneer we extra resultaten of de editie van volgend jaar bekend maken, laat dan een mailtje achter:"
     - key: general.your_email
-      t: Your Email
+      t: Jouw email
     - key: general.notify_me
-      t: Notify Me
+      t: Houd me op de hoogte
     - key: general.help_us_translate
-      t: Help translate the survey →
+      t: Help de enquête vertalen →
     - key: general.not_found
       t: >
 
           ## Error 404
 
-          Sorry, we couldn't find this page. Please [leave an issue](https://github.com/StateOfJS/State-of-JS-2019/issues) if you think something might be broken.
+          Sorry, we konden de pagina niet vinden. Maak a.u.b [een issue](https://github.com/StateOfJS/State-of-JS-2019/issues) aan als je denkt dat er wat stuk is.
     - key: general.back_to_intro
-      t: Back to introduction
+      t: Terug naar de introductie
     - key: general.close_nav
-      t: Close navigation menu
+      t: Sluit navigatiemenu
     - key: general.completion_percentage
-      t: 'Completion Percentage:'
+      t: 'Voortgangspercentage:'
     - key: general.previous
-      t: 'Previous:'
+      t: 'Vorige:'
     - key: general.next
-      t: 'Next:'
+      t: 'Volgende:'
     - key: general.start
       t: Start
 
     # partners
     - key: partners.our_partners
-      t: Our Partners
+      t: Onze partners
     - key: partners.become_partner
-      t: Help support the survey
+      t: Help de enquête met ondersteuning
     - key: partners.thanks
-      t: Thanks to our partners for supporting us!
+      t: Dank aan onze partners die ons steunen!
     - key: partners.learn_more
-      t: Learn more.
+      t: Leer meer.
     - key: block.title.recommendedResources
-      t: Recommended Resources
+      t: Aanbevolen bronnen
 
     # charts
     - key: block.title.usage-ratio
-      t: Usage Ratio Ranking
+      t: Gebruiksverhouding beoordeling
     - key: block.description.usage-ratio
-      t: Ranking usage ratios among users who are aware of a technology.
+      t: Beoordeel gebruiksverhouding onder gebruikers die bewust zijn van de technologie.
     - key: users_percentage
-      t: Percentage of Users
+      t: Percentage gebruikers
     - key: users_count
-      t: User Count
+      t: Aantal gebruikers
     - key: satisfaction_percentage
-      t: Satisfaction Percentage
+      t: Percentage tevredenheid 
     - key: interest_percentage
-      t: Interest Percentage
+      t: Percentage interesse
     - key: chart_mode
-      t: mode
+      t: modus
     - key: chart_mode.absolute
-      t: absolute
+      t: absoluut
     - key: chart_mode.relative
-      t: relative
+      t: relatief
     - key: chart_units
-      t: Units
+      t: Eenheden
     - key: chart_units.percentage
-      t: Percents
+      t: Percentage
     - key: chart_units.count
-      t: Count
+      t: Aantal
     - key: users
-      t: users
+      t: gebruikers
     - key: percent_satisfaction
-      t: '% satisfaction'
+      t: '% tevredenheid'
     - key: percent_interest
-      t: '% interest'
+      t: '% interesse'
     - key: heatmap.average
-      t: overall
+      t: gemiddeld
     - key: difference_from_average_usage
-      t: 'Difference from overall usage:'
+      t: 'Verschillend van gemiddeld gebruik:'
     - key: all
-      t: 'All'
+      t: 'Alle'
 
     # other
     - key: bio.guest_visualizer
-      t: Guest Expert
+      t: Gast expert
     - key: footer.state_of_js_link
       t: © 2019 <a href="${link}">State of JavaScript</a>.
     - key: footer.leave_an_issue
-      t:  Questions? Found a bug? <a href="${link}">Leave an issue</a>.
+      t:  Vragen? Bug ontdekt? <a href="${link}">Maak een issue</a>.
     - key: footer.netlify
-      t: This site is powered by <a href="${link}">Netlify</a>.
+      t: Deze site draait op <a href="${link}">Netlify</a>.
