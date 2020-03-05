@@ -1,25 +1,30 @@
-import yaml from 'js-yaml'
 import getTranslationsByLocale from '../lib/translations'
 import { getLocaleByPath } from '../lib/locale'
 import { getPage, getPageContext, getPageQuery } from '../lib/_page'
+import introduction from '../translations/en-US/introductions/introduction.md'
 
 export async function getStaticProps() {
     const page = await getPage('/')
     const context = getPageContext(page)
-    // console.log('PAGE', page)
-    // console.log('CONTEXT', getPageContext(page))
     const query = getPageQuery(page)
-    console.log('QUERY', query)
+    // console.log('MD', introduction)
+    // console.log('QUERY', query)
+    // console.log('CONTEXT', context)
     const locale = getLocaleByPath('default')
     const translations = getTranslationsByLocale(locale.locale)
-    const props = {
-        locale: locale.locale,
-        localeLabel: locale.label,
-        localePath: locale.path === 'default' ? '' : `/${locale.path}`,
-        translations,
-
+    const context = {
         id: 'introduction',
         showTitle: false,
+        blocks: [
+            {
+                blockType: 'SurveyIntroBlock',
+                dataPath: 'introduction_introduction.html',
+                id: 'survey_intro',
+                variables: [Object],
+                template: 'pageIntroductionTemplate',
+                path: '/survey_intro/'
+            }
+        ],
         is_hidden: false,
         pageIndex: 0,
         defaultBlockType: 'default',
@@ -32,11 +37,23 @@ export async function getStaticProps() {
         },
         basePath: '/'
     }
+    const props = {
+        ...context,
+        locale: locale.locale,
+        localeLabel: locale.label,
+        localePath: locale.path === 'default' ? '' : `/${locale.path}`,
+        pageData: {
+            introduction_introduction: {
+                html: introduction
+            }
+        },
+        translations
+    }
 
     return { props }
 }
 
 export default function Index(props) {
-    console.log('PROPS', props)
+    // console.log('PROPS', props)
     return null
 }
