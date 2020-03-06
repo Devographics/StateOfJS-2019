@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 import { usePageContext } from 'core/helpers/pageContext'
 
 const LocaleLink = ({ to, ...rest }) => {

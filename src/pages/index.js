@@ -1,12 +1,14 @@
 import getTranslationsByLocale from '../lib/translations'
 import { getLocaleByPath } from '../lib/locale'
-import { getPage, getPageContext, getPageQuery } from '../lib/_page'
+// import { getPage, getPageContext, getPageQuery } from '../lib/_page'
 import introduction from '../translations/en-US/introductions/introduction.md'
+import graphqlFetch from '../lib/graphql-fetch'
+import getEntitiesData from '../lib/get-entities-data'
 
 export async function getStaticProps() {
-    const page = await getPage('/')
-    const context = getPageContext(page)
-    const query = getPageQuery(page)
+    // const page = await getPage('/')
+    // const context = getPageContext(page)
+    // const query = getPageQuery(page)
     // console.log('MD', introduction)
     // console.log('QUERY', query)
     // console.log('CONTEXT', context)
@@ -37,6 +39,20 @@ export async function getStaticProps() {
         },
         basePath: '/'
     }
+    const survey = await graphqlFetch(process.env.API_URL, {
+        query: `
+            surveyApi {
+                survey(survey: js) {
+                    tools {
+                        id
+                        entity {
+                            name
+                        }
+                    }
+                }
+            }
+        `
+    })
     const props = {
         ...context,
         locale: locale.locale,
@@ -47,6 +63,8 @@ export async function getStaticProps() {
                 html: introduction
             }
         },
+        entities: getEntitiesData(),
+        survey,
         translations
     }
 

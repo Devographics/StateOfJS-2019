@@ -1,6 +1,9 @@
 const path = require('path')
 
 module.exports = {
+    env: {
+        API_URL: 'https://api.stateofjs.com'
+    },
     webpack(cfg) {
         cfg.module.rules.push({
             test: /\.ya?ml$/,

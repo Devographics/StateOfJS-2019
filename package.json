@@ -72,7 +72,7 @@
         "markdown-it": "^8.4.2",
         "markdown-loader": "^4.0.0",
         "next": "^9.2.3-canary.22",
-        "node-fetch": "^2.5.0",
+        "node-fetch": "^2.6.0",
         "node-sass": "^4.12.0",
         "object-assign": "^4.1.1",
         "prop-types": "^15.7.2",

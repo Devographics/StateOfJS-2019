@@ -1,7 +1,6 @@
-import React from 'react'
+import Router from 'next/router'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { navigate } from 'gatsby'
 
 const PeriodicElement = ({ className, name, symbol, number, size, path, x, y }) => {
     return (
@@ -16,7 +15,7 @@ const PeriodicElement = ({ className, name, symbol, number, size, path, x, y }) 
             className={className}
             onClick={() => {
                 if (path) {
-                    navigate(path)
+                    Router.push(path)
                 }
             }}
         >

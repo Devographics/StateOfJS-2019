@@ -1,9 +1,8 @@
-import React from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
 import locales from '../../../config/locales.yml'
 import { usePageContext } from 'core/helpers/pageContext'
-import { Link } from 'gatsby'
 
 const Container = styled.div`
     display: grid;
@@ -15,14 +14,14 @@ const Container = styled.div`
 const Item = styled(Link)`
     text-align: center;
     font-size: ${props => props.theme.typography.sizes.medium};
-    
+
     @media ${mq.smallMedium} {
-        font-size: ${props => props.theme.typography.sizes.small};    
+        font-size: ${props => props.theme.typography.sizes.small};
     }
     @media ${mq.large} {
         font-size: ${props => props.theme.typography.sizes.medium};
     }
-    
+
     &._is-current {
         font-weight: ${props => props.theme.typography.weights.bold};
     }
@@ -31,25 +30,23 @@ const Item = styled(Link)`
 
 const Locales = () => {
     const context = usePageContext()
-    const links = locales.map(locale => {
-        return {
-            ...locale,
-            link: `${locale.path === 'default' ? '' : `/${locale.path}`}${context.basePath}`,
-            isCurrent: locale.locale === context.locale
-        }
-    })
 
     return (
         <Container className="Locales">
-            {links.map(({ label, locale, link, isCurrent }) => (
-                <Item
-                    key={locale}
-                    className={`Locales__Item${isCurrent ? ' _is-current' : ''}`}
-                    to={link}
-                >
-                    {label}
-                </Item>
-            ))}
+            {locales.map(locale => {
+                const asPath = `${locale.path === 'default' ? '/' : `/${locale.path}`}${
+                    context.basePath
+                }`
+                const isCurrent = locale.locale === context.locale
+
+                return (
+                    <Link key={locale} href="/[lang]" as={asPath}>
+                        <Item className={`Locales__Item${isCurrent ? ' _is-current' : ''}`}>
+                            {locale.label}
+                        </Item>
+                    </Link>
+                )
+            })}
         </Container>
     )
 }

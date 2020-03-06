@@ -1,4 +1,4 @@
-import React, { PureComponent, useCallback, useEffect, useState } from 'react'
+import { PureComponent, useCallback, useEffect, useState } from 'react'
 import propTypes from 'prop-types'
 import classNames from 'classnames'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
@@ -53,8 +53,8 @@ const ThemedLayout = ({
 
     return (
         <ThemeProvider theme={themes[themeId]}>
-            <ToolsContextProvider>
-                <EntitiesContextProvider>
+            <ToolsContextProvider survey={props.pageContext.survey}>
+                <EntitiesContextProvider entities={props.pageContext.entities}>
                     <GlobalStyle />
                     <div
                         className={classNames('pageLayout', `PageLayout--${context.id}`, {
@@ -137,7 +137,7 @@ export default class Layout extends PureComponent {
 
         return (
             <PageContextProvider value={context}>
-                <I18nContextProvider>
+                <I18nContextProvider translations={pageContext.translations}>
                     <ThemedLayout
                         context={context}
                         showPagination={showPagination}
