@@ -1,9 +1,15 @@
+import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { usePageContext } from 'core/helpers/pageContext'
 
-const LocaleLink = ({ to, ...rest }) => {
-    const context = usePageContext()
-    return <Link {...rest} to={`${context.localePath}${to}`} />
+const LocaleLink = ({ to, children }) => {
+    const router = useRouter()
+    const lang = router.query.lang || 'en'
+
+    return (
+        <Link href={router.pathname} as="/">
+            {children}
+        </Link>
+    )
 }
 
 export default LocaleLink

@@ -128,15 +128,15 @@ const LanguageSwitcherPopup = styled.div`
         border-bottom: 0;
         border-left: 0;
     }
-    
+
     @media ${mq.smallMedium} {
         top: 145%;
     }
-        
+
     @media ${mq.xSmall} {
         max-width: 90vw;
     }
-    
+
     .LanguageSwitcher._is-closed & {
         display: none;
         // @include sr-only;

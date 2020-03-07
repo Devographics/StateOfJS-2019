@@ -101,7 +101,7 @@ export const getPageSocialMeta = (context, translate, overrides = {}) => {
 /**
  * Merge context generated from `gatsby-node` with runtime context.
  */
-export const mergePageContext = (pageContext, location, state) => {
+export const mergePageContext = (pageContext, location) => {
     const isCapturing =
         location && location.search ? location.search.indexOf('capture') !== -1 : false
     const isDebugEnabled =
@@ -115,9 +115,7 @@ export const mergePageContext = (pageContext, location, state) => {
     return {
         ...pageContext,
         host,
-        currentPath: location ? location.pathname : undefined,
         isCapturing,
-        isDebugEnabled,
-        ...state
+        isDebugEnabled
     }
 }

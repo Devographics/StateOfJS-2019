@@ -4,6 +4,7 @@ import { getLocaleByPath } from '../lib/locale'
 import introduction from '../translations/en-US/introductions/introduction.md'
 import graphqlFetch from '../lib/graphql-fetch'
 import getEntitiesData from '../lib/get-entities-data'
+import Layout from '../core/Layout'
 
 export async function getStaticProps() {
     // const page = await getPage('/')
@@ -39,9 +40,9 @@ export async function getStaticProps() {
         },
         basePath: '/'
     }
-    const survey = await graphqlFetch(process.env.API_URL, {
+    const survey = await graphqlFetch(`${process.env.API_URL}/graphql`, {
         query: `
-            surveyApi {
+            query {
                 survey(survey: js) {
                     tools {
                         id
@@ -64,7 +65,7 @@ export async function getStaticProps() {
             }
         },
         entities: getEntitiesData(),
-        survey,
+        survey: survey.data.survey,
         translations
     }
 
@@ -73,5 +74,5 @@ export async function getStaticProps() {
 
 export default function Index(props) {
     // console.log('PROPS', props)
-    return null
+    return <Layout pageContext={props}>{null}</Layout>
 }

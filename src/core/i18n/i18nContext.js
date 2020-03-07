@@ -3,8 +3,8 @@ import { getTranslator } from './translator'
 
 export const I18nContext = createContext()
 
-export const I18nContextProvider = ({ translations, children }) => {
-    const translate = getTranslator(translations)
+export const I18nContextProvider = ({ translations: catalogue, children }) => {
+    const translate = getTranslator(catalogue)
     return <I18nContext.Provider value={{ translate, catalogue }}>{children}</I18nContext.Provider>
 }
 

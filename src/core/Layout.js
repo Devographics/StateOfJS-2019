@@ -1,5 +1,6 @@
 import { PureComponent, useCallback, useEffect, useState } from 'react'
 import propTypes from 'prop-types'
+import { withRouter } from 'next/router'
 import classNames from 'classnames'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Pagination from './pages/Pagination'
@@ -89,7 +90,7 @@ const ThemedLayout = ({
     )
 }
 
-export default class Layout extends PureComponent {
+class Layout extends PureComponent {
     static propTypes = {
         showPagination: propTypes.bool.isRequired
     }
@@ -131,9 +132,12 @@ export default class Layout extends PureComponent {
     }
 
     render() {
-        const { showPagination, location, pageContext } = this.props
+        const { showPagination, location, pageContext, router } = this.props
         const { showSidebar } = this.state
-        const context = mergePageContext(pageContext, location, this.state)
+        const context = mergePageContext(
+            { ...pageContext, ...this.state, currentPath: router.asPath },
+            location
+        )
 
         return (
             <PageContextProvider value={context}>
@@ -151,6 +155,8 @@ export default class Layout extends PureComponent {
         )
     }
 }
+
+export default withRouter(Layout)
 
 const GlobalStyle = createGlobalStyle`
     body {

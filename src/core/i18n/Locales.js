@@ -11,7 +11,7 @@ const Container = styled.div`
     grid-row-gap: ${props => props.theme.spacing}px;
 `
 
-const Item = styled(Link)`
+const Item = styled.a`
     text-align: center;
     font-size: ${props => props.theme.typography.sizes.medium};
 
@@ -33,16 +33,14 @@ const Locales = () => {
 
     return (
         <Container className="Locales">
-            {locales.map(locale => {
-                const asPath = `${locale.path === 'default' ? '/' : `/${locale.path}`}${
-                    context.basePath
-                }`
-                const isCurrent = locale.locale === context.locale
+            {locales.map(({ path, locale, label }) => {
+                const asPath = path === 'default' ? '/' : `/${path}`
+                const isCurrent = locale === context.locale
 
                 return (
-                    <Link key={locale} href="/[lang]" as={asPath}>
+                    <Link key={path} href="/[lang]" as={asPath}>
                         <Item className={`Locales__Item${isCurrent ? ' _is-current' : ''}`}>
-                            {locale.label}
+                            {label}
                         </Item>
                     </Link>
                 )

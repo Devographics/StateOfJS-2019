@@ -21,6 +21,7 @@ async function getError(res) {
 
 export default async function graphqlFetch(url, body) {
     const res = await fetch(url, {
+        method: 'post',
         headers: {
             'Content-Type': 'application/json; charset=utf-8'
         },

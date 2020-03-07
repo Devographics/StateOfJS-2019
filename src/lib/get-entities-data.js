@@ -1,6 +1,6 @@
 import entities from '../data/entities.yml'
 import features from '../data/features.yml'
-import resources from '../data/resources.yml'
+import resources from '../data/resources.yaml'
 
 export default function getEntitiesData() {
     return {
@@ -10,7 +10,7 @@ export default function getEntitiesData() {
             homepage: entity.homepage,
             aliases: entity.aliases
         })),
-        features: entitifeatureses.map(feature => ({
+        features: features.map(feature => ({
             id: feature.id,
             named: feature.name,
             aliases: feature.aliases
