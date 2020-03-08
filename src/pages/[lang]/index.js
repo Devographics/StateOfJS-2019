@@ -1,5 +1,5 @@
-import getTranslationsByLocale from '../../lib/translations'
 import { getLocalePaths, getLocaleByPath } from '../../lib/locale'
+import getTranslationsByLocale from '../../lib/translations'
 // import { getPage, getPageContext, getPageQuery } from '../../lib/_page'
 import introduction from '../../translations/en-US/introductions/introduction.md'
 import graphqlFetch from '../../lib/graphql-fetch'
@@ -11,10 +11,7 @@ import PageFooter from 'core/pages/PageFooter'
 import SurveyIntroBlock from 'core/blocks/other/SurveyIntroBlock'
 
 export async function getStaticPaths() {
-    return {
-        paths: getLocalePaths(),
-        fallback: false
-    }
+    return { paths: getLocalePaths(), fallback: false }
 }
 
 export async function getStaticProps({ params: { lang } }) {
@@ -24,35 +21,19 @@ export async function getStaticProps({ params: { lang } }) {
     // console.log('MD', introduction)
     // console.log('QUERY', query)
     // console.log('CONTEXT', context)
-    // const p = `en-US/introductions/introduction`
-    // const intro = await import(`../../translations/${p}.md`)
-
-    // console.log(!!intro)
 
     const locale = getLocaleByPath(lang === 'en' ? 'default' : lang)
     const translations = getTranslationsByLocale(locale.locale)
     const context = {
         id: 'introduction',
         showTitle: false,
-        blocks: [
-            {
-                blockType: 'SurveyIntroBlock',
-                dataPath: 'introduction_introduction.html',
-                id: 'survey_intro',
-                variables: [Object],
-                template: 'pageIntroductionTemplate',
-                path: '/survey_intro'
-            }
-        ],
         is_hidden: false,
         pageIndex: 0,
-        defaultBlockType: 'default',
         next: {
             id: 'tshirt',
             showTitle: false,
             path: '/tshirt',
-            pageIndex: 1,
-            defaultBlockType: 'default'
+            pageIndex: 1
         },
         basePath: '/'
     }
@@ -75,12 +56,6 @@ export async function getStaticProps({ params: { lang } }) {
         locale: locale.locale,
         localeLabel: locale.label,
         localePath: locale.path === 'default' ? '' : `/${locale.path}`,
-        pageData: {
-            introduction_introduction: {
-                html: introduction
-            }
-        },
-        html: introduction,
         entities: getEntitiesData(),
         survey: survey.data.survey,
         translations
@@ -90,13 +65,13 @@ export async function getStaticProps({ params: { lang } }) {
 }
 
 export default function Index(props) {
-    const { pageData, html, showTitle = true, id, is_hidden = false, blocks } = props
+    const { showTitle = true, id, is_hidden = false } = props
 
     return (
         <Layout pageContext={props}>
             {showTitle && <PageHeader />}
             <main className={`Page__Contents Page__Contents--${id}`}>
-                <SurveyIntroBlock data={html} />
+                <SurveyIntroBlock data={introduction} />
             </main>
             {!is_hidden && <PageFooter />}
         </Layout>
