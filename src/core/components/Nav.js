@@ -59,9 +59,7 @@ const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
                     onClick={closeSidebar}
                     level={level}
                 >
-                    <span>
-                        <PageLabel page={page} />
-                    </span>
+                    <PageLabel page={page} />
                 </StyledLink>
             </LocaleLink>
             {hasChildren && (
