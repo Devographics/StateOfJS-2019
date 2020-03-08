@@ -8,6 +8,8 @@ import LocaleLink from './LocaleLink'
 
 const filteredNav = sitemap.filter(page => !page.is_hidden)
 
+const getPagePath = path => (path === '/' ? '/' : path.replace(/\/$/, ''))
+
 const StyledLink = styled.a`
     display: inline-block;
     white-space: nowrap;
@@ -41,7 +43,7 @@ const StyledLink = styled.a`
 `
 
 const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
-    const isActive = currentPath.indexOf(page.path) !== -1
+    const isActive = currentPath === page.path
     const hasChildren = page.children && page.children.length > 0
     const displayChildren = hasChildren > 0 && isActive
 
@@ -51,9 +53,15 @@ const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
                 displayChildren ? 'showChildren' : 'hideChildren'
             }`}
         >
-            <LocaleLink>
-                <StyledLink className="Nav__Page__Link" onClick={closeSidebar} level={level}>
-                    <PageLabel page={page} />
+            <LocaleLink to={page.path}>
+                <StyledLink
+                    className={`Nav__Page__Link${isActive ? ' _is-active' : ''}`}
+                    onClick={closeSidebar}
+                    level={level}
+                >
+                    <span>
+                        <PageLabel page={page} />
+                    </span>
                 </StyledLink>
             </LocaleLink>
             {hasChildren && (
@@ -61,7 +69,7 @@ const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
                     {page.children.map(childPage => (
                         <NavItem
                             key={childPage.id}
-                            page={childPage}
+                            page={{ ...childPage, path: getPagePath(childPage.path) }}
                             closeSidebar={closeSidebar}
                             currentPath={currentPath}
                             level={level + 1}
@@ -82,7 +90,7 @@ const Nav = ({ closeSidebar }) => {
             {filteredNav.map((page, i) => (
                 <NavItem
                     key={i}
-                    page={page}
+                    page={{ ...page, path: getPagePath(page.path) }}
                     currentPath={context.currentPath}
                     closeSidebar={closeSidebar}
                 />
