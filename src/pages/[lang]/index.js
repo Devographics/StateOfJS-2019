@@ -13,15 +13,14 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps() {
-    console.log('Yo!')
+export async function getStaticProps({ params: { lang } }) {
     // const page = await getPage('/')
     // const context = getPageContext(page)
     // const query = getPageQuery(page)
     // console.log('MD', introduction)
     // console.log('QUERY', query)
     // console.log('CONTEXT', context)
-    const locale = getLocaleByPath('default')
+    const locale = getLocaleByPath(lang === 'en' ? 'default' : lang)
     const translations = getTranslationsByLocale(locale.locale)
     const context = {
         id: 'introduction',
@@ -81,6 +80,5 @@ export async function getStaticProps() {
 }
 
 export default function Index(props) {
-    // console.log('PROPS', props)
     return <Layout pageContext={props}>{null}</Layout>
 }

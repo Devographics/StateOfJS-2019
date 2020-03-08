@@ -36,11 +36,12 @@ const Locales = () => {
     return (
         <Container className="Locales">
             {locales.map(({ path, label }) => {
+                const href = `/[lang]${path === 'default' ? '?lang=en' : ''}`
                 const asPath = path === 'default' ? '/' : `/${path}`
                 const isCurrent = path === currentLang
 
                 return (
-                    <Link key={path} href="/[lang]" as={asPath} passHref>
+                    <Link key={path} href={href} as={asPath} passHref>
                         <Item className={`Locales__Item${isCurrent ? ' _is-current' : ''}`}>
                             {label}
                         </Item>

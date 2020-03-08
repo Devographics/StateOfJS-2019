@@ -7,7 +7,13 @@ import ruRU from '../translations/ru-RU.yml'
 import zhHans from '../translations/zh-Hans.yml'
 
 const translations = {
-    [enUS.locale]: enUS
+    [enUS.locale]: enUS,
+    [hiIN.locale]: hiIN,
+    [itIT.locale]: itIT,
+    [koKR.locale]: koKR,
+    [ptBR.locale]: ptBR,
+    [ruRU.locale]: ruRU,
+    [zhHans.locale]: zhHans
 }
 
 export default function getTranslationsByLocale(locale) {
