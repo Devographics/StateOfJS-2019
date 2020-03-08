@@ -25,7 +25,7 @@ export async function getStaticProps() {
                 id: 'survey_intro',
                 variables: [Object],
                 template: 'pageIntroductionTemplate',
-                path: '/survey_intro/'
+                path: '/survey_intro'
             }
         ],
         is_hidden: false,
@@ -34,7 +34,7 @@ export async function getStaticProps() {
         next: {
             id: 'tshirt',
             showTitle: false,
-            path: '/tshirt/',
+            path: '/tshirt',
             pageIndex: 1,
             defaultBlockType: 'default'
         },
