@@ -1,12 +1,20 @@
-import getTranslationsByLocale from '../lib/translations'
-import { getLocaleByPath } from '../lib/locale'
-// import { getPage, getPageContext, getPageQuery } from '../lib/_page'
-import introduction from '../translations/en-US/introductions/introduction.md'
-import graphqlFetch from '../lib/graphql-fetch'
-import getEntitiesData from '../lib/get-entities-data'
-import Layout from '../core/Layout'
+import getTranslationsByLocale from '../../lib/translations'
+import { getLocalePaths, getLocaleByPath } from '../../lib/locale'
+// import { getPage, getPageContext, getPageQuery } from '../../lib/_page'
+import introduction from '../../translations/en-US/introductions/introduction.md'
+import graphqlFetch from '../../lib/graphql-fetch'
+import getEntitiesData from '../../lib/get-entities-data'
+import Layout from '../../core/Layout'
+
+export async function getStaticPaths() {
+    return {
+        paths: getLocalePaths(),
+        fallback: false
+    }
+}
 
 export async function getStaticProps() {
+    console.log('Yo!')
     // const page = await getPage('/')
     // const context = getPageContext(page)
     // const query = getPageQuery(page)
