@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'core/components/LocaleLink'
+import LocaleLink from 'core/components/LocaleLink'
 import sponsors from 'data/sponsors.yml'
 import { useI18n } from 'core/i18n/i18nContext'
 import mq from 'core/theme/mq'
@@ -23,7 +23,9 @@ const SponsorsBlock = () => {
                 </SponsorList>
             </Container>
             <Support className="Sponsors__Support">
-                <Link to="/support">{translate('partners.become_partner')}</Link>
+                <LocaleLink to="/support">
+                    <a>{translate('partners.become_partner')}</a>
+                </LocaleLink>
             </Support>
         </>
     )

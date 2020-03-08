@@ -15,7 +15,7 @@ const SurveyIntroBlock = ({ data }) => (
                     src="/images/stateofjs-logo.svg"
                     alt="State of JavaScript 2019 Logo"
                 /> */}
-                <LogoMain/>
+                <LogoMain />
             </div>
             <TextBlock text={data} />
             <IntroductionFooter />

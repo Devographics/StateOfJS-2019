@@ -8,7 +8,7 @@ import getEntitiesData from '../../lib/get-entities-data'
 import Layout from 'core/Layout'
 import PageHeader from 'core/pages/PageHeader'
 import PageFooter from 'core/pages/PageFooter'
-import BlockSwitcher from 'core/blocks/block/BlockSwitcher'
+import SurveyIntroBlock from 'core/blocks/other/SurveyIntroBlock'
 
 export async function getStaticPaths() {
     return {
@@ -24,6 +24,11 @@ export async function getStaticProps({ params: { lang } }) {
     // console.log('MD', introduction)
     // console.log('QUERY', query)
     // console.log('CONTEXT', context)
+    // const p = `en-US/introductions/introduction`
+    // const intro = await import(`../../translations/${p}.md`)
+
+    // console.log(!!intro)
+
     const locale = getLocaleByPath(lang === 'en' ? 'default' : lang)
     const translations = getTranslationsByLocale(locale.locale)
     const context = {
@@ -75,6 +80,7 @@ export async function getStaticProps({ params: { lang } }) {
                 html: introduction
             }
         },
+        html: introduction,
         entities: getEntitiesData(),
         survey: survey.data.survey,
         translations
@@ -84,17 +90,14 @@ export async function getStaticProps({ params: { lang } }) {
 }
 
 export default function Index(props) {
-    const { pageData, showTitle = true, id, is_hidden = false, blocks } = props
+    const { pageData, html, showTitle = true, id, is_hidden = false, blocks } = props
 
     return (
         <Layout pageContext={props}>
             {showTitle && <PageHeader />}
-            {/* <main className={`Page__Contents Page__Contents--${id}`}>
-                {blocks &&
-                    blocks.map((block, i) => (
-                        <BlockSwitcher key={block.id} block={block} pageData={pageData} index={i} />
-                    ))}
-            </main> */}
+            <main className={`Page__Contents Page__Contents--${id}`}>
+                <SurveyIntroBlock data={html} />
+            </main>
             {!is_hidden && <PageFooter />}
         </Layout>
     )

@@ -33,3 +33,4 @@ esdata
 .env
 
 config/sitemap.yml
+.now

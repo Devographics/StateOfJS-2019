@@ -106,9 +106,10 @@
     },
     "private": true,
     "scripts": {
-        "build": "gatsby build",
-        "deploy": "gatsby build && gh-pages -d public",
         "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "deploy": "gatsby build && gh-pages -d public",
         "dev:clean": "rm -rf .cache && yarn run dev",
         "fmt": "prettier --write \"src/**/*.{js,jsx}\" \"node_src/**/*.{js}\" \"config/**/*.{yaml,yml}\""
     }
