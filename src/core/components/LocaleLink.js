@@ -2,8 +2,8 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 const LocaleLink = ({ to, children }) => {
-    const router = useRouter()
-    const lang = router.query.lang || 'en'
+    const { query } = useRouter()
+    const lang = query.lang || 'en'
     const href = `/[lang]${to}${lang === 'en' ? '?lang=en' : ''}`
     const as = lang === 'en' ? to : `/${lang}${to}`
 

@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
@@ -29,16 +30,17 @@ const Item = styled.a`
 `
 
 const Locales = () => {
-    const context = usePageContext()
+    const { query } = useRouter()
+    const currentLang = query.lang === 'en' ? 'default' : query.lang
 
     return (
         <Container className="Locales">
-            {locales.map(({ path, locale, label }) => {
+            {locales.map(({ path, label }) => {
                 const asPath = path === 'default' ? '/' : `/${path}`
-                const isCurrent = locale === context.locale
+                const isCurrent = path === currentLang
 
                 return (
-                    <Link key={path} href="/[lang]" as={asPath}>
+                    <Link key={path} href="/[lang]" as={asPath} passHref>
                         <Item className={`Locales__Item${isCurrent ? ' _is-current' : ''}`}>
                             {label}
                         </Item>

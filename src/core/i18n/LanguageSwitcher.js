@@ -1,4 +1,4 @@
-import React, { memo, useState, useCallback } from 'react'
+import { memo, useState, useCallback } from 'react'
 import styled from 'styled-components'
 import { mq, spacing, fontSize } from 'core/theme'
 import { usePageContext } from 'core/helpers/pageContext'
@@ -12,7 +12,6 @@ const svgs = {
 
 const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
     const { translate } = useI18n()
-
     const context = usePageContext()
     const [isOpened, setIsOpened] = useState(false)
     const toggle = useCallback(() => setIsOpened(flag => !flag), [])
