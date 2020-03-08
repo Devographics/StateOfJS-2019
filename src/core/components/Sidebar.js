@@ -27,12 +27,14 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => {
                     <SidebarMobileLogo className="Sidebar__Logo--mobile Logo--mobile">
                         <div />
                         <div className="Sidebar__Logo__Inner">
-                            <SidebarLogoLink className="SidebarLogoLink" to="/">
-                                <LogoCompact />
-                                <span className="sr-only">
-                                    {translate('general.back_to_intro')}
-                                </span>
-                            </SidebarLogoLink>
+                            <LocaleLink to="/">
+                                <SidebarLogoLink className="SidebarLogoLink" to="/">
+                                    <LogoCompact />
+                                    <span className="sr-only">
+                                        {translate('general.back_to_intro')}
+                                    </span>
+                                </SidebarLogoLink>
+                            </LocaleLink>
                         </div>
                         <SidebarCloseButton className="SidebarCloseButton" onClick={closeSidebar}>
                             <CloseIcon />

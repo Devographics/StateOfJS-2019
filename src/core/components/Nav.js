@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 import sitemap from '../../../config/sitemap.yml'
-import { usePageContext } from '../helpers/pageContext'
 import PageLabel from '../pages/PageLabel'
 import LanguageSwitcher from '../i18n/LanguageSwitcher'
 import LocaleLink from './LocaleLink'
@@ -80,7 +80,8 @@ const NavItem = ({ page, currentPath, closeSidebar, level = 0 }) => {
 }
 
 const Nav = ({ closeSidebar }) => {
-    const context = usePageContext()
+    const { query, asPath } = useRouter()
+    const currentPath = query.lang ? asPath.replace(new RegExp(`^/${query.lang}`), '/') : asPath
 
     return (
         <div className="Nav">
@@ -89,7 +90,7 @@ const Nav = ({ closeSidebar }) => {
                 <NavItem
                     key={i}
                     page={{ ...page, path: getPagePath(page.path) }}
-                    currentPath={context.currentPath}
+                    currentPath={currentPath}
                     closeSidebar={closeSidebar}
                 />
             ))}
