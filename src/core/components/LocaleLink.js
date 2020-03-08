@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-const LocaleLink = ({ to: to, children }) => {
+const LocaleLink = ({ to, children }) => {
     const { query } = useRouter()
     const lang = query.lang || 'en'
     const href = `/[lang]${to}${lang === 'en' ? '?lang=en' : ''}`

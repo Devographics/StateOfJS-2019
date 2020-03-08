@@ -27,7 +27,8 @@
                 "module-resolver",
                 {
                     "alias": {
-                        "core": "./src/core"
+                        "core": "./src/core",
+                        "data": "./src/data"
                     }
                 }
             ],

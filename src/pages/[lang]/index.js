@@ -4,7 +4,11 @@ import { getLocalePaths, getLocaleByPath } from '../../lib/locale'
 import introduction from '../../translations/en-US/introductions/introduction.md'
 import graphqlFetch from '../../lib/graphql-fetch'
 import getEntitiesData from '../../lib/get-entities-data'
-import Layout from '../../core/Layout'
+
+import Layout from 'core/Layout'
+import PageHeader from 'core/pages/PageHeader'
+import PageFooter from 'core/pages/PageFooter'
+import BlockSwitcher from 'core/blocks/block/BlockSwitcher'
 
 export async function getStaticPaths() {
     return {
@@ -80,5 +84,18 @@ export async function getStaticProps({ params: { lang } }) {
 }
 
 export default function Index(props) {
-    return <Layout pageContext={props}>{null}</Layout>
+    const { pageData, showTitle = true, id, is_hidden = false, blocks } = props
+
+    return (
+        <Layout pageContext={props}>
+            {showTitle && <PageHeader />}
+            {/* <main className={`Page__Contents Page__Contents--${id}`}>
+                {blocks &&
+                    blocks.map((block, i) => (
+                        <BlockSwitcher key={block.id} block={block} pageData={pageData} index={i} />
+                    ))}
+            </main> */}
+            {!is_hidden && <PageFooter />}
+        </Layout>
+    )
 }
