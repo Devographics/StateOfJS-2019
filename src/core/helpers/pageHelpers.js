@@ -1,6 +1,9 @@
+import { useRouter } from 'next/router'
 import { getToolName } from 'core/helpers/tools'
 import { websiteTitle } from 'core/constants.js'
+import { usePageContext } from './pageContext'
 
+const HOST = 'https://2019.stateofjs.com'
 const WEBSITE_TITLE = websiteTitle
 
 export const getTranslationValuesFromContext = (context, translate) => {
@@ -46,41 +49,40 @@ export const getPageLabel = (
  * example:
  *   http://2018.stateofjs.com/images/captures/front-end_overview.png
  */
-export const getPageImageUrl = context => {
-    const baseUrl = `${context.host}/images/`
+export const getPageImageUrl = () => {
+    // const baseUrl = `${context.host}/images/`
 
-    let imageUrl
-    if (context.block !== undefined) {
-        imageUrl = `${baseUrl}captures/${context.block.id}.png`
-        // imageUrl = `${baseUrl}captures/${context.basePath
-        //     .replace(/^\//, '')
-        //     .replace(/\/$/, '')
-        //     .replace(/\//g, '_')}_${context.block.id}.png`
-    } else {
-        imageUrl = `${baseUrl}stateofjs-socialmedia.png`
-    }
+    // let imageUrl
+    // if (context.block !== undefined) {
+    //     imageUrl = `${baseUrl}captures/${context.block.id}.png`
+    //     // imageUrl = `${baseUrl}captures/${context.basePath
+    //     //     .replace(/^\//, '')
+    //     //     .replace(/\/$/, '')
+    //     //     .replace(/\//g, '_')}_${context.block.id}.png`
+    // } else {
+    //     imageUrl = `${baseUrl}stateofjs-socialmedia.png`
+    // }
 
-    return imageUrl
+    return `${HOST}/images/stateofjs-socialmedia.png`
 }
 
-export const getPageMeta = (context, translate, overrides = {}) => {
-    const url = `${context.host}${context.localePath}${context.basePath}`
-    const imageUrl = getPageImageUrl(context)
-    const isRoot = context.path === '/' || context.basePath === '/'
+export const usePageMeta = (translate, overrides = {}) => {
+    const context = usePageContext()
+    const { query, asPath } = useRouter()
+    const imageUrl = getPageImageUrl()
+    const currentPath = query.lang ? asPath.replace(new RegExp(`^/${query.lang}`), '/') : asPath
+    const isRoot = currentPath === '/'
 
-    const meta = {
-        url,
+    return {
+        url: HOST + asPath,
         title: isRoot ? WEBSITE_TITLE : getPageLabel(context, translate, { includeWebsite: true }),
         imageUrl,
         ...overrides
     }
-
-    return meta
 }
 
-export const getPageSocialMeta = (context, translate, overrides = {}) => {
-    const meta = getPageMeta(context, translate, overrides)
-
+export const usePageSocialMeta = (translate, overrides = {}) => {
+    const meta = usePageMeta(translate, overrides)
     const socialMeta = [
         // facebook
         { property: 'og:type', content: 'article' },
@@ -107,14 +109,9 @@ export const mergePageContext = (pageContext, location) => {
     const isDebugEnabled =
         location && location.search ? location.search.indexOf('debug') !== -1 : false
 
-    let host = 'https://2019.stateofjs.com'
-    if (location && location.host && location.protocol) {
-        host = `${location.protocol}//${location.host}`
-    }
-
     return {
         ...pageContext,
-        host,
+        host: HOST,
         isCapturing,
         isDebugEnabled
     }
