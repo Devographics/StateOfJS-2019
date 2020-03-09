@@ -1,9 +1,9 @@
 import { getLocaleStaticPaths, getLocaleByPath } from '../../lib/api/locale'
-import getTranslationsByLocale from '../../lib/translations'
-import { getPage, getPageContext, getPageQuery } from '../../lib/_page'
+import getTranslationsByLocale from '../../lib/api/translations'
+import { getPage, getPageContext, getPageQuery } from '../../lib/api/_page'
+import graphqlFetch from '../../lib/api/graphql-fetch'
+import getEntitiesData from '../../lib/api/get-entities-data'
 import html from '../../translations/en-US/introductions/demographics.md'
-import graphqlFetch from '../../lib/graphql-fetch'
-import getEntitiesData from '../../lib/get-entities-data'
 
 import Layout from 'core/Layout'
 import PageFooter from 'core/pages/PageFooter'
