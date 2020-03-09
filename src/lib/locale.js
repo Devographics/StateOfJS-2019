@@ -1,9 +1,9 @@
+import { useRouter } from 'next/router'
 import locales from '../../config/locales.yml'
 
-export function getLocalePaths() {
-    return locales.map(({ path }) => (path === 'default' ? '/en' : `/${path}`))
-}
+export { locales }
 
-export function getLocaleByPath(path) {
-    return locales.find(locale => locale.path === path)
+export function useLocale() {
+    const router = useRouter()
+    return locales.find(locale => locale.path === router.query.lang)
 }

@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { useI18n } from 'core/i18n/i18nContext'
 import mq from 'core/theme/mq'
-import locales from '../../../../config/locales.yml'
+import { locales } from '../../../lib/locale'
+
+const contributedLocales = locales.filter(({ locale }) => locale !== 'en-US')
 
 const TranslatorsBlock = () => {
     const { translate } = useI18n()
@@ -12,21 +14,19 @@ const TranslatorsBlock = () => {
             <Container>
                 <Header>{translate('general.translation_help')}</Header>
                 <Locales>
-                {locales
-                    .filter(({ locale }) => locale !== 'en-US')
-                    .map(({ label, translators }) => (
+                    {contributedLocales.map(({ label, translators }) => (
                         <Locale key={label}>
                             <LocaleLabel>{label}</LocaleLabel>
                             <Translators>
-                            {translators.map(({ name, github }) => (
-                                <Translator key={name}>
-                                    <a href={github}>{name}</a>
-                                </Translator>
-                            ))}
+                                {translators.map(({ name, github }) => (
+                                    <Translator key={name}>
+                                        <a href={github}>{name}</a>
+                                    </Translator>
+                                ))}
                             </Translators>
                         </Locale>
                     ))}
-                    </Locales>
+                </Locales>
             </Container>
         </>
     )
@@ -50,8 +50,8 @@ const Locales = styled.div`
     display: grid;
     @media ${mq.smallMedium} {
         grid-template-columns: 1fr 1fr;
-        column-gap: ${props => props.theme.spacing/2}px;
-        row-gap: ${props => props.theme.spacing/2}px;
+        column-gap: ${props => props.theme.spacing / 2}px;
+        row-gap: ${props => props.theme.spacing / 2}px;
     }
     @media ${mq.large} {
         grid-template-columns: 1fr 1fr 1fr;
@@ -60,22 +60,20 @@ const Locales = styled.div`
     }
 `
 
-const Locale = styled.div`
-`
+const Locale = styled.div``
 
 const LocaleLabel = styled.h4`
-  margin-bottom: 0;
+    margin-bottom: 0;
 `
 
-const Translators = styled.div`
-`
+const Translators = styled.div``
 
 const Translator = styled.span`
-  &:after {
-    content: ", ";
-  }
-  &:last-child:after{
-    content: none;
-  }
+    &:after {
+        content: ', ';
+    }
+    &:last-child:after {
+        content: none;
+    }
 `
 export default TranslatorsBlock

@@ -1,4 +1,4 @@
-import { getLocalePaths, getLocaleByPath } from '../../lib/locale'
+import { getLocalePaths, getLocaleByPath } from '../../lib/api/locale'
 import getTranslationsByLocale from '../../lib/translations'
 // import { getPage, getPageContext, getPageQuery } from '../../lib/_page'
 import introduction from '../../translations/en-US/introductions/introduction.md'
@@ -53,9 +53,6 @@ export async function getStaticProps({ params: { lang } }) {
     })
     const props = {
         ...context,
-        locale: locale.locale,
-        localeLabel: locale.label,
-        localePath: locale.path === 'default' ? '' : `/${locale.path}`,
         entities: getEntitiesData(),
         survey: survey.data.survey,
         translations

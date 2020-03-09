@@ -2,8 +2,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
-import locales from '../../../config/locales.yml'
-import { usePageContext } from 'core/helpers/pageContext'
+import { locales } from '../../lib/locale'
 
 const Container = styled.div`
     display: grid;
