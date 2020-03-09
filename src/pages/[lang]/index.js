@@ -14,8 +14,7 @@ const context = {
     next: {
         id: 'tshirt',
         path: '/tshirt'
-    },
-    basePath: '/'
+    }
 }
 
 export async function getStaticPaths() {

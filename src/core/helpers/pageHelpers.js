@@ -68,10 +68,9 @@ export const getPageImageUrl = () => {
 
 export const usePageMeta = (translate, overrides = {}) => {
     const context = usePageContext()
-    const { query, asPath } = useRouter()
+    const { asPath } = useRouter()
     const imageUrl = getPageImageUrl()
-    const currentPath = query.lang ? asPath.replace(new RegExp(`^/${query.lang}`), '/') : asPath
-    const isRoot = currentPath === '/'
+    const isRoot = context.basePath === '/'
 
     return {
         url: HOST + asPath,
