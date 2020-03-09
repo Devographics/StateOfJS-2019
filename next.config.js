@@ -4,6 +4,28 @@ module.exports = {
     env: {
         API_URL: 'https://api.stateofjs.com'
     },
+    experimental: {
+        rewrites() {
+            return [
+                {
+                    source: '/:path',
+                    destination: '/en/:path'
+                }
+                // {
+                //     source: '/',
+                //     destination: '/[lang]?lang=en'
+                // },
+                // {
+                //     source: '/tshirt',
+                //     destination: '/en/tshirt?lang=en'
+                // }
+                // {
+                //     source: '/:path*',
+                //     destination: '/en/:path'
+                // }
+            ]
+        }
+    },
     webpack(cfg) {
         cfg.module.rules.push({
             test: /\.ya?ml$/,
