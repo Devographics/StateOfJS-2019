@@ -135,7 +135,7 @@ class Layout extends PureComponent {
         const { showPagination, location, pageContext, router } = this.props
         const { showSidebar } = this.state
         const { asPath, query } = router
-        const basePath = asPath.replace(new RegExp(`^/${query.lang}`), '/')
+        const basePath = asPath.replace(new RegExp(`^/${query.lang}`), '') || '/'
         const context = mergePageContext({ ...pageContext, ...this.state, basePath }, location)
 
         return (

@@ -1,7 +1,9 @@
 import locales from '../../../config/locales.yml'
 
-export function getLocalePaths() {
-    return locales.map(({ path }) => (path === 'default' ? '/en' : `/${path}`))
+export function getLocaleStaticPaths() {
+    return locales.map(({ path }) => ({
+        params: { lang: path === 'default' ? 'en' : path }
+    }))
 }
 
 export function getLocaleByPath(path) {
