@@ -1,7 +1,6 @@
 import { getLocaleStaticPaths, getLocaleByPath } from '../../lib/api/locale'
 import getTranslationsByLocale from '../../lib/translations'
-// import { getPage, getPageContext, getPageQuery } from '../../lib/_page'
-import tshirt from '../../translations/en-US/introductions/tshirt.md'
+import html from '../../translations/en-US/introductions/tshirt.md'
 import graphqlFetch from '../../lib/graphql-fetch'
 import getEntitiesData from '../../lib/get-entities-data'
 
@@ -27,11 +26,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { lang } }) {
-    // const page = await getPage('/tshirt/')
-    // const context = getPageContext(page)
-    // const query = getPageQuery(page)
-    // console.log('CONTEXT', context)
-    // console.log('QUERY', query)
     const locale = getLocaleByPath(lang === 'en' ? 'default' : lang)
     const translations = getTranslationsByLocale(locale.locale)
     const survey = await graphqlFetch(`${process.env.API_URL}/graphql`, {
@@ -57,11 +51,11 @@ export async function getStaticProps({ params: { lang } }) {
     return { props }
 }
 
-export default function Index(props) {
+export default function TShirt(props) {
     return (
         <Layout pageContext={{ ...context, ...props }}>
             <main className={`Page__Contents Page__Contents--${context.id}`}>
-                <PageIntroductionBlock data={tshirt} />
+                <PageIntroductionBlock data={html} />
                 <TshirtBlock />
             </main>
             <PageFooter />

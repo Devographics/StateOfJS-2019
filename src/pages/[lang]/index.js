@@ -1,6 +1,6 @@
 import { getLocaleStaticPaths, getLocaleByPath } from '../../lib/api/locale'
 import getTranslationsByLocale from '../../lib/translations'
-import introduction from '../../translations/en-US/introductions/introduction.md'
+import html from '../../translations/en-US/introductions/introduction.md'
 import graphqlFetch from '../../lib/graphql-fetch'
 import getEntitiesData from '../../lib/get-entities-data'
 
@@ -50,7 +50,7 @@ export default function Index(props) {
     return (
         <Layout pageContext={{ ...context, ...props }}>
             <main className={`Page__Contents Page__Contents--${context.id}`}>
-                <SurveyIntroBlock data={introduction} />
+                <SurveyIntroBlock data={html} />
             </main>
             <PageFooter />
         </Layout>
