@@ -1,8 +1,7 @@
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
-import { locales } from '../../lib/locale'
+import { locales, useLang } from '../../lib/locale'
 
 const Container = styled.div`
     display: grid;
@@ -29,15 +28,14 @@ const Item = styled.a`
 `
 
 const Locales = () => {
-    const { query } = useRouter()
-    const currentLang = query.lang === 'en' ? 'default' : query.lang
+    const lang = useLang()
 
     return (
         <Container className="Locales">
             {locales.map(({ path, label }) => {
                 const href = `/[lang]${path === 'default' ? '?lang=en' : ''}`
                 const asPath = path === 'default' ? '/' : `/${path}`
-                const isCurrent = path === currentLang
+                const isCurrent = path === lang
 
                 return (
                     <Link key={path} href={href} as={asPath} passHref>
