@@ -11,16 +11,20 @@ import Layout from 'core/Layout'
 import PageFooter from 'core/pages/PageFooter'
 import PageIntroductionBlock from 'core/blocks/other/PageIntroductionBlock'
 import ParticipationByCountryBlock from 'core/blocks/demographics/ParticipationByCountryBlock'
+import VerticalBarBlock from 'core/blocks/generic/VerticalBarBlock'
+import HorizontalBarBlock from 'core/blocks/generic/HorizontalBarBlock'
+import GenderBlock from 'core/blocks/demographics/GenderBlock'
+import RecommendedResourcesBlock from 'core/blocks/other/RecommendedResourcesBlock'
 
 const context = {
     id: 'tshirt',
     previous: {
-        id: 'introduction',
-        path: '/'
+        id: 'tshirt',
+        path: '/tshirt'
     },
     next: {
-        id: 'demographics',
-        path: '/demographics/'
+        id: 'overview',
+        path: '/overview'
     }
 }
 
@@ -71,6 +75,35 @@ export default function Demographics(props) {
                 <ParticipationByCountryBlock
                     block={demographics.country}
                     data={survey.demographics.country.year}
+                />
+                <VerticalBarBlock
+                    block={demographics.salary}
+                    data={survey.demographics.salary.year}
+                />
+                <VerticalBarBlock
+                    block={demographics.workExperience}
+                    data={survey.demographics.workExperience.year}
+                />
+                <VerticalBarBlock
+                    block={demographics.companySize}
+                    data={survey.demographics.companySize.year}
+                />
+                <HorizontalBarBlock
+                    block={demographics.source}
+                    data={survey.demographics.source.year}
+                />
+                <GenderBlock block={demographics.gender} data={survey.demographics.gender.year} />
+                <HorizontalBarBlock
+                    block={demographics.jobTitle}
+                    data={survey.demographics.jobTitle.year}
+                />
+                <VerticalBarBlock
+                    block={demographics.cssProficiency}
+                    data={survey.demographics.cssProficiency.year}
+                />
+                <VerticalBarBlock
+                    block={demographics.backendProficiency}
+                    data={survey.demographics.backendProficiency.year}
                 />
             </main>
             <PageFooter />
