@@ -1,6 +1,6 @@
 // Temporal file to help me getting the required data for each page
-import { computeSitemap } from '../../node_src/sitemap'
-import rawSitemap from '../../config/raw_sitemap.yml'
+import { computeSitemap } from '../../../node_src/sitemap'
+import rawSitemap from '../../../config/raw_sitemap.yml'
 import omit from 'lodash/omit'
 import compact from 'lodash/compact'
 import upperFirst from 'lodash/upperFirst'

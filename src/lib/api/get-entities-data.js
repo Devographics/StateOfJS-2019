@@ -1,6 +1,6 @@
-import entities from '../data/entities.yml'
-import features from '../data/features.yml'
-import resources from '../data/resources.yaml'
+import entities from '../../data/entities.yml'
+import features from '../../data/features.yml'
+import resources from '../../data/resources.yaml'
 
 export default function getEntitiesData() {
     return {
