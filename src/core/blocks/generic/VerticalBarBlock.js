@@ -74,7 +74,6 @@ const VerticalBarBlock = ({ block, data }) => {
 VerticalBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        dataPath: PropTypes.string.isRequired,
         bucketKeysName: PropTypes.oneOf(Object.keys(keys)),
         showDescription: PropTypes.bool,
         mode: PropTypes.oneOf(['absolute', 'relative']),
