@@ -17,7 +17,7 @@ const context = {
     },
     next: {
         id: 'demographics',
-        path: '/demographics/'
+        path: '/demographics'
     }
 }
 

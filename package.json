@@ -28,7 +28,8 @@
                 {
                     "alias": {
                         "core": "./src/core",
-                        "data": "./src/data"
+                        "data": "./src/data",
+                        "lib": "./src/lib"
                     }
                 }
             ],
