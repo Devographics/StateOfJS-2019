@@ -1,14 +1,16 @@
 import { getLocaleStaticPaths, getLocaleByPath } from '../../lib/api/locale'
 import getTranslationsByLocale from '../../lib/api/translations'
-import { getPage, getPageContext, getPageQuery } from '../../lib/api/_page'
+// import { getPage, getPageContext, getPageQuery } from '../../lib/api/_page'
 import graphqlFetch from '../../lib/api/graphql-fetch'
 import getEntitiesData from '../../lib/api/get-entities-data'
+import { tools } from '../../lib/static-data/shared'
+import { demographics } from '../../lib/static-data/demographics'
 import html from '../../translations/en-US/introductions/demographics.md'
 
 import Layout from 'core/Layout'
 import PageFooter from 'core/pages/PageFooter'
 import PageIntroductionBlock from 'core/blocks/other/PageIntroductionBlock'
-import TshirtBlock from 'core/blocks/other/TshirtBlock'
+import ParticipationByCountryBlock from 'core/blocks/demographics/ParticipationByCountryBlock'
 
 const context = {
     id: 'tshirt',
@@ -27,168 +29,26 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { lang } }) {
-    const page = await getPage('/demographics/')
-    const context = getPageContext(page)
-    const query = getPageQuery(page)
-    console.log('CONTEXT', context)
-    console.log('QUERY', query)
+    // const page = await getPage('/demographics/')
+    // const context = getPageContext(page)
+    // const query = getPageQuery(page)
+    // console.log('CONTEXT', context)
+    // console.log('QUERY', query)
     const locale = getLocaleByPath(lang === 'en' ? 'default' : lang)
     const translations = getTranslationsByLocale(locale.locale)
     const survey = await graphqlFetch(`${process.env.API_URL}/graphql`, {
         query: `
             query {
-                survey(survey: js) {
-                    tools {
-                        id
-                        entity {
-                            name
-                        }
-                    }
-                    demographics {
-                        country {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                        salary {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                        workExperience {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                        companySize {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                        source {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                    entity {
-                                        name
-                                        homepage
-                                        github {
-                                            url
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        gender {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                        jobTitle {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                        cssProficiency {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                        backendProficiency {
-                            year(year: 2019) {
-                                year
-                                total
-                                completion {
-                                    percentage
-                                    count
-                                }
-                                buckets {
-                                    id
-                                    count
-                                    percentage
-                                }
-                            }
-                        }
-                    }
-                }
+                ${tools.query}
+                ${demographics.country.query}
+                ${demographics.salary.query}
+                ${demographics.workExperience.query}
+                ${demographics.companySize.query}
+                ${demographics.source.query}
+                ${demographics.gender.query}
+                ${demographics.jobTitle.query}
+                ${demographics.cssProficiency.query}
+                ${demographics.backendProficiency.query}
             }
         `
     })
@@ -202,11 +62,16 @@ export async function getStaticProps({ params: { lang } }) {
 }
 
 export default function Demographics(props) {
+    const { survey } = props
+
     return (
         <Layout pageContext={{ ...context, ...props }}>
             <main className={`Page__Contents Page__Contents--${context.id}`}>
                 <PageIntroductionBlock data={html} />
-                <TshirtBlock />
+                <ParticipationByCountryBlock
+                    block={demographics.country}
+                    data={survey.demographics.country.year}
+                />
             </main>
             <PageFooter />
         </Layout>
