@@ -9,7 +9,7 @@ import Button from 'core/components/Button'
 import { useI18n } from 'core/i18n/i18nContext'
 
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#___gatsby')
+Modal.setAppElement('#__next')
 
 const ExportIcon = () => (
     <Icon
@@ -62,10 +62,15 @@ const BlockExport = ({ data, block, title }) => {
 
     const jsonExport = JSON.stringify(cleanedData, '', 2)
 
-    // remove first and last lines of query to remove "surveyApi" field
-    const trimmedQuery = query
-        .split('\n')
-        .slice(1, -2)
+    // Split the query by new lines
+    const queryParts = query.split('\n')
+    // Use the length of the last line (it's an empty line) as the tab size
+    const tabLength = queryParts[queryParts.length - 1].length
+    // Regex to remove the tabs
+    const tabRegex = new RegExp(`^\\s{${tabLength}}`)
+    const trimmedQuery = queryParts
+        .slice(1, -1)
+        .map(s => s.replace(tabRegex, ''))
         .join('\n')
 
     const graphQLExport = `query ${camelCase(id)}Query {
