@@ -122,16 +122,16 @@ export const jobTitleArray = [
     'web_developer'
 ]
 
-export const zeroToFiveRange = [0, 1, 2, 3, 4]
+export const zeroToFiveRange = ['0', '1', '2', '3', '4']
 
 export const cssProficiencyArray = zeroToFiveRange
 export const backendProficiencyArray = zeroToFiveRange
 export const opinions = [
-    { id: 4, color: colors.red },
-    { id: 3, color: colors.redLight },
-    { id: 2, color: colors.grey },
-    { id: 1, color: colors.tealLight },
-    { id: 0, color: colors.teal }
+    { id: '4', color: colors.red },
+    { id: '3', color: colors.redLight },
+    { id: '2', color: colors.grey },
+    { id: '1', color: colors.tealLight },
+    { id: '0', color: colors.teal }
 ]
 
 export const featureExperience = [
