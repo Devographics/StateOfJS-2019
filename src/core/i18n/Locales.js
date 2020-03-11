@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
 import { locales, useLang } from '../../lib/locale'
+import { usePageContext } from '../helpers/pageContext'
 
 const Container = styled.div`
     display: grid;
@@ -28,13 +29,14 @@ const Item = styled.a`
 `
 
 const Locales = () => {
+    const { basePath } = usePageContext()
     const lang = useLang()
 
     return (
         <Container className="Locales">
             {locales.map(({ path, label }) => {
-                const href = `/[lang]${path === 'default' ? '?lang=en' : ''}`
-                const asPath = path === 'default' ? '/' : `/${path}`
+                const href = `/[lang]${path === 'default' ? '?lang=en' : ''}${basePath}`
+                const asPath = `${path === 'default' ? '' : `/${path}`}${basePath}`
                 const isCurrent = path === lang
 
                 return (

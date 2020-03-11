@@ -7,10 +7,10 @@ module.exports = {
     experimental: {
         rewrites() {
             return [
-                {
-                    source: '/:path',
-                    destination: '/en/:path'
-                }
+                // {
+                //     source: '/:path',
+                //     destination: '/en/:path'
+                // }
                 // {
                 //     source: '/',
                 //     destination: '/[lang]?lang=en'

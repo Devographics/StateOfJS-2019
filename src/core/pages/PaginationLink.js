@@ -28,7 +28,7 @@ const StyledLink = styled.a`
 
 const PaginationLink = ({ page, type }) => (
     <LocaleLink to={page.path}>
-        <StyledLink className={`pagination__link pagination__${type}`}>
+        <StyledLink className={`pagination__link pagination__${type}`} type={type}>
             <PageLabel page={page} />
         </StyledLink>
     </LocaleLink>
