@@ -39,8 +39,7 @@ const ToolExperienceGraphBlock = ({ block, data }) => {
 ToolExperienceGraphBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        blockName: PropTypes.string.isRequired,
-        dataPath: PropTypes.string.isRequired
+        blockName: PropTypes.string.isRequired
     }).isRequired,
     data: PropTypes.shape({
         entity: PropTypes.shape({

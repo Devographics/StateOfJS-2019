@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactGA from 'react-ga'
+import { useLocale } from 'lib/locale'
 import Link from 'core/components/LocaleLink'
 import resources from 'data/recommended_resources.yml'
 import BlockTitle from 'core/blocks/block/BlockTitle'
@@ -20,7 +21,8 @@ const trackClick = (id, resource, label) => {
 const RecommendedResourcesBlock = ({ block, data }) => {
     const { translate } = useI18n()
     const context = usePageContext()
-    const { sponsors: pageSponsors, locale } = context
+    const { locale } = useLocale()
+    const { sponsors: pageSponsors } = context
     const { sponsors: blockSponsors } = block
 
     // only show recommended resources on english version
@@ -62,7 +64,9 @@ const RecommendedResourcesBlock = ({ block, data }) => {
                                                 backgroundImage: `url(${resource.image})`
                                             }}
                                             title={resource.name}
-                                        >{resource.name}</a>
+                                        >
+                                            {resource.name}
+                                        </a>
                                     </div>
                                 </ResourceImage>
                                 <ResourceContent className="Resource__content">
@@ -145,9 +149,9 @@ const ResourceImage = styled.div`
         height: 0;
         background-position: center center;
         background-size: cover;
-        line-height: 0; 
+        line-height: 0;
         font-size: 0;
-        color: transparent; 
+        color: transparent;
     }
 
     img,

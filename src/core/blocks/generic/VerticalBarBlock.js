@@ -34,7 +34,7 @@ const VerticalBarBlock = ({ block, data }) => {
     const { buckets, total, completion } = data
 
     const sortedBuckets = bucketKeys.map(({ id: bucketKey }) => {
-        const bucket = buckets.find(b => b.id === bucketKey)
+        const bucket = buckets.find(b => String(b.id) === bucketKey)
         if (bucket === undefined) {
             return {
                 id: bucketKey,
@@ -43,6 +43,7 @@ const VerticalBarBlock = ({ block, data }) => {
             }
             // throw new Error(`no bucket found for key: '${bucketKey}' in block: ${block.id}`)
         }
+        bucket.id = String(bucket.id)
         return bucket
     })
 
@@ -74,7 +75,6 @@ const VerticalBarBlock = ({ block, data }) => {
 VerticalBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        dataPath: PropTypes.string.isRequired,
         bucketKeysName: PropTypes.oneOf(Object.keys(keys)),
         showDescription: PropTypes.bool,
         mode: PropTypes.oneOf(['absolute', 'relative']),

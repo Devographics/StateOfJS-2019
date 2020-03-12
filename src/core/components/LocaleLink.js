@@ -1,10 +1,17 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { usePageContext } from 'core/helpers/pageContext'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-const LocaleLink = ({ to, ...rest }) => {
-    const context = usePageContext()
-    return <Link {...rest} to={`${context.localePath}${to}`} />
+const LocaleLink = ({ to, children }) => {
+    const { query } = useRouter()
+    const lang = query.lang || 'en'
+    const href = `/[lang]${to}${lang === 'en' ? '?lang=en' : ''}`
+    const as = lang === 'en' ? to : `/${lang}${to}`.replace(/\/$/, '')
+
+    return (
+        <Link href={href} as={as} passHref>
+            {children}
+        </Link>
+    )
 }
 
 export default LocaleLink

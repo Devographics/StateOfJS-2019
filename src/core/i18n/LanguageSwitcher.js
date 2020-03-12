@@ -1,8 +1,8 @@
-import React, { memo, useState, useCallback } from 'react'
+import { memo, useState, useCallback } from 'react'
 import styled from 'styled-components'
 import { mq, spacing, fontSize } from 'core/theme'
-import { usePageContext } from 'core/helpers/pageContext'
 import { useI18n } from 'core/i18n/i18nContext'
+import { useLocale } from '../../lib/locale'
 import Locales from './Locales'
 
 const svgs = {
@@ -12,10 +12,9 @@ const svgs = {
 
 const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
     const { translate } = useI18n()
-
-    const context = usePageContext()
     const [isOpened, setIsOpened] = useState(false)
     const toggle = useCallback(() => setIsOpened(flag => !flag), [])
+    const { label } = useLocale()
 
     return (
         <Container
@@ -25,7 +24,7 @@ const LanguageSwitcher = ({ position = 'bottom', positionOpen = 'top' }) => {
         >
             <LanguageSwitcherInner className="LanguageSwitcherInner">
                 <LanguageSwitcherToggle className="LanguageSwitcherToggle" onClick={toggle}>
-                    <span>{context.localeLabel}</span>
+                    <span>{label}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
                         {isOpened ? svgs[positionOpen] : svgs[position]}
                     </svg>
@@ -128,15 +127,15 @@ const LanguageSwitcherPopup = styled.div`
         border-bottom: 0;
         border-left: 0;
     }
-    
+
     @media ${mq.smallMedium} {
         top: 145%;
     }
-        
+
     @media ${mq.xSmall} {
         max-width: 90vw;
     }
-    
+
     .LanguageSwitcher._is-closed & {
         display: none;
         // @include sr-only;

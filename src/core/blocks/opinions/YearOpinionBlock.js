@@ -98,7 +98,6 @@ const YearOpinionBlock = ({ block, data }) => {
 YearOpinionBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        dataPath: PropTypes.string,
         showDescription: PropTypes.bool
     }).isRequired,
     data: PropTypes.shape({

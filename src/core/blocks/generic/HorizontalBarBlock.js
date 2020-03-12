@@ -30,7 +30,6 @@ const HorizontalBarBlock = ({ block, data }) => {
 HorizontalBarBlock.propTypes = {
     block: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        dataPath: PropTypes.string.isRequired,
         showDescription: PropTypes.bool,
         translateData: PropTypes.bool,
         mode: PropTypes.oneOf(['absolute', 'relative']),

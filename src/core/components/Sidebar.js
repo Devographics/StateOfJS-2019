@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'core/components/LocaleLink'
+import LocaleLink from 'core/components/LocaleLink'
 import styled from 'styled-components'
 import ShareSite from 'core/share/ShareSite'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -27,12 +27,14 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => {
                     <SidebarMobileLogo className="Sidebar__Logo--mobile Logo--mobile">
                         <div />
                         <div className="Sidebar__Logo__Inner">
-                            <SidebarLogoLink className="SidebarLogoLink" to="/">
-                                <LogoCompact />
-                                <span className="sr-only">
-                                    {translate('general.back_to_intro')}
-                                </span>
-                            </SidebarLogoLink>
+                            <LocaleLink to="/">
+                                <SidebarLogoLink className="SidebarLogoLink" to="/">
+                                    <LogoCompact />
+                                    <span className="sr-only">
+                                        {translate('general.back_to_intro')}
+                                    </span>
+                                </SidebarLogoLink>
+                            </LocaleLink>
                         </div>
                         <SidebarCloseButton className="SidebarCloseButton" onClick={closeSidebar}>
                             <CloseIcon />
@@ -40,10 +42,14 @@ const Sidebar = ({ sidebarClassName, closeSidebar, rest }) => {
                         </SidebarCloseButton>
                     </SidebarMobileLogo>
                     <div className="Sidebar__Logo--desktop Logo--desktop">
-                        <SidebarLogoLink className="SidebarLogoLink" to="/">
-                            <LogoCompact />
-                            <span className="sr-only">{translate('general.back_to_intro')}</span>
-                        </SidebarLogoLink>
+                        <LocaleLink to="/">
+                            <SidebarLogoLink className="SidebarLogoLink">
+                                <LogoCompact />
+                                <span className="sr-only">
+                                    {translate('general.back_to_intro')}
+                                </span>
+                            </SidebarLogoLink>
+                        </LocaleLink>
                     </div>
                 </div>
                 <div className="Sidebar__Inner">
@@ -74,7 +80,7 @@ const Container = styled.nav`
     }
 `
 
-const SidebarLogoLink = styled(Link)`
+const SidebarLogoLink = styled.a`
     &:hover {
         text-decoration: none;
     }
@@ -99,7 +105,7 @@ const SidebarCloseButton = styled.button`
     background: none;
     cursor: pointer;
     border: none;
-    
+
     &:focus {
         outline: 0;
     }

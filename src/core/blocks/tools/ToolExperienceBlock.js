@@ -62,8 +62,7 @@ const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }
 
 ToolExperienceBlock.propTypes = {
     block: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        dataPath: PropTypes.string.isRequired
+        id: PropTypes.string.isRequired
     }).isRequired
 }
 

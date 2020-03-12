@@ -1,8 +1,8 @@
-import React, { PureComponent, useCallback, useEffect, useState } from 'react'
+import { PureComponent, useCallback, useEffect, useState } from 'react'
 import propTypes from 'prop-types'
+import { withRouter } from 'next/router'
 import classNames from 'classnames'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import '../stylesheets/screen.scss'
 import Pagination from './pages/Pagination'
 import Sidebar from './components/Sidebar'
 import Head from './components/Head'
@@ -54,8 +54,8 @@ const ThemedLayout = ({
 
     return (
         <ThemeProvider theme={themes[themeId]}>
-            <ToolsContextProvider>
-                <EntitiesContextProvider>
+            <ToolsContextProvider survey={props.pageContext.survey}>
+                <EntitiesContextProvider entities={props.pageContext.entities}>
                     <GlobalStyle />
                     <div
                         className={classNames('pageLayout', `PageLayout--${context.id}`, {
@@ -90,7 +90,7 @@ const ThemedLayout = ({
     )
 }
 
-export default class Layout extends PureComponent {
+class Layout extends PureComponent {
     static propTypes = {
         showPagination: propTypes.bool.isRequired
     }
@@ -132,13 +132,15 @@ export default class Layout extends PureComponent {
     }
 
     render() {
-        const { showPagination, location, pageContext } = this.props
+        const { showPagination, location, pageContext, router } = this.props
         const { showSidebar } = this.state
-        const context = mergePageContext(pageContext, location, this.state)
+        const { asPath, query } = router
+        const basePath = asPath.replace(new RegExp(`^/${query.lang}`), '') || '/'
+        const context = mergePageContext({ ...pageContext, ...this.state, basePath }, location)
 
         return (
             <PageContextProvider value={context}>
-                <I18nContextProvider>
+                <I18nContextProvider translations={pageContext.translations}>
                     <ThemedLayout
                         context={context}
                         showPagination={showPagination}
@@ -153,6 +155,8 @@ export default class Layout extends PureComponent {
     }
 }
 
+export default withRouter(Layout)
+
 const GlobalStyle = createGlobalStyle`
     body {
         background: ${props => props.theme.colors.background};
@@ -161,20 +165,20 @@ const GlobalStyle = createGlobalStyle`
         font-feature-settings: 'liga' 0;
         line-height: 1.7;
     }
-    
+
     html {
     box-sizing: border-box;
     }
-    
+
     *,
     *:before,
     *:after {
         box-sizing: inherit;
     }
-    
+
     a {
         text-decoration: none;
-        
+
         &,
         &:link,
         &:visited,
@@ -182,24 +186,24 @@ const GlobalStyle = createGlobalStyle`
         &:focus {
             color: ${props => props.theme.colors.link};
         }
-        
+
         &:hover {
             text-decoration: underline;
             color: ${props => props.theme.colors.linkHover};
         }
     }
-    
+
     .ReactModal__Overlay {
         z-index: 1000;
     }
-    
+
     .Page__Contents--awards {
         @media ${mq.mediumLarge} {
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: ${props => props.theme.spacing * 4}px;
             row-gap: ${props => props.theme.spacing * 4}px;
-            
+
             .Page__Introduction {
                 grid-column: 1 / 3;
             }

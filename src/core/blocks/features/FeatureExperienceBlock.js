@@ -1,12 +1,12 @@
 import React, { useState, useContext, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { ThemeContext } from 'styled-components'
+import { useLocale } from 'lib/locale'
 import Block from 'core/blocks/block/Block'
 import { useI18n } from 'core/i18n/i18nContext'
 import ChartContainer from 'core/charts/ChartContainer'
 import { featureExperience } from 'core/constants'
 import GaugeBarChart from 'core/charts/generic/GaugeBarChart'
-import { usePageContext } from 'core/helpers/pageContext'
 
 // convert relative links into absolute MDN links
 const parseMDNLinks = content =>
@@ -16,8 +16,7 @@ const FeatureExperienceBlock = ({ block, data, units: defaultUnits = 'percentage
     const [units, setUnits] = useState(defaultUnits)
     const theme = useContext(ThemeContext)
 
-    const context = usePageContext()
-    const { locale } = context
+    const { locale } = useLocale()
     const { translate } = useI18n()
     const { name, mdn } = data
 

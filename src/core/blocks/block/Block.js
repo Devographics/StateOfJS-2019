@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
@@ -10,11 +10,11 @@ const Container = styled.div`
     @media ${mq.small} {
         margin-bottom: ${props => props.theme.spacing * 2}px;
     }
-    
+
     @media ${mq.mediumLarge} {
         margin-bottom: ${props => props.theme.spacing * 4}px;
     }
-    
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -31,7 +31,7 @@ const Block = ({
     block = {},
     legendProps,
     titleProps,
-    blockFooter = null,
+    blockFooter = null
 }) => {
     const { id, showLegend } = block
 

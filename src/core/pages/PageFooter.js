@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import mq from 'core/theme/mq'
 import { usePageContext } from 'core/helpers/pageContext'
 import { useI18n } from 'core/i18n/i18nContext'
-import Link from 'core/components/LocaleLink'
+import LocaleLink from 'core/components/LocaleLink'
 import Button from 'core/components/Button'
 import PageLabel from './PageLabel'
 
@@ -16,22 +16,21 @@ const PageFooter = () => {
         <Container className="PageFooter">
             <Nav className="PageFooter__Nav">
                 {context.previous && !isEmpty(context.previous) && (
-                    <PreviousLink
-                        as={Link}
-                        className="PageFooter__Link PageFooter__Link--previous"
-                        to={`${context.localePath}${context.previous.path}`}
-                    >
-                        « {translate('general.previous')} <PageLabel page={context.previous} />
-                    </PreviousLink>
+                    <LocaleLink to={context.previous.path}>
+                        <PreviousLink
+                            as="a"
+                            className="PageFooter__Link PageFooter__Link--previous"
+                        >
+                            « {translate('general.previous')} <PageLabel page={context.previous} />
+                        </PreviousLink>
+                    </LocaleLink>
                 )}
                 {context.next && !isEmpty(context.next) && (
-                    <NextLink
-                        as={Link}
-                        className="PageFooter__Link PageFooter__Link--next Button"
-                        to={`${context.localePath}${context.next.path}`}
-                    >
-                        {translate('general.next')} <PageLabel page={context.next} /> »
-                    </NextLink>
+                    <LocaleLink to={context.next.path}>
+                        <NextLink as="a" className="PageFooter__Link PageFooter__Link--next Button">
+                            {translate('general.next')} <PageLabel page={context.next} /> »
+                        </NextLink>
+                    </LocaleLink>
                 )}
             </Nav>
             <Notes>
@@ -104,7 +103,7 @@ const PreviousLink = styled(FooterLink)`
     @media ${mq.mediumLarge} {
         margin-right: ${({ theme }) => theme.spacing}px;
     }
-    
+
     &,
     &:link,
     &:visited {

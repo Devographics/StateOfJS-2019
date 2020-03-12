@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import mq from 'core/theme/mq'
+import LocaleLink from 'core/components/LocaleLink'
 import PageLabel from './PageLabel'
-import PageLink from './PageLink'
 
-const StyledLink = styled(PageLink)`
+const StyledLink = styled.a`
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -27,9 +27,11 @@ const StyledLink = styled(PageLink)`
 `
 
 const PaginationLink = ({ page, type }) => (
-    <StyledLink page={page} className={`pagination__link pagination__${type}`} type={type}>
-        <PageLabel page={page} />
-    </StyledLink>
+    <LocaleLink to={page.path}>
+        <StyledLink className={`pagination__link pagination__${type}`} type={type}>
+            <PageLabel page={page} />
+        </StyledLink>
+    </LocaleLink>
 )
 
 PaginationLink.propTypes = {

@@ -9,7 +9,7 @@ import offsets from './toolsArrowsLabelOffsets.json'
 import { getColor } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
 
-import './ToolsArrowsChart.scss'
+import styles from './ToolsArrowsChart.module.scss'
 
 let toolToCategoryMap = {}
 map(toolsCategories, (tools, category) => {
@@ -52,7 +52,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
             width,
             height
         }
-    }, [/* windowWidth, */windowHeight])
+    }, [/* windowWidth, */ windowHeight])
 
     var isFirefox =
         typeof navigator !== 'undefined' &&
@@ -97,25 +97,25 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
     }, [points, dms])
 
     return (
-        <div className="ToolsArrowsChart">
+        <div className={styles.ToolsArrowsChart}>
             <svg className="ToolsArrowsChart__svg" height={dms.height} width={dms.width}>
                 <line
-                    className="ToolsArrowsChart__axis"
+                    className={styles.ToolsArrowsChart__axis}
                     x2={dms.width}
                     y1={dms.height / 2}
                     y2={dms.height / 2}
                 />
                 <line
-                    className="ToolsArrowsChart__axis"
+                    className={styles.ToolsArrowsChart__axis}
                     x1={dms.width / 2}
                     x2={dms.width / 2}
                     y2={dms.height}
                 />
-                <text className="ToolsArrowsChart__axis__label" y={dms.height / 2 - 10}>
+                <text className={styles.ToolsArrowsChart__axis__label} y={dms.height / 2 - 10}>
                     {translate('toolExperience.negative_opinion.extrashort')}
                 </text>
                 <text
-                    className="ToolsArrowsChart__axis__label"
+                    className={styles.ToolsArrowsChart__axis__label}
                     x={dms.width}
                     y={dms.height / 2 - 10}
                     style={{
@@ -125,7 +125,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     {translate('toolExperience.positive_opinion.extrashort')}
                 </text>
                 <text
-                    className="ToolsArrowsChart__axis__label"
+                    className={styles.ToolsArrowsChart__axis__label}
                     x={dms.width / 2}
                     y={10}
                     style={{
@@ -135,7 +135,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     {translate('toolExperience.have_used.extrashort')}
                 </text>
                 <text
-                    className="ToolsArrowsChart__axis__label"
+                    className={styles.ToolsArrowsChart__axis__label}
                     x={dms.width / 2}
                     y={dms.height - 10}
                     style={{
@@ -185,22 +185,28 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     return (
                         <g
                             key={i}
-                            className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
-                                activeCategory !== 'all' && activeCategory !== category
-                                    ? 'hidden'
-                                    : activeCategory === category
-                                    ? 'active'
-                                    : !hoveredTool
-                                    ? 'normal'
-                                    : hoveredTool.tool === tool
-                                    ? 'hovering'
-                                    : 'hovering-other'
-                            }`}
+                            className={
+                                styles[
+                                    `ToolsArrowsChart__tool--is-${
+                                        activeCategory !== 'all' && activeCategory !== category
+                                            ? 'hidden'
+                                            : activeCategory === category
+                                            ? 'active'
+                                            : !hoveredTool
+                                            ? 'normal'
+                                            : hoveredTool.tool === tool
+                                            ? 'hovering'
+                                            : 'hovering-other'
+                                    }`
+                                ]
+                            }
                         >
                             {circles.slice(0, -1).map(([x, y], i) => (
                                 <line
                                     key={i}
-                                    className={`ToolsArrowsChart__gradient-line ToolsArrowsChart__gradient-line--nth-${i}`}
+                                    className={`${styles['ToolsArrowsChart__gradient-line']} ${
+                                        styles[`ToolsArrowsChart__gradient-line--nth-${i}`]
+                                    }`}
                                     x1={x}
                                     y1={y}
                                     x2={(circles[i + 1] || [])[0]}
@@ -214,7 +220,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                 />
                             ))}
                             <circle
-                                className="ToolsArrowsChart__now"
+                                className={styles.ToolsArrowsChart__now}
                                 cx={x}
                                 cy={y}
                                 fill={color}
@@ -242,27 +248,31 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                     return (
                         <g
                             key={i}
-                            className={`ToolsArrowsChart__tool ToolsArrowsChart__tool--is-${
-                                activeCategory !== 'all' && activeCategory !== category
-                                    ? 'hidden'
-                                    : activeCategory === category
-                                    ? 'active'
-                                    : !hoveredTool
-                                    ? 'normal'
-                                    : hoveredTool.tool === tool
-                                    ? 'hovering'
-                                    : 'hovering-other'
-                            }`}
+                            className={
+                                styles[
+                                    `ToolsArrowsChart__tool--is-${
+                                        activeCategory !== 'all' && activeCategory !== category
+                                            ? 'hidden'
+                                            : activeCategory === category
+                                            ? 'active'
+                                            : !hoveredTool
+                                            ? 'normal'
+                                            : hoveredTool.tool === tool
+                                            ? 'hovering'
+                                            : 'hovering-other'
+                                    }`
+                                ]
+                            }
                         >
                             <text
-                                className="ToolsArrowsChart__label-background"
+                                className={styles['ToolsArrowsChart__label-background']}
                                 x={x + ((offsets[tools[i]] || {}).x || 0)}
                                 y={y + ((offsets[tools[i]] || {}).y || 0)}
                             >
                                 {toolName}
                             </text>
                             <text
-                                className="ToolsArrowsChart__label"
+                                className={styles.ToolsArrowsChart__label}
                                 fill={color}
                                 x={x + ((offsets[tools[i]] || {}).x || 0)}
                                 y={y + ((offsets[tools[i]] || {}).y || 0)}
@@ -282,7 +292,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                     <Fragment key={i}>
                                         {showLabel && (
                                             <text
-                                                className="ToolsArrowsChart__year"
+                                                className={styles.ToolsArrowsChart__year}
                                                 x={
                                                     scales.x(x) +
                                                     10 * (isFirstLabelToTheRight ? -1 : 1)
@@ -298,7 +308,7 @@ const ToolsArrowsChart = ({ data, activeCategory }) => {
                                             </text>
                                         )}
                                         <circle
-                                            className="ToolsArrowsChart__year"
+                                            className={styles.ToolsArrowsChart__year}
                                             cx={scales.x(x)}
                                             cy={scales.y(y)}
                                             r="4"

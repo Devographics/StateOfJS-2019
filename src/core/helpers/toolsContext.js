@@ -1,41 +1,16 @@
-import React, { createContext, useContext } from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { createContext, useContext } from 'react'
 import get from 'lodash/get'
 
 export const ToolsContext = createContext()
 
-const toolsQuery = graphql`
-    query {
-        surveyApi {
-            survey(survey: js) {
-                tools {
-                    id
-                    entity {
-                        name
-                    }
-                }
-            }
-        }
+export const ToolsContextProvider = ({ survey, children }) => {
+    const { tools } = survey
+    const getToolName = ({ id }) => {
+        const tool = tools.find(t => t.id === id)
+        return get(tool, 'entity.name')
     }
-`
 
-export const ToolsContextProvider = ({ children }) => {
-    return (
-        <StaticQuery query={toolsQuery}>
-            {data => {
-                const tools = get(data, 'surveyApi.survey.tools')
-                const getToolName = ({ id }) => {
-                    const tool = tools.find(t => t.id === id)
-                    return get(tool, 'entity.name')
-                }
-                return (
-                    <ToolsContext.Provider value={{ getToolName }}>
-                        {children}
-                    </ToolsContext.Provider>
-                )
-            }}
-        </StaticQuery>
-    )
+    return <ToolsContext.Provider value={{ getToolName }}>{children}</ToolsContext.Provider>
 }
 
 export const useTools = () => useContext(ToolsContext)

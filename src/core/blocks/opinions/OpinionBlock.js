@@ -43,8 +43,7 @@ const OpinionBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
 
 OpinionBlock.propTypes = {
     block: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        dataPath: PropTypes.string.isRequired
+        id: PropTypes.string.isRequired
     }).isRequired
     // data: PropTypes.shape({
     //     buckets: PropTypes.arrayOf(
