@@ -4,4 +4,4 @@ page:   browser_apis
 locale: en-US
 ---
 
-The features provided by the browser.
+De functies die door de browser worden aangeboden.

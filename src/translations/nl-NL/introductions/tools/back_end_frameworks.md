@@ -4,4 +4,4 @@ page:   back_end_frameworks
 locale: en-US
 ---
 
-JavaScript on the server.
+JavaScript op de server.

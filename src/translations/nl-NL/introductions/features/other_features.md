@@ -4,4 +4,4 @@ page:   other_features
 locale: en-US
 ---
 
-Other technologies and patterns.
+Andere technologieën en patronen.

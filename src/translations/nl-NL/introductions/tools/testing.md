@@ -4,4 +4,4 @@ page:   testing
 locale: en-US
 ---
 
-Tools for testing your code.
+Tools om je code te testen.

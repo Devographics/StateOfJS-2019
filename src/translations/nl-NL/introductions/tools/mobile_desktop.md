@@ -4,4 +4,4 @@ page:   mobile_desktop
 locale: en-US
 ---
 
-JavaScript for mobile devices and desktop apps
+JavaScript JavaScript voor mobiele apparaten en desktop apps
