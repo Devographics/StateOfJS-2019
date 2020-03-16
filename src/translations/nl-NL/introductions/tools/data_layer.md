@@ -4,4 +4,4 @@ page:   data_layer
 locale: en-US
 ---
 
-Loading and managing data in your app.
+Laden van en omgaan met data in je app.

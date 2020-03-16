@@ -4,5 +4,5 @@ page: awards
 locale: en-US
 ---
 
-The world's most prestigious (and possibly only) JavaScript awards are back. Before you click, try guessing which technology took gold in each category!
+De werelds meest prestigieuze (en mogelijk enige) JavaScript awards zijn terug. Voordat je klikt, probeer te raden welke technologie goud wint in elke categorie!
 
