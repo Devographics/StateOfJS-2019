@@ -1,20 +1,20 @@
-locale: en-US
+locale: de-DE
 translations:
     ###########################################################################
     # Tshirt
     ###########################################################################
 
     - key: tshirt.about
-      t: About the T-shirt
+      t: Mehr zum T-Shirt
     - key: tshirt.description
       t: >
-          The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
-          with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
+          Das Design wird auf schwarzer Baumwolle gedruckt [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (Männer)
+          in Semi-slim-Fit; Oder in dunkelgrauer Baumwolle  [Anvil 880 Frauen Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (Frauen). Größenangaben in US-Maßen.
 
     - key: tshirt.getit
-      t: Get It
+      t: Hol es dir
     - key: tshirt.price
-      t: $${price} + shipping
+      t: $${price} + Versand
 
     ###########################################################################
     # Demographics
@@ -22,9 +22,9 @@ translations:
 
     # salary ranges
     - key: salary.range_work_for_free.long
-      t: I work for free
+      t: Ich arbeite ohne Einkommen
     - key: salary.range_work_for_free.short
-      t: work for free
+      t: Arbeite ohne Einkommen
     - key: salary.range_work_for_free.shorter
       t: '0'
     - key: salary.range_0_10.long
@@ -310,7 +310,7 @@ translations:
     # Features
     ###########################################################################
 
-    # General 
+    # General
 
     - key: page.syntax
       t: Syntax
@@ -323,8 +323,8 @@ translations:
 
     - key: block.description.decorators
       t: >
-        In its simplest form, a decorator is simply a way of 
-        wrapping one piece of code with another — literally “decorating” it. 
+          In its simplest form, a decorator is simply a way of 
+          wrapping one piece of code with another — literally “decorating” it.
 
     - key: feature.learn_more
       t: Learn More (MDN)
@@ -423,8 +423,6 @@ translations:
 
       # A brighter <span class="text-teal text-bold">teal</span> background indicates
       # a higher-than-overall-average ratio for a given bracket.
-
-
     - key: block.title.workExperience_heatmap
       t: Usage by Years Of Experience
     - key: block.description.workExperience_heatmap
@@ -432,14 +430,13 @@ translations:
 
           For each technology, how usage is spread among respondents who picked different
           experience ranges. Note that the experience in question here is general JavaScript experience, not
-          experience with a specific technology. 
+          experience with a specific technology.
 
       # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
       # while the following columns show the usage ratio for each “years of experience” bracket.
 
       # A brighter <span class="text-teal text-bold">teal</span> background indicates
       # a higher-than-overall-average ratio for a given bracket.
-
     - key: block.title.salary_heatmap
       t: Usage by Salary Range
     - key: block.description.salary_heatmap
@@ -453,7 +450,6 @@ translations:
 
       # A brighter <span class="text-teal text-bold">teal</span> background indicates
       # a higher-than-overall-average ratio for a given bracket.
-
     # rankings/bump chart
     - key: block.title.toolExperienceRanking
       t: Rankings
@@ -488,11 +484,11 @@ translations:
 
     - key: amelia.bio
       t: >
-        Amelia Wattenberger is a frontend developer and designer focused on data visualization.
-        She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
-        a guide to creating your own data visualizations,
-        and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger)
-        and [her site](https://wattenberger.com/).
+          Amelia Wattenberger is a frontend developer and designer focused on data visualization.
+          She is the author of [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
+          a guide to creating your own data visualizations,
+          and she shares thoughts and how-tos on [Twitter](https://twitter.com/Wattenberger)
+          and [her site](https://wattenberger.com/).
 
     # quadrant/scatterplot chart
     - key: block.title.scatterplotOverview
@@ -593,18 +589,18 @@ translations:
       t: ${name} Experience Graph
     - key: block.description.toolExperienceGraph
       t: |
-        Evolution of respondents' experience with **${name}** for users who participated
-        to the survey for at least two consecutive years.
+          Evolution of respondents' experience with **${name}** for users who participated
+          to the survey for at least two consecutive years.
     - key: toolExperienceGraph.node.tooltip
       t: |
-        in ${year}, ${count} respondents who also participated
-        to the ${year - 1} or ${year + 1} survey answered:
-        "${experience}"
+          in ${year}, ${count} respondents who also participated
+          to the ${year - 1} or ${year + 1} survey answered:
+          "${experience}"
     - key: toolExperienceGraph.link.tooltip
       t: |
-        ${count} respondents
-        answered "${previousExperience}" in ${previousYear},
-        answered "${nextExperience}" in ${nextYear}
+          ${count} respondents
+          answered "${previousExperience}" in ${previousYear},
+          answered "${nextExperience}" in ${nextYear}
 
     # other category tools
     - key: block.title.category-other-tools
@@ -660,7 +656,6 @@ translations:
       t: Other Languages
     - key: block.description.non_js_languages_others
       t: Other answers (freeform field).
-
 
     ###########################################################################
     # Resources
@@ -958,7 +953,6 @@ translations:
       t: >
           You can copy paste this query into our <a target="_blank" rel="nofollow" href="http://graphiql.stateofjs.com/">public GraphQL API</a>.
 
-
     # general
     - key: general.title
       t: State of JavaScript 2019
@@ -1051,6 +1045,6 @@ translations:
     - key: footer.state_of_js_link
       t: © 2019 <a href="${link}">State of JavaScript</a>.
     - key: footer.leave_an_issue
-      t:  Questions? Found a bug? <a href="${link}">Leave an issue</a>.
+      t: Questions? Found a bug? <a href="${link}">Leave an issue</a>.
     - key: footer.netlify
       t: This site is powered by <a href="${link}">Netlify</a>.
