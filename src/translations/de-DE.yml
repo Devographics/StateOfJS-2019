@@ -64,37 +64,37 @@ translations:
     - key: salary.range_more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
-      t: Salary Range (USD)
+      t: Gehaltsbereich (USD)
 
     # years of experience
     - key: workExperience.range_less_than_1.long
-      t: Less than one year
+      t: Weniger als ein Jahr
     - key: workExperience.range_less_than_1.short
-      t: '<1 year'
+      t: '<1 Jahr'
     - key: workExperience.range_less_than_1.shorter
       t: '<1'
     - key: workExperience.range_1_2.long
-      t: 1 to 2 years
+      t: Ein bis zwei Jahre
     - key: workExperience.range_1_2.short
-      t: 1~2 years
+      t: 1~2 Jahre
     - key: workExperience.range_1_2.shorter
       t: 1~2
     - key: workExperience.range_2_5.long
-      t: 2 to 5 years
+      t: Zwei bis fünf Jahre
     - key: workExperience.range_2_5.short
-      t: 2~5 years
+      t: 2~5 Jahre
     - key: workExperience.range_2_5.shorter
       t: 2~5
     - key: workExperience.range_5_10.long
-      t: 5 to 10 years
+      t: Fünf bis zehn Jahre
     - key: workExperience.range_5_10.short
-      t: 5~10 years
+      t: 5~10 Jahre
     - key: workExperience.range_5_10.shorter
       t: 5~10
     - key: workExperience.range_10_20.long
-      t: 10 to 20 years
+      t: Zehn bis zwanzig Jahre
     - key: workExperience.range_10_20.short
-      t: 10~20 years
+      t: 10~20 Jahre
     - key: workExperience.range_10_20.shorter
       t: 10~20
     - key: workExperience.range_more_than_20.long
