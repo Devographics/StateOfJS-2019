@@ -4,4 +4,4 @@ page: other_tools
 locale: en-US
 ---
 
-You always need a text editor to code, but the process of writing JavaScript also relies on browsers and devtools to a greater extent than probably any other language. 
+Je hebt altijd een tekstverwerken nodig om te coderen, maar het proces van het schrijven van JavaScript is ook meer afhankelijk van browsers en ontwikkeltools dan waarschijnlijk elke andere ontwikkeltaal. 

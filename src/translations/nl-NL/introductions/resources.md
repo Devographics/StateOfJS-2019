@@ -5,6 +5,6 @@ locale: en-US
 # note: naming this file `resources.md` creates conflict with existing `resources.yml`
 ---
 
-There's only so much you can figure out by yourself. At some point you need to put down the keyboard and take a moment to listen to your wise elders – or maybe just ask Google. 
+Er is maar zoveel wat je zelf kunt uitzoeken. Op een bepaald moment moet je toch je toetsenbord laten voor wat het is en luisteren naar de wijze ouderen – of misschien gewoon Googlen. 
 
-Whatever the case may be, we wanted to know which blogs, magazines, podcasts, and sites you relied on. 
+Wat het geval ook mag zijn, we wilden graag weten welke blogs, magazines, podcasts en sites je graag gebruikt.

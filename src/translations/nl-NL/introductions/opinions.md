@@ -4,6 +4,6 @@ page: opinions
 locale: en-US
 ---
 
-Sometimes the best way to take the pulse of a community is to just go ahead and ask. From your opinion about JavaScript's rate of change, to more thorny questions like whether JavaScript is moving in the right direction, you finally had a chance to tell us exactly what's on your mind!
+Soms is de beste manier om de hartslag van een community te meten gewoon gaan vragen hoe het er voor staat. Van jouw mening over de snelheid waarmee JavaScript veranderd, tot meer diepgaandere vragen zoals of JavaScript zich wel in de juiste richting beweegt, eindelijk kon je ons vertellen wat je dacht!
 
-For each of the following statements, we asked you how much you agreed on a 5-point scale. 
+Voor elk van de volgende stellingen hebben we je gevraagd in hoeverre je het ermee eens was op een schaal van 1 tot 5.
