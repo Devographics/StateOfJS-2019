@@ -4,35 +4,35 @@ page: introduction
 locale: en-US
 ---
 
-<span class="first-letter">W</span>e were pretty sure 2018 would be the last time we did this survey. After all, the JavaScript ecosystem can’t very well keep changing *again*, can it?
+<span class="first-letter">W</span>ij waren er vrij zeker van dat we in 2018 deze poll voor het laatst zouden doen. Uiteindelijk kan het JavaScript ecosysteem natuurlijk niet *weer* veranderen, toch?
 
-But what do you know, turns out JavaScript isn’t quite done changing just yet! And so after over 21,717 respondents took this year's survey we had to dig up our components and charts, curse us-from-a-year-ago for writing such crappy code, and get to work digging through the data. 
+Maar wat denk je, het blijkt dat JavaScript nog helemaal niet klaar is met veranderen! En nadat meer dan 21,717 respondenten de poll van dit jaar hebben ingevuld moesten we onze componenten en grafieken weer opgraven, onszelf vervloekend omdat we zulke matige code hadden geschreven, en aan het werk gaan om de data te analyseren. 
 
-We had some help though. The amazing [Amelia Wattenberger](http://wattenberger.com/) joined the team as a guest dataviz expert to contribute a fresh new look on our data, and you’ll be able to explore her work in the **Overview** section.
+Gelukkig hadden we hulp. De geweldige [Amelia Wattenberger](http://wattenberger.com/) kwam bij het team als gast dataviz expert om een frisse blik op onze data te werpen, je kunt haar werk bewonderen in de **Overview** sectie.
 
-We also borrowed a couple new visualisations from the State of JS's sister survey, the [State of CSS](https://2019.stateofcss.com/). We recommend checking it out if you haven’t done so yet!
+We hebben ook een aantal nieuwe visualisaties geleend van de State of JS's zuster poll, de [State of CSS](https://2019.stateofcss.com/). We raden je aan deze ook zeker te checken als je dat nog niet hebt gedaan!
 
 ### Team
 
-The State of JavaScript Survey is created and maintained by:
+The State of JavaScript poll is gemaakt en onderhouden door:
 
-- [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, writing, coding
-- [Raphaël Benitte](https://twitter.com/benitteraphael): Data analysis, data visualizations
+- [Sacha Greif](https://twitter.com/sachagreif) (me!): Design, schrijven, coderen
+- [Raphaël Benitte](https://twitter.com/benitteraphael): Data analyse, data visualisatie
 
-Be sure to check out my React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), as well as Raphaël's React data visualization library [nivo](https://nivo.rocks).
+Check ook mijn React/GraphQL JavaScript framework, [Vulcan.js](http://vulcanjs.org), en Raphaël's React data visualisatie bibliotheek [nivo](https://nivo.rocks).
 
-### Download Our Data
+### Download onze data
 
-You can [download the raw JSON data for this survey](https://www.kaggle.com/sachag/state-of-js-2019). Let us know if you end up making your own data visualizations!
+Je kunt [de onbewerkte JSON data van deze poll downloaden](https://www.kaggle.com/sachag/state-of-js-2019). Laat het ons weten als je zelf aan de slag gaat met je eigen data visualisatie!
 
-### Completion Percentages
+### Antwoord percentage
 
-Because all survey questions could be skipped, some questions ended up with fewer answers than others. So we've added a small pie chart indicator to each question to let you know which proportion of total respondents answered it.  
+Omdat alle vragen konden worden overgeslagen, zijn sommige vragen met minder antwoorden geëindigd dan andere vragen. Daarom hebben we een kleine taart grafiek toegevoegd aan elke vraag om te laten weten welke proportie van de totaal aantal respondenten de vraag heeft beantwoord.  
 
-### Credits & Stuff
+### Credits
 
-The site is set in IBM Plex Mono. Questions? Feedback? [Get in touch!](mailto:hello@stateofjs.com)
+Deze site is opgezet in IBM Plex Mono. Vragen? Feedback? [Mail ons!](mailto:hello@stateofjs.com)
 
-And now, let's see what JavaScript has been up to this year!
+En nu, laten we eens kijken wat JavaScript dit jaar voor ons in petto heeft!
 
 <span class="conclusion__byline">– Sacha and Raphaël</span>
