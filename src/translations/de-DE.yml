@@ -98,106 +98,106 @@ translations:
     - key: workExperience.range_10_20.shorter
       t: 10~20
     - key: workExperience.range_more_than_20.long
-      t: More than 20 years
+      t: Mehr als zwanzig Jahre
     - key: workExperience.range_more_than_20.short
-      t: '>20 years'
+      t: '>20 Jahre'
     - key: workExperience.range_more_than_20.shorter
       t: '>20'
     - key: workExperience.axis_legend
-      t: Years of Experience
+      t: Erfahrung in Jahren
 
     # company size
     - key: companySize.range_1.long
-      t: One employee
+      t: Ein(e) Angestellte(r)
     - key: companySize.range_1.short
-      t: one
+      t: Eine(r)
     - key: companySize.range_1.shorter
       t: '1'
     - key: companySize.range_1_5.long
-      t: 1 to 5 employees
+      t: 1 bis 5 Angestellte
     - key: companySize.range_1_5.short
       t: 1~5
     - key: companySize.range_1_5.shorter
       t: 1~5
     - key: companySize.range_5_10.long
-      t: 5 to 10 employees
+      t: 5 bis 10 Angestellte
     - key: companySize.range_5_10.short
       t: 5~10
     - key: companySize.range_5_10.shorter
       t: 5~10
     - key: companySize.range_10_20.long
-      t: 10 to 20 employees
+      t: 10 bis 20 Angestellte
     - key: companySize.range_10_20.short
       t: 10~20
     - key: companySize.range_10_20.shorter
       t: 10~20
     - key: companySize.range_20_50.long
-      t: 20 to 50 employees
+      t: 20 bis 50 Angestellte
     - key: companySize.range_20_50.short
       t: 20~50
     - key: companySize.range_20_50.shorter
       t: 20~50
     - key: companySize.range_50_100.long
-      t: 50 to 100 employees
+      t: 50 bis 100 Angestellte
     - key: companySize.range_50_100.short
       t: 50~100
     - key: companySize.range_50_100.shorter
       t: 50~100
     - key: companySize.range_100_1000.long
-      t: 100 to 1000 employees
+      t: 100 bis 1000 Angestellte
     - key: companySize.range_100_1000.short
       t: 100~1000
     - key: companySize.range_100_1000.shorter
       t: 100~1000
     - key: companySize.range_more_than_1000.long
-      t: More than 1000 employees
+      t: Mehr als 1000 Angestellte
     - key: companySize.range_more_than_1000.short
       t: 1000+
     - key: companySize.range_more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
-      t: Number of Employees
+      t: Anzahl der Angestellten
 
     # sources
     - key: sources.other_unknown
-      t: Other/Unknown
+      t: Andere/Unbekannt
 
     # css proficiency
 
     - key: block.title.cssProficiency
-      t: CSS Proficiency
+      t: CSS Kompetenz
     - key: block.description.cssProficiency
-      t: How proficient are you at CSS?
+      t: Wie kompetent bist du in CSS?
     - key: cssProficiency.axis_legend
-      t: CSS Proficiency
+      t: CSS Kompetenz
     - key: cssProficiency.0.short
-      t: None
+      t: Keine
     - key: cssProficiency.0.long
-      t: 'Virtually no knowledge of CSS'
+      t: 'Nahezu keine Kentnisse in CSS'
     - key: cssProficiency.1.short
-      t: Beginner
+      t: Anfänger
     - key: cssProficiency.1.long
-      t: 'Using CSS frameworks and tweaking existing styles'
+      t: 'Nutzung von CSS-Frameworks und Anpassung existierender Styles'
     - key: cssProficiency.2.short
-      t: Intermediate
+      t: Amateur
     - key: cssProficiency.2.long
-      t: 'Knowing specificity rules, being able to create layouts'
+      t: 'Wissen über Specificity-Regeln, in der Lage Layouts zu erstellen'
     - key: cssProficiency.3.short
-      t: Advanced
+      t: Fortgeschritten
     - key: cssProficiency.3.long
-      t: 'Mastering animations, interactions, transitions, etc.'
+      t: 'Meistern von Animationen, Interaktionen, Transitions, etc.'
     - key: cssProficiency.4.short
-      t: Expert
+      t: Experte
     - key: cssProficiency.4.long
-      t: 'Being able to style an entire front-end from scratch following a consistent methodology'
+      t: 'In der Lage ein ganzes Front-End von Grund auf zu stylen, unter Verwendung einer konsistenten Methodik'
 
     # backend proficiency
     - key: block.title.backendProficiency
-      t: Back-end Proficiency
+      t: Backend Kompetenz
     - key: block.description.backendProficiency
-      t: How proficient are you at back-end development?
+      t: Wie kompetent bist du in der Backendentwicklung?
     - key: backendProficiency.axis_legend
-      t: Back-End Proficiency
+      t: Backend Kompetenz
     - key: backendProficiency.0.short
       t: None
     - key: backendProficiency.0.long
