@@ -201,41 +201,41 @@ translations:
     - key: backendProficiency.0.short
       t: None
     - key: backendProficiency.0.long
-      t: 'Not able to handle any back-end work'
+      t: 'Nicht in der Lage ein Backend umzusetzen'
     - key: backendProficiency.1.short
       t: Beginner
     - key: backendProficiency.1.long
-      t: 'Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+      t: 'In der Lage mit einem alles-in-einem CMS (Wordpress, etc.) oder einem Static Site Generator (Jeyll, etc.) zu arbeiten'      
     - key: backendProficiency.2.short
-      t: Intermediate
+      t: Amateur
     - key: backendProficiency.2.long
-      t: 'Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)'
+      t: 'In der Lage Apps mit einem Framework (Rails, Laravel, etc.) umzusetzen.'
     - key: backendProficiency.3.short
-      t: Advanced
+      t: Fortgeschritten
     - key: backendProficiency.3.long
-      t: 'Setting up an entire back-end from scratch (Go, Node, etc.)'
+      t: 'Ein komplettes Backend von Grund auf aufsetzen (Go, Node, etc.)'
     - key: backendProficiency.4.short
-      t: Expert
+      t: Experte
     - key: backendProficiency.4.long
-      t: 'Able to handle complex multi-server or microservices architectures'
+      t: 'In der Lage mit mehreren Servern oder Microservice-Architekturen umzugehen'
 
     # job title
     - key: jobTitle.front_end_developer.short
-      t: Front End Developer
+      t: Frontend Entwickler
     - key: jobTitle.front_end_developer.long
-      t: Front End Developer/Engineer
+      t: Frontend Entwickler/Ingenieur
     - key: jobTitle.back_end_developer.short
-      t: Back End Developer
+      t: Backend Entwickler
     - key: jobTitle.back_end_developer.long
-      t: Back End Developer/Engineer
+      t: Backend Entwickler/Ingenieur
     - key: jobTitle.full_stack_developer.short
-      t: Full Stack Developer
+      t: Full Stack Entwickler
     - key: jobTitle.full_stack_developer.long
-      t: Full Stack Developer/Engineer
+      t: Full Stack Entickler/Ingenieur
     - key: jobTitle.web_developer.short
-      t: Web Developer
+      t: Web Entwickler
     - key: jobTitle.web_developer.long
-      t: Web Developer
+      t: Web Entwickler
     - key: jobTitle.web_designer.short
       t: Web Designer
     - key: jobTitle.web_designer.long
@@ -249,7 +249,7 @@ translations:
     - key: jobTitle.ui_designer.long
       t: UI Designer
     - key: jobTitle.back_end_dev.short
-      t: Back-end Developer
+      t: Backend Entwickler
     - key: jobTitle.back_end_dev.long
       t: Back-end Developer/Engineer
 
