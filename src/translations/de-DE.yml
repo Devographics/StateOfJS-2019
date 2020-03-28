@@ -251,53 +251,53 @@ translations:
     - key: jobTitle.back_end_dev.short
       t: Backend Entwickler
     - key: jobTitle.back_end_dev.long
-      t: Back-end Developer/Engineer
+      t: Backend Entwickler/Ingenieur
 
     # gender
     - key: block.title.gender
-      t: Gender
+      t: Geschlecht
     - key: block.description.gender
       t: Respondents gender.
     - key: gender.female
-      t: Female
+      t: Frau
     - key: gender.female.long
-      t: Female
+      t: Frau
     - key: gender.male
-      t: Male
+      t: Mann
     - key: gender.male.long
-      t: Male
+      t: Mann
     - key: gender.non_binary
-      t: Non-Binary/Third Gender
+      t: Divers
     - key: gender.non_binary.long
-      t: Non-Binary/Third Gender
+      t: Divers
     - key: gender.prefer_not_to_say
-      t: Prefer not to say
+      t: Keine Angabe
     - key: gender.prefer_not_to_say.long
-      t: Prefer not to say
+      t: Keine Angabe
 
     # other
     - key: block.title.country
-      t: Participation by Country
+      t: Teilnahme nach Land
     - key: block.description.country
-      t: Which proportion of survey respondents came from each country.
+      t: Welcher Part der Teilnehmer kam aus welchen Ländern.
     - key: block.title.salary
-      t: Salary
+      t: Gehalt
     - key: block.description.salary
-      t: Yearly salary in USD.
+      t: Jahresgehalt in USD.
     - key: block.title.workExperience
-      t: Years of Experience
+      t: Erfahrung in Jahren
     - key: block.description.workExperience
-      t: How long you've been writing JavaScript.
+      t: Wie lange arbeitest du schon mit JavaScript.
     - key: block.title.companySize
-      t: Company Size
+      t: Größe der Firma
     - key: block.description.companySize
-      t: Company size breakdown.
+      t: Aufschlüsselung der Unternehmensgröße.
     - key: block.title.source
-      t: Source
+      t: Quelle
     - key: block.description.source
       t: >
-          How participants found out about the survey (aggregation of self-reported answers and
-          referrer tracking).
+          Wie Teilnehmer von der Umfrage erfahren haben
+          How participants found out about the survey (Zusammenfassung von eigenen Angaben und Tracking).
 
           **State of JS** indicates subscribers from our previous surveys, while **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
 
