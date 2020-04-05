@@ -296,15 +296,14 @@ translations:
       t: Quelle
     - key: block.description.source
       t: >
-          Wie Teilnehmer von der Umfrage erfahren haben
-          How participants found out about the survey (Zusammenfassung von eigenen Angaben und Tracking).
+          Wie Teilnehmer von der Umfrage erfahren haben (Zusammenfassung von eigenen Angaben und Tracking).
 
-          **State of JS** indicates subscribers from our previous surveys, while **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
+          **State of JS** zeigt Abonennten unserer vorherigen Umfragen an, während **Munpropaganda** Quellen wie Slack, Freunde, Kollegen, etc. auflistet.
 
     - key: block.title.jobTitle
-      t: Job Title
+      t: Job Titel
     - key: block.description.jobTitle
-      t: How do you introduce yourself at parties?
+      t: Wie stellst du dich vor auf Parties?
 
     ###########################################################################
     # Features
@@ -315,9 +314,9 @@ translations:
     - key: page.syntax
       t: Syntax
     - key: page.language
-      t: Language
+      t: Sprache
     - key: page.data_structures
-      t: Data Structures
+      t: Datenstrukturen
     - key: page.browser_apis
       t: Browser APIs
 
@@ -325,29 +324,30 @@ translations:
       t: >
           In its simplest form, a decorator is simply a way of 
           wrapping one piece of code with another — literally “decorating” it.
+          In seiner einfachsten Form ist ein Decorator ein Codeabschnitt der einen Anderen umschließt, ihn also buchstäblich dekoriert. 
 
     - key: feature.learn_more
-      t: Learn More (MDN)
+      t: Mehr erfahren (MDN)
     - key: feature.mdn_link
       t: MDN
     - key: feature.caniuse_link
       t: CanIUse
     - key: feature.specification_link
-      t: W3C Specification
+      t: W3C Spezifikation
 
     - key: featureExperienceSimplified.used_it.long
-      t: Have used it
+      t: Habe es genutzt
     - key: featureExperienceSimplified.know_it.long
-      t: Know about it
+      t: Weiß darüber Bescheid
     - key: features.usage.ratio
-      t: Usage Ratio
+      t: Nutzungsrate
 
     - key: featureExperience.used_it
-      t: Have used it
+      t: Habe es genutzt
     - key: featureExperience.know_not_used
-      t: Know what it is, but haven't used it
+      t: Weiß darüber Bescheid, aber habe es nicht genutzt.
     - key: featureExperience.never_heard_not_sure
-      t: Never heard of it/Not sure what it is
+      t: Noch nie davon gehört/Nicht sicher was es ist
 
     - key: featureExperience.used_it.long
       t: Have used it
