@@ -1,4 +1,4 @@
-locale: en-US
+locale: ja-JP
 translations:
     ###########################################################################
     # Tshirt
@@ -8,9 +8,9 @@ translations:
       t: About the T-shirt
     - key: tshirt.description
       t: >
-          The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
-          with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
-
+          男性用は[Bella+Canvas 3001 unisex premium Tシャツ](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) （ブラック、セミスリムフィット）、
+          女性用は[Anvil 880 Women's Fashion Fit Tシャツ](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt)（ダークグレー）にデザインをプリントしています。
+          サイズはUSサイズです。
     - key: tshirt.getit
       t: Get It
     - key: tshirt.price
