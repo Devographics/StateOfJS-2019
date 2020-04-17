@@ -45,3 +45,9 @@
         github: https://github.com/lex111
       - name: Userbit
         github: https://github.com/Userbit        
+- locale: ja-JP
+  path: ja 
+  label: 日本語
+  translators:
+      - name: tnzk 
+        github: https://github.com/tnzk
