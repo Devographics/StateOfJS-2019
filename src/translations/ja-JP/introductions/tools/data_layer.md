@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   data_layer
-locale: en-US
+locale: ja-JP
 ---
 
 Loading and managing data in your app.

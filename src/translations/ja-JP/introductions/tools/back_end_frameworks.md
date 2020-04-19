@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   back_end_frameworks
-locale: en-US
+locale: ja-JP
 ---
 
 JavaScript on the server.

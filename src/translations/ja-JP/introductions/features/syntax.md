@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   syntax
-locale: en-US
+locale: ja-JP
 ---
 
 The grammar of JavaScript.

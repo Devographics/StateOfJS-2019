@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   language
-locale: en-US
+locale: ja-JP
 ---
 
 The vocabulary of JavaScript.

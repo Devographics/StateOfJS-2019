@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: introduction
-locale: en-US
+locale: ja-JP
 ---
 
 <span class="first-letter">W</span>e were pretty sure 2018 would be the last time we did this survey. After all, the JavaScript ecosystem can’t very well keep changing *again*, can it?

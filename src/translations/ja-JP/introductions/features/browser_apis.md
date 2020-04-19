@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   browser_apis
-locale: en-US
+locale: ja-JP
 ---
 
 The features provided by the browser.
