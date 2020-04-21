@@ -1,6 +1,6 @@
 ---
 type:   はじめに
-page:   テスト」
+page:   テスト
 locale: ja-JP
 ---
 
