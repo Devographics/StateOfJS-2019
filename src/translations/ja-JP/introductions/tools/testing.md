@@ -1,7 +1,7 @@
 ---
-type:   introduction
-page:   testing
+type:   はじめに
+page:   テスト」
 locale: ja-JP
 ---
 
-Tools for testing your code.
+コードをテストするためのツール
