@@ -5,7 +5,7 @@ The repo for the [2019 State of JavaScript survey](https://2019.stateofjs.com/) 
 ## Setup
 
 1. Create `.env` file at the root of this repo.
-2. Add the following line*: `API_URL=https://api.stateofjs.com`
+2. Add the following line*: `API_URL=http://api.stateofjs.com/graphql`
 3. `yarn`
 
 *Note that this API is not currently public, but will be soon. 
