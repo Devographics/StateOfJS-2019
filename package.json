@@ -54,7 +54,7 @@
     "html-loader": "^0.5.5",
     "js-yaml": "^3.12.1",
     "json2csv": "^4.5.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "markdown-it": "^8.4.2",
     "markdown-loader": "^4.0.0",
     "node-fetch": "^2.5.0",
