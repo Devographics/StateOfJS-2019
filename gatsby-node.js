@@ -67,6 +67,9 @@ const cleanIdString = id => id.replace(new RegExp('-', 'g'), '_')
  */
 const getPageQuery = page => {
     const { id, blocks } = page
+    console.log('// getPageQuery')
+    console.log(id)
+    console.log(blocks)
     if (!blocks) {
         return
     }
@@ -75,9 +78,12 @@ const getPageQuery = page => {
         return
     }
     const variables = _.compact(blocks.map(b => b.queryVariables))
-    return `query page${_.upperFirst(cleanIdString(id))}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''} {
-${indentString(queries.join('\n'), '    ')}
+    console.log(variables)
+    const pageQuery = `query page${_.upperFirst(cleanIdString(id))}Query${variables.length > 0 ? `(${variables.join(', ')})` : ''} {
+${indentString(queries.join('\n'), 4)}
 }`
+    console.log(pageQuery)
+    return pageQuery
 }
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
@@ -90,14 +96,14 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         for (let index = 0; index < locales.length; index++) {
             const locale = locales[index]
 
+            console.log('// pageQuery')
             const pageQuery = getPageQuery(page)
-            // console.log('// pageQuery')
     
             try {
                 if (pageQuery) {
                     const queryResults = await graphql(`${pageQuery}`, { id: page.id, locale: locale.locale })
-                    // console.log('// queryResults')
-                    // console.log(JSON.stringify(queryResults.data, '', 2))
+                    console.log('// queryResults')
+                    console.log(JSON.stringify(queryResults.data, '', 2))
                     pageData = queryResults.data
                 }
             } catch (error) {
