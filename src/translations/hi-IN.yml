@@ -21,139 +21,139 @@ translations:
     ###########################################################################
 
     # salary ranges
-    - key: salary.work_for_free.long
+    - key: salary.range_work_for_free.long
       t: मैं मुफ्त में काम करता हूँ
-    - key: salary.work_for_free.short
+    - key: salary.range_work_for_free.short
       t: मुफ्त में काम करो
-    - key: salary.work_for_free.shorter
+    - key: salary.range_work_for_free.shorter
       t: '0'
-    - key: salary.0_10.long
+    - key: salary.range_0_10.long
       t: $0k-$10k
-    - key: salary.0_10.short
+    - key: salary.range_0_10.short
       t: $0k-$10k
-    - key: salary.0_10.shorter
+    - key: salary.range_0_10.shorter
       t: 0~10k
-    - key: salary.10_30.long
+    - key: salary.range_10_30.long
       t: $10k-$30k
-    - key: salary.10_30.short
+    - key: salary.range_10_30.short
       t: $10k-$30k
-    - key: salary.10_30.shorter
+    - key: salary.range_10_30.shorter
       t: 10~30k
-    - key: salary.30_50.long
+    - key: salary.range_30_50.long
       t: $30k-$50k
-    - key: salary.30_50.short
+    - key: salary.range_30_50.short
       t: $30k-$50k
-    - key: salary.30_50.shorter
+    - key: salary.range_30_50.shorter
       t: 30~50k
-    - key: salary.50_100.long
+    - key: salary.range_50_100.long
       t: $50k-$100k
-    - key: salary.50_100.short
+    - key: salary.range_50_100.short
       t: $50k-$100k
-    - key: salary.50_100.shorter
+    - key: salary.range_50_100.shorter
       t: 50~100k
-    - key: salary.100_200.long
+    - key: salary.range_100_200.long
       t: $100k-$200k
-    - key: salary.100_200.short
+    - key: salary.range_100_200.short
       t: $100k-$200k
-    - key: salary.100_200.shorter
+    - key: salary.range_100_200.shorter
       t: 100~200k
-    - key: salary.more_than_200.long
+    - key: salary.range_more_than_200.long
       t: $200k से ज्यादा
-    - key: salary.more_than_200.short
+    - key: salary.range_more_than_200.short
       t: $200k+
-    - key: salary.more_than_200.shorter
+    - key: salary.range_more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
       t: वेतन सीमा (USD)
 
     # years of experience
-    - key: workExperience.less_than_1.long
+    - key: workExperience.range_less_than_1.long
       t: एक वर्ष से कम
-    - key: workExperience.less_than_1.short
+    - key: workExperience.range_less_than_1.short
       t: '<1 वर्ष'
-    - key: workExperience.less_than_1.shorter
+    - key: workExperience.range_less_than_1.shorter
       t: '<1'
-    - key: workExperience.1_2.long
+    - key: workExperience.range_1_2.long
       t: 1 से 2 वर्ष
-    - key: workExperience.1_2.short
+    - key: workExperience.range_1_2.short
       t: 1~2 वर्ष
-    - key: workExperience.1_2.shorter
+    - key: workExperience.range_1_2.shorter
       t: 1~2
-    - key: workExperience.2_5.long
+    - key: workExperience.range_2_5.long
       t: 2 से 5 वर्ष
-    - key: workExperience.2_5.short
+    - key: workExperience.range_2_5.short
       t: 2~5 वर्ष
-    - key: workExperience.2_5.shorter
+    - key: workExperience.range_2_5.shorter
       t: 2~5
-    - key: workExperience.5_10.long
+    - key: workExperience.range_5_10.long
       t: 5 से 10 वर्ष
-    - key: workExperience.5_10.short
+    - key: workExperience.range_5_10.short
       t: 5~10 वर्ष
-    - key: workExperience.5_10.shorter
+    - key: workExperience.range_5_10.shorter
       t: 5~10
-    - key: workExperience.10_20.long
+    - key: workExperience.range_10_20.long
       t: 10 से 20 वर्ष
-    - key: workExperience.10_20.short
+    - key: workExperience.range_10_20.short
       t: 10~20 वर्ष
-    - key: workExperience.10_20.shorter
+    - key: workExperience.range_10_20.shorter
       t: 10~20
-    - key: workExperience.more_than_20.long
+    - key: workExperience.range_more_than_20.long
       t: 20 वर्ष से ज्यादा
-    - key: workExperience.more_than_20.short
+    - key: workExperience.range_more_than_20.short
       t: '>20 वर्ष'
-    - key: workExperience.more_than_20.shorter
+    - key: workExperience.range_more_than_20.shorter
       t: '>20'
     - key: workExperience.axis_legend
       t: वर्षों का अनुभव
 
     # company size
-    - key: companySize.1.long
+    - key: companySize.range_1.long
       t: एक कर्मचारी
-    - key: companySize.1.short
+    - key: companySize.range_1.short
       t: एक
-    - key: companySize.1.shorter
+    - key: companySize.range_1.shorter
       t: '1'
-    - key: companySize.1_5.long
+    - key: companySize.range_1_5.long
       t: 1 से 5 कर्मचारी
-    - key: companySize.1_5.short
+    - key: companySize.range_1_5.short
       t: 1~5
-    - key: companySize.1_5.shorter
+    - key: companySize.range_1_5.shorter
       t: 1~5
-    - key: companySize.5_10.long
+    - key: companySize.range_5_10.long
       t: 5 से 10 कर्मचारी
-    - key: companySize.5_10.short
+    - key: companySize.range_5_10.short
       t: 5~10
-    - key: companySize.5_10.shorter
+    - key: companySize.range_5_10.shorter
       t: 5~10
-    - key: companySize.10_20.long
+    - key: companySize.range_10_20.long
       t: 10 से 20 कर्मचारी
-    - key: companySize.10_20.short
+    - key: companySize.range_10_20.short
       t: 10~20
-    - key: companySize.10_20.shorter
+    - key: companySize.range_10_20.shorter
       t: 10~20
-    - key: companySize.20_50.long
+    - key: companySize.range_20_50.long
       t: 20 से 50 कर्मचारी
-    - key: companySize.20_50.short
+    - key: companySize.range_20_50.short
       t: 20~50
-    - key: companySize.20_50.shorter
+    - key: companySize.range_20_50.shorter
       t: 20~50
-    - key: companySize.50_100.long
+    - key: companySize.range_50_100.long
       t: 50 से 100 कर्मचारी
-    - key: companySize.50_100.short
+    - key: companySize.range_50_100.short
       t: 50~100
-    - key: companySize.50_100.shorter
+    - key: companySize.range_50_100.shorter
       t: 50~100
-    - key: companySize.100_1000.long
+    - key: companySize.range_100_1000.long
       t: 100 से 1000 कर्मचारी
-    - key: companySize.100_1000.short
+    - key: companySize.range_100_1000.short
       t: 100~1000
-    - key: companySize.100_1000.shorter
+    - key: companySize.range_100_1000.shorter
       t: 100~1000
-    - key: companySize.more_than_1000.long
+    - key: companySize.range_more_than_1000.long
       t: 1000 कर्मचारियों से ज्यादा
-    - key: companySize.more_than_1000.short
+    - key: companySize.range_more_than_1000.short
       t: 1000+
-    - key: companySize.more_than_1000.shorter
+    - key: companySize.range_more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
       t: कर्मचारियों की संख्या
@@ -580,6 +580,24 @@ translations:
     - key: toolExperience.total_respondents.extrashort
       t: कुल प्रतिक्रियाएं
 
+    # experience graph
+    - key: block.title.toolExperienceGraph
+      t: ${name} अनुभव का ग्राफ
+    - key: block.description.toolExperienceGraph
+      t: |
+          उत्तरदाताओं के अनुभव का विकास **${name}** के साथ भाग लेने वाले उपयोगकर्ताओं के लिए
+          कम से कम लगातार दो वर्षों के लिए सर्वेक्षण।
+    - key: toolExperienceGraph.node.tooltip
+      t: |
+          ${year} में, ${count} उत्तरदाताओं ने भाग लिया,
+          जो ${year - 1} या ${year + 1} सर्वेक्षण का भी उत्तर दे चुके है:
+          "${experience}"
+    - key: toolExperienceGraph.link.tooltip
+      t: |
+          ${count} उत्तरदाता
+          उत्तर दिया "${previousExperience}" में ${previousYear},
+          उत्तर दिया "${nextExperience}" में ${nextYear}
+
     # other category tools
     - key: block.title.category-other-tools
       t: अन्य उपकरण
@@ -929,9 +947,7 @@ translations:
       t: क्षमा करें, इस डेटासेट के लिए CSV निर्यात उपलब्ध नहीं है।
     - key: export.graphql
       t: >
-          हमारी आंतरिक GraphQL API वर्तमान में सार्वजनिक नहीं है, भविष्य में हम इसे उजागर करने की योजना बना रहे हैं ताकि
-          हमारे डेटा क्वेरी को आसान बनाया जा सके। यदि आप अधिक जानकारी चाहते हैं, तो आप इस
-          <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">GitHub issue</a> पर नज़र डाल सकते है।
+          आप इस क्वेरी को हमारे <a target="_blank" rel="nofollow" href="http://graphiql.stateofjs.com/"> सार्वजनिक GraphQL API </a> में कॉपी कर सकते हैं।
 
     # general
     - key: general.title
@@ -966,6 +982,8 @@ translations:
       t: 'आगे:'
     - key: general.start
       t: शुरू
+    - key: general.translation_help
+      t: अनुवाद में सहायता
 
     # partners
     - key: partners.our_partners
@@ -1020,3 +1038,9 @@ translations:
     # other
     - key: bio.guest_visualizer
       t: अतिथि विशेषज्ञ
+  - key: footer.state_of_js_link
+      t: © 2019 <a href="${link}">State of JavaScript</a>.
+    - key: footer.leave_an_issue
+      t:  प्रश्न? कोई बग मिला? <a href="${link}">एक इशू दर्ज करें</a>.
+    - key: footer.netlify
+      t: यह साइट <a href="${link}">Netlify</a> द्वारा संचालित है।
