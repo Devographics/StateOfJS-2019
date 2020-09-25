@@ -1,6 +1,53 @@
 - locale: en-US
   path: default
   label: English
+- locale: it-IT
+  path: it
+  label: Italiano
+  translators:
+      - name: polettoweb
+        github: https://github.com/polettoweb
+- locale: zh-Hans
+  path: zh
+  label: 简体中文
+  translators:
+      - name: seognil
+        github: https://github.com/seognil
+      - name: S1ngS1ng
+        github: https://github.com/S1ngS1ng
 - locale: hi-IN
   path: hi
   label: हिंदी
+  translators:
+      - name: jaideepghosh
+        github: https://github.com/jaideepghosh
+- locale: ko-KR
+  path: ko
+  label: 한국어
+  translators:
+      - name: impodracer
+        github: https://github.com/impodracer
+      - name: zenyr
+        github: https://github.com/zenyr
+- locale: pt-BR
+  path: pt
+  label: Português
+  translators:
+      - name: marceloemanoel
+        github: https://github.com/marceloemanoel
+- locale: ru-RU
+  path: ru
+  label: Русский
+  translators:
+      - name: arcdelta
+        github: https://github.com/arcdelta
+      - name: lex111
+        github: https://github.com/lex111
+      - name: Userbit
+        github: https://github.com/Userbit
+- locale: nl-NL
+  path: nl
+  label: Nederlands
+  translators:
+      - name: casvaniersel
+        github: https://github.com/casvaniersel

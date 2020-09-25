@@ -1,8 +1,7 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Block from 'core/blocks/block/Block'
 import ToolsArrowsChart from 'core/charts/tools/ToolsArrowsChart/ToolsArrowsChart'
-import { toolsCategories } from '../../../../config/variables.yml'
 import { useI18n } from 'core/i18n/i18nContext'
 import BioBlock from 'core/blocks/other/BioBlock'
 import ChartContainer from 'core/charts/ChartContainer'
@@ -23,7 +22,6 @@ const ToolsArrowsBlock = ({ block, data }) => {
 
     return (
         <Block
-            // titleProps={{ switcher: <Switcher {...{ activeCategory, setActiveCategory }} /> }}
             block={{ ...block, showLegend: true, legends, showDescription: false }}
             data={data}
             legendProps={{
@@ -65,25 +63,3 @@ ToolsArrowsBlock.propTypes = {
 }
 
 export default ToolsArrowsBlock
-
-const categoryOptions = ['all', ...Object.keys(toolsCategories)]
-const Switcher = ({ setActiveCategory, activeCategory }) => {
-    const { translate } = useI18n()
-    return (
-        <div className="BlockUnitsSelector">
-            <span className="ButtonGroup">
-                {categoryOptions.map(category => (
-                    <span
-                        key={category}
-                        className={`Button Button--small Button--${
-                            activeCategory === category ? 'selected' : 'unselected'
-                        }`}
-                        onClick={() => setActiveCategory(category)}
-                    >
-                        {translate(category === 'all' ? 'all' : `page.${category}`)}
-                    </span>
-                ))}
-            </span>
-        </div>
-    )
-}

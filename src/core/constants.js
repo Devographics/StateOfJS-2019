@@ -1,15 +1,11 @@
 const arrayToKeys = a => a.map(id => ({ id }))
 
-/*
-
-Colors
-
-*/
 export let colors = {
     greyLight: '#e0e4e4',
     grey: '#d9dedf',
     greyMedium: '#cecdcc',
     greyMediumer: '#616868',
+    greyMediumest: '#5c6069',
     greyDark: '#4d4f4f',
     greyDarkish: '#2a2d33',
     greyDarker: '#222429',
@@ -62,122 +58,25 @@ export let colors = {
     navyDark: '#1a1f35'
 }
 
-export const colorRange = [
-    colors.blueDark,
-    colors.blue,
-    colors.blueLight,
-    colors.blueLighter,
-    colors.pinkLightest,
-    colors.pinkLighter,
-    colors.pinkLight,
-    colors.pink
-]
-
-export const distinctColors = [
-    colors.indigo,
-    colors.pink,
-    colors.red,
-    colors.purple,
-    colors.orange,
-    colors.olive,
-    colors.skyblue,
-    colors.yellow,
-    colors.green,
-    colors.teal
-]
-
-export const pinkRange = [colors.pinkLightest, colors.pinkLighter, colors.pinkLight, colors.pink]
-export const blueRange = [colors.blueLighter, colors.blueLight, colors.blue, colors.blueDark]
-
-export const colorScale = [
-    '#41c7c7',
-    '#8be7e7',
-    '#dedfec',
-    '#e4d6d9',
-    '#f89f9f',
-    '#FE6A6A',
-    '#ca4040'
-]
-
-export const mainColors = {
-    textColor: colors.grey,
-    activeColor: colors.teal,
-    contrastColor: colors.red
-}
-
 export const toolCategories = [
-    { id: 'javascript_flavors', color: distinctColors[0] },
-    { id: 'front_end_frameworks', color: distinctColors[1] },
-    { id: 'data_layer', color: distinctColors[2] },
-    { id: 'back_end_frameworks', color: distinctColors[3] },
-    { id: 'testing', color: distinctColors[4] },
-    { id: 'mobile_desktop', color: distinctColors[5] }
+    { id: 'javascript_flavors', color: colors.indigo },
+    { id: 'front_end_frameworks', color: colors.pink },
+    { id: 'data_layer', color: colors.red },
+    { id: 'back_end_frameworks', color: colors.purple },
+    { id: 'testing', color: colors.orange },
+    { id: 'mobile_desktop', color: colors.olive }
 ]
 
 export const featureCategories = [
-    { id: 'syntax', color: distinctColors[0] },
-    { id: 'language', color: distinctColors[1] },
-    { id: 'data_structures', color: distinctColors[2] },
-    { id: 'browser_apis', color: distinctColors[3] },
-    { id: 'other_features', color: distinctColors[4] }
-]
-
-export const otherColors = [
-    {
-        id: 'textColor',
-        color: mainColors.textColor
-    },
-    {
-        id: 'activeColor',
-        color: mainColors.activeColor
-    },
-    {
-        id: 'contrastColor',
-        color: mainColors.contrastColor
-    },
-    {
-        id: 'background',
-        color: colors.greyDarker
-    },
-    {
-        id: 'legendWithLink',
-        color: mainColors.activeColor
-    },
-    {
-        id: 'legend',
-        color: colors.grey
-    },
-    {
-        id: 'tick',
-        color: mainColors.activeColor
-    },
-    {
-        id: 'bar',
-        color: mainColors.contrastColor
-    },
-    {
-        id: 'line',
-        color: mainColors.contrastColor
-    },
-    {
-        id: 'total_respondents',
-        color: mainColors.contrastColor
-    },
-    {
-        id: 'stripe',
-        color: colors.greyDarkish
-    }
+    { id: 'syntax', color: colors.indigo },
+    { id: 'language', color: colors.pink },
+    { id: 'data_structures', color: colors.red },
+    { id: 'browser_apis', color: colors.purple },
+    { id: 'other_features', color: colors.orange }
 ]
 
 export const getColor = id =>
-    [
-        ...featureExperience,
-        ...toolExperience,
-        ...otherColors,
-        ...gender,
-        ...toolCategories,
-        ...featureCategories
-    ].find(color => color.id === id).color
+    [...toolCategories, ...featureCategories].find(color => color.id === id).color
 
 /*
 
@@ -185,27 +84,34 @@ Keys
 
 */
 export const salaryArray = [
-    'work_for_free',
-    '0_10',
-    '10_30',
-    '30_50',
-    '50_100',
-    '100_200',
-    'more_than_200'
+    'range_work_for_free',
+    'range_0_10',
+    'range_10_30',
+    'range_30_50',
+    'range_50_100',
+    'range_100_200',
+    'range_more_than_200'
 ]
 
 export const companySizeArray = [
-    '1',
-    '1_5',
-    '5_10',
-    '10_20',
-    '20_50',
-    '50_100',
-    '100_1000',
-    'more_than_1000'
+    'range_1',
+    'range_1_5',
+    'range_5_10',
+    'range_10_20',
+    'range_20_50',
+    'range_50_100',
+    'range_100_1000',
+    'range_more_than_1000'
 ]
 
-export const workExperienceArray = ['less_than_1', '1_2', '2_5', '5_10', '10_20', 'more_than_20']
+export const workExperienceArray = [
+    'range_less_than_1',
+    'range_1_2',
+    'range_2_5',
+    'range_5_10',
+    'range_10_20',
+    'range_more_than_20'
+]
 
 export const environmentUsageArray = ['never', 'occasionally', 'often', 'mainly']
 
@@ -230,58 +136,48 @@ export const opinions = [
 
 export const featureExperience = [
     {
-        id: 'used_it',
-        color: colors.teal
+        id: 'used_it'
     },
     {
-        id: 'know_not_used',
-        color: colors.tealDarker
+        id: 'know_not_used'
     },
     {
-        id: 'never_heard_not_sure',
-        color: colors.greyMedium
+        id: 'never_heard_not_sure'
     }
 ]
 
 const featureExperienceSimplified = [
     {
-        id: 'know_it',
-        color: colors.tealDarker
+        id: 'know_it'
     },
     {
-        id: 'used_it',
-        color: colors.teal
+        id: 'used_it'
     }
 ]
 
 export const toolExperience = [
     {
-        id: 'would_use',
-        color: colors.red
+        id: 'would_use'
     },
     {
-        id: 'would_not_use',
-        color: colors.redLight
+        id: 'would_not_use'
     },
     {
-        id: 'interested',
-        color: colors.teal
+        id: 'interested'
     },
     {
-        id: 'not_interested',
-        color: colors.tealLight
+        id: 'not_interested'
     },
     {
-        id: 'never_heard',
-        color: colors.greyMedium
+        id: 'never_heard'
     }
 ]
 
 export const gender = [
-    { id: 'male', color: colors.blue },
-    { id: 'female', color: colors.teal },
-    { id: 'non_binary', color: colors.red },
-    { id: 'prefer_not_to_say', color: colors.greyMediumer }
+    { id: 'male' },
+    { id: 'female' },
+    { id: 'non_binary' },
+    { id: 'prefer_not_to_say' }
 ]
 
 export const keys = {
@@ -310,5 +206,6 @@ export const emailOctopusSiteKey = '6LdYsmsUAAAAAPXVTt-ovRsPIJ_IVhvYBBhGvRV6'
 export const emailOctopusCode = 'hp463dc2a9-b2ff-11e8-a3c9-06b79b628af2'
 
 export const totalCount = 21717
+export const totalCountRounded = 20000 // used by scatterplot chart
 
 export const websiteTitle = 'The State of JavaScript 2019'

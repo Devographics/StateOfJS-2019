@@ -1,45 +1,3 @@
-.chart-wrapper {
-    font-size: $medium-font;
-    g.xsmall {
-        font-size: 0.6rem;
-    }
-    g.small {
-        font-size: $smaller-font;
-    }
-    g.medium {
-        font-size: $small-font;
-    }
-    g.large,
-    g.xlarge {
-        font-size: $medium-font;
-    }
-}
-
-.chart--bar {
-    font-size: $medium-font;
-}
-
-.block__contents {
-    @include small {
-        overflow-x: scroll;
-        background: rgba(255, 255, 255, 0.5);
-    }
-}
-.block__contents__inner {
-    @include small {
-        padding: 0 $spacing $spacing $spacing;
-        min-width: 800px;
-    }
-}
-.PieRow {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.PieRow svg {
-    margin-right: 15px;
-}
 
 .Help {
     font-size: 13px;
@@ -53,90 +11,6 @@
     vertical-align: text-bottom;
 }
 
-.user-facts-placeholder {
-    @include flex-center;
-    border: dotted 1px $border-color;
-    min-height: 400px;
-    h3 {
-        margin: 0;
-    }
-}
-
-.results-chart-wrapper {
-    padding: 0 $spacing * 3;
-    text {
-        font-size: $small-font;
-    }
-}
-
-.Chart__Container__Outer {
-    position: relative;
-}
-.Chart__Container {
-    @include small-medium {
-        overflow-x: scroll;
-    }
-    svg {
-        display: block;
-    }
-}
-.Chart__Container__Inner {
-    .Chart__Container__Outer--expand & {
-        @include small-medium {
-            min-width: 800px;
-            padding-bottom: $spacing;
-        }
-    }
-}
-.Chart__Container__Outer--expand .Chart__Container__Inner {
-    @include small {
-        max-height: 400px;
-    }
-}
-.Chart__Container__Indicator {
-    @include small {
-        position: absolute;
-        @include flex-center;
-        z-index: 100;
-        svg {
-            display: block;
-            stroke: $teal;
-            opacity: 0.5;
-            overflow: visible;
-        }
-        &--left,
-        &--right {
-            top: 0;
-            bottom: 0;
-            width: 20px;
-        }
-        &--left {
-            left: 10px;
-        }
-        &--right {
-            right: 10px;
-            transform: rotate(180deg);
-        }
-        &--top,
-        &--bottom {
-            left: 0;
-            right: 0;
-            height: 20px;
-        }
-        &--top {
-            top: 10px;
-            transform: rotate(90deg);
-        }
-        &--bottom {
-            bottom: 10px;
-            transform: rotate(-90deg);
-        }
-    }
-    @include medium-large {
-        display: none;
-    }
-}
-
 .Overview__Chart {
     .Legends {
         @include small-medium {
@@ -148,62 +22,9 @@
     }
 }
 
-.OpinionSelector {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    border: none;
-    color: $blue;
-    border-bottom: 1px dashed $blue;
-    border-radius: 0;
-
-    &:focus {
-        outline: transparent;
-        border-bottom-style: solid;
-    }
-}
-
 .ToolsUsageByCountry__Chart,
 .SalaryPerCountry__Chart {
     height: 500px;
-}
-
-.Bar__Chart {
-    & > div > div > svg {
-        overflow: visible;
-        box-sizing: content-box;
-        border-bottom: 180px solid transparent;
-        position: relative;
-        z-index: 1;
-        #text_editors & {
-            // hack to prevent border from overlapping resources
-            border-bottom: none;
-        }
-    }
-}
-
-.Bar__Tick {
-    z-index: 1000;
-}
-
-.Bar__Tooltip__Wrapper {
-    overflow: visible;
-    display: none;
-    z-index: 1000;
-    .Bar__Tick:hover & {
-        display: block;
-    }
-}
-
-.Bar__Tick__Label {
-    fill: $text-color;
-    font-size: $small-font;
-    cursor: default;
-    &--hoverable {
-        cursor: pointer;
-        @include font-bold;
-        fill: $active-color;
-    }
 }
 
 .ToolsOverviewBlock {
@@ -212,33 +33,7 @@
     }
 }
 
-/* 
 
-Chart Controls
-
-*/
-.ChartControls {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.ChartModeSelector,
-.BlockUnitsSelector {
-    display: inline-flex;
-    align-items: center;
-}
-
-.ChartModeSelector {
-    margin-right: $spacing;
-}
-
-.ChartModeSelector__Label,
-.BlockUnitsSelector__Label {
-    @include font-bold;
-    padding: $spacing / 5 $spacing / 1.5 $spacing / 5 0;
-    font-size: $small-font;
-    white-space: nowrap;
-}
 /*
 
 Vertical Bar Chart
@@ -262,16 +57,7 @@ Gauge Chart
         }
     }
 }
-/*
 
-Circle Packing Chart
-
-*/
-.CirclePackingChart{
-    svg{
-        overflow: visible;
-    }
-}
 .FeaturesOverviewChart {
     @include xsmall {
         height: 800px;
@@ -300,59 +86,12 @@ Circle Packing Chart
         height: 500px;
     }
 }
-.CirclePackingNode {
-    &--inactive {
-        opacity: 0.15;
-    }
-}
-.CirclePackingNode__Legend {
-    pointer-events: none;
-    opacity: 0;
-    transition: all 300ms ease-in;
-    .CirclePackingNode--active & {
-        opacity: 1;
-    }
-}
-.CirclePackingNode__Legend__Label {
-    font-size: $smallish-font;
-}
-.CirclePackingNode__Legend__Value {
-    @include font-bold;
-}
 .ToolsOverviewCirclePackingChart {
     svg {
         overflow: visible;
     }
 }
 
-.CirclePackingNode__TotalCircle {
-    pointer-events: none;
-    opacity: 0;
-    transform: scale(0.8);
-    // transition: all 200ms ease-in;
-    .CirclePackingNode:hover & {
-        opacity: 1;
-        transform: scale(1);
-        // transition: all 200ms ease-in;
-    }
-}
-
-.CirclePackingNode__TotalCircleLabel{
-    opacity: 0;
-    pointer-events: none;
-    animation: rotateAnim 20s linear infinite;
-    animation-fill-mode: forwards;
-    // transition: all 200ms ease-in;
-    font-size: $small-font;
-    @include font-bold;
-    .CirclePackingNode:hover & {
-        opacity: 1;
-        // transition: all 200ms ease-in;
-    }
-}
-.CirclePackingNode__SectionLabel{
-    opacity: 0.65;
-}
 /*
 
 Technologies Overview Chart
@@ -402,7 +141,6 @@ Quadrant/Scatterplot Chart
         .Scatterplot__Node__Label__Text {
             fill: $navy;
             transition: all 200ms ease-out;
-            // transform: scale(1.2) translateX(15px);
         }
         .Scatterplot__Node__Crosshair__Line {
             @include svgAnts;
@@ -422,9 +160,6 @@ Quadrant/Scatterplot Chart
     transition: all 200ms ease-out;
 }
 
-.Scatterplot__Node__PointHoverZone {
-}
-
 .Scatterplot__Node__Crosshairs {
     pointer-events: none;
     opacity: 0;
@@ -441,10 +176,6 @@ Quadrant/Scatterplot Chart
 Bump Chart
 
 */
-.BumpChart__Node {
-    transition: all 200ms ease-out;
-}
-
 @mixin coloredText($color) {
     display: inline-block;
     background: $teal;

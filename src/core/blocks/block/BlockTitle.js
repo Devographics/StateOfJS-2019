@@ -1,6 +1,9 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import last from 'lodash/last'
 import ReactMarkdown from 'react-markdown/with-html'
+import { mq, spacing } from 'core/theme'
 import ShareBlock from 'core/share/ShareBlock'
 import BlockExport from 'core/blocks/block/BlockExport'
 import { useI18n } from 'core/i18n/i18nContext'
@@ -10,7 +13,6 @@ import { getBlockMeta } from 'core/helpers/blockHelpers'
 import SharePermalink from 'core/share/SharePermalink'
 import BlockUnitsSelector from 'core/blocks/block/BlockUnitsSelector'
 import BlockCompletionIndicator from 'core/blocks/block/BlockCompletionIndicator'
-import last from 'lodash/last'
 
 const BlockTitle = ({
     isShareable,
@@ -49,19 +51,16 @@ const BlockTitle = ({
     const meta = getBlockMeta(block, context, translate)
 
     return (
-        <div className={`Block__Heading Block__Heading--${id}`}>
-            <div className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}>
-                <div className="Block__Title__Left">
-                    <h3 className="Block__Title__Text Block__Title__Text--short">
+        <>
+            <StyledBlockTitle
+                className={`Block__Title Block__Title--${showOptions ? 'open' : 'closed'}`}
+            >
+                <LeftPart>
+                    <BlockTitleText className="BlockTitleText">
                         <SharePermalink url={meta.link} />
                         {blockTitle}
-                    </h3>
+                    </BlockTitleText>
                     {completion && <BlockCompletionIndicator completion={completion} />}
-                    {/*
-                    <h3 className="Block__Title__Text Block__Title__Text--full">
-                        {title || translate(`fullcharts.${id}`, { values })}
-                    </h3>
-                    */}
                     {isExportable && data && block && (
                         <BlockExport
                             id={id}
@@ -82,27 +81,26 @@ const BlockTitle = ({
                             }}
                         />
                     )}
-                </div>
-                <div className="Block__Title__Right">
-                    {switcher ? (
-                        <div className="Block__Title__ChartControls ChartControls">{switcher}</div>
-                    ) : (
-                        units &&
-                        setUnits && (
-                            <div className="Block__Title__ChartControls ChartControls">
-                                {/* <ChartModeSelector mode={mode} onChange={setMode} /> */}
-                                <BlockUnitsSelector units={units} onChange={setUnits} />
-                            </div>
-                        )
-                    )}
-                </div>
-            </div>
+                </LeftPart>
+                {switcher ? (
+                    <BlockChartControls className="BlockChartControls">
+                        {switcher}
+                    </BlockChartControls>
+                ) : (
+                    units &&
+                    setUnits && (
+                        <BlockChartControls className="BlockChartControls">
+                            <BlockUnitsSelector units={units} onChange={setUnits} />
+                        </BlockChartControls>
+                    )
+                )}
+            </StyledBlockTitle>
             {showDescription && blockDescription && (
-                <div className="Block__Description">
+                <Description className="Block__Description">
                     <ReactMarkdown source={blockDescription} escapeHtml={false} />
-                </div>
+                </Description>
             )}
-        </div>
+        </>
     )
 }
 
@@ -112,12 +110,6 @@ BlockTitle.propTypes = {
         title: PropTypes.node,
         description: PropTypes.node
     }).isRequired,
-    // data: PropTypes.shape({
-    //     completion: PropTypes.shape({
-    //         count: PropTypes.number.isRequired,
-    //         percentage: PropTypes.number.isRequired
-    //     })
-    // }),
     showDescription: PropTypes.bool.isRequired,
     isShareable: PropTypes.bool.isRequired
 }
@@ -126,5 +118,67 @@ BlockTitle.defaultProps = {
     showDescription: true,
     isShareable: true
 }
+
+const StyledBlockTitle = styled.div`
+    border-bottom: ${props => props.theme.separationBorder};
+    padding-bottom: ${spacing(0.5)};
+    margin-bottom: ${spacing(1)};
+    display: flex;
+    align-items: center;
+
+    .Block__Title__Share {
+        margin-left: ${spacing(0.5)};
+    }
+
+    &:hover {
+        .SharePermalink {
+            opacity: 1;
+        }
+    }
+`
+
+const BlockTitleText = styled.h3`
+    margin-bottom: 0;
+
+    @media ${mq.small} {
+        opacity: 1;
+        transition: all 300ms ease-in;
+        flex: 1;
+
+        .Block__Title--open & {
+            opacity: 0.2;
+        }
+    }
+`
+
+const LeftPart = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+`
+
+const Description = styled.div`
+    margin-bottom: ${spacing(1)};
+
+    p {
+        &:last-child {
+            margin: 0;
+        }
+    }
+`
+
+const BlockChartControls = styled.div`
+    display: flex;
+    justify-content: flex-end;
+
+    @media ${mq.small} {
+        margin-left: ${spacing(0.5)};
+    }
+
+    .capture & {
+        display: none;
+    }
+`
 
 export default memo(BlockTitle)

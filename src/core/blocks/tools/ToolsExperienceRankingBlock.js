@@ -4,26 +4,28 @@ import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import ToolsExperienceRankingChart from 'core/charts/tools/ToolsExperienceRankingChart'
 import { useI18n } from 'core/i18n/i18nContext'
+import ButtonGroup from 'core/components/ButtonGroup'
+import Button from 'core/components/Button'
 
 const Switcher = ({ setMetric, metric }) => {
     const { translate } = useI18n()
+
     return (
-        <div className="BlockUnitsSelector">
-            <span className="ButtonGroup">
-                {['satisfaction', 'interest', 'awareness'].map(key => (
-                    <span
-                        key={key}
-                        className={`Button Button--small Button--${
-                            metric === key ? 'selected' : 'unselected'
-                        }`}
-                        onClick={() => setMetric(key)}
-                    >
-                        <span className="desktop">{translate(`opinions.legends.${key}_ratio`)}</span>
-                        <span className="mobile">{translate(`opinions.legends.${key}_ratio`)[0]}</span>
-                    </span>
-                ))}
-            </span>
-        </div>
+        <ButtonGroup>
+            {['satisfaction', 'interest', 'awareness'].map(key => (
+                <Button
+                    key={key}
+                    size="small"
+                    className={`Button--${
+                        metric === key ? 'selected' : 'unselected'
+                    }`}
+                    onClick={() => setMetric(key)}
+                >
+                    <span className="desktop">{translate(`opinions.legends.${key}_ratio`)}</span>
+                    <span className="mobile">{translate(`opinions.legends.${key}_ratio`)[0]}</span>
+                </Button>
+            ))}
+        </ButtonGroup>
     )
 }
 const ToolsExperienceRankingBlock = ({ block, data }) => {
@@ -36,6 +38,7 @@ const ToolsExperienceRankingBlock = ({ block, data }) => {
             data.map(tool => {
                 return {
                     id: tool.id,
+                    name: tool.entity.name,
                     data: tool[metric].map(bucket => {
                         return {
                             x: bucket.year,

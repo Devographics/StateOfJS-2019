@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 export default class LegendsItem extends Component {
     static propTypes = {
@@ -39,21 +40,31 @@ export default class LegendsItem extends Component {
     }
 
     render() {
-        const { color, label, keyLabel, chipSize, style, chipStyle, data, units, onMouseEnter } = this.props
+        const {
+            color,
+            label,
+            keyLabel,
+            chipSize,
+            style,
+            chipStyle,
+            data,
+            units,
+            onMouseEnter
+        } = this.props
 
         const isInteractive = typeof onMouseEnter !== 'undefined'
-        
+
         return (
-            <div
-                className={`Legends__Item ${keyLabel ? 'Legends__Item--withKeyLabel' : ''} ${isInteractive ? 'Legends__Item--interactive' : ''}`}
+            <Container
+                className={`Legends__Item ${keyLabel ? 'Legends__Item--withKeyLabel' : ''}`}
                 style={style}
+                isInteractive={isInteractive}
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.handleMouseLeave}
                 onClick={this.handleClick}
             >
                 {color ? (
-                    <span
-                        className="Legends__Item__Chip"
+                    <Chip
                         style={{
                             width: chipSize,
                             height: chipSize,
@@ -64,16 +75,53 @@ export default class LegendsItem extends Component {
                 ) : keyLabel ? (
                     <span className="Legends__Item__KeyLabel">{keyLabel} </span>
                 ) : null}
-                <span
+                <Label
                     className="Legends__Item__Label"
                     dangerouslySetInnerHTML={{ __html: label }}
                 />
                 {data && (
-                    <span className="Legends__Item__Value">
+                    <Value className="Legends__Item__Value">
                         {units === 'percentage' ? `${data[units]}%` : data[units]}
-                    </span>
+                    </Value>
                 )}
-            </div>
+            </Container>
         )
     }
 }
+
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+    cursor: default;
+    flex: 1;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    ${props => {
+        if (props.isInteractive) {
+            return `
+                cursor: pointer;
+                &:hover {
+                    background: ${props.theme.colors.backgroundAlt};
+                }
+            `
+        }
+    }}
+`
+
+const Chip = styled.span`
+    display: block;
+    margin-right: ${props => props.theme.spacing / 2}px;
+    flex-shrink: 0;
+`
+
+const Label = styled.span`
+    padding-right: ${props => props.theme.spacing}px;
+`
+
+const Value = styled.span`
+    display: inline-block;
+    margin-left: ${props => props.theme.spacing / 2}px;
+`

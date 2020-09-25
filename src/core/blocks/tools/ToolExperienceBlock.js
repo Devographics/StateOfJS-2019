@@ -1,27 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useMemo } from 'react'
 import PropTypes from 'prop-types'
+import { ThemeContext } from 'styled-components'
+import get from 'lodash/get'
+import isEmpty from 'lodash/isEmpty'
 import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import StreamChart from 'core/charts/generic/StreamChart'
-// import { opinions } from 'core/constants.js'
 import { useI18n } from 'core/i18n/i18nContext'
-import { keys, toolExperience } from 'core/constants.js'
-import get from 'lodash/get'
-import isEmpty from 'lodash/isEmpty'
+import { toolExperience } from 'core/constants'
 
 const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }) => {
-    const { id, bucketKeysName = id, blockName } = block
+    const { blockName } = block
     const [units, setUnits] = useState(defaultUnits)
     const [current, setCurrent] = useState(null)
     const { translate } = useI18n()
     const name = get(data, 'entity.name')
-    const bucketKeys = keys[bucketKeysName]
     const title = translate(`block.title.${blockName}`, { values: { name } })
     const description = translate(`block.description.${blockName}`, { values: { name } })
     const chartData = get(data, 'experience.allYears')
+
+    const theme = useContext(ThemeContext)
+    const colors = useMemo(
+        () => toolExperience.map(item => theme.colors.ranges.toolExperience[item.id]),
+        [theme]
+    )
+
     if (!chartData || isEmpty(chartData)) {
         return <div>no data</div>
     }
+
     return (
         <Block
             units={units}
@@ -40,13 +47,13 @@ const ToolExperienceBlock = ({ block, data, units: defaultUnits = 'percentage' }
         >
             <ChartContainer height={260} fit={true}>
                 <StreamChart
-                    colorScale={toolExperience.map(i => i.color)}
+                    colorScale={colors}
                     current={current}
                     data={chartData.length === 1 ? [chartData[0], chartData[0]] : chartData}
-                    keys={bucketKeys.map(k => k.id)}
+                    keys={toolExperience.map(k => k.id)}
                     units={units}
                     applyEmptyPatternTo="never_heard"
-                    namespace={bucketKeysName}
+                    namespace="toolExperience"
                 />
             </ChartContainer>
         </Block>
@@ -58,23 +65,6 @@ ToolExperienceBlock.propTypes = {
         id: PropTypes.string.isRequired,
         dataPath: PropTypes.string.isRequired
     }).isRequired
-    // data: PropTypes.shape({
-    //     buckets: PropTypes.arrayOf(
-    //         PropTypes.shape({
-    //             id: PropTypes.string.isRequired,
-    //             opinion: PropTypes.shape({
-    //                 total: PropTypes.number.isRequired,
-    //                 buckets: PropTypes.arrayOf(
-    //                     PropTypes.shape({
-    //                         id: PropTypes.string.isRequired,
-    //                         count: PropTypes.number.isRequired,
-    //                         percentage: PropTypes.number.isRequired
-    //                     })
-    //                 ).isRequired
-    //             })
-    //         })
-    //     )
-    // }).isRequired
 }
 
 export default ToolExperienceBlock

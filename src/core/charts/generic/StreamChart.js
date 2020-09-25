@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 import { ResponsiveStream } from '@nivo/stream'
-import theme from 'nivoTheme'
 import { useI18n } from 'core/i18n/i18nContext'
 
 const Dot = ({ x, y, data, current, units }) => {
@@ -35,18 +35,6 @@ const Dot = ({ x, y, data, current, units }) => {
     )
 }
 
-const patterns = [
-    {
-        id: 'lines',
-        type: 'patternLines',
-        background: 'inherit',
-        color: 'rgba(0, 0, 0, .07)',
-        rotation: -45,
-        lineWidth: 3,
-        spacing: 6
-    }
-]
-
 const margin = {
     top: 40,
     right: 20,
@@ -67,8 +55,18 @@ const getChartData = (data, units) => {
     })
 }
 
-const StreamChart = ({ data, keys, units, className, current, colorScale, namespace }) => {
+const StreamChart = ({
+    data,
+    keys,
+    units,
+    className,
+    current,
+    colorScale,
+    namespace,
+    applyEmptyPatternTo
+}) => {
     const { translate } = useI18n()
+    const theme = useContext(ThemeContext)
 
     const horizontalAxis = {
         tickSize: 10,
@@ -94,8 +92,8 @@ const StreamChart = ({ data, keys, units, className, current, colorScale, namesp
         <div style={{ height: 260 }} className={`StreamChart${additionalClassName}`}>
             <ResponsiveStream
                 theme={{
-                    ...theme,
-                    axis: theme.streamTimelineAxis
+                    ...theme.charts,
+                    axis: theme.charts.streamTimelineAxis
                 }}
                 offsetType="expand"
                 colors={getLayerColor}
@@ -114,13 +112,13 @@ const StreamChart = ({ data, keys, units, className, current, colorScale, namesp
                 animate={false}
                 tooltipLabel={d => translate(`${namespace}.${d.id}.short`)}
                 tooltipFormat={tooltipFormat}
-                defs={patterns}
+                defs={[theme.charts.emptyPattern]}
                 fill={[
                     {
                         match: {
-                            id: 'never_heard'
+                            id: applyEmptyPatternTo
                         },
-                        id: 'lines'
+                        id: 'empty'
                     }
                 ]}
             />

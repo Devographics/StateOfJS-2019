@@ -1,0 +1,1055 @@
+locale: nl-NL
+translations:
+    ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: Over het T-shirt
+    - key: tshirt.description
+      t: >
+          Het design is geprint op een zwarte shirt [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (heren)
+          met een semi-slim fit; of een donker grijs shirt [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (dames). Gebaseerd op Amerikaanse maten.
+
+    - key: tshirt.getit
+      t: Bestellen
+    - key: tshirt.price
+      t: $${price} + verzendkosten
+
+    ###########################################################################
+    # Demographics
+    ###########################################################################
+
+    # salary ranges
+    - key: salary.range_work_for_free.long
+      t: I werk vrijwillig
+    - key: salary.range_work_for_free.short
+      t: vrijwilligerswerk
+    - key: salary.range_work_for_free.shorter
+      t: '0'
+    - key: salary.range_0_10.long
+      t: $0k-$10k
+    - key: salary.range_0_10.short
+      t: $0k-$10k
+    - key: salary.range_0_10.shorter
+      t: 0~10k
+    - key: salary.range_10_30.long
+      t: $10k-$30k
+    - key: salary.range_10_30.short
+      t: $10k-$30k
+    - key: salary.range_10_30.shorter
+      t: 10~30k
+    - key: salary.range_30_50.long
+      t: $30k-$50k
+    - key: salary.range_30_50.short
+      t: $30k-$50k
+    - key: salary.range_30_50.shorter
+      t: 30~50k
+    - key: salary.range_50_100.long
+      t: $50k-$100k
+    - key: salary.range_50_100.short
+      t: $50k-$100k
+    - key: salary.range_50_100.shorter
+      t: 50~100k
+    - key: salary.range_100_200.long
+      t: $100k-$200k
+    - key: salary.range_100_200.short
+      t: $100k-$200k
+    - key: salary.range_100_200.shorter
+      t: 100~200k
+    - key: salary.range_more_than_200.long
+      t: more than $200k
+    - key: salary.range_more_than_200.short
+      t: $200k+
+    - key: salary.range_more_than_200.shorter
+      t: '>200k'
+    - key: salary.axis_legend
+      t: Salarisbereik (USD)
+
+    # years of experience
+    - key: workExperience.range_less_than_1.long
+      t: Minder dan één jaar
+    - key: workExperience.range_less_than_1.short
+      t: '<1 jaar'
+    - key: workExperience.range_less_than_1.shorter
+      t: '<1'
+    - key: workExperience.range_1_2.long
+      t: 1 tot 2 jaar
+    - key: workExperience.range_1_2.short
+      t: 1~2 jaar
+    - key: workExperience.range_1_2.shorter
+      t: 1~2
+    - key: workExperience.range_2_5.long
+      t: 2 tot 5 jaar
+    - key: workExperience.range_2_5.short
+      t: 2~5 jaar
+    - key: workExperience.range_2_5.shorter
+      t: 2~5
+    - key: workExperience.range_5_10.long
+      t: 5 tot 10 jaar
+    - key: workExperience.range_5_10.short
+      t: 5~10 jaar
+    - key: workExperience.range_5_10.shorter
+      t: 5~10
+    - key: workExperience.range_10_20.long
+      t: 10 tot 20 jaar
+    - key: workExperience.range_10_20.short
+      t: 10~20 jaar
+    - key: workExperience.range_10_20.shorter
+      t: 10~20
+    - key: workExperience.range_more_than_20.long
+      t: Meer dan 20 jaar
+    - key: workExperience.range_more_than_20.short
+      t: '>20 jaar'
+    - key: workExperience.range_more_than_20.shorter
+      t: '>20'
+    - key: workExperience.axis_legend
+      t: Jaren ervaring
+
+    # company size
+    - key: companySize.range_1.long
+      t: Één werknemer
+    - key: companySize.range_1.short
+      t: één
+    - key: companySize.range_1.shorter
+      t: '1'
+    - key: companySize.range_1_5.long
+      t: 1 tot 5 werknemers
+    - key: companySize.range_1_5.short
+      t: 1~5
+    - key: companySize.range_1_5.shorter
+      t: 1~5
+    - key: companySize.range_5_10.long
+      t: 5 tot 10 werknemers
+    - key: companySize.range_5_10.short
+      t: 5~10
+    - key: companySize.range_5_10.shorter
+      t: 5~10
+    - key: companySize.range_10_20.long
+      t: 10 tot 20 werknemers
+    - key: companySize.range_10_20.short
+      t: 10~20
+    - key: companySize.range_10_20.shorter
+      t: 10~20
+    - key: companySize.range_20_50.long
+      t: 20 tot 50 werknemers
+    - key: companySize.range_20_50.short
+      t: 20~50
+    - key: companySize.range_20_50.shorter
+      t: 20~50
+    - key: companySize.range_50_100.long
+      t: 50 tot 100 werknemers
+    - key: companySize.range_50_100.short
+      t: 50~100
+    - key: companySize.range_50_100.shorter
+      t: 50~100
+    - key: companySize.range_100_1000.long
+      t: 100 tot 1000 werknemers
+    - key: companySize.range_100_1000.short
+      t: 100~1000
+    - key: companySize.range_100_1000.shorter
+      t: 100~1000
+    - key: companySize.range_more_than_1000.long
+      t: Meer dan 1000 werknemers
+    - key: companySize.range_more_than_1000.short
+      t: 1000+
+    - key: companySize.range_more_than_1000.shorter
+      t: 1000+
+    - key: companySize.axis_legend
+      t: Aantal werknemers
+
+    # sources
+    - key: sources.other_unknown
+      t: Anders/Onbekend
+
+    # css proficiency
+
+    - key: block.title.cssProficiency
+      t: CSS Bekwaamheid
+    - key: block.description.cssProficiency
+      t: Hoe bekwaam ben je met CSS?
+    - key: cssProficiency.axis_legend
+      t: CSS Bekwaamheid
+    - key: cssProficiency.0.short
+      t: Niet
+    - key: cssProficiency.0.long
+      t: 'Zo goed als geen kennis van CSS'
+    - key: cssProficiency.1.short
+      t: Beginner
+    - key: cssProficiency.1.long
+      t: 'Maak gebruik van CSS frameworks en pas bestaande stijling aan'
+    - key: cssProficiency.2.short
+      t: Gemiddeld
+    - key: cssProficiency.2.long
+      t: 'Kennis van specifieke regels, kan layouts maken'
+    - key: cssProficiency.3.short
+      t: Geavanceerd
+    - key: cssProficiency.3.long
+      t: 'Heb animaties, interacties, transities, etc. onder de knie'
+    - key: cssProficiency.4.short
+      t: Expert
+    - key: cssProficiency.4.long
+      t: 'Ben in staat een complete frontend vanaf de grond op te bouwen volgens een consistente methode'
+
+    # backend proficiency
+    - key: block.title.backendProficiency
+      t: Back-end Bekwaamheid
+    - key: block.description.backendProficiency
+      t: Hoe bekwaam ben je met back-end development?
+    - key: backendProficiency.axis_legend
+      t: Back-End Bekwaamheid
+    - key: backendProficiency.0.short
+      t: Niet
+    - key: backendProficiency.0.long
+      t: 'Niet in staat enig back-end werk uit te voeren'
+    - key: backendProficiency.1.short
+      t: Beginner
+    - key: backendProficiency.1.long
+      t: 'In staat om alles-in-één CMS in te richten (WordPress, etc.) of gebruik te maken van static site generators (Jekyll, etc.)'
+    - key: backendProficiency.2.short
+      t: Gemiddeld
+    - key: backendProficiency.2.long
+      t: 'In staat om apps te maken op basis van bestaande frameworks (Rails, Laravel, etc.)'
+    - key: backendProficiency.3.short
+      t: Geavanceerd
+    - key: backendProficiency.3.long
+      t: 'Een volledige back-end vanaf de grond opbouwen (Go, Node, etc.)'
+    - key: backendProficiency.4.short
+      t: Expert
+    - key: backendProficiency.4.long
+      t: 'In staat om multi-server of microservices architectuur op te zetten'
+
+    # job title
+    - key: jobTitle.front_end_developer.short
+      t: Front End ontwikkelaar
+    - key: jobTitle.front_end_developer.long
+      t: Front End ontwikkelaar/engineer
+    - key: jobTitle.back_end_developer.short
+      t: Back End ontwikkelaar
+    - key: jobTitle.back_end_developer.long
+      t: Back End ontwikkelaar/engineer
+    - key: jobTitle.full_stack_developer.short
+      t: Full Stack ontwikkelaar
+    - key: jobTitle.full_stack_developer.long
+      t: Full Stack ontwikkelaar/engineer
+    - key: jobTitle.web_developer.short
+      t: Web ontwikkelaar
+    - key: jobTitle.web_developer.long
+      t: Web ontwikkelaar
+    - key: jobTitle.web_designer.short
+      t: Web ontwerper
+    - key: jobTitle.web_designer.long
+      t: Web ontwerper
+    - key: jobTitle.ux_designer.short
+      t: UX ontwerper
+    - key: jobTitle.ux_designer.long
+      t: UX ontwerper
+    - key: jobTitle.ui_designer.short
+      t: UI ontwerper
+    - key: jobTitle.ui_designer.long
+      t: UI ontwerper
+    - key: jobTitle.back_end_dev.short
+      t: Back-end ontwikkelaar
+    - key: jobTitle.back_end_dev.long
+      t: Back-end ontwikkelaar/engineer
+
+    # gender
+    - key: block.title.gender
+      t: Geslacht
+    - key: block.description.gender
+      t: Deelnemer geslacht.
+    - key: gender.female
+      t: Vrouw
+    - key: gender.female.long
+      t: Vrouw
+    - key: gender.male
+      t: Man
+    - key: gender.male.long
+      t: Man
+    - key: gender.non_binary
+      t: Niet-binair/onzijdig
+    - key: gender.non_binary.long
+      t: Niet-binair/onzijdig
+    - key: gender.prefer_not_to_say
+      t: Zeg ik liever niet
+    - key: gender.prefer_not_to_say.long
+      t: Zeg ik liever niet
+
+    # other
+    - key: block.title.country
+      t: Deelname per land
+    - key: block.description.country
+      t: Welk deel van de deelnemers komt uit welk land.
+    - key: block.title.salary
+      t: Salaris
+    - key: block.description.salary
+      t: Jaarlijks salaris in USD.
+    - key: block.title.workExperience
+      t: Jaren ervaring
+    - key: block.description.workExperience
+      t: Hoe lang schrijf je al JavaScript.
+    - key: block.title.companySize
+      t: Grootte van het bedrijf
+    - key: block.description.companySize
+      t: Samenstelling van de bedrijfsgrootte.
+    - key: block.title.source
+      t: Bron
+    - key: block.description.source
+      t: >
+          Hoe deelnemers deze enquête hebben gevonden (samenvoeging van gegeven antwoorden en 
+          doorverwijzingen).
+
+          **State of JS** stelt deelnemers van voorgaande enquêtes, terwijl **onderlinge discussie** geeft aan bronnen als Slack, vrienden, collega's, etc.
+
+    - key: block.title.jobTitle
+      t: Functietitel
+    - key: block.description.jobTitle
+      t: Hoe stel je jezelf voor op een feestje?
+
+    ###########################################################################
+    # Features
+    ###########################################################################
+
+    # General 
+
+    - key: page.syntax
+      t: Syntax
+    - key: page.language
+      t: Taal
+    - key: page.data_structures
+      t: Data structuren
+    - key: page.browser_apis
+      t: Browser APIs
+
+    - key: block.description.decorators
+      t: >
+        In de simpelste vorm is een decorator een stukje code om een ander stuk code
+        in te verpakken en het letterlijk te "decoreren".
+
+    - key: feature.learn_more
+      t: Lees meer (MDN)
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: CanIUse
+    - key: feature.specification_link
+      t: W3C specificatie
+
+    - key: featureExperienceSimplified.used_it.long
+      t: Heb ik gebruikt
+    - key: featureExperienceSimplified.know_it.long
+      t: Ik weet ervan
+    - key: features.usage.ratio
+      t: Gebruiksratio
+
+    - key: featureExperience.used_it
+      t: Heb ik gebruikt
+    - key: featureExperience.know_not_used
+      t: Ik weet wat het is, maar heb het nooit gebruikt
+    - key: featureExperience.never_heard_not_sure
+      t: Nooit van gehoord/Weet niet zeker wat het is
+
+    - key: featureExperience.used_it.long
+      t: Heb ik gebruikt
+    - key: featureExperience.know_not_used.long
+      t: Ik weet wat het is, maar heb het nooit gebruikt
+    - key: featureExperience.never_heard_not_sure.long
+      t: Nooit van gehoord/Weet niet zeker wat het is
+
+    # Feature Overview
+    - key: block.title.featuresOverview
+      t: Gebruiksoverzicht
+    - key: block.description.featuresOverview
+      t: >
+          Deze grafiek toont de verschillende adoptie gradaties voor alle features, gegroepeerd op categorie.
+
+
+          De grootte van de <span class="text-teal-darker text-bold">buitenste cirkel</span> correspondeert met het totaal aantal gebruikers die iets weten van
+          een feature, terwijl de <span class="text-teal text-bold">binnenste cirkel</span> de gebruikers vertegenwoordigd die het al eens hebben gebruikt.
+
+
+          Hover over elke node om de details te zien samen met de <span class="text-blackpink text-bold">overlay</span> die het totaal aantal respondenten laat zien.
+
+    # Features Section Overview
+    - key: block.title.featuresSectionOverview
+      t: Gebruiksoverzicht
+    - key: block.description.featuresSectionOverview
+      t: >
+          De grootte van de <span class="text-teal-darker text-bold">buitenste cirkel</span> correspondeert met het totaal aantal gebruikers die iets weten van
+          een feature, terwijl de <span class="text-teal text-bold">binnenste cirkel</span> de gebruikers vertegenwoordigd die het al eens hebben gebruikt.
+
+
+          Hover over elke node om de details te zien samen met de <span class="text-blackpink text-bold">overlay</span> die het totaal aantal respondenten laat zien.
+
+    - key: block.title.featuresExperienceHeatmap
+      t: Gebruik bij aantal jaren ervaring
+    - key: block.description.featuresExperienceHeatmap
+      t: |
+          De “overall” kolom toont algemeen gebruik van een feature (respondenten die “heb ik gebruikt” hebben ingevuld),
+          terwijl de volgende kolommen de gebruiksratio voor elk “aantal jaren ervaring” haakje tonen.
+
+          Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+          een hoger-dan-algemeen gemiddelde ratio voor een gegeven haakje.
+
+    ###########################################################################
+    # Tools & Methodologies
+    ###########################################################################
+
+    # general
+    - key: block.tool.links
+      t: Links
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.github_stars
+      t: sterren
+    - key: block.tool.homepage_link
+      t: Homepagina
+    - key: block.tool.npm_link
+      t: NPM
+
+    - key: block.title.other-methodologies
+      t: Andere methodes
+
+    - key: block.title.companySize_heatmap
+      t: Gebruik bij bedrijfsgrootte
+    - key: block.description.companySize_heatmap
+      t: |
+
+          Voor elke technologie, hoe het gebruik is verspreid over de respondenten die verschillende
+          bedrijfsgroottes hebben aangegeven.
+
+      # De “overall” kolom toont algemeen gebruik voor elke technologie (respondenten die “zou ik weer gebruiken” of “zal ik niet meer gebruiken” hebben geselecteerd),
+      # terwijl de volgende kolommen de gebruiksverhouding tonen voor elk “jaren ervaring” haakje.
+
+      # Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+      # een hoger-dan-algemeen-gemiddelde verhouding voor een gegeven haakje.
+
+
+    - key: block.title.workExperience_heatmap
+      t: Gebruik bij jaren ervaring
+    - key: block.description.workExperience_heatmap
+      t: |
+
+          Voor elke technologie, hoe het gebruik is verspreid over de respondenten die verschillend
+          bereik in ervaring hebben aangegeven. Let op dat de ervaring in kwestie hier enkel algemene JavaScript ervaring is, niet
+          de ervaring met een specifieke technologie.
+
+      # De “overall” kolom toont algemeen gebruik voor elke technologie (respondenten die “zou ik weer gebruiken” of “zal ik niet meer gebruiken” hebben geselecteerd),
+      # terwijl de volgende kolommen de gebruiksverhouding tonen voor elk “jaren ervaring” haakje.
+
+      # Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+      # een hoger-dan-algemeen-gemiddelde verhouding voor een gegeven haakje.
+
+    - key: block.title.salary_heatmap
+      t: Gebruik bij salarisschaal
+    - key: block.description.salary_heatmap
+      t: |
+
+          Voor elke technologie, hoe het gebruik is verspreid over de respondenten die een verschillende
+          salarisschaal hebben aangegeven.
+
+      # De “overall” kolom toont algemeen gebruik voor elke technologie (respondenten die “zou ik weer gebruiken” of “zal ik niet meer gebruiken” hebben geselecteerd),
+      # terwijl de volgende kolommen de gebruiksverhouding tonen voor elk “jaren ervaring” haakje.
+
+      # Een fellere <span class="text-teal text-bold">teal</span> achtergrond betekent
+      # een hoger-dan-algemeen-gemiddelde verhouding voor een gegeven haakje.
+
+    # rankings/bump chart
+    - key: block.title.toolExperienceRanking
+      t: Beoordeling
+    - key: block.description.toolExperienceRanking
+      t: >
+          Bewustzijn, interesse, en tevredenheid verhoudingsbeoordeling.
+    - key: opinions.legends.awareness_ratio
+      t: Bewustzijn
+    - key: opinions.legends.interest_ratio
+      t: Interesse
+    - key: opinions.legends.satisfaction_ratio
+      t: Tevredenheid
+
+    # overview
+    - key: block.title.toolsSectionOverview
+      t: Categorieën overzicht
+    - key: block.description.toolsSectionOverview
+      t: >
+          Overzicht van de meningen over de bevraagde technologieën. Donkere delen bevatten positieve meningen en
+          lichtere delen corresponderen met negatieve meningen.
+
+    # Arrows (Movement over time)
+    - key: block.title.toolsArrow
+      t: Verandering over tijd
+    # - key: block.description.toolsArrow
+    #   t: >
+    #       How has the ecosystem changed over three years?
+    - key: block.description.toolsArrow
+      t: >
+          Elke lijn gaat van 2016 tot 2019. Een hoger punt betekent dat een technologie door meerdere mensen gebruikt wordt 
+          en een punt verder naar rechts dat meer mensen het willen leren; of dat ze het al hebben gebruikt en het weer zouden willen gebruiken.
+
+    - key: amelia.bio
+      t: >
+        Amelia Wattenberger is een front end ontwikkelaar en ontwerper met focus op data visualisatie.
+        Ze is de auteur van [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
+        een gids om je eigen data visualisaties te maken,
+        en ze deelt haar gedachten en how-tos op [Twitter](https://twitter.com/Wattenberger)
+        en [haar website](https://wattenberger.com/).
+
+    # quadrant/scatterplot chart
+    - key: block.title.scatterplotOverview
+      t: Tevredenheid vs gebruik
+    - key: block.description.scatterplotOverview.satisfaction
+      t: >
+          Deze grafiek toont van elke technologie zijn **tevredenheids verhouding** van het totale **gebruikersaantal**.
+          Hij kan worden verdeeld in vier quadranten:
+
+          - **Beoordeel**: Weinig gebruikt, hoge tevredenheid. Technologie waarvan je op de hoogte wil blijven.
+
+          - **Adopteer**: Veel gebruikt, hoge tevredenheid. Veilig om deze technologie te adopteren.
+
+          - **Vermijd**: Weinig gebruikt, lage tevredenheid. Beter om deze technologie te vermijden.
+
+          - **Analyseer**: Veel gebruikt, lage tevredenheid. Bedenk goed of je deze technologie wil blijven gebruiken.
+    - key: block.description.scatterplotOverview.interest
+      t: >
+          Deze grafiek toont van elke technologie zijn **interesse verhouding** van het totale **gebruikersaantal** (zoas gedefinieerd door respondenten die zich bewust zijn van een technologie maar deze *nog niet* gebruikt hebben).
+
+          (Let op dat lage gebruiksersaantallen kunnen ontstaan doordat een technologie onbekend is; of een technologie met heel veel respondenten die er al gebruik van maken.)
+
+    - key: quadrants.assess
+      t: Beoordeel
+    - key: quadrants.adopt
+      t: Adopteer
+    - key: quadrants.avoid
+      t: Vermijd
+    - key: quadrants.analyze
+      t: Analyseer
+
+    # happiness
+    - key: block.title.happiness
+      t: Algemene tevredenheid
+    - key: block.description.happiness
+      t: |
+          Op een schaal van één (zeer ontevreden) tot vijf (zeer tevreden), hoe tevreden zijn ontwikkelaar met de huidige algemene status van deze categorie?
+
+    # experience
+    - key: block.title.toolExperience
+      t: ${name} Ervaring over tijd
+    - key: block.description.toolExperience
+      t: Ervaring van de respondent met ${name}.
+
+    - key: toolExperience.never_heard.long
+      t: Ik heb er nog nooit van gehoord
+    - key: toolExperience.never_heard.short
+      t: Nooit van gehoord
+    - key: toolExperience.never_heard.extrashort
+      t: Nooit gehoord
+
+    - key: toolExperience.not_interested.long
+      t: Ik heb ervan GEHOORD, maar ben NIET geïntresseerd
+    - key: toolExperience.not_interested.short
+      t: Van gehoord, niet geïntresseerd
+    - key: toolExperience.not_interested.extrashort
+      t: Niet geïntresseerd
+
+    - key: toolExperience.interested.long
+      t: Ik heb ervan GEHOORD en ZOU het graag willen leren
+    - key: toolExperience.interested.short
+      t: Van gehoord, wil graag leren
+    - key: toolExperience.interested.extrashort
+      t: Interessant
+
+    - key: toolExperience.would_use.long
+      t: Ik heb het eerder GEBRUIKT en ZOU het weer gebruiken
+    - key: toolExperience.would_use.short
+      t: Gebruikt, zou het weer gebruiken
+    - key: toolExperience.would_use.extrashort
+      t: Zou het weer gebruiken
+
+    - key: toolExperience.would_not_use.long
+      t: Ik heb het GEBRUIKT en zou het NIET weer gebruiken
+    - key: toolExperience.would_not_use.short
+      t: Gebruikt, zou het niet weer gebruiken
+    - key: toolExperience.would_not_use.extrashort
+      t: Zou het niet weer gebruiken
+
+    - key: toolExperience.negative_opinion.extrashort
+      t: Negatieve meningen
+    - key: toolExperience.positive_opinion.extrashort
+      t: Positieve meningen
+    - key: toolExperience.have_not_used.extrashort
+      t: Heb niet gebruikt
+    - key: toolExperience.have_used.extrashort
+      t: Heb gebruikt
+
+    - key: toolExperience.total_respondents.long
+      t: Totaal aantal respondenten
+    - key: toolExperience.total_respondents.short
+      t: Totaal aantal respondenten
+    - key: toolExperience.total_respondents.extrashort
+      t: Totaal aantal respondenten
+
+    # experience graph
+    - key: block.title.toolExperienceGraph
+      t: ${name} Ervaringsgrafiek
+    - key: block.description.toolExperienceGraph
+      t: |
+        Evolutie van de ervaring van de respondenten met **${name}** voor gebruikers die deelnemen
+        aan de enquête voor tenminste het tweede jaar.
+    - key: toolExperienceGraph.node.tooltip
+      t: |
+        in ${year}, ${count} respondenten die ook hebben deelgenomen 
+        aan de ${year - 1} of ${year + 1} enquête hebben geantwoord:
+        "${experience}"
+    - key: toolExperienceGraph.link.tooltip
+      t: |
+        ${count} respondenten
+        hebben geantwoord "${previousExperience}" in ${previousYear},
+        hebben geantwoord "${nextExperience}" in ${nextYear}
+
+    # other category tools
+    - key: block.title.category-other-tools
+      t: Andere tools
+    - key: block.description.category-other-tools
+      t: Andere tools in deze categorie (vrij veld).
+
+    ###########################################################################
+    # Other Tools
+    ###########################################################################
+
+    - key: block.title.utilities
+      t: Gereedschap
+    - key: block.description.utilities
+      t: Welke ondersteunende bibliotheken gebruik je regelmatig?
+    - key: block.title.utilities_others
+      t: Ander gereedschap
+    - key: block.description.utilities_others
+      t: Ander gereedschap (vrij veld).
+
+    - key: block.title.text_editors
+      t: Teksteditor
+    - key: block.description.text_editors
+      t: Welke teksteditor(s) gebruik je regelmatig?
+    - key: block.title.text_editors_others
+      t: Andere teksteditors
+    - key: block.description.text_editors_others
+      t: Ander antwoord (vrij veld).
+
+    - key: block.title.browsers
+      t: Browsers
+    - key: block.description.browsers
+      t: Welke browser(s) gebruik je primair tijdens de initiële ontwikkelfase?
+    - key: block.title.browsers_others
+      t: Andere browsers
+    - key: block.description.browsers_others
+      t: Ander antwoord (vrij veld).
+
+    - key: block.title.build_tools
+      t: Build tools
+    - key: block.description.build_tools
+      t: Welke build tools gebruik je?
+    - key: block.title.build_tools_others
+      t: Andere build tools
+    - key: block.description.build_tools_others
+      t: Ander antwoord (vrij veld).
+
+    - key: block.title.non_js_languages
+      t: Niet-JavaScript talen
+    - key: block.description.non_js_languages
+      t: Welke andere programmeertalen gebruik je?
+    - key: block.title.non_js_languages_others
+      t: Andere talen
+    - key: block.description.non_js_languages_others
+      t: Ander antwoord (vrij veld).
+
+
+    ###########################################################################
+    # Resources
+    ###########################################################################
+
+    # blogs & magazines
+    - key: block.title.blogs_news_magazines
+      t: Blogs & tijdschriften
+    - key: block.description.blogs_news_magazines
+      t: Welke JS-gerelateerde blogs/tijdschriften/etc. lees je?
+    - key: block.title.blogs_news_magazines_others
+      t: Andere blogs & tijdschriten
+    - key: block.description.blogs_news_magazines_others
+      t: Andere antwoorden (vrij veld).
+
+    # sites & courses
+    - key: block.title.sites_courses
+      t: Sites & cursussen
+    - key: block.description.sites_courses
+      t: Welke JS-gerelateerde sites/cursussen/etc. raadpleeg je?
+    - key: block.title.sites_courses_others
+      t: Andere sites & cursussen
+    - key: block.description.sites_courses_others
+      t: Andere antwoorden (vrij veld).
+
+    # podcasts
+    - key: block.title.podcasts
+      t: Podcasts
+    - key: block.description.podcasts
+      t: Welke JavaScript of programmeer-gerelateerde podcasts luister je?
+    - key: block.title.podcasts_others
+      t: Andere podcasts
+    - key: block.description.podcasts_others
+      t: Andere antwoorden (vrij veld).
+
+    ###########################################################################
+    # Opinions
+    ###########################################################################
+
+    - key: block.title.easy-to-learn
+      t: Leercurve
+    - key: block.description.easy-to-learn
+      t: “JavaScript is makkelijk om te leren”
+
+    - key: block.title.js_moving_in_right_direction
+      t: Richting
+    - key: block.description.js_moving_in_right_direction
+      t: “JavaScript is beweegt zich in de juiste richting”
+
+    - key: block.title.building_js_apps_overly_complex
+      t: Complexiteit
+    - key: block.description.building_js_apps_overly_complex
+      t: “Het bouwen van JavaScript apps is veel te complex op dit moment”
+
+    - key: block.title.js_over_used_online
+      t: Gebruik
+    - key: block.description.js_over_used_online
+      t: “JavaScript wordt teveel gebruikt online”
+
+    - key: block.title.enjoy_building_js_apps
+      t: Plezier
+    - key: block.description.enjoy_building_js_apps
+      t: “Ik haal plezier uit het bouwen van JavaScript apps”
+
+    - key: block.title.would_like_js_to_be_main_lang
+      t: Primaire taal
+    - key: block.description.would_like_js_to_be_main_lang
+      t: “Ik zou graag willen dat JavaScript mijn primaire programmeertaal is”
+
+    - key: block.title.js_ecosystem_changing_to_fast
+      t: Snelheid van verandering
+    - key: block.description.js_ecosystem_changing_to_fast
+      t: “Het JavaScript ecosysteem veranderd te snel”
+
+    - key: block.title.missing-features
+      t: Missende functies
+    - key: block.description.missing-features
+      t: Wat denken ontwikkelaars dat er op dit moment mist in JavaScript?
+
+      # opinion scale
+    - key: opinions.0.short
+      t: Helemaal oneens
+    - key: opinions.1.short
+      t: Oneens
+    - key: opinions.2.short
+      t: Neutraal
+    - key: opinions.3.short
+      t: Mee eens
+    - key: opinions.4.short
+      t: Helemaal eens
+
+    - key: opinions.0.long
+      t: Helemaal mee oneens
+    - key: opinions.1.long
+      t: Niet mee eens
+    - key: opinions.2.long
+      t: Neutraal
+    - key: opinions.3.long
+      t: Mee eens
+    - key: opinions.4.long
+      t: Helemaal mee eens
+
+    ###########################################################################
+    # Awards
+    ###########################################################################
+
+    - key: awards.runner_ups
+      t: Tweede plaats
+
+    # feature_adoption
+    - key: award.feature_adoption_award.title
+      t: Meest gebruikte functie
+    - key: award.feature_adoption_award.description
+      t: |
+          Uitgereikt aan de meest gebruikte JavaScript functie.
+    - key: award.feature_adoption_award.comment
+      t: |
+          Met **${items[0].value}** gebruikers die het inzetten is ${items[0].name}
+          de meest gebruikte JavaScript functie dit jaar.
+
+    # tool_satisfaction
+    - key: award.tool_satisfaction_award.title
+      t: Hoogste tevredenheid
+    - key: award.tool_satisfaction_award.description
+      t: |
+          Uitgereikt aan de technologie met het hoogste
+          percentage van tevreden gebruikers.
+    - key: award.tool_satisfaction_award.comment
+      t: |
+          Met **${items[0].value}** gebruikers die het opnieuw zouden willen gebruiken,
+          bewijst ${items[0].name} maar weer eens dat het serieus genomen moet worden.
+
+    # tool_interest
+    - key: award.tool_interest_award.title
+      t: Meeste interesse
+    - key: award.tool_interest_award.description
+      t: |
+          Uitgereikt aan de technologie die ontwikkelaars
+          het meest interessant vinden om te leren.
+    - key: award.tool_interest_award.comment
+      t: |
+          **${items[0].value}** ontwikkelaars die van ${items[0].name} hebben
+          gehoord en het ook willen leren.
+          Dat is serieus wat interesse!
+
+    # tool_usage
+    - key: award.tool_usage_award.title
+      t: Meest gebruikte technologie
+    - key: award.tool_usage_award.description
+      t: |
+          Uitgereikt aan de technologie met de grootste gebruikersbasis.
+    - key: award.tool_usage_award.comment
+      t: |
+          Met **${items[0].value}** gebruikers is ${items[0].name}
+          de meest gebruikte technologie dit jaar.
+
+    # resource_usage
+    - key: award.resource_usage_award.title
+      t: Meest gebruikte bronnen
+    - key: award.resource_usage_award.description
+      t: |
+          Uitgereikt aan de bron met de grootste gebruikersbasis.
+    - key: award.resource_usage_award.comment
+      t: |
+          Met **${items[0].value}** gebruikers is ${items[0].name}
+          de meest gebruikte bron dit jaar.
+
+    # tool_mention
+    - key: award.tool_mention_award.title
+      t: Meest genoemd
+    - key: award.tool_mention.description
+      t: |
+          Uitgereikt aan de bibliotheek die het meest
+          genoemd is in het “andere bibliotheken” antwoord.
+    - key: award.tool_mention_award.comment
+      t: |
+          ${items[0].name} heeft **${items[0].value}** vernoemingen verzameld en
+          is daarmee verreweg het meest genoemde vrije antwoord.
+
+    # prediction_award
+    - key: award.prediction_award.title
+      t: Voorspellingen
+    - key: award.prediction_award.description
+      t: |
+          Uitgereikt aan een opkomende technologie die het helemaal gaat overnemen… of niet?
+    - key: award.prediction_award.comment
+      t: |
+          ${items[0].name} maakt zijn explosieve debuut in de enquête van dit jaar en we kunnen niet
+          wachten om te zien waar het heen gaat vanaf hier.
+
+    ###########################################################################
+    # Generic
+    ###########################################################################
+
+    # pages
+    - key: page.introduction
+      t: Introductie
+    - key: page.tshirt
+      t: T-shirt
+    - key: page.demographics
+      t: Demografie
+    - key: page.overview
+      t: Overzicht
+    - key: page.features
+      t: Functies
+    - key: page.other_features
+      t: Andere functies
+    - key: page.javascript_flavors
+      t: JavaScript smaken
+    - key: page.javascript_flavors.short
+      t: JavaScript smaken
+    - key: page.javascript_flavors_others
+      t: Andere smaken
+    - key: page.front_end_frameworks
+      t: Front End frameworks
+    - key: page.front_end_frameworks.short
+      t: Front End
+    - key: page.front_end_frameworks_others
+      t: Andere frameworks
+    - key: page.data_layer
+      t: Datalaag
+    - key: page.data_layer.short
+      t: Datalaag
+    - key: page.data_layer_others
+      t: Andere datalaag tools
+    - key: page.back_end_frameworks
+      t: Back End frameworks
+    - key: page.back_end_frameworks.short
+      t: Back End
+    - key: page.back_end_frameworks_others
+      t: Andere frameworks
+    - key: page.testing
+      t: Testen
+    - key: page.testing.short
+      t: Testen
+    - key: page.testing_others
+      t: Andere tools
+    - key: page.mobile_desktop
+      t: Mobiel & desktop
+    - key: page.mobile_desktop.short
+      t: Mobiel & desktop
+    - key: page.mobile_desktop_others
+      t: Andere tools
+    - key: page.other_tools
+      t: Andere tools
+    - key: page.environments
+      t: Omgevingen
+    - key: page.resources
+      t: Bronnen
+    - key: page.opinions
+      t: Meningen
+    - key: page.awards
+      t: Prijzen
+    - key: page.conclusion
+      t: Conclusie
+    - key: page.support
+      t: Steun ons
+
+    # sharing
+    - key: share.share
+      t: Delen
+    - key: share.site.title
+      t: Ontdek de State Of JavaScript 2019 resultaten
+    - key: share.site.twitter_text
+      t: 'Ontdek de State Of JavaScript 2019 resultaten ${link} #StateOfJS'
+    - key: share.site.subject
+      t: State Of JavaScript resultaten
+    - key: share.site.body
+      t: 'Hier zijn wat interessante JavaScript enquête resultaten: ${link}'
+    - key: share.block.twitter_text
+      t: '#StateOfJS 2019: ${title} ${link}'
+    - key: share.block.subject
+      t: State Of JavaScript enquête resultaten
+    - key: share.block.body
+      t: 'Hier zijn wat interessante JavaScript enquête resultaten (${title}): ${link}'
+    - key: share.twitter
+      t: Delen op Twitter
+    - key: share.facebook
+      t: Delene op Facebook
+    - key: share.linkedin
+      t: Delen op LinkedIn
+    - key: share.email
+      t: Delen via email
+    - key: share.image
+      t: Download plaatje
+
+    # export
+    - key: export.export
+      t: Exporteren
+    - key: export.title
+      t: Export data voor ${title}
+    - key: export.nocsv
+      t: Sorry, CSV export is niet beschikbaar voor deze dataset.
+    - key: export.graphql
+      t: >
+          Ondanks dat onze interne GraphQL API niet publiekelijk beschikbaar is, plannen we in de toekomst
+          om deze beschikbaar te maken zodat het makkelijker is onze data op te vragen. Als je hier meer over
+          wil weten <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">check dan dit GitHub issue</a>
+
+    # general
+    - key: general.title
+      t: State of JavaScript 2019
+    - key: general.description
+      t: Ontdek de meeste populaire JavaScript functies & technologieën van het jaar.
+    - key: general.stay_tuned
+      t: Blijf up-to-date
+    - key: general.leave_your_email
+      t: "Als je wil weten wanneer we extra resultaten of de editie van volgend jaar bekend maken, laat dan een mailtje achter:"
+    - key: general.your_email
+      t: Jouw email
+    - key: general.notify_me
+      t: Houd me op de hoogte
+    - key: general.help_us_translate
+      t: Help de enquête vertalen →
+    - key: general.not_found
+      t: >
+
+          ## Error 404
+
+          Sorry, we konden de pagina niet vinden. Maak a.u.b [een issue](https://github.com/StateOfJS/State-of-JS-2019/issues) aan als je denkt dat er wat stuk is.
+    - key: general.back_to_intro
+      t: Terug naar de introductie
+    - key: general.close_nav
+      t: Sluit navigatiemenu
+    - key: general.completion_percentage
+      t: 'Voortgangspercentage:'
+    - key: general.previous
+      t: 'Vorige:'
+    - key: general.next
+      t: 'Volgende:'
+    - key: general.start
+      t: Start
+
+    # partners
+    - key: partners.our_partners
+      t: Onze partners
+    - key: partners.become_partner
+      t: Help de enquête met ondersteuning
+    - key: partners.thanks
+      t: Dank aan onze partners die ons steunen!
+    - key: partners.learn_more
+      t: Leer meer.
+    - key: block.title.recommendedResources
+      t: Aanbevolen bronnen
+
+    # charts
+    - key: block.title.usage-ratio
+      t: Gebruiksverhouding beoordeling
+    - key: block.description.usage-ratio
+      t: Beoordeel gebruiksverhouding onder gebruikers die bewust zijn van de technologie.
+    - key: users_percentage
+      t: Percentage gebruikers
+    - key: users_count
+      t: Aantal gebruikers
+    - key: satisfaction_percentage
+      t: Percentage tevredenheid 
+    - key: interest_percentage
+      t: Percentage interesse
+    - key: chart_mode
+      t: modus
+    - key: chart_mode.absolute
+      t: absoluut
+    - key: chart_mode.relative
+      t: relatief
+    - key: chart_units
+      t: Eenheden
+    - key: chart_units.percentage
+      t: Percentage
+    - key: chart_units.count
+      t: Aantal
+    - key: users
+      t: gebruikers
+    - key: percent_satisfaction
+      t: '% tevredenheid'
+    - key: percent_interest
+      t: '% interesse'
+    - key: heatmap.average
+      t: gemiddeld
+    - key: difference_from_average_usage
+      t: 'Verschillend van gemiddeld gebruik:'
+    - key: all
+      t: 'Alle'
+
+    # other
+    - key: bio.guest_visualizer
+      t: Gast expert
+    - key: footer.state_of_js_link
+      t: © 2019 <a href="${link}">State of JavaScript</a>.
+    - key: footer.leave_an_issue
+      t:  Vragen? Bug ontdekt? <a href="${link}">Maak een issue</a>.
+    - key: footer.netlify
+      t: Deze site draait op <a href="${link}">Netlify</a>.

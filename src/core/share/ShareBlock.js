@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import ReactGA from 'react-ga'
-import { useI18n } from '../i18n/i18nContext'
+import { useI18n } from 'core/i18n/i18nContext'
 import { getBlockMeta } from 'core/helpers/blockHelpers'
-import { usePageContext } from '../helpers/pageContext'
+import { usePageContext } from 'core/helpers/pageContext'
+import mq from 'core/theme/mq'
+import Button from 'core/components/Button'
 import ShareTwitter from './ShareTwitter'
 import ShareLinkedIn from './ShareLinkedIn'
 import ShareFacebook from './ShareFacebook'
@@ -12,8 +15,8 @@ import ShareEmail from './ShareEmail'
 import ShareImage from './ShareImage'
 
 const ShareIcon = () => (
-    <svg
-        className="Share__Icon"
+    <Icon
+        className="mobile"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -31,10 +34,10 @@ const ShareIcon = () => (
             <polyline points="7,5 11.5,0.5 16,5" />
             <polyline points="14.5,8.5 19.5,8.5 19.5,23.5 3.5,23.5 3.5,8.5 8.5,8.5" />
         </g>
-    </svg>
+    </Icon>
 )
 
-const ShareBlock = ({ block, section, id, className, toggleClass, title }) => {
+const ShareBlock = ({ block, section, className, toggleClass, title }) => {
     const [showOptions, setShowOptions] = useState(false)
     const context = usePageContext()
     const { translate } = useI18n()
@@ -53,47 +56,99 @@ const ShareBlock = ({ block, section, id, className, toggleClass, title }) => {
     const meta = getBlockMeta(block, context, translate, title)
 
     return (
-        <div
-            className={classNames(className, 'share-wrapper', {
-                'share-popup-visible': showOptions
+        <Container
+            className={classNames('ShareBlock', className, {
+                '_is-visible': showOptions
             })}
         >
-            <div className="share">
-                <div
-                    className="share-button button"
+            <ButtonWrapper>
+                <ShareButton
+                    className="ShareButton"
+                    size="small"
                     onClick={e => {
                         toggleOptions(e)
                     }}
                 >
                     <span className="desktop">{translate('share.share')}</span>
-                    <span className="mobile">
-                        <ShareIcon />
-                    </span>
-                </div>
-            </div>
-            <div className="share-popup">
-                <div className="share-options">
-                    <ShareTwitter text={meta.twitterText} trackingId={meta.trackingId} />
-                    <ShareFacebook link={meta.link} trackingId={meta.trackingId} />
-                    <ShareLinkedIn
-                        link={meta.link}
-                        title={meta.title}
-                        trackingId={meta.trackingId}
-                    />
-                    <ShareEmail
-                        subject={meta.emailSubject}
-                        body={meta.emailBody}
-                        trackingId={meta.trackingId}
-                    />
-                    <ShareImage trackingId={meta.trackingId} url={meta.imageUrl} />
-                </div>
-            </div>
-        </div>
+                    <ShareIcon />
+                </ShareButton>
+            </ButtonWrapper>
+            <Popup className="ShareBlock__Popup">
+                <ShareTwitter text={meta.twitterText} trackingId={meta.trackingId} />
+                <ShareFacebook link={meta.link} trackingId={meta.trackingId} />
+                <ShareLinkedIn link={meta.link} title={meta.title} trackingId={meta.trackingId} />
+                <ShareEmail
+                    subject={meta.emailSubject}
+                    body={meta.emailBody}
+                    trackingId={meta.trackingId}
+                />
+                <ShareImage trackingId={meta.trackingId} url={meta.imageUrl} />
+            </Popup>
+        </Container>
     )
 }
 
 ShareBlock.propTypes = {
-    id: PropTypes.string.isRequired
+    block: PropTypes.shape({
+        id: PropTypes.string.isRequired
+    }).isRequired
 }
+
+const Container = styled.div`
+    position: relative;
+    .capture & {
+        display: none;
+    }
+`
+
+const ButtonWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const ShareButton = styled(Button)`
+    @media ${mq.small} {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.Button--small {
+            padding: 0;
+        }
+    }
+`
+
+const Icon = styled.svg`
+    stroke: ${({ theme }) => theme.colors.link};
+    height: 16px;
+    width: 16px;
+    
+    ${ShareButton}:hover &,
+    .ShareBlock._is-visible & {
+        stroke: ${({ theme }) => theme.colors.contrast};
+    }
+`
+
+const Popup = styled.div`
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    margin: 0 auto;
+    pointer-events: none;
+
+    @media ${mq.small} {
+        left: 50%;
+        top: 50%;
+    }
+    @media ${mq.mediumLarge} {
+        top: 0;
+        left: 0;
+    }
+`
 
 export default ShareBlock

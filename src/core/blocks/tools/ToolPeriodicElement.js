@@ -1,114 +1,77 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { navigate } from 'gatsby'
-import { colors } from 'core/constants'
 
-const defaultColor = colors.teal
-
-const PeriodicElement = ({
-    className,
-    name,
-    symbol,
-    number,
-    background,
-    color = defaultColor,
-    mode = 'standalone',
-    size,
-    path,
-    x,
-    y,
-    fire = false,
-    hoverCoords = {}
-}) => (
-    <svg
-        width={size || '100%'}
-        height={size}
-        x={x}
-        y={y}
-        viewBox={`0 0 100 100`}
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={`PeriodicTableElement ${className}`}
-        onClick={() => {
-            if (path) {
-                navigate(path)
-            }
-        }}
-    >
-        {/*
-        Placeholder used so that cursor doesn't
-        leave hover zone when hovering
-        */}
-        <rect
-            x="0"
-            y="0"
-            width="100"
-            height="100"
-            className="PeriodicTableElement_Placeholder"
-            fill="red"
-            fillOpacity="0"
-        />
-        <g
-            className="PeriodicTableElement_Container"
-            style={{ '--dx': `${hoverCoords.dx}px`, '--dy': `${hoverCoords.dy}px` }}
+const PeriodicElement = ({ className, name, symbol, number, size, path, x, y }) => {
+    return (
+        <svg
+            width={size || '100%'}
+            height={size}
+            x={x}
+            y={y}
+            viewBox={`0 0 100 100`}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={className}
+            onClick={() => {
+                if (path) {
+                    navigate(path)
+                }
+            }}
         >
-            <rect
-                x="0"
-                y="0"
-                width="100"
-                height="100"
-                className={`PeriodicTableElement_Frame PeriodicTableElement_Frame--${mode}`}
-                style={{
-                    fill: background
-                }}
-            />
-            {fire && (
-                <image
-                    xlinkHref="/images/pixel-fire.gif"
-                    x="10%"
-                    height="100"
-                    width="100"
-                    opacity="0.4"
-                />
-            )}
-            <text
-                className="PeriodicTableElement_Number"
-                x={100 * 0.1}
-                y={100 * 0.2}
-                fontSize={100 * 0.14}
-                fill="white"
-            >
+            <Frame x="0" y="0" width="100" height="100" />
+            <NumberNode x={100 * 0.1} y={100 * 0.2} fontSize={100 * 0.14}>
                 {number}
-            </text>
-            <text
-                className="PeriodicTableElement_Symbol"
+            </NumberNode>
+            <Symbol
                 x={100 * 0.5}
                 y={name ? 100 * 0.55 : 100 * 0.6}
                 width="100%"
                 textAnchor="middle"
                 fontSize={100 * 0.36}
-                fill={color}
             >
                 {symbol}
-            </text>
-            <text
-                className="PeriodicTableElement_Label"
+            </Symbol>
+            <Label
                 x={100 * 0.5}
                 y={100 * 0.78}
                 fontSize={100 * (name.length > 10 ? 0.09 : 0.14)}
-                fill={color}
                 textAnchor="middle"
             >
                 {name}
-            </text>
-        </g>
-    </svg>
-)
+            </Label>
+        </svg>
+    )
+}
 
 PeriodicElement.propTypes = {
     name: PropTypes.string,
-    symbol: PropTypes.string.isRequired,
-    background: PropTypes.string
+    symbol: PropTypes.string.isRequired
 }
+
+const Frame = styled.rect`
+    stroke-width: 1px;
+    stroke: ${({ theme }) => theme.colors.border};
+    fill: ${({ theme }) => theme.colors.background};
+`
+
+const NumberNode = styled.text`
+    opacity: 0.6;
+    pointer-events: none;
+    fill: white;
+`
+
+const Symbol = styled.text`
+    font-weight: ${({ theme }) => theme.typography.weights.bold};
+    pointer-events: none;
+    fill: ${({ theme }) => theme.colors.link};
+`
+
+const Label = styled.text`
+    opacity: 0.6;
+    pointer-events: none;
+    fill: ${({ theme }) => theme.colors.text};
+`
 
 export default PeriodicElement

@@ -1,0 +1,1057 @@
+locale: ru-RU
+translations:
+    ###########################################################################
+    # Tshirt
+    ###########################################################################
+
+    - key: tshirt.about
+      t: О футболке
+    - key: tshirt.description
+      t: >
+          Полуприлегающая футболка. Дизайн напечатан на ткани типа Heather чёрного цвета [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (мужская);
+          или темно-серого [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (женская). Размеры одежды по стандарту США.
+
+    - key: tshirt.getit
+      t: Заказать
+    - key: tshirt.price
+      t: $${price} + доставка
+
+    ###########################################################################
+    # Demographics
+    ###########################################################################
+
+    # salary ranges
+    - key: salary.range_work_for_free.long
+      t: Я работаю бесплатно
+    - key: salary.range_work_for_free.short
+      t: работаю бесплатно
+    - key: salary.range_work_for_free.shorter
+      t: '0'
+    - key: salary.range_0_10.long
+      t: $0k-$10k
+    - key: salary.range_0_10.short
+      t: $0k-$10k
+    - key: salary.range_0_10.shorter
+      t: 0~10k
+    - key: salary.range_10_30.long
+      t: $10k-$30k
+    - key: salary.range_10_30.short
+      t: $10k-$30k
+    - key: salary.range_10_30.shorter
+      t: 10~30k
+    - key: salary.range_30_50.long
+      t: $30k-$50k
+    - key: salary.range_30_50.short
+      t: $30k-$50k
+    - key: salary.range_30_50.shorter
+      t: 30~50k
+    - key: salary.range_50_100.long
+      t: $50k-$100k
+    - key: salary.range_50_100.short
+      t: $50k-$100k
+    - key: salary.range_50_100.shorter
+      t: 50~100k
+    - key: salary.range_100_200.long
+      t: $100k-$200k
+    - key: salary.range_100_200.short
+      t: $100k-$200k
+    - key: salary.range_100_200.shorter
+      t: 100~200k
+    - key: salary.range_more_than_200.long
+      t: больше $200k
+    - key: salary.range_more_than_200.short
+      t: $200k+
+    - key: salary.range_more_than_200.shorter
+      t: '>200k'
+    - key: salary.axis_legend
+      t: Вилка зарплат (USD)
+
+    # years of experience
+    - key: workExperience.range_less_than_1.long
+      t: Менее одного года
+    - key: workExperience.range_less_than_1.short
+      t: '<1 года'
+    - key: workExperience.range_less_than_1.shorter
+      t: '<1'
+    - key: workExperience.range_1_2.long
+      t: От 1 до 2 лет
+    - key: workExperience.range_1_2.short
+      t: 1~2 года
+    - key: workExperience.range_1_2.shorter
+      t: 1~2
+    - key: workExperience.range_2_5.long
+      t: От 2 до 5 лет
+    - key: workExperience.range_2_5.short
+      t: 2~5 лет
+    - key: workExperience.range_2_5.shorter
+      t: 2~5
+    - key: workExperience.range_5_10.long
+      t: От 5 до 10 лет
+    - key: workExperience.range_5_10.short
+      t: 5~10 лет
+    - key: workExperience.range_5_10.shorter
+      t: 5~10
+    - key: workExperience.range_10_20.long
+      t: От 10 до 20 лет
+    - key: workExperience.range_10_20.short
+      t: 10~20 лет
+    - key: workExperience.range_10_20.shorter
+      t: 10~20
+    - key: workExperience.range_more_than_20.long
+      t: Более 20 лет
+    - key: workExperience.range_more_than_20.short
+      t: '>20 лет'
+    - key: workExperience.range_more_than_20.shorter
+      t: '>20'
+    - key: workExperience.axis_legend
+      t: Опыт
+
+    # company size
+    - key: companySize.range_1.long
+      t: Один сотрудник
+    - key: companySize.range_1.short
+      t: один
+    - key: companySize.range_1.shorter
+      t: '1'
+    - key: companySize.range_1_5.long
+      t: От 1 до 5 сотрудников
+    - key: companySize.range_1_5.short
+      t: 1~5
+    - key: companySize.range_1_5.shorter
+      t: 1~5
+    - key: companySize.range_5_10.long
+      t: От 5 до 10 сотрудников
+    - key: companySize.range_5_10.short
+      t: 5~10
+    - key: companySize.range_5_10.shorter
+      t: 5~10
+    - key: companySize.range_10_20.long
+      t: От 10 до 20 сотрудников
+    - key: companySize.range_10_20.short
+      t: 10~20
+    - key: companySize.range_10_20.shorter
+      t: 10~20
+    - key: companySize.range_20_50.long
+      t: От 20 до 50 сотрудников
+    - key: companySize.range_20_50.short
+      t: 20~50
+    - key: companySize.range_20_50.shorter
+      t: 20~50
+    - key: companySize.range_50_100.long
+      t: От 50 до 100 сотрудников
+    - key: companySize.range_50_100.short
+      t: 50~100
+    - key: companySize.range_50_100.shorter
+      t: 50~100
+    - key: companySize.range_100_1000.long
+      t: От 100 до 1000 сотрудников
+    - key: companySize.range_100_1000.short
+      t: 100~1000
+    - key: companySize.range_100_1000.shorter
+      t: 100~1000
+    - key: companySize.range_more_than_1000.long
+      t: Более 1000 сотрудников
+    - key: companySize.range_more_than_1000.short
+      t: 1000+
+    - key: companySize.range_more_than_1000.shorter
+      t: 1000+
+    - key: companySize.axis_legend
+      t: Количество сотрудников
+
+    # sources
+    - key: sources.other_unknown
+      t: Другое/Неизвестно
+
+    # css proficiency
+
+    - key: block.title.cssProficiency
+      t: Уровень опыта CSS
+    - key: block.description.cssProficiency
+      t: Насколько вы опытны в CSS?
+    - key: cssProficiency.axis_legend
+      t: Уровень опыта CSS
+    - key: cssProficiency.0.short
+      t: Отсутствует
+    - key: cssProficiency.0.long
+      t: 'Практически не знаю CSS'
+    - key: cssProficiency.1.short
+      t: Начинающий
+    - key: cssProficiency.1.long
+      t: 'Использую CSS фреймворки и настраиваю существующие стили'
+    - key: cssProficiency.2.short
+      t: Средний
+    - key: cssProficiency.2.long
+      t: 'Знаю правила специфичности, умею создавать раскладку'
+    - key: cssProficiency.3.short
+      t: Продвинутый
+    - key: cssProficiency.3.long
+      t: 'Владею анимацией, интерактивностью, переходами и т.д.'
+    - key: cssProficiency.4.short
+      t: Эксперт
+    - key: cssProficiency.4.long
+      t: 'Умею оформлять весь фронтенд с нуля, следуя единой методологии'
+
+    # backend proficiency
+    - key: block.title.backendProficiency
+      t: Уровень опыта на бэкенде
+    - key: block.description.backendProficiency
+      t: Насколько вы опытны в бэкенд разработке?
+    - key: backendProficiency.axis_legend
+      t: Уровень опыта на бэкенде
+    - key: backendProficiency.0.short
+      t: Отсутствует
+    - key: backendProficiency.0.long
+      t: 'Не могу справиться с какой-либо работой на бэкенде'
+    - key: backendProficiency.1.short
+      t: Начинающий
+    - key: backendProficiency.1.long
+      t: 'Могу устанавливать универсальные CMS (WordPress и т.п.) или статические генераторы сайтов (Jekyll, etc.)'
+    - key: backendProficiency.2.short
+      t: Средний
+    - key: backendProficiency.2.long
+      t: 'Могу разрабатывать приложения, используя существующие фреймворки (Rails, Laravel и т.п.)'
+    - key: backendProficiency.3.short
+      t: Продвинутый
+    - key: backendProficiency.3.long
+      t: 'Настройка всего бэкенда с нуля (Go, Node и т.п.)'
+    - key: backendProficiency.4.short
+      t: Эксперт
+    - key: backendProficiency.4.long
+      t: 'Могу управлять сложными многосерверными или микросервисными архитектурами'
+
+    # job title
+    - key: jobTitle.front_end_developer.short
+      t: Фронтенд-разработчик
+    - key: jobTitle.front_end_developer.long
+      t: Фронтенд-разработчик/инженер
+    - key: jobTitle.back_end_developer.short
+      t: Бэкенд-разработчик
+    - key: jobTitle.back_end_developer.long
+      t: Бэкенд-разработчик/инженер
+    - key: jobTitle.full_stack_developer.short
+      t: Фулстек-разработчик
+    - key: jobTitle.full_stack_developer.long
+      t: Фулстек-разработчик/инженер
+    - key: jobTitle.web_developer.short
+      t: Веб-разработчик
+    - key: jobTitle.web_developer.long
+      t: Веб-разработчик
+    - key: jobTitle.web_designer.short
+      t: Веб-дизайнер
+    - key: jobTitle.web_designer.long
+      t: Веб-дизайнер
+    - key: jobTitle.ux_designer.short
+      t: UX-дизайнер
+    - key: jobTitle.ux_designer.long
+      t: UX-дизайнер
+    - key: jobTitle.ui_designer.short
+      t: UI-дизайнер
+    - key: jobTitle.ui_designer.long
+      t: UI-дизайнер
+    - key: jobTitle.back_end_dev.short
+      t: Бэкенд-разработчик
+    - key: jobTitle.back_end_dev.long
+      t: Бэкенд-разработчик/инженер
+
+    # gender
+    - key: block.title.gender
+      t: Пол
+    - key: block.description.gender
+      t: Пол респондентов.
+    - key: gender.female
+      t: Женский
+    - key: gender.female.long
+      t: Женский
+    - key: gender.male
+      t: Мужской
+    - key: gender.male.long
+      t: Мужской
+    - key: gender.non_binary
+      t: Небинарный/Другой
+    - key: gender.non_binary.long
+      t: Небинарный/Другой
+    - key: gender.prefer_not_to_say
+      t: Предпочли не говорить
+    - key: gender.prefer_not_to_say.long
+      t: Предпочли не говорить
+
+    # other
+    - key: block.title.country
+      t: Участники в разбивке по странам
+    - key: block.description.country
+      t: Распределение респондентов по странам.
+    - key: block.title.salary
+      t: Зарплата
+    - key: block.description.salary
+      t: Годовая зарплата в USD.
+    - key: block.title.workExperience
+      t: Опыт
+    - key: block.description.workExperience
+      t: Как долго вы писали на JavaScript?
+    - key: block.title.companySize
+      t: Размер компании
+    - key: block.description.companySize
+      t: Разбивка по размеру компании
+    - key: block.title.source
+      t: Источник
+    - key: block.description.source
+      t: >
+          Как участники узнали об опросе (агрегирование из предоставленных ответов и отслеживания рефереров).
+
+          Пункт **State of JS** обозначает подписчиков из наших прошлых опросов, в то время как **Word of Mouth** включает в себя Slack, друзей, коллег, и т.д.
+
+    - key: block.title.jobTitle
+      t: Должность
+    - key: block.description.jobTitle
+      t: Как вы представляетесь на тусовках?
+
+    ###########################################################################
+    # Features
+    ###########################################################################
+
+    # General
+
+    - key: page.syntax
+      t: Синтаксис
+    - key: page.language
+      t: Язык
+    - key: page.data_structures
+      t: Структуры данных
+    - key: page.browser_apis
+      t: API браузера
+
+    - key: block.description.decorators
+      t: >
+        В упрощённом виде, декоратор — просто способ обернуть
+        один фрагмент кода другим, буквально “декорируя” его.
+
+    - key: feature.learn_more
+      t: Подробнее (MDN)
+    - key: feature.mdn_link
+      t: MDN
+    - key: feature.caniuse_link
+      t: CanIUse
+    - key: feature.specification_link
+      t: Спецификация W3C
+
+    - key: featureExperienceSimplified.used_it.long
+      t: Использовал
+    - key: featureExperienceSimplified.know_it.long
+      t: Знаю
+    - key: features.usage.ratio
+      t: Доля использования
+
+    - key: featureExperience.used_it
+      t: Использовал
+    - key: featureExperience.know_not_used
+      t: Знаю, но не использовал
+    - key: featureExperience.never_heard_not_sure
+      t: Никогда не слышал/Не уверен, что это
+
+    - key: featureExperience.used_it.long
+      t: Использовал
+    - key: featureExperience.know_not_used.long
+      t: Знаю, но не использовал
+    - key: featureExperience.never_heard_not_sure.long
+      t: Никогда не слышал/Не уверен, что это
+
+    # Feature Overview
+    - key: block.title.featuresOverview
+      t: Анализ использования
+    - key: block.description.featuresOverview
+      t: >
+          Данный график представляет степень применения различных возможностей JavaScript, объединённых по категориям.
+
+
+          Размер <span class="text-teal-darker text-bold">внешнего круга</span> соответствует общему количеству пользователей, которые знают о возможности,
+          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно использовал её.
+
+
+          Наведите на любой круг, чтобы увидеть <span class="text-blackpink text-bold">всплывающую подсказку</span> с подробными данными об общем количестве опрошенных.
+
+    # Features Section Overview
+    - key: block.title.featuresSectionOverview
+      t: Анализ использования
+    - key: block.description.featuresSectionOverview
+      t: >
+          Размер <span class="text-teal-darker text-bold">внешнего круга</span> соответствует общему количеству пользователей, которые знают о возможности,
+          тогда как <span class="text-teal text-bold">внутренний</span> представляет тех, кто действительно использовал её.
+
+
+          Наведите на любой круг, чтобы увидеть <span class="text-blackpink text-bold">всплывающую подсказку</span> с подробными данными об общем количестве опрошенных.
+
+    - key: block.title.featuresExperienceHeatmap
+      t: Использование по длительности опыта
+    - key: block.description.featuresExperienceHeatmap
+      t: |
+          Столбец “всего” показывает общее использование каждой возможности (участники, которые отметили пункт “Использовал”),
+          а следующие столбцы отображают долю использования по длительности опыта, в годах.
+
+          Ярко-<span class="text-teal text-bold">бирюзовый</span> фон обозначает,
+          что доля для данной группы выше среднего показателя.
+
+    ###########################################################################
+    # Tools & Methodologies
+    ###########################################################################
+
+    # general
+    - key: block.tool.links
+      t: Ссылки
+    - key: block.tool.github_link
+      t: GitHub
+    - key: block.tool.github_stars
+      t: звёзд
+    - key: block.tool.homepage_link
+      t: Сайт
+    - key: block.tool.npm_link
+      t: NPM
+
+    - key: block.title.other-methodologies
+      t: Другие методологии
+
+    - key: block.title.companySize_heatmap
+      t: Использование по размеру компании
+    - key: block.description.companySize_heatmap
+      t: |
+
+          Как распределено применение каждой технологии среди ответивших, которые
+          выбрали разные диапазоны размеров компаний.
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+
+    - key: block.title.workExperience_heatmap
+      t: Использование по длительности опыта
+    - key: block.description.workExperience_heatmap
+      t: |
+
+          Как распределено применение каждой технологии среди ответивших, которые
+          выбрали разные диапазоны длительности опыта. Обратите внимание, рассматриваемый
+          опыт - это общий опыт работы с JavaScript, а не опыт с конкретной технологией.
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “years of experience” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    - key: block.title.salary_heatmap
+      t: Использование по размеру зарплаты
+    - key: block.description.salary_heatmap
+      t: |
+
+          Как распределено применение каждой технологии среди ответивших, которые
+          выбрали разные диапазоны размеров зарплат.
+
+      # The “overall” column shows overall usage for each technology (respondents who selected “would use again” or “would not use again”),
+      # while the following columns show the usage ratio for each “yearly salary” bracket.
+
+      # A brighter <span class="text-teal text-bold">teal</span> background indicates
+      # a higher-than-overall-average ratio for a given bracket.
+
+    # rankings/bump chart
+    - key: block.title.toolExperienceRanking
+      t: Рейтинги
+    - key: block.description.toolExperienceRanking
+      t: >
+          Рейтинги по уровню узнаваемости, интереса и удовлетворённости.
+    - key: opinions.legends.awareness_ratio
+      t: Узнаваемость
+    - key: opinions.legends.interest_ratio
+      t: Интерес
+    - key: opinions.legends.satisfaction_ratio
+      t: Удовлетворённость
+
+    # overview
+    - key: block.title.toolsSectionOverview
+      t: Общий обзор
+    - key: block.description.toolsSectionOverview
+      t: >
+          Обзор мнений по исследуемым технологиям. Тёмные сегменты обозначают положительное отношение,
+          тогда как светлые соответствуют негативному.
+
+    # Arrows (Movement over time)
+    - key: block.title.toolsArrow
+      t: Изменения во времени
+    # - key: block.description.toolsArrow
+    #   t: >
+    #       How has the ecosystem changed over three years?
+    - key: block.description.toolsArrow
+      t: >
+          Каждая линия проходит с 2016 по 2019 год. Чем выше точка, тем больше людей использовало технологию.
+          Чем правее точка, тем больше людей хотят изучить её или уже использовали и будут снова пользоваться ей.
+
+    - key: amelia.bio
+      t: >
+        Амелия Ваттенбергер - фронтенд разработчик и дизайнер, сосредоточенная на визуализации данных.
+        Она автор руководства по созданию собственных визуализаций данных [Fullstack D3 and Data Visualization](https://www.newline.co/fullstack-d3),
+        также она делится мыслями и практическими примерами в [Twitter](https://twitter.com/Wattenberger)
+        и на [своём сайте](https://wattenberger.com/).
+
+    # quadrant/scatterplot chart
+    - key: block.title.scatterplotOverview
+      t: Сравнение удовлетворённости и использования
+    - key: block.description.scatterplotOverview.satisfaction
+      t: >
+          Эта диаграмма показывает **рейтинг удовлетворения** каждой технологией относительно её общего **количества пользователей**.
+          Делится на четыре квадранта:
+
+          - **ПРОБУЙ**: Низкий уровень использования, высокий уровень удовлетворённости. Технологии, за которыми стоит следить.
+
+          - **ПРИМЕНЯЙ**: Высокий уровень использования, высокий уровень удовлетворённости. Технологии, которые можно спокойно применять.
+
+          - **ИЗБЕГАЙ**: Низкий уровень использования, низкий уровень удовлетворённости. Технологии, которые лучше избегать в настоящий момент.
+
+          - **ПРОАНАЛИЗИРУЙ**: Высокий уровень использования, низкий уровень удовлетворённости. Технологии, над прекращением использования которых стоит задуматься.
+    - key: block.description.scatterplotOverview.interest
+      t: |
+          Эта диаграмма показывает **рейтинг интереса** к каждой технологии относительно её общего **количества пользователей** (определяется по участникам, которые знают о технологии, но ещё **не** пользовались ей).
+
+          Обратите внимание, низкое количество пользователей может быть из-за того, что технология либо неизвестна, либо её уже многие используют.
+
+    - key: quadrants.assess
+      t: Пробуй
+    - key: quadrants.adopt
+      t: Применяй
+    - key: quadrants.avoid
+      t: Избегай
+    - key: quadrants.analyze
+      t: Проанализируй
+
+    # happiness
+    - key: block.title.happiness
+      t: Общее счастье
+    - key: block.description.happiness
+      t: |
+          Насколько разработчики довольны текущим положением дел в этой категории? По шкале от одного (очень недоволен) до пяти (очень доволен).
+
+    # experience
+    - key: block.title.toolExperience
+      t: Опыт в ${name} с течением времени
+    - key: block.description.toolExperience
+      t: Опыт работы участника опроса с ${name}.
+
+    - key: toolExperience.never_heard.long
+      t: Никогда не слышал(а)
+    - key: toolExperience.never_heard.short
+      t: Никогда не слышал
+    - key: toolExperience.never_heard.extrashort
+      t: Не слышал
+
+    - key: toolExperience.not_interested.long
+      t: СЛЫШАЛ(а), но не интересно
+    - key: toolExperience.not_interested.short
+      t: Слышал, не интересно
+    - key: toolExperience.not_interested.extrashort
+      t: Не интересно
+
+    - key: toolExperience.interested.long
+      t: СЛЫШАЛ(а) и ХОЧУ изучить
+    - key: toolExperience.interested.short
+      t: Слышал, хочу изучить
+    - key: toolExperience.interested.extrashort
+      t: Интересно
+
+    - key: toolExperience.would_use.long
+      t: ИСПОЛЬЗОВАЛ(а) ранее и БУДУ использовать снова
+    - key: toolExperience.would_use.short
+      t: Использовал и буду использовать
+    - key: toolExperience.would_use.extrashort
+      t: Буду использовать снова
+
+    - key: toolExperience.would_not_use.long
+      t: ИСПОЛЬЗОВАЛ(а) ранее, но НЕ БУДУ использовать снова
+    - key: toolExperience.would_not_use.short
+      t: Использовал, но не буду использовать
+    - key: toolExperience.would_not_use.extrashort
+      t: Не буду использовать снова
+
+
+    - key: toolExperience.negative_opinion.extrashort
+      t: Негативное отношение
+    - key: toolExperience.positive_opinion.extrashort
+      t: Положительное отношение
+    - key: toolExperience.have_not_used.extrashort
+      t: Не использовал(а)
+    - key: toolExperience.have_used.extrashort
+      t: Использовал(а)
+
+    - key: toolExperience.total_respondents.long
+      t: Всего участников
+    - key: toolExperience.total_respondents.short
+      t: Всего участников
+    - key: toolExperience.total_respondents.extrashort
+      t: Всего участников
+
+    # experience graph
+    - key: block.title.toolExperienceGraph
+      t: График опыта ${name}
+    - key: block.description.toolExperienceGraph
+      t: |
+        Изменение опыта работы с **${name}** для тех респондентов, кто участвовал
+        в опросе не менее двух лет подряд.
+    - key: toolExperienceGraph.node.tooltip
+      t: |
+        в ${year}, ${count} респондентов, кто также участвовал
+        в опросах ${year - 1} or ${year + 1}, ответили:
+        "${experience}"
+    - key: toolExperienceGraph.link.tooltip
+      t: |
+        ${count} респондентов
+        ответили "${previousExperience}" в ${previousYear},
+        ответили "${nextExperience}" в ${nextYear}
+
+    # other category tools
+    - key: block.title.category-other-tools
+      t: Другие инструменты
+    - key: block.description.category-other-tools
+      t: Другие инструменты в этой категории (поле со свободной формой ответа)
+
+    ###########################################################################
+    # Other Tools
+    ###########################################################################
+
+    - key: block.title.utilities
+      t: Утилиты
+    - key: block.description.utilities
+      t: Какие библиотеки-утилиты вы регулярно используете?
+    - key: block.title.utilities_others
+      t: Другие утилиты
+    - key: block.description.utilities_others
+      t: Другие утилиты (поле со свободной формой ответа).
+
+    - key: block.title.text_editors
+      t: Текстовые редакторы
+    - key: block.description.text_editors
+      t: Какими текстовыми редакторами вы регулярно пользуетесь?
+    - key: block.title.text_editors_others
+      t: Другие текстовые редакторы
+    - key: block.description.text_editors_others
+      t: Другие ответы (поле со свободной формой ответа).
+
+    - key: block.title.browsers
+      t: Браузеры
+    - key: block.description.browsers
+      t: В каких браузерах вы в основном работаете при начальной разработке?
+    - key: block.title.browsers_others
+      t: Другие браузеры
+    - key: block.description.browsers_others
+      t: Другие ответы (поле со свободной формой ответа).
+
+    - key: block.title.build_tools
+      t: Сборщики
+    - key: block.description.build_tools
+      t: Какие сборщики вы используете?
+    - key: block.title.build_tools_others
+      t: Другие сборщики
+    - key: block.description.build_tools_others
+      t: Другие ответы (поле со свободной формой ответа).
+
+    - key: block.title.non_js_languages
+      t: Языки, помимо JavaScript
+    - key: block.description.non_js_languages
+      t: Какими другими языками программирования вы пользуетесь?
+    - key: block.title.non_js_languages_others
+      t: Другие языки
+    - key: block.description.non_js_languages_others
+      t: Другие ответы (поле со свободной формой ответа).
+
+
+    ###########################################################################
+    # Resources
+    ###########################################################################
+
+    # blogs & magazines
+    - key: block.title.blogs_news_magazines
+      t: Блоги и журналы
+    - key: block.description.blogs_news_magazines
+      t: Какие блоги, журналы (и т.п.), касающиеся JavaScript, вы читаете?
+    - key: block.title.blogs_news_magazines_others
+      t: Другие блоги и журналы
+    - key: block.description.blogs_news_magazines_others
+      t: Другие ответы (поле со свободной формой ответа).
+
+    # sites & courses
+    - key: block.title.sites_courses
+      t: Сайты и курсы
+    - key: block.description.sites_courses
+      t: К каким сайтам, курсам (и т.п.) по JavaScript вы обращаетесь?
+    - key: block.title.sites_courses_others
+      t: Другие сайты и курсы
+    - key: block.description.sites_courses_others
+      t: Другие ответы (поле со свободной формой ответа).
+
+    # podcasts
+    - key: block.title.podcasts
+      t: Подкасты
+    - key: block.description.podcasts
+      t: Какие подкасты по JavaScript или программированию вы слушаете?
+    - key: block.title.podcasts_others
+      t: Другие подкасты
+    - key: block.description.podcasts_others
+      t: Другие ответы (поле со свободной формой ответа).
+
+    ###########################################################################
+    # Opinions
+    ###########################################################################
+
+    - key: block.title.easy-to-learn
+      t: Кривая обучения
+    - key: block.description.easy-to-learn
+      t: “JavaScript легко выучить”
+
+    - key: block.title.js_moving_in_right_direction
+      t: Направление
+    - key: block.description.js_moving_in_right_direction
+      t: “JavaScript двигается в правильном направлении”
+
+    - key: block.title.building_js_apps_overly_complex
+      t: Сложность
+    - key: block.description.building_js_apps_overly_complex
+      t: “Писать приложения на JavaScript сейчас слишком сложно”
+
+    - key: block.title.js_over_used_online
+      t: Использование
+    - key: block.description.js_over_used_online
+      t: “JavaScript используется слишком часто”
+
+    - key: block.title.enjoy_building_js_apps
+      t: Удовольствие
+    - key: block.description.enjoy_building_js_apps
+      t: “Мне нравится писать приложения на JavaScript”
+
+    - key: block.title.would_like_js_to_be_main_lang
+      t: Основной язык
+    - key: block.description.would_like_js_to_be_main_lang
+      t: “Я бы хотел, чтобы JavaScript был моим основным языком программирования”
+
+    - key: block.title.js_ecosystem_changing_to_fast
+      t: Скорость изменения
+    - key: block.description.js_ecosystem_changing_to_fast
+      t: “Экосистема JavaScript меняется слишком быстро”
+
+    - key: block.title.missing-features
+      t: Отсутствующие фичи
+    - key: block.description.missing-features
+      t: Что, по мнению разработчиков, в настоящее время отсутствует в JavaScript?
+
+      # opinion scale
+    - key: opinions.0.short
+      t: Полностью не согласен
+    - key: opinions.1.short
+      t: Не согласен
+    - key: opinions.2.short
+      t: Трудно сказать
+    - key: opinions.3.short
+      t: Согласен
+    - key: opinions.4.short
+      t: Полностью согласен
+
+    - key: opinions.0.long
+      t: Полностью не согласен
+    - key: opinions.1.long
+      t: Не согласен
+    - key: opinions.2.long
+      t: Трудно сказать
+    - key: opinions.3.long
+      t: Согласен
+    - key: opinions.4.long
+      t: Полностью согласен
+
+    ###########################################################################
+    # Awards
+    ###########################################################################
+
+    - key: awards.runner_ups
+      t: Призовые места
+
+    # feature_adoption
+    - key: award.feature_adoption_award.title
+      t: Самая популярная возможность
+    - key: award.feature_adoption_award.description
+      t: |
+          Награждается, как наиболее применяемая возможность JavaScript.
+    - key: award.feature_adoption_award.comment
+      t: |
+          **${items[0].value}** пользователей в этом году
+          использовали ${items[0].name}.
+
+    # tool_satisfaction
+    - key: award.tool_satisfaction_award.title
+      t: Самый высокий уровень удовлетворённости
+    - key: award.tool_satisfaction_award.description
+      t: |
+          Награждается, как библиотека с наибольшим
+          процентом удовлетворённых пользователей.
+    - key: award.tool_satisfaction_award.comment
+      t: |
+          **${items[0].value}** пользователей хотят использовать его снова,
+          так ${items[0].name} ещё раз доказывает, что это не шутка.
+
+    # tool_interest
+    - key: award.tool_interest_award.title
+      t: Самая высокая заинтересованность
+    - key: award.tool_interest_award.description
+      t: |
+          Награждается, как технология, которую
+          многие разработчики желают изучить.
+    - key: award.tool_interest_award.comment
+      t: |
+          **${items[0].value}** разработчиков слышали
+          и хотят изучить ${items[0].name}.
+          Это значительный уровень заинтересованности.
+
+    # tool_usage
+    - key: award.tool_usage_award.title
+      t: Наиболее используемая технология
+    - key: award.tool_usage_award.description
+      t: |
+          Награждается, как технология с самой большой базой пользователей.
+    - key: award.tool_usage_award.comment
+      t: |
+          **${items[0].value}** разработчиков в этом году
+          использовали ${items[0].name}.
+
+    # resource_usage
+    - key: award.resource_usage_award.title
+      t: Самый популярный ресурс
+    - key: award.resource_usage_award.description
+      t: |
+          Награждается, как ресурс с самой большой популярностью.
+    - key: award.resource_usage_award.comment
+      t: |
+          **${items[0].value}** разработчиков в этом году
+          посещали ${items[0].name}.
+
+    # tool_mention
+    - key: award.tool_mention_award.title
+      t: Самое упоминаемое
+    - key: award.tool_mention.description
+      t: |
+          Награждается, как самая упоминаемая библиотека
+          при ответе на вопрос "Другие библиотеки".
+    - key: award.tool_mention_award.comment
+      t: |
+          Библиотека ${items[0].name} была упомянута
+          **${items[0].value}** раз.
+
+    # prediction_award
+    - key: award.prediction_award.title
+      t: Самая перспективная технология
+    - key: award.prediction_award.description
+      t: |
+          Награждается, как технология, которая может стать лидером… или нет?
+    - key: award.prediction_award.comment
+      t: |
+          ${items[0].name} мощно дебютировал в опросе этого года,
+          и нам не терпится увидеть, что будет дальше.
+
+    ###########################################################################
+    # Generic
+    ###########################################################################
+
+    # pages
+    - key: page.introduction
+      t: Введение
+    - key: page.tshirt
+      t: Футболка
+    - key: page.demographics
+      t: Демография
+    - key: page.overview
+      t: Обзор
+    - key: page.features
+      t: Возможности
+    - key: page.other_features
+      t: Другие возможности
+    - key: page.javascript_flavors
+      t: Разновидности JavaScript
+    - key: page.javascript_flavors.short
+      t: Разновидности JavaScript
+    - key: page.javascript_flavors_others
+      t: Другие разновидности
+    - key: page.front_end_frameworks
+      t: Front-end фреймворки
+    - key: page.front_end_frameworks.short
+      t: Front-end
+    - key: page.front_end_frameworks_others
+      t: Другие фреймворки
+    - key: page.data_layer
+      t: Слой данных
+    - key: page.data_layer.short
+      t: Слой данных
+    - key: page.data_layer_others
+      t: Другие инструменты
+    - key: page.back_end_frameworks
+      t: Back-end фреймворки
+    - key: page.back_end_frameworks.short
+      t: Back-end
+    - key: page.back_end_frameworks_others
+      t: Другие фреймворки
+    - key: page.testing
+      t: Тестирование
+    - key: page.testing.short
+      t: Тестирование
+    - key: page.testing_others
+      t: Другие инструменты
+    - key: page.mobile_desktop
+      t: Mobile & Desktop
+    - key: page.mobile_desktop.short
+      t: Mobile & Desktop
+    - key: page.mobile_desktop_others
+      t: Другие инструменты
+    - key: page.other_tools
+      t: Другие инструменты
+    - key: page.environments
+      t: Окружение
+    - key: page.resources
+      t: Ресурсы
+    - key: page.opinions
+      t: Мнения
+    - key: page.awards
+      t: Награды
+    - key: page.conclusion
+      t: Заключение
+    - key: page.support
+      t: Поддержите нас
+
+    # sharing
+    - key: share.share
+      t: Поделиться
+    - key: share.site.title
+      t: Узнайте результаты опроса State Of JavaScript 2019
+    - key: share.site.twitter_text
+      t: 'Узнайте результаты опроса State Of JavaScript 2019 ${link} #StateOfJS'
+    - key: share.site.subject
+      t: Результаты опроса State Of JavaScript 2019
+    - key: share.site.body
+      t: 'Вот некоторые интересные результаты опроса по JavaScript: ${link}'
+    - key: share.block.twitter_text
+      t: '#StateOfJS 2019: ${title} ${link}'
+    - key: share.block.subject
+      t: Результаты опроса State Of JavaScript 2019
+    - key: share.block.body
+      t: 'Вот некоторые интересные результаты опроса по JavaScript (${title}): ${link}'
+    - key: share.twitter
+      t: Поделиться в Twitter
+    - key: share.facebook
+      t: Поделиться на Facebook
+    - key: share.linkedin
+      t: Поделиться на LinkedIn
+    - key: share.email
+      t: Поделиться по email
+    - key: share.image
+      t: Получить картинку
+
+    # export
+    - key: export.export
+      t: Экспорт
+    - key: export.title
+      t: "Экспорт данных: ${title}"
+    - key: export.nocsv
+      t: К сожалению, экспорт CSV не доступен для этого набора данных.
+    - key: export.graphql
+      t: >
+          Хотя сейчас наш внутренний GraphQL API не является публичным, в будущем мы планируем открыть его,
+          чтобы упростить запросы к нашим данным. Если хотите узнать больше, можете ознакомиться
+          на <a href="https://github.com/StateOfJS/state-of-js-graphql-results-api/issues/1">GitHub</a>
+
+
+    # general
+    - key: general.title
+      t: State of JavaScript 2019
+    - key: general.description
+      t: Узнайте о самых популярных возможностях и технологиях JavaScript в 2019 году.
+    - key: general.stay_tuned
+      t: Следите за обновлениями
+    - key: general.leave_your_email
+      t: "Если вы хотите получать уведомления о публикации дополнительных результатов и старте нового опроса, оставьте свой email:"
+    - key: general.your_email
+      t: Ваш Email
+    - key: general.notify_me
+      t: Уведомить меня
+    - key: general.help_us_translate
+      t: Помочь с переводом →
+    - key: general.not_found
+      t: >
+
+          ## Ошибка 404
+
+          К сожалению, эта страница не найдена. Просим вас [оставить указание на ошибку](https://github.com/StateOfJS/State-of-JS-2019/issues), если считаете, что что-то не так.
+    - key: general.back_to_intro
+      t: Вернуться к Введению
+    - key: general.close_nav
+      t: Закрыть меню
+    - key: general.completion_percentage
+      t: 'Процент заполнения:'
+    - key: general.previous
+      t: 'Ранее:'
+    - key: general.next
+      t: 'Далее:'
+    - key: general.start
+      t: Начинаем
+    - key: general.translation_help
+      t: Кто помог в переводе
+
+    # partners
+    - key: partners.our_partners
+      t: Наши партнёры
+    - key: partners.become_partner
+      t: Станьте партнёром
+    - key: partners.thanks
+      t: Спасибо нашим партнёрам за поддержку!
+    - key: partners.learn_more
+      t: Узнать больше.
+    - key: block.title.recommendedResources
+      t: Рекомендуемые ресурсы
+
+    # charts
+    - key: block.title.usage-ratio
+      t: Рейтинг использования
+    - key: block.description.usage-ratio
+      t: Рейтинг по уровню использования среди пользователей, знакомых с технологией.
+    - key: users_percentage
+      t: Доля пользователей, %
+    - key: users_count
+      t: Пользователей
+    - key: satisfaction_percentage
+      t: Удовлетворённость, %
+    - key: interest_percentage
+      t: Заинтересованность, %
+    - key: chart_mode
+      t: режим
+    - key: chart_mode.absolute
+      t: абсолютный
+    - key: chart_mode.relative
+      t: относительный
+    - key: chart_units
+      t: Единицы измерения
+    - key: chart_units.percentage
+      t: Проценты
+    - key: chart_units.count
+      t: Кол-во
+    - key: users
+      t: пользователей
+    - key: percent_satisfaction
+      t: '% удовлетворённости'
+    - key: percent_interest
+      t: '% заинтересованности'
+    - key: heatmap.average
+      t: общее
+    - key: difference_from_average_usage
+      t: 'Отличие от общего использования:'
+    - key: all
+      t: 'Все'
+
+    # other
+    - key: bio.guest_visualizer
+      t: Приглашённый специалист
+    - key: footer.state_of_js_link
+      t: © 2019 <a href="${link}">State of JavaScript</a>.
+    - key: footer.leave_an_issue
+      t:  Вопросы? Нашли ошибку? <a href="${link}">Создайте ишью</a>.
+    - key: footer.netlify
+      t: Сайт работает на <a href="${link}">Netlify</a>.

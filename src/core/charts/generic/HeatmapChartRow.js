@@ -1,6 +1,6 @@
 import React, { memo, useCallback } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import styled from 'styled-components'
 import get from 'lodash/get'
 
 const HeatmapChartRow = ({
@@ -8,7 +8,6 @@ const HeatmapChartRow = ({
     keys,
     index,
     backgroundColorScale,
-    textColorScale,
     setCurrent,
     isActive,
     isInactive,
@@ -19,37 +18,31 @@ const HeatmapChartRow = ({
 
     return (
         <>
-            <div
-                className={classNames('Heatmap__Subject', {
-                    'Heatmap__Subject--even': isEven,
-                    'Heatmap__Subject--active': isActive,
-                    'Heatmap__Subject--inactive': isInactive
-                })}
+            <LabelCell
+                isEven={isEven}
+                isActive={isActive}
+                isInactive={isInactive}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
                 {get(item, 'entity.name', item.id)}
-            </div>
+            </LabelCell>
             {keys.map(keyId => {
                 const cell = item.ranges.find(r => r.range === keyId)
 
                 return (
-                    <div
+                    <ValueCell
                         key={keyId}
-                        className={classNames('Heatmap__Cell', {
-                            'Heatmap__Cell--even': isEven,
-                            'Heatmap__Cell--active': isActive,
-                            'Heatmap__Cell--inactive': isInactive
-                        })}
+                        isActive={isActive}
+                        isInactive={isInactive}
                         style={{
-                            background: backgroundColorScale((cell && cell.count) || 0),
-                            color: textColorScale((cell && cell.count) || 0)
+                            background: backgroundColorScale((cell && cell.percentage) || 0)
                         }}
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                     >
                         {(cell && cell.percentage) || 0}%
-                    </div>
+                    </ValueCell>
                 )
             })}
         </>
@@ -70,11 +63,36 @@ HeatmapChartRow.propTypes = {
     keys: PropTypes.arrayOf(PropTypes.string).isRequired,
     index: PropTypes.number.isRequired,
     backgroundColorScale: PropTypes.func.isRequired,
-    textColorScale: PropTypes.func.isRequired,
     setCurrent: PropTypes.func.isRequired,
     isActive: PropTypes.bool.isRequired,
     isInactive: PropTypes.bool.isRequired,
     isEven: PropTypes.bool.isRequired
 }
+
+const Cell = styled.div`
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: opacity 200ms;
+    opacity: ${({ isInactive }) => (isInactive ? 0.3 : 1)};
+`
+
+const LabelCell = styled(Cell)`
+    font-size: ${({ theme }) => theme.typography.sizes.smallish};
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 ${({ theme }) => theme.spacing / 2}px;
+    background: ${({ isEven, isActive, theme }) => {
+        if (isEven || isActive) return theme.colors.backgroundAlt
+        return undefined
+    }};
+`
+
+const ValueCell = styled(Cell)`
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.background};
+    font-size: ${({ theme }) => theme.typography.sizes.smaller};
+    justify-content: center;
+`
 
 export default memo(HeatmapChartRow)

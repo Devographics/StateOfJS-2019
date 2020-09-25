@@ -1,9 +1,32 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
-import Trans from '../i18n/Trans'
-import { emailOctopusUrl, emailOctopusCode, emailOctopusSiteKey } from 'core/constants.js'
+import styled from 'styled-components'
+import Trans from 'core/i18n/Trans'
+import { emailOctopusUrl, emailOctopusCode, emailOctopusSiteKey } from 'core/constants'
 const postUrl = emailOctopusUrl
+
+const Container = styled.div``
+
+const Email = styled.input`
+    display: block;
+    padding: ${props => props.theme.spacing / 2}px;
+    border: none;
+    margin-right: ${props => props.theme.spacing / 2}px;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 300px;
+`
+
+const ErrorFeedback = styled.div`
+    padding: ${props => props.theme.spacing}px;
+    margin-bottom: ${props => props.theme.spacing}px;
+`
+
+const SuccessFeedback = styled.div`
+    border: ${props => props.theme.separationBorder};
+    padding: ${props => props.theme.spacing}px;
+`
 
 export default class Newsletter extends Component {
     static propTypes = {
@@ -64,10 +87,14 @@ export default class Newsletter extends Component {
                     const { submitLabel = translate('general.notify_me') } = this.props
 
                     return (
-                        <div className={`Newsletter Newsletter--${loading ? 'loading' : ''}`}>
-                            {error && <div className="Newsletter__Error">{error.message}</div>}
+                        <Container className={`Newsletter Newsletter--${loading ? 'loading' : ''}`}>
+                            {error && (
+                                <ErrorFeedback className="Newsletter__Error">
+                                    {error.message}
+                                </ErrorFeedback>
+                            )}
                             {success ? (
-                                <div className="Newsletter__Success">{success.message}</div>
+                                <SuccessFeedback>{success.message}</SuccessFeedback>
                             ) : (
                                 <form
                                     method="post"
@@ -75,7 +102,7 @@ export default class Newsletter extends Component {
                                     datasitekey={emailOctopusSiteKey}
                                     onSubmit={this.handleSubmit}
                                 >
-                                    <input
+                                    <Email
                                         className="Newsletter__Email"
                                         id="field_0"
                                         name="field_0"
@@ -85,7 +112,6 @@ export default class Newsletter extends Component {
                                         value={email}
                                         disabled={loading}
                                     />
-
                                     <input
                                         type="text"
                                         name={emailOctopusCode}
@@ -93,7 +119,6 @@ export default class Newsletter extends Component {
                                         autoComplete="nope"
                                         className="Newsletter__Hidden"
                                     />
-
                                     <button
                                         type="submit"
                                         name="subscribe"
@@ -103,7 +128,7 @@ export default class Newsletter extends Component {
                                     </button>
                                 </form>
                             )}
-                        </div>
+                        </Container>
                     )
                 }}
             </Trans>

@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react'
 import PropTypes from 'prop-types'
-import { keys } from 'core/constants.js'
+import { keys } from 'core/constants'
 import Block from 'core/blocks/block/Block'
 import ChartContainer from 'core/charts/ChartContainer'
 import VerticalBarChart from 'core/charts/generic/VerticalBarChart'
@@ -51,7 +51,7 @@ const VerticalBarBlock = ({ block, data }) => {
             units={units}
             setUnits={setUnits}
             completion={completion}
-            data={sortedBuckets}
+            data={data}
             block={block}
             legendProps={{ layout: 'vertical' }}
         >
@@ -83,7 +83,7 @@ VerticalBarBlock.propTypes = {
     data: PropTypes.shape({
         buckets: PropTypes.arrayOf(
             PropTypes.shape({
-                id: PropTypes.string.isRequired
+                id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
             })
         ).isRequired
     }).isRequired

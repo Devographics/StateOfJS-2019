@@ -1,14 +1,14 @@
-import React, { memo, useMemo } from 'react'
+import React, { memo, useMemo, useContext } from 'react'
 import PropTypes from 'prop-types'
-import { ResponsiveBar } from '@nivo/bar'
-import theme from 'nivoTheme'
-import { useI18n } from 'core/i18n/i18nContext'
-import { fontFamily, getColor } from 'core/constants.js'
-import { useBarChart } from 'core/charts/hooks.js'
-import BarTooltip from 'core/charts/generic/BarTooltip'
-import HorizontalBarStripes from './HorizontalBarStripes'
+import { ThemeContext } from 'styled-components'
 import sortBy from 'lodash/sortBy'
 import round from 'lodash/round'
+import { ResponsiveBar } from '@nivo/bar'
+import { useI18n } from 'core/i18n/i18nContext'
+import { fontFamily } from 'core/constants'
+import { useBarChart } from 'core/charts/hooks'
+import BarTooltip from 'core/charts/generic/BarTooltip'
+import HorizontalBarStripes from './HorizontalBarStripes'
 
 const labelMaxLength = 13
 
@@ -20,6 +20,7 @@ const margin = {
 }
 
 const Text = ({ hasLink = false, label }) => {
+    const theme = useContext(ThemeContext)
     const shortenLabel = label.length > labelMaxLength
     const shortLabel = shortenLabel ? label.substr(0, labelMaxLength) + '…' : label
 
@@ -29,7 +30,7 @@ const Text = ({ hasLink = false, label }) => {
             textAnchor="end"
             transform="translate(-10,0) rotate(0)"
             style={{
-                fill: hasLink ? getColor('legendWithLink') : getColor('legend'),
+                fill: hasLink ? theme.colors.link : theme.colors.text,
                 fontSize: 14,
                 fontFamily
             }}
@@ -59,16 +60,6 @@ const TickItem = tick => {
 
     return (
         <g transform={`translate(${x},${y})`}>
-            <line
-                x1="0"
-                x2="0"
-                y1="0"
-                y2="0"
-                style={{
-                    stroke: getColor('tick'),
-                    strokeWidth: 1
-                }}
-            />
             {link ? (
                 <a href={link}>
                     <Text hasLink={true} label={label} />
@@ -89,6 +80,7 @@ const HorizontalBarChart = ({
     units,
     chartProps
 }) => {
+    const theme = useContext(ThemeContext)
     const { translate } = useI18n()
 
     const { formatTick, formatValue, maxValue /*, ticks, tickCount*/ } = useBarChart({
@@ -116,14 +108,14 @@ const HorizontalBarChart = ({
                 keys={[units]}
                 data={data}
                 maxValue={maxValue}
-                theme={theme}
+                theme={theme.charts}
                 enableGridX={true}
                 enableGridY={false}
                 enableLabel={true}
                 label={d => (units === 'percentage' ? `${round(d.value, 1)}%` : d.value)}
                 labelTextColor={{ theme: 'labels.text.fill' }}
                 labelSkipWidth={40}
-                colors={[getColor('bar')]}
+                colors={[theme.colors.barChartDefaultColor]}
                 padding={0.4}
                 borderRadius={1}
                 axisTop={{

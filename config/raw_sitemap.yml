@@ -69,7 +69,7 @@
       - id: gender
         template: demographicsTemplate
         showLegend: true
-        blockType: GaugeBarBlock
+        blockType: GenderBlock
       - id: jobTitle
         template: demographicsTemplate
         blockType: HorizontalBarBlock
