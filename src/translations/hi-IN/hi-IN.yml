@@ -1011,7 +1011,7 @@ translations:
     - key: interest_percentage
       t: दिलचस्पी का प्रतिशत
     - key: chart_mode
-      t: मोड
+      t: चार्ट मोड
     - key: chart_mode.absolute
       t: पूर्ण
     - key: chart_mode.relative
@@ -1043,4 +1043,4 @@ translations:
     - key: footer.leave_an_issue
       t:  प्रश्न? कोई बग मिला? <a href="${link}">एक इशू दर्ज करें</a>.
     - key: footer.netlify
-      t: यह साइट <a href="${link}">Netlify</a> द्वारा संचालित है।
+      t: यह वेबसाइट <a href="${link}">Netlify</a> द्वारा संचालित है।
