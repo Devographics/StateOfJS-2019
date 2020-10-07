@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="2019.stateofjs.com">
+  <a href="https://2019.stateofjs.com">
     <img alt="State Of JavaScript" src="https://cdn.jsdelivr.net/gh/StateOfJS/StateOfJS-2019/static/images/stateofjs-logo.png" width="150" />
   </a>
 </p>
