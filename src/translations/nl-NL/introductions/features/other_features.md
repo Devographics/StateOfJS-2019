@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   other_features
-locale: en-US
+locale: nl-NL
 ---
 
 Andere technologieën en patronen.

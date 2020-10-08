@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   back_end_frameworks
-locale: en-US
+locale: nl-NL
 ---
 
 JavaScript op de server.

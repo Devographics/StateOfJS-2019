@@ -46,7 +46,7 @@ const BioContent = styled.div`
 
 const BioBio = styled.div`
     padding: ${({ theme }) => theme.spacing}px;
-    font-size: $medium-font;
+    font-size: ${({ theme }) => theme.typography.sizes.smallish};
 `
 
 const BioPhoto = styled.div`

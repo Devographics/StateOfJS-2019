@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   syntax
-locale: en-US
+locale: nl-NL
 ---
 
 De grammatica van JavaScript.

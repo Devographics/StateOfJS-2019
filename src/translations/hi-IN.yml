@@ -1038,9 +1038,9 @@ translations:
     # other
     - key: bio.guest_visualizer
       t: अतिथि विशेषज्ञ
-  - key: footer.state_of_js_link
+    - key: footer.state_of_js_link
       t: © 2019 <a href="${link}">State of JavaScript</a>.
     - key: footer.leave_an_issue
-      t:  प्रश्न? कोई बग मिला? <a href="${link}">एक इशू दर्ज करें</a>.
+      t: प्रश्न? कोई बग मिला? <a href="${link}">एक इशू दर्ज करें</a>.
     - key: footer.netlify
       t: यह साइट <a href="${link}">Netlify</a> द्वारा संचालित है।

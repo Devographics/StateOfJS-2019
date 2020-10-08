@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   language
-locale: en-US
+locale: nl-NL
 ---
 
 Het vocabulaire van JavaScript.

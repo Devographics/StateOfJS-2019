@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: features
-locale: en-US
+locale: nl-NL
 ---
 
 Een van de meest spannende dingen aan JavaScript als taal is dat deze niet stil staat. Van arrow functions tot destructuring,

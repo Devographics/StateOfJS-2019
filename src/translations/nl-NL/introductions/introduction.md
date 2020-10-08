@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: introduction
-locale: en-US
+locale: nl-NL
 ---
 
 <span class="first-letter">W</span>ij waren er vrij zeker van dat we in 2018 deze poll voor het laatst zouden doen. Uiteindelijk kan het JavaScript ecosysteem natuurlijk niet *weer* veranderen, toch?

@@ -1,7 +1,7 @@
 ---
 type:   introduction
 page:   javascript_flavors
-locale: en-US
+locale: nl-NL
 ---
 
 Talen die naar JavaScript compileren

@@ -1,7 +1,7 @@
 ---
 type: introduction
 page: tshirt
-locale: en-US
+locale: nl-NL
 ---
 
 ## The State of JavaScript T-shirt: Ondersteun de poll en zie er ook nog eens goed uit!
