@@ -339,66 +339,66 @@ translations:
     ###########################################################################
 
     - key: page.syntax
-      t: Syntax
+      t: Składnia
     - key: page.language
-      t: Language
+      t: Język
     - key: page.data_structures
-      t: Data Structures
+      t: Struktury danych
     - key: page.browser_apis
-      t: Browser APIs
+      t: Interfejsy API przeglądarki
 
     - key: block.description.decorators
       t: >
-        In its simplest form, a decorator is simply a way of 
-        wrapping one piece of code with another — literally “decorating” it. 
+        Najprościej mówiąc, dekorator to najprostrza droga do
+        zamknięcia jednego kawałka kodu wewnątrz innego — dosłownie “udekorować” go. 
 
     - key: feature.learn_more
-      t: Learn More (MDN)
+      t: Dowiedz się więcej (MDN)
     - key: feature.mdn_link
       t: MDN
     - key: feature.caniuse_link
       t: CanIUse
     - key: feature.specification_link
-      t: W3C Specification
+      t: Specyfikacja W3C
 
     - key: featureExperienceSimplified.used_it.long
-      t: Have used it
+      t: Użyłem go
     - key: featureExperienceSimplified.know_it.long
-      t: Know about it
+      t: Słyszałem o tym
     - key: features.usage.ratio
-      t: Usage Ratio
+      t: Stosunek wykorzystania
 
     - key: featureExperience.used_it
-      t: Have used it
+      t: Użyłem go
     - key: featureExperience.know_not_used
-      t: Know what it is, but haven't used it
+      t: Wiem co to jest ale nigdy nie użyłem
     - key: featureExperience.never_heard_not_sure
-      t: Never heard of it/Not sure what it is
+      t: Pierwsze słyszę/Nie mam pojęcia co to jest
 
     - key: featureExperience.used_it.long
-      t: Have used it
+      t: Użyłem go
     - key: featureExperience.know_not_used.long
-      t: Know what it is, but haven't used it
+      t: Wiem co to jest ale nigdy nie użyłem
     - key: featureExperience.never_heard_not_sure.long
-      t: Never heard of it/Not sure what it is
+      t: Pierwsze słyszę/Nie mam pojęcia co to jest
 
     # Feature Overview
     - key: block.title.featuresOverview
-      t: Usage Overview
+      t: Wykorzystanie
     - key: block.description.featuresOverview
       t: >
-          This chart presents the various adoption rates for all features, grouped by category.
+          Ten wykres prezentuje różne wskaźniki wykorzystania wszystkich funkcjonalności pogrupowanych według kategorii.
 
 
-          The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
-          a feature, while the <span class="text-teal text-bold">inner one</span> represents those who have actually used it.
+          Wielkość <span class="text-teal-darker text-bold">zewnętrznego okręgu</span> odpowiada łącznej liczbie użytkowników, którzy znają daną funkcjonalność,
+          natomiast <span class="text-teal text-bold">wewnętrzny okrąg</span> reprezentuje tych którzy realnie z niej skorzystali.
 
 
-          Hover on each node to view detailed data along with an <span class="text-blackpink text-bold">overlay</span> representing the total number of survey respondents.
+          Po najechaniu na poszczególny punkt zostanie wyświetlona <span class="text-blackpink text-bold">warstwa</span> ze szczegółowymi danymi, które reprezentują łączną liczbę ankietowanych.
 
     # Features Section Overview
     - key: block.title.featuresSectionOverview
-      t: Usage Overview
+      t: Wykorzystanie
     - key: block.description.featuresSectionOverview
       t: >
           The size of the <span class="text-teal-darker text-bold">outer circle</span> corresponds to the total number of users who know about
