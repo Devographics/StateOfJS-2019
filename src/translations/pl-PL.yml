@@ -5,16 +5,15 @@ translations:
     ###########################################################################
 
     - key: tshirt.about
-      t: About the T-shirt
+      t: T-shirt
     - key: tshirt.description
       t: >
-          The design is printed on a black heather [Bella+Canvas 3001 unisex premium t-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (men’s)
-          with a semi-slim fit; or a heather dark grey [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (women‘s). Sizing uses U.S. sizes.
-
+          Wzór został wydrukowany na koszulce w kolorze czarnego wrzosu [Bella+Canvas 3001 unisex premium T-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (męskie)
+          z lekko dopasowanym fasonem (semi-slim fit); lub koszulka w kolorze ciemnoszarego wrzosu [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (damskie). Rozmiarówka U.S..
     - key: tshirt.getit
-      t: Get It
+      t: Zdobądź
     - key: tshirt.price
-      t: $${price} + shipping
+      t: $${price} + transport
 
     ###########################################################################
     # Demographics
@@ -22,9 +21,9 @@ translations:
 
     # salary ranges
     - key: salary.work_for_free.long
-      t: I work for free
+      t: Pracuje za darmo
     - key: salary.work_for_free.short
-      t: work for free
+      t: praca za darmo
     - key: salary.work_for_free.shorter
       t: '0'
     - key: salary.0_10.long
@@ -58,53 +57,53 @@ translations:
     - key: salary.100_200.shorter
       t: 100~200k
     - key: salary.more_than_200.long
-      t: more than $200k
+      t: więcej niż $200k
     - key: salary.more_than_200.short
       t: $200k+
     - key: salary.more_than_200.shorter
       t: '>200k'
     - key: salary.axis_legend
-      t: Salary Range (USD)
+      t: Zakres Płacy (USD)
 
     # years of experience
     - key: workExperience.less_than_1.long
-      t: Less than one year
+      t: Poniżej jednego roku
     - key: workExperience.less_than_1.short
-      t: '<1 year'
+      t: '<1 rok'
     - key: workExperience.less_than_1.shorter
       t: '<1'
     - key: workExperience.1_2.long
-      t: 1 to 2 years
+      t: 1 do 2 lat
     - key: workExperience.1_2.short
-      t: 1~2 years
+      t: 1~2 lata
     - key: workExperience.1_2.shorter
       t: 1~2
     - key: workExperience.2_5.long
-      t: 2 to 5 years
+      t: 2 do 5 lat
     - key: workExperience.2_5.short
-      t: 2~5 years
+      t: 2~5 lat
     - key: workExperience.2_5.shorter
       t: 2~5
     - key: workExperience.5_10.long
-      t: 5 to 10 years
+      t: 5 do 10 lat
     - key: workExperience.5_10.short
-      t: 5~10 years
+      t: 5~10 lat
     - key: workExperience.5_10.shorter
       t: 5~10
     - key: workExperience.10_20.long
-      t: 10 to 20 years
+      t: 10 do 20 lat
     - key: workExperience.10_20.short
-      t: 10~20 years
+      t: 10~20 lat
     - key: workExperience.10_20.shorter
       t: 10~20
     - key: workExperience.more_than_20.long
-      t: More than 20 years
+      t: Więcej niż 20 lat
     - key: workExperience.more_than_20.short
-      t: '>20 years'
+      t: '>20 lat'
     - key: workExperience.more_than_20.shorter
       t: '>20'
     - key: workExperience.axis_legend
-      t: Years of Experience
+      t: Lata doświadczenia
 
     # company size
     - key: companySize.1.long
