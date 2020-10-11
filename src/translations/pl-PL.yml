@@ -10,6 +10,7 @@ translations:
       t: >
           Wzór został wydrukowany na koszulce w kolorze czarnego wrzosu [Bella+Canvas 3001 unisex premium T-shirt](https://www.printful.com/custom/mens/t-shirts/bella-canvas-3001-unisex-short-sleeve-jersey-t-shirt) (męskie)
           z lekko dopasowanym fasonem (semi-slim fit); lub koszulka w kolorze ciemnoszarego wrzosu [Anvil 880 Women's Fashion Fit T-Shirt](https://www.printful.com/custom/womens/t-shirts/anvil-880-ladies-ringspun-fashion-fit-t-shirt) (damskie). Rozmiarówka U.S..
+
     - key: tshirt.getit
       t: Zdobądź
     - key: tshirt.price
@@ -107,144 +108,144 @@ translations:
 
     # company size
     - key: companySize.1.long
-      t: One employee
+      t: Jeden zatrudniony
     - key: companySize.1.short
-      t: one
+      t: jeden
     - key: companySize.1.shorter
       t: '1'
     - key: companySize.1_5.long
-      t: 1 to 5 employees
+      t: 1 do 5 zatrudnionych
     - key: companySize.1_5.short
       t: 1~5
     - key: companySize.1_5.shorter
       t: 1~5
     - key: companySize.5_10.long
-      t: 5 to 10 employees
+      t: 5 do 10 zatrudnionych
     - key: companySize.5_10.short
       t: 5~10
     - key: companySize.5_10.shorter
       t: 5~10
     - key: companySize.10_20.long
-      t: 10 to 20 employees
+      t: 10 do 20 zatrudnionych
     - key: companySize.10_20.short
       t: 10~20
     - key: companySize.10_20.shorter
       t: 10~20
     - key: companySize.20_50.long
-      t: 20 to 50 employees
+      t: 20 do 50 zatrudnionych
     - key: companySize.20_50.short
       t: 20~50
     - key: companySize.20_50.shorter
       t: 20~50
     - key: companySize.50_100.long
-      t: 50 to 100 employees
+      t: 50 do 100 zatrudnionych
     - key: companySize.50_100.short
       t: 50~100
     - key: companySize.50_100.shorter
       t: 50~100
     - key: companySize.100_1000.long
-      t: 100 to 1000 employees
+      t: 100 do 1000 zatrudnionych
     - key: companySize.100_1000.short
       t: 100~1000
     - key: companySize.100_1000.shorter
       t: 100~1000
     - key: companySize.more_than_1000.long
-      t: More than 1000 employees
+      t: Więcej niż 1000 zatrudnionych
     - key: companySize.more_than_1000.short
       t: 1000+
     - key: companySize.more_than_1000.shorter
       t: 1000+
     - key: companySize.axis_legend
-      t: Number of Employees
+      t: Liczba zatrudnionych
 
     # sources
     - key: sources.other_unknown
-      t: Other/Unknown
+      t: Inne/Nieznane
 
     # javascript proficiency
     - key: block.title.javascript-proficiency
-      t: JavaScript Proficiency
+      t: Biegłość w JavaScript
     - key: block.description.javascript-proficiency
-      t: How proficient are you at JavaScript development?
+      t: Jaka jest twoja biegłość w pracy z JavaScript?
     - key: javascript-proficiency.axis_legend
-      t: JavaScript Proficiency
+      t: Biegłość w JavaScript
     - key: javascript-proficiency.none.short
-      t: None
+      t: Żadna
     - key: javascript-proficiency.none.long
-      t: I am not able to write any JavaScript
+      t: Nie jestem w stanie napisać cokolwiek w JavaScript
     - key: javascript-proficiency.short_simple_javascript.short
       t: Beginner
     - key: javascript-proficiency.short_simple_javascript.long
-      t: I can write short, simple JavaScript or jQuery statements
+      t: Potrafię napisać krótki, prosty warunek w JavaScript lub jQuery
     - key: javascript-proficiency.existing_codebases_using_modern_frameworks.short
-      t: Intermediate
+      t: Średnio zaawansowany
     - key: javascript-proficiency.existing_codebases_using_modern_frameworks.long
-      t: I can work on existing front-end codebases using modern frameworks (React, Vue, etc.)
+      t: Potrafię pracować z istniejącym codem używającym współczesne frameworki (React, Vue, itp.)
     - key: javascript-proficiency.advanced_front_end_patterns.short
-      t: Advanced
+      t: Zaawansowany
     - key: javascript-proficiency.advanced_front_end_patterns.long
-      t: Can handle advanced front-end patterns (state management, data loading, etc.)
+      t: Posługuje się zaawansowanymi wzorcami (zarządzanie stanem, ładowanie danych, itp.)
     - key: javascript-proficiency.entire_codebases_from_scratch.short
-      t: Expert
+      t: Ekspert
     - key: javascript-proficiency.entire_codebases_from_scratch.long
-      t: Can architecture entire front-end codebases from scratch
+      t: Potrafię stworzyć całą architekture aplikacji front-end zaczynając od zera
 
     # css proficiency
 
     - key: block.title.cssProficiency
-      t: CSS Proficiency
+      t: Biegłość w CSS
     - key: block.description.cssProficiency
-      t: How proficient are you at CSS?
+      t: Jaka jest twoja biegłość w pracy z CSS?
     - key: cssProficiency.axis_legend
-      t: CSS Proficiency
+      t: Biegłość w CSS
     - key: cssProficiency.0.short
-      t: None
+      t: Żadna
     - key: cssProficiency.0.long
-      t: 'Virtually no knowledge of CSS'
+      t: 'Praktycznie brak znajomości CSS'
     - key: cssProficiency.1.short
-      t: Beginner
+      t: Początkujący
     - key: cssProficiency.1.long
-      t: 'Using CSS frameworks and tweaking existing styles'
+      t: 'Korzystam z frameworków CSS i potrafię pracować nad istniejącymi stylami'
     - key: cssProficiency.2.short
-      t: Intermediate
+      t: Średnio zaawansowany
     - key: cssProficiency.2.long
-      t: 'Knowing specificity rules, being able to create layouts'
+      t: 'Znam zasady rządzące CSS oraz potrafię stworzyć pełne layouty'
     - key: cssProficiency.3.short
-      t: Advanced
+      t: Zaawansowany
     - key: cssProficiency.3.long
-      t: 'Mastering animations, interactions, transitions, etc.'
+      t: 'Jestem mistrzem w animacjach, interakcjach, przejściach, itp.'
     - key: cssProficiency.4.short
-      t: Expert
+      t: Ekspert
     - key: cssProficiency.4.long
-      t: 'Being able to style an entire front-end from scratch following a consistent methodology'
+      t: 'Jestem w stanie ostylować całą aplikację od zera stosując spójną metodologię'
 
     # backend proficiency
     - key: block.title.backendProficiency
-      t: Back-end Proficiency
+      t: Biegłość w Back-end
     - key: block.description.backendProficiency
-      t: How proficient are you at back-end development?
+      t: Jaka jest twoja biegłość w pracy z Back-end?
     - key: backendProficiency.axis_legend
-      t: Back-End Proficiency
+      t: Biegłość w Back-end
     - key: backendProficiency.0.short
-      t: None
+      t: Żadna
     - key: backendProficiency.0.long
-      t: 'Not able to handle any back-end work'
+      t: 'Nie jestem w stanie wykonać żadnej pracy związanej z back-end'
     - key: backendProficiency.1.short
-      t: Beginner
+      t: Początkujący
     - key: backendProficiency.1.long
-      t: 'Able to set up all-in-one CMSs (WordPress, etc.) or static site generators (Jekyll, etc.)'
+      t: 'Potrafię skonfigurować CMSy "all-in-one" (WordPress, itp.) lub generator stron statycznych (Jekyll, itp.)'
     - key: backendProficiency.2.short
-      t: Intermediate
+      t: Średnio zaawansowany
     - key: backendProficiency.2.long
-      t: 'Able to develop apps using pre-existing frameworks (Rails, Laravel, etc.)'
+      t: 'Potrafię pracować nad aplikacjami korzystając z istniejących frameworków (Rails, Laravel, itp.)'
     - key: backendProficiency.3.short
-      t: Advanced
+      t: Zaawansowany
     - key: backendProficiency.3.long
-      t: 'Setting up an entire back-end from scratch (Go, Node, etc.)'
+      t: 'Potrafię skonfigurować całą aplikację back-end od zera (Go, Node, itp.)'
     - key: backendProficiency.4.short
-      t: Expert
+      t: Ekspert
     - key: backendProficiency.4.long
-      t: 'Able to handle complex multi-server or microservices architectures'
+      t: 'Potrafię obsłużyć złożony multi-server lub architekturę microserwisów'
 
     # job title
     - key: jobTitle.front_end_developer.short
@@ -282,56 +283,56 @@ translations:
 
     # gender
     - key: block.title.gender
-      t: Gender
+      t: Płeć
     - key: block.description.gender
-      t: Respondents gender.
+      t: Płeć respondentów.
     - key: gender.female
-      t: Female
+      t: Kobieta
     - key: gender.female.long
-      t: Female
+      t: Kobieta
     - key: gender.male
-      t: Male
+      t: Mężczyzna
     - key: gender.male.long
-      t: Male
+      t: Mężczyzna
     - key: gender.non_binary
-      t: Non-Binary/Third Gender
+      t: Niebinarność/Trzecia płeć
     - key: gender.non_binary.long
-      t: Non-Binary/Third Gender
+      t: Niebinarność/Trzecia płeć
     - key: gender.prefer_not_to_say
-      t: Prefer not to say
+      t: Wolę nie mówić
     - key: gender.prefer_not_to_say.long
-      t: Prefer not to say
+      t: Wolę nie mówić
 
     # other
     - key: block.title.country
-      t: Participation by Country
+      t: Udział według kraju
     - key: block.description.country
-      t: Which proportion of survey respondents came from each country.
+      t: Jaki odsetek ankietowanych pochodzi z każdego kraju.
     - key: block.title.salary
-      t: Salary
+      t: Płaca
     - key: block.description.salary
-      t: Yearly salary in USD.
+      t: Roczna płaca w USD.
     - key: block.title.workExperience
-      t: Years of Experience
+      t: Doświadczenie w latach
     - key: block.description.workExperience
-      t: How long you've been writing JavaScript.
+      t: Jak długo piszesz w JavaScript.
     - key: block.title.companySize
-      t: Company Size
+      t: Wielkość firmy
     - key: block.description.companySize
-      t: Company size breakdown.
+      t: Podział według wielkości firmy.
     - key: block.title.source
-      t: Source
+      t: Źródło
     - key: block.description.source
       t: >
-          How participants found out about the survey (aggregation of self-reported answers and
-          referrer tracking).
+          W jaki sposób uczestnicy dowiedzieli się o ankiecie (agregacja zgłoszonych przez siebie odpowiedzi i
+          śledzenie stron odsyłających).
 
-          **State of JS** indicates subscribers from our previous surveys, while **Word of Mouth** regroups sources such as Slack, friends, co-workers, etc.
+          **State of JS** dociera do subskrybentów z naszych poprzednich ankiet, podczas gdy **Poczta pantoflowa** korzysta z takich źródeł jak Slack, znajomi, współpracownicy, itp.
 
     - key: block.title.jobTitle
-      t: Job Title
+      t: Stanowisko
     - key: block.description.jobTitle
-      t: How do you introduce yourself at parties?
+      t: Jak przestawiasz się na imprezach?
 
     ###########################################################################
     # Features
