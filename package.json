@@ -59,7 +59,7 @@
     "markdown-it": "^11.0.1",
     "markdown-loader": "^5.1.0",
     "node-fetch": "^2.6.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "object-assign": "^4.1.1",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
